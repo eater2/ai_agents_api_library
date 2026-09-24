@@ -11,6 +11,7 @@ import { z } from "zod";
 
 const RAW = "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/all.json";
 const BUNDLED = new URL("../catalog/all.json", import.meta.url);
+const MIN_RELATIVE_SCORE = 0.1; // results scoring below this share of the best one are dropped
 
 let catalog = JSON.parse(await readFile(BUNDLED, "utf8"));
 let source = "bundled";
@@ -31,39 +32,94 @@ async function refresh() {
   }
 }
 
-const STOP = new Set(["a", "an", "the", "to", "of", "for", "and", "or", "in", "on", "with", "via", "from", "api", "apis", "i", "my", "need", "want"]);
+const STOP = new Set(["a", "an", "the", "to", "of", "for", "and", "or", "in", "on", "with", "via", "from", "api", "apis",
+  "i", "my", "need", "want", "prompt", "prompts", "plan", "plans", "free", "paid", "pricing", "tier", "service", "tool", "tools"]);
 const words = (s) => (s || "").toLowerCase().split(/[^a-z0-9+#]+/).filter((w) => w.length > 1 && !STOP.has(w));
 
+// Query-side synonyms for words the catalog descriptions phrase differently.
+const SYNONYMS = {
+  academic: ["scholarly", "research"],
+  paper: ["scholarly", "preprint", "literature", "publication"],
+  papers: ["scholarly", "preprint", "literature", "publication"],
+  photo: ["image"],
+  picture: ["image"],
+  tts: ["speech"],
+  stt: ["transcription", "transcribe"],
+  sms: ["messaging", "text"],
+  llm: ["model", "inference"],
+  website: ["site"],
+  memory: ["memories"],
+};
+// One group per query word: the word itself plus its synonyms, all stemmed.
+const groups = (terms) => [...new Set(terms)].map((t) => [...new Set([t, ...(SYNONYMS[t] || [])].map(stem))]);
+
 // Crude English stemming so "geocoding" matches "geocode", "videos" matches "video".
-const stem = (w) => (w.length > 4 ? w.replace(/(ings?|ers?|ed|es|s|e)$/, "") : w);
+const stem = (w) => (w.length > 4 ? w.replace(/(ments?|ings?|ers?|ed|es|s|e)$/, "") : w);
 const stems = (s) => new Set(words(s).map(stem));
 
 // Per-entry stem sets plus inverse document frequency, so rare terms ("3d", "sms")
 // outweigh common ones ("image", "send").
 let index = new Map();
 let idf = new Map();
+// catShare[category][stem] = share of the category's entries whose name/description contain the stem.
+// "video" is in most video-generation entries, so a query about video leans towards that category.
+let catShare = new Map();
 function buildIndex() {
   index = new Map(catalog.map((e) => [e.id, {
     name: stems(`${e.name} ${e.id}`),
     cat: stems(e.category.replace(/-/g, " ")),
-    desc: stems(`${e.desc_en} ${e.notes || ""}`),
+    desc: stems(e.desc_en),
+    notes: stems(e.notes || ""),
   }]));
   const df = new Map();
   for (const x of index.values()) for (const t of new Set([...x.name, ...x.cat, ...x.desc])) df.set(t, (df.get(t) || 0) + 1);
   idf = new Map([...df].map(([t, n]) => [t, Math.log(1 + catalog.length / n)]));
+
+  const byCat = new Map();
+  for (const e of catalog) {
+    const x = index.get(e.id);
+    const c = byCat.get(e.category) || { n: 0, counts: new Map() };
+    c.n++;
+    for (const t of new Set([...x.name, ...x.cat, ...x.desc])) c.counts.set(t, (c.counts.get(t) || 0) + 1);
+    byCat.set(e.category, c);
+  }
+  catShare = new Map([...byCat].map(([cat, { n, counts }]) => [cat, new Map([...counts].map(([t, k]) => [t, k / n]))]));
+}
+
+function termScore(x, share, t) {
+  const w = idf.get(t) || 0;
+  let hit = 0;
+  if (x.name.has(t)) hit += 3 * w;
+  if (x.cat.has(t)) hit += 3 * w;
+  if (x.desc.has(t)) hit += 3 * w;
+  if (x.notes.has(t)) hit += 0.5 * w;
+  return { hit, prior: 2 * w * (share.get(t) || 0) }; // prior: how typical the word is for the entry's category
 }
 
 function score(e, terms) {
   if (!terms.length) return 1;
   const x = index.get(e.id);
+  const share = catShare.get(e.category);
+  // Words the catalog never uses ("kubernetes") can't be matched by anything; leave them out so
+  // they don't turn the query into a search for its remaining generic word.
+  const gs = groups(terms).filter((g) => g.some((t) => idf.has(t)));
+  if (!gs.length) return 0;
+  const known = gs.length / groups(terms).length;
   let s = 0;
-  for (const t of terms.map(stem)) {
-    const w = idf.get(t) || 0;
-    if (x.name.has(t)) s += 5 * w;
-    if (x.cat.has(t)) s += 3 * w;
-    if (x.desc.has(t)) s += 2 * w;
+  let matched = 0;
+  for (const g of gs) {
+    // Best member of the group counts; synonyms count a little less than the word itself.
+    let best = { hit: 0, prior: 0 };
+    g.forEach((t, i) => {
+      const r = termScore(x, share, t);
+      const k = i === 0 ? 1 : 0.8;
+      if (r.hit * k + r.prior * k > best.hit + best.prior) best = { hit: r.hit * k, prior: r.prior * k };
+    });
+    if (best.hit) matched++;
+    s += best.hit + best.prior;
   }
-  return s;
+  // Entries that match every query word beat entries that match one word many times.
+  return s * (matched / gs.length) ** 2 * known;
 }
 
 const summary = (e) => ({
@@ -132,11 +188,14 @@ server.registerTool(
       .filter((e) => !auth || e.auth === auth)
       .map((e) => [score(e, terms), e])
       .filter(([s]) => s > 0)
-      .sort((a, b) => b[0] - a[0])
+      .sort((a, b) => b[0] - a[0]);
+    const top = hits[0]?.[0] || 0;
+    const results = hits
+      .filter(([s]) => s >= top * MIN_RELATIVE_SCORE) // drop weak tail matches
       .slice(0, limit)
       .map(([, e]) => summary(e));
-    const text = hits.length
-      ? JSON.stringify({ source, results: hits }, null, 1)
+    const text = results.length
+      ? JSON.stringify({ source, results }, null, 1)
       : "No match. Try a broader query or call list_categories and search by category.";
     return { content: [{ type: "text", text }] };
   },
