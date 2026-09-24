@@ -65,7 +65,14 @@
       "summary": "Zero Data Retention offered only on the Enterprise plan; storage rights require special plans",
       "source_url": "https://brave.com/search/api/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "web-search",
+      "news-search",
+      "image-search",
+      "places-search",
+      "answer-engine"
+    ]
   },
   {
     "id": "exa",
@@ -128,7 +135,11 @@
       "summary": "Zero Data Retention available as an Enterprise (custom plan) feature",
       "source_url": "https://exa.ai/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "web-search",
+      "web-scraping"
+    ]
   },
   {
     "id": "jina-ai-search-reader",
@@ -194,7 +205,14 @@
       "summary": "API requests, inputs and outputs never used for training; Reader caches content 5 minutes (X-No-Cache to bypass)",
       "source_url": "https://jina.ai/reader/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "web-search",
+      "web-scraping",
+      "image-search",
+      "academic-search",
+      "screenshot"
+    ]
   },
   {
     "id": "kagi-search-api",
@@ -243,7 +261,13 @@
       "source_url": "https://kagi.com/api/docs",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://kagi.com/api/v1"
+    "base_url": "https://kagi.com/api/v1",
+    "operations": [
+      "web-search",
+      "news-search",
+      "image-search",
+      "web-scraping"
+    ]
   },
   {
     "id": "linkup",
@@ -298,7 +322,12 @@
       "value": true,
       "how": "research tasks are started then polled for status/results (MCP tools linkup-research + linkup-get-research)",
       "source_url": "https://docs.linkup.so/pages/integrations/mcp/mcp"
-    }
+    },
+    "operations": [
+      "answer-engine",
+      "web-search",
+      "web-scraping"
+    ]
   },
   {
     "id": "mojeek-search-api",
@@ -350,7 +379,10 @@
       "summary": "All plans include storage rights and AI usage permissions; results may be re-ranked and combined with other engines",
       "source_url": "https://www.mojeek.com/services/search/web-search-api/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "web-search"
+    ]
   },
   {
     "id": "parallel-web-systems-search-api",
@@ -409,7 +441,11 @@
       "summary": "Zero data retention offered on Enterprise plans",
       "source_url": "https://parallel.ai/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "web-search",
+      "web-scraping"
+    ]
   },
   {
     "id": "perplexity-sonar-search-api",
@@ -457,7 +493,11 @@
       "source_url": "https://docs.perplexity.ai/api-reference/search-post",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.perplexity.ai"
+    "base_url": "https://api.perplexity.ai",
+    "operations": [
+      "answer-engine",
+      "web-search"
+    ]
   },
   {
     "id": "searchapi-io",
@@ -510,7 +550,11 @@
       "value": false,
       "how": "synchronous GET /api/v1/search returns JSON",
       "source_url": "https://www.searchapi.io/docs/google"
-    }
+    },
+    "operations": [
+      "serp-scraping",
+      "web-search"
+    ]
   },
   {
     "id": "searxng-self-hosted-json-api",
@@ -559,7 +603,10 @@
       "value": false,
       "how": "synchronous GET/POST / or /search",
       "source_url": "https://docs.searxng.org/dev/search_api.html"
-    }
+    },
+    "operations": [
+      "web-search"
+    ]
   },
   {
     "id": "serpapi",
@@ -633,7 +680,11 @@
       "summary": "ZeroTrace Mode (higher-tier plans): search parameters, queries and results not retained",
       "source_url": "https://serpapi.com/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "serp-scraping",
+      "web-search"
+    ]
   },
   {
     "id": "serper",
@@ -676,7 +727,14 @@
       "type": "apiKey",
       "source_url": "https://serper.dev",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "web-search",
+      "serp-scraping",
+      "image-search",
+      "news-search",
+      "places-search"
+    ]
   },
   {
     "id": "tavily",
@@ -733,7 +791,12 @@
       "summary": "Dev keys 100 RPM, production keys 1,000 RPM; Crawl 100 RPM; Research task creation 20 RPM",
       "source_url": "https://docs.tavily.com/documentation/rate-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "web-search",
+      "web-scraping",
+      "web-crawling"
+    ]
   },
   {
     "id": "you-com-api",
@@ -792,7 +855,13 @@
       "summary": "Zero Data Retention offered as an enterprise feature",
       "source_url": "https://you.com/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "web-search",
+      "answer-engine",
+      "web-scraping",
+      "stock-market-data"
+    ]
   },
   {
     "id": "anchor-browser",
@@ -839,7 +908,11 @@
       "summary": "Free plan: session creation capped at 5/min, up to 5 concurrent browsers",
       "source_url": "https://docs.anchorbrowser.io/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "browser-automation",
+      "web-scraping"
+    ]
   },
   {
     "id": "apify",
@@ -904,7 +977,12 @@
       "value": true,
       "how": "POST run returns run object; poll GET run or use webhooks; sync run endpoints wait up to 300 s",
       "source_url": "https://docs.apify.com/api/v2"
-    }
+    },
+    "operations": [
+      "web-scraping",
+      "web-crawling",
+      "browser-automation"
+    ]
   },
   {
     "id": "bright-data",
@@ -956,7 +1034,13 @@
       "source_url": "https://docs.brightdata.com/api-reference/authentication",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.brightdata.com"
+    "base_url": "https://api.brightdata.com",
+    "operations": [
+      "web-scraping",
+      "serp-scraping",
+      "browser-automation",
+      "structured-extraction"
+    ]
   },
   {
     "id": "browse-ai-api",
@@ -1003,7 +1087,11 @@
       "value": true,
       "how": "robot tasks run asynchronously; get results via webhooks or by retrieving the task",
       "source_url": "https://docs.browse.ai/api/v2"
-    }
+    },
+    "operations": [
+      "structured-extraction",
+      "web-scraping"
+    ]
   },
   {
     "id": "browser-use-cloud-api",
@@ -1068,7 +1156,10 @@
       "value": true,
       "how": "tasks run asynchronously; poll the run/session status until complete",
       "source_url": "https://docs.browser-use.com"
-    }
+    },
+    "operations": [
+      "browser-automation"
+    ]
   },
   {
     "id": "browserbase-stagehand",
@@ -1132,7 +1223,11 @@
       "summary": "Free plan data retention limited to 7 days",
       "source_url": "https://www.browserbase.com/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "browser-automation",
+      "web-scraping"
+    ]
   },
   {
     "id": "diffbot",
@@ -1175,7 +1270,11 @@
       "summary": "Free plan: 5 requests/min",
       "source_url": "https://www.diffbot.com/pricing/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "structured-extraction",
+      "web-scraping"
+    ]
   },
   {
     "id": "firecrawl",
@@ -1244,7 +1343,14 @@
       "value": true,
       "how": "crawl returns a job id; poll GET /v2/crawl/{id} or use webhooks (crawl.page, crawl.completed)",
       "source_url": "https://docs.firecrawl.dev/features/crawl"
-    }
+    },
+    "operations": [
+      "web-scraping",
+      "web-crawling",
+      "structured-extraction",
+      "web-search",
+      "browser-automation"
+    ]
   },
   {
     "id": "hyperbrowser",
@@ -1294,7 +1400,13 @@
       "source_url": "https://hyperbrowser.ai/docs/api-reference/create-new-session",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.hyperbrowser.ai"
+    "base_url": "https://api.hyperbrowser.ai",
+    "operations": [
+      "browser-automation",
+      "web-scraping",
+      "web-crawling",
+      "structured-extraction"
+    ]
   },
   {
     "id": "oxylabs",
@@ -1351,7 +1463,13 @@
       "source_url": "https://developers.oxylabs.io/get-started/quick-start-web-scraper-api.md",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://realtime.oxylabs.io/v1"
+    "base_url": "https://realtime.oxylabs.io/v1",
+    "operations": [
+      "web-scraping",
+      "serp-scraping",
+      "structured-extraction",
+      "browser-automation"
+    ]
   },
   {
     "id": "playwright-mcp-microsoft",
@@ -1409,7 +1527,11 @@
       "format": "none (local stdio server: npx @playwright/mcp@latest)",
       "source_url": "https://github.com/microsoft/playwright-mcp",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "browser-automation",
+      "screenshot"
+    ]
   },
   {
     "id": "scrapegraphai-api",
@@ -1487,7 +1609,13 @@
       "value": true,
       "how": "crawl is async: start returns an id, poll the crawl get-status endpoint",
       "source_url": "https://docs.scrapegraphai.com/api-reference/introduction.md"
-    }
+    },
+    "operations": [
+      "web-scraping",
+      "structured-extraction",
+      "web-crawling",
+      "web-search"
+    ]
   },
   {
     "id": "scraperapi",
@@ -1538,7 +1666,10 @@
       "value": true,
       "how": "optional async endpoint https://async.scraperapi.com returns a job to fetch later",
       "source_url": "https://docs.scraperapi.com"
-    }
+    },
+    "operations": [
+      "web-scraping"
+    ]
   },
   {
     "id": "scrapfly",
@@ -1606,7 +1737,12 @@
       "value": true,
       "how": "optional: pass webhook_name to queue the request and receive the result on a webhook",
       "source_url": "https://scrapfly.io/docs/scrape-api/getting-started"
-    }
+    },
+    "operations": [
+      "web-scraping",
+      "screenshot",
+      "browser-automation"
+    ]
   },
   {
     "id": "scrapingbee",
@@ -1667,7 +1803,14 @@
       "source_url": "https://www.scrapingbee.com/documentation/",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://app.scrapingbee.com/api/v1"
+    "base_url": "https://app.scrapingbee.com/api/v1",
+    "operations": [
+      "web-scraping",
+      "screenshot",
+      "serp-scraping",
+      "structured-extraction",
+      "web-search"
+    ]
   },
   {
     "id": "spider-cloud",
@@ -1738,7 +1881,14 @@
       "source_url": "https://spider.cloud/docs/api",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.spider.cloud"
+    "base_url": "https://api.spider.cloud",
+    "operations": [
+      "web-crawling",
+      "web-scraping",
+      "browser-automation",
+      "web-search",
+      "screenshot"
+    ]
   },
   {
     "id": "steel",
@@ -1812,7 +1962,12 @@
       "summary": "Launch plan: 7 days data retention",
       "source_url": "https://docs.steel.dev/overview/pricinglimits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "browser-automation",
+      "web-scraping",
+      "screenshot"
+    ]
   },
   {
     "id": "zyte-api",
@@ -1855,7 +2010,12 @@
       "summary": "Per-API-key rate limit (429 /limits/over-user-limit); retry with exponential backoff",
       "source_url": "https://docs.zyte.com/zyte-api/usage/errors.html",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "web-scraping",
+      "structured-extraction",
+      "browser-automation"
+    ]
   },
   {
     "id": "arxiv-api",
@@ -1918,7 +2078,10 @@
       "value": false,
       "how": "synchronous Atom XML responses",
       "source_url": "https://info.arxiv.org/help/api/user-manual.html"
-    }
+    },
+    "operations": [
+      "academic-search"
+    ]
   },
   {
     "id": "congress-gov",
@@ -1978,7 +2141,10 @@
       "summary": "5,000 requests per hour",
       "source_url": "https://github.com/LibraryOfCongress/api.congress.gov",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "government-data"
+    ]
   },
   {
     "id": "context7-library-docs-for-agents",
@@ -2031,7 +2197,10 @@
       "summary": "Low limits without key; plan-based limits with key; 429 with Retry-After and RateLimit-* headers when exceeded",
       "source_url": "https://context7.com/docs/api-guide",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "library-docs"
+    ]
   },
   {
     "id": "crossref-rest-api",
@@ -2080,7 +2249,10 @@
       "summary": "Public pool 5 req/s, concurrency 1; polite pool (mailto) 10 req/s, concurrency 3; Metadata Plus 150 req/s",
       "source_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "academic-search"
+    ]
   },
   {
     "id": "gdelt-api",
@@ -2135,7 +2307,10 @@
       "value": false,
       "how": "synchronous; 75 results default, up to 250 per query, rolling 3-month window",
       "source_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/"
-    }
+    },
+    "operations": [
+      "news-search"
+    ]
   },
   {
     "id": "gitingest",
@@ -2184,7 +2359,10 @@
       "summary": "10 requests/minute on POST /api/ingest and GET /api/{user}/{repository} (per server limiter)",
       "source_url": "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "repo-digest"
+    ]
   },
   {
     "id": "hacker-news-api",
@@ -2236,7 +2414,10 @@
       "value": false,
       "how": "synchronous JSON; real-time change events available via Firebase client libraries",
       "source_url": "https://github.com/HackerNews/API"
-    }
+    },
+    "operations": [
+      "social-data"
+    ]
   },
   {
     "id": "open-library",
@@ -2289,7 +2470,10 @@
       "summary": "1 request/second unidentified; 3 requests/second with User-Agent naming app and contact; no bulk download via API",
       "source_url": "https://openlibrary.org/developers/api",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "book-lookup"
+    ]
   },
   {
     "id": "nytimes",
@@ -2349,7 +2533,12 @@
       "summary": "Non-commercial use only; terms forbid using the APIs or content to develop a software product or train an ML/AI system",
       "source_url": "https://developer.nytimes.com/terms",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "news-search",
+      "news-articles",
+      "book-lookup"
+    ]
   },
   {
     "id": "newsapi",
@@ -2401,7 +2590,11 @@
       "summary": "Developer plan 100 requests/day, 24h article delay, dev/test only; Business $449/mo with 250,000 requests/month",
       "source_url": "https://newsapi.org/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "news-search",
+      "news-articles"
+    ]
   },
   {
     "id": "openalex-api",
@@ -2461,7 +2654,10 @@
       "summary": "Data released under CC0",
       "source_url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "academic-search"
+    ]
   },
   {
     "id": "pubmed-e-utilities-ncbi",
@@ -2512,7 +2708,10 @@
       "summary": "3 requests/second per IP without key; 10 requests/second with free API key (one key per NCBI account)",
       "source_url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "academic-search"
+    ]
   },
   {
     "id": "semantic-scholar-api",
@@ -2573,7 +2772,10 @@
       "summary": "Unauthenticated: 1000 req/s shared among all users, may be throttled; with key: 1 req/s on all endpoints to start",
       "source_url": "https://www.semanticscholar.org/product/api",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "academic-search"
+    ]
   },
   {
     "id": "wikidata",
@@ -2626,7 +2828,10 @@
       "summary": "Wikimedia limits: 10 req/min IP-only, 200 req/min with proper User-Agent; back off on 429 and honor Retry-After",
       "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "knowledge-graph-query"
+    ]
   },
   {
     "id": "wikipedia-wikimedia-api",
@@ -2686,7 +2891,10 @@
       "summary": "Text available under CC BY-SA; additional terms may apply",
       "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "encyclopedia-lookup"
+    ]
   },
   {
     "id": "wolfram-alpha-api",
@@ -2731,7 +2939,10 @@
       "value": false,
       "how": "synchronous text response; maxchars default 6800",
       "source_url": "https://products.wolframalpha.com/llm-api/documentation"
-    }
+    },
+    "operations": [
+      "computational-answer"
+    ]
   },
   {
     "id": "adobe-firefly-services-api",
@@ -2803,7 +3014,13 @@
       "value": true,
       "how": "POST /v3/images/generate-async returns jobId, statusUrl, cancelUrl; poll GET /v3/status/{jobId}",
       "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/how-tos/using-async-apis"
-    }
+    },
+    "operations": [
+      "text-to-image",
+      "image-editing",
+      "image-to-image",
+      "text-to-video"
+    ]
   },
   {
     "id": "black-forest-labs-flux-api",
@@ -2869,7 +3086,12 @@
       "summary": "Generated result URLs on delivery.*.bfl.ai expire after 10 minutes; download promptly",
       "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-image",
+      "image-to-image",
+      "text-to-video"
+    ]
   },
   {
     "id": "freepik-api",
@@ -2925,7 +3147,14 @@
       "value": true,
       "how": "POST returns task id; poll GET /v1/ai/<model>/{task-id} or pass webhook_url",
       "source_url": "https://docs.magnific.com/llms.txt"
-    }
+    },
+    "operations": [
+      "text-to-image",
+      "image-upscaling",
+      "background-removal",
+      "text-to-video",
+      "text-to-speech"
+    ]
   },
   {
     "id": "google-gemini-imagen-image-api",
@@ -2981,7 +3210,11 @@
       "summary": "Paid tier: content not used to improve Google products; all generated images carry a SynthID watermark",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-image",
+      "image-editing"
+    ]
   },
   {
     "id": "ideogram-api",
@@ -3042,7 +3275,12 @@
       "summary": "Image links returned by the API expire; download and store images you want to keep",
       "source_url": "https://developer.ideogram.ai/ideogram-api/api-setup",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-image",
+      "image-editing",
+      "image-upscaling"
+    ]
   },
   {
     "id": "leonardo-ai-api",
@@ -3089,7 +3327,11 @@
       "value": true,
       "how": "POST returns generationId; poll GET /generations/{id} or configure webhook callback; a sync endpoint exists for some models",
       "source_url": "https://docs.leonardo.ai/docs/getting-started"
-    }
+    },
+    "operations": [
+      "text-to-image",
+      "text-to-video"
+    ]
   },
   {
     "id": "openai-images-api-gpt-image",
@@ -3144,7 +3386,11 @@
       "summary": "API data not used for training unless opted in; /v1/images/generations keeps abuse-monitoring data 30 days",
       "source_url": "https://developers.openai.com/api/docs/guides/your-data",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-image",
+      "image-editing"
+    ]
   },
   {
     "id": "recraft-api",
@@ -3210,7 +3456,13 @@
       "summary": "Generated images stored approx. 24 hours (may change)",
       "source_url": "https://www.recraft.ai/docs/api-reference/appendix",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-image",
+      "image-to-image",
+      "background-removal",
+      "image-upscaling"
+    ]
   },
   {
     "id": "remove-bg-api",
@@ -3257,7 +3509,10 @@
       "value": false,
       "how": "synchronous POST /removebg returns the image",
       "source_url": "https://www.remove.bg/api"
-    }
+    },
+    "operations": [
+      "background-removal"
+    ]
   },
   {
     "id": "stability-ai-platform-api",
@@ -3304,7 +3559,12 @@
       "summary": "150 requests every 10 seconds; 429 when exceeded",
       "source_url": "https://platform.stability.ai/docs/getting-started",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-image",
+      "image-upscaling",
+      "image-editing"
+    ]
   },
   {
     "id": "akool-api",
@@ -3340,7 +3600,11 @@
       "source_url": "https://docs.akool.com/authentication/usage",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://openapi.akool.com/api/open"
+    "base_url": "https://openapi.akool.com/api/open",
+    "operations": [
+      "avatar-video",
+      "video-translation"
+    ]
   },
   {
     "id": "creatomate-api",
@@ -3406,7 +3670,10 @@
       "summary": "Rendered output files are hosted for up to 30 days, then deleted",
       "source_url": "https://creatomate.com/llms/quick-start.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "video-templating"
+    ]
   },
   {
     "id": "d-id-api",
@@ -3451,7 +3718,11 @@
       "value": true,
       "how": "POST /talks returns id; poll GET /talks/{id} until status done, or set webhook",
       "source_url": "https://docs.d-id.com/docs/v2-photo-avatar-quickstart.md"
-    }
+    },
+    "operations": [
+      "avatar-video",
+      "lip-sync"
+    ]
   },
   {
     "id": "google-veo-gemini-api-vertex-ai",
@@ -3515,7 +3786,11 @@
       "summary": "Generated videos are stored on the server for 2 days",
       "source_url": "https://ai.google.dev/gemini-api/docs/veo",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-video",
+      "image-to-video"
+    ]
   },
   {
     "id": "heygen-api",
@@ -3581,7 +3856,14 @@
       "value": true,
       "how": "Poll the session/video (GET) until video_url is ready, or pass callback_url / register webhooks",
       "source_url": "https://developers.heygen.com/docs/quick-start.md"
-    }
+    },
+    "operations": [
+      "avatar-video",
+      "text-to-speech",
+      "voice-cloning",
+      "video-translation",
+      "lip-sync"
+    ]
   },
   {
     "id": "klap-api",
@@ -3615,7 +3897,10 @@
       "value": true,
       "how": "POST /tasks/video-to-shorts returns a task; poll GET /v2/tasks/{task_id} until status ready or error",
       "source_url": "https://docs.klap.app/endpoints/tasks"
-    }
+    },
+    "operations": [
+      "video-editing"
+    ]
   },
   {
     "id": "kling-ai-api",
@@ -3678,7 +3963,13 @@
       "value": true,
       "how": "Create task returns task id; query task status, or set callback_url for status notifications",
       "source_url": "https://kling.ai/document-api/api/get-started/callbacks.md"
-    }
+    },
+    "operations": [
+      "text-to-video",
+      "image-to-video",
+      "lip-sync",
+      "video-editing"
+    ]
   },
   {
     "id": "luma-ai-dream-machine-api",
@@ -3730,7 +4021,11 @@
       "value": true,
       "how": "POST /generations returns an id; poll GET /generations/{id} until ready, or pass callback_url",
       "source_url": "https://docs.lumalabs.ai/docs/api.md"
-    }
+    },
+    "operations": [
+      "text-to-video",
+      "image-to-video"
+    ]
   },
   {
     "id": "minimax-hailuo-api",
@@ -3788,65 +4083,14 @@
       "value": true,
       "how": "Create task returns task_id; poll Query Video Generation Task, then download file; optional callback_url",
       "source_url": "https://platform.minimax.io/docs/api-reference/video-generation-t2v.md"
-    }
-  },
-  {
-    "id": "mux-video-api",
-    "name": "Mux Video API",
-    "category": "video-generation",
-    "homepage": "https://www.mux.com",
-    "docs": "https://www.mux.com/docs",
-    "auth": "api_key",
-    "auth_hint": "HTTP Basic auth: <token_id>:<token_secret>",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.mux.com",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.mux.com",
-      "repo": "https://github.com/muxinc/mux-node-sdk/tree/master/packages/mcp-server",
-      "tools": [
-        "docs search",
-        "code execution (TypeScript against @mux/mux-node)"
-      ],
-      "covers_full_api": true,
-      "source_url": "https://www.mux.com/docs/integrations/mcp-server.md",
-      "checked_at": "2026-09-24"
     },
-    "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
-    "sdk": [
-      "node",
-      "python",
-      "go",
-      "ruby",
-      "php"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST.",
-    "desc_pl": "Przesyłanie, kodowanie, streaming i analiza wideo; adresy odtwarzania, miniatury i napisy przez REST.",
-    "notes": "Hosting/streaming infrastructure; does not generate video from prompts.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "100,000 delivery minutes",
-      "period": "month",
-      "source_url": "https://www.mux.com/pricing.md",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "scheme": "basic",
-      "format": "Authorization: Basic base64(MUX_TOKEN_ID:MUX_TOKEN_SECRET)",
-      "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.mux.com",
-    "rate_limits": {
-      "summary": "Per-environment rate-limit buckets; HTTP 429 when exceeded",
-      "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
-      "checked_at": "2026-09-24"
-    }
+    "operations": [
+      "text-to-video",
+      "image-to-video",
+      "text-to-speech",
+      "voice-cloning",
+      "text-to-image"
+    ]
   },
   {
     "id": "pixverse-api",
@@ -3890,7 +4134,11 @@
       "value": true,
       "how": "Generate returns video_id; poll GET /openapi/v2/video/result/{id} (status 5 generating, 1 done) or use webhook",
       "source_url": "https://docs.platform.pixverse.ai/quick-start-796052m0.md"
-    }
+    },
+    "operations": [
+      "text-to-video",
+      "image-to-video"
+    ]
   },
   {
     "id": "runway-api",
@@ -3942,7 +4190,12 @@
       "value": true,
       "how": "Generation endpoints return a task; poll GET /v1/tasks/{id} until status is terminal",
       "source_url": "https://docs.dev.runwayml.com/ai-context.md"
-    }
+    },
+    "operations": [
+      "text-to-video",
+      "image-to-video",
+      "image-editing"
+    ]
   },
   {
     "id": "shotstack-api",
@@ -4001,7 +4254,11 @@
       "value": true,
       "how": "POST /render returns an id; poll GET /render/{id} or set a callback URL",
       "source_url": "https://shotstack.io/docs/api/"
-    }
+    },
+    "operations": [
+      "video-templating",
+      "video-editing"
+    ]
   },
   {
     "id": "synthesia-api",
@@ -4051,7 +4308,10 @@
       "value": true,
       "how": "POST /v2/videos returns id; poll GET /v2/videos/{id} for status or subscribe to webhooks",
       "source_url": "https://docs.synthesia.io/reference/video-api-introduction.md"
-    }
+    },
+    "operations": [
+      "avatar-video"
+    ]
   },
   {
     "id": "tavus-api",
@@ -4108,7 +4368,11 @@
       "source_url": "https://docs.tavus.io/api-reference/authentication.md",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://tavusapi.com"
+    "base_url": "https://tavusapi.com",
+    "operations": [
+      "avatar-video",
+      "voice-agent"
+    ]
   },
   {
     "id": "amazon-polly-amazon-transcribe-aws",
@@ -4170,7 +4434,11 @@
       "summary": "Transcribe may store and use voice inputs to improve AWS AI services; opt out via AWS Organizations AI services opt-out policy",
       "source_url": "https://aws.amazon.com/transcribe/faqs/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-speech",
+      "speech-to-text"
+    ]
   },
   {
     "id": "assemblyai-api",
@@ -4231,7 +4499,10 @@
       "summary": "Certain API files may be used for model training after redaction unless opted out; zero data retention for Streaming when opted out",
       "source_url": "https://www.assemblyai.com/docs/data-retention-and-model-training",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "speech-to-text"
+    ]
   },
   {
     "id": "azure-ai-speech",
@@ -4289,7 +4560,12 @@
       "summary": "F0 quotas are not adjustable; F0 TTS 20 transactions per 60 seconds",
       "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-speech",
+      "speech-to-text",
+      "translation"
+    ]
   },
   {
     "id": "cartesia-api",
@@ -4360,7 +4636,12 @@
       "summary": "Zero Data Retention available to Enterprise customers for TTS and STT",
       "source_url": "https://docs.cartesia.ai/enterprise/zero-data-retention.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-speech",
+      "speech-to-text",
+      "voice-cloning"
+    ]
   },
   {
     "id": "deepgram-api",
@@ -4418,7 +4699,12 @@
       "summary": "Model Improvement Program may use data for training; opt out per request with mip_opt_out=true",
       "source_url": "https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "speech-to-text",
+      "text-to-speech",
+      "voice-agent"
+    ]
   },
   {
     "id": "elevenlabs-api",
@@ -4445,7 +4731,12 @@
     "desc_en": "Generate, clone and stream text-to-speech voices and transcribe audio via REST/WebSocket API.",
     "desc_pl": "Generuj, klonuj i strumieniuj głosy text-to-speech oraz transkrybuj audio przez API REST/WebSocket.",
     "notes": "Besides the local stdio MCP server, ElevenLabs also offers an official remote MCP endpoint that uses OAuth.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "voice-cloning",
+      "speech-to-text"
+    ]
   },
   {
     "id": "google-cloud-text-to-speech-speech-to-text",
@@ -4474,7 +4765,11 @@
     "desc_en": "Synthesize lifelike speech from text and transcribe audio to text via REST/gRPC using GCP credentials.",
     "desc_pl": "Syntezuj naturalną mowę z tekstu i transkrybuj audio na tekst przez REST/gRPC z użyciem poświadczeń GCP.",
     "notes": "Requires a GCP project with billing enabled. Speech-to-Text docs are separate: https://cloud.google.com/speech-to-text/docs.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "speech-to-text"
+    ]
   },
   {
     "id": "hume-ai-api",
@@ -4498,7 +4793,11 @@
     "desc_en": "Generate expressive text-to-speech and run real-time empathic voice conversations (EVI) via REST/WebSocket.",
     "desc_pl": "Generuj ekspresyjną mowę z tekstu i prowadź rozmowy głosowe w czasie rzeczywistym (EVI) przez REST/WebSocket.",
     "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "voice-agent"
+    ]
   },
   {
     "id": "murf-ai-api",
@@ -4521,7 +4820,12 @@
     "desc_en": "Generate AI voiceovers, clone voices and dub audio in 35+ languages via REST API.",
     "desc_pl": "Generuj lektorskie nagrania AI, klonuj głosy i dubbinguj audio w ponad 35 językach przez REST API.",
     "notes": "Two models are offered: Falcon (low latency, for streaming) and Gen2 (studio quality).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "voice-cloning",
+      "translation"
+    ]
   },
   {
     "id": "openai-audio-api-tts-transcription",
@@ -4548,7 +4852,12 @@
     "desc_en": "Synthesize speech with TTS models and transcribe or translate audio with Whisper/GPT-4o transcribe via REST.",
     "desc_pl": "Syntezuj mowę modelami TTS oraz transkrybuj lub tłumacz audio modelami Whisper/GPT-4o transcribe przez REST.",
     "notes": "Whisper transcription costs about $0.006/min. TTS is billed per character or per token, depending on the model.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "speech-to-text",
+      "translation"
+    ]
   },
   {
     "id": "resemble-ai-api",
@@ -4569,7 +4878,11 @@
     "desc_en": "Synthesize speech, clone voices, convert speech-to-speech and detect deepfake audio via REST API.",
     "desc_pl": "Syntezuj mowę, klonuj głosy, konwertuj mowę na mowę i wykrywaj deepfake audio przez REST API.",
     "notes": "Enterprise plans are available for on-prem deployment and custom model training.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "voice-cloning"
+    ]
   },
   {
     "id": "rev-ai-api",
@@ -4594,7 +4907,10 @@
     "desc_en": "Submit audio for asynchronous or streaming speech-to-text transcription, plus sentiment and topic extraction, via REST.",
     "desc_pl": "Przesyłaj audio do asynchronicznej lub strumieniowej transkrypcji mowy na tekst oraz analizy sentymentu i tematów przez REST.",
     "notes": "The docs site offers an MCP install for Cursor and VS Code, but no remote endpoint URL was confirmed. Human transcription is sold separately as a paid option.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "speech-to-text"
+    ]
   },
   {
     "id": "speechmatics-api",
@@ -4618,7 +4934,10 @@
     "desc_en": "Transcribe audio in batch or real time with speaker diarization across many languages via REST/WebSocket.",
     "desc_pl": "Transkrybuj audio wsadowo lub w czasie rzeczywistym z diaryzacją mówców w wielu językach przez REST/WebSocket.",
     "notes": "The free tier also includes 2 concurrent real-time sessions. No official vendor MCP server was found.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "speech-to-text"
+    ]
   },
   {
     "id": "beatoven-ai-api",
@@ -4657,7 +4976,11 @@
       "value": true,
       "how": "POST /api/v1/tracks/compose returns task_id; poll GET /api/v1/tasks/{task_id} until status 'composed'",
       "source_url": "https://raw.githubusercontent.com/Beatoven/public-api/main/docs/api-spec.md"
-    }
+    },
+    "operations": [
+      "music-generation",
+      "sound-effects"
+    ]
   },
   {
     "id": "elevenlabs-music-api",
@@ -4712,7 +5035,10 @@
       "value": false,
       "how": "POST /v1/music returns the generated audio file directly",
       "source_url": "https://elevenlabs.io/docs/api-reference/music/compose"
-    }
+    },
+    "operations": [
+      "music-generation"
+    ]
   },
   {
     "id": "loudly-api",
@@ -4752,7 +5078,11 @@
       "value": false,
       "how": "POST /api/ai/prompt/songs returns a song object with the generated track",
       "source_url": "https://b2b-soundtracks-swagger-prd.loudly.com/swagger/b2b_swagger.yaml"
-    }
+    },
+    "operations": [
+      "music-generation",
+      "stem-separation"
+    ]
   },
   {
     "id": "mubert-api",
@@ -4792,7 +5122,10 @@
       "value": true,
       "how": "POST /tracks, then poll GET track by id or use a webhook",
       "source_url": "https://mubert.com/api/docs"
-    }
+    },
+    "operations": [
+      "music-generation"
+    ]
   },
   {
     "id": "soundraw-api",
@@ -4820,7 +5153,10 @@
       "period": "one_time",
       "source_url": "https://docs.channel.io/soundraw-faq/en/articles/SOUNDRAW-API-fbf580fd",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "music-generation"
+    ]
   },
   {
     "id": "stable-audio-api-stability-ai",
@@ -4869,7 +5205,11 @@
       "value": false,
       "how": "POST /v2beta/audio/stable-audio-2/text-to-audio returns audio directly; GET /v2beta/audio/results/{id} exists for async generations",
       "source_url": "https://api.stability.ai/v2alpha/openapi"
-    }
+    },
+    "operations": [
+      "music-generation",
+      "sound-effects"
+    ]
   },
   {
     "id": "csm-common-sense-machines-api",
@@ -4890,7 +5230,10 @@
     "desc_en": "Create 3D assets and multi-part kits from images via async REST sessions (image-to-3D, retopology).",
     "desc_pl": "Twórz zasoby 3D i wieloczęściowe zestawy z obrazów przez asynchroniczne sesje REST (obraz-do-3D, retopologia).",
     "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. A Blender/MCP integration exists but its official vendor-maintained status could not be fully confirmed.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "image-to-3d"
+    ]
   },
   {
     "id": "hyper3d-rodin-api",
@@ -4929,7 +5272,11 @@
       "value": true,
       "how": "POST /rodin returns uuid + jobs.subscription_key; poll POST /status, then POST /download with task_uuid",
       "source_url": "https://docs.hyper3d.ai/en/get-started/quick-start"
-    }
+    },
+    "operations": [
+      "text-to-3d",
+      "image-to-3d"
+    ]
   },
   {
     "id": "meshy-api",
@@ -5009,7 +5356,14 @@
       "summary": "Generated files retained for 3 days on non-Enterprise plans",
       "source_url": "https://docs.meshy.ai/en/api/quick-start",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-3d",
+      "image-to-3d",
+      "3d-texturing",
+      "text-to-image",
+      "image-to-image"
+    ]
   },
   {
     "id": "sketchfab-data-api",
@@ -5059,7 +5413,10 @@
       "summary": "Calls can be throttled to limit abuse; throttled clients get 429 Too Many Requests (no numeric limit published)",
       "source_url": "https://docs.sketchfab.com/data-api/v3/swagger.json",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "3d-asset-marketplace"
+    ]
   },
   {
     "id": "stability-ai-3d-stable-fast-3d-spar3d-api",
@@ -5099,7 +5456,10 @@
       "value": false,
       "how": "POST /v2beta/3d/stable-fast-3d and /v2beta/3d/stable-point-aware-3d return the GLB binary directly",
       "source_url": "https://api.stability.ai/v2alpha/openapi"
-    }
+    },
+    "operations": [
+      "image-to-3d"
+    ]
   },
   {
     "id": "tencent-hunyuan3d-api",
@@ -5144,7 +5504,11 @@
       "value": true,
       "how": "SubmitHunyuanTo3DProJob returns JobId (valid 24h); poll QueryHunyuanTo3DProJob",
       "source_url": "https://www.tencentcloud.com/document/product/1284/75540"
-    }
+    },
+    "operations": [
+      "text-to-3d",
+      "image-to-3d"
+    ]
   },
   {
     "id": "tripo-api",
@@ -5188,7 +5552,11 @@
       "value": true,
       "how": "poll GET /v3/tasks/{task_id} or receive webhooks",
       "source_url": "https://developers.tripo3d.ai/en/docs/webhooks"
-    }
+    },
+    "operations": [
+      "text-to-3d",
+      "image-to-3d"
+    ]
   },
   {
     "id": "autodesk-platform-services-aps",
@@ -5246,7 +5614,11 @@
       ],
       "source_url": "https://github.com/autodesk-platform-services/aps-mcp-server-python",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "cad-modeling",
+      "bim-data"
+    ]
   },
   {
     "id": "bentley-itwin-platform-apis",
@@ -5300,51 +5672,10 @@
       ],
       "source_url": "https://developer.bentley.com/apis/overview/authorization/",
       "checked_at": "2026-09-24"
-    }
-  },
-  {
-    "id": "esri-arcgis-location-platform",
-    "name": "Esri ArcGIS Location Platform",
-    "category": "architecture-cad-bim",
-    "homepage": "https://location.arcgis.com",
-    "docs": "https://developers.arcgis.com/documentation/",
-    "auth": "api_key+oauth2",
-    "auth_hint": "API key (token param) or OAuth2 Bearer token",
-    "mcp": {
-      "type": "none",
-      "url": null
     },
-    "free_tier": "free tier with monthly free credits, then usage-based pricing",
-    "sdk": [
-      "javascript",
-      "python",
-      "dotnet",
-      "swift",
-      "kotlin"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
-    "desc_pl": "Geokoduj adresy, renderuj mapy, wykonuj analizy przestrzenne i zarządzaj danymi geoprzestrzennymi przez REST API i SDK.",
-    "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": true,
-      "quota": "e.g. 2M basemap tiles, 20K geocodes, 20K routes, 500 place searches",
-      "period": "month",
-      "source_url": "https://location.arcgis.com/pricing/",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "query",
-      "name": "token",
-      "format": "?token=<API_KEY> or header X-Esri-Authorization: Bearer <API_KEY>",
-      "source_url": "https://developers.arcgis.com/rest/geocode/find-address-candidates/",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://geocode-api.arcgis.com/arcgis/rest/services"
+    "operations": [
+      "bim-data"
+    ]
   },
   {
     "id": "onshape-rest-api",
@@ -5399,7 +5730,10 @@
       ],
       "source_url": "https://onshape-public.github.io/docs/auth/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "cad-modeling"
+    ]
   },
   {
     "id": "procore-api",
@@ -5451,7 +5785,11 @@
       "summary": "Hourly limit (60-min window) plus spike limit (10-s window); see X-Rate-Limit-* headers; failed calls count",
       "source_url": "https://raw.githubusercontent.com/procore/documentation/main/plan_your_app/rate_limiting.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "construction-management",
+      "task-management"
+    ]
   },
   {
     "id": "rhino-compute-mcneel",
@@ -5486,7 +5824,10 @@
       "format": "RhinoComputeKey: <API_KEY>",
       "source_url": "https://developer.rhino3d.com/guides/compute/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "cad-modeling"
+    ]
   },
   {
     "id": "speckle-api",
@@ -5538,7 +5879,11 @@
       ],
       "source_url": "https://docs.speckle.systems/developers/authentication/pats.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "bim-data",
+      "cad-modeling"
+    ]
   },
   {
     "id": "trimble-connect-api",
@@ -5571,7 +5916,10 @@
       "summary": "Not published; HTTP 429 Too Many Requests should be retried. Regional base URLs must be discovered via the /regions endpoint",
       "source_url": "https://developer.trimble.com/docs/connect/reference",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "bim-data"
+    ]
   },
   {
     "id": "zoo-text-to-cad-api-kittycad",
@@ -5627,7 +5975,11 @@
       "source_url": "https://zoo.dev/docs/api",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.zoo.dev"
+    "base_url": "https://api.zoo.dev",
+    "operations": [
+      "text-to-3d",
+      "cad-modeling"
+    ]
   },
   {
     "id": "eraser-api-diagramgpt",
@@ -5666,7 +6018,10 @@
       "source_url": "https://docs.eraser.io/reference/api-token.md",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://app.eraser.io/api"
+    "base_url": "https://app.eraser.io/api",
+    "operations": [
+      "diagram-rendering"
+    ]
   },
   {
     "id": "icepanel-api",
@@ -5714,7 +6069,10 @@
       "summary": "GET/HEAD 2,400/min; POST/PUT/PATCH/DELETE 60/min; POST /user/* 10/min; 429 with Retry-After",
       "source_url": "https://developer.icepanel.io/developer-guide/getting-started/rate-limits.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "diagram-rendering"
+    ]
   },
   {
     "id": "kroki",
@@ -5753,7 +6111,10 @@
       "value": false,
       "how": "synchronous: image returned in the HTTP response",
       "source_url": "https://docs.kroki.io/kroki/setup/usage/"
-    }
+    },
+    "operations": [
+      "diagram-rendering"
+    ]
   },
   {
     "id": "lucid-lucidchart-rest-api",
@@ -5797,7 +6158,10 @@
       ],
       "source_url": "https://lucid.readme.io/reference/access-scopes.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "diagram-rendering"
+    ]
   },
   {
     "id": "mermaid-chart-api",
@@ -5848,7 +6212,10 @@
       "format": "Authorization: Bearer <MERMAID_CHART_API_TOKEN> (only for Mermaid Chart account tools)",
       "source_url": "https://mermaid.ai/docs/ai/mcp-server",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "diagram-rendering"
+    ]
   },
   {
     "id": "miro-rest-api",
@@ -5925,7 +6292,10 @@
       ],
       "source_url": "https://developers.miro.com/reference/scopes.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "whiteboard-editing"
+    ]
   },
   {
     "id": "napkin-ai-api",
@@ -5974,7 +6344,10 @@
       "value": true,
       "how": "POST /v1/visual returns request id; poll GET /v1/visual/{id}/status; file URLs expire after 30 min",
       "source_url": "https://api.napkin.ai/"
-    }
+    },
+    "operations": [
+      "diagram-rendering"
+    ]
   },
   {
     "id": "plantuml-server-api",
@@ -6021,7 +6394,10 @@
       "value": false,
       "how": "synchronous: image returned in the HTTP response",
       "source_url": "https://plantuml.com/server"
-    }
+    },
+    "operations": [
+      "diagram-rendering"
+    ]
   },
   {
     "id": "structurizr",
@@ -6071,7 +6447,10 @@
       "summary": "Rate limiting enforced on all workspace API calls (GET and PUT); no number published",
       "source_url": "https://docs.structurizr.com/cloud/workspace-api",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "diagram-rendering"
+    ]
   },
   {
     "id": "canva-connect-api",
@@ -6142,7 +6521,11 @@
       "value": true,
       "how": "POST /v1/exports returns a job id; poll GET /v1/exports/{exportId} until success/failed",
       "source_url": "https://www.canva.dev/docs/connect/api-reference/exports/create-design-export-job/"
-    }
+    },
+    "operations": [
+      "design-templating",
+      "design-file-access"
+    ]
   },
   {
     "id": "figma-rest-api-dev-mode-mcp",
@@ -6216,7 +6599,12 @@
       ],
       "source_url": "https://developers.figma.com/docs/rest-api/scopes/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "design-file-access",
+      "ui-generation",
+      "diagram-rendering"
+    ]
   },
   {
     "id": "framer",
@@ -6251,7 +6639,10 @@
       "format": "connect(projectUrl, <FRAMER_API_KEY>) via the framer-api npm SDK (WebSocket, no REST header)",
       "source_url": "https://www.framer.com/developers/server-api-quick-start",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "static-site-hosting"
+    ]
   },
   {
     "id": "penpot-api",
@@ -6298,7 +6689,10 @@
       "summary": "Per-user rate limit (all tokens of a user share it); values not published",
       "source_url": "https://design.penpot.app/api/_doc",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "design-file-access"
+    ]
   },
   {
     "id": "v0-platform-api-vercel",
@@ -6363,7 +6757,11 @@
       "value": true,
       "how": "responseMode=async returns a placeholder message; poll the chat/message by id (or use experimental SSE stream)",
       "source_url": "https://v0.app/docs/api/platform/reference/chats/create"
-    }
+    },
+    "operations": [
+      "ui-generation",
+      "serverless-deploy"
+    ]
   },
   {
     "id": "webflow-data-api",
@@ -6416,7 +6814,11 @@
       ],
       "source_url": "https://developers.webflow.com/data/reference/scopes",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "no-code-database",
+      "static-site-hosting"
+    ]
   },
   {
     "id": "adobe-pdf-services-api",
@@ -6467,7 +6869,12 @@
       "value": true,
       "how": "job creation returns a location header; poll it until status done/failed",
       "source_url": "https://developer.adobe.com/document-services/docs/overview/pdf-services-api/gettingstarted/"
-    }
+    },
+    "operations": [
+      "pdf-processing",
+      "ocr",
+      "document-parsing"
+    ]
   },
   {
     "id": "aws-textract",
@@ -6525,7 +6932,11 @@
       "value": true,
       "how": "Start* operations (e.g. StartDocumentAnalysis) return a JobId; poll Get* operations; sync APIs also available",
       "source_url": "https://docs.aws.amazon.com/general/latest/gr/textract.html"
-    }
+    },
+    "operations": [
+      "ocr",
+      "document-parsing"
+    ]
   },
   {
     "id": "azure-ai-document-intelligence",
@@ -6576,7 +6987,11 @@
       "value": true,
       "how": "POST ...:analyze returns 202 with Operation-Location header; poll GET until status succeeded/failed",
       "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/quickstarts/get-started-sdks-rest-api?pivots=programming-language-rest-api"
-    }
+    },
+    "operations": [
+      "document-parsing",
+      "ocr"
+    ]
   },
   {
     "id": "cloudconvert-api",
@@ -6648,7 +7063,11 @@
       "value": true,
       "how": "jobs/tasks run asynchronously; poll job status or receive webhooks",
       "source_url": "https://cloudconvert.com/api/v2"
-    }
+    },
+    "operations": [
+      "pdf-processing",
+      "ocr"
+    ]
   },
   {
     "id": "docusign-esignature-api",
@@ -6702,7 +7121,10 @@
       ],
       "source_url": "https://developers.docusign.com/platform/auth/reference/scopes/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "e-signature"
+    ]
   },
   {
     "id": "gamma-api",
@@ -6779,7 +7201,11 @@
       "value": true,
       "how": "POST /generations returns generationId; poll GET /generations/{id}",
       "source_url": "https://developers.gamma.app/generations/create-generation"
-    }
+    },
+    "operations": [
+      "slides-generation",
+      "document-generation"
+    ]
   },
   {
     "id": "google-document-ai",
@@ -6839,7 +7265,11 @@
       "summary": "Content not used except to provide the service; online requests not persisted; batch data deleted after processing (1-day TTL failsafe)",
       "source_url": "https://docs.cloud.google.com/document-ai/docs/data-usage",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "document-parsing",
+      "ocr"
+    ]
   },
   {
     "id": "google-slides-docs-api",
@@ -6909,7 +7339,10 @@
       "value": false,
       "how": "synchronous REST calls (presentations.get / batchUpdate)",
       "source_url": "https://developers.google.com/workspace/slides/api/reference/rest"
-    }
+    },
+    "operations": [
+      "slides-generation"
+    ]
   },
   {
     "id": "llamaparse-llamacloud",
@@ -6969,7 +7402,10 @@
       "summary": "Parse cache retained 48 hours then permanently deleted; caching can be disabled",
       "source_url": "https://www.llamaindex.ai/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "document-parsing"
+    ]
   },
   {
     "id": "mistral-ocr-api",
@@ -7026,7 +7462,11 @@
       "summary": "Model-training opt-out available on all plans including Free",
       "source_url": "https://mistral.ai/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "ocr",
+      "document-parsing"
+    ]
   },
   {
     "id": "pdf-co-api",
@@ -7117,7 +7557,12 @@
       "summary": "Temporary files stored 1 hour by default, then auto-removed",
       "source_url": "https://developer.pdf.co/llms.txt",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "pdf-processing",
+      "ocr",
+      "document-parsing"
+    ]
   },
   {
     "id": "reducto-api",
@@ -7185,7 +7630,10 @@
       "summary": "Zero Data Retention agreement available on Growth and Enterprise tiers",
       "source_url": "https://reducto.ai/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "document-parsing"
+    ]
   },
   {
     "id": "slidespeak-api",
@@ -7237,7 +7685,11 @@
       "summary": "API plans state no model training on your data",
       "source_url": "https://slidespeak.co/slidespeak-api/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "slides-generation",
+      "document-generation"
+    ]
   },
   {
     "id": "unstructured-api",
@@ -7291,7 +7743,10 @@
       "summary": "Zero Data Retention: processed data not stored permanently",
       "source_url": "https://unstructured.io/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "document-parsing"
+    ]
   },
   {
     "id": "amazon-translate",
@@ -7318,7 +7773,10 @@
     "desc_en": "Translate text and documents in real time or batch across 75+ languages via the AWS SDK/API.",
     "desc_pl": "Tłumacz tekst i dokumenty w czasie rzeczywistym lub wsadowo w ponad 75 językach przez AWS SDK/API.",
     "notes": "Requires an AWS account and IAM credentials; missing from the candidate list despite being a major agent-callable translation API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "translation"
+    ]
   },
   {
     "id": "azure-ai-translator",
@@ -7345,7 +7803,11 @@
     "desc_en": "Translate text, detect language, and transliterate across 100+ languages via REST API within Azure AI Services.",
     "desc_pl": "Tłumacz tekst, wykrywaj język i transliteruj w ponad 100 językach przez REST API w ramach Azure AI Services.",
     "notes": "F0 free tier excludes custom model training/hosting, which are billed separately.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "translation",
+      "language-detection"
+    ]
   },
   {
     "id": "deepl-api",
@@ -7374,7 +7836,10 @@
     "desc_en": "Translate and rephrase text or documents between 30+ languages via REST API, SDKs, or an official MCP server.",
     "desc_pl": "Tłumacz i przeredagowuj tekst lub dokumenty między ponad 30 językami przez REST API, SDK lub oficjalny serwer MCP.",
     "notes": "DeepL retired the API Free plan around July 2026; no more permanent free tier for new signups.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "translation"
+    ]
   },
   {
     "id": "google-cloud-translation",
@@ -7403,7 +7868,11 @@
     "desc_en": "Translate text/documents and detect language across 100+ languages via REST/gRPC API within Google Cloud.",
     "desc_pl": "Tłumacz tekst/dokumenty i wykrywaj język w ponad 100 językach przez REST/gRPC API w Google Cloud.",
     "notes": "Advanced (v3) edition supports glossaries/custom models; requires a GCP project with billing enabled even for free usage.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "translation",
+      "language-detection"
+    ]
   },
   {
     "id": "languagetool-api",
@@ -7424,7 +7893,10 @@
     "desc_en": "Check grammar, style, and spelling in 30+ languages via a public HTTP API, with an optional Premium key for higher limits.",
     "desc_pl": "Sprawdzaj gramatykę, styl i pisownię w ponad 30 językach przez publiczne API HTTP, z opcjonalnym kluczem Premium dla wyższych limitów.",
     "notes": "This is a proofreading/grammar API, not machine translation.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "grammar-check"
+    ]
   },
   {
     "id": "modernmt-api",
@@ -7449,7 +7921,10 @@
     "desc_en": "Send adaptive neural machine translation requests with in-context learning via a REST API.",
     "desc_pl": "Wysyłaj żądania adaptacyjnego neuronowego tłumaczenia maszynowego z uczeniem kontekstowym przez REST API.",
     "notes": "ModernMT is being folded into a new product called Lara; ModernMT API compatibility is stated to continue only until Dec 31, 2026 - plan for migration.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "translation"
+    ]
   },
   {
     "id": "cloudflare-sandbox-sdk",
@@ -7505,7 +7980,11 @@
       "summary": "Worker subrequests per request: 50 on Free, 1,000 on Paid (HTTP transport); RPC transport avoids extra subrequests",
       "source_url": "https://developers.cloudflare.com/sandbox/platform/limits/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "code-execution",
+      "sandbox-vm"
+    ]
   },
   {
     "id": "codesandbox-sdk",
@@ -7536,7 +8015,11 @@
       "source_url": "https://github.com/codesandbox/codesandbox-sdk/blob/main/src/utils/api.ts",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.codesandbox.io"
+    "base_url": "https://api.codesandbox.io",
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ]
   },
   {
     "id": "daytona",
@@ -7585,7 +8068,11 @@
       "summary": "Tier 1: 10,000 general requests/min, 300 sandbox creations/min, 10,000 lifecycle ops/min; higher tiers up to 50,000/600/50,000",
       "source_url": "https://www.daytona.io/docs/en/limits/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ]
   },
   {
     "id": "e2b",
@@ -7636,7 +8123,11 @@
       "summary": "Hobby: 1 sandbox creation/sec, 20 concurrent sandboxes, max 1 hour continuous runtime",
       "source_url": "https://docs.e2b.dev/sandbox/rate-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ]
   },
   {
     "id": "judge0",
@@ -7676,7 +8167,10 @@
       "value": true,
       "how": "POST /submissions returns a token; poll GET /submissions/{token} (wait=true for sync where enabled)",
       "source_url": "https://ce.judge0.com/"
-    }
+    },
+    "operations": [
+      "code-execution"
+    ]
   },
   {
     "id": "modal",
@@ -7737,7 +8231,11 @@
       "summary": "Starter: 100 containers + 10 GPU concurrency",
       "source_url": "https://modal.com/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ]
   },
   {
     "id": "piston",
@@ -7759,7 +8257,10 @@
     "desc_pl": "Wywołaj darmowe publiczne REST API, by kompilować i uruchamiać kod w ponad 70 językach w izolowanych kontenerach.",
     "notes": "Public emkc.org instance closed to open use on 2026-02-15; self-host via Docker for agent workloads. Widely used by Discord/Slack bots.",
     "verified": "2026-09-24",
-    "base_url": "https://emkc.org/api/v2/piston"
+    "base_url": "https://emkc.org/api/v2/piston",
+    "operations": [
+      "code-execution"
+    ]
   },
   {
     "id": "riza",
@@ -7819,7 +8320,11 @@
       "summary": "Hobby: 100,000 requests/month, 30 s max execution, 128 MB memory per invocation",
       "source_url": "https://riza.io/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "code-execution",
+      "sandbox-vm"
+    ]
   },
   {
     "id": "runloop",
@@ -7864,7 +8369,11 @@
       "source_url": "https://github.com/runloopai/api-client-ts",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.runloop.ai"
+    "base_url": "https://api.runloop.ai",
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ]
   },
   {
     "id": "vercel-sandbox",
@@ -7913,7 +8422,11 @@
       "summary": "Hobby: 10 concurrent sandboxes, 45 min max session, 20-40 vCPUs/min allocation, 1,000 control-plane req/min; Pro: 10,000 concurrent, 24 h",
       "source_url": "https://vercel.com/docs/sandbox/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ]
   },
   {
     "id": "circleci-api",
@@ -7971,7 +8484,10 @@
       "source_url": "https://circleci.com/docs/api/v2/index.html",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://circleci.com/api/v2"
+    "base_url": "https://circleci.com/api/v2",
+    "operations": [
+      "ci-cd"
+    ]
   },
   {
     "id": "datadog-api",
@@ -8038,7 +8554,11 @@
       "summary": "Per-endpoint limits (429 when exceeded); metric data-point submission is not rate limited",
       "source_url": "https://docs.datadoghq.com/api/latest/rate-limits/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "monitoring",
+      "incident-management"
+    ]
   },
   {
     "id": "docker-hub-api",
@@ -8096,7 +8616,10 @@
       "summary": "Abuse limit of thousands of requests/min per IP; X-RateLimit-* headers, 429 with Retry-After; pulls 200/6h free, 100/6h anonymous",
       "source_url": "https://docs.docker.com/docker-hub/usage/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "package-registry"
+    ]
   },
   {
     "id": "github-api",
@@ -8169,7 +8692,11 @@
       ],
       "source_url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "source-control",
+      "ci-cd"
+    ]
   },
   {
     "id": "gitlab-api",
@@ -8233,7 +8760,11 @@
       "summary": "GitLab.com Free: 100 req/min burst and 5,000 req/hour per user; unauthenticated 60/hour",
       "source_url": "https://docs.gitlab.com/user/gitlab_com/rate_limits/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "source-control",
+      "ci-cd"
+    ]
   },
   {
     "id": "globalping",
@@ -8300,7 +8831,10 @@
       "value": true,
       "how": "POST /v1/measurements returns an id; poll GET /v1/measurements/{id}",
       "source_url": "https://github.com/jsdelivr/globalping"
-    }
+    },
+    "operations": [
+      "network-probing"
+    ]
   },
   {
     "id": "maven-central-search",
@@ -8350,7 +8884,10 @@
       "source_url": "https://central.sonatype.org/search/rest-api-guide/",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://search.maven.org/solrsearch/select"
+    "base_url": "https://search.maven.org/solrsearch/select",
+    "operations": [
+      "package-lookup"
+    ]
   },
   {
     "id": "pagerduty-api",
@@ -8407,7 +8944,10 @@
       "source_url": "https://raw.githubusercontent.com/PagerDuty/api-schema/main/reference/REST/openapiv3.json",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.pagerduty.com"
+    "base_url": "https://api.pagerduty.com",
+    "operations": [
+      "incident-management"
+    ]
   },
   {
     "id": "postman-api",
@@ -8455,7 +8995,10 @@
       "summary": "300 requests/min per API key; monthly call quota by plan (10,000 on Free)",
       "source_url": "https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "api-testing"
+    ]
   },
   {
     "id": "reflag",
@@ -8498,7 +9041,10 @@
       "source_url": "https://docs.reflag.com/api/reflag-rest-api",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://app.reflag.com/api"
+    "base_url": "https://app.reflag.com/api",
+    "operations": [
+      "feature-flags"
+    ]
   },
   {
     "id": "sentry-api",
@@ -8549,7 +9095,11 @@
       "summary": "Per caller+endpoint request-rate and concurrency limits (values not published)",
       "source_url": "https://docs.sentry.io/api/ratelimits/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "error-tracking",
+      "monitoring"
+    ]
   },
   {
     "id": "supabase-management-api",
@@ -8617,7 +9167,11 @@
       "summary": "120 req/min per user per project/org; analytics 30/min; database context 10/min",
       "source_url": "https://supabase.com/docs/reference/api/introduction",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "cloud-infrastructure",
+      "sql-database"
+    ]
   },
   {
     "id": "aws-apis",
@@ -8677,7 +9231,10 @@
       "format": "Authorization: AWS4-HMAC-SHA256 Credential=<ACCESS_KEY_ID>/<date>/<region>/<service>/aws4_request, SignedHeaders=..., Signature=...",
       "source_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "cloud-infrastructure"
+    ]
   },
   {
     "id": "azure-apis",
@@ -8740,7 +9297,10 @@
       "value": true,
       "how": "some operations are asynchronous; track them via response headers (Track asynchronous Azure operations)",
       "source_url": "https://learn.microsoft.com/en-us/rest/api/azure/"
-    }
+    },
+    "operations": [
+      "cloud-infrastructure"
+    ]
   },
   {
     "id": "cloudflare-api",
@@ -8796,7 +9356,11 @@
       "summary": "1,200 requests per 5 minutes per user/account token; 200 req/s per IP; GraphQL max 320/5 min by query cost; exceeding blocks calls for 5 min (429)",
       "source_url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "dns-cdn",
+      "serverless-deploy"
+    ]
   },
   {
     "id": "fly-io-machines-api",
@@ -8862,7 +9426,11 @@
       "value": true,
       "how": "machine state changes are asynchronous; block with GET /v1/apps/{app}/machines/{id}/wait?state=started (default timeout 60s)",
       "source_url": "https://docs.fly.io/machines/api/machines-resource/"
-    }
+    },
+    "operations": [
+      "container-hosting",
+      "cloud-infrastructure"
+    ]
   },
   {
     "id": "google-cloud-apis",
@@ -8916,7 +9484,71 @@
       "format": "Authorization: Bearer <OAuth2 access token>",
       "source_url": "https://docs.cloud.google.com/docs/authentication/rest",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "cloud-infrastructure"
+    ]
+  },
+  {
+    "id": "mux-video-api",
+    "name": "Mux Video API",
+    "category": "cloud-hosting",
+    "homepage": "https://www.mux.com",
+    "docs": "https://www.mux.com/docs",
+    "auth": "api_key",
+    "auth_hint": "HTTP Basic auth: <token_id>:<token_secret>",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.mux.com",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.mux.com",
+      "repo": "https://github.com/muxinc/mux-node-sdk/tree/master/packages/mcp-server",
+      "tools": [
+        "docs search",
+        "code execution (TypeScript against @mux/mux-node)"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://www.mux.com/docs/integrations/mcp-server.md",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
+    "sdk": [
+      "node",
+      "python",
+      "go",
+      "ruby",
+      "php"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST.",
+    "desc_pl": "Przesyłanie, kodowanie, streaming i analiza wideo; adresy odtwarzania, miniatury i napisy przez REST.",
+    "notes": "Hosting/streaming infrastructure; does not generate video from prompts.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100,000 delivery minutes",
+      "period": "month",
+      "source_url": "https://www.mux.com/pricing.md",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(MUX_TOKEN_ID:MUX_TOKEN_SECRET)",
+      "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.mux.com",
+    "rate_limits": {
+      "summary": "Per-environment rate-limit buckets; HTTP 429 when exceeded",
+      "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "video-hosting"
+    ]
   },
   {
     "id": "netlify-api",
@@ -8967,7 +9599,11 @@
       "summary": "500 requests/min general; deploys 3/min and 100/day; X-RateLimit-* headers",
       "source_url": "https://docs.netlify.com/api/get-started/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "static-site-hosting",
+      "dns-cdn"
+    ]
   },
   {
     "id": "render-api",
@@ -9038,7 +9674,13 @@
       "source_url": "https://api-docs.render.com/reference/authentication",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.render.com/v1"
+    "base_url": "https://api.render.com/v1",
+    "operations": [
+      "container-hosting",
+      "sql-database",
+      "key-value-store",
+      "static-site-hosting"
+    ]
   },
   {
     "id": "tencent-edgeone-pages",
@@ -9079,7 +9721,11 @@
       "format": "API token from the Makers console passed to the MCP server/CLI as an environment variable",
       "source_url": "https://pages.edgeone.ai/document/mcp",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "static-site-hosting",
+      "serverless-deploy"
+    ]
   },
   {
     "id": "vercel-api",
@@ -9151,7 +9797,12 @@
       "summary": "Per-endpoint limits, e.g. deployments list 1,000/min, env var reads 500/min, Hobby deployments 100/day and 100/hour; 429 on excess",
       "source_url": "https://vercel.com/docs/limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "serverless-deploy",
+      "web-analytics",
+      "dns-cdn"
+    ]
   },
   {
     "id": "agentset",
@@ -9196,7 +9847,11 @@
       "source_url": "https://docs.agentset.ai/api-reference/introduction",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.agentset.ai"
+    "base_url": "https://api.agentset.ai",
+    "operations": [
+      "rag-retrieval",
+      "vector-search"
+    ]
   },
   {
     "id": "chroma-cloud",
@@ -9255,7 +9910,10 @@
       "source_url": "https://docs.trychroma.com/cloud/getting-started",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.trychroma.com"
+    "base_url": "https://api.trychroma.com",
+    "operations": [
+      "vector-search"
+    ]
   },
   {
     "id": "clickhouse-cloud",
@@ -9322,7 +9980,11 @@
       "summary": "Cloud API: 10 requests per 10-second window per API key; up to 100 keys per organization",
       "source_url": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "analytics-query",
+      "sql-database"
+    ]
   },
   {
     "id": "convex",
@@ -9381,7 +10043,11 @@
       "source_url": "https://docs.convex.dev/http-api/",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://<deployment>.convex.cloud/api"
+    "base_url": "https://<deployment>.convex.cloud/api",
+    "operations": [
+      "nosql-database",
+      "vector-search"
+    ]
   },
   {
     "id": "google-bigquery",
@@ -9451,7 +10117,11 @@
       ],
       "source_url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "analytics-query",
+      "sql-database"
+    ]
   },
   {
     "id": "letta",
@@ -9505,7 +10175,10 @@
       "source_url": "https://docs.letta.com/api-reference/overview",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.letta.com"
+    "base_url": "https://api.letta.com",
+    "operations": [
+      "agent-memory"
+    ]
   },
   {
     "id": "mem0",
@@ -9568,7 +10241,10 @@
       "value": true,
       "how": "POST /v3/memories/add/ returns event_id with status PENDING; check event status (MCP tool get_event_status) or use webhooks",
       "source_url": "https://docs.mem0.ai/api-reference/memory/add-memories"
-    }
+    },
+    "operations": [
+      "agent-memory"
+    ]
   },
   {
     "id": "mongodb-atlas",
@@ -9642,7 +10318,10 @@
       "source_url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://cloud.mongodb.com/api/atlas/v2"
+    "base_url": "https://cloud.mongodb.com/api/atlas/v2",
+    "operations": [
+      "nosql-database"
+    ]
   },
   {
     "id": "neon-postgres",
@@ -9727,7 +10406,10 @@
       "value": true,
       "how": "long-running tasks return operation IDs; poll GET /projects/{project_id}/operations/{operation_id}",
       "source_url": "https://neon.com/docs/reference/api"
-    }
+    },
+    "operations": [
+      "sql-database"
+    ]
   },
   {
     "id": "pinecone",
@@ -9791,7 +10473,11 @@
       "summary": "Starter: 1M read units and 2M write units per month per org; 100 query and 100 upsert requests/s per namespace; 429 when exceeded",
       "source_url": "https://docs.pinecone.io/reference/api/database-limits/rate-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "vector-search",
+      "reranking"
+    ]
   },
   {
     "id": "planetscale",
@@ -9838,7 +10524,10 @@
       "summary": "600 requests per minute (subject to change)",
       "source_url": "https://planetscale.com/docs/api/reference/getting-started-with-planetscale-api",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "sql-database"
+    ]
   },
   {
     "id": "qdrant-cloud",
@@ -9888,7 +10577,10 @@
       "source_url": "https://qdrant.tech/documentation/cloud/authentication/",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://<cluster>.<region>.<provider>.cloud.qdrant.io:6333"
+    "base_url": "https://<cluster>.<region>.<provider>.cloud.qdrant.io:6333",
+    "operations": [
+      "vector-search"
+    ]
   },
   {
     "id": "snowflake",
@@ -9938,7 +10630,11 @@
       "source_url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://<account_identifier>.snowflakecomputing.com/api/v2"
+    "base_url": "https://<account_identifier>.snowflakecomputing.com/api/v2",
+    "operations": [
+      "analytics-query",
+      "sql-database"
+    ]
   },
   {
     "id": "supabase",
@@ -10023,7 +10719,11 @@
       "summary": "Management API: 120 requests/min per user per scope; some analytics and database endpoints 30 or 10/min; Free plan data API requests unlimited",
       "source_url": "https://supabase.com/docs/reference/api/introduction",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "sql-database",
+      "object-storage"
+    ]
   },
   {
     "id": "tidb-cloud",
@@ -10077,7 +10777,11 @@
       "format": "HTTP Digest auth: API public key as username, private key as password",
       "source_url": "https://docs.pingcap.com/api/tidb-cloud-api-overview/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "sql-database",
+      "vector-search"
+    ]
   },
   {
     "id": "tinybird",
@@ -10137,7 +10841,11 @@
       "summary": "Limits depend on plan (Free: 1,000 API requests/day); 429 Too many requests when exceeded",
       "source_url": "https://www.tinybird.co/docs/api-reference",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "analytics-query",
+      "data-pipeline"
+    ]
   },
   {
     "id": "turso",
@@ -10187,7 +10895,10 @@
       "source_url": "https://docs.turso.tech/api-reference/authentication",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.turso.tech/v1"
+    "base_url": "https://api.turso.tech/v1",
+    "operations": [
+      "sql-database"
+    ]
   },
   {
     "id": "upstash-redis-vector",
@@ -10234,7 +10945,11 @@
       "format": "Authorization: Bearer <UPSTASH_REDIS_REST_TOKEN> (or ?_token=<TOKEN>)",
       "source_url": "https://upstash.com/docs/redis/features/restapi",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "key-value-store",
+      "vector-search"
+    ]
   },
   {
     "id": "weaviate-cloud",
@@ -10288,7 +11003,10 @@
       "source_url": "https://docs.weaviate.io/cloud/manage-clusters/connect",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://<cluster-host>/v1"
+    "base_url": "https://<cluster-host>/v1",
+    "operations": [
+      "vector-search"
+    ]
   },
   {
     "id": "zep",
@@ -10349,7 +11067,11 @@
       "summary": "Free plan: variable rate limits depending on service-wide load",
       "source_url": "https://www.getzep.com/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "agent-memory",
+      "knowledge-graph-query"
+    ]
   },
   {
     "id": "zilliz-cloud-milvus",
@@ -10416,7 +11138,10 @@
       "source_url": "https://docs.zilliz.com/reference/restful",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.cloud.zilliz.com/v2"
+    "base_url": "https://api.cloud.zilliz.com/v2",
+    "operations": [
+      "vector-search"
+    ]
   },
   {
     "id": "agentmail",
@@ -10467,7 +11192,11 @@
       "summary": "Per-organization API limits (unpublished); 429 with Retry-After on excess. Free plan capped at 100 emails/day",
       "source_url": "https://docs.agentmail.to/knowledge-base/rate-limits.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "email-send",
+      "email-inbox"
+    ]
   },
   {
     "id": "discord-api",
@@ -10537,7 +11266,10 @@
       ],
       "source_url": "https://docs.discord.com/developers/topics/oauth2",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "team-chat"
+    ]
   },
   {
     "id": "line-messaging-api",
@@ -10601,7 +11333,10 @@
       "source_url": "https://developers.line.biz/en/reference/messaging-api/",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.line.me"
+    "base_url": "https://api.line.me",
+    "operations": [
+      "chat-messaging"
+    ]
   },
   {
     "id": "mailgun",
@@ -10655,7 +11390,10 @@
       "summary": "Per-API time windows; X-RateLimit-* headers and 429 when exceeded. EU region host: api.eu.mailgun.net",
       "source_url": "https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "email-send"
+    ]
   },
   {
     "id": "ntfy",
@@ -10704,7 +11442,10 @@
       "summary": "Defaults: burst 60 requests, replenish 1 request/5 s; attachments 100 MB total, 500 MB/day bandwidth per visitor",
       "source_url": "https://docs.ntfy.sh/config/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "push-notification"
+    ]
   },
   {
     "id": "postmark",
@@ -10786,7 +11527,10 @@
       "summary": "Unpublished acceptable-use limit; HTTP 429 when exceeded",
       "source_url": "https://postmarkapp.com/developer/api/overview",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "email-send"
+    ]
   },
   {
     "id": "resend",
@@ -10840,7 +11584,11 @@
       "summary": "10 requests/s per team across all API keys",
       "source_url": "https://resend.com/docs/api-reference/introduction",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "email-send",
+      "email-marketing"
+    ]
   },
   {
     "id": "sendgrid-twilio",
@@ -10907,7 +11655,11 @@
       "summary": "Per-endpoint limits reported in X-RateLimit-* headers; HTTP 429 when exceeded",
       "source_url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/rate-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "email-send",
+      "email-marketing"
+    ]
   },
   {
     "id": "slack-api",
@@ -10966,7 +11718,10 @@
       ],
       "source_url": "https://docs.slack.dev/reference/methods/conversations.history",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "team-chat"
+    ]
   },
   {
     "id": "stream-getstream-chat-video-api",
@@ -11014,7 +11769,10 @@
       "summary": "Per-endpoint per-minute limits (60 to 10,000/min, e.g. Send Message 1,000/min) plus 60 requests/min per user",
       "source_url": "https://getstream.io/chat/docs/node/rate_limits/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "chat-messaging"
+    ]
   },
   {
     "id": "telegram-bot-api",
@@ -11070,7 +11828,10 @@
       "summary": "~1 message/s per chat, 20 messages/min per group, ~30 messages/s for bulk; paid broadcasts up to 1,000/s",
       "source_url": "https://core.telegram.org/bots/faq",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "chat-messaging"
+    ]
   },
   {
     "id": "twilio",
@@ -11118,7 +11879,12 @@
       "format": "Authorization: Basic base64(<API_KEY_SID>:<API_KEY_SECRET>) (or AccountSid:AuthToken)",
       "source_url": "https://www.twilio.com/docs/usage/requests-to-twilio",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "sms",
+      "chat-messaging",
+      "phone-calls"
+    ]
   },
   {
     "id": "vonage-api",
@@ -11168,7 +11934,11 @@
       "format": "Authorization: Basic base64(API_KEY:API_SECRET) (SMS etc.) or Authorization: Bearer <JWT> (Voice, Video, Messages)",
       "source_url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "sms",
+      "phone-calls"
+    ]
   },
   {
     "id": "whatsapp-business-cloud-api",
@@ -11230,7 +12000,10 @@
       ],
       "source_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "chat-messaging"
+    ]
   },
   {
     "id": "zoom-api",
@@ -11280,7 +12053,11 @@
       "summary": "Per plan: Free light 4/s (6,000/day), Pro light 30/s, Business+ light 80/s; medium/heavy lower; 429 on excess",
       "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "video-conferencing",
+      "calendar"
+    ]
   },
   {
     "id": "bland-ai",
@@ -11346,7 +12123,11 @@
       "value": true,
       "how": "POST /v1/calls returns call_id; poll call status/logs or pass webhook to receive the call object when it ends",
       "source_url": "https://docs.bland.ai/platform/agent-quickstart"
-    }
+    },
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ]
   },
   {
     "id": "deepgram-voice-agent-api",
@@ -11407,7 +12188,12 @@
       "summary": "Model Improvement Program may keep data for training; opt out per request with mip_opt_out=true (data kept only for processing)",
       "source_url": "https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "voice-agent",
+      "speech-to-text",
+      "text-to-speech"
+    ]
   },
   {
     "id": "elevenlabs-agents-platform",
@@ -11460,7 +12246,11 @@
       "summary": "Zero Retention Mode available per agent and for Enterprise API use",
       "source_url": "https://elevenlabs.io/docs/llms.txt",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ]
   },
   {
     "id": "livekit-cloud",
@@ -11512,7 +12302,11 @@
       "summary": "Build plan: up to 100 concurrent users and agents",
       "source_url": "https://livekit.com/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ]
   },
   {
     "id": "retell-ai",
@@ -11536,7 +12330,11 @@
     "desc_en": "Build, deploy, and manage AI voice agents that handle phone and web calls via REST API and SDKs.",
     "desc_pl": "Buduj, wdrażaj i zarządzaj agentami głosowymi AI obsługującymi połączenia telefoniczne i webowe przez REST API i SDK.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ]
   },
   {
     "id": "synthflow-api",
@@ -11557,7 +12355,11 @@
     "desc_en": "Create and manage AI phone voice agents and trigger/manage outbound calls programmatically via REST API.",
     "desc_pl": "Twórz i zarządzaj telefonicznymi agentami głosowymi AI oraz wywołuj i zarządzaj połączeniami programowo przez REST API.",
     "notes": "Go-to-market leans enterprise-sales for scaled deployments; a self-serve trial with API access exists for building/testing.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ]
   },
   {
     "id": "twilio-programmable-voice",
@@ -11585,7 +12387,10 @@
     "desc_en": "Programmatically make, receive, and control phone calls (IVR, recording, conferencing) via REST API.",
     "desc_pl": "Programowo wykonuj, odbieraj i kontroluj połączenia telefoniczne (IVR, nagrywanie, konferencje) przez REST API.",
     "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "phone-calls"
+    ]
   },
   {
     "id": "vapi",
@@ -11609,7 +12414,11 @@
     "desc_en": "Create, configure, and run AI voice assistants that make and receive phone calls via REST API.",
     "desc_pl": "Twórz, konfiguruj i uruchamiaj asystentów głosowych AI, które wykonują i odbierają połączenia telefoniczne przez REST API.",
     "notes": "Also has an official MCP server (streamable-HTTP and SSE endpoints) exposing assistants/calls/phone numbers as tools.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ]
   },
   {
     "id": "airtable-api",
@@ -11664,7 +12473,10 @@
       ],
       "source_url": "https://airtable.com/developers/web/api/authentication",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "no-code-database"
+    ]
   },
   {
     "id": "asana-api",
@@ -11742,7 +12554,10 @@
       ],
       "source_url": "https://developers.asana.com/docs/oauth-scopes.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "task-management"
+    ]
   },
   {
     "id": "atlassian-jira-confluence",
@@ -11813,7 +12628,11 @@
       ],
       "source_url": "https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "task-management",
+      "docs-editing"
+    ]
   },
   {
     "id": "box-api",
@@ -11886,7 +12705,10 @@
       ],
       "source_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "file-storage"
+    ]
   },
   {
     "id": "cal-com-api",
@@ -11941,7 +12763,10 @@
       "summary": "120 requests/min per API key; can be raised to ~200/min, 800/min possibly at extra cost",
       "source_url": "https://cal.com/docs/api-reference/v2/introduction",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "calendar"
+    ]
   },
   {
     "id": "calendly-api",
@@ -11987,7 +12812,10 @@
       "source_url": "https://developer.calendly.com/openapi/calendly-api.yaml",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.calendly.com"
+    "base_url": "https://api.calendly.com",
+    "operations": [
+      "calendar"
+    ]
   },
   {
     "id": "clickup-api",
@@ -12033,7 +12861,11 @@
       "summary": "100 requests/min per token on Free Forever, Unlimited, Business; 1,000 on Business Plus; 10,000 on Enterprise",
       "source_url": "https://developer.clickup.com/docs/rate-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "task-management",
+      "docs-editing"
+    ]
   },
   {
     "id": "coda-api-superhuman-docs",
@@ -12081,7 +12913,11 @@
       "value": true,
       "how": "Writes return HTTP 202 with requestId; check GET /mutationStatus/{requestId}",
       "source_url": "https://docs.superhuman.com/developers/apis/v1"
-    }
+    },
+    "operations": [
+      "docs-editing",
+      "no-code-database"
+    ]
   },
   {
     "id": "dropbox-api",
@@ -12137,7 +12973,10 @@
       "source_url": "https://docs.dropboxapi.com/dropbox-api/docs/auth-types",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.dropboxapi.com/2"
+    "base_url": "https://api.dropboxapi.com/2",
+    "operations": [
+      "file-storage"
+    ]
   },
   {
     "id": "google-workspace-apis-gmail-calendar-drive",
@@ -12204,7 +13043,13 @@
       ],
       "source_url": "https://developers.google.com/workspace/gmail/api/auth/scopes",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "email-inbox",
+      "email-send",
+      "calendar",
+      "file-storage"
+    ]
   },
   {
     "id": "linear-api",
@@ -12262,7 +13107,10 @@
       ],
       "source_url": "https://linear.app/developers/oauth-2-0-authentication",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "task-management"
+    ]
   },
   {
     "id": "microsoft-graph-outlook-teams-onedrive",
@@ -12318,7 +13166,14 @@
       ],
       "source_url": "https://learn.microsoft.com/en-us/graph/auth/auth-concepts",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "email-inbox",
+      "email-send",
+      "calendar",
+      "team-chat",
+      "file-storage"
+    ]
   },
   {
     "id": "monday-com-api",
@@ -12380,7 +13235,11 @@
       "summary": "Complexity 10M points/min per personal token (1M on trial/free); Free plan 1,000 calls/day reset midnight UTC",
       "source_url": "https://developer.monday.com/api-reference/docs/rate-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "task-management",
+      "no-code-database"
+    ]
   },
   {
     "id": "nocodb-cloud",
@@ -12422,7 +13281,10 @@
       "format": "xc-token: <API_TOKEN>",
       "source_url": "https://nocodb.com/docs/product-docs/developer-resources/rest-apis/accessing-apis",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "no-code-database"
+    ]
   },
   {
     "id": "notion-api",
@@ -12485,7 +13347,11 @@
       "summary": "180 requests/min per connection (600/min on Business/Enterprise) plus per-workspace limits; 429 with Retry-After",
       "source_url": "https://developers.notion.com/reference/request-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "docs-editing",
+      "no-code-database"
+    ]
   },
   {
     "id": "todoist-api",
@@ -12537,7 +13403,10 @@
       ],
       "source_url": "https://developer.todoist.com/api/v1/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "task-management"
+    ]
   },
   {
     "id": "trello-api",
@@ -12586,7 +13455,10 @@
       ],
       "source_url": "https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "task-management"
+    ]
   },
   {
     "id": "attio-api",
@@ -12671,7 +13543,10 @@
       ],
       "source_url": "https://docs.attio.com/rest-api/endpoint-reference/records/create-a-record",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "crm"
+    ]
   },
   {
     "id": "hubspot-api",
@@ -12753,7 +13628,11 @@
       ],
       "source_url": "https://developers.hubspot.com/docs/api-reference/crm-contacts-v3/guide",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "crm",
+      "email-marketing"
+    ]
   },
   {
     "id": "intercom-api",
@@ -12814,7 +13693,11 @@
       "summary": "10,000 API calls/min per app and 25,000/min per workspace, enforced in 10-second windows",
       "source_url": "https://developers.intercom.com/docs/references/rest-api/errors/rate-limiting",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "support-ticketing",
+      "crm"
+    ]
   },
   {
     "id": "klaviyo-api",
@@ -12901,7 +13784,11 @@
       "value": true,
       "how": "bulk import/catalog and campaign send operations create jobs; poll the corresponding get_*_job endpoint",
       "source_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server_available_tools"
-    }
+    },
+    "operations": [
+      "email-marketing",
+      "sms"
+    ]
   },
   {
     "id": "mailchimp-marketing-api",
@@ -12960,7 +13847,10 @@
       "value": true,
       "how": "batch operations endpoint processes requests asynchronously; poll the batch status",
       "source_url": "https://mailchimp.com/developer/marketing/docs/fundamentals/"
-    }
+    },
+    "operations": [
+      "email-marketing"
+    ]
   },
   {
     "id": "pipedrive-api",
@@ -13022,7 +13912,10 @@
       ],
       "source_url": "https://pipedrive.readme.io/docs/marketplace-scopes-and-permissions-explanations",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "crm"
+    ]
   },
   {
     "id": "salesforce-apis",
@@ -13082,7 +13975,10 @@
       "summary": "Developer Edition 15,000 calls/24h; Enterprise/Professional 100,000 + per-license calls/24h; 5 concurrent long-running (>=20s) requests on Developer/Trial orgs",
       "source_url": "https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "crm"
+    ]
   },
   {
     "id": "zendesk-api",
@@ -13146,7 +14042,10 @@
       ],
       "source_url": "https://developer.zendesk.com/api-reference/ticketing/oauth/oauth_tokens/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "support-ticketing"
+    ]
   },
   {
     "id": "ayrshare",
@@ -13191,7 +14090,11 @@
       "source_url": "https://www.ayrshare.com/docs/apis/overview",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.ayrshare.com/api"
+    "base_url": "https://api.ayrshare.com/api",
+    "operations": [
+      "social-posting",
+      "social-data"
+    ]
   },
   {
     "id": "bluesky-at-protocol",
@@ -13248,7 +14151,11 @@
       "summary": "PDS: 3,000 requests/5 min per IP; writes 5,000 points/hour and 35,000/day per account (create=3 pts)",
       "source_url": "https://raw.githubusercontent.com/bluesky-social/bsky-docs/main/docs/advanced-guides/rate-limits.md",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ]
   },
   {
     "id": "linkedin-api",
@@ -13288,7 +14195,10 @@
       ],
       "source_url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "social-posting"
+    ]
   },
   {
     "id": "mastodon-api",
@@ -13331,7 +14241,11 @@
       ],
       "source_url": "https://docs.joinmastodon.org/client/token/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ]
   },
   {
     "id": "meta-graph-api-facebook-instagram",
@@ -13373,7 +14287,11 @@
       "summary": "Platform limit: calls per hour = 200 x number of daily active users; BUC limits for Marketing/Pages APIs",
       "source_url": "https://developers.facebook.com/docs/graph-api/overview/rate-limiting",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ]
   },
   {
     "id": "pinterest-api",
@@ -13416,7 +14334,11 @@
       ],
       "source_url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ]
   },
   {
     "id": "reddit-api",
@@ -13457,7 +14379,11 @@
       ],
       "source_url": "https://github.com/reddit-archive/reddit/wiki/OAuth2",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ]
   },
   {
     "id": "tiktok-api",
@@ -13502,7 +14428,11 @@
       "value": true,
       "how": "Content Posting returns publish_id; poll the publish status fetch endpoint",
       "source_url": "https://developers.tiktok.com/doc/content-posting-api-get-started"
-    }
+    },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ]
   },
   {
     "id": "x-twitter-api",
@@ -13545,7 +14475,11 @@
       "source_url": "https://docs.x.com/x-api/introduction",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.x.com/2"
+    "base_url": "https://api.x.com/2",
+    "operations": [
+      "social-posting",
+      "social-data"
+    ]
   },
   {
     "id": "youtube-data-api",
@@ -13600,7 +14534,60 @@
       ],
       "source_url": "https://developers.google.com/youtube/v3/guides/auth/installed-apps",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "video-hosting",
+      "social-posting",
+      "social-data"
+    ]
+  },
+  {
+    "id": "esri-arcgis-location-platform",
+    "name": "Esri ArcGIS Location Platform",
+    "category": "maps-geo-weather",
+    "homepage": "https://location.arcgis.com",
+    "docs": "https://developers.arcgis.com/documentation/",
+    "auth": "api_key+oauth2",
+    "auth_hint": "API key (token param) or OAuth2 Bearer token",
+    "mcp": {
+      "type": "none",
+      "url": null
+    },
+    "free_tier": "free tier with monthly free credits, then usage-based pricing",
+    "sdk": [
+      "javascript",
+      "python",
+      "dotnet",
+      "swift",
+      "kotlin"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
+    "desc_pl": "Geokoduj adresy, renderuj mapy, wykonuj analizy przestrzenne i zarządzaj danymi geoprzestrzennymi przez REST API i SDK.",
+    "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": true,
+      "quota": "e.g. 2M basemap tiles, 20K geocodes, 20K routes, 500 place searches",
+      "period": "month",
+      "source_url": "https://location.arcgis.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "token",
+      "format": "?token=<API_KEY> or header X-Esri-Authorization: Bearer <API_KEY>",
+      "source_url": "https://developers.arcgis.com/rest/geocode/find-address-candidates/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://geocode-api.arcgis.com/arcgis/rest/services",
+    "operations": [
+      "street-geocoding",
+      "map-tiles"
+    ]
   },
   {
     "id": "geoapify",
@@ -13668,7 +14655,13 @@
       "value": true,
       "how": "Batch Geocoding: POST /v1/batch/geocode/search returns job id; poll GET until 200 (202 while pending)",
       "source_url": "https://apidocs.geoapify.com/docs/geocoding/batch/"
-    }
+    },
+    "operations": [
+      "street-geocoding",
+      "places-search",
+      "routing",
+      "reverse-geocoding"
+    ]
   },
   {
     "id": "google-maps-platform",
@@ -13727,7 +14720,14 @@
       "summary": "Maps Grounding Lite MCP: 300 queries/min per project for search_places, lookup_weather, compute_routes",
       "source_url": "https://developers.google.com/maps/ai/grounding-lite",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "street-geocoding",
+      "routing",
+      "places-search",
+      "map-tiles",
+      "weather-forecast"
+    ]
   },
   {
     "id": "here-location-services",
@@ -13775,7 +14775,14 @@
       "format": "https://geocode.search.hereapi.com/v1/geocode?q=...&apiKey=<API_KEY>",
       "source_url": "https://docs.here.com/geocoding-and-search/docs/code-geocode-address",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "street-geocoding",
+      "routing",
+      "places-search",
+      "reverse-geocoding",
+      "map-tiles"
+    ]
   },
   {
     "id": "ip2location-io",
@@ -13834,7 +14841,10 @@
       "summary": "Keyless 1,000 queries/day; free key 50,000/month; resets 00:00 UTC",
       "source_url": "https://www.ip2location.io/ip2location-documentation",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "ip-geolocation"
+    ]
   },
   {
     "id": "iplocate",
@@ -13897,7 +14907,10 @@
       "summary": "No key: 50/day per IP; free key: 1,000/day; max 100 requests/s per IP; 429 on excess",
       "source_url": "https://www.iplocate.io/docs/getting-started/quota-rate-limits/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "ip-geolocation"
+    ]
   },
   {
     "id": "mapbox",
@@ -13960,7 +14973,13 @@
       "summary": "Per-token per-API: e.g. Geocoding 600/min, Directions 300/min, Static Images 1,250/min; 429 on excess",
       "source_url": "https://docs.mapbox.com/api/overview/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "street-geocoding",
+      "routing",
+      "map-tiles",
+      "places-search"
+    ]
   },
   {
     "id": "national-weather-service-api-nws",
@@ -14008,7 +15027,10 @@
       "summary": "Undisclosed generous limit; on excess retry after ~5 s",
       "source_url": "https://www.weather.gov/documentation/services-web-api",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "weather-forecast"
+    ]
   },
   {
     "id": "open-meteo",
@@ -14073,7 +15095,12 @@
       "summary": "Free API logs IP addresses for maintenance/abuse prevention only, not linked to identities; server logs deleted after 90 days",
       "source_url": "https://open-meteo.com/en/terms",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "weather-forecast",
+      "air-quality",
+      "street-geocoding"
+    ]
   },
   {
     "id": "openrouteservice",
@@ -14122,7 +15149,11 @@
       "summary": "Per-endpoint daily quotas reset every 24 h; legacy api.openrouteservice.org limited to 10% of quota from 2026-08-27",
       "source_url": "https://ask.openrouteservice.org/t/reducing-the-quota-of-deprecated-api-api-openrouteservice-org/8013",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "routing",
+      "street-geocoding"
+    ]
   },
   {
     "id": "openstreetmap-nominatim",
@@ -14175,7 +15206,11 @@
       "summary": "Absolute max 1 request/s; results must be cached; no autocomplete, no systematic/grid queries",
       "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "street-geocoding",
+      "reverse-geocoding"
+    ]
   },
   {
     "id": "openweathermap-api",
@@ -14229,7 +15264,11 @@
       "summary": "Free: 60 calls/min, 1,000,000/month; One Call API: first 1,000 calls/day free, then 0.0012 GBP/call",
       "source_url": "https://openweathermap.org/price",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "weather-forecast",
+      "air-quality"
+    ]
   },
   {
     "id": "overpass-api-osm",
@@ -14280,7 +15319,10 @@
       "summary": "Main instance: <10,000 queries/day and <1 GB/day, no parallel scripts; on 429 wait 30 s",
       "source_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "places-search"
+    ]
   },
   {
     "id": "tomorrow-io-api",
@@ -14339,7 +15381,10 @@
       "summary": "Per-plan hourly and daily caps per API key; 429 when exceeded",
       "source_url": "https://docs.tomorrow.io/reference/rate-limiting",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "weather-forecast"
+    ]
   },
   {
     "id": "adyen-api",
@@ -14386,7 +15431,10 @@
       "source_url": "https://docs.adyen.com/development-resources/api-authentication",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://checkout-test.adyen.com/v71"
+    "base_url": "https://checkout-test.adyen.com/v71",
+    "operations": [
+      "payments"
+    ]
   },
   {
     "id": "alpaca-trading-api",
@@ -14435,7 +15483,12 @@
       "summary": "Free Basic market data plan: 200 API calls/min, websocket limited to 30 symbols",
       "source_url": "https://alpaca.markets/data",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "trade-execution",
+      "stock-market-data",
+      "crypto-market-data"
+    ]
   },
   {
     "id": "alpha-vantage",
@@ -14493,7 +15546,12 @@
       "summary": "Free tier: 25 requests/day",
       "source_url": "https://www.alphavantage.co/support/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "stock-market-data",
+      "currency-exchange",
+      "crypto-market-data"
+    ]
   },
   {
     "id": "coinbase-cdp-x402",
@@ -14537,7 +15595,11 @@
       "source_url": "https://docs.cdp.coinbase.com/api-reference/v2/authentication",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.cdp.coinbase.com/platform"
+    "base_url": "https://api.cdp.coinbase.com/platform",
+    "operations": [
+      "crypto-wallet",
+      "payments"
+    ]
   },
   {
     "id": "coingecko-api",
@@ -14585,7 +15647,10 @@
       "summary": "Demo plan: 100 calls/min; keyless access is IP-rate-limited and shared",
       "source_url": "https://docs.coingecko.com/docs/common-errors-rate-limit",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "crypto-market-data"
+    ]
   },
   {
     "id": "coinmarketcap-api",
@@ -14636,7 +15701,10 @@
       "summary": "Basic (free) plan: 50 requests/min, 15,000 credits/month",
       "source_url": "https://coinmarketcap.com/api/pricing/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "crypto-market-data"
+    ]
   },
   {
     "id": "dexpaprika",
@@ -14706,7 +15774,10 @@
       "summary": "Free key: 100K credits/month, 30 requests/min; 1 request = 1 credit (batch = 1 credit per item)",
       "source_url": "https://dexpaprika.com/api/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "crypto-market-data"
+    ]
   },
   {
     "id": "financial-modeling-prep",
@@ -14753,7 +15824,10 @@
       "summary": "Free Basic plan: 250 calls/day; 500MB bandwidth per trailing 30 days",
       "source_url": "https://site.financialmodelingprep.com/pricing-plans",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "stock-market-data"
+    ]
   },
   {
     "id": "mercado-pago-api",
@@ -14814,7 +15888,10 @@
       "source_url": "https://www.mercadopago.com.ar/developers/en/reference",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.mercadopago.com"
+    "base_url": "https://api.mercadopago.com",
+    "operations": [
+      "payments"
+    ]
   },
   {
     "id": "open-exchange-rates",
@@ -14856,7 +15933,10 @@
       "summary": "Free plan capped at 1,000 requests/month",
       "source_url": "https://openexchangerates.org/signup",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "currency-exchange"
+    ]
   },
   {
     "id": "paypal-api",
@@ -14940,7 +16020,11 @@
       "summary": "No published limits; abusive traffic gets HTTP 429 RATE_LIMIT_REACHED; cache OAuth tokens, prefer webhooks over polling",
       "source_url": "https://developer.paypal.com/api/rest/reference/rate-limiting/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "payments",
+      "invoicing"
+    ]
   },
   {
     "id": "plaid-api",
@@ -15001,7 +16085,10 @@
       "summary": "Per-Item and per-client limits per endpoint, e.g. /accounts/get 15/min per Item, 15,000/min per client; HTTP 429 RATE_LIMIT_EXCEEDED",
       "source_url": "https://plaid.com/docs/errors/rate-limit-exceeded/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "banking-data"
+    ]
   },
   {
     "id": "polygon-io-massive",
@@ -15056,7 +16143,12 @@
       "summary": "Free Basic plan: 5 API calls/minute",
       "source_url": "https://massive.com/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "stock-market-data",
+      "currency-exchange",
+      "crypto-market-data"
+    ]
   },
   {
     "id": "square-api",
@@ -15114,7 +16206,12 @@
       "summary": "No published numbers; bursts may get HTTP 429 RATE_LIMITED; use backoff and batch endpoints",
       "source_url": "https://developer.squareup.com/docs/build-basics/general-considerations/handling-errors",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "payments",
+      "store-management",
+      "invoicing"
+    ]
   },
   {
     "id": "stripe-api",
@@ -15178,7 +16275,11 @@
       "summary": "Global 100 req/s live, 25 req/s sandbox; 25 req/s per endpoint; reads capped at avg 500 per transaction (min 10,000/month)",
       "source_url": "https://docs.stripe.com/rate-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "payments",
+      "invoicing"
+    ]
   },
   {
     "id": "wise-api",
@@ -15229,7 +16330,12 @@
       "source_url": "https://docs.wise.com/guides/developer/auth-and-security/personal-api-token",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.wise.com"
+    "base_url": "https://api.wise.com",
+    "operations": [
+      "payments",
+      "currency-exchange",
+      "banking-data"
+    ]
   },
   {
     "id": "amazon-selling-partner-api",
@@ -15282,7 +16388,11 @@
       "summary": "Token bucket per operation (rate per second + burst); standard and dynamic usage plans; 429 when empty",
       "source_url": "https://developer-docs.amazon/sp-api/docs/usage-plans-and-rate-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "marketplace-listing",
+      "store-management"
+    ]
   },
   {
     "id": "bigcommerce-api",
@@ -15343,7 +16453,11 @@
       ],
       "source_url": "https://docs.bigcommerce.com/docs/start/authentication/api-accounts",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "store-management",
+      "product-search"
+    ]
   },
   {
     "id": "ebay-apis",
@@ -15366,7 +16480,12 @@
     "desc_en": "List items, manage orders/inventory, and search listings across eBay marketplaces via REST APIs.",
     "desc_pl": "Wystawiaj przedmioty, zarządzaj zamówieniami/magazynem i przeszukuj oferty na eBay przez REST API.",
     "notes": "Production access requires an eBay developer account and app keys; rate limits scale with account compliance tier.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "marketplace-listing",
+      "store-management",
+      "product-search"
+    ]
   },
   {
     "id": "etsy-open-api-v3",
@@ -15387,7 +16506,12 @@
     "desc_en": "List products, manage orders/shop, and search listings on the Etsy marketplace via REST API.",
     "desc_pl": "Wystawiaj produkty, zarządzaj zamówieniami/sklepem i przeszukuj oferty na Etsy przez REST API.",
     "notes": "Requires an approved Etsy developer app; OAuth2 user consent needed for shop-management scopes. Missing from candidate list despite being a major agent-callable marketplace API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "marketplace-listing",
+      "store-management",
+      "product-search"
+    ]
   },
   {
     "id": "mercado-libre-api",
@@ -15408,7 +16532,13 @@
     "desc_en": "Lets an agent search items and categories and manage a seller's listings, orders, questions, shipments and promotions on the Mercado Libre marketplace.",
     "desc_pl": "Pozwala agentowi wyszukiwać produkty i kategorie oraz zarządzać ofertami, zamówieniami, pytaniami, wysyłkami i promocjami sprzedawcy w serwisie Mercado Libre.",
     "notes": "In AR, MX, BR and CL the account holder's details must be validated before creating an app; redirect URI must be HTTPS; rate limited (HTTP 429). Official MCP (OAuth, streamable HTTP) only searches and reads developer documentation.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "product-search",
+      "marketplace-listing",
+      "store-management",
+      "shipping"
+    ]
   },
   {
     "id": "printful-api",
@@ -15429,7 +16559,11 @@
     "desc_en": "Create print-on-demand products, sync catalogs, and submit fulfillment orders via REST API.",
     "desc_pl": "Twórz produkty print-on-demand, synchronizuj katalog i składaj zamówienia realizacji przez REST API.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "store-management",
+      "shipping"
+    ]
   },
   {
     "id": "shopify-admin-storefront-api",
@@ -15453,7 +16587,11 @@
     "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
     "desc_pl": "Zarządzaj produktami, zamówieniami, klientami i magazynem (Admin API) lub buduj sklepy (Storefront API) przez REST/GraphQL.",
     "notes": "The official Dev MCP server helps build/debug Shopify apps via docs & schema search; store operations themselves go through Admin/Storefront API tokens.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "store-management",
+      "product-search"
+    ]
   },
   {
     "id": "woocommerce-rest-api",
@@ -15476,7 +16614,10 @@
     "desc_en": "Manage products, orders, and customers on a self-hosted WooCommerce store via REST API.",
     "desc_pl": "Zarządzaj produktami, zamówieniami i klientami w samodzielnie hostowanym sklepie WooCommerce przez REST API.",
     "notes": "Requires your own WordPress+WooCommerce installation; there is no shared multi-tenant cloud endpoint.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "store-management"
+    ]
   },
   {
     "id": "activepieces",
@@ -15516,7 +16657,11 @@
       "source_url": "https://www.activepieces.com/docs/endpoints/overview",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://cloud.activepieces.com/api/v1"
+    "base_url": "https://cloud.activepieces.com/api/v1",
+    "operations": [
+      "workflow-automation",
+      "app-connectors"
+    ]
   },
   {
     "id": "arcade-dev",
@@ -15561,7 +16706,10 @@
       "source_url": "https://api.arcade.dev/v1/swagger",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.arcade.dev"
+    "base_url": "https://api.arcade.dev",
+    "operations": [
+      "app-connectors"
+    ]
   },
   {
     "id": "composio",
@@ -15620,7 +16768,10 @@
       "summary": "2,000 req/min on Free, up to 10,000 req/min on higher plans",
       "source_url": "https://composio.dev/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "app-connectors"
+    ]
   },
   {
     "id": "gumloop",
@@ -15683,7 +16834,11 @@
       "value": true,
       "how": "Runs start asynchronously; webhook triggers return {success:true} immediately, results via run history/tools",
       "source_url": "https://docs.gumloop.com/api-reference/getting-started"
-    }
+    },
+    "operations": [
+      "workflow-automation",
+      "app-connectors"
+    ]
   },
   {
     "id": "ifttt-api",
@@ -15721,7 +16876,10 @@
       "source_url": "https://ifttt.com/docs/connect_api",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://maker.ifttt.com"
+    "base_url": "https://maker.ifttt.com",
+    "operations": [
+      "workflow-automation"
+    ]
   },
   {
     "id": "keboola",
@@ -15784,7 +16942,12 @@
       "format": "X-StorageApi-Token: <STORAGE_API_TOKEN>",
       "source_url": "https://help.keboola.com/storage/api/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "data-pipeline",
+      "analytics-query",
+      "workflow-automation"
+    ]
   },
   {
     "id": "make-api-mcp",
@@ -15848,7 +17011,11 @@
       "value": true,
       "how": "MCP scenario-run tools return after 25-40 s; longer runs continue (up to 40 min) and results are fetched by executionId",
       "source_url": "https://developers.make.com/mcp-server"
-    }
+    },
+    "operations": [
+      "workflow-automation",
+      "app-connectors"
+    ]
   },
   {
     "id": "merge-agent-handler",
@@ -15891,7 +17058,10 @@
       "source_url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://ah-api.merge.dev/api/v1"
+    "base_url": "https://ah-api.merge.dev/api/v1",
+    "operations": [
+      "app-connectors"
+    ]
   },
   {
     "id": "n8n-api",
@@ -15949,7 +17119,11 @@
       "source_url": "https://docs.n8n.io/connect/n8n-api/authentication",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://<instance>/api/v1"
+    "base_url": "https://<instance>/api/v1",
+    "operations": [
+      "workflow-automation",
+      "app-connectors"
+    ]
   },
   {
     "id": "nango",
@@ -15996,7 +17170,10 @@
       "source_url": "https://nango.dev/docs/reference/api/authentication",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.nango.dev"
+    "base_url": "https://api.nango.dev",
+    "operations": [
+      "app-connectors"
+    ]
   },
   {
     "id": "paragon-actionkit",
@@ -16029,7 +17206,10 @@
       "source_url": "https://docs.useparagon.com/actionkit/openapi.json",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://actionkit.useparagon.com"
+    "base_url": "https://actionkit.useparagon.com",
+    "operations": [
+      "app-connectors"
+    ]
   },
   {
     "id": "pipedream-connect",
@@ -16075,7 +17255,10 @@
       "summary": "Connect API: create token 100/min per external user; accounts 2,000/5 min and components 3,000/5 min per project",
       "source_url": "https://pipedream.com/docs/connect/api-reference/rate-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "app-connectors"
+    ]
   },
   {
     "id": "stackone",
@@ -16127,7 +17310,10 @@
       ],
       "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "app-connectors"
+    ]
   },
   {
     "id": "superglue",
@@ -16166,7 +17352,11 @@
       "source_url": "https://superglue.ai/docs/api/overview/",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.superglue.cloud/v1"
+    "base_url": "https://api.superglue.cloud/v1",
+    "operations": [
+      "app-connectors",
+      "data-pipeline"
+    ]
   },
   {
     "id": "zapier-mcp-ai-actions",
@@ -16217,7 +17407,11 @@
       "source_url": "https://docs.zapier.com/mcp/overview/how-connections-work",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://mcp.zapier.com/api/v1/connect"
+    "base_url": "https://mcp.zapier.com/api/v1/connect",
+    "operations": [
+      "app-connectors",
+      "workflow-automation"
+    ]
   },
   {
     "id": "anthropic-claude-api",
@@ -16269,7 +17463,12 @@
       "summary": "Retained data never used for training without express permission; prompts/outputs not retained by default except 30-day rule for Covered Models; ZDR available",
       "source_url": "https://platform.claude.com/docs/en/manage-claude/api-and-data-retention",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "llm-inference",
+      "image-understanding",
+      "document-parsing"
+    ]
   },
   {
     "id": "cohere-api",
@@ -16323,7 +17522,12 @@
       "summary": "Trial: Chat 20 req/min, Rerank 10/min, Embed 2,000 inputs/min; Production: Chat 500/min, Rerank 1,000/min",
       "source_url": "https://docs.cohere.com/docs/rate-limits",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "llm-inference",
+      "embeddings",
+      "reranking"
+    ]
   },
   {
     "id": "comet-opik",
@@ -16380,7 +17584,10 @@
       "summary": "Free cloud plan keeps data 60 days",
       "source_url": "https://www.comet.com/site/pricing/",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "llm-observability"
+    ]
   },
   {
     "id": "deepseek-api",
@@ -16419,7 +17626,10 @@
       "summary": "Account-level concurrency: deepseek-flash 2,500, deepseek-v4-pro 500 concurrent requests; 429 when exceeded",
       "source_url": "https://api-docs.deepseek.com/quick_start/rate_limit",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "llm-inference"
+    ]
   },
   {
     "id": "fal-ai",
@@ -16490,7 +17700,13 @@
       "summary": "Request payloads stored 30 days by default (opt out with X-Fal-Store-IO: 0); generated media served as public CDN URLs",
       "source_url": "https://fal.ai/docs/documentation/model-apis/media-expiration",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "text-to-image",
+      "text-to-video",
+      "text-to-speech",
+      "text-to-3d"
+    ]
   },
   {
     "id": "fireworks-ai",
@@ -16553,7 +17769,11 @@
       "summary": "Does not log or store prompt or generation data for open models without explicit opt-in (zero data retention)",
       "source_url": "https://docs.fireworks.ai/guides/security_compliance/data_security",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "llm-inference",
+      "model-hosting"
+    ]
   },
   {
     "id": "google-gemini-api",
@@ -16618,7 +17838,14 @@
       "summary": "Free tier content used to improve Google products; paid tier content not used",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "llm-inference",
+      "text-to-image",
+      "image-understanding",
+      "code-execution",
+      "document-parsing"
+    ]
   },
   {
     "id": "groq-api",
@@ -16672,7 +17899,11 @@
       "summary": "Inference data not retained by default; retained up to 30 days only for batch/fine-tuning features or reliability needs",
       "source_url": "https://console.groq.com/docs/your-data",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "llm-inference",
+      "speech-to-text"
+    ]
   },
   {
     "id": "hugging-face-inference-providers",
@@ -16727,7 +17958,14 @@
       "summary": "HF does not store request/response bodies or use data for training; debug logs kept up to 30 days without user data",
       "source_url": "https://huggingface.co/docs/inference-providers/security",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "llm-inference",
+      "text-to-image",
+      "text-to-video",
+      "text-to-speech",
+      "image-understanding"
+    ]
   },
   {
     "id": "mistral-ai-api",
@@ -16782,7 +18020,13 @@
       "summary": "Zero data retention available on paid plans for supported stateless API calls; training opt-out handled separately",
       "source_url": "https://docs.mistral.ai/admin/monitor-comply/zero-data-retention",
       "checked_at": "2026-09-24"
-    }
+    },
+    "operations": [
+      "llm-inference",
+      "ocr",
+      "embeddings",
+      "document-parsing"
+    ]
   },
   {
     "id": "openai-api",
@@ -16810,7 +18054,14 @@
     "desc_en": "Generate text, images, audio and embeddings, and run tool-calling via the Responses and Chat Completions APIs.",
     "desc_pl": "Generuj tekst, obrazy, audio i embeddingi oraz wywołuj narzędzia przez API Responses i Chat Completions.",
     "notes": "Docs moved from platform.openai.com to developers.openai.com (old URLs redirect). Usage-based billing with a payment method; rate limits scale with usage tier. OpenAI MCP docs cover building MCP servers for ChatGPT, not an MCP wrapping the API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "llm-inference",
+      "text-to-image",
+      "text-to-speech",
+      "speech-to-text",
+      "embeddings"
+    ]
   },
   {
     "id": "openrouter",
@@ -16834,7 +18085,11 @@
     "desc_en": "Route chat requests to hundreds of LLMs from many providers through one OpenAI-compatible endpoint with fallback.",
     "desc_pl": "Kieruj zapytania czatu do setek modeli LLM od wielu dostawców przez jeden endpoint zgodny z OpenAI, z fallbackiem.",
     "notes": "The official remote MCP server uses OAuth PKCE and mints a 7-day key with a $10 default spend limit. It includes send-message and generate-image tools. OAuth PKCE is also available for apps.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "llm-inference",
+      "text-to-image"
+    ]
   },
   {
     "id": "piapi",
@@ -16855,7 +18110,12 @@
     "desc_en": "Generate images, video and music through one API proxying Midjourney, Flux, Kling and other models.",
     "desc_pl": "Generuj obrazy, wideo i muzykę przez jedno API pośredniczące w dostępie do Midjourney, Flux, Kling i innych modeli.",
     "notes": "Third-party reseller, not the model owner. The Midjourney access is unofficial, so it can break or violate Midjourney's terms of service. Tasks are async (create task, then poll or webhook).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "text-to-image",
+      "text-to-video",
+      "music-generation"
+    ]
   },
   {
     "id": "replicate",
@@ -16881,7 +18141,14 @@
     "desc_en": "Run thousands of hosted image, video, audio and text models via HTTP predictions; also fine-tune and deploy.",
     "desc_pl": "Uruchamiaj tysiące hostowanych modeli obrazu, wideo, audio i tekstu przez predykcje HTTP; także dostrajaj i wdrażaj.",
     "notes": "Billed per second of compute or per output. The MCP server is also available locally via npx replicate-mcp.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "text-to-image",
+      "text-to-video",
+      "text-to-speech",
+      "llm-inference",
+      "model-hosting"
+    ]
   },
   {
     "id": "together-ai",
@@ -16905,7 +18172,11 @@
     "desc_en": "Run serverless inference, batch jobs, fine-tuning and dedicated GPU endpoints for open-source models.",
     "desc_pl": "Uruchamiaj bezserwerowe wnioskowanie, zadania wsadowe, fine-tuning i dedykowane endpointy GPU dla otwartych modeli.",
     "notes": "Official MCP server only searches documentation. The API is OpenAI-compatible.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "llm-inference",
+      "model-hosting"
+    ]
   },
   {
     "id": "vercel-ai-gateway",
@@ -16929,7 +18200,13 @@
     "desc_en": "Send chat, image, embedding and rerank requests to 100+ models through one gateway with failover and spend tracking.",
     "desc_pl": "Wysyłaj zapytania czatu, obrazów, embeddingów i rerankingu do ponad 100 modeli przez jedną bramkę z failoverem i kontrolą wydatków.",
     "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's MCP server is for the whole platform and does not run inference. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "llm-inference",
+      "text-to-image",
+      "embeddings",
+      "reranking"
+    ]
   },
   {
     "id": "voyage-ai-embeddings-rerank",
@@ -16952,7 +18229,11 @@
     "desc_en": "Generate text, code and multimodal embeddings and rerank documents for RAG and semantic search.",
     "desc_pl": "Generuj embeddingi tekstu, kodu i multimodalne oraz reranking dokumentów na potrzeby RAG i wyszukiwania semantycznego.",
     "notes": "Owned by MongoDB, but the standalone API at api.voyageai.com is still self-serve. Free tokens do not apply to the Batch API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "embeddings",
+      "reranking"
+    ]
   },
   {
     "id": "xai-grok-api",
@@ -16975,6 +18256,13 @@
     "desc_en": "Generate text, images, video and voice with Grok models, with built-in web search and code tools.",
     "desc_pl": "Generuj tekst, obrazy, wideo i mowę modelami Grok z wbudowanym wyszukiwaniem w sieci i narzędziami do kodu.",
     "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Official MCP server only searches documentation.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "operations": [
+      "llm-inference",
+      "text-to-image",
+      "text-to-video",
+      "text-to-speech",
+      "web-search"
+    ]
   }
 ]

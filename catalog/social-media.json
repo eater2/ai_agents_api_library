@@ -49,9 +49,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.ayrshare.com/api",
+   "operations": [
+    "social-posting",
+    "social-data"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -125,9 +130,14 @@
     "source_url": "https://raw.githubusercontent.com/bluesky-social/bsky-docs/main/docs/advanced-guides/rate-limits.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "social-posting",
+    "social-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -173,9 +183,13 @@
     "source_url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "social-posting"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -224,9 +238,14 @@
     "source_url": "https://docs.joinmastodon.org/client/token/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "social-posting",
+    "social-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -284,9 +303,14 @@
     "source_url": "https://developers.facebook.com/docs/graph-api/overview/rate-limiting",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "social-posting",
+    "social-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -335,9 +359,14 @@
     "source_url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "social-posting",
+    "social-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -394,9 +423,14 @@
     "source_url": "https://github.com/reddit-archive/reddit/wiki/OAuth2",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "social-posting",
+    "social-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -457,9 +491,14 @@
     "how": "Content Posting returns publish_id; poll the publish status fetch endpoint",
     "source_url": "https://developers.tiktok.com/doc/content-posting-api-get-started"
    },
+   "operations": [
+    "social-posting",
+    "social-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -518,9 +557,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.x.com/2",
+   "operations": [
+    "social-posting",
+    "social-data"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -581,9 +625,15 @@
     "source_url": "https://developers.google.com/youtube/v3/guides/auth/installed-apps",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "video-hosting",
+    "social-posting",
+    "social-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

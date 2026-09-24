@@ -1,0 +1,79 @@
+The catalog's MCP server has four tools: search_apis, get_api, get_reviews, list_categories. search_apis results do not include ratings; get_api includes a `ratings` array when we have data; get_reviews returns up to 100 review texts from one source.
+
+Coverage today: review texts for 80 of 323 services; ratings (any source) for fewer than half.
+
+=== get_api('twilio') → ratings, reviews_url ===
+{
+ "ratings": [
+  {
+   "source": "github",
+   "repo": "twilio-labs/mcp",
+   "stars": 111,
+   "forks": 41,
+   "pushed_at": "2026-02-14",
+   "archived": false,
+   "url": "https://github.com/twilio-labs/mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.8,
+   "reviews": 13,
+   "url": "https://sourceforge.net/software/product/Twilio/",
+   "fetched_at": "2026-09-24T16:58Z"
+  }
+ ],
+ "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/twilio.json"
+}
+
+=== get_reviews({'id': 'twilio', 'limit': 3}) ===
+{
+ "id": "twilio",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Twilio/",
+ "fetched_at": "2026-09-24T16:58Z",
+ "rating": 4.8,
+ "reviews_total": 13,
+ "reviews": [
+  {
+   "id": "68e80f75b4477dddf21a3786",
+   "date": "2025-10-09",
+   "rating": 4,
+   "title": "Developer Platform To Coordinate Comms",
+   "pros": "Twilio is a great platform if you are a developer and want to leverage their capabilities to send communications (i.e. text messages) via API. We leverage it heavily in our application for sending reminder texts and other notifications and found that it was straight forward to use for our development team.",
+   "cons": "They would improve some of the functionality for non-tech users once the integrations have been provisioned. We tried to hand off some of the work load once the integration was made to marketing but they found parts of the platform hard to use so we had to revert back to using of Devs for everything.",
+   "overall": "Overall if you are looking for an API driven system to deliver text messages, and other comms its hard to look past Twilio. It does everything that you need to do and pricing scales nicely.",
+   "reviewer_role": "CTO",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Twilio/#review-68e80f75b4477dddf21a3786"
+  },
+  {
+   "id": "62faa91cb7e65a11b211bc59",
+   "date": "2022-08-15",
+   "rating": 4,
+   "title": "Stable & Reliable - and very nearly great",
+   "pros": "The Zapier-Twilio interface is a good one, and makes sending MMS and SMS messages very easy. The general UX for Twilio is OK, too.",
+   "cons": "The problem comes when there's a messaging error. The error notification can be a long time in coming, and not particularly informative. Even if you drill down to the data dispatched to Twilio, the error codes aren't very informative.",
+   "overall": "Generally - I'm very happy with Twilio. Yes, I wish error handling was faster and more intuitive. But since errors are highly infrequent, that's not a deal-breaker.",
+   "reviewer_role": "President",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Twilio/#review-62faa91cb7e65a11b211bc59"
+  },
+  {
+   "id": "62cc9672da8e1270df2b769f",
+   "date": "2022-07-11",
+   "rating": 5,
+   "title": "Seamless to integrate and use.",
+   "pros": "- It can be easily integrated with any application with ease.\n\n- It has brief tutorials available on the website itself.\n\n- The subscription model is value for money and also has a trial version available.\n\n- The user interface and the admin panel is intuitive and easy to use.",
+   "cons": "- I haven't found any cons in my usage, easy to use and gets the job done.",
+   "overall": "Overall, Twilio is a great application which can be easily integrated with any mobile or web application for features like SMS, Calling and text messages feature.",
+   "reviewer_role": "SDE",
+   "company_size": "1,000 - 4,999",
+   "url": "https://sourceforge.net/software/product/Twilio/#review-62cc9672da8e1270df2b769f"
+  }
+ ],
+ "returned": 3
+}
+
+=== get_api('geoapify') → ratings ===
+null  (no ratings or reviews for this service)

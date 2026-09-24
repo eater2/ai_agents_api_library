@@ -62,9 +62,14 @@
     "source_url": "https://github.com/autodesk-platform-services/aps-mcp-server-python",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "cad-modeling",
+    "bim-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -124,61 +129,13 @@
     "source_url": "https://developer.bentley.com/apis/overview/authorization/",
     "checked_at": "2026-09-24"
    },
-   "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
-   "stale": false,
-   "link_check": {
-    "checked_at": "2026-09-24",
-    "docs": "ok"
-   }
-  },
-  {
-   "id": "esri-arcgis-location-platform",
-   "name": "Esri ArcGIS Location Platform",
-   "homepage": "https://location.arcgis.com",
-   "docs": "https://developers.arcgis.com/documentation/",
-   "auth": "api_key+oauth2",
-   "auth_hint": "API key (token param) or OAuth2 Bearer token",
-   "mcp": {
-    "type": "none",
-    "url": null,
-    "domain_verified": null,
-    "kind": "none"
-   },
-   "free_tier": "free tier with monthly free credits, then usage-based pricing",
-   "sdk": [
-    "javascript",
-    "python",
-    "dotnet",
-    "swift",
-    "kotlin"
+   "operations": [
+    "bim-data"
    ],
-   "openapi": null,
-   "llms_txt": null,
-   "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
-   "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
-   "verified": "2026-09-24",
-   "free_plan": {
-    "kind": "free_tier",
-    "requires_card": true,
-    "quota": "e.g. 2M basemap tiles, 20K geocodes, 20K routes, 500 place searches",
-    "period": "month",
-    "source_url": "https://location.arcgis.com/pricing/",
-    "checked_at": "2026-09-24"
-   },
-   "auth_scheme": {
-    "type": "apiKey",
-    "in": "query",
-    "name": "token",
-    "format": "?token=<API_KEY> or header X-Esri-Authorization: Bearer <API_KEY>",
-    "source_url": "https://developers.arcgis.com/rest/geocode/find-address-candidates/",
-    "checked_at": "2026-09-24"
-   },
-   "base_url": "https://geocode-api.arcgis.com/arcgis/rest/services",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -239,9 +196,13 @@
     "source_url": "https://onshape-public.github.io/docs/auth/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "cad-modeling"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -299,9 +260,14 @@
     "source_url": "https://raw.githubusercontent.com/procore/documentation/main/plan_your_app/rate_limiting.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "construction-management",
+    "task-management"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -352,9 +318,13 @@
     "source_url": "https://developer.rhino3d.com/guides/compute/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "cad-modeling"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -412,9 +382,14 @@
     "source_url": "https://docs.speckle.systems/developers/authentication/pats.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "bim-data",
+    "cad-modeling"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -454,9 +429,13 @@
     "source_url": "https://developer.trimble.com/docs/connect/reference",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "bim-data"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -518,9 +497,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.zoo.dev",
+   "operations": [
+    "text-to-3d",
+    "cad-modeling"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

@@ -56,9 +56,15 @@
     "source_url": "https://platform.claude.com/docs/en/manage-claude/api-and-data-retention",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "llm-inference",
+    "image-understanding",
+    "document-parsing"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -119,9 +125,15 @@
     "source_url": "https://docs.cohere.com/docs/rate-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "llm-inference",
+    "embeddings",
+    "reranking"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -196,9 +208,13 @@
     "source_url": "https://www.comet.com/site/pricing/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "llm-observability"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false
   },
   {
@@ -239,9 +255,13 @@
     "source_url": "https://api-docs.deepseek.com/quick_start/rate_limit",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "llm-inference"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -329,9 +349,16 @@
     "source_url": "https://fal.ai/docs/documentation/model-apis/media-expiration",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-image",
+    "text-to-video",
+    "text-to-speech",
+    "text-to-3d"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -402,9 +429,14 @@
     "source_url": "https://docs.fireworks.ai/guides/security_compliance/data_security",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "llm-inference",
+    "model-hosting"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -478,9 +510,17 @@
     "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "llm-inference",
+    "text-to-image",
+    "image-understanding",
+    "code-execution",
+    "document-parsing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -542,9 +582,14 @@
     "source_url": "https://console.groq.com/docs/your-data",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "llm-inference",
+    "speech-to-text"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -606,9 +651,17 @@
     "source_url": "https://huggingface.co/docs/inference-providers/security",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "llm-inference",
+    "text-to-image",
+    "text-to-video",
+    "text-to-speech",
+    "image-understanding"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -671,9 +724,16 @@
     "source_url": "https://docs.mistral.ai/admin/monitor-comply/zero-data-retention",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "llm-inference",
+    "ocr",
+    "embeddings",
+    "document-parsing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -720,9 +780,17 @@
    "desc_en": "Generate text, images, audio and embeddings, and run tool-calling via the Responses and Chat Completions APIs.",
    "notes": "Docs moved from platform.openai.com to developers.openai.com (old URLs redirect). Usage-based billing with a payment method; rate limits scale with usage tier. OpenAI MCP docs cover building MCP servers for ChatGPT, not an MCP wrapping the API.",
    "verified": "2026-09-24",
+   "operations": [
+    "llm-inference",
+    "text-to-image",
+    "text-to-speech",
+    "speech-to-text",
+    "embeddings"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -764,9 +832,14 @@
    "desc_en": "Route chat requests to hundreds of LLMs from many providers through one OpenAI-compatible endpoint with fallback.",
    "notes": "The official remote MCP server uses OAuth PKCE and mints a 7-day key with a $10 default spend limit. It includes send-message and generate-image tools. OAuth PKCE is also available for apps.",
    "verified": "2026-09-24",
+   "operations": [
+    "llm-inference",
+    "text-to-image"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -806,9 +879,15 @@
    "desc_en": "Generate images, video and music through one API proxying Midjourney, Flux, Kling and other models.",
    "notes": "Third-party reseller, not the model owner. The Midjourney access is unofficial, so it can break or violate Midjourney's terms of service. Tasks are async (create task, then poll or webhook).",
    "verified": "2026-09-24",
+   "operations": [
+    "text-to-image",
+    "text-to-video",
+    "music-generation"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -854,9 +933,17 @@
    "desc_en": "Run thousands of hosted image, video, audio and text models via HTTP predictions; also fine-tune and deploy.",
    "notes": "Billed per second of compute or per output. The MCP server is also available locally via npx replicate-mcp.",
    "verified": "2026-09-24",
+   "operations": [
+    "text-to-image",
+    "text-to-video",
+    "text-to-speech",
+    "llm-inference",
+    "model-hosting"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -889,9 +976,14 @@
    "desc_en": "Run serverless inference, batch jobs, fine-tuning and dedicated GPU endpoints for open-source models.",
    "notes": "Official MCP server only searches documentation. The API is OpenAI-compatible.",
    "verified": "2026-09-24",
+   "operations": [
+    "llm-inference",
+    "model-hosting"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -924,9 +1016,16 @@
    "desc_en": "Send chat, image, embedding and rerank requests to 100+ models through one gateway with failover and spend tracking.",
    "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's MCP server is for the whole platform and does not run inference. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
    "verified": "2026-09-24",
+   "operations": [
+    "llm-inference",
+    "text-to-image",
+    "embeddings",
+    "reranking"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -957,9 +1056,14 @@
    "desc_en": "Generate text, code and multimodal embeddings and rerank documents for RAG and semantic search.",
    "notes": "Owned by MongoDB, but the standalone API at api.voyageai.com is still self-serve. Free tokens do not apply to the Batch API.",
    "verified": "2026-09-24",
+   "operations": [
+    "embeddings",
+    "reranking"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -989,9 +1093,17 @@
    "desc_en": "Generate text, images, video and voice with Grok models, with built-in web search and code tools.",
    "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Official MCP server only searches documentation.",
    "verified": "2026-09-24",
+   "operations": [
+    "llm-inference",
+    "text-to-image",
+    "text-to-video",
+    "text-to-speech",
+    "web-search"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

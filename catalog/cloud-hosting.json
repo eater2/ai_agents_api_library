@@ -64,9 +64,13 @@
     "source_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "cloud-infrastructure"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -149,9 +153,13 @@
     "how": "some operations are asynchronous; track them via response headers (Track asynchronous Azure operations)",
     "source_url": "https://learn.microsoft.com/en-us/rest/api/azure/"
    },
+   "operations": [
+    "cloud-infrastructure"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -237,9 +245,14 @@
     "source_url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "dns-cdn",
+    "serverless-deploy"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -330,9 +343,14 @@
     "how": "machine state changes are asynchronous; block with GET /v1/apps/{app}/machines/{id}/wait?state=started (default timeout 60s)",
     "source_url": "https://docs.fly.io/machines/api/machines-resource/"
    },
+   "operations": [
+    "container-hosting",
+    "cloud-infrastructure"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -394,9 +412,13 @@
     "source_url": "https://docs.cloud.google.com/docs/authentication/rest",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "cloud-infrastructure"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -415,6 +437,77 @@
      "fetched_at": "2026-09-24T16:54Z"
     }
    ]
+  },
+  {
+   "id": "mux-video-api",
+   "name": "Mux Video API",
+   "homepage": "https://www.mux.com",
+   "docs": "https://www.mux.com/docs",
+   "auth": "api_key",
+   "auth_hint": "HTTP Basic auth: <token_id>:<token_secret>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.mux.com",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.mux.com",
+    "repo": "https://github.com/muxinc/mux-node-sdk/tree/master/packages/mcp-server",
+    "tools": [
+     "docs search",
+     "code execution (TypeScript against @mux/mux-node)"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://www.mux.com/docs/integrations/mcp-server.md",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
+   },
+   "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
+   "sdk": [
+    "node",
+    "python",
+    "go",
+    "ruby",
+    "php"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST.",
+   "notes": "Hosting/streaming infrastructure; does not generate video from prompts.",
+   "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "100,000 delivery minutes",
+    "period": "month",
+    "source_url": "https://www.mux.com/pricing.md",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(MUX_TOKEN_ID:MUX_TOKEN_SECRET)",
+    "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.mux.com",
+   "rate_limits": {
+    "summary": "Per-environment rate-limit buckets; HTTP 429 when exceeded",
+    "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
+    "checked_at": "2026-09-24"
+   },
+   "operations": [
+    "video-hosting"
+   ],
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "no_card": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
   },
   {
    "id": "netlify-api",
@@ -466,9 +559,14 @@
     "source_url": "https://docs.netlify.com/api/get-started/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "static-site-hosting",
+    "dns-cdn"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -564,9 +662,16 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.render.com/v1",
+   "operations": [
+    "container-hosting",
+    "sql-database",
+    "key-value-store",
+    "static-site-hosting"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -616,9 +721,14 @@
     "source_url": "https://pages.edgeone.ai/document/mcp",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "static-site-hosting",
+    "serverless-deploy"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false
   },
   {
@@ -692,9 +802,15 @@
     "source_url": "https://vercel.com/docs/limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "serverless-deploy",
+    "web-analytics",
+    "dns-cdn"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

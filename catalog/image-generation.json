@@ -76,9 +76,16 @@
     "how": "POST /v3/images/generate-async returns jobId, statusUrl, cancelUrl; poll GET /v3/status/{jobId}",
     "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/how-tos/using-async-apis"
    },
+   "operations": [
+    "text-to-image",
+    "image-editing",
+    "image-to-image",
+    "text-to-video"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -150,9 +157,15 @@
     "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-image",
+    "image-to-image",
+    "text-to-video"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -215,9 +228,17 @@
     "how": "POST returns task id; poll GET /v1/ai/<model>/{task-id} or pass webhook_url",
     "source_url": "https://docs.magnific.com/llms.txt"
    },
+   "operations": [
+    "text-to-image",
+    "image-upscaling",
+    "background-removal",
+    "text-to-video",
+    "text-to-speech"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -279,9 +300,14 @@
     "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-image",
+    "image-editing"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -348,9 +374,15 @@
     "source_url": "https://developer.ideogram.ai/ideogram-api/api-setup",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-image",
+    "image-editing",
+    "image-upscaling"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -404,9 +436,14 @@
     "how": "POST returns generationId; poll GET /generations/{id} or configure webhook callback; a sync endpoint exists for some models",
     "source_url": "https://docs.leonardo.ai/docs/getting-started"
    },
+   "operations": [
+    "text-to-image",
+    "text-to-video"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -478,9 +515,14 @@
     "source_url": "https://developers.openai.com/api/docs/guides/your-data",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-image",
+    "image-editing"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -565,9 +607,16 @@
     "source_url": "https://www.recraft.ai/docs/api-reference/appendix",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-image",
+    "image-to-image",
+    "background-removal",
+    "image-upscaling"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -635,9 +684,13 @@
     "how": "synchronous POST /removebg returns the image",
     "source_url": "https://www.remove.bg/api"
    },
+   "operations": [
+    "background-removal"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -690,9 +743,15 @@
     "source_url": "https://platform.stability.ai/docs/getting-started",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-image",
+    "image-upscaling",
+    "image-editing"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

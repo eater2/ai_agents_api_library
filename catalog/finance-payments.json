@@ -51,9 +51,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://checkout-test.adyen.com/v71",
+   "operations": [
+    "payments"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -129,9 +133,15 @@
     "source_url": "https://alpaca.markets/data",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "trade-execution",
+    "stock-market-data",
+    "crypto-market-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -196,9 +206,15 @@
     "source_url": "https://www.alphavantage.co/support/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "stock-market-data",
+    "currency-exchange",
+    "crypto-market-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -248,9 +264,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.cdp.coinbase.com/platform",
+   "operations": [
+    "crypto-wallet",
+    "payments"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -314,9 +335,13 @@
     "source_url": "https://docs.coingecko.com/docs/common-errors-rate-limit",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "crypto-market-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -384,9 +409,13 @@
     "source_url": "https://coinmarketcap.com/api/pricing/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "crypto-market-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -458,9 +487,13 @@
     "source_url": "https://dexpaprika.com/api/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "crypto-market-data"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -509,9 +542,13 @@
     "source_url": "https://site.financialmodelingprep.com/pricing-plans",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "stock-market-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -588,9 +625,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.mercadopago.com",
+   "operations": [
+    "payments"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false
   },
   {
@@ -634,9 +675,13 @@
     "source_url": "https://openexchangerates.org/signup",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "currency-exchange"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -726,9 +771,14 @@
     "source_url": "https://developer.paypal.com/api/rest/reference/rate-limiting/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "payments",
+    "invoicing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -812,9 +862,13 @@
     "source_url": "https://plaid.com/docs/errors/rate-limit-exceeded/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "banking-data"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -896,9 +950,15 @@
     "source_url": "https://massive.com/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "stock-market-data",
+    "currency-exchange",
+    "crypto-market-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -963,9 +1023,15 @@
     "source_url": "https://developer.squareup.com/docs/build-basics/general-considerations/handling-errors",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "payments",
+    "store-management",
+    "invoicing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1048,9 +1114,14 @@
     "source_url": "https://docs.stripe.com/rate-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "payments",
+    "invoicing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1125,9 +1196,15 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.wise.com",
+   "operations": [
+    "payments",
+    "currency-exchange",
+    "banking-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

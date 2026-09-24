@@ -67,9 +67,13 @@
     "how": "synchronous Atom XML responses",
     "source_url": "https://info.arxiv.org/help/api/user-manual.html"
    },
+   "operations": [
+    "academic-search"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -154,9 +158,13 @@
     "source_url": "https://github.com/LibraryOfCongress/api.congress.gov",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "government-data"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -211,9 +219,13 @@
     "source_url": "https://context7.com/docs/api-guide",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "library-docs"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -278,9 +290,13 @@
     "source_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "academic-search"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -355,9 +371,13 @@
     "how": "synchronous; 75 results default, up to 250 per query, rolling 3-month window",
     "source_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/"
    },
+   "operations": [
+    "news-search"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -425,9 +445,13 @@
     "source_url": "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "repo-digest"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -481,9 +505,13 @@
     "how": "synchronous JSON; real-time change events available via Firebase client libraries",
     "source_url": "https://github.com/HackerNews/API"
    },
+   "operations": [
+    "social-data"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -565,9 +593,13 @@
     "source_url": "https://openlibrary.org/developers/api",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "book-lookup"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -629,9 +661,15 @@
     "source_url": "https://developer.nytimes.com/terms",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "news-search",
+    "news-articles",
+    "book-lookup"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -685,9 +723,14 @@
     "source_url": "https://newsapi.org/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "news-search",
+    "news-articles"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -766,9 +809,13 @@
     "source_url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "academic-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -840,9 +887,13 @@
     "source_url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "academic-search"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -922,9 +973,13 @@
     "source_url": "https://www.semanticscholar.org/product/api",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "academic-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -997,9 +1052,13 @@
     "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "knowledge-graph-query"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1066,9 +1125,13 @@
     "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "encyclopedia-lookup"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1132,9 +1195,13 @@
     "how": "synchronous text response; maxchars default 6800",
     "source_url": "https://products.wolframalpha.com/llm-api/documentation"
    },
+   "operations": [
+    "computational-answer"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

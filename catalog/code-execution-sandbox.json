@@ -60,9 +60,14 @@
     "source_url": "https://developers.cloudflare.com/sandbox/platform/limits/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "code-execution",
+    "sandbox-vm"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -99,9 +104,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.codesandbox.io",
+   "operations": [
+    "sandbox-vm",
+    "code-execution"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -156,9 +166,14 @@
     "source_url": "https://www.daytona.io/docs/en/limits/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "sandbox-vm",
+    "code-execution"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -217,9 +232,14 @@
     "source_url": "https://docs.e2b.dev/sandbox/rate-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "sandbox-vm",
+    "code-execution"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -279,9 +299,13 @@
     "how": "POST /submissions returns a token; poll GET /submissions/{token} (wait=true for sync where enabled)",
     "source_url": "https://ce.judge0.com/"
    },
+   "operations": [
+    "code-execution"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -348,9 +372,14 @@
     "source_url": "https://modal.com/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "sandbox-vm",
+    "code-execution"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -391,9 +420,13 @@
    "notes": "Public emkc.org instance closed to open use on 2026-02-15; self-host via Docker for agent workloads. Widely used by Discord/Slack bots.",
    "verified": "2026-09-24",
    "base_url": "https://emkc.org/api/v2/piston",
+   "operations": [
+    "code-execution"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -471,9 +504,14 @@
     "source_url": "https://riza.io/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "code-execution",
+    "sandbox-vm"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -527,9 +565,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.runloop.ai",
+   "operations": [
+    "sandbox-vm",
+    "code-execution"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -585,9 +628,14 @@
     "source_url": "https://vercel.com/docs/sandbox/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "sandbox-vm",
+    "code-execution"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

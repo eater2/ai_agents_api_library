@@ -40,9 +40,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://openapi.akool.com/api/open",
+   "operations": [
+    "avatar-video",
+    "video-translation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -114,9 +119,13 @@
     "source_url": "https://creatomate.com/llms/quick-start.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "video-templating"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -167,9 +176,14 @@
     "how": "POST /talks returns id; poll GET /talks/{id} until status done, or set webhook",
     "source_url": "https://docs.d-id.com/docs/v2-photo-avatar-quickstart.md"
    },
+   "operations": [
+    "avatar-video",
+    "lip-sync"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -240,9 +254,14 @@
     "source_url": "https://ai.google.dev/gemini-api/docs/veo",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-video",
+    "image-to-video"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -314,9 +333,17 @@
     "how": "Poll the session/video (GET) until video_url is ready, or pass callback_url / register webhooks",
     "source_url": "https://developers.heygen.com/docs/quick-start.md"
    },
+   "operations": [
+    "avatar-video",
+    "text-to-speech",
+    "voice-cloning",
+    "video-translation",
+    "lip-sync"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -368,9 +395,13 @@
     "how": "POST /tasks/video-to-shorts returns a task; poll GET /v2/tasks/{task_id} until status ready or error",
     "source_url": "https://docs.klap.app/endpoints/tasks"
    },
+   "operations": [
+    "video-editing"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -439,9 +470,16 @@
     "how": "Create task returns task id; query task status, or set callback_url for status notifications",
     "source_url": "https://kling.ai/document-api/api/get-started/callbacks.md"
    },
+   "operations": [
+    "text-to-video",
+    "image-to-video",
+    "lip-sync",
+    "video-editing"
+   ],
    "no_auth": false,
    "has_free_tier": false,
-   "has_trial": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -512,9 +550,14 @@
     "how": "POST /generations returns an id; poll GET /generations/{id} until ready, or pass callback_url",
     "source_url": "https://docs.lumalabs.ai/docs/api.md"
    },
+   "operations": [
+    "text-to-video",
+    "image-to-video"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -591,9 +634,17 @@
     "how": "Create task returns task_id; poll Query Video Generation Task, then download file; optional callback_url",
     "source_url": "https://platform.minimax.io/docs/api-reference/video-generation-t2v.md"
    },
+   "operations": [
+    "text-to-video",
+    "image-to-video",
+    "text-to-speech",
+    "voice-cloning",
+    "text-to-image"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -612,73 +663,6 @@
      "fetched_at": "2026-09-24T16:54Z"
     }
    ]
-  },
-  {
-   "id": "mux-video-api",
-   "name": "Mux Video API",
-   "homepage": "https://www.mux.com",
-   "docs": "https://www.mux.com/docs",
-   "auth": "api_key",
-   "auth_hint": "HTTP Basic auth: <token_id>:<token_secret>",
-   "mcp": {
-    "type": "official",
-    "url": "https://mcp.mux.com",
-    "maintainer": "vendor",
-    "remote_url": "https://mcp.mux.com",
-    "repo": "https://github.com/muxinc/mux-node-sdk/tree/master/packages/mcp-server",
-    "tools": [
-     "docs search",
-     "code execution (TypeScript against @mux/mux-node)"
-    ],
-    "covers_full_api": true,
-    "source_url": "https://www.mux.com/docs/integrations/mcp-server.md",
-    "checked_at": "2026-09-24",
-    "domain_verified": true,
-    "kind": "vendor-hosted"
-   },
-   "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
-   "sdk": [
-    "node",
-    "python",
-    "go",
-    "ruby",
-    "php"
-   ],
-   "openapi": null,
-   "llms_txt": null,
-   "desc_en": "Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST.",
-   "notes": "Hosting/streaming infrastructure; does not generate video from prompts.",
-   "verified": "2026-09-24",
-   "free_plan": {
-    "kind": "free_tier",
-    "requires_card": false,
-    "quota": "100,000 delivery minutes",
-    "period": "month",
-    "source_url": "https://www.mux.com/pricing.md",
-    "checked_at": "2026-09-24"
-   },
-   "auth_scheme": {
-    "type": "http",
-    "scheme": "basic",
-    "format": "Authorization: Basic base64(MUX_TOKEN_ID:MUX_TOKEN_SECRET)",
-    "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
-    "checked_at": "2026-09-24"
-   },
-   "base_url": "https://api.mux.com",
-   "rate_limits": {
-    "summary": "Per-environment rate-limit buckets; HTTP 429 when exceeded",
-    "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
-    "checked_at": "2026-09-24"
-   },
-   "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
-   "stale": false,
-   "link_check": {
-    "checked_at": "2026-09-24",
-    "docs": "ok",
-    "mcp": "reachable"
-   }
   },
   {
    "id": "pixverse-api",
@@ -723,9 +707,14 @@
     "how": "Generate returns video_id; poll GET /openapi/v2/video/result/{id} (status 5 generating, 1 done) or use webhook",
     "source_url": "https://docs.platform.pixverse.ai/quick-start-796052m0.md"
    },
+   "operations": [
+    "text-to-video",
+    "image-to-video"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -796,9 +785,15 @@
     "how": "Generation endpoints return a task; poll GET /v1/tasks/{id} until status is terminal",
     "source_url": "https://docs.dev.runwayml.com/ai-context.md"
    },
+   "operations": [
+    "text-to-video",
+    "image-to-video",
+    "image-editing"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -864,9 +859,14 @@
     "how": "POST /render returns an id; poll GET /render/{id} or set a callback URL",
     "source_url": "https://shotstack.io/docs/api/"
    },
+   "operations": [
+    "video-templating",
+    "video-editing"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -923,9 +923,13 @@
     "how": "POST /v2/videos returns id; poll GET /v2/videos/{id} for status or subscribe to webhooks",
     "source_url": "https://docs.synthesia.io/reference/video-api-introduction.md"
    },
+   "operations": [
+    "avatar-video"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -998,9 +1002,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://tavusapi.com",
+   "operations": [
+    "avatar-video",
+    "voice-agent"
+   ],
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

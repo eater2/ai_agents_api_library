@@ -346,6 +346,16 @@
           "description": "Vendor page the value was read from."
         }
       }
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "minItems": 1,
+      "maxItems": 5,
+      "description": "Concrete actions an agent can perform with the service, most important first. Ids from data/operations.json (e.g. text-to-video, sms, street-geocoding)."
     }
   }
 }

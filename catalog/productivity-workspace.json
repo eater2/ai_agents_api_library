@@ -59,9 +59,13 @@
     "source_url": "https://airtable.com/developers/web/api/authentication",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "no-code-database"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -172,9 +176,13 @@
     "source_url": "https://developers.asana.com/docs/oauth-scopes.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "task-management"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -268,9 +276,14 @@
     "source_url": "https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "task-management",
+    "docs-editing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -351,9 +364,13 @@
     "source_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "file-storage"
+   ],
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -414,9 +431,13 @@
     "source_url": "https://cal.com/docs/api-reference/v2/introduction",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "calendar"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -469,9 +490,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.calendly.com",
+   "operations": [
+    "calendar"
+   ],
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -539,9 +564,14 @@
     "source_url": "https://developer.clickup.com/docs/rate-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "task-management",
+    "docs-editing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -612,9 +642,14 @@
     "how": "Writes return HTTP 202 with requestId; check GET /mutationStatus/{requestId}",
     "source_url": "https://docs.superhuman.com/developers/apis/v1"
    },
+   "operations": [
+    "docs-editing",
+    "no-code-database"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -677,9 +712,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.dropboxapi.com/2",
+   "operations": [
+    "file-storage"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -762,9 +801,16 @@
     "source_url": "https://developers.google.com/workspace/gmail/api/auth/scopes",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "email-inbox",
+    "email-send",
+    "calendar",
+    "file-storage"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -828,9 +874,13 @@
     "source_url": "https://linear.app/developers/oauth-2-0-authentication",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "task-management"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -909,9 +959,17 @@
     "source_url": "https://learn.microsoft.com/en-us/graph/auth/auth-concepts",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "email-inbox",
+    "email-send",
+    "calendar",
+    "team-chat",
+    "file-storage"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -979,9 +1037,14 @@
     "source_url": "https://developer.monday.com/api-reference/docs/rate-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "task-management",
+    "no-code-database"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1039,9 +1102,13 @@
     "source_url": "https://nocodb.com/docs/product-docs/developer-resources/rest-apis/accessing-apis",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "no-code-database"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -1106,9 +1173,14 @@
     "source_url": "https://developers.notion.com/reference/request-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "docs-editing",
+    "no-code-database"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1184,9 +1256,13 @@
     "source_url": "https://developer.todoist.com/api/v1/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "task-management"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1252,9 +1328,13 @@
     "source_url": "https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "task-management"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

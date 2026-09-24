@@ -49,9 +49,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.agentset.ai",
+   "operations": [
+    "rag-retrieval",
+    "vector-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false
   },
   {
@@ -112,9 +117,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.trychroma.com",
+   "operations": [
+    "vector-search"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -200,9 +209,14 @@
     "source_url": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "analytics-query",
+    "sql-database"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -280,9 +294,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://<deployment>.convex.cloud/api",
+   "operations": [
+    "nosql-database",
+    "vector-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -371,9 +390,14 @@
     "source_url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "analytics-query",
+    "sql-database"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -442,9 +466,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.letta.com",
+   "operations": [
+    "agent-memory"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -514,9 +542,13 @@
     "how": "POST /v3/memories/add/ returns event_id with status PENDING; check event status (MCP tool get_event_status) or use webhooks",
     "source_url": "https://docs.mem0.ai/api-reference/memory/add-memories"
    },
+   "operations": [
+    "agent-memory"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -597,9 +629,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://cloud.mongodb.com/api/atlas/v2",
+   "operations": [
+    "nosql-database"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -711,9 +747,13 @@
     "how": "long-running tasks return operation IDs; poll GET /projects/{project_id}/operations/{operation_id}",
     "source_url": "https://neon.com/docs/reference/api"
    },
+   "operations": [
+    "sql-database"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -798,9 +838,14 @@
     "source_url": "https://docs.pinecone.io/reference/api/database-limits/rate-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "vector-search",
+    "reranking"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -866,9 +911,13 @@
     "source_url": "https://planetscale.com/docs/api/reference/getting-started-with-planetscale-api",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "sql-database"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -934,9 +983,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://<cluster>.<region>.<provider>.cloud.qdrant.io:6333",
+   "operations": [
+    "vector-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1005,9 +1058,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://<account_identifier>.snowflakecomputing.com/api/v2",
+   "operations": [
+    "analytics-query",
+    "sql-database"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1119,9 +1177,14 @@
     "source_url": "https://supabase.com/docs/reference/api/introduction",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "sql-database",
+    "object-storage"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1190,9 +1253,14 @@
     "source_url": "https://docs.pingcap.com/api/tidb-cloud-api-overview/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "sql-database",
+    "vector-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -1254,9 +1322,14 @@
     "source_url": "https://www.tinybird.co/docs/api-reference",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "analytics-query",
+    "data-pipeline"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -1308,9 +1381,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.turso.tech/v1",
+   "operations": [
+    "sql-database"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1363,9 +1440,14 @@
     "source_url": "https://upstash.com/docs/redis/features/restapi",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "key-value-store",
+    "vector-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1426,9 +1508,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://<cluster-host>/v1",
+   "operations": [
+    "vector-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1508,9 +1594,14 @@
     "source_url": "https://www.getzep.com/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "agent-memory",
+    "knowledge-graph-query"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1584,9 +1675,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.cloud.zilliz.com/v2",
+   "operations": [
+    "vector-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

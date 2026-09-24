@@ -75,9 +75,14 @@
     "how": "POST /v1/exports returns a job id; poll GET /v1/exports/{exportId} until success/failed",
     "source_url": "https://www.canva.dev/docs/connect/api-reference/exports/create-design-export-job/"
    },
+   "operations": [
+    "design-templating",
+    "design-file-access"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -158,9 +163,15 @@
     "source_url": "https://developers.figma.com/docs/rest-api/scopes/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "design-file-access",
+    "ui-generation",
+    "diagram-rendering"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -216,9 +227,13 @@
     "source_url": "https://www.framer.com/developers/server-api-quick-start",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "static-site-hosting"
+   ],
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -281,9 +296,13 @@
     "source_url": "https://design.penpot.app/api/_doc",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "design-file-access"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -365,9 +384,14 @@
     "how": "responseMode=async returns a placeholder message; poll the chat/message by id (or use experimental SSE stream)",
     "source_url": "https://v0.app/docs/api/platform/reference/chats/create"
    },
+   "operations": [
+    "ui-generation",
+    "serverless-deploy"
+   ],
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -426,9 +450,14 @@
     "source_url": "https://developers.webflow.com/data/reference/scopes",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "no-code-database",
+    "static-site-hosting"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

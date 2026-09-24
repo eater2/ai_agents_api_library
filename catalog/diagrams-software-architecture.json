@@ -43,9 +43,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://app.eraser.io/api",
+   "operations": [
+    "diagram-rendering"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -99,9 +103,13 @@
     "source_url": "https://developer.icepanel.io/developer-guide/getting-started/rate-limits.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "diagram-rendering"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -158,9 +166,13 @@
     "how": "synchronous: image returned in the HTTP response",
     "source_url": "https://docs.kroki.io/kroki/setup/usage/"
    },
+   "operations": [
+    "diagram-rendering"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -210,9 +222,13 @@
     "source_url": "https://lucid.readme.io/reference/access-scopes.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "diagram-rendering"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -269,9 +285,13 @@
     "source_url": "https://mermaid.ai/docs/ai/mcp-server",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "diagram-rendering"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -356,9 +376,13 @@
     "source_url": "https://developers.miro.com/reference/scopes.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "whiteboard-editing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -415,9 +439,13 @@
     "how": "POST /v1/visual returns request id; poll GET /v1/visual/{id}/status; file URLs expire after 30 min",
     "source_url": "https://api.napkin.ai/"
    },
+   "operations": [
+    "diagram-rendering"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -470,9 +498,13 @@
     "how": "synchronous: image returned in the HTTP response",
     "source_url": "https://plantuml.com/server"
    },
+   "operations": [
+    "diagram-rendering"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -528,9 +560,13 @@
     "source_url": "https://docs.structurizr.com/cloud/workspace-api",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "diagram-rendering"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

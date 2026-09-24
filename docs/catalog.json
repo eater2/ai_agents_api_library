@@ -67,9 +67,17 @@
       "source_url": "https://brave.com/search/api/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "web-search",
+      "news-search",
+      "image-search",
+      "places-search",
+      "answer-engine"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -167,9 +175,14 @@
       "source_url": "https://exa.ai/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "web-search",
+      "web-scraping"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -255,9 +268,17 @@
       "source_url": "https://jina.ai/reader/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "web-search",
+      "web-scraping",
+      "image-search",
+      "academic-search",
+      "screenshot"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -315,9 +336,16 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://kagi.com/api/v1",
+    "operations": [
+      "web-search",
+      "news-search",
+      "image-search",
+      "web-scraping"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -392,9 +420,15 @@
       "how": "research tasks are started then polled for status/results (MCP tools linkup-research + linkup-get-research)",
       "source_url": "https://docs.linkup.so/pages/integrations/mcp/mcp"
     },
+    "operations": [
+      "answer-engine",
+      "web-search",
+      "web-scraping"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -463,9 +497,13 @@
       "source_url": "https://www.mojeek.com/services/search/web-search-api/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "web-search"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -531,9 +569,14 @@
       "source_url": "https://parallel.ai/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "web-search",
+      "web-scraping"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -591,9 +634,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.perplexity.ai",
+    "operations": [
+      "answer-engine",
+      "web-search"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -655,9 +703,14 @@
       "how": "synchronous GET /api/v1/search returns JSON",
       "source_url": "https://www.searchapi.io/docs/google"
     },
+    "operations": [
+      "serp-scraping",
+      "web-search"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -714,9 +767,13 @@
       "how": "synchronous GET/POST / or /search",
       "source_url": "https://docs.searxng.org/dev/search_api.html"
     },
+    "operations": [
+      "web-search"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -810,9 +867,14 @@
       "source_url": "https://serpapi.com/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "serp-scraping",
+      "web-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -876,9 +938,17 @@
       "source_url": "https://serper.dev",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "web-search",
+      "serp-scraping",
+      "image-search",
+      "news-search",
+      "places-search"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -955,9 +1025,15 @@
       "source_url": "https://docs.tavily.com/documentation/rate-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "web-search",
+      "web-scraping",
+      "web-crawling"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1033,9 +1109,16 @@
       "source_url": "https://you.com/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "web-search",
+      "answer-engine",
+      "web-scraping",
+      "stock-market-data"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1102,9 +1185,14 @@
       "source_url": "https://docs.anchorbrowser.io/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "browser-automation",
+      "web-scraping"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1187,9 +1275,15 @@
       "how": "POST run returns run object; poll GET run or use webhooks; sync run endpoints wait up to 300 s",
       "source_url": "https://docs.apify.com/api/v2"
     },
+    "operations": [
+      "web-scraping",
+      "web-crawling",
+      "browser-automation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1264,9 +1358,16 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.brightdata.com",
+    "operations": [
+      "web-scraping",
+      "serp-scraping",
+      "browser-automation",
+      "structured-extraction"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1347,9 +1448,14 @@
       "how": "robot tasks run asynchronously; get results via webhooks or by retrieving the task",
       "source_url": "https://docs.browse.ai/api/v2"
     },
+    "operations": [
+      "structured-extraction",
+      "web-scraping"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1421,9 +1527,13 @@
       "how": "tasks run asynchronously; poll the run/session status until complete",
       "source_url": "https://docs.browser-use.com"
     },
+    "operations": [
+      "browser-automation"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1495,9 +1605,14 @@
       "source_url": "https://www.browserbase.com/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "browser-automation",
+      "web-scraping"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1564,9 +1679,14 @@
       "source_url": "https://www.diffbot.com/pricing/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "structured-extraction",
+      "web-scraping"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1642,9 +1762,17 @@
       "how": "crawl returns a job id; poll GET /v2/crawl/{id} or use webhooks (crawl.page, crawl.completed)",
       "source_url": "https://docs.firecrawl.dev/features/crawl"
     },
+    "operations": [
+      "web-scraping",
+      "web-crawling",
+      "structured-extraction",
+      "web-search",
+      "browser-automation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1713,9 +1841,16 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.hyperbrowser.ai",
+    "operations": [
+      "browser-automation",
+      "web-scraping",
+      "web-crawling",
+      "structured-extraction"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1792,9 +1927,16 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://realtime.oxylabs.io/v1",
+    "operations": [
+      "web-scraping",
+      "serp-scraping",
+      "structured-extraction",
+      "browser-automation"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1869,9 +2011,14 @@
       "source_url": "https://github.com/microsoft/playwright-mcp",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "browser-automation",
+      "screenshot"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1969,9 +2116,16 @@
       "how": "crawl is async: start returns an id, poll the crawl get-status endpoint",
       "source_url": "https://docs.scrapegraphai.com/api-reference/introduction.md"
     },
+    "operations": [
+      "web-scraping",
+      "structured-extraction",
+      "web-crawling",
+      "web-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2030,9 +2184,13 @@
       "how": "optional async endpoint https://async.scraperapi.com returns a job to fetch later",
       "source_url": "https://docs.scraperapi.com"
     },
+    "operations": [
+      "web-scraping"
+    ],
     "no_auth": false,
-    "has_free_tier": false,
-    "has_trial": true,
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2107,9 +2265,15 @@
       "how": "optional: pass webhook_name to queue the request and receive the result on a webhook",
       "source_url": "https://scrapfly.io/docs/scrape-api/getting-started"
     },
+    "operations": [
+      "web-scraping",
+      "screenshot",
+      "browser-automation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2178,9 +2342,17 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://app.scrapingbee.com/api/v1",
+    "operations": [
+      "web-scraping",
+      "screenshot",
+      "serp-scraping",
+      "structured-extraction",
+      "web-search"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2258,9 +2430,17 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.spider.cloud",
+    "operations": [
+      "web-crawling",
+      "web-scraping",
+      "browser-automation",
+      "web-search",
+      "screenshot"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2342,9 +2522,15 @@
       "source_url": "https://docs.steel.dev/overview/pricinglimits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "browser-automation",
+      "web-scraping",
+      "screenshot"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2394,9 +2580,15 @@
       "source_url": "https://docs.zyte.com/zyte-api/usage/errors.html",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "web-scraping",
+      "structured-extraction",
+      "browser-automation"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2466,9 +2658,13 @@
       "how": "synchronous Atom XML responses",
       "source_url": "https://info.arxiv.org/help/api/user-manual.html"
     },
+    "operations": [
+      "academic-search"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2554,9 +2750,13 @@
       "source_url": "https://github.com/LibraryOfCongress/api.congress.gov",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "government-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -2612,9 +2812,13 @@
       "source_url": "https://context7.com/docs/api-guide",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "library-docs"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2680,9 +2884,13 @@
       "source_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "academic-search"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2758,9 +2966,13 @@
       "how": "synchronous; 75 results default, up to 250 per query, rolling 3-month window",
       "source_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/"
     },
+    "operations": [
+      "news-search"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2829,9 +3041,13 @@
       "source_url": "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "repo-digest"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -2886,9 +3102,13 @@
       "how": "synchronous JSON; real-time change events available via Firebase client libraries",
       "source_url": "https://github.com/HackerNews/API"
     },
+    "operations": [
+      "social-data"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2971,9 +3191,13 @@
       "source_url": "https://openlibrary.org/developers/api",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "book-lookup"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -3036,9 +3260,15 @@
       "source_url": "https://developer.nytimes.com/terms",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "news-search",
+      "news-articles",
+      "book-lookup"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -3093,9 +3323,14 @@
       "source_url": "https://newsapi.org/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "news-search",
+      "news-articles"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3175,9 +3410,13 @@
       "source_url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "academic-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3250,9 +3489,13 @@
       "source_url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "academic-search"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3333,9 +3576,13 @@
       "source_url": "https://www.semanticscholar.org/product/api",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "academic-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3409,9 +3656,13 @@
       "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "knowledge-graph-query"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3479,9 +3730,13 @@
       "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "encyclopedia-lookup"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3546,9 +3801,13 @@
       "how": "synchronous text response; maxchars default 6800",
       "source_url": "https://products.wolframalpha.com/llm-api/documentation"
     },
+    "operations": [
+      "computational-answer"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3628,9 +3887,16 @@
       "how": "POST /v3/images/generate-async returns jobId, statusUrl, cancelUrl; poll GET /v3/status/{jobId}",
       "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/how-tos/using-async-apis"
     },
+    "operations": [
+      "text-to-image",
+      "image-editing",
+      "image-to-image",
+      "text-to-video"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3703,9 +3969,15 @@
       "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-image",
+      "image-to-image",
+      "text-to-video"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3769,9 +4041,17 @@
       "how": "POST returns task id; poll GET /v1/ai/<model>/{task-id} or pass webhook_url",
       "source_url": "https://docs.magnific.com/llms.txt"
     },
+    "operations": [
+      "text-to-image",
+      "image-upscaling",
+      "background-removal",
+      "text-to-video",
+      "text-to-speech"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3834,9 +4114,14 @@
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-image",
+      "image-editing"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3904,9 +4189,15 @@
       "source_url": "https://developer.ideogram.ai/ideogram-api/api-setup",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-image",
+      "image-editing",
+      "image-upscaling"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3961,9 +4252,14 @@
       "how": "POST returns generationId; poll GET /generations/{id} or configure webhook callback; a sync endpoint exists for some models",
       "source_url": "https://docs.leonardo.ai/docs/getting-started"
     },
+    "operations": [
+      "text-to-image",
+      "text-to-video"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4036,9 +4332,14 @@
       "source_url": "https://developers.openai.com/api/docs/guides/your-data",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-image",
+      "image-editing"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4124,9 +4425,16 @@
       "source_url": "https://www.recraft.ai/docs/api-reference/appendix",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-image",
+      "image-to-image",
+      "background-removal",
+      "image-upscaling"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4195,9 +4503,13 @@
       "how": "synchronous POST /removebg returns the image",
       "source_url": "https://www.remove.bg/api"
     },
+    "operations": [
+      "background-removal"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4251,9 +4563,15 @@
       "source_url": "https://platform.stability.ai/docs/getting-started",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-image",
+      "image-upscaling",
+      "image-editing"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4296,9 +4614,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://openapi.akool.com/api/open",
+    "operations": [
+      "avatar-video",
+      "video-translation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4371,9 +4694,13 @@
       "source_url": "https://creatomate.com/llms/quick-start.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "video-templating"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4425,9 +4752,14 @@
       "how": "POST /talks returns id; poll GET /talks/{id} until status done, or set webhook",
       "source_url": "https://docs.d-id.com/docs/v2-photo-avatar-quickstart.md"
     },
+    "operations": [
+      "avatar-video",
+      "lip-sync"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4499,9 +4831,14 @@
       "source_url": "https://ai.google.dev/gemini-api/docs/veo",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-video",
+      "image-to-video"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4574,9 +4911,17 @@
       "how": "Poll the session/video (GET) until video_url is ready, or pass callback_url / register webhooks",
       "source_url": "https://developers.heygen.com/docs/quick-start.md"
     },
+    "operations": [
+      "avatar-video",
+      "text-to-speech",
+      "voice-cloning",
+      "video-translation",
+      "lip-sync"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4629,9 +4974,13 @@
       "how": "POST /tasks/video-to-shorts returns a task; poll GET /v2/tasks/{task_id} until status ready or error",
       "source_url": "https://docs.klap.app/endpoints/tasks"
     },
+    "operations": [
+      "video-editing"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4701,9 +5050,16 @@
       "how": "Create task returns task id; query task status, or set callback_url for status notifications",
       "source_url": "https://kling.ai/document-api/api/get-started/callbacks.md"
     },
+    "operations": [
+      "text-to-video",
+      "image-to-video",
+      "lip-sync",
+      "video-editing"
+    ],
     "no_auth": false,
     "has_free_tier": false,
-    "has_trial": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4775,9 +5131,14 @@
       "how": "POST /generations returns an id; poll GET /generations/{id} until ready, or pass callback_url",
       "source_url": "https://docs.lumalabs.ai/docs/api.md"
     },
+    "operations": [
+      "text-to-video",
+      "image-to-video"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4855,9 +5216,17 @@
       "how": "Create task returns task_id; poll Query Video Generation Task, then download file; optional callback_url",
       "source_url": "https://platform.minimax.io/docs/api-reference/video-generation-t2v.md"
     },
+    "operations": [
+      "text-to-video",
+      "image-to-video",
+      "text-to-speech",
+      "voice-cloning",
+      "text-to-image"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4876,74 +5245,6 @@
         "fetched_at": "2026-09-24T16:54Z"
       }
     ]
-  },
-  {
-    "id": "mux-video-api",
-    "name": "Mux Video API",
-    "category": "video-generation",
-    "homepage": "https://www.mux.com",
-    "docs": "https://www.mux.com/docs",
-    "auth": "api_key",
-    "auth_hint": "HTTP Basic auth: <token_id>:<token_secret>",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.mux.com",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.mux.com",
-      "repo": "https://github.com/muxinc/mux-node-sdk/tree/master/packages/mcp-server",
-      "tools": [
-        "docs search",
-        "code execution (TypeScript against @mux/mux-node)"
-      ],
-      "covers_full_api": true,
-      "source_url": "https://www.mux.com/docs/integrations/mcp-server.md",
-      "checked_at": "2026-09-24",
-      "domain_verified": true,
-      "kind": "vendor-hosted"
-    },
-    "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
-    "sdk": [
-      "node",
-      "python",
-      "go",
-      "ruby",
-      "php"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST.",
-    "notes": "Hosting/streaming infrastructure; does not generate video from prompts.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "100,000 delivery minutes",
-      "period": "month",
-      "source_url": "https://www.mux.com/pricing.md",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "scheme": "basic",
-      "format": "Authorization: Basic base64(MUX_TOKEN_ID:MUX_TOKEN_SECRET)",
-      "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.mux.com",
-    "rate_limits": {
-      "summary": "Per-environment rate-limit buckets; HTTP 429 when exceeded",
-      "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
-      "checked_at": "2026-09-24"
-    },
-    "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
-    "stale": false,
-    "link_check": {
-      "checked_at": "2026-09-24",
-      "docs": "ok",
-      "mcp": "reachable"
-    }
   },
   {
     "id": "pixverse-api",
@@ -4989,9 +5290,14 @@
       "how": "Generate returns video_id; poll GET /openapi/v2/video/result/{id} (status 5 generating, 1 done) or use webhook",
       "source_url": "https://docs.platform.pixverse.ai/quick-start-796052m0.md"
     },
+    "operations": [
+      "text-to-video",
+      "image-to-video"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5063,9 +5369,15 @@
       "how": "Generation endpoints return a task; poll GET /v1/tasks/{id} until status is terminal",
       "source_url": "https://docs.dev.runwayml.com/ai-context.md"
     },
+    "operations": [
+      "text-to-video",
+      "image-to-video",
+      "image-editing"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5132,9 +5444,14 @@
       "how": "POST /render returns an id; poll GET /render/{id} or set a callback URL",
       "source_url": "https://shotstack.io/docs/api/"
     },
+    "operations": [
+      "video-templating",
+      "video-editing"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5192,9 +5509,13 @@
       "how": "POST /v2/videos returns id; poll GET /v2/videos/{id} for status or subscribe to webhooks",
       "source_url": "https://docs.synthesia.io/reference/video-api-introduction.md"
     },
+    "operations": [
+      "avatar-video"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5268,9 +5589,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://tavusapi.com",
+    "operations": [
+      "avatar-video",
+      "voice-agent"
+    ],
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5342,9 +5668,14 @@
       "source_url": "https://aws.amazon.com/transcribe/faqs/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-speech",
+      "speech-to-text"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5412,9 +5743,13 @@
       "source_url": "https://www.assemblyai.com/docs/data-retention-and-model-training",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "speech-to-text"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5482,9 +5817,15 @@
       "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-speech",
+      "speech-to-text",
+      "translation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5575,9 +5916,15 @@
       "source_url": "https://docs.cartesia.ai/enterprise/zero-data-retention.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-speech",
+      "speech-to-text",
+      "voice-cloning"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5644,9 +5991,15 @@
       "source_url": "https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "speech-to-text",
+      "text-to-speech",
+      "voice-agent"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5695,9 +6048,15 @@
     "desc_en": "Generate, clone and stream text-to-speech voices and transcribe audio via REST/WebSocket API.",
     "notes": "Besides the local stdio MCP server, ElevenLabs also offers an official remote MCP endpoint that uses OAuth.",
     "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "voice-cloning",
+      "speech-to-text"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5756,9 +6115,14 @@
     "desc_en": "Synthesize lifelike speech from text and transcribe audio to text via REST/gRPC using GCP credentials.",
     "notes": "Requires a GCP project with billing enabled. Speech-to-Text docs are separate: https://cloud.google.com/speech-to-text/docs.",
     "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "speech-to-text"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5790,9 +6154,14 @@
     "desc_en": "Generate expressive text-to-speech and run real-time empathic voice conversations (EVI) via REST/WebSocket.",
     "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans.",
     "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "voice-agent"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5823,9 +6192,15 @@
     "desc_en": "Generate AI voiceovers, clone voices and dub audio in 35+ languages via REST API.",
     "notes": "Two models are offered: Falcon (low latency, for streaming) and Gen2 (studio quality).",
     "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "voice-cloning",
+      "translation"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5869,9 +6244,15 @@
     "desc_en": "Synthesize speech with TTS models and transcribe or translate audio with Whisper/GPT-4o transcribe via REST.",
     "notes": "Whisper transcription costs about $0.006/min. TTS is billed per character or per token, depending on the model.",
     "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "speech-to-text",
+      "translation"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5913,9 +6294,14 @@
     "desc_en": "Synthesize speech, clone voices, convert speech-to-speech and detect deepfake audio via REST API.",
     "notes": "Enterprise plans are available for on-prem deployment and custom model training.",
     "verified": "2026-09-24",
+    "operations": [
+      "text-to-speech",
+      "voice-cloning"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5958,9 +6344,13 @@
     "desc_en": "Submit audio for asynchronous or streaming speech-to-text transcription, plus sentiment and topic extraction, via REST.",
     "notes": "The docs site offers an MCP install for Cursor and VS Code, but no remote endpoint URL was confirmed. Human transcription is sold separately as a paid option.",
     "verified": "2026-09-24",
+    "operations": [
+      "speech-to-text"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5992,9 +6382,13 @@
     "desc_en": "Transcribe audio in batch or real time with speaker diarization across many languages via REST/WebSocket.",
     "notes": "The free tier also includes 2 concurrent real-time sessions. No official vendor MCP server was found.",
     "verified": "2026-09-24",
+    "operations": [
+      "speech-to-text"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6042,9 +6436,14 @@
       "how": "POST /api/v1/tracks/compose returns task_id; poll GET /api/v1/tasks/{task_id} until status 'composed'",
       "source_url": "https://raw.githubusercontent.com/Beatoven/public-api/main/docs/api-spec.md"
     },
+    "operations": [
+      "music-generation",
+      "sound-effects"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6116,9 +6515,13 @@
       "how": "POST /v1/music returns the generated audio file directly",
       "source_url": "https://elevenlabs.io/docs/api-reference/music/compose"
     },
+    "operations": [
+      "music-generation"
+    ],
     "no_auth": false,
-    "has_free_tier": false,
-    "has_trial": true,
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6178,9 +6581,14 @@
       "how": "POST /api/ai/prompt/songs returns a song object with the generated track",
       "source_url": "https://b2b-soundtracks-swagger-prd.loudly.com/swagger/b2b_swagger.yaml"
     },
+    "operations": [
+      "music-generation",
+      "stem-separation"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6237,9 +6645,13 @@
       "how": "POST /tracks, then poll GET track by id or use a webhook",
       "source_url": "https://mubert.com/api/docs"
     },
+    "operations": [
+      "music-generation"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6274,9 +6686,13 @@
       "source_url": "https://docs.channel.io/soundraw-faq/en/articles/SOUNDRAW-API-fbf580fd",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "music-generation"
+    ],
     "no_auth": false,
     "has_free_tier": false,
-    "has_trial": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6342,9 +6758,14 @@
       "how": "POST /v2beta/audio/stable-audio-2/text-to-audio returns audio directly; GET /v2beta/audio/results/{id} exists for async generations",
       "source_url": "https://api.stability.ai/v2alpha/openapi"
     },
+    "operations": [
+      "music-generation",
+      "sound-effects"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6372,9 +6793,13 @@
     "desc_en": "Create 3D assets and multi-part kits from images via async REST sessions (image-to-3D, retopology).",
     "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. A Blender/MCP integration exists but its official vendor-maintained status could not be fully confirmed.",
     "verified": "2026-09-24",
+    "operations": [
+      "image-to-3d"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6422,9 +6847,14 @@
       "how": "POST /rodin returns uuid + jobs.subscription_key; poll POST /status, then POST /download with task_uuid",
       "source_url": "https://docs.hyper3d.ai/en/get-started/quick-start"
     },
+    "operations": [
+      "text-to-3d",
+      "image-to-3d"
+    ],
     "no_auth": false,
     "has_free_tier": false,
-    "has_trial": true,
+    "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6511,9 +6941,17 @@
       "source_url": "https://docs.meshy.ai/en/api/quick-start",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-3d",
+      "image-to-3d",
+      "3d-texturing",
+      "text-to-image",
+      "image-to-image"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
+    "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6585,9 +7023,13 @@
       "source_url": "https://docs.sketchfab.com/data-api/v3/swagger.json",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "3d-asset-marketplace"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6647,9 +7089,13 @@
       "how": "POST /v2beta/3d/stable-fast-3d and /v2beta/3d/stable-point-aware-3d return the GLB binary directly",
       "source_url": "https://api.stability.ai/v2alpha/openapi"
     },
+    "operations": [
+      "image-to-3d"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6701,9 +7147,14 @@
       "how": "SubmitHunyuanTo3DProJob returns JobId (valid 24h); poll QueryHunyuanTo3DProJob",
       "source_url": "https://www.tencentcloud.com/document/product/1284/75540"
     },
+    "operations": [
+      "text-to-3d",
+      "image-to-3d"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6754,9 +7205,14 @@
       "how": "poll GET /v3/tasks/{task_id} or receive webhooks",
       "source_url": "https://developers.tripo3d.ai/en/docs/webhooks"
     },
+    "operations": [
+      "text-to-3d",
+      "image-to-3d"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6834,9 +7290,14 @@
       "source_url": "https://github.com/autodesk-platform-services/aps-mcp-server-python",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "cad-modeling",
+      "bim-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6897,62 +7358,13 @@
       "source_url": "https://developer.bentley.com/apis/overview/authorization/",
       "checked_at": "2026-09-24"
     },
-    "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
-    "stale": false,
-    "link_check": {
-      "checked_at": "2026-09-24",
-      "docs": "ok"
-    }
-  },
-  {
-    "id": "esri-arcgis-location-platform",
-    "name": "Esri ArcGIS Location Platform",
-    "category": "architecture-cad-bim",
-    "homepage": "https://location.arcgis.com",
-    "docs": "https://developers.arcgis.com/documentation/",
-    "auth": "api_key+oauth2",
-    "auth_hint": "API key (token param) or OAuth2 Bearer token",
-    "mcp": {
-      "type": "none",
-      "url": null,
-      "domain_verified": null,
-      "kind": "none"
-    },
-    "free_tier": "free tier with monthly free credits, then usage-based pricing",
-    "sdk": [
-      "javascript",
-      "python",
-      "dotnet",
-      "swift",
-      "kotlin"
+    "operations": [
+      "bim-data"
     ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
-    "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": true,
-      "quota": "e.g. 2M basemap tiles, 20K geocodes, 20K routes, 500 place searches",
-      "period": "month",
-      "source_url": "https://location.arcgis.com/pricing/",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "query",
-      "name": "token",
-      "format": "?token=<API_KEY> or header X-Esri-Authorization: Bearer <API_KEY>",
-      "source_url": "https://developers.arcgis.com/rest/geocode/find-address-candidates/",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://geocode-api.arcgis.com/arcgis/rest/services",
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7014,9 +7426,13 @@
       "source_url": "https://onshape-public.github.io/docs/auth/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "cad-modeling"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7075,9 +7491,14 @@
       "source_url": "https://raw.githubusercontent.com/procore/documentation/main/plan_your_app/rate_limiting.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "construction-management",
+      "task-management"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7129,9 +7550,13 @@
       "source_url": "https://developer.rhino3d.com/guides/compute/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "cad-modeling"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
+    "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7190,9 +7615,14 @@
       "source_url": "https://docs.speckle.systems/developers/authentication/pats.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "bim-data",
+      "cad-modeling"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7233,9 +7663,13 @@
       "source_url": "https://developer.trimble.com/docs/connect/reference",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "bim-data"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7298,9 +7732,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.zoo.dev",
+    "operations": [
+      "text-to-3d",
+      "cad-modeling"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7347,9 +7786,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://app.eraser.io/api",
+    "operations": [
+      "diagram-rendering"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7404,9 +7847,13 @@
       "source_url": "https://developer.icepanel.io/developer-guide/getting-started/rate-limits.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "diagram-rendering"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7464,9 +7911,13 @@
       "how": "synchronous: image returned in the HTTP response",
       "source_url": "https://docs.kroki.io/kroki/setup/usage/"
     },
+    "operations": [
+      "diagram-rendering"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7517,9 +7968,13 @@
       "source_url": "https://lucid.readme.io/reference/access-scopes.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "diagram-rendering"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7577,9 +8032,13 @@
       "source_url": "https://mermaid.ai/docs/ai/mcp-server",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "diagram-rendering"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7665,9 +8124,13 @@
       "source_url": "https://developers.miro.com/reference/scopes.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "whiteboard-editing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7725,9 +8188,13 @@
       "how": "POST /v1/visual returns request id; poll GET /v1/visual/{id}/status; file URLs expire after 30 min",
       "source_url": "https://api.napkin.ai/"
     },
+    "operations": [
+      "diagram-rendering"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7781,9 +8248,13 @@
       "how": "synchronous: image returned in the HTTP response",
       "source_url": "https://plantuml.com/server"
     },
+    "operations": [
+      "diagram-rendering"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7840,9 +8311,13 @@
       "source_url": "https://docs.structurizr.com/cloud/workspace-api",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "diagram-rendering"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7920,9 +8395,14 @@
       "how": "POST /v1/exports returns a job id; poll GET /v1/exports/{exportId} until success/failed",
       "source_url": "https://www.canva.dev/docs/connect/api-reference/exports/create-design-export-job/"
     },
+    "operations": [
+      "design-templating",
+      "design-file-access"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8004,9 +8484,15 @@
       "source_url": "https://developers.figma.com/docs/rest-api/scopes/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "design-file-access",
+      "ui-generation",
+      "diagram-rendering"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8063,9 +8549,13 @@
       "source_url": "https://www.framer.com/developers/server-api-quick-start",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "static-site-hosting"
+    ],
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8129,9 +8619,13 @@
       "source_url": "https://design.penpot.app/api/_doc",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "design-file-access"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8214,9 +8708,14 @@
       "how": "responseMode=async returns a placeholder message; poll the chat/message by id (or use experimental SSE stream)",
       "source_url": "https://v0.app/docs/api/platform/reference/chats/create"
     },
+    "operations": [
+      "ui-generation",
+      "serverless-deploy"
+    ],
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8276,9 +8775,14 @@
       "source_url": "https://developers.webflow.com/data/reference/scopes",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "no-code-database",
+      "static-site-hosting"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8338,9 +8842,15 @@
       "how": "job creation returns a location header; poll it until status done/failed",
       "source_url": "https://developer.adobe.com/document-services/docs/overview/pdf-services-api/gettingstarted/"
     },
+    "operations": [
+      "pdf-processing",
+      "ocr",
+      "document-parsing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8405,9 +8915,14 @@
       "how": "Start* operations (e.g. StartDocumentAnalysis) return a JobId; poll Get* operations; sync APIs also available",
       "source_url": "https://docs.aws.amazon.com/general/latest/gr/textract.html"
     },
+    "operations": [
+      "ocr",
+      "document-parsing"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8478,9 +8993,14 @@
       "how": "POST ...:analyze returns 202 with Operation-Location header; poll GET until status succeeded/failed",
       "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/quickstarts/get-started-sdks-rest-api?pivots=programming-language-rest-api"
     },
+    "operations": [
+      "document-parsing",
+      "ocr"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8559,9 +9079,14 @@
       "how": "jobs/tasks run asynchronously; poll job status or receive webhooks",
       "source_url": "https://cloudconvert.com/api/v2"
     },
+    "operations": [
+      "pdf-processing",
+      "ocr"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8634,9 +9159,13 @@
       "source_url": "https://developers.docusign.com/platform/auth/reference/scopes/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "e-signature"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8734,9 +9263,14 @@
       "how": "POST /generations returns generationId; poll GET /generations/{id}",
       "source_url": "https://developers.gamma.app/generations/create-generation"
     },
+    "operations": [
+      "slides-generation",
+      "document-generation"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8805,9 +9339,14 @@
       "source_url": "https://docs.cloud.google.com/document-ai/docs/data-usage",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "document-parsing",
+      "ocr"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8885,9 +9424,13 @@
       "how": "synchronous REST calls (presentations.get / batchUpdate)",
       "source_url": "https://developers.google.com/workspace/slides/api/reference/rest"
     },
+    "operations": [
+      "slides-generation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8955,9 +9498,13 @@
       "source_url": "https://www.llamaindex.ai/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "document-parsing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9023,9 +9570,14 @@
       "source_url": "https://mistral.ai/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "ocr",
+      "document-parsing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9137,9 +9689,15 @@
       "source_url": "https://developer.pdf.co/llms.txt",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "pdf-processing",
+      "ocr",
+      "document-parsing"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9215,9 +9773,13 @@
       "source_url": "https://reducto.ai/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "document-parsing"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9279,9 +9841,14 @@
       "source_url": "https://slidespeak.co/slidespeak-api/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "slides-generation",
+      "document-generation"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9363,9 +9930,13 @@
       "source_url": "https://unstructured.io/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "document-parsing"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9413,9 +9984,13 @@
     "desc_en": "Translate text and documents in real time or batch across 75+ languages via the AWS SDK/API.",
     "notes": "Requires an AWS account and IAM credentials; missing from the candidate list despite being a major agent-callable translation API.",
     "verified": "2026-09-24",
+    "operations": [
+      "translation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9459,9 +10034,14 @@
     "desc_en": "Translate text, detect language, and transliterate across 100+ languages via REST API within Azure AI Services.",
     "notes": "F0 free tier excludes custom model training/hosting, which are billed separately.",
     "verified": "2026-09-24",
+    "operations": [
+      "translation",
+      "language-detection"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9497,9 +10077,13 @@
     "desc_en": "Translate and rephrase text or documents between 30+ languages via REST API, SDKs, or an official MCP server.",
     "notes": "DeepL retired the API Free plan around July 2026; no more permanent free tier for new signups.",
     "verified": "2026-09-24",
+    "operations": [
+      "translation"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9556,9 +10140,14 @@
     "desc_en": "Translate text/documents and detect language across 100+ languages via REST/gRPC API within Google Cloud.",
     "notes": "Advanced (v3) edition supports glossaries/custom models; requires a GCP project with billing enabled even for free usage.",
     "verified": "2026-09-24",
+    "operations": [
+      "translation",
+      "language-detection"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9586,9 +10175,13 @@
     "desc_en": "Check grammar, style, and spelling in 30+ languages via a public HTTP API, with an optional Premium key for higher limits.",
     "notes": "This is a proofreading/grammar API, not machine translation.",
     "verified": "2026-09-24",
+    "operations": [
+      "grammar-check"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9631,9 +10224,13 @@
     "desc_en": "Send adaptive neural machine translation requests with in-context learning via a REST API.",
     "notes": "ModernMT is being folded into a new product called Lara; ModernMT API compatibility is stated to continue only until Dec 31, 2026 - plan for migration.",
     "verified": "2026-09-24",
+    "operations": [
+      "translation"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9696,9 +10293,14 @@
       "source_url": "https://developers.cloudflare.com/sandbox/platform/limits/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "code-execution",
+      "sandbox-vm"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9736,9 +10338,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.codesandbox.io",
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9794,9 +10401,14 @@
       "source_url": "https://www.daytona.io/docs/en/limits/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9856,9 +10468,14 @@
       "source_url": "https://docs.e2b.dev/sandbox/rate-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9919,9 +10536,13 @@
       "how": "POST /submissions returns a token; poll GET /submissions/{token} (wait=true for sync where enabled)",
       "source_url": "https://ce.judge0.com/"
     },
+    "operations": [
+      "code-execution"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9989,9 +10610,14 @@
       "source_url": "https://modal.com/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10033,9 +10659,13 @@
     "notes": "Public emkc.org instance closed to open use on 2026-02-15; self-host via Docker for agent workloads. Widely used by Discord/Slack bots.",
     "verified": "2026-09-24",
     "base_url": "https://emkc.org/api/v2/piston",
+    "operations": [
+      "code-execution"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10114,9 +10744,14 @@
       "source_url": "https://riza.io/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "code-execution",
+      "sandbox-vm"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10171,9 +10806,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.runloop.ai",
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10230,9 +10870,14 @@
       "source_url": "https://vercel.com/docs/sandbox/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "sandbox-vm",
+      "code-execution"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10299,9 +10944,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://circleci.com/api/v2",
+    "operations": [
+      "ci-cd"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10397,9 +11046,14 @@
       "source_url": "https://docs.datadoghq.com/api/latest/rate-limits/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "monitoring",
+      "incident-management"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10476,9 +11130,13 @@
       "source_url": "https://docs.docker.com/docker-hub/usage/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "package-registry"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10572,9 +11230,14 @@
       "source_url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "source-control",
+      "ci-cd"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10674,9 +11337,14 @@
       "source_url": "https://docs.gitlab.com/user/gitlab_com/rate_limits/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "source-control",
+      "ci-cd"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10763,9 +11431,13 @@
       "how": "POST /v1/measurements returns an id; poll GET /v1/measurements/{id}",
       "source_url": "https://github.com/jsdelivr/globalping"
     },
+    "operations": [
+      "network-probing"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -10818,9 +11490,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://search.maven.org/solrsearch/select",
+    "operations": [
+      "package-lookup"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -10880,9 +11556,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.pagerduty.com",
+    "operations": [
+      "incident-management"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -10969,9 +11649,13 @@
       "source_url": "https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "api-testing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11040,9 +11724,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://app.reflag.com/api",
+    "operations": [
+      "feature-flags"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false
   },
   {
@@ -11096,9 +11784,14 @@
       "source_url": "https://docs.sentry.io/api/ratelimits/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "error-tracking",
+      "monitoring"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11184,9 +11877,14 @@
       "source_url": "https://supabase.com/docs/reference/api/introduction",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "cloud-infrastructure",
+      "sql-database"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11256,9 +11954,13 @@
       "source_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "cloud-infrastructure"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11342,9 +12044,13 @@
       "how": "some operations are asynchronous; track them via response headers (Track asynchronous Azure operations)",
       "source_url": "https://learn.microsoft.com/en-us/rest/api/azure/"
     },
+    "operations": [
+      "cloud-infrastructure"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11431,9 +12137,14 @@
       "source_url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "dns-cdn",
+      "serverless-deploy"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11525,9 +12236,14 @@
       "how": "machine state changes are asynchronous; block with GET /v1/apps/{app}/machines/{id}/wait?state=started (default timeout 60s)",
       "source_url": "https://docs.fly.io/machines/api/machines-resource/"
     },
+    "operations": [
+      "container-hosting",
+      "cloud-infrastructure"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11590,9 +12306,13 @@
       "source_url": "https://docs.cloud.google.com/docs/authentication/rest",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "cloud-infrastructure"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11611,6 +12331,78 @@
         "fetched_at": "2026-09-24T16:54Z"
       }
     ]
+  },
+  {
+    "id": "mux-video-api",
+    "name": "Mux Video API",
+    "category": "cloud-hosting",
+    "homepage": "https://www.mux.com",
+    "docs": "https://www.mux.com/docs",
+    "auth": "api_key",
+    "auth_hint": "HTTP Basic auth: <token_id>:<token_secret>",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.mux.com",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.mux.com",
+      "repo": "https://github.com/muxinc/mux-node-sdk/tree/master/packages/mcp-server",
+      "tools": [
+        "docs search",
+        "code execution (TypeScript against @mux/mux-node)"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://www.mux.com/docs/integrations/mcp-server.md",
+      "checked_at": "2026-09-24",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
+    },
+    "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
+    "sdk": [
+      "node",
+      "python",
+      "go",
+      "ruby",
+      "php"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST.",
+    "notes": "Hosting/streaming infrastructure; does not generate video from prompts.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100,000 delivery minutes",
+      "period": "month",
+      "source_url": "https://www.mux.com/pricing.md",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(MUX_TOKEN_ID:MUX_TOKEN_SECRET)",
+      "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.mux.com",
+    "rate_limits": {
+      "summary": "Per-environment rate-limit buckets; HTTP 429 when exceeded",
+      "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "video-hosting"
+    ],
+    "no_auth": false,
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "netlify-api",
@@ -11663,9 +12455,14 @@
       "source_url": "https://docs.netlify.com/api/get-started/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "static-site-hosting",
+      "dns-cdn"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11762,9 +12559,16 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.render.com/v1",
+    "operations": [
+      "container-hosting",
+      "sql-database",
+      "key-value-store",
+      "static-site-hosting"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11815,9 +12619,14 @@
       "source_url": "https://pages.edgeone.ai/document/mcp",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "static-site-hosting",
+      "serverless-deploy"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false
   },
   {
@@ -11892,9 +12701,15 @@
       "source_url": "https://vercel.com/docs/limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "serverless-deploy",
+      "web-analytics",
+      "dns-cdn"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -11965,9 +12780,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.agentset.ai",
+    "operations": [
+      "rag-retrieval",
+      "vector-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false
   },
   {
@@ -12029,9 +12849,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.trychroma.com",
+    "operations": [
+      "vector-search"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12118,9 +12942,14 @@
       "source_url": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "analytics-query",
+      "sql-database"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12199,9 +13028,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://<deployment>.convex.cloud/api",
+    "operations": [
+      "nosql-database",
+      "vector-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12291,9 +13125,14 @@
       "source_url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "analytics-query",
+      "sql-database"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12363,9 +13202,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.letta.com",
+    "operations": [
+      "agent-memory"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12436,9 +13279,13 @@
       "how": "POST /v3/memories/add/ returns event_id with status PENDING; check event status (MCP tool get_event_status) or use webhooks",
       "source_url": "https://docs.mem0.ai/api-reference/memory/add-memories"
     },
+    "operations": [
+      "agent-memory"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12520,9 +13367,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://cloud.mongodb.com/api/atlas/v2",
+    "operations": [
+      "nosql-database"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12635,9 +13486,13 @@
       "how": "long-running tasks return operation IDs; poll GET /projects/{project_id}/operations/{operation_id}",
       "source_url": "https://neon.com/docs/reference/api"
     },
+    "operations": [
+      "sql-database"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12723,9 +13578,14 @@
       "source_url": "https://docs.pinecone.io/reference/api/database-limits/rate-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "vector-search",
+      "reranking"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12792,9 +13652,13 @@
       "source_url": "https://planetscale.com/docs/api/reference/getting-started-with-planetscale-api",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "sql-database"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12861,9 +13725,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://<cluster>.<region>.<provider>.cloud.qdrant.io:6333",
+    "operations": [
+      "vector-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -12933,9 +13801,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://<account_identifier>.snowflakecomputing.com/api/v2",
+    "operations": [
+      "analytics-query",
+      "sql-database"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -13048,9 +13921,14 @@
       "source_url": "https://supabase.com/docs/reference/api/introduction",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "sql-database",
+      "object-storage"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -13120,9 +13998,14 @@
       "source_url": "https://docs.pingcap.com/api/tidb-cloud-api-overview/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "sql-database",
+      "vector-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -13185,9 +14068,14 @@
       "source_url": "https://www.tinybird.co/docs/api-reference",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "analytics-query",
+      "data-pipeline"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -13240,9 +14128,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.turso.tech/v1",
+    "operations": [
+      "sql-database"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -13296,9 +14188,14 @@
       "source_url": "https://upstash.com/docs/redis/features/restapi",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "key-value-store",
+      "vector-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -13360,9 +14257,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://<cluster-host>/v1",
+    "operations": [
+      "vector-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -13443,9 +14344,14 @@
       "source_url": "https://www.getzep.com/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "agent-memory",
+      "knowledge-graph-query"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -13520,9 +14426,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.cloud.zilliz.com/v2",
+    "operations": [
+      "vector-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -13593,9 +14503,14 @@
       "source_url": "https://docs.agentmail.to/knowledge-base/rate-limits.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "email-send",
+      "email-inbox"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -13673,9 +14588,13 @@
       "source_url": "https://docs.discord.com/developers/topics/oauth2",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "team-chat"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -13766,9 +14685,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.line.me",
+    "operations": [
+      "chat-messaging"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -13825,9 +14748,13 @@
       "source_url": "https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "email-send"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -13893,9 +14820,13 @@
       "source_url": "https://docs.ntfy.sh/config/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "push-notification"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -13980,9 +14911,13 @@
       "source_url": "https://postmarkapp.com/developer/api/overview",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "email-send"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14043,9 +14978,14 @@
       "source_url": "https://resend.com/docs/api-reference/introduction",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "email-send",
+      "email-marketing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14130,9 +15070,14 @@
       "source_url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/rate-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "email-send",
+      "email-marketing"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14208,9 +15153,13 @@
       "source_url": "https://docs.slack.dev/reference/methods/conversations.history",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "team-chat"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14282,9 +15231,13 @@
       "source_url": "https://getstream.io/chat/docs/node/rate_limits/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "chat-messaging"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14347,9 +15300,13 @@
       "source_url": "https://core.telegram.org/bots/faq",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "chat-messaging"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14417,9 +15374,15 @@
       "source_url": "https://www.twilio.com/docs/usage/requests-to-twilio",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "sms",
+      "chat-messaging",
+      "phone-calls"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14497,9 +15460,14 @@
       "source_url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "sms",
+      "phone-calls"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14568,9 +15536,13 @@
       "source_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "chat-messaging"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14640,9 +15612,14 @@
       "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "video-conferencing",
+      "calendar"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14715,9 +15692,14 @@
       "how": "POST /v1/calls returns call_id; poll call status/logs or pass webhook to receive the call object when it ends",
       "source_url": "https://docs.bland.ai/platform/agent-quickstart"
     },
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14787,9 +15769,15 @@
       "source_url": "https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "voice-agent",
+      "speech-to-text",
+      "text-to-speech"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14849,9 +15837,14 @@
       "source_url": "https://elevenlabs.io/docs/llms.txt",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14913,9 +15906,14 @@
       "source_url": "https://livekit.com/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14947,9 +15945,14 @@
     "desc_en": "Build, deploy, and manage AI voice agents that handle phone and web calls via REST API and SDKs.",
     "notes": "",
     "verified": "2026-09-24",
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -14989,9 +15992,14 @@
     "desc_en": "Create and manage AI phone voice agents and trigger/manage outbound calls programmatically via REST API.",
     "notes": "Go-to-market leans enterprise-sales for scaled deployments; a self-serve trial with API access exists for building/testing.",
     "verified": "2026-09-24",
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15037,9 +16045,13 @@
     "desc_en": "Programmatically make, receive, and control phone calls (IVR, recording, conferencing) via REST API.",
     "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage.",
     "verified": "2026-09-24",
+    "operations": [
+      "phone-calls"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15094,9 +16106,14 @@
     "desc_en": "Create, configure, and run AI voice assistants that make and receive phone calls via REST API.",
     "notes": "Also has an official MCP server (streamable-HTTP and SSE endpoints) exposing assistants/calls/phone numbers as tools.",
     "verified": "2026-09-24",
+    "operations": [
+      "voice-agent",
+      "phone-calls"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15161,9 +16178,13 @@
       "source_url": "https://airtable.com/developers/web/api/authentication",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "no-code-database"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15275,9 +16296,13 @@
       "source_url": "https://developers.asana.com/docs/oauth-scopes.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "task-management"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15372,9 +16397,14 @@
       "source_url": "https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "task-management",
+      "docs-editing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15456,9 +16486,13 @@
       "source_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "file-storage"
+    ],
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15520,9 +16554,13 @@
       "source_url": "https://cal.com/docs/api-reference/v2/introduction",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "calendar"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15576,9 +16614,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.calendly.com",
+    "operations": [
+      "calendar"
+    ],
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15647,9 +16689,14 @@
       "source_url": "https://developer.clickup.com/docs/rate-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "task-management",
+      "docs-editing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15721,9 +16768,14 @@
       "how": "Writes return HTTP 202 with requestId; check GET /mutationStatus/{requestId}",
       "source_url": "https://docs.superhuman.com/developers/apis/v1"
     },
+    "operations": [
+      "docs-editing",
+      "no-code-database"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15787,9 +16839,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.dropboxapi.com/2",
+    "operations": [
+      "file-storage"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15873,9 +16929,16 @@
       "source_url": "https://developers.google.com/workspace/gmail/api/auth/scopes",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "email-inbox",
+      "email-send",
+      "calendar",
+      "file-storage"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -15940,9 +17003,13 @@
       "source_url": "https://linear.app/developers/oauth-2-0-authentication",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "task-management"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16022,9 +17089,17 @@
       "source_url": "https://learn.microsoft.com/en-us/graph/auth/auth-concepts",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "email-inbox",
+      "email-send",
+      "calendar",
+      "team-chat",
+      "file-storage"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16093,9 +17168,14 @@
       "source_url": "https://developer.monday.com/api-reference/docs/rate-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "task-management",
+      "no-code-database"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16154,9 +17234,13 @@
       "source_url": "https://nocodb.com/docs/product-docs/developer-resources/rest-apis/accessing-apis",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "no-code-database"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -16222,9 +17306,14 @@
       "source_url": "https://developers.notion.com/reference/request-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "docs-editing",
+      "no-code-database"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16301,9 +17390,13 @@
       "source_url": "https://developer.todoist.com/api/v1/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "task-management"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16370,9 +17463,13 @@
       "source_url": "https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "task-management"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16464,9 +17561,13 @@
       "source_url": "https://docs.attio.com/rest-api/endpoint-reference/records/create-a-record",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "crm"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16566,9 +17667,14 @@
       "source_url": "https://developers.hubspot.com/docs/api-reference/crm-contacts-v3/guide",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "crm",
+      "email-marketing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16647,9 +17753,14 @@
       "source_url": "https://developers.intercom.com/docs/references/rest-api/errors/rate-limiting",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "support-ticketing",
+      "crm"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16754,9 +17865,14 @@
       "how": "bulk import/catalog and campaign send operations create jobs; poll the corresponding get_*_job endpoint",
       "source_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server_available_tools"
     },
+    "operations": [
+      "email-marketing",
+      "sms"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16840,9 +17956,13 @@
       "how": "batch operations endpoint processes requests asynchronously; poll the batch status",
       "source_url": "https://mailchimp.com/developer/marketing/docs/fundamentals/"
     },
+    "operations": [
+      "email-marketing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16912,9 +18032,13 @@
       "source_url": "https://pipedrive.readme.io/docs/marketplace-scopes-and-permissions-explanations",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "crm"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -16992,9 +18116,13 @@
       "source_url": "https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "crm"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17086,9 +18214,13 @@
       "source_url": "https://developer.zendesk.com/api-reference/ticketing/oauth/oauth_tokens/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "support-ticketing"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17161,9 +18293,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.ayrshare.com/api",
+    "operations": [
+      "social-posting",
+      "social-data"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17238,9 +18375,14 @@
       "source_url": "https://raw.githubusercontent.com/bluesky-social/bsky-docs/main/docs/advanced-guides/rate-limits.md",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17287,9 +18429,13 @@
       "source_url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "social-posting"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17339,9 +18485,14 @@
       "source_url": "https://docs.joinmastodon.org/client/token/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17400,9 +18551,14 @@
       "source_url": "https://developers.facebook.com/docs/graph-api/overview/rate-limiting",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17452,9 +18608,14 @@
       "source_url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17512,9 +18673,14 @@
       "source_url": "https://github.com/reddit-archive/reddit/wiki/OAuth2",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17576,9 +18742,14 @@
       "how": "Content Posting returns publish_id; poll the publish status fetch endpoint",
       "source_url": "https://developers.tiktok.com/doc/content-posting-api-get-started"
     },
+    "operations": [
+      "social-posting",
+      "social-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17638,9 +18809,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.x.com/2",
+    "operations": [
+      "social-posting",
+      "social-data"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
+    "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17702,9 +18878,73 @@
       "source_url": "https://developers.google.com/youtube/v3/guides/auth/installed-apps",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "video-hosting",
+      "social-posting",
+      "social-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
+  },
+  {
+    "id": "esri-arcgis-location-platform",
+    "name": "Esri ArcGIS Location Platform",
+    "category": "maps-geo-weather",
+    "homepage": "https://location.arcgis.com",
+    "docs": "https://developers.arcgis.com/documentation/",
+    "auth": "api_key+oauth2",
+    "auth_hint": "API key (token param) or OAuth2 Bearer token",
+    "mcp": {
+      "type": "none",
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
+    },
+    "free_tier": "free tier with monthly free credits, then usage-based pricing",
+    "sdk": [
+      "javascript",
+      "python",
+      "dotnet",
+      "swift",
+      "kotlin"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
+    "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": true,
+      "quota": "e.g. 2M basemap tiles, 20K geocodes, 20K routes, 500 place searches",
+      "period": "month",
+      "source_url": "https://location.arcgis.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "token",
+      "format": "?token=<API_KEY> or header X-Esri-Authorization: Bearer <API_KEY>",
+      "source_url": "https://developers.arcgis.com/rest/geocode/find-address-candidates/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://geocode-api.arcgis.com/arcgis/rest/services",
+    "operations": [
+      "street-geocoding",
+      "map-tiles"
+    ],
+    "no_auth": false,
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17779,9 +19019,16 @@
       "how": "Batch Geocoding: POST /v1/batch/geocode/search returns job id; poll GET until 200 (202 while pending)",
       "source_url": "https://apidocs.geoapify.com/docs/geocoding/batch/"
     },
+    "operations": [
+      "street-geocoding",
+      "places-search",
+      "routing",
+      "reverse-geocoding"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17848,9 +19095,17 @@
       "source_url": "https://developers.google.com/maps/ai/grounding-lite",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "street-geocoding",
+      "routing",
+      "places-search",
+      "map-tiles",
+      "weather-forecast"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17916,9 +19171,17 @@
       "source_url": "https://docs.here.com/geocoding-and-search/docs/code-geocode-address",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "street-geocoding",
+      "routing",
+      "places-search",
+      "reverse-geocoding",
+      "map-tiles"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -17984,9 +19247,13 @@
       "source_url": "https://www.ip2location.io/ip2location-documentation",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "ip-geolocation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false
   },
   {
@@ -18052,9 +19319,13 @@
       "source_url": "https://www.iplocate.io/docs/getting-started/quota-rate-limits/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "ip-geolocation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -18120,9 +19391,16 @@
       "source_url": "https://docs.mapbox.com/api/overview/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "street-geocoding",
+      "routing",
+      "map-tiles",
+      "places-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18196,9 +19474,13 @@
       "source_url": "https://www.weather.gov/documentation/services-web-api",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "weather-forecast"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18271,9 +19553,15 @@
       "source_url": "https://open-meteo.com/en/terms",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "weather-forecast",
+      "air-quality",
+      "street-geocoding"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18329,9 +19617,14 @@
       "source_url": "https://ask.openrouteservice.org/t/reducing-the-quota-of-deprecated-api-api-openrouteservice-org/8013",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "routing",
+      "street-geocoding"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18391,9 +19684,14 @@
       "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "street-geocoding",
+      "reverse-geocoding"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18454,9 +19752,14 @@
       "source_url": "https://openweathermap.org/price",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "weather-forecast",
+      "air-quality"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18527,9 +19830,13 @@
       "source_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "places-search"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18595,9 +19902,13 @@
       "source_url": "https://docs.tomorrow.io/reference/rate-limiting",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "weather-forecast"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18652,9 +19963,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://checkout-test.adyen.com/v71",
+    "operations": [
+      "payments"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18731,9 +20046,15 @@
       "source_url": "https://alpaca.markets/data",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "trade-execution",
+      "stock-market-data",
+      "crypto-market-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18799,9 +20120,15 @@
       "source_url": "https://www.alphavantage.co/support/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "stock-market-data",
+      "currency-exchange",
+      "crypto-market-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18852,9 +20179,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.cdp.coinbase.com/platform",
+    "operations": [
+      "crypto-wallet",
+      "payments"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18919,9 +20251,13 @@
       "source_url": "https://docs.coingecko.com/docs/common-errors-rate-limit",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "crypto-market-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -18990,9 +20326,13 @@
       "source_url": "https://coinmarketcap.com/api/pricing/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "crypto-market-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -19065,9 +20405,13 @@
       "source_url": "https://dexpaprika.com/api/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "crypto-market-data"
+    ],
     "no_auth": true,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -19117,9 +20461,13 @@
       "source_url": "https://site.financialmodelingprep.com/pricing-plans",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "stock-market-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19197,9 +20545,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.mercadopago.com",
+    "operations": [
+      "payments"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false
   },
   {
@@ -19244,9 +20596,13 @@
       "source_url": "https://openexchangerates.org/signup",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "currency-exchange"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19337,9 +20693,14 @@
       "source_url": "https://developer.paypal.com/api/rest/reference/rate-limiting/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "payments",
+      "invoicing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19424,9 +20785,13 @@
       "source_url": "https://plaid.com/docs/errors/rate-limit-exceeded/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "banking-data"
+    ],
     "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19509,9 +20874,15 @@
       "source_url": "https://massive.com/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "stock-market-data",
+      "currency-exchange",
+      "crypto-market-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19577,9 +20948,15 @@
       "source_url": "https://developer.squareup.com/docs/build-basics/general-considerations/handling-errors",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "payments",
+      "store-management",
+      "invoicing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19663,9 +21040,14 @@
       "source_url": "https://docs.stripe.com/rate-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "payments",
+      "invoicing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19741,9 +21123,15 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.wise.com",
+    "operations": [
+      "payments",
+      "currency-exchange",
+      "banking-data"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19803,9 +21191,14 @@
       "source_url": "https://developer-docs.amazon/sp-api/docs/usage-plans-and-rate-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "marketplace-listing",
+      "store-management"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19886,9 +21279,14 @@
       "source_url": "https://docs.bigcommerce.com/docs/start/authentication/api-accounts",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "store-management",
+      "product-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19929,9 +21327,15 @@
     "desc_en": "List items, manage orders/inventory, and search listings across eBay marketplaces via REST APIs.",
     "notes": "Production access requires an eBay developer account and app keys; rate limits scale with account compliance tier.",
     "verified": "2026-09-24",
+    "operations": [
+      "marketplace-listing",
+      "store-management",
+      "product-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19969,9 +21373,15 @@
     "desc_en": "List products, manage orders/shop, and search listings on the Etsy marketplace via REST API.",
     "notes": "Requires an approved Etsy developer app; OAuth2 user consent needed for shop-management scopes. Missing from candidate list despite being a major agent-callable marketplace API.",
     "verified": "2026-09-24",
+    "operations": [
+      "marketplace-listing",
+      "store-management",
+      "product-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -19999,9 +21409,16 @@
     "desc_en": "Lets an agent search items and categories and manage a seller's listings, orders, questions, shipments and promotions on the Mercado Libre marketplace.",
     "notes": "In AR, MX, BR and CL the account holder's details must be validated before creating an app; redirect URI must be HTTPS; rate limited (HTTP 429). Official MCP (OAuth, streamable HTTP) only searches and reads developer documentation.",
     "verified": "2026-09-24",
+    "operations": [
+      "product-search",
+      "marketplace-listing",
+      "store-management",
+      "shipping"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false
   },
   {
@@ -20025,9 +21442,14 @@
     "desc_en": "Create print-on-demand products, sync catalogs, and submit fulfillment orders via REST API.",
     "notes": "",
     "verified": "2026-09-24",
+    "operations": [
+      "store-management",
+      "shipping"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20069,9 +21491,14 @@
     "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
     "notes": "The official Dev MCP server helps build/debug Shopify apps via docs & schema search; store operations themselves go through Admin/Storefront API tokens.",
     "verified": "2026-09-24",
+    "operations": [
+      "store-management",
+      "product-search"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20102,9 +21529,13 @@
     "desc_en": "Manage products, orders, and customers on a self-hosted WooCommerce store via REST API.",
     "notes": "Requires your own WordPress+WooCommerce installation; there is no shared multi-tenant cloud endpoint.",
     "verified": "2026-09-24",
+    "operations": [
+      "store-management"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20151,9 +21582,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://cloud.activepieces.com/api/v1",
+    "operations": [
+      "workflow-automation",
+      "app-connectors"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20207,9 +21643,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.arcade.dev",
+    "operations": [
+      "app-connectors"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20277,9 +21717,13 @@
       "source_url": "https://composio.dev/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "app-connectors"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20351,9 +21795,14 @@
       "how": "Runs start asynchronously; webhook triggers return {success:true} immediately, results via run history/tools",
       "source_url": "https://docs.gumloop.com/api-reference/getting-started"
     },
+    "operations": [
+      "workflow-automation",
+      "app-connectors"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20400,9 +21849,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://maker.ifttt.com",
+    "operations": [
+      "workflow-automation"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20483,9 +21936,15 @@
       "source_url": "https://help.keboola.com/storage/api/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "data-pipeline",
+      "analytics-query",
+      "workflow-automation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false
   },
   {
@@ -20552,9 +22011,14 @@
       "how": "MCP scenario-run tools return after 25-40 s; longer runs continue (up to 40 min) and results are fetched by executionId",
       "source_url": "https://developers.make.com/mcp-server"
     },
+    "operations": [
+      "workflow-automation",
+      "app-connectors"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20606,9 +22070,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://ah-api.merge.dev/api/v1",
+    "operations": [
+      "app-connectors"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20675,9 +22143,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://<instance>/api/v1",
+    "operations": [
+      "workflow-automation",
+      "app-connectors"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20743,9 +22216,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.nango.dev",
+    "operations": [
+      "app-connectors"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20786,9 +22263,13 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://actionkit.useparagon.com",
+    "operations": [
+      "app-connectors"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20843,9 +22324,13 @@
       "source_url": "https://pipedream.com/docs/connect/api-reference/rate-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "app-connectors"
+    ],
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20906,9 +22391,13 @@
       "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "app-connectors"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -20956,9 +22445,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://api.superglue.cloud/v1",
+    "operations": [
+      "app-connectors",
+      "data-pipeline"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21017,9 +22511,14 @@
       "checked_at": "2026-09-24"
     },
     "base_url": "https://mcp.zapier.com/api/v1/connect",
+    "operations": [
+      "app-connectors",
+      "workflow-automation"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21080,9 +22579,15 @@
       "source_url": "https://platform.claude.com/docs/en/manage-claude/api-and-data-retention",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "llm-inference",
+      "image-understanding",
+      "document-parsing"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21144,9 +22649,15 @@
       "source_url": "https://docs.cohere.com/docs/rate-limits",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "llm-inference",
+      "embeddings",
+      "reranking"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21222,9 +22733,13 @@
       "source_url": "https://www.comet.com/site/pricing/",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "llm-observability"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false
   },
   {
@@ -21266,9 +22781,13 @@
       "source_url": "https://api-docs.deepseek.com/quick_start/rate_limit",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "llm-inference"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21357,9 +22876,16 @@
       "source_url": "https://fal.ai/docs/documentation/model-apis/media-expiration",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "text-to-image",
+      "text-to-video",
+      "text-to-speech",
+      "text-to-3d"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21431,9 +22957,14 @@
       "source_url": "https://docs.fireworks.ai/guides/security_compliance/data_security",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "llm-inference",
+      "model-hosting"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21508,9 +23039,17 @@
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "llm-inference",
+      "text-to-image",
+      "image-understanding",
+      "code-execution",
+      "document-parsing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21573,9 +23112,14 @@
       "source_url": "https://console.groq.com/docs/your-data",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "llm-inference",
+      "speech-to-text"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21638,9 +23182,17 @@
       "source_url": "https://huggingface.co/docs/inference-providers/security",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "llm-inference",
+      "text-to-image",
+      "text-to-video",
+      "text-to-speech",
+      "image-understanding"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21704,9 +23256,16 @@
       "source_url": "https://docs.mistral.ai/admin/monitor-comply/zero-data-retention",
       "checked_at": "2026-09-24"
     },
+    "operations": [
+      "llm-inference",
+      "ocr",
+      "embeddings",
+      "document-parsing"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21754,9 +23313,17 @@
     "desc_en": "Generate text, images, audio and embeddings, and run tool-calling via the Responses and Chat Completions APIs.",
     "notes": "Docs moved from platform.openai.com to developers.openai.com (old URLs redirect). Usage-based billing with a payment method; rate limits scale with usage tier. OpenAI MCP docs cover building MCP servers for ChatGPT, not an MCP wrapping the API.",
     "verified": "2026-09-24",
+    "operations": [
+      "llm-inference",
+      "text-to-image",
+      "text-to-speech",
+      "speech-to-text",
+      "embeddings"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21799,9 +23366,14 @@
     "desc_en": "Route chat requests to hundreds of LLMs from many providers through one OpenAI-compatible endpoint with fallback.",
     "notes": "The official remote MCP server uses OAuth PKCE and mints a 7-day key with a $10 default spend limit. It includes send-message and generate-image tools. OAuth PKCE is also available for apps.",
     "verified": "2026-09-24",
+    "operations": [
+      "llm-inference",
+      "text-to-image"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21842,9 +23414,15 @@
     "desc_en": "Generate images, video and music through one API proxying Midjourney, Flux, Kling and other models.",
     "notes": "Third-party reseller, not the model owner. The Midjourney access is unofficial, so it can break or violate Midjourney's terms of service. Tasks are async (create task, then poll or webhook).",
     "verified": "2026-09-24",
+    "operations": [
+      "text-to-image",
+      "text-to-video",
+      "music-generation"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": true,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21891,9 +23469,17 @@
     "desc_en": "Run thousands of hosted image, video, audio and text models via HTTP predictions; also fine-tune and deploy.",
     "notes": "Billed per second of compute or per output. The MCP server is also available locally via npx replicate-mcp.",
     "verified": "2026-09-24",
+    "operations": [
+      "text-to-image",
+      "text-to-video",
+      "text-to-speech",
+      "llm-inference",
+      "model-hosting"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21927,9 +23513,14 @@
     "desc_en": "Run serverless inference, batch jobs, fine-tuning and dedicated GPU endpoints for open-source models.",
     "notes": "Official MCP server only searches documentation. The API is OpenAI-compatible.",
     "verified": "2026-09-24",
+    "operations": [
+      "llm-inference",
+      "model-hosting"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21963,9 +23554,16 @@
     "desc_en": "Send chat, image, embedding and rerank requests to 100+ models through one gateway with failover and spend tracking.",
     "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's MCP server is for the whole platform and does not run inference. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
     "verified": "2026-09-24",
+    "operations": [
+      "llm-inference",
+      "text-to-image",
+      "embeddings",
+      "reranking"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -21997,9 +23595,14 @@
     "desc_en": "Generate text, code and multimodal embeddings and rerank documents for RAG and semantic search.",
     "notes": "Owned by MongoDB, but the standalone API at api.voyageai.com is still self-serve. Free tokens do not apply to the Batch API.",
     "verified": "2026-09-24",
+    "operations": [
+      "embeddings",
+      "reranking"
+    ],
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -22030,9 +23633,17 @@
     "desc_en": "Generate text, images, video and voice with Grok models, with built-in web search and code tools.",
     "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Official MCP server only searches documentation.",
     "verified": "2026-09-24",
+    "operations": [
+      "llm-inference",
+      "text-to-image",
+      "text-to-video",
+      "text-to-speech",
+      "web-search"
+    ],
     "no_auth": false,
     "has_free_tier": false,
     "has_trial": false,
+    "no_card": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
