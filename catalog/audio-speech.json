@@ -15,8 +15,18 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "vendor",
+    "repo": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
+    "tools": [
+     "call_aws",
+     "suggest_aws_commands",
+     "get_execution_plan"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "free tier: Polly 5M chars/mo standard, Transcribe 60 min/mo (12 months)",
    "sdk": [
@@ -31,6 +41,31 @@
    "desc_en": "Convert text to lifelike speech (Polly) and transcribe audio with speaker diarization (Transcribe) via AWS API.",
    "notes": "Needs an AWS account and IAM credentials. Voice and feature availability differs by region. Transcribe docs: https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": true,
+    "quota": "Polly: 5M standard chars/month (neural 1M for first 12 months); Transcribe: 60 min/month for 12 months",
+    "period": "month",
+    "source_url": "https://aws.amazon.com/polly/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "cloud_iam",
+    "format": "AWS Signature Version 4 (Authorization: AWS4-HMAC-SHA256 ...) signed with IAM credentials",
+    "source_url": "https://docs.aws.amazon.com/general/latest/gr/pol.html",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://polly.<region>.amazonaws.com",
+   "async_jobs": {
+    "value": true,
+    "how": "Transcribe: StartTranscriptionJob, then poll GetTranscriptionJob",
+    "source_url": "https://aws.amazon.com/transcribe/faqs/"
+   },
+   "data_policy": {
+    "summary": "Transcribe may store and use voice inputs to improve AWS AI services; opt out via AWS Organizations AI services opt-out policy",
+    "source_url": "https://aws.amazon.com/transcribe/faqs/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -50,6 +85,11 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.assemblyai.com/docs",
+    "maintainer": "vendor",
+    "remote_url": "https://assemblyai.com/docs/mcp",
+    "covers_full_api": false,
+    "source_url": "https://www.assemblyai.com/docs/coding-agent-prompts",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -63,6 +103,38 @@
    "desc_en": "Transcribe recorded or streaming audio with speaker diarization, sentiment analysis and LLM-based audio insights via REST.",
    "notes": "The official hosted MCP only searches the documentation. To run transcriptions, call the REST API or an SDK.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "$50 credits (do not expire)",
+    "period": "one_time",
+    "source_url": "https://www.assemblyai.com/docs/billing-and-pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "authorization",
+    "format": "authorization: <ASSEMBLYAI_API_KEY>",
+    "source_url": "https://www.assemblyai.com/docs/pre-recorded-audio/api-reference/transcripts/submit",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.assemblyai.com",
+   "rate_limits": {
+    "summary": "Pre-recorded: 5 parallel transcriptions on free accounts, 200+ on paid; excess jobs are queued FIFO",
+    "source_url": "https://www.assemblyai.com/docs/pre-recorded-audio/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST /v2/transcript returns id; poll GET /v2/transcript/{id} or set webhook_url",
+    "source_url": "https://www.assemblyai.com/docs/pre-recorded-audio/api-reference/transcripts/submit"
+   },
+   "data_policy": {
+    "summary": "Certain API files may be used for model training after redaction unless opted out; zero data retention for Streaming when opted out",
+    "source_url": "https://www.assemblyai.com/docs/data-retention-and-model-training",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -85,6 +157,15 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/microsoft/azure-speech-mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/microsoft/mcp",
+    "tools": [
+     "speech stt recognize",
+     "speech tts synthesize"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/tools/ai-services-speech",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -103,6 +184,26 @@
    "desc_en": "Convert text to speech, transcribe speech to text and translate speech via REST or Speech SDK.",
    "notes": "Now branded 'Azure Speech in Foundry Tools'. Needs an Azure Speech resource, and endpoints are per region.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "5 audio hours STT + 0.5M neural TTS characters",
+    "period": "month",
+    "source_url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Ocp-Apim-Subscription-Key",
+    "format": "Ocp-Apim-Subscription-Key: <RESOURCE_KEY> (or Authorization: Bearer <token>)",
+    "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/rest-speech-to-text-short",
+    "checked_at": "2026-09-24"
+   },
+   "rate_limits": {
+    "summary": "F0 quotas are not adjustable; F0 TTS 20 transactions per 60 seconds",
+    "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -135,6 +236,27 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.cartesia.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.cartesia.ai/mcp",
+    "tools": [
+     "text_to_speech",
+     "speech_to_text",
+     "list_voices",
+     "get_voice",
+     "clone_voice",
+     "update_voice",
+     "delete_voice",
+     "voice_change",
+     "localize_voice",
+     "list_pronunciation_dicts",
+     "create_pronunciation_dict",
+     "get_pronunciation_dict",
+     "update_pronunciation_dict",
+     "delete_pronunciation_dict"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.cartesia.ai/tools/ai/mcp.md",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -149,6 +271,31 @@
    "desc_en": "Generate low-latency real-time text-to-speech, transcribe speech and clone voices via REST/WebSocket API.",
    "notes": "The hosted MCP endpoint uses OAuth. The local MCP server is at https://github.com/cartesia-ai/cartesia-mcp.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "20K credits (~1 credit per TTS character)",
+    "period": "month",
+    "source_url": "https://cartesia.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY> + Cartesia-Version: 2026-08-14 (X-Api-Key also accepted)",
+    "source_url": "https://docs.cartesia.ai/get-started/authenticate-your-client-applications.md",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.cartesia.ai",
+   "rate_limits": {
+    "summary": "Free plan: 2 concurrent TTS requests, 8 concurrent STT requests; limits scale with subscription plan",
+    "source_url": "https://cartesia.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Zero Data Retention available to Enterprise customers for TTS and STT",
+    "source_url": "https://docs.cartesia.ai/enterprise/zero-data-retention.md",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -170,8 +317,12 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/deepgram/mcp",
-    "domain_verified": null,
-    "kind": "official"
+    "maintainer": "vendor",
+    "remote_url": "https://developers.deepgram.com/_mcp/server",
+    "source_url": "https://developers.deepgram.com/developer-tools/cli/mcp-server.md",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: $200 credit, no card required",
    "sdk": [
@@ -186,6 +337,33 @@
    "desc_en": "Transcribe batch or streaming audio with diarization, synthesize speech, and run real-time voice agents via REST/WebSocket.",
    "notes": "",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "$200 credit",
+    "period": "one_time",
+    "source_url": "https://deepgram.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Token <DEEPGRAM_API_KEY>",
+    "source_url": "https://developers.deepgram.com/reference/authentication.md",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.deepgram.com",
+   "rate_limits": {
+    "summary": "Nova-3/Nova-2: up to 50 concurrent pre-recorded and 150 streaming requests; Voice Agent API up to 45 concurrent connections",
+    "source_url": "https://developers.deepgram.com/reference/api-rate-limits.md",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Model Improvement Program may use data for training; opt out per request with mip_opt_out=true",
+    "source_url": "https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program.md",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

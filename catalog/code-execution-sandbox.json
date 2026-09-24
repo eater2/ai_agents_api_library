@@ -13,10 +13,25 @@
    "auth": "api_key",
    "auth_hint": "Cloudflare API token to deploy the Worker; the sandbox itself is reached through your own deployed Worker route",
    "mcp": {
-    "type": "none",
-    "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "type": "official",
+    "url": "https://containers.mcp.cloudflare.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://containers.mcp.cloudflare.com/mcp",
+    "repo": "https://github.com/cloudflare/mcp-server-cloudflare/tree/main/apps/sandbox-container",
+    "tools": [
+     "container_initialize",
+     "container_ping",
+     "container_file_write",
+     "container_files_list",
+     "container_file_read",
+     "container_file_delete",
+     "container_exec"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "requires Workers Paid plan ($5/mo) for Containers; no free tier for container-backed sandboxes",
    "sdk": [
@@ -25,8 +40,26 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Deploy a Cloudflare Worker embedding this SDK to run untrusted code in per-request container sandboxes.",
-   "notes": "Not a hosted API called directly with a key — you build and deploy your own Worker using the SDK on top of Cloudflare Containers/Durable Objects.",
+   "notes": "Not a hosted API called directly with a key - you deploy your own Worker using the SDK on Cloudflare Containers/Durable Objects. The official Container MCP is a generic sandbox, not a Sandbox SDK wrapper.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://developers.cloudflare.com/containers/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <CLOUDFLARE_API_TOKEN> (Cloudflare API, used to deploy the Worker; sandbox reached via your own Worker)",
+    "source_url": "https://developers.cloudflare.com/fundamentals/api/how-to/make-api-calls/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.cloudflare.com/client/v4",
+   "rate_limits": {
+    "summary": "Worker subrequests per request: 50 on Free, 1,000 on Paid (HTTP transport); RPC transport avoids extra subrequests",
+    "source_url": "https://developers.cloudflare.com/sandbox/platform/limits/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -58,6 +91,14 @@
    "desc_en": "Programmatically create, resume, and control cloud VM sandboxes to run and preview AI-written code.",
    "notes": "Also powers Together AI's white-labeled 'Code Sandbox' product; unofficial community MCP wrappers exist but none vendor-maintained.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <CSB_API_KEY> (SDK: new CodeSandbox(process.env.CSB_API_KEY))",
+    "source_url": "https://github.com/codesandbox/codesandbox-sdk/blob/main/src/utils/api.ts",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.codesandbox.io",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -77,6 +118,10 @@
    "mcp": {
     "type": "official",
     "url": "https://www.daytona.io/docs/en/mcp/",
+    "maintainer": "vendor",
+    "repo": "https://github.com/daytonaio/daytona",
+    "source_url": "https://www.daytona.io/docs/en/mcp/",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -88,8 +133,29 @@
    "openapi": null,
    "llms_txt": "https://www.daytona.io/docs/llms-full.txt",
    "desc_en": "Create elastic remote sandboxes via SDK/API to run AI-generated code with sub-second startup.",
-   "notes": "Billed per second; supports sandbox snapshots and preview URLs for web apps.",
+   "notes": "Billed per second; supports sandbox snapshots and preview URLs for web apps. Official MCP server runs locally via the Daytona CLI (daytona mcp start); no hosted endpoint.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "$200 free compute; first 5 GiB storage free",
+    "period": "one_time",
+    "source_url": "https://www.daytona.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <DAYTONA_API_KEY>",
+    "source_url": "https://www.daytona.io/docs/en/api-keys/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://app.daytona.io/api",
+   "rate_limits": {
+    "summary": "Tier 1: 10,000 general requests/min, 300 sandbox creations/min, 10,000 lifecycle ops/min; higher tiers up to 50,000/600/50,000",
+    "source_url": "https://www.daytona.io/docs/en/limits/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -111,10 +177,15 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/e2b-dev/mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/e2b-dev/mcp-server",
+    "covers_full_api": false,
+    "source_url": "https://github.com/e2b-dev/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
-   "free_tier": "free Hobby tier with limited sandbox hours, then pay-as-you-go",
+   "free_tier": "Trial: one-time $100 usage credit on signup (Hobby, no card); up to 1 h per sandbox, 20 concurrent; then pay-as-you-go",
    "sdk": [
     "python",
     "typescript"
@@ -122,11 +193,33 @@
    "openapi": null,
    "llms_txt": "https://docs.e2b.dev/llms.txt",
    "desc_en": "Spin up isolated Firecracker cloud sandboxes via SDK/REST to execute AI-generated code and return results.",
-   "notes": "Sandboxes auto-expire after a configurable timeout (default ~5 min); used by many agent frameworks (OpenHands, etc.).",
+   "notes": "Sandboxes auto-expire after a configurable timeout (default ~5 min); used by many agent frameworks (OpenHands, etc.). The e2b-dev/mcp-server repo was archived and deprecated on 2026-04-16.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "One-time $100 in usage credits; up to 1 hour per sandbox session, 20 concurrent sandboxes",
+    "period": "one_time",
+    "source_url": "https://e2b.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-API-Key",
+    "format": "X-API-Key: <E2B_API_KEY>",
+    "source_url": "https://github.com/e2b-dev/E2B/blob/main/spec/openapi.yml",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.e2b.app",
+   "rate_limits": {
+    "summary": "Hobby: 1 sandbox creation/sec, 20 concurrent sandboxes, max 1 hour continuous runtime",
+    "source_url": "https://docs.e2b.dev/sandbox/rate-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -160,15 +253,34 @@
     "domain_verified": null,
     "kind": "none"
    },
-   "free_tier": "RapidAPI free Basic plan (rate-limited); self-host free & open-source (GPLv3)",
+   "free_tier": "Paid only on Judge0 Cloud (Pro EUR 27/mo for 2,000 submissions/day and up); self-host free & open-source (GPLv3)",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Submit source code and stdin via REST to compile/run it in 60+ languages and poll for the result.",
    "notes": "Built for compile-run-compare judging (like competitive programming), not long-lived interactive agent sandboxes; self-hosting recommended for production agent use.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-Auth-Token",
+    "format": "X-Auth-Token: <AUTH_TOKEN> (optional; header name configurable by the instance admin)",
+    "source_url": "https://ce.judge0.com/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://ce.judge0.com",
+   "rate_limits": {
+    "summary": "Cloud plans: Pro 2,000, Ultra 5,000, Mega 10,000 submissions/day; extra submissions EUR 0.001 each",
+    "source_url": "https://judge0.com/",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST /submissions returns a token; poll GET /submissions/{token} (wait=true for sync where enabled)",
+    "source_url": "https://ce.judge0.com/"
+   },
    "no_auth": false,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "has_trial": false,
    "stale": false,
    "link_check": {
@@ -186,6 +298,24 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/milkymap/mcp4modal_sandbox",
+    "maintainer": "community",
+    "repo": "https://github.com/milkymap/mcp4modal_sandbox",
+    "tools": [
+     "launch_sandbox",
+     "terminate_sandbox",
+     "list_sandboxes",
+     "execute_command",
+     "push_file_to_sandbox",
+     "pull_file_from_sandbox",
+     "list_directory_contents",
+     "make_directory",
+     "remove_path",
+     "read_file_content_from_sandbox",
+     "write_file_content_to_sandbox"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/milkymap/mcp4modal_sandbox",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -200,6 +330,24 @@
    "desc_en": "Programmatically launch serverless sandboxes, optionally with GPUs, to execute untrusted or agent code.",
    "notes": "Sandbox compute billed separately from regular function compute (~$0.14/vCPU-hr); Python SDK is most mature/complete.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "$30/month free compute on Starter ($0 base)",
+    "period": "month",
+    "source_url": "https://modal.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "format": "MODAL_TOKEN_ID=ak-... and MODAL_TOKEN_SECRET=as-... env vars (or `modal token set`), used by the SDK",
+    "source_url": "https://modal.com/docs/reference/modal.config",
+    "checked_at": "2026-09-24"
+   },
+   "rate_limits": {
+    "summary": "Starter: 100 containers + 10 GPU concurrency",
+    "source_url": "https://modal.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -227,22 +375,23 @@
    "name": "Piston",
    "homepage": "https://github.com/engineer-man/piston",
    "docs": "https://piston.readthedocs.io/en/latest/api-v2/",
-   "auth": "none",
-   "auth_hint": "no key needed for the public instance (rate-limited)",
+   "auth": "api_key",
+   "auth_hint": "authorization token for the public emkc.org instance, granted by EngineerMan (Discord) only for non-commercial educational projects; none when self-hosted",
    "mcp": {
     "type": "none",
     "url": null,
     "domain_verified": null,
     "kind": "none"
    },
-   "free_tier": "free, no key, public instance rate-limited (~5 req/sec); self-host for unlimited/production use",
+   "free_tier": "Free: self-host (open source); public emkc.org API no longer open since 2026-02-15, token only for non-commercial educational projects",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Call a free public REST API to compile and run code in 70+ languages inside isolated containers.",
-   "notes": "The public emkc.org instance is for low-volume/non-commercial use; widely used by Discord/Slack bots and agents; self-host via Docker for heavier agent workloads.",
+   "notes": "Public emkc.org instance closed to open use on 2026-02-15; self-host via Docker for agent workloads. Widely used by Discord/Slack bots.",
    "verified": "2026-09-24",
-   "no_auth": true,
+   "base_url": "https://emkc.org/api/v2/piston",
+   "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
    "stale": false,
@@ -273,10 +422,24 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.riza.io/code-interpreter",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.riza.io/code-interpreter",
+    "repo": "https://github.com/riza-io/riza-mcp",
+    "tools": [
+     "create_tool",
+     "fetch_tool",
+     "execute_tool",
+     "edit_tool",
+     "list_tools",
+     "execute_code"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.riza.io/getting-started/mcp-servers",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
-   "free_tier": "free for side projects/low usage, then usage-based pricing",
+   "free_tier": "Free tier: Hobby plan free forever, 100,000 requests/month, 30 s execution limit; then usage-based pricing",
    "sdk": [
     "python",
     "typescript",
@@ -287,6 +450,27 @@
    "desc_en": "Call a REST API to execute untrusted Python/JS/Ruby/PHP code in sandboxes that start in under 10ms.",
    "notes": "Also supports saving reusable 'tools' (functions) via a Tools API for repeated agent calls.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "100,000 requests/month (Hobby, free forever), 30 s execution limit",
+    "period": "month",
+    "source_url": "https://riza.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <RIZA_API_KEY>",
+    "source_url": "https://docs.riza.io/api-reference/command/execute-code",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.riza.io",
+   "rate_limits": {
+    "summary": "Hobby: 100,000 requests/month, 30 s max execution, 128 MB memory per invocation",
+    "source_url": "https://riza.io/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -307,10 +491,15 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <RUNLOOP_API_KEY> (auto-loaded from RUNLOOP_API_KEY env var)",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/runloopai/api-client-ts/tree/main/packages/mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/runloopai/api-client-ts/tree/main/packages/mcp-server",
+    "covers_full_api": true,
+    "source_url": "https://github.com/runloopai/api-client-ts/tree/main/packages/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "$50 free credits on signup, then usage-based ($0.108/CPU-hr, $0.0252/GB-hr)",
    "sdk": [
@@ -320,8 +509,24 @@
    "openapi": null,
    "llms_txt": "https://docs.runloop.ai/llms.txt",
    "desc_en": "Create, snapshot, suspend/resume, and run commands in Linux Devboxes via API/SDK for agent coding tasks.",
-   "notes": "Includes an 'MCP Hub' feature letting Devboxes connect outward to other MCP tool servers; no confirmed official vendor MCP server exposing Runloop itself.",
+   "notes": "Official local MCP server @runloop/api-client-mcp (npx, RUNLOOP_API_KEY) exposes the Runloop API; the 'MCP Hub' feature lets Devboxes connect outward to other MCP servers.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "$50 in credits; trial limits 3 running devboxes, 5 blueprints, 10 snapshots",
+    "period": "one_time",
+    "source_url": "https://www.runloop.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <RUNLOOP_API_KEY>",
+    "source_url": "https://github.com/runloopai/api-client-ts",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.runloop.ai",
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -342,6 +547,11 @@
    "mcp": {
     "type": "official",
     "url": "https://vercel.com/docs/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.vercel.com",
+    "covers_full_api": false,
+    "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp/tools",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -355,6 +565,26 @@
    "desc_en": "Boot ephemeral Firecracker microVMs via SDK/REST to run agent- or AI-generated code and shell commands.",
    "notes": "Pricing = active CPU + provisioned memory + per Sandbox.create() call + data transfer; 32GB ephemeral NVMe per sandbox.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Hobby: 5 h Active CPU, 420 GB-h memory, 5,000 creations, 20 GB data transfer; paused when exceeded",
+    "period": "month",
+    "source_url": "https://vercel.com/docs/sandbox/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <VERCEL_TOKEN or VERCEL_OIDC_TOKEN> (+ teamId/projectId)",
+    "source_url": "https://vercel.com/docs/rest-api/sandboxes/delete-a-sandbox",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.vercel.com",
+   "rate_limits": {
+    "summary": "Hobby: 10 concurrent sandboxes, 45 min max session, 20-40 vCPUs/min allocation, 1,000 control-plane req/min; Pro: 10,000 concurrent, 24 h",
+    "source_url": "https://vercel.com/docs/sandbox/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

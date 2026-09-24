@@ -1,0 +1,1549 @@
+{
+  "csm-common-sense-machines-api": {
+    "free_plan": null,
+    "auth_scheme": null,
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "homepage/docs: csm.ai, www.csm.ai, docs.csm.ai and api.csm.ai do not resolve in DNS on 2026-09-24; service may be discontinued - re-verify or remove",
+      "mcp: github.com/CommonSenseMachines org and blender-mcp repo return 404 on GitHub; lobehub listing is an aggregator, not a vendor source"
+    ]
+  },
+  "hyper3d-rodin-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://hyper3d.ai/pricing?lang=en",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <RODIN_API_KEY>",
+      "source_url": "https://docs.hyper3d.ai/en/get-started/quick-start",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.hyper3d.com/api/v2",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /rodin returns uuid + jobs.subscription_key; poll POST /status, then POST /download with task_uuid",
+      "source_url": "https://docs.hyper3d.ai/en/get-started/quick-start"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page says full API access is only on the Business plan ($120/mo, $96/mo annual); direct credits $1.5 each; the '10 starter credits' claim was not confirmed",
+      "docs: developer.hyper3d.ai now redirects (301) to https://docs.hyper3d.ai/",
+      "auth_hint: exact header is 'Authorization: Bearer <RODIN_API_KEY>'"
+    ]
+  },
+  "meshy-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.meshy.ai/en/api/quick-start",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <MESHY_API_KEY>",
+      "source_url": "https://docs.meshy.ai/en/api/quick-start",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.meshy.ai/openapi/v1",
+    "rate_limits": {
+      "summary": "20 requests/s on Pro-Ultra (Enterprise 100); concurrent queue tasks 10 (Pro) to 100 (Ultra); 429 when exceeded",
+      "source_url": "https://docs.meshy.ai/en/api/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST returns task id; poll GET task until SUCCEEDED, or use SSE streaming or webhooks",
+      "source_url": "https://docs.meshy.ai/en/api/quick-start"
+    },
+    "data_policy": {
+      "summary": "Generated files retained for 3 days on non-Enterprise plans",
+      "source_url": "https://docs.meshy.ai/en/api/quick-start",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/meshy-dev/meshy-mcp-server",
+      "tools": [
+        "meshy_text_to_3d",
+        "meshy_text_to_3d_refine",
+        "meshy_image_to_3d",
+        "meshy_multi_image_to_3d",
+        "meshy_creative_lab",
+        "meshy_remesh",
+        "meshy_retexture",
+        "meshy_rig",
+        "meshy_animate",
+        "meshy_convert",
+        "meshy_resize",
+        "meshy_uv_unwrap",
+        "meshy_text_to_image",
+        "meshy_image_to_image",
+        "meshy_get_task_status",
+        "meshy_list_tasks",
+        "meshy_cancel_task",
+        "meshy_download_model",
+        "meshy_list_models",
+        "meshy_send_to_slicer",
+        "meshy_analyze_printability",
+        "meshy_repair_printability",
+        "meshy_process_multicolor",
+        "meshy_check_balance"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/meshy-dev/meshy-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "sketchfab-data-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.sketchfab.com/data-api/v3/swagger.json",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: Token <API_TOKEN>  (OAuth2: Authorization: Bearer <ACCESS_TOKEN>)",
+      "source_url": "https://docs.sketchfab.com/data-api/v3/swagger.json",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.sketchfab.com/v3",
+    "rate_limits": {
+      "summary": "Calls can be throttled to limit abuse; throttled clients get 429 Too Many Requests (no numeric limit published)",
+      "source_url": "https://docs.sketchfab.com/data-api/v3/swagger.json",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/gregkop/sketchfab-mcp-server",
+      "tools": [
+        "sketchfab-search",
+        "sketchfab-model-details",
+        "sketchfab-download"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/gregkop/sketchfab-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: API token goes in 'Authorization: Token <API_TOKEN>' (OAuth2: 'Authorization: Bearer <token>'), not an X-API-Key header",
+      "free_tier: GET /v3/search and GET /v3/models need no auth; GET /v3/models/{uid}/download requires a token"
+    ]
+  },
+  "stability-ai-3d-stable-fast-3d-spar3d-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "authorization",
+      "scheme": null,
+      "format": "authorization: Bearer sk-<API_KEY>",
+      "source_url": "https://api.stability.ai/v2alpha/openapi",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.stability.ai",
+    "rate_limits": {
+      "summary": "150 requests per 10 seconds; exceeding returns 429 and a 60-second timeout",
+      "source_url": "https://api.stability.ai/v2alpha/openapi",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "POST /v2beta/3d/stable-fast-3d and /v2beta/3d/stable-point-aware-3d return the GLB binary directly",
+      "source_url": "https://api.stability.ai/v2alpha/openapi"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "tencent-hunyuan3d-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "200 credits per user (one-time free resource package on first activation, valid 1 year)",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://www.tencentcloud.com/document/product/1284/75281",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "cloud_iam",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Tencent Cloud API 3.0 signature (TC3-HMAC-SHA256) with SecretId/SecretKey; X-TC-Action: SubmitHunyuanTo3DProJob",
+      "source_url": "https://www.tencentcloud.com/document/product/1284/75540",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://hunyuan.intl.tencentcloudapi.com",
+    "rate_limits": {
+      "summary": "SubmitHunyuanTo3DProJob: max 20 requests/s; 3 concurrent tasks by default",
+      "source_url": "https://www.tencentcloud.com/document/product/1284/75540",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "SubmitHunyuanTo3DProJob returns JobId (valid 24h); poll QueryHunyuanTo3DProJob",
+      "source_url": "https://www.tencentcloud.com/document/product/1284/75540"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: billing page says 200 free credits per user on first activation (valid 1 year); postpaid $0.02 per credit, Professional generation costs 25 credits (~$0.50), Express 15 - not '~$0.02/generation'"
+    ]
+  },
+  "tripo-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <api_key>",
+      "source_url": "https://developers.tripo3d.ai/en/docs/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://openapi.tripo3d.ai/v3",
+    "rate_limits": {
+      "summary": "Per-key rate limits (X-RateLimit-* headers, 429); default 10 concurrent tasks per category (image gen 1, P-series 5)",
+      "source_url": "https://developers.tripo3d.ai/en/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "poll GET /v3/tasks/{task_id} or receive webhooks",
+      "source_url": "https://developers.tripo3d.ai/en/docs/webhooks"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/VAST-AI-Research/tripo-mcp",
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://github.com/VAST-AI-Research/tripo-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: tripo-mcp is alpha and only works through the Tripo Blender add-on (generate and import into Blender); it is not a standalone API wrapper",
+      "free_tier: pricing page states pay-as-you-go at 1 credit = $0.01 but does not mention signup credits"
+    ]
+  },
+  "eraser-api-diagramgpt": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.eraser.io/reference/api-token.md",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_TOKEN>",
+      "source_url": "https://docs.eraser.io/reference/api-token.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://app.eraser.io/api",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://app.eraser.io/api/mcp",
+      "repo": "https://www.npmjs.com/package/@eraserlabs/eraser-mcp",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.eraser.io/mcp.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Eraser now has an official remote MCP server at https://app.eraser.io/api/mcp (OAuth or 'Authorization: Bearer <API_KEY>'), plus local npm @eraserlabs/eraser-mcp; docs say it is free within free-tier limits"
+    ]
+  },
+  "icepanel-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "10,000 read, 1,000 write, 5 import and 5 export API requests",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://icepanel.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-Key",
+      "scheme": null,
+      "format": "X-API-Key: <ICEPANEL_API_KEY>",
+      "source_url": "https://developer.icepanel.io/developer-guide/getting-started/quickstart.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.icepanel.io/v1",
+    "rate_limits": {
+      "summary": "GET/HEAD 2,400/min; POST/PUT/PATCH/DELETE 60/min; POST /user/* 10/min; 429 with Retry-After",
+      "source_url": "https://developer.icepanel.io/developer-guide/getting-started/rate-limits.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.icepanel.io/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://docs.icepanel.io/integrations/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official remote MCP server at https://mcp.icepanel.io/mcp (OAuth; reads model objects, connections, diagrams, ADRs; writes objects, connections, ADRs). MCP docs say paid plans only, while the pricing table lists MCP on Free; the old local repo github.com/IcePanel/mcp-server is deprecated",
+      "auth_hint: header is 'X-API-Key: <key>'"
+    ]
+  },
+  "kroki": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://kroki.io/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "GET https://kroki.io/{diagram_type}/{output_format}/{deflate+base64 source} or POST with text/plain body",
+      "source_url": "https://docs.kroki.io/kroki/setup/usage/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://kroki.io",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous: image returned in the HTTP response",
+      "source_url": "https://docs.kroki.io/kroki/setup/usage/"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "lucid-lucidchart-rest-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY or OAuth token> + Lucid-Api-Version: <version>",
+      "source_url": "https://lucid.readme.io/reference/headers.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.lucid.co",
+    "rate_limits": null,
+    "oauth_scopes": {
+      "scopes": [
+        "lucidchart.document.content",
+        "lucidchart.document.content:readonly",
+        "folder",
+        "user.profile"
+      ],
+      "source_url": "https://lucid.readme.io/reference/access-scopes.md",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.lucid.app/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://community.lucid.co/community-news-and-announcements-9/introducing-the-lucid-model-context-protocol-mcp-server-12230",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Lucid has an official MCP server (available since 2025-11-18; admins enable it) at https://mcp.lucid.app/mcp (OAuth; endpoint answers 401 with OAuth resource metadata) for search, summarize, share and create diagrams; a separate docs-only MCP is at https://lucid-developer-docs.readme.io/mcp",
+      "docs: developer docs now served at https://lucid.readme.io (llms.txt at https://lucid.readme.io/llms.txt)"
+    ]
+  },
+  "mermaid-chart-api": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://mermaid.ai/docs/ai/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <MERMAID_CHART_API_TOKEN> (only for Mermaid Chart account tools)",
+      "source_url": "https://mermaid.ai/docs/ai/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.mermaid.ai/mcp",
+      "repo": null,
+      "tools": [
+        "validate_and_render_mermaid_diagram",
+        "get_diagram_title",
+        "get_diagram_summary",
+        "search_mermaid_icons",
+        "get_mermaid_syntax_document",
+        "list_tools",
+        "list_mermaid_chart_projects",
+        "list_mermaid_chart_diagrams",
+        "create_mermaid_chart_diagram",
+        "get_mermaid_chart_diagram",
+        "update_mermaid_chart_diagram"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://mermaid.ai/docs/ai/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "llms_txt: https://mermaid.ai/llms.txt returns HTTP 401 on 2026-09-24"
+    ]
+  },
+  "miro-rest-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "100 MCP tool calls",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://developers.miro.com/docs/mcp-usage-and-daily-limits.md",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <ACCESS_TOKEN>",
+      "source_url": "https://developers.miro.com/docs/rest-api-reference-guide",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.miro.com/v2",
+    "rate_limits": {
+      "summary": "Credit-based per user per app: global 100,000 credits/min; Level 1 call = 50 credits (2,000 req/min), Level 2 = 100 credits (1,000 req/min)",
+      "source_url": "https://developers.miro.com/reference/rate-limiting.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "boards:read",
+        "boards:write",
+        "identity:read"
+      ],
+      "source_url": "https://developers.miro.com/reference/scopes.md",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.miro.com/",
+      "repo": null,
+      "tools": [
+        "board_create",
+        "board_search_boards",
+        "canvas_get_canvas_composer_skill",
+        "canvas_load_format_skill",
+        "canvas_search",
+        "canvas_create_from_svg",
+        "canvas_read_as_svg",
+        "canvas_update_from_svg",
+        "comment_list_comments",
+        "comment_reply",
+        "comment_resolve",
+        "image_create",
+        "image_get_data",
+        "image_get_upload_url",
+        "image_get_url",
+        "table_create",
+        "table_list_rows",
+        "table_sync_rows",
+        "prototype_read",
+        "prototype_create"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.miro.com/docs/miro-mcp-tools.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: MCP tool calls are capped per day by plan (Free 100, Starter 500, Business 2,000, Enterprise 10,000)"
+    ]
+  },
+  "napkin-ai-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "500 AI credits per week (shared with the app)",
+      "period": null,
+      "watermark": true,
+      "source_url": "https://www.napkin.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_TOKEN>",
+      "source_url": "https://api.napkin.ai/api/create-visual-request",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.napkin.ai/v1",
+    "rate_limits": {
+      "summary": "POST /v1/visual throttled per second/minute/hour/day by plan; X-RateLimit-* and Retry-After headers",
+      "source_url": "https://api.napkin.ai/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /v1/visual returns request id; poll GET /v1/visual/{id}/status; file URLs expire after 30 min",
+      "source_url": "https://api.napkin.ai/"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://api.napkin.ai/faq",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "plantuml-server-api": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://plantuml.com/server",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "GET https://www.plantuml.com/plantuml/{png|svg|txt}/<ENCODED_SOURCE>",
+      "source_url": "https://plantuml.com/server",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://www.plantuml.com/plantuml",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous: image returned in the HTTP response",
+      "source_url": "https://plantuml.com/server"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/plantuml/plantuml-mcp",
+      "tools": [
+        "plantuml_version"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/plantuml/plantuml-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official github.com/plantuml/plantuml-mcp exists but is an MVP exposing only 'plantuml_version' (no rendering yet)"
+    ]
+  },
+  "structurizr": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-Authorization",
+      "scheme": null,
+      "format": "X-Authorization: <apiKey>:<base64(HMAC-SHA256(apiSecret, digest))> + Nonce + Content-MD5 headers",
+      "source_url": "https://docs.structurizr.com/cloud/workspace-api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.structurizr.com",
+    "rate_limits": {
+      "summary": "Rate limiting enforced on all workspace API calls (GET and PUT); no number published",
+      "source_url": "https://docs.structurizr.com/cloud/workspace-api",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.structurizr.com/mcp",
+      "repo": null,
+      "tools": [
+        "inspect",
+        "parse",
+        "validate",
+        "export-mermaid",
+        "export-c4plantuml",
+        "export-plantuml"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.structurizr.com/ai/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "status: structurizr.com announces cloud service end of life with a migration guide (docs.structurizr.com/cloud) to playground, local or self-hosted server; the cloud workspace API should be treated as deprecated",
+      "mcp: official Structurizr MCP server (free, open source; docker structurizr/mcp); hosted instance https://mcp.structurizr.com/mcp exposes DSL validate/parse/inspect and Mermaid/PlantUML export without auth",
+      "sdk: github.com/structurizr/java is archived; code moved to github.com/structurizr/structurizr"
+    ]
+  },
+  "anthropic-claude-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <ANTHROPIC_API_KEY> + anthropic-version: 2023-06-01 (x-api-key still supported as legacy fallback)",
+      "source_url": "https://platform.claude.com/docs/en/api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.anthropic.com",
+    "rate_limits": {
+      "summary": "Per usage tier and model (RPM, ITPM, OTPM); Start tier e.g. 1,000 RPM for Opus/Sonnet/Haiku; 429 on exceed",
+      "source_url": "https://platform.claude.com/docs/en/api/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Message Batches API: POST /v1/messages/batches, poll GET /v1/messages/batches/{id}, then fetch results",
+      "source_url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing"
+    },
+    "data_policy": {
+      "summary": "Retained data never used for training without express permission; prompts/outputs not retained by default except 30-day rule for Covered Models; ZDR available",
+      "source_url": "https://platform.claude.com/docs/en/manage-claude/api-and-data-retention",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: API overview now lists 'Authorization: Bearer <key>' as the primary auth header; x-api-key is a legacy fallback that is still supported"
+    ]
+  },
+  "cohere-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "1,000 API calls (trial/evaluation key)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://docs.cohere.com/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <COHERE_API_KEY>",
+      "source_url": "https://docs.cohere.com/v2/reference/chat",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.cohere.com/v2",
+    "rate_limits": {
+      "summary": "Trial: Chat 20 req/min, Rerank 10/min, Embed 2,000 inputs/min; Production: Chat 500/min, Rerank 1,000/min",
+      "source_url": "https://docs.cohere.com/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://docs.cohere.com/_mcp/server",
+      "repo": null,
+      "tools": [
+        "searchDocs"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.cohere.com/llms.txt",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "comet-opik": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "25k spans, 60-day data retention, up to 10 team members",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.comet.com/site/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "authorization",
+      "scheme": null,
+      "format": "authorization: <OPIK_API_KEY> (no Bearer prefix) + Comet-Workspace: <WORKSPACE>",
+      "source_url": "https://www.comet.com/docs/opik/reference/rest-api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://www.comet.com/opik/api/v1/private",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Free cloud plan keeps data 60 days",
+      "source_url": "https://www.comet.com/site/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://www.comet.com/opik/api/v1/mcp",
+      "repo": null,
+      "tools": [
+        "read",
+        "list",
+        "write",
+        "schema",
+        "read_skill"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://www.comet.com/docs/opik/mcp-server/tools",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "deepseek-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <DEEPSEEK_API_KEY>",
+      "source_url": "https://api-docs.deepseek.com/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.deepseek.com",
+    "rate_limits": {
+      "summary": "Account-level concurrency: deepseek-flash 2,500, deepseek-v4-pro 500 concurrent requests; 429 when exceeded",
+      "source_url": "https://api-docs.deepseek.com/quick_start/rate_limit",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "llms_txt: https://api-docs.deepseek.com/llms.txt returns an HTML docs page (text/html), not an llms.txt file",
+      "notes: off-peak discount is 50%; peak hours are 01:00-04:00 and 06:00-10:00 UTC Mon-Fri; fees are deducted from a topped-up or granted balance"
+    ]
+  },
+  "fal-ai": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://fal.ai/docs/documentation/model-apis/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: Key <FAL_KEY>",
+      "source_url": "https://fal.ai/docs/documentation/model-apis/inference/queue",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://queue.fal.run",
+    "rate_limits": {
+      "summary": "New accounts: 2 concurrent requests; limit rises with credit purchases (40+ via sales); excess requests wait in queue",
+      "source_url": "https://fal.ai/docs/documentation/model-apis/concurrency-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST https://queue.fal.run/{model} returns request_id, status_url, response_url; poll status or use webhooks",
+      "source_url": "https://fal.ai/docs/documentation/model-apis/inference/queue"
+    },
+    "data_policy": {
+      "summary": "Request payloads stored 30 days by default (opt out with X-Fal-Store-IO: 0); generated media served as public CDN URLs",
+      "source_url": "https://fal.ai/docs/documentation/model-apis/media-expiration",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.fal.ai/mcp",
+      "repo": null,
+      "tools": [
+        "search_models",
+        "get_model_schema",
+        "get_pricing",
+        "recommend_model",
+        "run_model",
+        "submit_job",
+        "check_job",
+        "get_job_result",
+        "cancel_job",
+        "upload_file",
+        "search_docs"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://fal.ai/docs/documentation/setting-up/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: docs describe a prepaid credit model (credits bought in advance); no free tier is stated"
+    ]
+  },
+  "fireworks-ai": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "$1 in free credits",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://fireworks.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <FIREWORKS_API_KEY>",
+      "source_url": "https://docs.fireworks.ai/api-reference/post-chatcompletions",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.fireworks.ai/inference/v1",
+    "rate_limits": {
+      "summary": "Adaptive serverless limits per account and model (TPM ceilings by model size); upper bound grows with spending tier; 429/503",
+      "source_url": "https://docs.fireworks.ai/serverless/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Batch API: create batch job, it waits in pending state, poll job status",
+      "source_url": "https://docs.fireworks.ai/guides/batch-inference"
+    },
+    "data_policy": {
+      "summary": "Does not log or store prompt or generation data for open models without explicit opt-in (zero data retention)",
+      "source_url": "https://docs.fireworks.ai/guides/security_compliance/data_security",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://docs.fireworks.ai/mcp",
+      "repo": null,
+      "tools": [
+        "search_fireworks_ai_docs",
+        "query_docs_filesystem_fireworks_ai_docs",
+        "submit_feedback"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.fireworks.ai/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "google-gemini-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "free input and output tokens on supported models, rate-limited per project",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-goog-api-key",
+      "scheme": null,
+      "format": "x-goog-api-key: <GEMINI_API_KEY>",
+      "source_url": "https://ai.google.dev/gemini-api/docs/api-key",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://generativelanguage.googleapis.com/v1beta",
+    "rate_limits": {
+      "summary": "Per project (not per key): RPM, TPM, RPD by model and tier (Free, Tier 1-3); view active limits in AI Studio",
+      "source_url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Batch API at 50% cost: create batch job, poll job state until JOB_STATE_SUCCEEDED",
+      "source_url": "https://ai.google.dev/gemini-api/docs/batch-api"
+    },
+    "data_policy": {
+      "summary": "Free tier content used to improve Google products; paid tier content not used",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://gemini-api-docs-mcp.dev",
+      "repo": null,
+      "tools": [
+        "gemini_search_docs",
+        "gemini_get_doc"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "groq-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "per-model limits, e.g. openai/gpt-oss-120b 30 RPM, 1K RPD, 8K TPM, 200K TPD",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://console.groq.com/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <GROQ_API_KEY>",
+      "source_url": "https://console.groq.com/docs/api-reference",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.groq.com/openai/v1",
+    "rate_limits": {
+      "summary": "Per model RPM/RPD/TPM/TPD; Free plan e.g. gpt-oss-120b 30 RPM, 1K RPD; Developer plan higher",
+      "source_url": "https://console.groq.com/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Batch API (Developer plan): POST /openai/v1/batches, poll GET /openai/v1/batches/{batch_id}",
+      "source_url": "https://console.groq.com/docs/batch"
+    },
+    "data_policy": {
+      "summary": "Inference data not retained by default; retained up to 30 days only for batch/fine-tuning features or reliability needs",
+      "source_url": "https://console.groq.com/docs/your-data",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "hugging-face-inference-providers": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "$0.10 in credits for free users (PRO $2.00)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://huggingface.co/docs/inference-providers/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <HF_TOKEN>",
+      "source_url": "https://huggingface.co/docs/inference-providers/index",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://router.huggingface.co/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "HF does not store request/response bodies or use data for training; debug logs kept up to 30 days without user data",
+      "source_url": "https://huggingface.co/docs/inference-providers/security",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://huggingface.co/mcp",
+      "repo": null,
+      "tools": [
+        "hf_whoami",
+        "hub_repo_search",
+        "hub_repo_details",
+        "hf_fs"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://huggingface.co/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: free users get $0.10/month in Inference Providers credits (PRO $2.00/month)"
+    ]
+  },
+  "mistral-ai-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "included monthly usage within Free mode limits",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <MISTRAL_API_KEY>",
+      "source_url": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.mistral.ai/v1",
+    "rate_limits": {
+      "summary": "Per-model tokens-per-minute and other limits shown per organization in Admin Panel > API > Limits; Free mode has lower limits",
+      "source_url": "https://docs.mistral.ai/admin/billing-usage/usage-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Zero data retention available on paid plans for supported stateless API calls; training opt-out handled separately",
+      "source_url": "https://docs.mistral.ai/admin/monitor-comply/zero-data-retention",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.mistral.ai/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://docs.mistral.ai/resources/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "openai-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <OPENAI_API_KEY>",
+      "source_url": "https://developers.openai.com/api/reference/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.openai.com/v1",
+    "rate_limits": {
+      "summary": "RPM/RPD/TPM/TPD/IPM per model, set by usage tier (Free, Tier 1-5); 429 slow_down / rate_limit_error",
+      "source_url": "https://developers.openai.com/api/docs/guides/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Batch API: upload JSONL, create batch, poll batch status (completes within 24h)",
+      "source_url": "https://developers.openai.com/api/docs/guides/batch"
+    },
+    "data_policy": {
+      "summary": "API data not used for training unless you opt in; abuse-monitoring logs kept 30 days; ZDR available for approved customers",
+      "source_url": "https://developers.openai.com/api/docs/guides/your-data",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://developers.openai.com/mcp",
+      "repo": null,
+      "tools": [
+        "search_openai_docs",
+        "list_openai_docs",
+        "fetch_openai_doc",
+        "list_api_endpoints",
+        "get_openapi_spec"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.openai.com/learn/docs-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: OpenAI hosts an official documentation-only MCP server at https://developers.openai.com/mcp (does not call the API)"
+    ]
+  },
+  "openrouter": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "free models: 50 requests/day (1,000/day once $10+ credits purchased), 20 RPM",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://openrouter.ai/docs/api_reference/limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <OPENROUTER_API_KEY>",
+      "source_url": "https://openrouter.ai/docs/api-reference/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://openrouter.ai/api/v1",
+    "rate_limits": {
+      "summary": "Free models 20 RPM and 50 RPD (1,000 RPD with >= $10 credits); paid models limited by provider/DDoS protection; X-RateLimit-* headers",
+      "source_url": "https://openrouter.ai/docs/api_reference/limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "OpenRouter does not store prompts or responses unless you opt in; provider training/logging policies documented per provider",
+      "source_url": "https://openrouter.ai/docs/guides/privacy/data-collection",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.openrouter.ai/mcp",
+      "repo": null,
+      "tools": [
+        "send-message",
+        "generate-image",
+        "list-models",
+        "get-model",
+        "list-model-endpoints",
+        "list-providers",
+        "list-daily-model-rankings",
+        "list-app-rankings",
+        "get-credits",
+        "get-generation",
+        "list-benchmarks",
+        "list-task-classifications",
+        "search-docs",
+        "send-feedback",
+        "spawn-ori-eval",
+        "install-ori-harness",
+        "ping"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://openrouter.ai/docs/guides/overview/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "piapi": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "$0.50 in free credits",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://piapi.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-Key",
+      "scheme": null,
+      "format": "X-API-Key: <PIAPI_KEY>",
+      "source_url": "https://piapi.ai/docs/quickstart",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.piapi.ai",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST https://api.piapi.ai/api/v1/task creates a task; get task endpoint for results, or webhook notifications",
+      "source_url": "https://piapi.ai/docs/overview"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/apinetwork/piapi-mcp-server",
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://github.com/apinetwork/piapi-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "replicate": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <REPLICATE_API_TOKEN>",
+      "source_url": "https://replicate.com/docs/reference/http",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.replicate.com/v1",
+    "rate_limits": {
+      "summary": "Create prediction 600 req/min; other endpoints 3,000 req/min; accounts with granted credit but no payment method: 6 req/min",
+      "source_url": "https://replicate.com/docs/topics/predictions/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /v1/predictions returns a prediction to poll (GET /v1/predictions/{id}) or use webhooks; 'Prefer: wait' blocks up to 60s",
+      "source_url": "https://replicate.com/docs/reference/http"
+    },
+    "data_policy": {
+      "summary": "API prediction inputs, outputs, files and logs deleted automatically after one hour by default",
+      "source_url": "https://replicate.com/docs/topics/predictions/data-retention",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.replicate.com/sse",
+      "repo": "https://www.npmjs.com/package/replicate-mcp",
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://replicate.com/docs/reference/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: remote endpoint shown at mcp.replicate.com is https://mcp.replicate.com/sse (API-token auth)"
+    ]
+  },
+  "together-ai": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.together.ai/docs/billing-credits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <TOGETHER_API_KEY>",
+      "source_url": "https://docs.together.ai/docs/api-keys-authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.together.ai/v1",
+    "rate_limits": {
+      "summary": "Dynamic per-model limits that scale with sustained traffic; 429 includes x-ratelimit-reset",
+      "source_url": "https://docs.together.ai/docs/serverless/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Batch API: upload JSONL, start batch job, poll until finished, retrieve results (up to 50% cheaper)",
+      "source_url": "https://docs.together.ai/docs/inference/batch/tutorial"
+    },
+    "data_policy": {
+      "summary": "By default stores prompts/responses and may use them for product improvement (admins can disable); training on org data is opt-in",
+      "source_url": "https://docs.together.ai/docs/privacy-and-security",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://docs.together.ai/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://docs.together.ai/docs/agent-skills",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: docs say Together AI offers no free trial; platform access requires a minimum $5 credit purchase"
+    ]
+  },
+  "vercel-ai-gateway": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "free AI Gateway credits on a subset of models, rate-limited per model",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://vercel.com/docs/ai-gateway/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <AI_GATEWAY_API_KEY> (or Vercel OIDC token)",
+      "source_url": "https://vercel.com/docs/ai-gateway/sdks-and-apis",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://ai-gateway.vercel.sh/v1",
+    "rate_limits": {
+      "summary": "Free tier: lower per-model limits (429); paid tier: no AI Gateway limits, only upstream provider limits",
+      "source_url": "https://vercel.com/docs/ai-gateway/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Per-request Zero Data Retention routing to providers that do not retain or train on prompts (Pro and Enterprise)",
+      "source_url": "https://vercel.com/docs/ai-gateway/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.vercel.com",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "voyage-ai-embeddings-rerank": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "first 200 million tokens per account on current models (e.g. voyage-4, voyage-4-large)",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://docs.voyageai.com/docs/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <VOYAGE_API_KEY>",
+      "source_url": "https://docs.voyageai.com/reference/embeddings-api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.voyageai.com/v1",
+    "rate_limits": {
+      "summary": "Per model RPM/TPM by usage tier (Tier 1 = payment method added), e.g. voyage-3.5 2,000 RPM / 8M TPM; Tier 2 2x, Tier 3 3x",
+      "source_url": "https://docs.voyageai.com/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Batch API: upload .jsonl file, create batch, poll GET retrieve batch",
+      "source_url": "https://docs.voyageai.com/docs/batch-inference"
+    },
+    "data_policy": {
+      "summary": "Voyage may store and use API data for training unless an org admin with a payment method opts out (then zero-day retention)",
+      "source_url": "https://docs.voyageai.com/docs/faq",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "xai-grok-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.x.ai/developers/quickstart",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <XAI_API_KEY>",
+      "source_url": "https://docs.x.ai/developers/quickstart",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.x.ai/v1",
+    "rate_limits": {
+      "summary": "Per-model RPS (RPM/60) and TPM by tier; tier based on cumulative spend since 2026-01-01 (Tier 0 $0, Tier 1 $50, Tier 2 $250...)",
+      "source_url": "https://docs.x.ai/developers/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Batch API: create batch, add requests, poll batch status until num_pending is 0",
+      "source_url": "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://docs.x.ai/api/mcp",
+      "repo": null,
+      "tools": [
+        "list_doc_pages",
+        "get_doc_page",
+        "search_docs",
+        "get_llms_txt"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.x.ai/developers/docs-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  }
+}

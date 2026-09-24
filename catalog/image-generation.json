@@ -15,8 +15,23 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/Focus-GTS/firefly-services-mcp",
+    "tools": [
+     "firefly_generate_image",
+     "firefly_generate_similar",
+     "firefly_expand_image",
+     "firefly_fill_image",
+     "firefly_generate_object_composite",
+     "firefly_generate_video",
+     "firefly_get_job_status",
+     "firefly_upload_image"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/Focus-GTS/firefly-services-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "community"
    },
    "free_tier": "check pricing; requires Adobe Developer Console project and Firefly Services entitlement",
    "sdk": [],
@@ -25,6 +40,42 @@
    "desc_en": "Generate and edit images and manage creative assets programmatically via Adobe's Firefly REST APIs.",
    "notes": "Enterprise-leaning; needs OAuth Server-to-Server credentials from Adobe Developer Console, not a simple sign-up API key.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/getting-started/usage-notes/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "oauth2",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <IMS_ACCESS_TOKEN> + x-api-key: <CLIENT_ID>",
+    "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://firefly-api.adobe.io/v3",
+   "rate_limits": {
+    "summary": "Default 4 requests/minute and 9,000 requests/day per organization; 429 when exceeded",
+    "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/getting-started/usage-notes/",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "openid",
+     "AdobeID",
+     "session",
+     "additional_info",
+     "read_organizations",
+     "firefly_api",
+     "ff_apis"
+    ],
+    "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST /v3/images/generate-async returns jobId, statusUrl, cancelUrl; poll GET /v3/status/{jobId}",
+    "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/how-tos/using-async-apis"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -44,6 +95,20 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.bfl.ai",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.bfl.ai",
+    "tools": [
+     "generate_image",
+     "vto",
+     "generate_variations",
+     "get_history",
+     "get_credits",
+     "generate_video",
+     "get_result"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.bfl.ai/api_integration/mcp_integration",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
@@ -56,6 +121,35 @@
    "desc_en": "Generate, edit, and vary FLUX model images from text prompts via REST or the official OAuth MCP server.",
    "notes": "Official MCP server (flux-mcp) is remote/hosted at mcp.bfl.ai with OAuth-only login, billed to your BFL org.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://docs.bfl.ai/account_management/credits_billing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-key",
+    "format": "x-key: <BFL_API_KEY>",
+    "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.bfl.ai/v1",
+   "rate_limits": {
+    "summary": "Max 24 concurrent requests for most endpoints (6 for flux-kontext-max); 429 when exceeded",
+    "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST returns id + polling_url; poll polling_url (or use webhook) until Ready",
+    "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines"
+   },
+   "data_policy": {
+    "summary": "Generated result URLs on delivery.*.bfl.ai expire after 10 minutes; download promptly",
+    "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -76,8 +170,24 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.magnific.com",
+    "tools": [
+     "images_generate",
+     "images_upscale",
+     "images_remove_background",
+     "images_to_svg",
+     "video_generate",
+     "audio_tts",
+     "creations_search",
+     "creation_status",
+     "account_balance"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.magnific.com/modelcontextprotocol",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
    "sdk": [],
@@ -86,6 +196,25 @@
    "desc_en": "Generate and edit images programmatically via REST API, plus access Freepik's stock asset library.",
    "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-magnific-api-key",
+    "format": "x-magnific-api-key: <API_KEY>",
+    "source_url": "https://docs.magnific.com/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.magnific.com/v1",
+   "rate_limits": {
+    "summary": "Per IP: 50 hits/s over 5 s, and 10 hits/s averaged over 2 min; no daily cap for most endpoints",
+    "source_url": "https://docs.magnific.com/ratelimits",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST returns task id; poll GET /v1/ai/<model>/{task-id} or pass webhook_url",
+    "source_url": "https://docs.magnific.com/llms.txt"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -105,8 +234,13 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "vendor",
+    "repo": "https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia",
+    "covers_full_api": false,
+    "source_url": "https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "check pricing (free API key tier exists but image models are mostly usage-billed)",
    "sdk": [
@@ -120,6 +254,31 @@
    "desc_en": "Generate and multi-turn edit images from text via REST (Nano Banana/Imagen models), up to 4K with reference-image support.",
    "notes": "Also available via Vertex AI for enterprise/cloud_iam auth as an alternative.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "watermark": true,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-goog-api-key",
+    "format": "x-goog-api-key: <GEMINI_API_KEY>",
+    "source_url": "https://ai.google.dev/gemini-api/docs/image-generation",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://generativelanguage.googleapis.com/v1beta",
+   "async_jobs": {
+    "value": false,
+    "how": "image returned inline in the response",
+    "source_url": "https://ai.google.dev/gemini-api/docs/image-generation"
+   },
+   "data_policy": {
+    "summary": "Paid tier: content not used to improve Google products; all generated images carry a SynthID watermark",
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -139,6 +298,22 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.ideogram.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.ideogram.ai/mcp",
+    "tools": [
+     "generate_images_bulk",
+     "edit_image",
+     "reframe_image",
+     "upscale_image",
+     "create_collection",
+     "upload_image",
+     "create_dataset",
+     "upload_dataset_assets",
+     "train_model"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://ideogram.ai/features/mcp/",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -149,6 +324,30 @@
    "desc_en": "Generate, edit, remix, upscale, and describe images via REST or an official OAuth MCP server, strong at in-image text.",
    "notes": "API billing is separate from Ideogram web subscriptions; requires payment method for API access.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://developer.ideogram.ai/ideogram-api/api-setup",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Api-Key",
+    "format": "Api-Key: <IDEOGRAM_API_KEY>",
+    "source_url": "https://developer.ideogram.ai/ideogram-api/api-setup",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.ideogram.ai",
+   "rate_limits": {
+    "summary": "Default 10 in-flight requests; contact Ideogram for more",
+    "source_url": "https://developer.ideogram.ai/ideogram-api/api-overview",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Image links returned by the API expire; download and store images you want to keep",
+    "source_url": "https://developer.ideogram.ai/ideogram-api/api-setup",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -169,6 +368,14 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.leonardo.ai/v1/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.leonardo.ai/v1/mcp",
+    "tools": [
+     "generate-image"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.leonardo.ai/docs/connect-to-leonardoai-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -179,6 +386,24 @@
    "desc_en": "Generate images and videos from text via REST or the official MCP server, with model selection and job status polling.",
    "notes": "Requires a verified account with a payment method to receive API credits.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <LEONARDO_API_KEY>",
+    "source_url": "https://docs.leonardo.ai/docs/getting-started",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://cloud.leonardo.ai/api/rest/v1",
+   "rate_limits": {
+    "summary": "Default concurrency 10 generation jobs; extra requests queue up to a pending limit; separate API request rate limit",
+    "source_url": "https://docs.leonardo.ai/docs/guide-to-concurrency-queue-and-rate-limit",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST returns generationId; poll GET /generations/{id} or configure webhook callback; a sync endpoint exists for some models",
+    "source_url": "https://docs.leonardo.ai/docs/getting-started"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -209,6 +434,15 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+    "maintainer": "community",
+    "repo": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+    "tools": [
+     "create-image",
+     "edit-image"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -226,6 +460,24 @@
    "desc_en": "Generate, edit, and iteratively refine images from text prompts via REST, with mask-based inpainting and streaming previews.",
    "notes": "Requires an OpenAI API account with billing enabled; part of the Images API / Responses API.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <OPENAI_API_KEY>",
+    "source_url": "https://developers.openai.com/api/docs/guides/image-generation",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.openai.com/v1",
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous response (optional streaming of partial images)",
+    "source_url": "https://developers.openai.com/api/docs/guides/image-generation"
+   },
+   "data_policy": {
+    "summary": "API data not used for training unless opted in; /v1/images/generations keeps abuse-monitoring data 30 days",
+    "source_url": "https://developers.openai.com/api/docs/guides/your-data",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -258,8 +510,25 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/recraft-ai/mcp-recraft-server",
-    "domain_verified": null,
-    "kind": "official"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.recraft.ai/mcp",
+    "repo": "https://github.com/recraft-ai/mcp-recraft-server",
+    "tools": [
+     "generate_image",
+     "create_style",
+     "vectorize_image",
+     "image_to_image",
+     "remove_background",
+     "replace_background",
+     "crisp_upscale",
+     "creative_upscale",
+     "get_user"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://www.recraft.ai/docs/mcp-reference/remote-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "paid only; pay-per-image (from $0.007/image on V4.1 Flash), no confirmed free credits",
    "sdk": [],
@@ -268,6 +537,34 @@
    "desc_en": "Generate, edit, upscale, and vectorize images via REST API using Recraft's proprietary models.",
    "notes": "REST API, OpenAI-Python-library compatible for some endpoints (not all params supported); official MCP server on GitHub.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://www.recraft.ai/docs/api-reference/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <RECRAFT_API_TOKEN>",
+    "source_url": "https://www.recraft.ai/docs/api-reference/getting-started",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://external.api.recraft.ai/v1",
+   "rate_limits": {
+    "summary": "100 images/minute per user and 5 requests/second",
+    "source_url": "https://www.recraft.ai/docs/api-reference/appendix",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous; returns image URLs",
+    "source_url": "https://www.recraft.ai/docs/api-reference/getting-started"
+   },
+   "data_policy": {
+    "summary": "Generated images stored approx. 24 hours (may change)",
+    "source_url": "https://www.recraft.ai/docs/api-reference/appendix",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -312,6 +609,32 @@
    "desc_en": "Remove image backgrounds programmatically via a simple REST API with JSON or multipart uploads.",
    "notes": "IMPORTANT: remove.bg API is being discontinued - stops accepting requests on December 1, 2026, with removal moving to Leonardo.ai.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "50 API calls",
+    "period": "month",
+    "source_url": "https://www.remove.bg/api",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-Api-Key",
+    "format": "X-Api-Key: <API_KEY>",
+    "source_url": "https://www.remove.bg/api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.remove.bg/v1.0",
+   "rate_limits": {
+    "summary": "Up to 500 images/minute, scaled down by megapixels (e.g. 10/min at 50 MP); 429 with Retry-After",
+    "source_url": "https://www.remove.bg/api",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous POST /removebg returns the image",
+    "source_url": "https://www.remove.bg/api"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -331,8 +654,12 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/tadasant/mcp-server-stability-ai",
+    "source_url": "https://github.com/tadasant/mcp-server-stability-ai",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "community"
    },
    "free_tier": "25 free credits on signup, then pay-as-you-go",
    "sdk": [
@@ -343,6 +670,26 @@
    "desc_en": "Generate, upscale, and edit images via REST (Stable Image Ultra/Core/SD3 models) using simple credit-based billing.",
    "notes": "",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "quota": "25 free credits",
+    "period": "one_time",
+    "source_url": "https://platform.stability.ai/account/credits",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <STABILITY_API_KEY>",
+    "source_url": "https://platform.stability.ai/docs/getting-started",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.stability.ai",
+   "rate_limits": {
+    "summary": "150 requests every 10 seconds; 429 when exceeded",
+    "source_url": "https://platform.stability.ai/docs/getting-started",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,

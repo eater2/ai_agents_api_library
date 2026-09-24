@@ -15,10 +15,21 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/awslabs/mcp",
-    "domain_verified": null,
+    "maintainer": "vendor",
+    "remote_url": "https://aws-mcp.us-east-1.api.aws/mcp",
+    "repo": "https://github.com/awslabs/mcp",
+    "tools": [
+     "call_aws",
+     "suggest_aws_commands",
+     "get_execution_plan"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
     "kind": "official"
    },
-   "free_tier": "new accounts get up to $200 in credits plus free usage of 90+ services for up to 6 months; some services also have a perpetual Always Free tier",
+   "free_tier": "Free tier: 30+ services always free within monthly limits; new accounts also get up to $200 one-time credits ($100 on signup + up to $100 earned) usable over 6 months",
    "sdk": [
     "python",
     "javascript",
@@ -38,6 +49,21 @@
    "desc_en": "An agent can provision and control thousands of AWS resources (compute, storage, databases, ML) via SDKs/CLI/REST.",
    "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own IAM scoping, rate limits, and regional availability; no single unified OpenAPI spec.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "30+ services always free within monthly limits; new customers get up to $200 credits ($100 at signup + up to $100 earned) over 6 months",
+    "period": "month",
+    "source_url": "https://aws.amazon.com/free/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "cloud_iam",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: AWS4-HMAC-SHA256 Credential=<ACCESS_KEY_ID>/<date>/<region>/<service>/aws4_request, SignedHeaders=..., Signature=...",
+    "source_url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_sigv.html",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -71,6 +97,11 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/microsoft/mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/microsoft/mcp",
+    "covers_full_api": false,
+    "source_url": "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/overview",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -90,6 +121,34 @@
    "desc_en": "An agent can deploy and manage Azure resources (compute, storage, databases, AI) across resource-provider REST APIs.",
    "notes": "Umbrella platform: hundreds of resource-provider APIs, each independently versioned (api-version query param required); the Azure MCP repo moved from Azure/azure-mcp (archived) to microsoft/mcp.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": true,
+    "quota": "65+ always-free services with monthly amounts; new customers also get 20+ services free for 12 months and $200 credit for 30 days",
+    "period": "month",
+    "source_url": "https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "cloud_iam",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <Entra ID access token>",
+    "source_url": "https://learn.microsoft.com/en-us/rest/api/azure/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://management.azure.com",
+   "rate_limits": {
+    "summary": "ARM token bucket per subscription and per tenant: reads 250 bucket/25 per s refill; writes and deletes 200 bucket/10 per s; 429 with Retry-After",
+    "source_url": "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/request-limits-and-throttling",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "some operations are asynchronous; track them via response headers (Track asynchronous Azure operations)",
+    "source_url": "https://learn.microsoft.com/en-us/rest/api/azure/"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -133,6 +192,16 @@
    "mcp": {
     "type": "official",
     "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.cloudflare.com/mcp",
+    "repo": "https://github.com/cloudflare/mcp",
+    "tools": [
+     "search",
+     "execute"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -147,6 +216,27 @@
    "desc_en": "An agent can manage DNS, Workers, zones, WAF/security rules, and caching for Cloudflare accounts programmatically.",
    "notes": "Global rate limit ~1,200 requests/5 min per user; per-IP limit ~200 req/sec; GraphQL Analytics API has a separate cost-based limit. Legacy X-Auth-Key global key auth also exists but is discouraged.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Free plan ($0); API access included",
+    "source_url": "https://www.cloudflare.com/plans/free/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_TOKEN>",
+    "source_url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.cloudflare.com/client/v4",
+   "rate_limits": {
+    "summary": "1,200 requests per 5 minutes per user/account token; 200 req/s per IP; GraphQL max 320/5 min by query cost; exceeding blocks calls for 5 min (429)",
+    "source_url": "https://developers.cloudflare.com/fundamentals/api/reference/limits/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -184,19 +274,62 @@
    "auth_hint": "Authorization: Bearer <FLY_API_TOKEN>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.fly.io/sprites/integrations/remote-mcp",
-    "domain_verified": false,
+    "url": "https://docs.fly.io/model-context-protocol/flyctl-server",
+    "maintainer": "vendor",
+    "tools": [
+     "apps",
+     "certs",
+     "logs",
+     "machine",
+     "orgs",
+     "platform",
+     "secrets",
+     "status",
+     "volumes"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.fly.io/mcp/flyctl-server/",
+    "checked_at": "2026-09-24",
+    "domain_verified": null,
     "kind": "official"
    },
-   "free_tier": "no perpetual free tier; pay-as-you-go billing with trial credit for new accounts",
+   "free_tier": "Trial: 2 machine-hours or 7 days, whichever comes first, no card needed to start (adding a card ends the trial); then pay-as-you-go, no perpetual free tier",
    "sdk": [
     "go"
    ],
    "openapi": "https://docs.fly.io/machines-api/openapi.json",
    "llms_txt": null,
    "desc_en": "An agent can create, start, stop, and destroy Fly.io Machines (lightweight VMs) programmatically via REST.",
-   "notes": "The official MCP server ships under Fly.io's Sprites product, adjacent to but distinct from the core Machines API.",
+   "notes": "The official MCP server for Machines is the local flyctl server ('fly mcp server'); the hosted Sprites MCP controls Sprites, not Machines.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "2 hours of machine runtime or 7 days, whichever comes first (up to 10 machines, 20GB volumes)",
+    "period": "one_time",
+    "source_url": "https://docs.fly.io/about/free-trial/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <fly_api_token>",
+    "source_url": "https://docs.fly.io/machines/api/working-with-machines-api/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.machines.dev/v1",
+   "rate_limits": {
+    "summary": "1 req/s per action (e.g. create, start) with burst to 3 req/s; Get Machine 5 req/s, burst 10",
+    "source_url": "https://docs.fly.io/machines/api/working-with-machines-api/",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "machine state changes are asynchronous; block with GET /v1/apps/{app}/machines/{id}/wait?state=started (default timeout 60s)",
+    "source_url": "https://docs.fly.io/machines/api/machines-resource/"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -217,8 +350,14 @@
    "auth_hint": "Authorization: Bearer <OAuth2 access token> (service account or Application Default Credentials); API keys for select public APIs",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/googleapis/genai-toolbox",
-    "domain_verified": null,
+    "url": "https://docs.cloud.google.com/mcp/supported-products",
+    "maintainer": "vendor",
+    "remote_url": "https://compute.googleapis.com/mcp",
+    "repo": "https://github.com/googleapis/genai-toolbox",
+    "covers_full_api": false,
+    "source_url": "https://docs.cloud.google.com/mcp/supported-products",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
     "kind": "official"
    },
    "free_tier": "free trial credit for new customers plus an Always Free tier with perpetual no-cost limits on select products",
@@ -236,8 +375,25 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "An agent can create and manage Google Cloud resources (compute, storage, data, AI/ML) via REST, gRPC, or client libraries.",
-   "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own scopes/quotas; many APIs require explicit per-project enabling. MCP Toolbox for Databases is Google's main official MCP offering (Cloud SQL, AlloyDB, BigQuery, Spanner).",
+   "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own scopes/quotas; many APIs require explicit per-project enabling. Google runs official remote MCP servers per product (e.g. compute.googleapis.com/mcp, run.googleapis.com/mcp, bigquery.googleapis.com/mcp).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": true,
+    "quota": "Free Tier: monthly always-free limits on 20+ products; plus $300 Welcome credit over 90 days for new customers",
+    "period": "month",
+    "source_url": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "cloud_iam",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <OAuth2 access token>",
+    "source_url": "https://docs.cloud.google.com/docs/authentication/rest",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -270,10 +426,16 @@
    "mcp": {
     "type": "official",
     "url": "https://netlify-mcp.netlify.app/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://netlify-mcp.netlify.app/mcp",
+    "repo": "https://github.com/netlify/netlify-mcp",
+    "covers_full_api": false,
+    "source_url": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
-   "free_tier": "free Starter plan; API usage subject to account plan limits",
+   "free_tier": "Free: $0 forever plan with 300 credits per month (hard limit, no rollover); API usage subject to account plan limits",
    "sdk": [
     "go",
     "javascript"
@@ -283,6 +445,27 @@
    "desc_en": "An agent can create/manage sites, trigger and monitor deploys, and configure DNS, domains, and env vars.",
    "notes": "Rate limits: 500 req/min general, 3 deploys/min (100/day). Tokens are invalidated on password reset.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Free plan, $0 forever, 300 credit limit",
+    "source_url": "https://www.netlify.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN>",
+    "source_url": "https://docs.netlify.com/api/get-started/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.netlify.com/api/v1",
+   "rate_limits": {
+    "summary": "500 requests/min general; deploys 3/min and 100/day; X-RateLimit-* headers",
+    "source_url": "https://docs.netlify.com/api/get-started/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -321,6 +504,39 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.render.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.render.com/mcp",
+    "repo": "https://github.com/render-oss/render-mcp-server",
+    "tools": [
+     "list_workspaces",
+     "select_workspace",
+     "get_selected_workspace",
+     "list_services",
+     "get_service",
+     "create_web_service",
+     "create_static_site",
+     "create_cron_job",
+     "update_environment_variables",
+     "update_web_service",
+     "update_static_site",
+     "update_cron_job",
+     "list_deploys",
+     "get_deploy",
+     "trigger_deploy",
+     "list_logs",
+     "list_log_label_values",
+     "get_metrics",
+     "query_render_postgres",
+     "list_postgres_instances",
+     "get_postgres",
+     "create_postgres",
+     "list_key_value",
+     "get_key_value",
+     "create_key_value"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/render-oss/render-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -331,6 +547,23 @@
    "desc_en": "An agent can create and manage Render services, trigger deployments, and configure databases and env vars.",
    "notes": "OpenAPI spec endpoint/tag names may change over time even though the API itself stays backward compatible. Render's official MCP server supports potentially destructive operations (env var changes, triggering deploys).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "750 free instance hours per workspace per month; free web services spin down after 15 min idle; free Postgres expires 30 days after creation",
+    "period": "month",
+    "source_url": "https://render.com/docs/free",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY>",
+    "source_url": "https://api-docs.render.com/reference/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.render.com/v1",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -353,6 +586,14 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp-on-edge.edgeone.app/mcp-server",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp-on-edge.edgeone.app/mcp-server",
+    "tools": [
+     "deploy_html",
+     "deploy_folder"
+    ],
+    "source_url": "https://pages.edgeone.ai/document/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
@@ -363,6 +604,18 @@
    "desc_en": "Lets an agent deploy HTML pages, static sites and full-stack apps with edge functions to EdgeOne and get back a public URL.",
    "notes": "Renamed EdgeOne Makers. No public REST API: use the MCP server (@edgeone/makers-mcp) or EdgeOne CLI. The remote endpoint's no-login tool deploys a single HTML page; projects need the token.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "source_url": "https://pages.edgeone.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "name": "EDGEONE_PAGES_API_TOKEN",
+    "format": "API token from the Makers console passed to the MCP server/CLI as an environment variable",
+    "source_url": "https://pages.edgeone.ai/document/mcp",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -378,6 +631,33 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.vercel.com",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.vercel.com",
+    "tools": [
+     "search_vercel_documentation",
+     "list_teams",
+     "list_projects",
+     "get_project",
+     "list_deployments",
+     "get_deployment",
+     "get_deployment_build_logs",
+     "get_runtime_logs",
+     "get_runtime_errors",
+     "deploy_to_vercel",
+     "get_web_analytics",
+     "list_agent_runs",
+     "get_agent_run",
+     "check_domain_availability_and_price",
+     "get_purchase_quote",
+     "buy_domain",
+     "get_access_to_vercel_url",
+     "web_fetch_vercel_url",
+     "list_toolbar_threads",
+     "use_vercel_cli"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp/tools",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -390,6 +670,28 @@
    "desc_en": "An agent can create deployments, manage projects/domains/env vars, and query analytics and logs.",
    "notes": "Vercel MCP (Beta) is remote/OAuth-based; write actions like deployments or purchases require explicit OAuth consent.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Hobby plan $0/mo with capped monthly allotment per billable resource; 100 deployments/day",
+    "period": "month",
+    "source_url": "https://vercel.com/docs/limits",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <VERCEL_TOKEN>",
+    "source_url": "https://vercel.com/kb/guide/how-do-i-use-a-vercel-api-access-token",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.vercel.com",
+   "rate_limits": {
+    "summary": "Per-endpoint limits, e.g. deployments list 1,000/min, env var reads 500/min, Hobby deployments 100/day and 100/hour; 429 on excess",
+    "source_url": "https://vercel.com/docs/limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

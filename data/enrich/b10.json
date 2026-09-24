@@ -1,0 +1,1390 @@
+{
+  "brave-search-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": true,
+      "quota": "$5 in credits (~1,000 Search requests at $5/1,000)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://brave.com/search/api/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-Subscription-Token",
+      "scheme": null,
+      "format": "X-Subscription-Token: <API_KEY>",
+      "source_url": "https://api-dashboard.search.brave.com/app/documentation/web-search/get-started",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.search.brave.com/res/v1",
+    "rate_limits": {
+      "summary": "Search plan 50 queries/sec; Answers plan 2 queries/sec",
+      "source_url": "https://brave.com/search/api/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous GET requests return results directly",
+      "source_url": "https://api-dashboard.search.brave.com/app/documentation/web-search/get-started"
+    },
+    "data_policy": {
+      "summary": "Zero Data Retention offered only on the Enterprise plan; storage rights require special plans",
+      "source_url": "https://brave.com/search/api/",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/brave/brave-search-mcp-server",
+      "tools": [
+        "brave_web_search",
+        "brave_local_search",
+        "brave_video_search",
+        "brave_image_search",
+        "brave_news_search",
+        "brave_summarizer",
+        "brave_place_search",
+        "brave_llm_context"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/brave/brave-search-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "exa": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "$10 in credits (~1,400 searches), balance resets to $10 on the 1st of each month",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://exa.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "scheme": null,
+      "format": "x-api-key: <EXA_API_KEY> (or Authorization: Bearer <EXA_API_KEY>)",
+      "source_url": "https://exa.ai/docs/reference/search",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.exa.ai",
+    "rate_limits": {
+      "summary": "/search, /answer 10 QPS; deep search 5 QPS; /contents 100 QPS; /websets 20 QPS; agent runs 5 QPS and 50 active runs",
+      "source_url": "https://exa.ai/docs/reference/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Zero Data Retention available as an Enterprise (custom plan) feature",
+      "source_url": "https://exa.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.exa.ai/mcp",
+      "repo": "https://github.com/exa-labs/exa-mcp-server",
+      "tools": [
+        "web_search_exa",
+        "web_fetch_exa",
+        "web_search_advanced_exa",
+        "agent_run"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://exa.ai/docs/reference/exa-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "docs: https://docs.exa.ai/... now redirects (307) to https://exa.ai/docs/..."
+    ]
+  },
+  "jina-ai-search-reader": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "10M free tokens per new API key; Reader also usable without key at 20 RPM",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://jina.ai/reader/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <JINA_API_KEY>",
+      "source_url": "https://github.com/jina-ai/MCP",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://r.jina.ai",
+    "rate_limits": {
+      "summary": "No key: Reader 20 RPM, Search blocked; free/paid key: Reader 500 RPM, Search 100 RPM; premium: 5,000/1,000 RPM",
+      "source_url": "https://jina.ai/reader/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "API requests, inputs and outputs never used for training; Reader caches content 5 minutes (X-No-Cache to bypass)",
+      "source_url": "https://jina.ai/reader/",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.jina.ai/v1",
+      "repo": "https://github.com/jina-ai/MCP",
+      "tools": [
+        "primer",
+        "read_url",
+        "capture_screenshot_url",
+        "guess_datetime_url",
+        "search_web",
+        "search_arxiv",
+        "search_ssrn",
+        "search_images",
+        "search_jina_blog",
+        "sort_by_relevance",
+        "deduplicate_strings",
+        "extract_pdf"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/jina-ai/MCP",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official Jina AI remote MCP server exists at https://mcp.jina.ai/v1 (repo github.com/jina-ai/MCP); entry says none",
+      "free_tier: without key Reader is 20 RPM and Search (s.jina.ai) is blocked; free key gives Reader 500 RPM / Search 100 RPM plus 10M free tokens"
+    ]
+  },
+  "kagi-search-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://kagi.com/api/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY>",
+      "source_url": "https://kagi.com/api/docs",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://kagi.com/api/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.kagi.com/mcp",
+      "repo": "https://github.com/kagisearch/kagimcp",
+      "tools": [
+        "kagi_search_fetch",
+        "kagi_extract"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/kagisearch/kagimcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: current v1 Search API docs use Authorization: Bearer <api-key>, not 'Bot <token>' (legacy v0 format)"
+    ]
+  },
+  "linkup": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "$20 credits, topped back up to $20 each month (professional-email signups)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://docs.linkup.so/pages/documentation/development/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <LINKUP_API_KEY>",
+      "source_url": "https://docs.linkup.so/pages/documentation/endpoints/search/reference",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.linkup.so/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "research tasks are started then polled for status/results (MCP tools linkup-research + linkup-get-research)",
+      "source_url": "https://docs.linkup.so/pages/integrations/mcp/mcp"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.linkup.so/mcp",
+      "repo": null,
+      "tools": [
+        "linkup-search",
+        "linkup-research",
+        "linkup-get-research",
+        "linkup-fetch"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://docs.linkup.so/pages/integrations/mcp/mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "mojeek-search-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "limited free trial on request (contact Mojeek)",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://www.mojeek.com/services/search/web-search-api/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "api_key",
+      "scheme": null,
+      "format": "GET https://api.mojeek.com/search?q=...&api_key=<API_KEY>&fmt=json",
+      "source_url": "https://www.mojeek.com/support/api/search/quickstart.html",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.mojeek.com",
+    "rate_limits": {
+      "summary": "Startup: 5 queries/sec, 100,000/day; Business: 10 queries/sec, 400,000/day; Enterprise unlimited",
+      "source_url": "https://www.mojeek.com/services/search/web-search-api/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous GET returns JSON/XML results",
+      "source_url": "https://www.mojeek.com/support/api/search/quickstart.html"
+    },
+    "data_policy": {
+      "summary": "All plans include storage rights and AI usage permissions; results may be re-ranked and combined with other engines",
+      "source_url": "https://www.mojeek.com/services/search/web-search-api/",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: key is passed as the api_key query parameter (https://api.mojeek.com/search?q=...&api_key=KEY), documented in the public quickstart"
+    ]
+  },
+  "parallel-web-systems-search-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "up to 5,000 requests/month, plus up to $80 signup and $5/month credits",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://parallel.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "scheme": null,
+      "format": "x-api-key: <PARALLEL_API_KEY>",
+      "source_url": "https://docs.parallel.ai/search/search-quickstart",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.parallel.ai/v1",
+    "rate_limits": {
+      "summary": "Varies by API: Task 2,000/min, Search 600/min, Find All 25/hr",
+      "source_url": "https://parallel.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Zero data retention offered on Enterprise plans",
+      "source_url": "https://parallel.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://search.parallel.ai/mcp",
+      "repo": null,
+      "tools": [
+        "web_search",
+        "web_fetch"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.parallel.ai/integrations/mcp/search-mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "perplexity-sonar-search-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.perplexity.ai/getting-started/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <PERPLEXITY_API_KEY>",
+      "source_url": "https://docs.perplexity.ai/api-reference/search-post",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.perplexity.ai",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.perplexity.ai/mcp",
+      "repo": null,
+      "tools": [
+        "perplexity_search",
+        "perplexity_ask",
+        "perplexity_research",
+        "perplexity_reason"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.perplexity.ai/guides/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page also lists a faster Search variant at $1 per 1,000 requests (standard $5/1,000)"
+    ]
+  },
+  "searchapi-io": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "100 free requests on signup",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://www.searchapi.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "api_key",
+      "scheme": null,
+      "format": "?api_key=<KEY> (or Authorization: Bearer <KEY>)",
+      "source_url": "https://www.searchapi.io/docs/google",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://www.searchapi.io/api/v1",
+    "rate_limits": {
+      "summary": "Up to 20% of the plan's monthly credits can be used per hour",
+      "source_url": "https://www.searchapi.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous GET /api/v1/search returns JSON",
+      "source_url": "https://www.searchapi.io/docs/google"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://www.searchapi.io/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://www.searchapi.io/integrations/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official hosted MCP server exists at https://www.searchapi.io/mcp (OAuth or X-MCP-Token header, 80+ tools); entry says none"
+    ]
+  },
+  "searxng-self-hosted-json-api": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.searxng.org/dev/search_api.html",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "GET <instance>/search?q=<query>&format=json (no auth)",
+      "source_url": "https://docs.searxng.org/dev/search_api.html",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous GET/POST / or /search",
+      "source_url": "https://docs.searxng.org/dev/search_api.html"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/ihor-sokoliuk/mcp-searxng",
+      "tools": [
+        "searxng_web_search",
+        "searxng_search_suggestions",
+        "searxng_instance_info",
+        "web_url_read"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/ihor-sokoliuk/mcp-searxng",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "serpapi": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": true,
+      "quota": "250 searches",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://serpapi.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "api_key",
+      "scheme": null,
+      "format": "GET https://serpapi.com/search?engine=google&q=...&api_key=<API_KEY>",
+      "source_url": "https://serpapi.com/search-api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://serpapi.com",
+    "rate_limits": {
+      "summary": "Free plan: 50 searches/hour throughput; cached, errored and failed searches not counted",
+      "source_url": "https://serpapi.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "optional async=true submits search to retrieve later (via Search Archive); default is synchronous",
+      "source_url": "https://serpapi.com/search-api"
+    },
+    "data_policy": {
+      "summary": "ZeroTrace Mode (higher-tier plans): search parameters, queries and results not retained",
+      "source_url": "https://serpapi.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.serpapi.com/mcp",
+      "repo": "https://github.com/serpapi/serpapi-mcp",
+      "tools": [
+        "search",
+        "search_table",
+        "search_dashboard"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/serpapi/serpapi-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page says a credit card is required to access the free plan (250 searches/month)",
+      "mcp: hosted remote endpoint https://mcp.serpapi.com (Authorization: Bearer key, or /<API_KEY>/mcp path) in addition to the GitHub repo"
+    ]
+  },
+  "serper": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "2,500 free queries",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://serper.dev",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": null,
+      "source_url": "https://serper.dev",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/marcopesani/mcp-server-serper",
+      "tools": [
+        "google_search",
+        "scrape"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/marcopesani/mcp-server-serper",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "tavily": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "1,000 API credits",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://docs.tavily.com/documentation/api-credits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer tvly-<API_KEY>",
+      "source_url": "https://docs.tavily.com/documentation/api-reference/endpoint/search",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.tavily.com",
+    "rate_limits": {
+      "summary": "Dev keys 100 RPM, production keys 1,000 RPM; Crawl 100 RPM; Research task creation 20 RPM",
+      "source_url": "https://docs.tavily.com/documentation/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.tavily.com/mcp/",
+      "repo": "https://github.com/tavily-ai/tavily-mcp",
+      "tools": [
+        "tavily-search",
+        "tavily-extract",
+        "tavily-map",
+        "tavily-crawl"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/tavily-ai/tavily-mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "you-com-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "$100 one-time credit for new accounts; keyless MCP free profile 100 queries/day",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://you.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-Key",
+      "scheme": null,
+      "format": "X-API-Key: <YDC_API_KEY>",
+      "source_url": "https://you.com/docs/api-reference/search",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://ydc-index.io/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Zero Data Retention offered as an enterprise feature",
+      "source_url": "https://you.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.you.com/mcp",
+      "repo": "https://github.com/youdotcom-oss/mcp",
+      "tools": [
+        "you-search",
+        "you-contents",
+        "you-balance",
+        "you-discover",
+        "you-research",
+        "you-finance"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://you.com/docs/build-with-agents/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: new accounts get $100 one-time free credit; main remote MCP also has keyless ?profile=free mode (100 queries/day)"
+    ]
+  },
+  "adobe-pdf-services-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "500 Document Transactions",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://developer.adobe.com/document-services/docs/overview/limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <access_token> + X-API-Key: <client_id> (token from POST https://pdf-services.adobe.io/token)",
+      "source_url": "https://developer.adobe.com/document-services/docs/overview/pdf-services-api/gettingstarted/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://pdf-services.adobe.io",
+    "rate_limits": {
+      "summary": "Free tier 25 RPM, Enterprise 100 RPM; max file size 100MB",
+      "source_url": "https://developer.adobe.com/document-services/docs/overview/limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "job creation returns a location header; poll it until status done/failed",
+      "source_url": "https://developer.adobe.com/document-services/docs/overview/pdf-services-api/gettingstarted/"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    }
+  },
+  "aws-textract": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "per month for 3 months: DetectDocumentText 1,000 pages; AnalyzeDocument forms/tables/layout 100 pages; AnalyzeExpense/AnalyzeID 100 pages",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://aws.amazon.com/textract/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "cloud_iam",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "AWS Signature V4 signed requests (IAM credentials)",
+      "source_url": "https://docs.aws.amazon.com/general/latest/gr/textract.html",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://textract.us-east-1.amazonaws.com",
+    "rate_limits": {
+      "summary": "us-east-1 defaults: DetectDocumentText 25 TPS, AnalyzeDocument 10 TPS, AnalyzeExpense/AnalyzeID 5 TPS; up to 600 concurrent async jobs",
+      "source_url": "https://docs.aws.amazon.com/general/latest/gr/textract.html",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Start* operations (e.g. StartDocumentAnalysis) return a JobId; poll Get* operations; sync APIs also available",
+      "source_url": "https://docs.aws.amazon.com/general/latest/gr/textract.html"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/ag2-mcp-servers/amazon-textract",
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://github.com/ag2-mcp-servers/amazon-textract",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: AnalyzeDocument (forms/tables/layout/queries) free tier is 100 pages/month, not 1,000 (1,000 applies only to DetectDocumentText and signatures-only); AnalyzeExpense/AnalyzeID get 100 pages/month, not 150"
+    ]
+  },
+  "azure-ai-document-intelligence": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "500 pages (F0); only the first 2 pages of each document analyzed, 4 MB max",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://azure.microsoft.com/en-us/pricing/details/ai-document-intelligence/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Ocp-Apim-Subscription-Key",
+      "scheme": null,
+      "format": "Ocp-Apim-Subscription-Key: <key>",
+      "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/quickstarts/get-started-sdks-rest-api?pivots=programming-language-rest-api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": {
+      "summary": "F0: 1 TPS analyze, 1 TPS get; S0: 15 TPS analyze, 50 TPS get (adjustable)",
+      "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/service-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST ...:analyze returns 202 with Operation-Location header; poll GET until status succeeded/failed",
+      "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/quickstarts/get-started-sdks-rest-api?pivots=programming-language-rest-api"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: F0 analyzes only the first 2 pages per document (4 MB max) and is limited to 1 TPS"
+    ]
+  },
+  "cloudconvert-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "10 conversion credits/day, all API features included",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://cloudconvert.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY>",
+      "source_url": "https://cloudconvert.com/api/v2",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.cloudconvert.com/v2",
+    "rate_limits": {
+      "summary": "Dynamic rate limiting on task/job creation; 429 with X-RateLimit-* and Retry-After headers",
+      "source_url": "https://cloudconvert.com/api/v2",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "user.read",
+        "task.read",
+        "task.write"
+      ],
+      "source_url": "https://cloudconvert.com/docs/raw/integrations/mcp-server.md",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": {
+      "value": true,
+      "how": "jobs/tasks run asynchronously; poll job status or receive webhooks",
+      "source_url": "https://cloudconvert.com/api/v2"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.cloudconvert.com",
+      "repo": null,
+      "tools": [
+        "createJob",
+        "getOperations"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://cloudconvert.com/docs/raw/integrations/mcp-server.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page lists 10 conversion credits/day on the free plan including all API features, no card; not '25 minutes/day for the web tool only'"
+    ]
+  },
+  "docusign-esignature-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "non-expiring developer (demo) account; envelopes not legally valid; production from $50/mo Starter (40 envelopes/mo)",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://ecom.docusign.com/plans-and-pricing/developer",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <access_token> (Authorization Code or JWT Grant)",
+      "source_url": "https://developers.docusign.com/platform/auth/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": {
+      "scopes": [
+        "signature",
+        "impersonation"
+      ],
+      "source_url": "https://developers.docusign.com/platform/auth/reference/scopes/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp-d.docusign.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://www.docusign.com/blog/developers/claude-docusign-mcp-connector-guide",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp.url: points to a docs page; developer-account MCP endpoint is https://mcp-d.docusign.com/mcp (production via Claude connectors directory), OAuth"
+    ]
+  },
+  "gamma-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developers.gamma.app/get-started/access-and-pricing.md",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-KEY",
+      "scheme": null,
+      "format": "X-API-KEY: <key>",
+      "source_url": "https://developers.gamma.app/generations/create-generation",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://public-api.gamma.app/v1.0",
+    "rate_limits": {
+      "summary": "Burst, rolling and daily limits reported via x-ratelimit-remaining-burst / -remaining / -remaining-daily headers",
+      "source_url": "https://developers.gamma.app/generations/create-generation",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "generate",
+        "gamma:read"
+      ],
+      "source_url": "https://mcp.gamma.app/.well-known/oauth-protected-resource",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": {
+      "value": true,
+      "how": "POST /generations returns generationId; poll GET /generations/{id}",
+      "source_url": "https://developers.gamma.app/generations/create-generation"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.gamma.app/mcp",
+      "repo": null,
+      "tools": [
+        "generate",
+        "generate_multi_page_gamma",
+        "generate_from_template",
+        "generate_image",
+        "get_generation_status",
+        "get_image_generation_status",
+        "export_gamma",
+        "get_export_status",
+        "get_gammas",
+        "read_gamma",
+        "get_gamma_comments",
+        "get_themes",
+        "get_folders",
+        "get_gamma_analytics",
+        "get_gamma_card_analytics",
+        "get_gamma_viewer_analytics",
+        "get_gamma_viewer_detail_analytics"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://developers.gamma.app/mcp/mcp-tools-reference.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: API keys need Pro/Ultra/Teams/Business, but the Gamma MCP server/connectors are available on all plans including Free (generations consume credits)"
+    ]
+  },
+  "google-document-ai": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "first 1,000 pages free (Enterprise Document OCR only); Form Parser/custom extractor billed from page 1 ($30/1,000)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://cloud.google.com/document-ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "cloud_iam",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <Google OAuth2 access token>",
+      "source_url": "https://docs.cloud.google.com/document-ai/docs/reference/rest",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://documentai.googleapis.com",
+    "rate_limits": {
+      "summary": "Online process: 120 requests/min per project per processor type (US/EU); 5 concurrent batch requests per project",
+      "source_url": "https://docs.cloud.google.com/document-ai/quotas",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": ":process is synchronous; :batchProcess returns a long-running operation to poll",
+      "source_url": "https://docs.cloud.google.com/document-ai/docs/reference/rest"
+    },
+    "data_policy": {
+      "summary": "Content not used except to provide the service; online requests not persisted; batch data deleted after processing (1-day TTL failsafe)",
+      "source_url": "https://docs.cloud.google.com/document-ai/docs/data-usage",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page shows only Enterprise Document OCR with first 1,000 pages free; Form Parser/custom extractor are $30/1,000 pages with no free band (not '1,000 pages/month per processor type, then $0.65-$10')"
+    ]
+  },
+  "google-slides-docs-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "no charge; subject to per-minute request quotas",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developers.google.com/workspace/slides/api/limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <OAuth2 access token>",
+      "source_url": "https://developers.google.com/workspace/slides/api/guides/configure-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://slides.googleapis.com",
+    "rate_limits": {
+      "summary": "Reads 3,000/min per project, 600/min per user; writes 600/min per project, 60/min per user",
+      "source_url": "https://developers.google.com/workspace/slides/api/limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "https://www.googleapis.com/auth/presentations",
+        "https://www.googleapis.com/auth/presentations.readonly",
+        "https://www.googleapis.com/auth/drive.file",
+        "https://www.googleapis.com/auth/drive.readonly"
+      ],
+      "source_url": "https://developers.google.com/workspace/slides/api/guides/configure-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous REST calls (presentations.get / batchUpdate)",
+      "source_url": "https://developers.google.com/workspace/slides/api/reference/rest"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://slidesmcp.googleapis.com/mcp/v1",
+      "repo": null,
+      "tools": [
+        "read_presentation",
+        "update_presentation"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.google.com/workspace/slides/api/guides/configure-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp.url: endpoint is https://slidesmcp.googleapis.com/mcp/v1 (Workspace Developer Preview Program), not /mcp"
+    ]
+  },
+  "llamaparse-llamacloud": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "10K credits (1,000 credits = $1.25)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.llamaindex.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <LLAMA_CLOUD_API_KEY>",
+      "source_url": "https://developers.llamaindex.ai/llamaparse/for-agents/mcp/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": {
+      "summary": "Free plan: 5 concurrent parse jobs, 5 concurrent extract jobs, 1 concurrent sheets job; paid tiers 20-100",
+      "source_url": "https://www.llamaindex.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "REST API processes documents asynchronously as jobs",
+      "source_url": "https://developers.llamaindex.ai/llamaparse/"
+    },
+    "data_policy": {
+      "summary": "Parse cache retained 48 hours then permanently deleted; caching can be disabled",
+      "source_url": "https://www.llamaindex.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.llamaindex.ai/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://developers.llamaindex.ai/llamaparse/for-agents/mcp/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page lists a Free plan with 10K credits/month (1,000 credits = $1.25)"
+    ]
+  },
+  "mistral-ocr-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "$10 in API credits (Free plan)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://mistral.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <MISTRAL_API_KEY>",
+      "source_url": "https://docs.mistral.ai/api/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.mistral.ai",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous OCR call; Batch Inference available for high volume",
+      "source_url": "https://docs.mistral.ai/capabilities/OCR/basic_ocr/"
+    },
+    "data_policy": {
+      "summary": "Model-training opt-out available on all plans including Free",
+      "source_url": "https://mistral.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/D-Diaa/mistral-ocr-mcp",
+      "tools": [
+        "ocr_local_file"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/D-Diaa/mistral-ocr-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: Mistral pricing page now lists a Free plan with $10/month in API credits; entry says paid only"
+    ]
+  },
+  "pdf-co-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": null,
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://pdf.co/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "scheme": null,
+      "format": "x-api-key: <API_KEY>",
+      "source_url": "https://developer.pdf.co/api/index.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.pdf.co/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "set async=true to get a jobId; poll POST /v1/job/check until success/failed",
+      "source_url": "https://developer.pdf.co/api/job-check.md"
+    },
+    "data_policy": {
+      "summary": "Temporary files stored 1 hour by default, then auto-removed",
+      "source_url": "https://developer.pdf.co/llms.txt",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/pdfdotco/pdfco-mcp",
+      "tools": [
+        "pdf_to_json",
+        "pdf_to_csv",
+        "pdf_to_text",
+        "pdf_to_xls",
+        "pdf_to_xlsx",
+        "pdf_to_xml",
+        "pdf_to_html",
+        "pdf_to_image",
+        "document_to_pdf",
+        "csv_to_pdf",
+        "image_to_pdf",
+        "webpage_to_pdf",
+        "html_to_pdf",
+        "email_to_pdf",
+        "excel_to_csv",
+        "excel_to_json",
+        "excel_to_html",
+        "excel_to_txt",
+        "excel_to_xml",
+        "excel_to_pdf",
+        "pdf_merge",
+        "pdf_split",
+        "pdf_add_annotations_images_fields",
+        "read_pdf_forms_info",
+        "fill_pdf_forms",
+        "create_fillable_forms",
+        "find_text",
+        "find_table",
+        "ai_invoice_parser",
+        "extract_attachments",
+        "pdf_info_reader",
+        "pdf_add_password",
+        "pdf_remove_password",
+        "pdf_make_searchable",
+        "pdf_make_unsearchable",
+        "upload_file",
+        "get_job_check",
+        "wait_job_completion"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/pdfdotco/pdfco-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official PDF.co MCP server exists (github.com/pdfdotco/pdfco-mcp, uvx pdfco-mcp); entry says none"
+    ]
+  },
+  "reducto-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": true,
+      "quota": "15,000 free credits (~$150) for Standard accounts",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://reducto.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <REDUCTO_API_KEY>",
+      "source_url": "https://docs.reducto.ai/get-started/quickstart",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://platform.reducto.ai",
+    "rate_limits": {
+      "summary": "Concurrent pages: Standard 200, Growth 350, Enterprise 500+",
+      "source_url": "https://reducto.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "async parse with job polling or webhooks (sync /parse also available)",
+      "source_url": "https://docs.reducto.ai/get-started/quickstart"
+    },
+    "data_policy": {
+      "summary": "Zero Data Retention agreement available on Growth and Enterprise tiers",
+      "source_url": "https://reducto.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": null,
+      "tools": [
+        "parse_document",
+        "extract_data",
+        "split_document",
+        "classify_document",
+        "edit_document",
+        "upload_file"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://docs.reducto.ai/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page says a credit card is required to access the free credits"
+    ]
+  },
+  "slidespeak-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": null,
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://slidespeak.co/slidespeak-api/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-Key",
+      "scheme": null,
+      "format": "X-API-Key: <key>",
+      "source_url": "https://docs.slidespeak.co/v1/quickstart",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.slidespeak.co/api/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /presentation/generate returns task_id; poll GET /task_status/{task_id}, then /presentation/download/{request_id}",
+      "source_url": "https://docs.slidespeak.co/v1/quickstart"
+    },
+    "data_policy": {
+      "summary": "API plans state no model training on your data",
+      "source_url": "https://slidespeak.co/slidespeak-api/",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.slidespeak.co/mcp",
+      "repo": "https://github.com/SlideSpeak/slidespeak-mcp",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://github.com/SlideSpeak/slidespeak-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: API page offers a free trial with no credit card required; API plans from $49/month (1,000 credits)"
+    ]
+  },
+  "unstructured-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "10,000 free pages at account start, then $0.015/page",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://unstructured.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "unstructured-api-key",
+      "scheme": null,
+      "format": "unstructured-api-key: <UNSTRUCTURED_API_KEY>",
+      "source_url": "https://docs.unstructured.io/transform/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Prefer: wait=0 returns 202 with Location URL; poll job until completed/failed",
+      "source_url": "https://docs.unstructured.io/transform/jobs"
+    },
+    "data_policy": {
+      "summary": "Zero Data Retention: processed data not stored permanently",
+      "source_url": "https://unstructured.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.transform.unstructured.io",
+      "repo": "https://github.com/Unstructured-IO/UNS-MCP",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.unstructured.io/transform/get-started/claude-code",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page gives 10,000 free pages to start, no card; then $0.015/page",
+      "mcp: UNS-MCP repo is marked not actively maintained; vendor recommends the hosted Transform MCP at https://mcp.transform.unstructured.io (OAuth)"
+    ]
+  }
+}

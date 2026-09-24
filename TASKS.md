@@ -70,7 +70,7 @@ Propozycja startu: GitHub + npm/PyPI + Smithery/Glama (legalne API, mierzą uży
 - [ ] `mcp.tools` — lista narzędzi serwera MCP i czy pokrywa całe REST API
 
 ## P4 — format i bezpieczeństwo
-- [x] Pliki kategorii < 30 KB (kontrola w build)
+- [x] Pliki kategorii < 60 KB, ok. 15 tys. tokenów (kontrola w build; limit podniesiony z 30 KB po dodaniu źródeł per pole)
 - [x] Sumy kontrolne `SHA256SUMS` (w katalogu głównym i `docs/`, generowane przez build, link w `llms.txt`)
 - [x] Podpisane wydania: `.github/workflows/release.yml` przy tagu `v*` publikuje wydanie (katalog, llms, ZIP skilla, paczka npm, sumy) z podpisem Sigstore (SLSA provenance); weryfikacja: `gh attestation verify <plik> --repo eater2/ai_agents_api_library`. Pierwsze: v0.2.3. ZIP skilla jest bajtowo identyczny na każdym systemie (bez kompresji, stałe pola nagłówka)
 - [x] Przegląd `auth_hint` pod kątem trybu rozkazującego: żaden nie wydaje poleceń; tryb rozkazujący tylko w nieszkodliwych `notes`

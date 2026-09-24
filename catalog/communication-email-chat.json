@@ -14,11 +14,17 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.agentmail.to",
-    "domain_verified": null,
-    "kind": "official"
+    "url": "https://mcp.agentmail.to/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.agentmail.to/mcp",
+    "repo": "https://github.com/agentmail-to/agentmail-mcp",
+    "covers_full_api": true,
+    "source_url": "https://docs.agentmail.to/integrations/mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
-   "free_tier": "free: 3 inboxes, 3,000 emails/mo, 3GB storage, no card required",
+   "free_tier": "Free: 3 inboxes, 3,000 emails/month (max 100/day), 3GB storage, no card required",
    "sdk": [
     "python",
     "typescript"
@@ -28,6 +34,27 @@
    "desc_en": "Programmatically create inboxes and send/receive email autonomously, purpose-built for AI agents.",
    "notes": "Newer, smaller vendor than legacy ESPs; markets itself specifically as agent-native email infra with a built-in MCP server.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "3 inboxes, 3,000 emails/month (max 100/day), 3 GB storage",
+    "period": "month",
+    "source_url": "https://www.agentmail.to/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY>",
+    "source_url": "https://docs.agentmail.to/api-reference/inboxes/list.md",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.agentmail.to/v0",
+   "rate_limits": {
+    "summary": "Per-organization API limits (unpublished); 429 with Retry-After on excess. Free plan capped at 100 emails/day",
+    "source_url": "https://docs.agentmail.to/knowledge-base/rate-limits.md",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -43,11 +70,28 @@
    "name": "Discord API",
    "homepage": "https://discord.com/developers/docs",
    "docs": "https://docs.discord.com/developers/intro",
-   "auth": "oauth2",
-   "auth_hint": "Authorization: Bot <token>",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bot <token> (OAuth2 Bearer only for user-authorized access and adding the bot to servers)",
    "mcp": {
     "type": "community",
     "url": "https://github.com/SaseQ/discord-mcp",
+    "maintainer": "community",
+    "repo": "https://github.com/SaseQ/discord-mcp",
+    "tools": [
+     "get_server_info",
+     "send_message",
+     "read_messages",
+     "edit_message",
+     "delete_message",
+     "send_private_message",
+     "add_reaction",
+     "create_text_channel",
+     "list_channels",
+     "find_channel"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/SaseQ/discord-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -62,6 +106,34 @@
    "desc_en": "Send messages, manage channels/roles, and build interactive bots via REST and Gateway API.",
    "notes": "Per-route rate limits; bots in 100+ servers require Discord verification/approval.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "source_url": "https://docs.discord.com/developers/reference",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Bot <BOT_TOKEN>",
+    "source_url": "https://docs.discord.com/developers/reference",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://discord.com/api/v10",
+   "rate_limits": {
+    "summary": "Global 50 requests/s per bot plus per-route limits; 10,000 invalid requests per 10 min triggers IP ban",
+    "source_url": "https://docs.discord.com/developers/topics/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "bot",
+     "applications.commands"
+    ],
+    "source_url": "https://docs.discord.com/developers/topics/oauth2",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -101,6 +173,26 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/line/line-bot-mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/line/line-bot-mcp-server",
+    "tools": [
+     "push_text_message",
+     "push_flex_message",
+     "broadcast_text_message",
+     "broadcast_flex_message",
+     "get_profile",
+     "get_message_quota",
+     "get_rich_menu_list",
+     "create_rich_menu",
+     "delete_rich_menu",
+     "set_rich_menu_default",
+     "cancel_rich_menu_default",
+     "get_follower_ids",
+     "get_group_summary"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/line/line-bot-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -118,6 +210,22 @@
    "desc_en": "Lets an agent send and reply to messages, rich messages and broadcasts to users of a LINE Official Account and read user profiles.",
    "notes": "Requires a LINE Official Account and a Messaging API channel. MCP server is local (stdio, npx @line/line-bot-mcp-server) with channel token and user ID env vars.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "200 messages (Communication plan, Japan)",
+    "period": "month",
+    "source_url": "https://www.lycbiz.com/jp/service/line-official-account/plan/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <CHANNEL_ACCESS_TOKEN>",
+    "source_url": "https://developers.line.biz/en/reference/messaging-api/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.line.me",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -131,10 +239,15 @@
    "auth": "api_key",
    "auth_hint": "Basic auth: api:<API_KEY>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/mailgun/mailgun-mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/mailgun/mailgun-mcp-server",
+    "covers_full_api": false,
+    "source_url": "https://documentation.mailgun.com/docs/mailgun/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "free: 100 emails/day; 30-day free trial on paid tiers",
    "sdk": [
@@ -149,8 +262,28 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Send and validate transactional email via REST API and SMTP relay with webhooks.",
-   "notes": "Free plan limited to 1 sending domain and 1-day log retention.",
+   "notes": "Free plan limited to 1 sending domain and 1-day log retention. Official MCP server is local only (npx @mailgun/mcp-server, stdio).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "100 emails/day, 1 custom sending domain, 1-day log retention",
+    "period": "day",
+    "source_url": "https://www.mailgun.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(api:<API_KEY>)",
+    "source_url": "https://documentation.mailgun.com/docs/mailgun/api-reference/mg-auth",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.mailgun.net",
+   "rate_limits": {
+    "summary": "Per-API time windows; X-RateLimit-* headers and 429 when exceeded. EU region host: api.eu.mailgun.net",
+    "source_url": "https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -180,6 +313,15 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/gitmotion/ntfy-me-mcp",
+    "maintainer": "community",
+    "repo": "https://github.com/gitmotion/ntfy-me-mcp",
+    "tools": [
+     "ntfy_me",
+     "ntfy_me_fetch"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/gitmotion/ntfy-me-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -190,6 +332,25 @@
    "desc_en": "Lets an agent send push notifications to a user's phone or desktop by publishing a plain HTTP POST to an ntfy topic, and read messages back from it.",
    "notes": "Public topic names act as passwords; anyone who knows the name can read or post, so use a hard-to-guess name or a reserved topic. Attachments up to 15 MB. Server is open source and self-hostable with the same API.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "quota": "Burst of 60 requests, then 1 request every 5 s per visitor",
+    "source_url": "https://docs.ntfy.sh/config/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "No auth for public topics; optional Authorization: Bearer tk_<TOKEN> for protected topics",
+    "source_url": "https://docs.ntfy.sh/publish/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://ntfy.sh",
+   "rate_limits": {
+    "summary": "Defaults: burst 60 requests, replenish 1 request/5 s; attachments 100 MB total, 500 MB/day bandwidth per visitor",
+    "source_url": "https://docs.ntfy.sh/config/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -203,10 +364,41 @@
    "auth": "api_key",
    "auth_hint": "X-Postmark-Server-Token: <token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/ActiveCampaign/postmark-mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/ActiveCampaign/postmark-mcp",
+    "tools": [
+     "sendEmail",
+     "sendEmailWithTemplate",
+     "sendBatch",
+     "sendBatchWithTemplate",
+     "listTemplates",
+     "getTemplate",
+     "createTemplate",
+     "editTemplate",
+     "deleteTemplate",
+     "validateTemplate",
+     "searchOutboundMessages",
+     "getMessageDetails",
+     "diagnoseDelivery",
+     "searchBounces",
+     "getBounceDump",
+     "activateBounce",
+     "listSuppressions",
+     "createSuppressions",
+     "deleteSuppressions",
+     "getDeliveryStats",
+     "getServerInfo",
+     "listWebhooks",
+     "createWebhook",
+     "deleteWebhook"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/activecampaign/postmark-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "free: 100 emails/month (Developer plan, no expiry)",
    "sdk": [
@@ -221,8 +413,30 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Send transactional email via REST API with delivery tracking, bounce handling, and templates.",
-   "notes": "Strictly transactional-email focused; enforces anti-bulk/anti-spam policy which can suspend accounts sending bulk/marketing mail.",
+   "notes": "Strictly transactional-email focused; enforces anti-bulk/anti-spam policy which can suspend accounts sending bulk/marketing mail. Official MCP server is local (npx @activecampaign/postmark-mcp).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "100 emails/month (Developer plan, no expiry)",
+    "period": "month",
+    "source_url": "https://postmarkapp.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-Postmark-Server-Token",
+    "format": "X-Postmark-Server-Token: <SERVER_TOKEN>",
+    "source_url": "https://postmarkapp.com/developer/api/overview",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.postmarkapp.com",
+   "rate_limits": {
+    "summary": "Unpublished acceptable-use limit; HTTP 429 when exceeded",
+    "source_url": "https://postmarkapp.com/developer/api/overview",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -242,6 +456,12 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.resend.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.resend.com/mcp",
+    "repo": "https://github.com/resend/resend-mcp",
+    "covers_full_api": true,
+    "source_url": "https://resend.com/docs/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -259,6 +479,26 @@
    "desc_en": "Send transactional and marketing email via REST API with templates, domains, and webhooks.",
    "notes": "Official remote MCP server at mcp.resend.com/mcp; sandbox domain available for testing before custom domain verification.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "3,000 emails/month (max 100/day), 3 domains",
+    "period": "month",
+    "source_url": "https://resend.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer re_<API_KEY>",
+    "source_url": "https://resend.com/docs/api-reference/introduction",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.resend.com",
+   "rate_limits": {
+    "summary": "10 requests/s per team across all API keys",
+    "source_url": "https://resend.com/docs/api-reference/introduction",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -289,10 +529,27 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/Garoth/sendgrid-mcp",
+    "tools": [
+     "send_email",
+     "send_to_list",
+     "list_contacts",
+     "add_contact",
+     "list_contact_lists",
+     "create_template",
+     "list_templates",
+     "get_stats",
+     "validate_email",
+     "list_verified_senders"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/Garoth/sendgrid-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "community"
    },
-   "free_tier": "check pricing (trial-based; no confirmed permanent free plan)",
+   "free_tier": "Trial: 100 emails/day for 60 days, no card required; paid plan after",
    "sdk": [
     "python",
     "node",
@@ -307,6 +564,27 @@
    "desc_en": "Send transactional and marketing email via REST/SMTP API with templates and analytics.",
    "notes": "Now a Twilio product; sender identity/domain authentication required before sending.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "100 emails/day for 60 days",
+    "period": "day",
+    "source_url": "https://www.twilio.com/en-us/products/email-api/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <SENDGRID_API_KEY>",
+    "source_url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.sendgrid.com/v3",
+   "rate_limits": {
+    "summary": "Per-endpoint limits reported in X-RateLimit-* headers; HTTP 429 when exceeded",
+    "source_url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/rate-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -336,6 +614,11 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.slack.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.slack.com/mcp",
+    "covers_full_api": false,
+    "source_url": "https://docs.slack.dev/ai/slack-mcp-server/",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -350,6 +633,35 @@
    "desc_en": "Post messages, manage channels, and read conversation history in Slack via the Web API.",
    "notes": "Requires creating a Slack app with OAuth scopes; per-method rate-limit tiers apply. The official remote MCP (OAuth 2.0) works only for directory-published or internal Slack apps, and in partner clients such as Claude.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "source_url": "https://docs.slack.dev/apis/web-api/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "oauth2",
+    "format": "Authorization: Bearer xoxb-<BOT_TOKEN>",
+    "source_url": "https://docs.slack.dev/reference/methods/chat.postMessage",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://slack.com/api",
+   "rate_limits": {
+    "summary": "Per-method tiers: T1 1+/min, T2 20+/min, T3 50+/min, T4 100+/min; chat.postMessage ~1 msg/s per channel; non-Marketplace apps: conversations.history 1/min",
+    "source_url": "https://docs.slack.dev/apis/web-api/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "chat:write",
+     "channels:read",
+     "channels:history",
+     "groups:history",
+     "im:history"
+    ],
+    "source_url": "https://docs.slack.dev/reference/methods/conversations.history",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -381,7 +693,7 @@
    "name": "Stream (GetStream) Chat & Video API",
    "homepage": "https://getstream.io",
    "docs": "https://getstream.io/chat/docs/",
-   "auth": "api_key+oauth2",
+   "auth": "api_key",
    "auth_hint": "API key + server-side secret used to mint short-lived user JWT tokens",
    "mcp": {
     "type": "none",
@@ -389,7 +701,7 @@
     "domain_verified": null,
     "kind": "none"
    },
-   "free_tier": "free tier available (limited monthly active users), then usage-based pricing",
+   "free_tier": "Free tier: Build plan with 1,000 MAU/month and 100 concurrent connections, no card; Maker account gives $100/month credit for teams under 5 people and under $10k monthly revenue",
    "sdk": [
     "node",
     "python",
@@ -402,6 +714,27 @@
    "desc_en": "Build and moderate in-app chat and video with REST/SDK APIs, channels, and real-time messaging.",
    "notes": "Client access requires server-minted short-lived user tokens; not a pure send-and-forget messaging API like email/SMS providers.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "Build plan: 1,000 MAU, 100 concurrent connections",
+    "period": "month",
+    "source_url": "https://getstream.io/chat/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "?api_key=<API_KEY> + Authorization: <JWT signed with API secret> + Stream-Auth-Type: jwt",
+    "source_url": "https://getstream.io/chat/docs/node/tokens_and_authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "rate_limits": {
+    "summary": "Per-endpoint per-minute limits (60 to 10,000/min, e.g. Send Message 1,000/min) plus 60 requests/min per user",
+    "source_url": "https://getstream.io/chat/docs/node/rate_limits/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -421,6 +754,19 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/chigwell/telegram-mcp",
+    "maintainer": "community",
+    "repo": "https://github.com/chigwell/telegram-mcp",
+    "tools": [
+     "send_message",
+     "reply_to_message",
+     "edit_message",
+     "list_chats",
+     "send_file",
+     "download_media"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/chigwell/telegram-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -433,8 +779,26 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Send/receive messages, media, and inline interactions via a simple HTTPS bot API.",
-   "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits.",
+   "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits. Listed MCP server uses a user account via Telethon/MTProto, not the Bot API.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "source_url": "https://core.telegram.org/bots/faq",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "format": "https://api.telegram.org/bot<TOKEN>/METHOD_NAME (token in URL path)",
+    "source_url": "https://core.telegram.org/bots/api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.telegram.org/bot<TOKEN>",
+   "rate_limits": {
+    "summary": "~1 message/s per chat, 20 messages/min per group, ~30 messages/s for bulk; paid broadcasts up to 1,000/s",
+    "source_url": "https://core.telegram.org/bots/faq",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -466,11 +830,16 @@
    "auth_hint": "Basic auth: AccountSID:AuthToken (or API Key SID:Secret)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/twilio-labs/mcp",
-    "domain_verified": null,
-    "kind": "official"
+    "url": "https://mcp.twilio.com/docs",
+    "maintainer": "vendor",
+    "repo": "https://github.com/twilio-labs/mcp",
+    "covers_full_api": true,
+    "source_url": "https://github.com/twilio-labs/mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
-   "free_tier": "free trial credit, no permanent free tier (pay-as-you-go after)",
+   "free_tier": "Trial: 100 SMS, 100 WhatsApp, 3,000 emails, 75 voice minutes; no card; one-time on signup, expires after 30 days",
    "sdk": [
     "python",
     "node",
@@ -482,11 +851,26 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Send/receive SMS, WhatsApp messages, and voice calls programmatically via REST API.",
-   "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Official Twilio Labs MCP server exposes the full API.",
+   "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Hosted MCP is read-only docs/API-spec search; the executing server is Twilio Labs' npm @twilio-alpha/mcp (alpha).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "100 SMS, 100 WhatsApp messages, 3,000 emails, 75 voice minutes; expires after 30 days; only up to 5 verified numbers",
+    "period": "one_time",
+    "source_url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(<API_KEY_SID>:<API_KEY_SECRET>) (or AccountSid:AuthToken)",
+    "source_url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -519,13 +903,28 @@
    "name": "Vonage API",
    "homepage": "https://developer.vonage.com",
    "docs": "https://developer.vonage.com/en/documentation",
-   "auth": "api_key+oauth2",
+   "auth": "api_key",
    "auth_hint": "API key+secret for SMS/Number Insight; JWT bearer token for Voice/Video APIs",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+    "maintainer": "vendor",
+    "repo": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+    "tools": [
+     "balance",
+     "list-applications",
+     "create-application",
+     "search-available-numbers",
+     "SMS",
+     "whatsapp-send-text",
+     "rcs-send-text",
+     "outbound-voice-message"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "trial/test credit on signup, then pay-as-you-go",
    "sdk": [
@@ -541,6 +940,13 @@
    "desc_en": "Send SMS, make voice calls, and build video apps via a unified communications REST API.",
    "notes": "Auth method differs per sub-API (API key/secret vs JWT), which agents must account for.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(API_KEY:API_SECRET) (SMS etc.) or Authorization: Bearer <JWT> (Voice, Video, Messages)",
+    "source_url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -559,17 +965,58 @@
    "auth_hint": "Authorization: Bearer <system-user access token>",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/lharries/whatsapp-mcp",
+    "url": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server",
+    "maintainer": "community",
+    "repo": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server",
+    "tools": [
+     "send_text_message",
+     "send_image_message",
+     "send_template_message",
+     "get_message_templates",
+     "create_message_template",
+     "upload_media",
+     "get_business_profile",
+     "get_phone_numbers",
+     "mark_message_as_read"
+    ],
+    "source_url": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
-   "free_tier": "1,000 free service conversations/mo (Meta), then per-conversation pricing",
+   "free_tier": "Free: non-template (service) messages inside an open 24h customer service window; template messages billed per message (per-message pricing since 2025-07-01)",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Send/receive WhatsApp messages, template messages, and media programmatically via Graph API.",
    "notes": "Requires Meta Business verification and pre-approved message templates for outbound marketing/utility messages outside the 24h session window.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Non-template messages inside an open 24h customer service window are free; template messages billed per message",
+    "source_url": "https://developers.facebook.com/docs/whatsapp/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <SYSTEM_USER_ACCESS_TOKEN>",
+    "source_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+    "checked_at": "2026-09-24"
+   },
+   "rate_limits": {
+    "summary": "Up to 80 messages/s per business phone number by default (upgradable)",
+    "source_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "whatsapp_business_messaging",
+     "whatsapp_business_management"
+    ],
+    "source_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -600,10 +1047,14 @@
    "auth": "oauth2",
    "auth_hint": "Authorization: Bearer <access_token> (Server-to-Server OAuth recommended for agents)",
    "mcp": {
-    "type": "none",
-    "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "type": "official",
+    "url": "https://mcp.zoom.us/mcp/zoom/streamable",
+    "maintainer": "vendor",
+    "covers_full_api": false,
+    "source_url": "https://developers.zoom.us/docs/mcp.md",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "usable on free Zoom account within Basic plan limits; some endpoints require paid plan",
    "sdk": [
@@ -615,8 +1066,28 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Schedule, update, and manage meetings, webinars, and cloud recordings programmatically via REST API.",
-   "notes": "Server-to-Server OAuth app type is the recommended path for unattended agent use; some features gated behind licensed/paid plans.",
+   "notes": "Server-to-Server OAuth app type is the recommended path for unattended agent use; some features gated behind licensed/paid plans. Official remote MCP servers (streamable HTTP, user OAuth) run at the mcp.zoom.us gateway.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "Free plan API limits: light 4/s and 6,000/day, medium 2/s and 2,000/day, heavy 1/s and 1,000/day",
+    "period": "day",
+    "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "oauth2",
+    "format": "Authorization: Bearer <ACCESS_TOKEN> (Server-to-Server OAuth, grant_type=account_credentials at https://zoom.us/oauth/token, 1 h tokens)",
+    "source_url": "https://developers.zoom.us/docs/internal-apps/s2s-oauth/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.zoom.us/v2",
+   "rate_limits": {
+    "summary": "Per plan: Free light 4/s (6,000/day), Pro light 30/s, Business+ light 80/s; medium/heavy lower; 429 on excess",
+    "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

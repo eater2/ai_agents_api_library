@@ -15,6 +15,21 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/brave/brave-search-mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/brave/brave-search-mcp-server",
+    "tools": [
+     "brave_web_search",
+     "brave_local_search",
+     "brave_video_search",
+     "brave_image_search",
+     "brave_news_search",
+     "brave_summarizer",
+     "brave_place_search",
+     "brave_llm_context"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/brave/brave-search-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -25,6 +40,38 @@
    "desc_en": "Lets an agent query Brave's independent web/image/video/news search index and get cited, LLM-ready results.",
    "notes": "Official MCP server (@brave/brave-search-mcp-server) is self-hosted only via npx/Docker/HTTP transport, no vendor-hosted remote endpoint found; Answers plan is separate ($4/1,000 req + token costs).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": true,
+    "quota": "$5 in credits (~1,000 Search requests at $5/1,000)",
+    "period": "month",
+    "source_url": "https://brave.com/search/api/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-Subscription-Token",
+    "format": "X-Subscription-Token: <API_KEY>",
+    "source_url": "https://api-dashboard.search.brave.com/app/documentation/web-search/get-started",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.search.brave.com/res/v1",
+   "rate_limits": {
+    "summary": "Search plan 50 queries/sec; Answers plan 2 queries/sec",
+    "source_url": "https://brave.com/search/api/",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous GET requests return results directly",
+    "source_url": "https://api-dashboard.search.brave.com/app/documentation/web-search/get-started"
+   },
+   "data_policy": {
+    "summary": "Zero Data Retention offered only on the Enterprise plan; storage rights require special plans",
+    "source_url": "https://brave.com/search/api/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -66,12 +113,24 @@
    "id": "exa",
    "name": "Exa",
    "homepage": "https://exa.ai",
-   "docs": "https://docs.exa.ai/reference/getting-started",
+   "docs": "https://exa.ai/docs/search/quickstart",
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <EXA_API_KEY> (or x-api-key header)",
    "mcp": {
     "type": "official",
     "url": "https://mcp.exa.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.exa.ai/mcp",
+    "repo": "https://github.com/exa-labs/exa-mcp-server",
+    "tools": [
+     "web_search_exa",
+     "web_fetch_exa",
+     "web_search_advanced_exa",
+     "agent_run"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://exa.ai/docs/reference/exa-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
@@ -85,6 +144,33 @@
    "desc_en": "Lets an agent run neural or keyword web search, retrieve page contents, and find similar links via Exa's API.",
    "notes": "Remote MCP endpoint requires no API key to start; self-hosted npm package (exa-mcp-server) also available.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "$10 in credits (~1,400 searches), balance resets to $10 on the 1st of each month",
+    "period": "month",
+    "source_url": "https://exa.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-api-key",
+    "format": "x-api-key: <EXA_API_KEY> (or Authorization: Bearer <EXA_API_KEY>)",
+    "source_url": "https://exa.ai/docs/reference/search",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.exa.ai",
+   "rate_limits": {
+    "summary": "/search, /answer 10 QPS; deep search 5 QPS; /contents 100 QPS; /websets 20 QPS; agent runs 5 QPS and 50 active runs",
+    "source_url": "https://exa.ai/docs/reference/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Zero Data Retention available as an Enterprise (custom plan) feature",
+    "source_url": "https://exa.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -115,18 +201,63 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <JINA_API_KEY> (works without a key too, but at a lower rate limit)",
    "mcp": {
-    "type": "none",
-    "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "type": "official",
+    "url": "https://mcp.jina.ai/v1",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.jina.ai/v1",
+    "repo": "https://github.com/jina-ai/MCP",
+    "tools": [
+     "primer",
+     "read_url",
+     "capture_screenshot_url",
+     "guess_datetime_url",
+     "search_web",
+     "search_arxiv",
+     "search_ssrn",
+     "search_images",
+     "search_jina_blog",
+     "sort_by_relevance",
+     "deduplicate_strings",
+     "extract_pdf"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/jina-ai/MCP",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
-   "free_tier": "no key needed: 100 RPM (s.jina.ai search) / 500 RPM (r.jina.ai reader); free API key raises limits to 1,000/5,000 RPM with token-based billing",
+   "free_tier": "No key needed for Reader only: 20 RPM (Search is blocked without a key); free API key gives Reader 500 RPM / Search 100 RPM plus 10M free tokens one-time on signup",
    "sdk": [],
    "openapi": "https://api.jina.ai/openapi.json",
    "llms_txt": "https://jina.ai/models/llms.txt",
    "desc_en": "Search the web or convert any URL into clean LLM-ready markdown via simple HTTP GET requests.",
-   "notes": "Usable without an API key at reduced rate limits; interactive docs/playground at https://api.jina.ai/scalar. No official MCP server found.",
+   "notes": "Reader is usable without an API key at a low rate limit; Search needs a key. Interactive docs/playground at https://api.jina.ai/scalar. Official remote MCP server at https://mcp.jina.ai/v1 (github.com/jina-ai/MCP).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "quota": "10M free tokens per new API key; Reader also usable without key at 20 RPM",
+    "period": "one_time",
+    "source_url": "https://jina.ai/reader/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <JINA_API_KEY>",
+    "source_url": "https://github.com/jina-ai/MCP",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://r.jina.ai",
+   "rate_limits": {
+    "summary": "No key: Reader 20 RPM, Search blocked; free/paid key: Reader 500 RPM, Search 100 RPM; premium: 5,000/1,000 RPM",
+    "source_url": "https://jina.ai/reader/",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "API requests, inputs and outputs never used for training; Reader caches content 5 minutes (X-No-Cache to bypass)",
+    "source_url": "https://jina.ai/reader/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -144,12 +275,22 @@
    "homepage": "https://kagi.com",
    "docs": "https://help.kagi.com/kagi/api/overview.html",
    "auth": "api_key",
-   "auth_hint": "Authorization: Bot <token>",
+   "auth_hint": "Authorization: Bearer <API_KEY> (v1 API; legacy v0 used 'Bot <token>')",
    "mcp": {
     "type": "official",
     "url": "https://github.com/kagisearch/kagimcp",
-    "domain_verified": null,
-    "kind": "official"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.kagi.com/mcp",
+    "repo": "https://github.com/kagisearch/kagimcp",
+    "tools": [
+     "kagi_search_fetch",
+     "kagi_extract"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/kagisearch/kagimcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "no free tier: pay-per-use, $12 per 1,000 search requests, invoiced monthly or at $100 usage, whichever first",
    "sdk": [
@@ -163,6 +304,19 @@
    "desc_en": "Run programmatic, ad-free premium web/news/image/video searches and extract page markdown via a paid REST API.",
    "notes": "Requires a funded/billed Kagi account; on Family/Team plans only the account owner can access the API portal. Official hosted MCP endpoint also available at https://mcp.kagi.com/mcp using just an API key.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://kagi.com/api/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY>",
+    "source_url": "https://kagi.com/api/docs",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://kagi.com/api/v1",
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -195,6 +349,17 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.linkup.so/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.linkup.so/mcp",
+    "tools": [
+     "linkup-search",
+     "linkup-research",
+     "linkup-get-research",
+     "linkup-fetch"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://docs.linkup.so/pages/integrations/mcp/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -208,6 +373,26 @@
    "desc_en": "Lets an agent search, fetch pages, or run deep multi-source research via Linkup's Search/Fetch/Research API endpoints.",
    "notes": "Also supports the x402 protocol: pay-per-request in USDC on Base with no account required; Extract endpoint is in closed beta; MCP endpoint also supports ?apiKey= query param auth.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "$20 credits, topped back up to $20 each month (professional-email signups)",
+    "period": "month",
+    "source_url": "https://docs.linkup.so/pages/documentation/development/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <LINKUP_API_KEY>",
+    "source_url": "https://docs.linkup.so/pages/documentation/endpoints/search/reference",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.linkup.so/v1",
+   "async_jobs": {
+    "value": true,
+    "how": "research tasks are started then polled for status/results (MCP tools linkup-research + linkup-get-research)",
+    "source_url": "https://docs.linkup.so/pages/integrations/mcp/mcp"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -233,7 +418,7 @@
    "homepage": "https://www.mojeek.com/services/search/web-search-api/",
    "docs": "https://www.mojeek.com/support/api/search/",
    "auth": "api_key",
-   "auth_hint": "check docs (exact query-param name obtained after contacting Mojeek for a plan)",
+   "auth_hint": "api_key query parameter (https://api.mojeek.com/search?q=...&api_key=<KEY>)",
    "mcp": {
     "type": "none",
     "url": null,
@@ -247,6 +432,37 @@
    "desc_en": "Query Mojeek's independent web index for titles, URLs and snippets in JSON or XML, with country/language boosting.",
    "notes": "Sign-up is not instant self-serve, requires contacting Mojeek via their contact form to get a key/plan (Startup/Business/Enterprise). Independent (non-Google/Bing-derived) index.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "quota": "limited free trial on request (contact Mojeek)",
+    "period": "one_time",
+    "source_url": "https://www.mojeek.com/services/search/web-search-api/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "api_key",
+    "format": "GET https://api.mojeek.com/search?q=...&api_key=<API_KEY>&fmt=json",
+    "source_url": "https://www.mojeek.com/support/api/search/quickstart.html",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.mojeek.com",
+   "rate_limits": {
+    "summary": "Startup: 5 queries/sec, 100,000/day; Business: 10 queries/sec, 400,000/day; Enterprise unlimited",
+    "source_url": "https://www.mojeek.com/services/search/web-search-api/",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous GET returns JSON/XML results",
+    "source_url": "https://www.mojeek.com/support/api/search/quickstart.html"
+   },
+   "data_policy": {
+    "summary": "All plans include storage rights and AI usage permissions; results may be re-ranked and combined with other engines",
+    "source_url": "https://www.mojeek.com/services/search/web-search-api/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -266,6 +482,15 @@
    "mcp": {
     "type": "official",
     "url": "https://search.parallel.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://search.parallel.ai/mcp",
+    "tools": [
+     "web_search",
+     "web_fetch"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.parallel.ai/integrations/mcp/search-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -279,6 +504,32 @@
    "desc_en": "Lets an agent run Parallel's low-latency Search API for web research, content extraction, and entity discovery.",
    "notes": "The remote MCP server is free and requires no account/API key; the main REST API requires an API key from the dashboard.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "up to 5,000 requests/month, plus up to $80 signup and $5/month credits",
+    "period": "month",
+    "source_url": "https://parallel.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-api-key",
+    "format": "x-api-key: <PARALLEL_API_KEY>",
+    "source_url": "https://docs.parallel.ai/search/search-quickstart",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.parallel.ai/v1",
+   "rate_limits": {
+    "summary": "Varies by API: Task 2,000/min, Search 600/min, Find All 25/hr",
+    "source_url": "https://parallel.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Zero data retention offered on Enterprise plans",
+    "source_url": "https://parallel.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -301,10 +552,21 @@
    "mcp": {
     "type": "official",
     "url": "https://api.perplexity.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://api.perplexity.ai/mcp",
+    "tools": [
+     "perplexity_search",
+     "perplexity_ask",
+     "perplexity_research",
+     "perplexity_reason"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.perplexity.ai/guides/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
-   "free_tier": "no confirmed free tier; pay-as-you-go, Search API billed at $5 per 1,000 requests",
+   "free_tier": "Paid only: no confirmed free tier; pay-as-you-go, Search API billed at $5 per 1,000 requests ($1 per 1,000 for the fast search variant)",
    "sdk": [
     "python",
     "typescript"
@@ -314,6 +576,19 @@
    "desc_en": "Lets an agent call Perplexity's Search API or MCP tools (search/ask/research/reason) for real-time grounded web answers.",
    "notes": "Sonar Chat Completions endpoint is being migrated to the new Agent API with a migration deadline around 2026-09-27; platform now exposes four APIs: Search, Router, Agent, Embeddings.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://docs.perplexity.ai/getting-started/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <PERPLEXITY_API_KEY>",
+    "source_url": "https://docs.perplexity.ai/api-reference/search-post",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.perplexity.ai",
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -333,18 +608,50 @@
    "auth": "api_key",
    "auth_hint": "api_key=<KEY> as query param, or Authorization: Bearer <KEY>",
    "mcp": {
-    "type": "none",
-    "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "type": "official",
+    "url": "https://www.searchapi.io/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://www.searchapi.io/mcp",
+    "covers_full_api": true,
+    "source_url": "https://www.searchapi.io/integrations/mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "100 free requests, no credit card required; then paid plans from $40/mo (10,000 searches)",
    "sdk": [],
    "openapi": "https://www.searchapi.io/openapi/google.yaml",
    "llms_txt": null,
    "desc_en": "Fetch structured JSON results from Google, Bing, YouTube, Amazon, TikTok and 50+ other search engines via one REST API.",
-   "notes": "Separate OpenAPI spec per engine (e.g. /openapi/google.yaml); no official MCP server found.",
+   "notes": "Separate OpenAPI spec per engine (e.g. /openapi/google.yaml); official hosted MCP server at https://www.searchapi.io/mcp (OAuth, or X-MCP-Token header for clients without OAuth).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "100 free requests on signup",
+    "period": "one_time",
+    "source_url": "https://www.searchapi.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "api_key",
+    "format": "?api_key=<KEY> (or Authorization: Bearer <KEY>)",
+    "source_url": "https://www.searchapi.io/docs/google",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://www.searchapi.io/api/v1",
+   "rate_limits": {
+    "summary": "Up to 20% of the plan's monthly credits can be used per hour",
+    "source_url": "https://www.searchapi.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous GET /api/v1/search returns JSON",
+    "source_url": "https://www.searchapi.io/docs/google"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -365,6 +672,17 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/ihor-sokoliuk/mcp-searxng",
+    "maintainer": "community",
+    "repo": "https://github.com/ihor-sokoliuk/mcp-searxng",
+    "tools": [
+     "searxng_web_search",
+     "searxng_search_suggestions",
+     "searxng_instance_info",
+     "web_url_read"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/ihor-sokoliuk/mcp-searxng",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -375,6 +693,23 @@
    "desc_en": "Query a self-hosted SearXNG metasearch instance's JSON API to aggregate results from many search engines at once.",
    "notes": "Not a vendor with a signup/API key, it's open-source software you self-host (or point at a trusted public instance from searx.space). JSON/CSV/RSS output formats must be explicitly enabled by the instance admin in settings.yml (search.formats); most public instances disable JSON and return 403. Included because it gives agents a genuine no-signup programmatic search interface once deployed.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://docs.searxng.org/dev/search_api.html",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "GET <instance>/search?q=<query>&format=json (no auth)",
+    "source_url": "https://docs.searxng.org/dev/search_api.html",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous GET/POST / or /search",
+    "source_url": "https://docs.searxng.org/dev/search_api.html"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -406,9 +741,20 @@
    "auth_hint": "api_key query parameter (also usable as header depending on client library)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/serpapi/serpapi-mcp",
-    "domain_verified": null,
-    "kind": "official"
+    "url": "https://mcp.serpapi.com",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.serpapi.com/mcp",
+    "repo": "https://github.com/serpapi/serpapi-mcp",
+    "tools": [
+     "search",
+     "search_table",
+     "search_dashboard"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/serpapi/serpapi-mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan: 250 searches/month, 50 requests/hour throughput",
    "sdk": [
@@ -425,8 +771,40 @@
    "openapi": null,
    "llms_txt": "https://serpapi.com/llms.txt",
    "desc_en": "Lets an agent scrape structured JSON results from Google and 20+ other search engines via SerpApi's REST API.",
-   "notes": "Cached searches are free and don't count toward the monthly search quota.",
+   "notes": "Cached searches are free and don't count toward the monthly search quota. Hosted MCP accepts Authorization: Bearer <key> or a /<API_KEY>/mcp path; source at github.com/serpapi/serpapi-mcp.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": true,
+    "quota": "250 searches",
+    "period": "month",
+    "source_url": "https://serpapi.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "api_key",
+    "format": "GET https://serpapi.com/search?engine=google&q=...&api_key=<API_KEY>",
+    "source_url": "https://serpapi.com/search-api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://serpapi.com",
+   "rate_limits": {
+    "summary": "Free plan: 50 searches/hour throughput; cached, errored and failed searches not counted",
+    "source_url": "https://serpapi.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "optional async=true submits search to retrieve later (via Search Archive); default is synchronous",
+    "source_url": "https://serpapi.com/search-api"
+   },
+   "data_policy": {
+    "summary": "ZeroTrace Mode (higher-tier plans): search parameters, queries and results not retained",
+    "source_url": "https://serpapi.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -460,6 +838,15 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/marcopesani/mcp-server-serper",
+    "maintainer": "community",
+    "repo": "https://github.com/marcopesani/mcp-server-serper",
+    "tools": [
+     "google_search",
+     "scrape"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/marcopesani/mcp-server-serper",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -470,6 +857,19 @@
    "desc_en": "Lets an agent fetch fast, low-cost Google search results (web, images, news, maps, shopping) via Serper's REST API.",
    "notes": "serper.dev's docs/playground is a JS-rendered, login-gated SPA so automated fetch could not fully re-verify all details beyond the public marketing page (2,500 free queries confirmed there). No official MCP server found; listed repo is the most-starred community one.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "2,500 free queries",
+    "period": "one_time",
+    "source_url": "https://serper.dev",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "source_url": "https://serper.dev",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -502,6 +902,18 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.tavily.com/mcp/",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.tavily.com/mcp/",
+    "repo": "https://github.com/tavily-ai/tavily-mcp",
+    "tools": [
+     "tavily-search",
+     "tavily-extract",
+     "tavily-map",
+     "tavily-crawl"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/tavily-ai/tavily-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -515,6 +927,27 @@
    "desc_en": "Lets an agent call Tavily's search API or MCP server to run web searches and get AI-ready summarized results.",
    "notes": "Advanced search depth costs 2 credits vs 1 for basic/fast; remote MCP server supports both API key and OAuth authentication; repo: github.com/tavily-ai/tavily-mcp.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "1,000 API credits",
+    "period": "month",
+    "source_url": "https://docs.tavily.com/documentation/api-credits",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer tvly-<API_KEY>",
+    "source_url": "https://docs.tavily.com/documentation/api-reference/endpoint/search",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.tavily.com",
+   "rate_limits": {
+    "summary": "Dev keys 100 RPM, production keys 1,000 RPM; Crawl 100 RPM; Research task creation 20 RPM",
+    "source_url": "https://docs.tavily.com/documentation/rate-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -544,10 +977,24 @@
    "mcp": {
     "type": "official",
     "url": "https://api.you.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://api.you.com/mcp",
+    "repo": "https://github.com/youdotcom-oss/mcp",
+    "tools": [
+     "you-search",
+     "you-contents",
+     "you-balance",
+     "you-discover",
+     "you-research",
+     "you-finance"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://you.com/docs/build-with-agents/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
-   "free_tier": "free credits on signup via you.com/platform; free search profile also available through the keyless Docs MCP server",
+   "free_tier": "Free tier: $100 one-time credit on signup (no card); main remote MCP also has a keyless ?profile=free mode with 100 search queries/day",
    "sdk": [
     "python",
     "typescript"
@@ -557,6 +1004,27 @@
    "desc_en": "Lets an agent call You.com's Search/Answer/Research API or MCP server for LLM-ready web search and grounded answers.",
    "notes": "Current endpoint is POST https://ydc-index.io/v1/search (recommended); legacy GET still works but won't get new features; also offers a separate keyless Docs MCP server at you.com/docs/_mcp/server for searching You.com's own docs.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "quota": "$100 one-time credit for new accounts; keyless MCP free profile 100 queries/day",
+    "period": "one_time",
+    "source_url": "https://you.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-API-Key",
+    "format": "X-API-Key: <YDC_API_KEY>",
+    "source_url": "https://you.com/docs/api-reference/search",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://ydc-index.io/v1",
+   "data_policy": {
+    "summary": "Zero Data Retention offered as an enterprise feature",
+    "source_url": "https://you.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

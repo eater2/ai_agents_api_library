@@ -1,0 +1,982 @@
+{
+  "akool-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": true,
+      "source_url": "https://akool.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "scheme": null,
+      "format": "x-api-key: <API_KEY>",
+      "source_url": "https://docs.akool.com/authentication/usage",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://openapi.akool.com/api/open",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page shows API access only from the Pro Max plan; the free Basic plan is web-app only (watermarked output)",
+      "auth_hint: Client ID/Secret token flow is documented as legacy; x-api-key header is recommended"
+    ]
+  },
+  "amazon-polly-amazon-transcribe-aws": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": true,
+      "quota": "Polly: 5M standard chars/month (neural 1M for first 12 months); Transcribe: 60 min/month for 12 months",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://aws.amazon.com/polly/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "cloud_iam",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "AWS Signature Version 4 (Authorization: AWS4-HMAC-SHA256 ...) signed with IAM credentials",
+      "source_url": "https://docs.aws.amazon.com/general/latest/gr/pol.html",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://polly.<region>.amazonaws.com",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Transcribe: StartTranscriptionJob, then poll GetTranscriptionJob",
+      "source_url": "https://aws.amazon.com/transcribe/faqs/"
+    },
+    "data_policy": {
+      "summary": "Transcribe may store and use voice inputs to improve AWS AI services; opt out via AWS Organizations AI services opt-out policy",
+      "source_url": "https://aws.amazon.com/transcribe/faqs/",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
+      "tools": [
+        "call_aws",
+        "suggest_aws_commands",
+        "get_execution_plan"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: generic AWS API MCP Server (awslabs, runs any AWS CLI command incl. polly/transcribe) is vendor-maintained",
+      "free_tier: Polly neural 1M chars/mo and generative 100K chars/mo only for first 12 months; new AWS accounts since 2025-07-15 get up to $200 Free Tier credits"
+    ]
+  },
+  "assemblyai-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "$50 credits (do not expire)",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://www.assemblyai.com/docs/billing-and-pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "authorization",
+      "scheme": null,
+      "format": "authorization: <ASSEMBLYAI_API_KEY>",
+      "source_url": "https://www.assemblyai.com/docs/pre-recorded-audio/api-reference/transcripts/submit",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.assemblyai.com",
+    "rate_limits": {
+      "summary": "Pre-recorded: 5 parallel transcriptions on free accounts, 200+ on paid; excess jobs are queued FIFO",
+      "source_url": "https://www.assemblyai.com/docs/pre-recorded-audio/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /v2/transcript returns id; poll GET /v2/transcript/{id} or set webhook_url",
+      "source_url": "https://www.assemblyai.com/docs/pre-recorded-audio/api-reference/transcripts/submit"
+    },
+    "data_policy": {
+      "summary": "Certain API files may be used for model training after redaction unless opted out; zero data retention for Streaming when opted out",
+      "source_url": "https://www.assemblyai.com/docs/data-retention-and-model-training",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://assemblyai.com/docs/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://www.assemblyai.com/docs/coding-agent-prompts",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: vendor MCP is a docs-search server at https://assemblyai.com/docs/mcp (search/fetch documentation), not an API server; catalog URL mcp.assemblyai.com/docs is outdated",
+      "free_tier: $50 credits are one-time for new accounts (do not expire), not a recurring free tier"
+    ]
+  },
+  "azure-ai-speech": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "5 audio hours STT + 0.5M neural TTS characters",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Ocp-Apim-Subscription-Key",
+      "scheme": null,
+      "format": "Ocp-Apim-Subscription-Key: <RESOURCE_KEY> (or Authorization: Bearer <token>)",
+      "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/rest-speech-to-text-short",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": {
+      "summary": "F0 quotas are not adjustable; F0 TTS 20 transactions per 60 seconds",
+      "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/microsoft/mcp",
+      "tools": [
+        "speech stt recognize",
+        "speech tts synthesize"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/tools/ai-services-speech",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: github.com/microsoft/azure-speech-mcp-server contains only a README; speech tools ship in the Azure MCP Server (microsoft/mcp) as 'speech stt recognize' and 'speech tts synthesize'",
+      "free_tier: batch transcription is not supported on F0"
+    ]
+  },
+  "cartesia-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "20K credits (~1 credit per TTS character)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://cartesia.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY> + Cartesia-Version: 2026-08-14 (X-Api-Key also accepted)",
+      "source_url": "https://docs.cartesia.ai/get-started/authenticate-your-client-applications.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.cartesia.ai",
+    "rate_limits": {
+      "summary": "Free plan: 2 concurrent TTS requests, 8 concurrent STT requests; limits scale with subscription plan",
+      "source_url": "https://cartesia.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Zero Data Retention available to Enterprise customers for TTS and STT",
+      "source_url": "https://docs.cartesia.ai/enterprise/zero-data-retention.md",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.cartesia.ai/mcp",
+      "repo": null,
+      "tools": [
+        "text_to_speech",
+        "speech_to_text",
+        "list_voices",
+        "get_voice",
+        "clone_voice",
+        "update_voice",
+        "delete_voice",
+        "voice_change",
+        "localize_voice",
+        "list_pronunciation_dicts",
+        "create_pronunciation_dict",
+        "get_pronunciation_dict",
+        "update_pronunciation_dict",
+        "delete_pronunciation_dict"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.cartesia.ai/tools/ai/mcp.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: free plan has no commercial-use license and no voice cloning"
+    ]
+  },
+  "creatomate-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "50 credits",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://creatomate.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <PROJECT_API_KEY>",
+      "source_url": "https://creatomate.com/llms/api.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.creatomate.com/v2",
+    "rate_limits": {
+      "summary": "30 requests per 10 seconds per account (all projects); 429 with Retry-After",
+      "source_url": "https://creatomate.com/llms/api.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /v2/renders returns 202; poll GET /v2/renders/{id} or pass webhook_url",
+      "source_url": "https://creatomate.com/llms/quick-start.md"
+    },
+    "data_policy": {
+      "summary": "Rendered output files are hosted for up to 30 days, then deleted",
+      "source_url": "https://creatomate.com/llms/quick-start.md",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.creatomate.com/mcp",
+      "repo": null,
+      "tools": [
+        "list_templates",
+        "get_template",
+        "create_template",
+        "update_template",
+        "delete_template",
+        "create_render",
+        "get_render"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://creatomate.com/llms/template-access.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: vendor hosts a remote MCP server at https://api.creatomate.com/mcp (OAuth or Bearer API key), not none",
+      "free_tier: free plan output is clamped to max 480 px per dimension"
+    ]
+  },
+  "d-id-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": null,
+      "period": "one_time",
+      "watermark": true,
+      "source_url": "https://www.d-id.com/faqs/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "basic",
+      "format": "Authorization: Basic <API_USERNAME:API_PASSWORD>",
+      "source_url": "https://docs.d-id.com/reference/basic-authentication.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.d-id.com",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /talks returns id; poll GET /talks/{id} until status done, or set webhook",
+      "source_url": "https://docs.d-id.com/docs/v2-photo-avatar-quickstart.md"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://docs.d-id.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.d-id.com/docs/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "deepgram-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "$200 credit",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://deepgram.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: Token <DEEPGRAM_API_KEY>",
+      "source_url": "https://developers.deepgram.com/reference/authentication.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.deepgram.com",
+    "rate_limits": {
+      "summary": "Nova-3/Nova-2: up to 50 concurrent pre-recorded and 150 streaming requests; Voice Agent API up to 45 concurrent connections",
+      "source_url": "https://developers.deepgram.com/reference/api-rate-limits.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Model Improvement Program may use data for training; opt out per request with mip_opt_out=true",
+      "source_url": "https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program.md",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://developers.deepgram.com/_mcp/server",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://developers.deepgram.com/developer-tools/cli/mcp-server.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Deepgram CLI (pip install deepctl) runs a local MCP server via 'dg mcp' (stdio or SSE) proxying developer API tools; docs MCP at https://developers.deepgram.com/_mcp/server",
+      "free_tier: $200 credit is a one-time signup credit (trial), not a recurring free tier"
+    ]
+  },
+  "google-veo-gemini-api-vertex-ai": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-goog-api-key",
+      "scheme": null,
+      "format": "x-goog-api-key: <GEMINI_API_KEY>",
+      "source_url": "https://ai.google.dev/gemini-api/docs/veo",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://generativelanguage.googleapis.com/v1beta",
+    "rate_limits": {
+      "summary": "Limits depend on project usage tier (Free, Tier 1-3); Veo-specific limits shown in AI Studio rate-limit dashboard",
+      "source_url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST models/{model}:predictLongRunning returns an operation name; poll GET /{operation_name} until done",
+      "source_url": "https://ai.google.dev/gemini-api/docs/veo"
+    },
+    "data_policy": {
+      "summary": "Generated videos are stored on the server for 2 days",
+      "source_url": "https://ai.google.dev/gemini-api/docs/veo",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/GoogleCloudPlatform/genmedia-creative-studio/tree/main/experiments/mcp-genmedia",
+      "tools": [
+        "veo_t2v",
+        "veo_i2v"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/GoogleCloudPlatform/genmedia-creative-studio/blob/main/experiments/mcp-genmedia/mcp-genmedia-go/README.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: GoogleCloudPlatform publishes an experimental Genmedia MCP server (mcp-veo-go, Vertex AI via ADC) with veo_t2v/veo_i2v tools"
+    ]
+  },
+  "heygen-api": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-Api-Key",
+      "scheme": null,
+      "format": "X-Api-Key: <HEYGEN_API_KEY>",
+      "source_url": "https://developers.heygen.com/docs/api-key.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.heygen.com",
+    "rate_limits": {
+      "summary": "Pay-As-You-Go: 10 concurrent workflows (Enterprise 20, burst up to +50); 429 with Retry-After when exceeded",
+      "source_url": "https://developers.heygen.com/docs/usage-limits.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Poll the session/video (GET) until video_url is ready, or pass callback_url / register webhooks",
+      "source_url": "https://developers.heygen.com/docs/quick-start.md"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.heygen.com/mcp/v1/",
+      "repo": null,
+      "tools": [
+        "create_video_agent",
+        "get_video_agent_session",
+        "create_video",
+        "get_video",
+        "list_videos",
+        "list_templates",
+        "generate_from_template",
+        "list_voices",
+        "create_speech",
+        "clone_voice",
+        "create_video_translation",
+        "get_video_translation",
+        "create_lipsync",
+        "create_avatar",
+        "create_asset_upload",
+        "get_current_user"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://developers.heygen.com/mcp/overview.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: remote MCP is OAuth-only and bills the user's web subscription credits, not API credits"
+    ]
+  },
+  "klap-api": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY>",
+      "source_url": "https://docs.klap.app",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.klap.app/v2",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /tasks/video-to-shorts returns a task; poll GET /v2/tasks/{task_id} until status ready or error",
+      "source_url": "https://docs.klap.app/endpoints/tasks"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: API pricing is usage-based, billed monthly per operation (Generate Short $0.32, Video Input $0.44, Export $0.48); no free API credits stated"
+    ]
+  },
+  "kling-ai-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": null,
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://kling.ai/document-api/guides/get-started/quick-start.md",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY>",
+      "source_url": "https://kling.ai/document-api/api/get-started/authentication.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api-singapore.klingai.com",
+    "rate_limits": {
+      "summary": "Concurrency cap per account, model version and resource package; over-limit returns code 1303",
+      "source_url": "https://kling.ai/document-api/api/get-started/concurrency-rules.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Create task returns task id; query task status, or set callback_url for status notifications",
+      "source_url": "https://kling.ai/document-api/api/get-started/callbacks.md"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/199-mcp/mcp-kling",
+      "tools": [
+        "generate_video",
+        "generate_image_to_video",
+        "generate_image",
+        "check_video_status",
+        "check_image_status",
+        "extend_video",
+        "create_lipsync",
+        "apply_video_effect",
+        "virtual_try_on",
+        "get_account_balance",
+        "get_resource_packages",
+        "list_tasks"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://github.com/199-mcp/mcp-kling",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: current API uses a console-issued API Key sent as Authorization: Bearer <API_KEY>; the AccessKey/SecretKey JWT (HS256, 30 min) is only for legacy-design endpoints",
+      "docs: docs moved to https://kling.ai/document-api/ (API domain https://api-singapore.klingai.com)",
+      "free_tier: a Trial Resource Package for integration testing is offered"
+    ]
+  },
+  "luma-ai-dream-machine-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": false,
+      "source_url": "https://lumalabs.ai/api/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <LUMA_API_KEY>",
+      "source_url": "https://docs.lumalabs.ai/docs/faq.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.lumalabs.ai/dream-machine/v1",
+    "rate_limits": {
+      "summary": "Build tier: Ray video 10 concurrent generations, 20 create requests/min; Photon image 40 concurrent, 80/min; $5,000/month usage cap",
+      "source_url": "https://docs.lumalabs.ai/docs/rate-limits.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /generations returns an id; poll GET /generations/{id} until ready, or pass callback_url",
+      "source_url": "https://docs.lumalabs.ai/docs/api.md"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/lumalabs/luma-api-mcp",
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://github.com/lumalabs/luma-api-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing now lists Ray 3.2 at $0.15 (540p) to $1.20 (1080p) per 5s T2V/I2V clip; API output has no watermark"
+    ]
+  },
+  "minimax-hailuo-api": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY>",
+      "source_url": "https://platform.minimax.io/docs/api-reference/video-generation-t2v.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.minimax.io",
+    "rate_limits": {
+      "summary": "Video: Hailuo series 20 RPM; MiniMax-H3 (v2) 300 RPM, 30 in-flight tasks",
+      "source_url": "https://platform.minimax.io/docs/guides/rate-limits.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Create task returns task_id; poll Query Video Generation Task, then download file; optional callback_url",
+      "source_url": "https://platform.minimax.io/docs/api-reference/video-generation-t2v.md"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/MiniMax-AI/MiniMax-MCP",
+      "tools": [
+        "text_to_audio",
+        "list_voices",
+        "voice_clone",
+        "voice_design",
+        "play_audio",
+        "generate_video",
+        "image_to_video",
+        "query_video_generation",
+        "text_to_image"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://platform.minimax.io/docs/guides/mcp-guide.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "mux-video-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100,000 delivery minutes",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.mux.com/pricing.md",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(MUX_TOKEN_ID:MUX_TOKEN_SECRET)",
+      "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.mux.com",
+    "rate_limits": {
+      "summary": "Per-environment rate-limit buckets; HTTP 429 when exceeded",
+      "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.mux.com",
+      "repo": "https://github.com/muxinc/mux-node-sdk/tree/master/packages/mcp-server",
+      "tools": [
+        "docs search",
+        "code execution (TypeScript against @mux/mux-node)"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://www.mux.com/docs/integrations/mcp-server.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": []
+  },
+  "pixverse-api": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "API-KEY",
+      "scheme": null,
+      "format": "API-KEY: <API_KEY> (plus unique Ai-trace-id UUID header per request)",
+      "source_url": "https://docs.platform.pixverse.ai/quick-start-796052m0.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://app-api.pixverse.ai",
+    "rate_limits": {
+      "summary": "Concurrent generating tasks by membership: Free 3, Essential 15, Scale 20, Business 25",
+      "source_url": "https://docs.platform.pixverse.ai/rate-limit-796040m0.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Generate returns video_id; poll GET /openapi/v2/video/result/{id} (status 5 generating, 1 done) or use webhook",
+      "source_url": "https://docs.platform.pixverse.ai/quick-start-796052m0.md"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/PixVerseAI/PixVerse-MCP",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.platform.pixverse.ai/pixverse-mcp-972890m0.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: key is sent in the API-KEY request header, with a unique Ai-trace-id (UUID) header per request",
+      "free_tier: pricing page states $1 = 5 videos (v6, 720p, 5s, no audio)"
+    ]
+  },
+  "runway-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.dev.runwayml.com/llms-small.txt",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <RUNWAYML_API_SECRET> + X-Runway-Version: 2024-11-06",
+      "source_url": "https://docs.dev.runwayml.com/ai-context.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.dev.runwayml.com",
+    "rate_limits": {
+      "summary": "Per-model, per-organization concurrency and daily generation limits set by usage tier; tier up by adding credits over time; excess tasks THROTTLED (queued)",
+      "source_url": "https://docs.dev.runwayml.com/llms-small.txt",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Generation endpoints return a task; poll GET /v1/tasks/{id} until status is terminal",
+      "source_url": "https://docs.dev.runwayml.com/ai-context.md"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.runwayml.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://docs.dev.runwayml.com/llms-small.txt",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: besides the generation MCP (mcp.runwayml.com), there is a Runway Dev MCP at https://dev.runwayml.com/mcp (OAuth only) for tasks, model routers and docs"
+    ]
+  },
+  "shotstack-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "10 credits (valid 30 days)",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://shotstack.io/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "scheme": null,
+      "format": "x-api-key: <API_KEY>",
+      "source_url": "https://shotstack.io/docs/api/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.shotstack.io/edit/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /render returns an id; poll GET /render/{id} or set a callback URL",
+      "source_url": "https://shotstack.io/docs/api/"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.shotstack.io/",
+      "repo": null,
+      "tools": [
+        "studio",
+        "render_video",
+        "get_render_status",
+        "create_studio_link",
+        "get_shotstack_guide",
+        "create_template",
+        "list_templates",
+        "get_template",
+        "render_template",
+        "delete_template"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://shotstack.io/docs/guide/agents/mcp-server.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: a free 'stage' sandbox environment also exists (https://api.shotstack.io/edit/stage), output is watermarked"
+    ]
+  },
+  "synthesia-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.synthesia.io/reference/video-api-introduction.md",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: <API_KEY>",
+      "source_url": "https://docs.synthesia.io/reference/create-video.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.synthesia.io/v2",
+    "rate_limits": {
+      "summary": "Creator (Tier 3): 60 req/min, 300/hour, 1,000/day writes per endpoint; 30 test videos/day; Enterprise tiers higher",
+      "source_url": "https://docs.synthesia.io/reference/video-api-introduction.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /v2/videos returns id; poll GET /v2/videos/{id} for status or subscribe to webhooks",
+      "source_url": "https://docs.synthesia.io/reference/video-api-introduction.md"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.synthesia.io/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://docs.synthesia.io/reference/synthesia-mcp.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: vendor hosts a public-beta MCP server at https://mcp.synthesia.io/mcp (drafts, generate video, status, video search), not none",
+      "auth_hint: API key goes in the Authorization header without a Bearer prefix (securityScheme apiKey, name Authorization)",
+      "free_tier: API access requires Creator plan or above"
+    ]
+  },
+  "tavus-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "25 min conversational video + 5 min video generation",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.tavus.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "scheme": null,
+      "format": "x-api-key: <API_KEY>",
+      "source_url": "https://docs.tavus.io/api-reference/authentication.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://tavusapi.com",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.tavus.io/mcp",
+      "repo": null,
+      "tools": [
+        "tavus_pal_create",
+        "tavus_pal_list",
+        "tavus_pal_get",
+        "tavus_conversation_create",
+        "tavus_conversation_end",
+        "tavus_face_list",
+        "tavus_tool_create",
+        "tavus_document_create",
+        "tavus_guardrail_create",
+        "tavus_objective_create"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://docs.tavus.io/sections/agent-tools/mcp-tools-reference.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: free Basic developer plan includes 25 minutes of conversational video and 5 minutes of AI video generation",
+      "mcp: hosted MCP uses OAuth via PAL Maker; API key must not be placed in client config"
+    ]
+  }
+}

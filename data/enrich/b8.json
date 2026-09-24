@@ -1,0 +1,1321 @@
+{
+  "agentmail": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "3 inboxes, 3,000 emails/month (max 100/day), 3 GB storage",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.agentmail.to/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY>",
+      "source_url": "https://docs.agentmail.to/api-reference/inboxes/list.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.agentmail.to/v0",
+    "rate_limits": {
+      "summary": "Per-organization API limits (unpublished); 429 with Retry-After on excess. Free plan capped at 100 emails/day",
+      "source_url": "https://docs.agentmail.to/knowledge-base/rate-limits.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.agentmail.to/mcp",
+      "repo": "https://github.com/agentmail-to/agentmail-mcp",
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://docs.agentmail.to/integrations/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page also caps the free plan at 100 emails/day",
+      "mcp.url: hosted endpoint is https://mcp.agentmail.to/mcp (repo github.com/agentmail-to/agentmail-mcp), not the docs homepage"
+    ]
+  },
+  "discord-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.discord.com/developers/reference",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: Bot <BOT_TOKEN>",
+      "source_url": "https://docs.discord.com/developers/reference",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://discord.com/api/v10",
+    "rate_limits": {
+      "summary": "Global 50 requests/s per bot plus per-route limits; 10,000 invalid requests per 10 min triggers IP ban",
+      "source_url": "https://docs.discord.com/developers/topics/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "bot",
+        "applications.commands"
+      ],
+      "source_url": "https://docs.discord.com/developers/topics/oauth2",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/SaseQ/discord-mcp",
+      "tools": [
+        "get_server_info",
+        "send_message",
+        "read_messages",
+        "edit_message",
+        "delete_message",
+        "send_private_message",
+        "add_reaction",
+        "create_text_channel",
+        "list_channels",
+        "find_channel"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/SaseQ/discord-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth: bots authenticate with a static bot token (Authorization: Bot <token>); OAuth2 is only needed for user tokens/adding the bot to servers"
+    ]
+  },
+  "line-messaging-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "200 messages (Communication plan, Japan)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.lycbiz.com/jp/service/line-official-account/plan/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <CHANNEL_ACCESS_TOKEN>",
+      "source_url": "https://developers.line.biz/en/reference/messaging-api/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.line.me",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/line/line-bot-mcp-server",
+      "tools": [
+        "push_text_message",
+        "push_flex_message",
+        "broadcast_text_message",
+        "broadcast_flex_message",
+        "get_profile",
+        "get_message_quota",
+        "get_rich_menu_list",
+        "create_rich_menu",
+        "delete_rich_menu",
+        "set_rich_menu_default",
+        "cancel_rich_menu_default",
+        "get_follower_ids",
+        "get_group_summary"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/line/line-bot-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "mailgun": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "100 emails/day, 1 custom sending domain, 1-day log retention",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://www.mailgun.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(api:<API_KEY>)",
+      "source_url": "https://documentation.mailgun.com/docs/mailgun/api-reference/mg-auth",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.mailgun.net",
+    "rate_limits": {
+      "summary": "Per-API time windows; X-RateLimit-* headers and 429 when exceeded. EU region host: api.eu.mailgun.net",
+      "source_url": "https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/mailgun/mailgun-mcp-server",
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://documentation.mailgun.com/docs/mailgun/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official local MCP server exists (github.com/mailgun/mailgun-mcp-server, npm @mailgun/mcp-server, 50+ tools, stdio only)"
+    ]
+  },
+  "ntfy": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": "Burst of 60 requests, then 1 request every 5 s per visitor",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.ntfy.sh/config/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "No auth for public topics; optional Authorization: Bearer tk_<TOKEN> for protected topics",
+      "source_url": "https://docs.ntfy.sh/publish/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://ntfy.sh",
+    "rate_limits": {
+      "summary": "Defaults: burst 60 requests, replenish 1 request/5 s; attachments 100 MB total, 500 MB/day bandwidth per visitor",
+      "source_url": "https://docs.ntfy.sh/config/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/gitmotion/ntfy-me-mcp",
+      "tools": [
+        "ntfy_me",
+        "ntfy_me_fetch"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/gitmotion/ntfy-me-mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "postmark": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100 emails/month (Developer plan, no expiry)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://postmarkapp.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-Postmark-Server-Token",
+      "scheme": null,
+      "format": "X-Postmark-Server-Token: <SERVER_TOKEN>",
+      "source_url": "https://postmarkapp.com/developer/api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.postmarkapp.com",
+    "rate_limits": {
+      "summary": "Unpublished acceptable-use limit; HTTP 429 when exceeded",
+      "source_url": "https://postmarkapp.com/developer/api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/ActiveCampaign/postmark-mcp",
+      "tools": [
+        "sendEmail",
+        "sendEmailWithTemplate",
+        "sendBatch",
+        "sendBatchWithTemplate",
+        "listTemplates",
+        "getTemplate",
+        "createTemplate",
+        "editTemplate",
+        "deleteTemplate",
+        "validateTemplate",
+        "searchOutboundMessages",
+        "getMessageDetails",
+        "diagnoseDelivery",
+        "searchBounces",
+        "getBounceDump",
+        "activateBounce",
+        "listSuppressions",
+        "createSuppressions",
+        "deleteSuppressions",
+        "getDeliveryStats",
+        "getServerInfo",
+        "listWebhooks",
+        "createWebhook",
+        "deleteWebhook"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/activecampaign/postmark-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official local MCP server exists (github.com/ActiveCampaign/postmark-mcp, npx @activecampaign/postmark-mcp, 24 tools)"
+    ]
+  },
+  "resend": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "3,000 emails/month (max 100/day), 3 domains",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://resend.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer re_<API_KEY>",
+      "source_url": "https://resend.com/docs/api-reference/introduction",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.resend.com",
+    "rate_limits": {
+      "summary": "10 requests/s per team across all API keys",
+      "source_url": "https://resend.com/docs/api-reference/introduction",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.resend.com/mcp",
+      "repo": "https://github.com/resend/resend-mcp",
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://resend.com/docs/mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "sendgrid-twilio": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "100 emails/day for 60 days",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://www.twilio.com/en-us/products/email-api/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <SENDGRID_API_KEY>",
+      "source_url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.sendgrid.com/v3",
+    "rate_limits": {
+      "summary": "Per-endpoint limits reported in X-RateLimit-* headers; HTTP 429 when exceeded",
+      "source_url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/Garoth/sendgrid-mcp",
+      "tools": [
+        "send_email",
+        "send_to_list",
+        "list_contacts",
+        "add_contact",
+        "list_contact_lists",
+        "create_template",
+        "list_templates",
+        "get_stats",
+        "validate_email",
+        "list_verified_senders"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/Garoth/sendgrid-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page states a 60-day free trial, 100 emails/day, no credit card required"
+    ]
+  },
+  "slack-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.slack.dev/apis/web-api/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer xoxb-<BOT_TOKEN>",
+      "source_url": "https://docs.slack.dev/reference/methods/chat.postMessage",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://slack.com/api",
+    "rate_limits": {
+      "summary": "Per-method tiers: T1 1+/min, T2 20+/min, T3 50+/min, T4 100+/min; chat.postMessage ~1 msg/s per channel; non-Marketplace apps: conversations.history 1/min",
+      "source_url": "https://docs.slack.dev/apis/web-api/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "chat:write",
+        "channels:read",
+        "channels:history",
+        "groups:history",
+        "im:history"
+      ],
+      "source_url": "https://docs.slack.dev/reference/methods/conversations.history",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.slack.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://docs.slack.dev/ai/slack-mcp-server/",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "stream-getstream-chat-video-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Build plan: 1,000 MAU, 100 concurrent connections",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://getstream.io/chat/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "?api_key=<API_KEY> + Authorization: <JWT signed with API secret> + Stream-Auth-Type: jwt",
+      "source_url": "https://getstream.io/chat/docs/node/tokens_and_authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": {
+      "summary": "Per-endpoint per-minute limits (60 to 10,000/min, e.g. Send Message 1,000/min) plus 60 requests/min per user",
+      "source_url": "https://getstream.io/chat/docs/node/rate_limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: Build plan is 1,000 MAU / 100 concurrent connections, no card; Maker account gives $100/month credit for teams <5 people and <$10k monthly revenue",
+      "auth: server-side auth is API key + JWT signed with the API secret, not OAuth2"
+    ]
+  },
+  "telegram-bot-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://core.telegram.org/bots/faq",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "https://api.telegram.org/bot<TOKEN>/METHOD_NAME (token in URL path)",
+      "source_url": "https://core.telegram.org/bots/api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.telegram.org/bot<TOKEN>",
+    "rate_limits": {
+      "summary": "~1 message/s per chat, 20 messages/min per group, ~30 messages/s for bulk; paid broadcasts up to 1,000/s",
+      "source_url": "https://core.telegram.org/bots/faq",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/chigwell/telegram-mcp",
+      "tools": [
+        "send_message",
+        "reply_to_message",
+        "edit_message",
+        "list_chats",
+        "send_file",
+        "download_media"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/chigwell/telegram-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: listed chigwell/telegram-mcp uses a user account via Telethon/MTProto, not the Bot API"
+    ]
+  },
+  "twilio": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "100 SMS, 100 WhatsApp messages, 3,000 emails, 75 voice minutes; expires after 30 days; only up to 5 verified numbers",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(<API_KEY_SID>:<API_KEY_SECRET>) (or AccountSid:AuthToken)",
+      "source_url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/twilio-labs/mcp",
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://github.com/twilio-labs/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: trial now gives product free units (100 SMS, 100 WhatsApp, 3,000 emails, 75 voice min), no card, expires after 30 days",
+      "mcp: Twilio also hosts a read-only docs/API-spec search MCP at https://mcp.twilio.com/docs (tools twilio__search, twilio__retrieve); the executing server is npm @twilio-alpha/mcp (alpha)"
+    ]
+  },
+  "vonage-api": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(API_KEY:API_SECRET) (SMS etc.) or Authorization: Bearer <JWT> (Voice, Video, Messages)",
+      "source_url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+      "tools": [
+        "balance",
+        "list-applications",
+        "create-application",
+        "search-available-numbers",
+        "SMS",
+        "whatsapp-send-text",
+        "rcs-send-text",
+        "outbound-voice-message"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth: not OAuth2; Vonage uses API key/secret (Basic auth or query params) or application JWTs",
+      "mcp: Vonage-Community publishes a local MCP server (npm @vonage/vonage-mcp-server-api-bindings) for SMS, WhatsApp, RCS, voice and account tools"
+    ]
+  },
+  "whatsapp-business-cloud-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Non-template messages inside an open 24h customer service window are free; template messages billed per message",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developers.facebook.com/docs/whatsapp/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <SYSTEM_USER_ACCESS_TOKEN>",
+      "source_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": {
+      "summary": "Up to 80 messages/s per business phone number by default (upgradable)",
+      "source_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "whatsapp_business_messaging",
+        "whatsapp_business_management"
+      ],
+      "source_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server",
+      "tools": [
+        "send_text_message",
+        "send_image_message",
+        "send_template_message",
+        "get_message_templates",
+        "create_message_template",
+        "upload_media",
+        "get_business_profile",
+        "get_phone_numbers",
+        "mark_message_as_read"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: Meta moved to per-message pricing on 2025-07-01; there is no 1,000 free conversations/month allowance. Service (non-template) messages in the customer service window are free",
+      "mcp.url: lharries/whatsapp-mcp connects to a personal WhatsApp account via WhatsApp Web (whatsmeow), not the Business Cloud API"
+    ]
+  },
+  "zoom-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Free plan API limits: light 4/s and 6,000/day, medium 2/s and 2,000/day, heavy 1/s and 1,000/day",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <ACCESS_TOKEN> (Server-to-Server OAuth, grant_type=account_credentials at https://zoom.us/oauth/token, 1 h tokens)",
+      "source_url": "https://developers.zoom.us/docs/internal-apps/s2s-oauth/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.zoom.us/v2",
+    "rate_limits": {
+      "summary": "Per plan: Free light 4/s (6,000/day), Pro light 30/s, Business+ light 80/s; medium/heavy lower; 429 on excess",
+      "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://developers.zoom.us/docs/mcp.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Zoom now hosts official remote MCP servers (Zoom MCP, Zoom Chat MCP, Revenue Accelerator MCP) over streamable HTTP at the mcp.zoom.us gateway, OAuth 2.0; docs at developers.zoom.us/docs/mcp"
+    ]
+  },
+  "geoapify": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "3,000 credits/day, up to 5 requests/s, commercial use allowed",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://www.geoapify.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "apiKey",
+      "scheme": null,
+      "format": "https://api.geoapify.com/v1/geocode/search?text=...&apiKey=<API_KEY>",
+      "source_url": "https://apidocs.geoapify.com/docs/geocoding/forward-geocoding/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.geoapify.com",
+    "rate_limits": {
+      "summary": "Free plan: up to 5 requests/s, 3,000 credits/day",
+      "source_url": "https://www.geoapify.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Batch Geocoding: POST /v1/batch/geocode/search returns job id; poll GET until 200 (202 while pending)",
+      "source_url": "https://apidocs.geoapify.com/docs/geocoding/batch/"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.geoapify.com/v1/mcp?apiKey=<API_KEY>",
+      "repo": null,
+      "tools": [
+        "geocode_address",
+        "geocode_structured_address",
+        "reverse_geocode_coordinates",
+        "search_places",
+        "list_place_categories",
+        "calculate_route",
+        "calculate_route_matrix",
+        "combine_geometries",
+        "evaluate_spatial_relation",
+        "measure_geometry",
+        "transform_geometry"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://apidocs.geoapify.com/docs/mcp/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Geoapify runs an official remote MCP server at https://api.geoapify.com/v1/mcp?apiKey=... (11 tools)"
+    ]
+  },
+  "google-maps-platform": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Free calls per SKU monthly: 10K Essentials, 5K Pro, 1K Enterprise",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://mapsplatform.google.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "key",
+      "scheme": null,
+      "format": "https://maps.googleapis.com/maps/api/geocode/json?address=...&key=<API_KEY> (newer APIs also accept X-Goog-Api-Key header)",
+      "source_url": "https://developers.google.com/maps/documentation/geocoding/requests-geocoding",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": {
+      "summary": "Maps Grounding Lite MCP: 300 queries/min per project for search_places, lookup_weather, compute_routes",
+      "source_url": "https://developers.google.com/maps/ai/grounding-lite",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mapstools.googleapis.com/mcp",
+      "repo": null,
+      "tools": [
+        "search_places",
+        "lookup_weather",
+        "compute_routes",
+        "resolve_names",
+        "resolve_maps_urls"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.google.com/maps/ai/grounding-lite",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: the $200 monthly credit was replaced by free monthly calls per SKU (10K Essentials, 5K Pro, 1K Enterprise)"
+    ]
+  },
+  "here-location-services": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.here.com/get-started/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "apiKey",
+      "scheme": null,
+      "format": "https://geocode.search.hereapi.com/v1/geocode?q=...&apiKey=<API_KEY>",
+      "source_url": "https://docs.here.com/geocoding-and-search/docs/code-geocode-address",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/limingchina/heremaps-mcp-server",
+      "tools": [
+        "maps_geocode",
+        "maps_reverse_geocode",
+        "maps_search_places",
+        "maps_directions",
+        "maps_get_traffic_incidents",
+        "maps_display"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/limingchina/heremaps-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "ip2location-io": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "50,000 IP geolocation queries/month, 500 domain WHOIS, 50 hosted-domain queries; attribution required",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.ip2location.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "key",
+      "scheme": null,
+      "format": "https://api.ip2location.io/?key=<API_KEY>&ip=8.8.8.8 (or Authorization: Bearer <API_KEY>)",
+      "source_url": "https://www.ip2location.io/ip2location-documentation",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.ip2location.io",
+    "rate_limits": {
+      "summary": "Keyless 1,000 queries/day; free key 50,000/month; resets 00:00 UTC",
+      "source_url": "https://www.ip2location.io/ip2location-documentation",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.ip2location.io/",
+      "repo": "https://github.com/ip2location/mcp-ip2location-io",
+      "tools": [
+        "get_geolocation"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/ip2location/mcp-ip2location-io",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: besides the local server there is a hosted endpoint https://mcp.ip2location.io/ (X-API-Key header)"
+    ]
+  },
+  "iplocate": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "1,000 requests/day, all data types",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://www.iplocate.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-Key",
+      "scheme": null,
+      "format": "X-API-Key: <API_KEY> (or ?apikey=<API_KEY>)",
+      "source_url": "https://www.iplocate.io/docs/getting-started/authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://iplocate.io/api",
+    "rate_limits": {
+      "summary": "No key: 50/day per IP; free key: 1,000/day; max 100 requests/s per IP; 429 on excess",
+      "source_url": "https://www.iplocate.io/docs/getting-started/quota-rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/iplocate/mcp-server-iplocate",
+      "tools": [
+        "lookup_ip_address_details",
+        "lookup_ip_address_location",
+        "lookup_ip_address_privacy",
+        "lookup_ip_address_network",
+        "lookup_ip_address_company",
+        "lookup_ip_address_abuse_contacts"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/iplocate/mcp-server-iplocate/blob/main/README.md",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "mapbox": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "e.g. 50,000 GL JS map loads, 100,000 Geocoding and 100,000 Directions requests per month",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.mapbox.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "access_token",
+      "scheme": null,
+      "format": "https://api.mapbox.com/...?access_token=<ACCESS_TOKEN>",
+      "source_url": "https://docs.mapbox.com/api/overview/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.mapbox.com",
+    "rate_limits": {
+      "summary": "Per-token per-API: e.g. Geocoding 600/min, Directions 300/min, Static Images 1,250/min; 429 on excess",
+      "source_url": "https://docs.mapbox.com/api/overview/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.mapbox.com/mcp",
+      "repo": "https://github.com/mapbox/mcp-server",
+      "tools": [
+        "directions_tool",
+        "search_and_geocode_tool",
+        "isochrone_tool",
+        "matrix_tool",
+        "optimization_tool",
+        "map_matching_tool",
+        "static_map_image_tool",
+        "place_details_tool",
+        "distance_tool"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/mapbox/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp.url: official hosted endpoint https://mcp.mapbox.com/mcp is also available"
+    ]
+  },
+  "national-weather-service-api-nws": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.weather.gov/documentation/services-web-api",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "No key; send User-Agent: (myweatherapp.com, contact@myweatherapp.com)",
+      "source_url": "https://www.weather.gov/documentation/services-web-api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.weather.gov",
+    "rate_limits": {
+      "summary": "Undisclosed generous limit; on excess retry after ~5 s",
+      "source_url": "https://www.weather.gov/documentation/services-web-api",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/LeandroBerlin/Weather-MCP-Server",
+      "tools": [
+        "get-alerts",
+        "get-forecast"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/LeandroBerlin/Weather-MCP-Server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "open-meteo": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": "Non-commercial: 600/min, 5,000/hour, 10,000/day, 300,000/month",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://open-meteo.com/en/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "No key for free non-commercial use; commercial: customer-api.open-meteo.com with &apikey=<API_KEY>",
+      "source_url": "https://open-meteo.com/en/docs",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.open-meteo.com/v1",
+    "rate_limits": {
+      "summary": "Free: 600 calls/min, 5,000/hour, 10,000/day, 300,000/month; paid plans unlimited rate",
+      "source_url": "https://open-meteo.com/en/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Free API logs IP addresses for maintenance/abuse prevention only, not linked to identities; server logs deleted after 90 days",
+      "source_url": "https://open-meteo.com/en/terms",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/cmer81/open-meteo-mcp",
+      "tools": [
+        "weather_forecast",
+        "weather_archive",
+        "air_quality",
+        "marine_weather",
+        "elevation",
+        "geocoding",
+        "flood_forecast",
+        "seasonal_forecast",
+        "climate_projection",
+        "ensemble_forecast"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/cmer81/open-meteo-mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "openrouteservice": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": null,
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://openrouteservice.org/faq/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: <API_KEY>",
+      "source_url": "https://ask.openrouteservice.org/t/reducing-the-quota-of-deprecated-api-api-openrouteservice-org/8013",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.heigit.org/openrouteservice",
+    "rate_limits": {
+      "summary": "Per-endpoint daily quotas reset every 24 h; legacy api.openrouteservice.org limited to 10% of quota from 2026-08-27",
+      "source_url": "https://ask.openrouteservice.org/t/reducing-the-quota-of-deprecated-api-api-openrouteservice-org/8013",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/vemonet/openroute-mcp",
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://github.com/vemonet/openroute-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "docs/base_url: api.openrouteservice.org is deprecated in favour of api.heigit.org (10% quota since 2026-08-27, shut off 2026-09-28); plans moved to account.heigit.org"
+    ]
+  },
+  "openstreetmap-nominatim": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": "Max 1 request/s on the public server; no bulk or autocomplete use",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "No key; send a valid User-Agent or HTTP Referer identifying the application",
+      "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://nominatim.openstreetmap.org",
+    "rate_limits": {
+      "summary": "Absolute max 1 request/s; results must be cached; no autocomplete, no systematic/grid queries",
+      "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/cyanheads/openstreetmap-mcp-server",
+      "tools": [
+        "openstreetmap_search_places",
+        "openstreetmap_reverse_geocode",
+        "openstreetmap_lookup_objects",
+        "openstreetmap_query_nearby",
+        "openstreetmap_query_bbox",
+        "openstreetmap_query_raw"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "openweathermap-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "60 calls/min, 1,000,000 calls/month (Current, 5-day/3h forecast, Air Pollution, Geocoding, Maps)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://openweathermap.org/price",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "appid",
+      "scheme": null,
+      "format": "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=<API_KEY>",
+      "source_url": "https://openweathermap.org/current",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.openweathermap.org",
+    "rate_limits": {
+      "summary": "Free: 60 calls/min, 1,000,000/month; One Call API: first 1,000 calls/day free, then 0.0012 GBP/call",
+      "source_url": "https://openweathermap.org/price",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.openweathermap.org/mcp",
+      "repo": null,
+      "tools": [
+        "list_products",
+        "get_product",
+        "sign_up",
+        "account_status",
+        "get_topup_link",
+        "fetch_data"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://mcp.openweathermap.org/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: free plan is 60 calls/min and 1,000,000 calls/month, not 1,000 calls/day",
+      "notes: One Call API 3.0 is marked deprecated; One Call 4.0 gives first 1,000 calls/day free, then pay per call",
+      "mcp: OpenWeather runs an official remote MCP at https://mcp.openweathermap.org/mcp (Bearer data key, 6 tools)"
+    ]
+  },
+  "overpass-api-osm": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": "overpass-api.de: under 10,000 queries and under 1 GB download per day",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "No key; POST Overpass QL to /api/interpreter with an identifying User-Agent",
+      "source_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://overpass-api.de/api/interpreter",
+    "rate_limits": {
+      "summary": "Main instance: <10,000 queries/day and <1 GB/day, no parallel scripts; on 429 wait 30 s",
+      "source_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/cyanheads/openstreetmap-mcp-server",
+      "tools": [
+        "openstreetmap_query_nearby",
+        "openstreetmap_query_bbox",
+        "openstreetmap_query_raw"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "tomorrow-io-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Free plan: 5-day forecast, 24 h history, 1 monitored location, 1 alert",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.tomorrow.io/weather-api/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "apikey",
+      "scheme": null,
+      "format": "?apikey=<API_KEY> (or header apikey: <API_KEY>)",
+      "source_url": "https://docs.tomorrow.io/reference/api-authentication.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.tomorrow.io/v4",
+    "rate_limits": {
+      "summary": "Per-plan hourly and daily caps per API key; 429 when exceeded",
+      "source_url": "https://docs.tomorrow.io/reference/rate-limiting",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp",
+      "repo": null,
+      "tools": [
+        "get_realtime_weather",
+        "get_forecast_timeline",
+        "get_historical_weather",
+        "get_climate_normals",
+        "get_weather_events",
+        "get_route_weather_events",
+        "get_weather_summary",
+        "ask_weather_question",
+        "query_feed_data",
+        "get_feed_last_updated",
+        "get_feed_count"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.tomorrow.io/reference/mcp.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp.url: points to an aggregator (pulsemcp); official endpoint is https://api.tomorrow.io/v4/tomorrow-weather/mcp (X-Api-Key header), docs https://docs.tomorrow.io/reference/mcp"
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "aws-apis": {
+    "free_tier": "Free tier: 30+ services always free within monthly limits; new accounts also get up to $200 one-time credits ($100 on signup + up to $100 earned) usable over 6 months",
+    "sources": ["https://aws.amazon.com/free/"]
+  },
+  "fly-io-machines-api": {
+    "mcp": {"type": "official", "url": "https://docs.fly.io/model-context-protocol/flyctl-server"},
+    "free_tier": "Trial: 2 machine-hours or 7 days, whichever comes first, no card needed to start (adding a card ends the trial); then pay-as-you-go, no perpetual free tier",
+    "notes": "The official MCP server for Machines is the local flyctl server ('fly mcp server'); the hosted Sprites MCP controls Sprites, not Machines.",
+    "sources": ["https://docs.fly.io/about/free-trial/", "https://docs.fly.io/model-context-protocol/flyctl-server"]
+  },
+  "google-cloud-apis": {
+    "mcp": {"type": "official", "url": "https://docs.cloud.google.com/mcp/supported-products"},
+    "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own scopes/quotas; many APIs require explicit per-project enabling. Google runs official remote MCP servers per product (e.g. compute.googleapis.com/mcp, run.googleapis.com/mcp, bigquery.googleapis.com/mcp).",
+    "sources": ["https://docs.cloud.google.com/mcp/supported-products"]
+  },
+  "netlify-api": {
+    "free_tier": "Free: $0 forever plan with 300 credits per month (hard limit, no rollover); API usage subject to account plan limits",
+    "sources": ["https://www.netlify.com/pricing/", "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/"]
+  },
+  "chroma-cloud": {
+    "free_tier": "Trial: Starter plan $0/month base with $5 one-time free credits on signup, then usage-based pricing",
+    "sources": ["https://www.trychroma.com/pricing"]
+  },
+  "google-bigquery": {
+    "free_tier": "Free tier: 1 TiB of querying and 10 GiB of storage per month",
+    "sources": ["https://docs.cloud.google.com/free/docs/free-cloud-features"]
+  },
+  "letta": {
+    "free_tier": "Free: $0/month plan with up to 3 stateful agents and limited Letta Auto usage (bring your own API keys); API plan $20/month + usage",
+    "sources": ["https://docs.letta.com/letta-code/pricing"]
+  },
+  "mongodb-atlas": {
+    "auth_hint": "OAuth2 service account (client credentials) -> Authorization: Bearer <access token, 1h>; legacy: HTTP Digest with Atlas public/private API key",
+    "sources": ["https://www.mongodb.com/docs/atlas/api/api-authentication/"]
+  },
+  "neon-postgres": {
+    "docs": "https://neon.com/docs/reference/api",
+    "free_tier": "Free tier: 100 projects; 0.5 GB storage, 100 CU-hours and 5 GB egress per project per month, no card required",
+    "sources": ["https://neon.com/pricing", "https://api-docs.neon.tech/reference/getting-started-with-neon-api", "https://neon.com/docs/reference/api"]
+  },
+  "planetscale": {
+    "free_tier": "Paid only: no free or Hobby plan; cheapest is Postgres PS-5 single node at $5/month",
+    "sources": ["https://planetscale.com/pricing"]
+  },
+  "qdrant-cloud": {
+    "free_tier": "Free tier: single-node cluster with 0.5 vCPU, 1 GB RAM, 4 GB disk, no card; suspends after 1 week idle",
+    "sources": ["https://qdrant.tech/pricing/"]
+  },
+  "snowflake": {
+    "mcp": {"type": "official", "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"},
+    "notes": "Snowflake-managed MCP server reached GA Nov 2025; hosted per account at https://<account_url>/api/v2/databases/{db}/schemas/{schema}/mcp-servers/{name}. Snowflake-Labs/mcp is a separate self-hosted server.",
+    "sources": ["https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp"]
+  },
+  "supabase": {
+    "auth_hint": "apikey: <publishable or secret key> (not Authorization: Bearer; new keys are not JWTs); Management API: Authorization: Bearer <PAT or OAuth token>",
+    "mcp": {"type": "official", "url": "https://mcp.supabase.com/mcp"},
+    "sources": ["https://supabase.com/docs/guides/api/api-keys", "https://supabase.com/docs/reference/api/introduction", "https://supabase.com/docs/guides/getting-started/mcp"]
+  },
+  "turso": {
+    "mcp": {"type": "official", "url": "https://mcp.turso.ai/mcp"},
+    "free_tier": "Free tier: 100 databases, 5 GB storage, 500M rows read and 10M rows written per month, no card required",
+    "notes": "Official hosted MCP server (OAuth 2.1) manages databases and groups and runs SQL; repo github.com/tursodatabase/turso-mcp.",
+    "sources": ["https://docs.turso.tech/integrations/mcp", "https://turso.tech/pricing"]
+  },
+  "upstash-redis-vector": {
+    "free_tier": "Free tier: Redis 256MB/500K cmds per month; Vector 10K queries+updates per day (max 200M vectors x dimensions, 1,536 dims)",
+    "sources": ["https://upstash.com/pricing/vector"]
+  },
+  "weaviate-cloud": {
+    "free_tier": "Free: always-free plan, 1 cluster, 100,000 objects, 1 GB memory, 10 GB disk, 1 collection, no card required",
+    "notes": "MCP endpoint built into the database at /v1/mcp: always on in Weaviate Cloud, disabled by default when self-hosted (writes need MCP_SERVER_WRITE_ACCESS_ENABLED).",
+    "sources": ["https://weaviate.io/pricing", "https://docs.weaviate.io/weaviate/configuration/mcp-server"]
+  },
+  "zep": {
+    "free_tier": "Free tier: 10,000 credits per month, no rollover; variable rate limits",
+    "auth_hint": "Authorization: Api-Key <api_key> (REST API); MCP server uses OAuth 2.1 via the org's IdP",
+    "sources": ["https://www.getzep.com/pricing", "https://help.getzep.com/api-reference/user/get", "https://help.getzep.com/memory-mcp-server"]
+  },
+  "zilliz-cloud-milvus": {
+    "free_tier": "Free tier: serverless cluster, 5GB storage, 2.5M vCUs per month, up to 5 collections, no card; plus up to $200 one-time trial credits ($100 on signup + $100 on adding a card)",
+    "sources": ["https://docs.zilliz.com/docs/free-trials", "https://zilliz.com/pricing"]
+  }
+}

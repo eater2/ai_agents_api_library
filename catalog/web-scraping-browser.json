@@ -15,6 +15,10 @@
    "mcp": {
     "type": "official",
     "url": "https://api.anchorbrowser.io/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://api.anchorbrowser.io/mcp",
+    "source_url": "https://docs.anchorbrowser.io/advanced/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -25,6 +29,28 @@
    "desc_en": "Provision authenticated cloud browser sessions and turn any website into callable MCP tools for agents.",
    "notes": "Authenticated (logged-in) browser sessions require a paid tier; free tier covers unauthenticated browsing only.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "$5 free credits",
+    "period": "month",
+    "source_url": "https://docs.anchorbrowser.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "anchor-api-key",
+    "format": "anchor-api-key: <API_KEY>",
+    "source_url": "https://docs.anchorbrowser.io/api-reference",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.anchorbrowser.io",
+   "rate_limits": {
+    "summary": "Free plan: session creation capped at 5/min, up to 5 concurrent browsers",
+    "source_url": "https://docs.anchorbrowser.io/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -55,6 +81,21 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.apify.com/platform/integrations/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.apify.com",
+    "repo": "https://www.npmjs.com/package/@apify/actors-mcp-server",
+    "tools": [
+     "search-actors",
+     "fetch-actor-details",
+     "call-actor",
+     "search-apify-docs",
+     "fetch-apify-docs",
+     "get-dataset-items",
+     "get-key-value-store-record"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.apify.com/platform/integrations/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -68,6 +109,32 @@
    "desc_en": "Run web scraping/automation 'Actors' from a marketplace of thousands, and manage datasets, via REST API or MCP server.",
    "notes": "MCP search/docs tools work unauthenticated; running paid Actors consumes platform usage credit.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "$5 prepaid platform usage",
+    "period": "month",
+    "source_url": "https://apify.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <APIFY_TOKEN>",
+    "source_url": "https://docs.apify.com/api/v2",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.apify.com/v2",
+   "rate_limits": {
+    "summary": "250,000 requests/min global per user; 60 req/s per resource by default (higher for some endpoints)",
+    "source_url": "https://docs.apify.com/api/v2",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST run returns run object; poll GET run or use webhooks; sync run endpoints wait up to 300 s",
+    "source_url": "https://docs.apify.com/api/v2"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -103,8 +170,21 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/brightdata/brightdata-mcp",
-    "domain_verified": null,
-    "kind": "official"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.brightdata.com/mcp?token=<API_TOKEN>",
+    "repo": "https://github.com/brightdata/brightdata-mcp",
+    "tools": [
+     "search_engine",
+     "search_engine_batch",
+     "scrape_as_markdown",
+     "scrape_batch",
+     "discover"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/brightdata/brightdata-mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: up to 5,000 requests/mo",
    "sdk": [
@@ -116,6 +196,21 @@
    "desc_en": "Access Web Unlocker, SERP API, Scraping Browser, and structured datasets via REST API or MCP to pull web data at scale.",
    "notes": "Large multi-product suite; pricing and free-tier limits vary significantly by product (Web Unlocker vs Scraping Browser vs Datasets).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "5,000 MCP requests",
+    "period": "month",
+    "source_url": "https://github.com/brightdata/brightdata-mcp",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY>",
+    "source_url": "https://docs.brightdata.com/api-reference/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.brightdata.com",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -177,6 +272,27 @@
    "desc_en": "Trigger pre-built or custom 'robots' to extract and monitor web data via REST API, returning structured JSON.",
    "notes": "",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "50 credits",
+    "period": "month",
+    "source_url": "https://www.browse.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY>",
+    "source_url": "https://docs.browse.ai/api/v2",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.browse.ai/v2",
+   "async_jobs": {
+    "value": true,
+    "how": "robot tasks run asynchronously; get results via webhooks or by retrieving the task",
+    "source_url": "https://docs.browse.ai/api/v2"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -196,8 +312,22 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://api.browser-use.com/v3/mcp",
+    "tools": [
+     "run_session",
+     "get_session",
+     "send_task",
+     "stop_session",
+     "get_session_messages",
+     "list_sessions",
+     "list_browser_profiles"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.browser-use.com/cloud/guides/mcp-server.md",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "$15 one-time signup credit for new accounts (Google/GitHub/Microsoft); paid usage afterward",
    "sdk": [
@@ -209,6 +339,33 @@
    "desc_en": "Launch cloud browser sessions and run AI browser-automation agent tasks via REST API or Python/TypeScript SDK.",
    "notes": "Pay-as-you-go pricing: browser-hours + per-task fee + token markup; no ongoing free tier beyond signup credit.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "$15 signup credits (Google/GitHub/Microsoft signups)",
+    "period": "one_time",
+    "source_url": "https://browser-use.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-Browser-Use-API-Key",
+    "format": "X-Browser-Use-API-Key: bu_<API_KEY>",
+    "source_url": "https://docs.browser-use.com",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.browser-use.com/api/v4",
+   "rate_limits": {
+    "summary": "Per-project default max(25, 2x concurrency) req/s, capped at 100 RPS; edge WAF 1000 RPS per IP",
+    "source_url": "https://docs.browser-use.com",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "tasks run asynchronously; poll the run/session status until complete",
+    "source_url": "https://docs.browser-use.com"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -229,6 +386,20 @@
    "mcp": {
     "type": "official",
     "url": "https://www.browserbase.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.browserbase.com/mcp",
+    "repo": "https://github.com/browserbase/mcp-server-browserbase",
+    "tools": [
+     "start",
+     "end",
+     "navigate",
+     "act",
+     "observe",
+     "extract"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/browserbase/mcp-server-browserbase",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -242,6 +413,32 @@
    "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
    "notes": "Billed by browser-hours/compute time; Stagehand SDK itself is open source but needs a browser backend such as Browserbase.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "1 browser hour, 3 concurrent browsers, 15 min/session",
+    "period": "month",
+    "source_url": "https://www.browserbase.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-BB-API-Key",
+    "format": "X-BB-API-Key: <API_KEY>",
+    "source_url": "https://docs.browserbase.com/reference/api/overview",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.browserbase.com/v1",
+   "rate_limits": {
+    "summary": "Free plan: 3 concurrent browsers, 15 minutes per session",
+    "source_url": "https://www.browserbase.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Free plan data retention limited to 7 days",
+    "source_url": "https://www.browserbase.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -288,6 +485,28 @@
    "desc_en": "Automatically extract structured data (articles, products, people) from any URL via REST API, no custom parsing rules needed.",
    "notes": "Also offers Knowledge Graph and Crawl products with separate pricing; official client library docs listed as 'coming soon'.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "10,000 credits",
+    "period": "month",
+    "source_url": "https://www.diffbot.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "token",
+    "format": "https://api.diffbot.com/v3/article?token=<TOKEN>&url=<URL>",
+    "source_url": "https://www.diffbot.com/docs/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.diffbot.com/v3",
+   "rate_limits": {
+    "summary": "Free plan: 5 requests/min",
+    "source_url": "https://www.diffbot.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -307,6 +526,25 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.firecrawl.dev/v2/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.firecrawl.dev/v2/mcp",
+    "repo": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "tools": [
+     "firecrawl_scrape",
+     "firecrawl_search",
+     "firecrawl_map",
+     "firecrawl_crawl",
+     "firecrawl_check_crawl_status",
+     "firecrawl_parse",
+     "firecrawl_agent",
+     "firecrawl_agent_status",
+     "firecrawl_interact",
+     "firecrawl_monitor_create",
+     "firecrawl_credit_usage"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -320,6 +558,32 @@
    "desc_en": "Scrape, crawl, and extract structured data from any website via a single REST API call.",
    "notes": "Also offers OAuth-based remote MCP endpoint (mcp.firecrawl.dev/v2/mcp-oauth) and a keyless trial with daily limits.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "1,000 credits",
+    "period": "month",
+    "source_url": "https://www.firecrawl.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer fc-<API_KEY>",
+    "source_url": "https://docs.firecrawl.dev/api-reference/introduction",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.firecrawl.dev",
+   "rate_limits": {
+    "summary": "Free: 2 concurrent requests; scrape/map/search 10/min; crawl and agent 2/min",
+    "source_url": "https://www.firecrawl.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "crawl returns a job id; poll GET /v2/crawl/{id} or use webhooks (crawl.page, crawl.completed)",
+    "source_url": "https://docs.firecrawl.dev/features/crawl"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -351,6 +615,23 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/hyperbrowserai/mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/hyperbrowserai/mcp",
+    "tools": [
+     "scrape_webpage",
+     "crawl_webpages",
+     "extract_structured_data",
+     "search_with_bing",
+     "browser_use_agent",
+     "openai_computer_use_agent",
+     "claude_computer_use_agent",
+     "create_profile",
+     "delete_profile",
+     "list_profiles"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/hyperbrowserai/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -364,6 +645,15 @@
    "desc_en": "Spin up cloud browsers and call scrape, crawl, and structured-extract endpoints via REST API or MCP server.",
    "notes": "SDKs are compatible with Playwright, Puppeteer, and Selenium.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-api-key",
+    "format": "x-api-key: <API_KEY>",
+    "source_url": "https://hyperbrowser.ai/docs/api-reference/create-new-session",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.hyperbrowser.ai",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -396,8 +686,26 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.oxylabs.io/mcp",
+    "repo": "https://github.com/oxylabs/oxylabs-mcp",
+    "tools": [
+     "universal_scraper",
+     "google_search_scraper",
+     "amazon_search_scraper",
+     "amazon_product_scraper",
+     "ai_scraper",
+     "ai_crawler",
+     "ai_browser_agent",
+     "ai_search",
+     "ai_map",
+     "generate_schema"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/oxylabs/oxylabs-mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free trial available (check pricing)",
    "sdk": [
@@ -408,6 +716,22 @@
    "desc_en": "Fetch web pages, search-engine results, and e-commerce data at scale via REST API with built-in proxy/unblocking infrastructure.",
    "notes": "Enterprise-oriented pricing overall, but self-serve API-user creation and free trial are available via the dashboard.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "up to 2,000 results (Web Scraper API)",
+    "period": "one_time",
+    "source_url": "https://oxylabs.io/products/scraper-api/web/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(<API_USERNAME>:<API_PASSWORD>)",
+    "source_url": "https://developers.oxylabs.io/get-started/quick-start-web-scraper-api.md",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://realtime.oxylabs.io/v1",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -437,6 +761,31 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/microsoft/playwright-mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/microsoft/playwright-mcp",
+    "tools": [
+     "browser_navigate",
+     "browser_navigate_back",
+     "browser_click",
+     "browser_type",
+     "browser_press_key",
+     "browser_hover",
+     "browser_drag",
+     "browser_snapshot",
+     "browser_take_screenshot",
+     "browser_fill_form",
+     "browser_select_option",
+     "browser_file_upload",
+     "browser_handle_dialog",
+     "browser_tabs",
+     "browser_close",
+     "browser_evaluate",
+     "browser_console_messages",
+     "browser_network_requests"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/microsoft/playwright-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -447,6 +796,18 @@
    "desc_en": "Official Microsoft MCP server giving agents structured browser control (click, type, navigate) via Playwright's accessibility tree.",
    "notes": "Runs locally/self-hosted via `npx @playwright/mcp`; no cloud hosting, account, or API key required, but needs a local or self-managed browser runtime. Apache-2.0 licensed.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://github.com/microsoft/playwright-mcp",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "none (local stdio server: npx @playwright/mcp@latest)",
+    "source_url": "https://github.com/microsoft/playwright-mcp",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -479,8 +840,35 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.scrapegraphai.com/mcp",
+    "tools": [
+     "scrape",
+     "extract",
+     "search",
+     "crawl_start",
+     "crawl_get",
+     "crawl_pages",
+     "crawl_stop",
+     "crawl_resume",
+     "crawl_delete",
+     "monitor_create",
+     "monitor_list",
+     "monitor_get",
+     "monitor_update",
+     "monitor_pause",
+     "monitor_resume",
+     "monitor_delete",
+     "monitor_activity",
+     "credits",
+     "history_list",
+     "history_get"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://docs.scrapegraphai.com/services/mcp-server/introduction.md",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan: 500 one-time API credits",
    "sdk": [
@@ -492,6 +880,33 @@
    "desc_en": "Use AI-driven prompts to scrape and extract structured data from webpages via REST API or Python/JS SDK.",
    "notes": "Also offers the open-source scrapegraph-ai library with LangChain/LlamaIndex integrations.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "500 API credits",
+    "period": "month",
+    "source_url": "https://docs.scrapegraphai.com/knowledge-base/account/pricing.md",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "SGAI-APIKEY",
+    "format": "SGAI-APIKEY: sgai-<API_KEY>",
+    "source_url": "https://docs.scrapegraphai.com/api-reference/introduction.md",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://v2-api.scrapegraphai.com/api",
+   "rate_limits": {
+    "summary": "Free plan: 10 requests/min, 1 concurrent crawl, 1 monitor; status polling not counted",
+    "source_url": "https://docs.scrapegraphai.com/knowledge-base/account/rate-limits.md",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "crawl is async: start returns an id, poll the crawl get-status endpoint",
+    "source_url": "https://docs.scrapegraphai.com/api-reference/introduction.md"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -512,8 +927,12 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.scraperapi.com/mcp",
+    "source_url": "https://docs.scraperapi.com/integrations/llm-integrations/mcp-server.md",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "5,000 free API credits (trial), no long-term free plan",
    "sdk": [],
@@ -522,6 +941,32 @@
    "desc_en": "Scrape any webpage with automatic proxy rotation, CAPTCHA handling, and JS rendering via a single REST API call.",
    "notes": "Widely used alternative to ScrapingBee/Zyte; no official MCP server found.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "1,000 API credits (after a 7-day 5,000-credit trial), max 5 concurrent connections",
+    "period": "month",
+    "source_url": "https://docs.scraperapi.com/getting-started/quick-start.md",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "api_key",
+    "format": "https://api.scraperapi.com/?api_key=<API_KEY>&url=<URL>",
+    "source_url": "https://docs.scraperapi.com",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.scraperapi.com",
+   "rate_limits": {
+    "summary": "Free plan: max 5 concurrent connections",
+    "source_url": "https://docs.scraperapi.com/getting-started/quick-start.md",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "optional async endpoint https://async.scraperapi.com returns a job to fetch later",
+    "source_url": "https://docs.scraperapi.com"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -541,6 +986,24 @@
    "mcp": {
     "type": "official",
     "url": "https://scrapfly.io/products/mcp-cloud",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.scrapfly.io/mcp",
+    "tools": [
+     "scraping_instruction_enhanced",
+     "web_get_page",
+     "web_scrape",
+     "screenshot",
+     "check_if_blocked",
+     "cloud_browser_open",
+     "cloud_browser_navigate",
+     "cloud_browser_close",
+     "cloud_browser_sessions",
+     "docs_search",
+     "info_account"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://scrapfly.io/docs/mcp/tools",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -554,6 +1017,32 @@
    "desc_en": "Scrape webpages, run cloud browsers, and capture screenshots via REST API or hosted MCP server with anti-bot bypass.",
    "notes": "MCP usage draws from the same credit balance as direct API calls.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "1,000 API credits",
+    "source_url": "https://scrapfly.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "key",
+    "format": "https://api.scrapfly.io/scrape?key=<API_KEY>&url=<URL>",
+    "source_url": "https://scrapfly.io/docs/scrape-api/getting-started",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.scrapfly.io",
+   "rate_limits": {
+    "summary": "Free plan: 5 concurrent requests; concurrency defined by subscription",
+    "source_url": "https://scrapfly.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "optional: pass webhook_name to queue the request and receive the result on a webhook",
+    "source_url": "https://scrapfly.io/docs/scrape-api/getting-started"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -574,8 +1063,29 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.scrapingbee.com/mcp",
+    "tools": [
+     "get_page_text",
+     "get_page_html",
+     "extract_page_data",
+     "get_screenshot",
+     "get_file",
+     "fast_search",
+     "get_google_search_results",
+     "ask_chatgpt",
+     "ask_gemini",
+     "get_amazon_search_results",
+     "get_amazon_product_details",
+     "get_walmart_search_results",
+     "get_youtube_search_results",
+     "get_scrapingbee_usage"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://www.scrapingbee.com/documentation/remote-mcp/",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "1,000 free API credits, no card required",
    "sdk": [
@@ -587,6 +1097,22 @@
    "desc_en": "Scrape any webpage with JS rendering, proxy rotation, and screenshot capture via a single REST API call.",
    "notes": "Postman collection provided in place of a published OpenAPI spec.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "1,000 free API credits",
+    "period": "one_time",
+    "source_url": "https://www.scrapingbee.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY>",
+    "source_url": "https://www.scrapingbee.com/documentation/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://app.scrapingbee.com/api/v1",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -606,6 +1132,36 @@
    "mcp": {
     "type": "official",
     "url": "https://spider.cloud/mcp/",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.spider.cloud/mcp",
+    "repo": "https://www.npmjs.com/package/spider-cloud-mcp",
+    "tools": [
+     "spider_crawl",
+     "spider_scrape",
+     "spider_search",
+     "spider_links",
+     "spider_screenshot",
+     "spider_unblocker",
+     "spider_transform",
+     "spider_get_credits",
+     "spider_ai_crawl",
+     "spider_ai_scrape",
+     "spider_ai_search",
+     "spider_ai_browser",
+     "spider_ai_links",
+     "spider_browser_open",
+     "spider_browser_navigate",
+     "spider_browser_click",
+     "spider_browser_fill",
+     "spider_browser_screenshot",
+     "spider_browser_content",
+     "spider_browser_evaluate",
+     "spider_browser_wait_for",
+     "spider_browser_close"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://spider.cloud/mcp/",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -620,6 +1176,22 @@
    "desc_en": "Crawl and scrape websites at scale, returning JSON/XML/CSV, via REST API, CLI, or MCP server.",
    "notes": "",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "quota": "25 keyless requests",
+    "period": "day",
+    "source_url": "https://spider.cloud/docs/api",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer sk-<API_KEY>",
+    "source_url": "https://spider.cloud/docs/api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.spider.cloud",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -640,8 +1212,31 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "vendor",
+    "repo": "https://github.com/steel-dev/steel-mcp-server",
+    "tools": [
+     "steel_scrape",
+     "steel_screenshot",
+     "steel_pdf",
+     "steel_session_create",
+     "steel_session_release",
+     "steel_navigate",
+     "steel_snapshot",
+     "steel_find",
+     "steel_act",
+     "steel_wait_for",
+     "steel_session_diagnostics",
+     "steel_session_handoff",
+     "steel_session_replay",
+     "steel_batch",
+     "steel_session_options",
+     "steel_session_live_view"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/steel-dev/steel-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "Hobby tier: 100 browser-hours/mo, 500 requests/day, no card required",
    "sdk": [
@@ -653,6 +1248,33 @@
    "desc_en": "Create managed cloud browser sessions with stealth proxies and CAPTCHA solving, controllable via REST API or Playwright/Puppeteer.",
    "notes": "Open-source self-hostable browser engine (steel-browser) also available; no official MCP server confirmed as of check.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "$30 usage credits (Launch plan, valid 90 days)",
+    "period": "one_time",
+    "source_url": "https://docs.steel.dev/overview/pricinglimits",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "steel-api-key",
+    "format": "steel-api-key: <API_KEY>",
+    "source_url": "https://docs.steel.dev",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.steel.dev",
+   "rate_limits": {
+    "summary": "Launch plan: 60 requests/min, 10 concurrent sessions, 15 min max session",
+    "source_url": "https://docs.steel.dev/overview/pricinglimits",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Launch plan: 7 days data retention",
+    "source_url": "https://docs.steel.dev/overview/pricinglimits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -684,6 +1306,26 @@
    "desc_en": "Fetch and auto-extract web pages (HTML, browser rendering, product/article data) via one HTTP API with ban avoidance.",
    "notes": "Part of Zyte's broader suite (Scrapy Cloud, Zyte IDE).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "quota": "$5 free credit",
+    "period": "one_time",
+    "source_url": "https://www.zyte.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(<API_KEY>:)",
+    "source_url": "https://docs.zyte.com/zyte-api/usage/http.html",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.zyte.com/v1",
+   "rate_limits": {
+    "summary": "Per-API-key rate limit (429 /limits/over-user-limit); retry with exponential backoff",
+    "source_url": "https://docs.zyte.com/zyte-api/usage/errors.html",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

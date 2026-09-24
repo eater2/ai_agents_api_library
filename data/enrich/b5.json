@@ -1,0 +1,1467 @@
+{
+  "arxiv-api": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://info.arxiv.org/help/api/tou.html",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "no auth",
+      "source_url": "https://info.arxiv.org/help/api/user-manual.html",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "http://export.arxiv.org/api/query",
+    "rate_limits": {
+      "summary": "No more than 1 request every 3 seconds, single connection at a time, across all your machines; max_results slices of 2000, 30000 total",
+      "source_url": "https://info.arxiv.org/help/api/tou.html",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous Atom XML responses",
+      "source_url": "https://info.arxiv.org/help/api/user-manual.html"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/blazickjp/arxiv-mcp-server",
+      "tools": [
+        "search_papers",
+        "get_abstract",
+        "download_paper",
+        "list_papers",
+        "read_paper",
+        "get_paper_outline",
+        "read_paper_section",
+        "search_paper_text",
+        "get_paper_latex",
+        "citation_graph",
+        "export_citations",
+        "semantic_search"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/blazickjp/arxiv-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "congress-gov": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "5,000 requests per hour",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://github.com/LibraryOfCongress/api.congress.gov",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "api_key",
+      "scheme": null,
+      "format": "?api_key=<API_KEY> (or header X-Api-Key: <API_KEY>)",
+      "source_url": "https://api.data.gov/docs/developer-manual/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.congress.gov/v3",
+    "rate_limits": {
+      "summary": "5,000 requests per hour",
+      "source_url": "https://github.com/LibraryOfCongress/api.congress.gov",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": "https://congressgov.caseyjhand.com/mcp",
+      "repo": "https://github.com/cyanheads/congressgov-mcp-server",
+      "tools": [
+        "congressgov_bill_lookup",
+        "congressgov_enacted_laws",
+        "congressgov_member_lookup",
+        "congressgov_committee_lookup",
+        "congressgov_roll_votes",
+        "congressgov_senate_nominations",
+        "congressgov_bill_summaries",
+        "congressgov_crs_reports",
+        "congressgov_committee_reports",
+        "congressgov_daily_record",
+        "congressgov_search_bills"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://github.com/cyanheads/congressgov-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "context7-library-docs-for-agents": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "1,000 API calls",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://context7.com/plans",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <CONTEXT7_API_KEY>",
+      "source_url": "https://context7.com/docs/api-guide",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://context7.com/api/",
+    "rate_limits": {
+      "summary": "Low limits without key; plan-based limits with key; 429 with Retry-After and RateLimit-* headers when exceeded",
+      "source_url": "https://context7.com/docs/api-guide",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.context7.com/mcp",
+      "repo": "https://github.com/upstash/context7",
+      "tools": [
+        "resolve-library-id",
+        "query-docs"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/upstash/context7",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: plans page states Free plan = 1,000 API calls per month; Pro is $10/seat/month"
+    ]
+  },
+  "crossref-rest-api": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "no auth; add mailto=<email> for polite pool (Metadata Plus: Crossref-Plus-API-Token: Bearer <key>)",
+      "source_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.crossref.org",
+    "rate_limits": {
+      "summary": "Public pool 5 req/s, concurrency 1; polite pool (mailto) 10 req/s, concurrency 3; Metadata Plus 150 req/s",
+      "source_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/afrise/academic-search-mcp-server",
+      "tools": [
+        "search_papers",
+        "fetch_paper_details",
+        "search_by_topic"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/afrise/academic-search-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "notes: rate limits are now fixed per pool (public 5 req/s conc. 1, polite 10 req/s conc. 3), not only adaptive headers"
+    ]
+  },
+  "gdelt-api": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "no auth",
+      "source_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.gdeltproject.org/api/v2/doc/doc",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous; 75 results default, up to 250 per query, rolling 3-month window",
+      "source_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": "https://gdelt.caseyjhand.com/mcp",
+      "repo": "https://github.com/cyanheads/gdelt-mcp-server",
+      "tools": [
+        "gdelt_search_articles",
+        "gdelt_get_coverage_timeline",
+        "gdelt_get_tone_distribution",
+        "gdelt_get_coverage_breakdown",
+        "gdelt_search_tv",
+        "gdelt_get_tv_clips",
+        "gdelt_get_tv_context",
+        "gdelt_get_tv_trending",
+        "gdelt_list_tv_stations"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://github.com/cyanheads/gdelt-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "gitingest": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "no auth; optional GitHub PAT in 'token' parameter for private repos",
+      "source_url": "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://gitingest.com/api",
+    "rate_limits": {
+      "summary": "10 requests/minute on POST /api/ingest and GET /api/{user}/{repository} (per server limiter)",
+      "source_url": "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/narumiruna/gitingest-mcp",
+      "tools": [
+        "ingest_git"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/narumiruna/gitingest-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: the hosted API has a published limit of 10 requests/minute per endpoint (limiter in the official server source)"
+    ]
+  },
+  "hacker-news-api": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://github.com/HackerNews/API",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "no auth",
+      "source_url": "https://github.com/HackerNews/API",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://hacker-news.firebaseio.com/v0/",
+    "rate_limits": {
+      "summary": "There is currently no rate limit",
+      "source_url": "https://github.com/HackerNews/API",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous JSON; real-time change events available via Firebase client libraries",
+      "source_url": "https://github.com/HackerNews/API"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/pskill9/hn-server",
+      "tools": [
+        "get_stories"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/pskill9/hn-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: listed community server pskill9/hn-server scrapes news.ycombinator.com HTML rather than using the official Firebase API"
+    ]
+  },
+  "open-library": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://openlibrary.org/developers/api",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "User-Agent: MyLibraryApp (contact@example.org)",
+      "source_url": "https://openlibrary.org/developers/api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://openlibrary.org",
+    "rate_limits": {
+      "summary": "1 request/second unidentified; 3 requests/second with User-Agent naming app and contact; no bulk download via API",
+      "source_url": "https://openlibrary.org/developers/api",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/8enSmith/mcp-open-library",
+      "tools": [
+        "search_books",
+        "get_book_by_title",
+        "get_authors_by_name",
+        "get_author_info",
+        "get_author_photo",
+        "get_book_cover",
+        "get_book_by_id"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/8enSmith/mcp-open-library",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "nytimes": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "500 requests per API",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://developer.nytimes.com/faq",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "api-key",
+      "scheme": null,
+      "format": "?api-key=<API_KEY>",
+      "source_url": "https://api.nytimes.com/svc/topstories/v2/home.json",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.nytimes.com/svc",
+    "rate_limits": {
+      "summary": "Two limits per API: 500 requests/day and 5 requests/minute; sleep 12 s between calls",
+      "source_url": "https://developer.nytimes.com/faq",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Non-commercial use only; terms forbid using the APIs or content to develop a software product or train an ML/AI system",
+      "source_url": "https://developer.nytimes.com/terms",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/jeffmm/nytimes-mcp",
+      "tools": [
+        "search_articles",
+        "get_latest_news",
+        "get_most_popular",
+        "get_archive",
+        "get_bestseller_list"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/jeffmm/nytimes-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: FAQ states 500 requests/day and 5 requests/minute per API with no Archive API exception",
+      "notes: Terms of Use also forbid using the APIs to develop a software product or train an ML/AI system"
+    ]
+  },
+  "newsapi": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100 requests",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://newsapi.org/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-Api-Key",
+      "scheme": null,
+      "format": "X-Api-Key: <API_KEY> (or ?apiKey=<API_KEY>, or Authorization: Bearer <API_KEY>)",
+      "source_url": "https://newsapi.org/docs/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://newsapi.org/v2",
+    "rate_limits": {
+      "summary": "Developer plan 100 requests/day, 24h article delay, dev/test only; Business $449/mo with 250,000 requests/month",
+      "source_url": "https://newsapi.org/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/matteoantoci/mcp-newsapi",
+      "tools": [
+        "search_articles",
+        "get_top_headlines"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/matteoantoci/mcp-newsapi",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "openalex-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "$1 of API usage (10x with free API key)",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "api_key",
+      "scheme": null,
+      "format": "?api_key=<API_KEY> (optional)",
+      "source_url": "https://help.openalex.org/api/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.openalex.org",
+    "rate_limits": {
+      "summary": "Cost-based daily budget ($1/day free, resets midnight UTC); each response reports cost_usd; prepaid top-ups in $1 increments",
+      "source_url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Data released under CC0",
+      "source_url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/benedict2310/Scientific-Papers-MCP",
+      "tools": [
+        "list_categories",
+        "fetch_latest",
+        "fetch_top_cited",
+        "search_papers",
+        "fetch_content"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/benedict2310/Scientific-Papers-MCP",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "pubmed-e-utilities-ncbi": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "no auth; optional ?api_key=<NCBI_API_KEY> raises limit",
+      "source_url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+    "rate_limits": {
+      "summary": "3 requests/second per IP without key; 10 requests/second with free API key (one key per NCBI account)",
+      "source_url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/openags/paper-search-mcp",
+      "tools": [
+        "search_papers",
+        "search_pubmed",
+        "search_pmc",
+        "search_europe_pmc",
+        "download_with_fallback"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/openags/paper-search-mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "semantic-scholar-api": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.semanticscholar.org/product/api",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "scheme": null,
+      "format": "x-api-key: <API_KEY> (optional)",
+      "source_url": "https://www.semanticscholar.org/product/api/tutorial",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.semanticscholar.org/graph/v1",
+    "rate_limits": {
+      "summary": "Unauthenticated: 1000 req/s shared among all users, may be throttled; with key: 1 req/s on all endpoints to start",
+      "source_url": "https://www.semanticscholar.org/product/api",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+      "tools": [
+        "paper_relevance_search",
+        "paper_bulk_search",
+        "paper_title_search",
+        "paper_details",
+        "paper_batch_details",
+        "paper_citations",
+        "paper_references",
+        "author_search",
+        "author_details",
+        "author_papers",
+        "snippet_search",
+        "get_paper_recommendations_single",
+        "get_paper_recommendations_multi"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "wikidata": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.wikidata.org/wiki/Wikidata:Data_access",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "no auth for reads; send a descriptive User-Agent with contact info",
+      "source_url": "https://www.wikidata.org/wiki/Wikidata:Data_access",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://query.wikidata.org/sparql",
+    "rate_limits": {
+      "summary": "Wikimedia limits: 10 req/min IP-only, 200 req/min with proper User-Agent; back off on 429 and honor Retry-After",
+      "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://wd-mcp.wmcloud.org/mcp",
+      "repo": "https://github.com/wmde/WikidataMCP",
+      "tools": [
+        "search_items",
+        "search_properties",
+        "get_statements",
+        "get_statement_values",
+        "get_instance_and_subclass_hierarchy",
+        "execute_sparql"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/wmde/WikidataMCP",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "wikipedia-wikimedia-api": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "User-Agent: MyBot/0.1 (https://example.org/mybot; mybot@example.org)",
+      "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://en.wikipedia.org/w/api.php",
+    "rate_limits": {
+      "summary": "10 req/min IP-only; 200 req/min with User-Agent (unauthenticated or new users); 2000 req/min established editors; max 3 concurrent",
+      "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Text available under CC BY-SA; additional terms may apply",
+      "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/Rudra-ravi/wikipedia-mcp",
+      "tools": [
+        "search_wikipedia",
+        "get_article",
+        "get_summary",
+        "get_sections",
+        "get_links",
+        "get_coordinates",
+        "get_related_topics",
+        "summarize_article_for_query",
+        "extract_key_facts"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/Rudra-ravi/wikipedia-mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "wolfram-alpha-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "2,000 non-commercial API calls",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://products.wolframalpha.com/api",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "appid",
+      "scheme": null,
+      "format": "?appid=<APPID> (or Authorization: Bearer <APPID>)",
+      "source_url": "https://products.wolframalpha.com/llm-api/documentation",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://www.wolframalpha.com/api/v1/llm-api",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous text response; maxchars default 6800",
+      "source_url": "https://products.wolframalpha.com/llm-api/documentation"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: API product page confirms 2,000 non-commercial calls/month (no longer just 'reported')"
+    ]
+  },
+  "adobe-firefly-services-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/getting-started/usage-notes/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <IMS_ACCESS_TOKEN> + x-api-key: <CLIENT_ID>",
+      "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://firefly-api.adobe.io/v3",
+    "rate_limits": {
+      "summary": "Default 4 requests/minute and 9,000 requests/day per organization; 429 when exceeded",
+      "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/getting-started/usage-notes/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "openid",
+        "AdobeID",
+        "session",
+        "additional_info",
+        "read_organizations",
+        "firefly_api",
+        "ff_apis"
+      ],
+      "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": {
+      "value": true,
+      "how": "POST /v3/images/generate-async returns jobId, statusUrl, cancelUrl; poll GET /v3/status/{jobId}",
+      "source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/how-tos/using-async-apis"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/Focus-GTS/firefly-services-mcp",
+      "tools": [
+        "firefly_generate_image",
+        "firefly_generate_similar",
+        "firefly_expand_image",
+        "firefly_fill_image",
+        "firefly_generate_object_composite",
+        "firefly_generate_video",
+        "firefly_get_job_status",
+        "firefly_upload_image"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/Focus-GTS/firefly-services-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: community MCP server exists (github.com/Focus-GTS/firefly-services-mcp) covering Firefly, Photoshop and Lightroom APIs"
+    ]
+  },
+  "black-forest-labs-flux-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.bfl.ai/account_management/credits_billing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-key",
+      "scheme": null,
+      "format": "x-key: <BFL_API_KEY>",
+      "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.bfl.ai/v1",
+    "rate_limits": {
+      "summary": "Max 24 concurrent requests for most endpoints (6 for flux-kontext-max); 429 when exceeded",
+      "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST returns id + polling_url; poll polling_url (or use webhook) until Ready",
+      "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines"
+    },
+    "data_policy": {
+      "summary": "Generated result URLs on delivery.*.bfl.ai expire after 10 minutes; download promptly",
+      "source_url": "https://docs.bfl.ai/api_integration/integration_guidelines",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.bfl.ai",
+      "repo": null,
+      "tools": [
+        "generate_image",
+        "vto",
+        "generate_variations",
+        "get_history",
+        "get_credits",
+        "generate_video",
+        "get_result"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.bfl.ai/api_integration/mcp_integration",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "freepik-api": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.magnific.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-magnific-api-key",
+      "scheme": null,
+      "format": "x-magnific-api-key: <API_KEY>",
+      "source_url": "https://docs.magnific.com/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.magnific.com/v1",
+    "rate_limits": {
+      "summary": "Per IP: 50 hits/s over 5 s, and 10 hits/s averaged over 2 min; no daily cap for most endpoints",
+      "source_url": "https://docs.magnific.com/ratelimits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST returns task id; poll GET /v1/ai/<model>/{task-id} or pass webhook_url",
+      "source_url": "https://docs.magnific.com/llms.txt"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.magnific.com",
+      "repo": null,
+      "tools": [
+        "images_generate",
+        "images_upscale",
+        "images_remove_background",
+        "images_to_svg",
+        "video_generate",
+        "audio_tts",
+        "creations_search",
+        "creation_status",
+        "account_balance"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.magnific.com/modelcontextprotocol",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: vendor now runs an official remote MCP at https://mcp.magnific.com (OAuth sign-in, no API key)",
+      "auth_hint: docs now use x-magnific-api-key header and base https://api.magnific.com; docs.freepik.com 301-redirects to docs.magnific.com",
+      "free_tier: '~5 EUR free API credits' not found on vendor docs; pricing page says API generations deduct credits on paid plans"
+    ]
+  },
+  "google-gemini-imagen-image-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": true,
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-goog-api-key",
+      "scheme": null,
+      "format": "x-goog-api-key: <GEMINI_API_KEY>",
+      "source_url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://generativelanguage.googleapis.com/v1beta",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "image returned inline in the response",
+      "source_url": "https://ai.google.dev/gemini-api/docs/image-generation"
+    },
+    "data_policy": {
+      "summary": "Paid tier: content not used to improve Google products; all generated images carry a SynthID watermark",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia",
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page lists Free Tier 'Not available' for all Gemini image models (Nano Banana family); image generation is paid only",
+      "mcp: Google's GoogleCloudPlatform org has an experimental, 'not officially supported' MCP (mcp-genmedia / mcp-nanobanana-go) using Vertex AI ADC auth, not Gemini API keys"
+    ]
+  },
+  "ideogram-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developer.ideogram.ai/ideogram-api/api-setup",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Api-Key",
+      "scheme": null,
+      "format": "Api-Key: <IDEOGRAM_API_KEY>",
+      "source_url": "https://developer.ideogram.ai/ideogram-api/api-setup",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.ideogram.ai",
+    "rate_limits": {
+      "summary": "Default 10 in-flight requests; contact Ideogram for more",
+      "source_url": "https://developer.ideogram.ai/ideogram-api/api-overview",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Image links returned by the API expire; download and store images you want to keep",
+      "source_url": "https://developer.ideogram.ai/ideogram-api/api-setup",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.ideogram.ai/mcp",
+      "repo": null,
+      "tools": [
+        "generate_images_bulk",
+        "edit_image",
+        "reframe_image",
+        "upscale_image",
+        "create_collection",
+        "upload_image",
+        "create_dataset",
+        "upload_dataset_assets",
+        "train_model"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://ideogram.ai/features/mcp/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: API setup page states minimum one-time credit purchase $1 and minimum auto top-up target $10, not a $40 minimum top-up",
+      "notes: official MCP uses OAuth and bills the Ideogram web subscription, not API credits"
+    ]
+  },
+  "leonardo-ai-api": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.leonardo.ai/docs/pricing-and-plans-faq",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <LEONARDO_API_KEY>",
+      "source_url": "https://docs.leonardo.ai/docs/getting-started",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://cloud.leonardo.ai/api/rest/v1",
+    "rate_limits": {
+      "summary": "Default concurrency 10 generation jobs; extra requests queue up to a pending limit; separate API request rate limit",
+      "source_url": "https://docs.leonardo.ai/docs/guide-to-concurrency-queue-and-rate-limit",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST returns generationId; poll GET /generations/{id} or configure webhook callback; a sync endpoint exists for some models",
+      "source_url": "https://docs.leonardo.ai/docs/getting-started"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.leonardo.ai/v1/mcp",
+      "repo": null,
+      "tools": [
+        "generate-image"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.leonardo.ai/docs/connect-to-leonardoai-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: vendor docs describe Pay-As-You-Go top-ups only; no '$5 free API credits' found in API pricing FAQ",
+      "notes: MCP server authenticates with an 'API-Key' header, not OAuth"
+    ]
+  },
+  "openai-images-api-gpt-image": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developers.openai.com/api/docs/guides/image-generation",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <OPENAI_API_KEY>",
+      "source_url": "https://developers.openai.com/api/docs/guides/image-generation",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.openai.com/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous response (optional streaming of partial images)",
+      "source_url": "https://developers.openai.com/api/docs/guides/image-generation"
+    },
+    "data_policy": {
+      "summary": "API data not used for training unless opted in; /v1/images/generations keeps abuse-monitoring data 30 days",
+      "source_url": "https://developers.openai.com/api/docs/guides/your-data",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+      "tools": [
+        "create-image",
+        "edit-image"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "docs: guide now lives at developers.openai.com/api/docs/guides/image-generation; current models are gpt-image-2.5-sunburst and gpt-image-2.5-flare; org verification may be required"
+    ]
+  },
+  "recraft-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.recraft.ai/docs/api-reference/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <RECRAFT_API_TOKEN>",
+      "source_url": "https://www.recraft.ai/docs/api-reference/getting-started",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://external.api.recraft.ai/v1",
+    "rate_limits": {
+      "summary": "100 images/minute per user and 5 requests/second",
+      "source_url": "https://www.recraft.ai/docs/api-reference/appendix",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous; returns image URLs",
+      "source_url": "https://www.recraft.ai/docs/api-reference/getting-started"
+    },
+    "data_policy": {
+      "summary": "Generated images stored approx. 24 hours (may change)",
+      "source_url": "https://www.recraft.ai/docs/api-reference/appendix",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.recraft.ai/mcp",
+      "repo": "https://github.com/recraft-ai/mcp-recraft-server",
+      "tools": [
+        "generate_image",
+        "create_style",
+        "vectorize_image",
+        "image_to_image",
+        "remove_background",
+        "replace_background",
+        "crisp_upscale",
+        "creative_upscale",
+        "get_user"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://www.recraft.ai/docs/mcp-reference/remote-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: vendor now hosts a remote MCP at https://mcp.recraft.ai/mcp (OAuth 2.0, bills subscription credits), besides the GitHub repo"
+    ]
+  },
+  "remove-bg-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "50 API calls",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.remove.bg/api",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-Api-Key",
+      "scheme": null,
+      "format": "X-Api-Key: <API_KEY>",
+      "source_url": "https://www.remove.bg/api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.remove.bg/v1.0",
+    "rate_limits": {
+      "summary": "Up to 500 images/minute, scaled down by megapixels (e.g. 10/min at 50 MP); 429 with Retry-After",
+      "source_url": "https://www.remove.bg/api",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "synchronous POST /removebg returns the image",
+      "source_url": "https://www.remove.bg/api"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: API page says 'first 50 API calls per month are on us'; the 'preview/small resolution only' restriction is not stated there"
+    ]
+  },
+  "stability-ai-platform-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "25 free credits",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://platform.stability.ai/account/credits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <STABILITY_API_KEY>",
+      "source_url": "https://platform.stability.ai/docs/getting-started",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.stability.ai",
+    "rate_limits": {
+      "summary": "150 requests every 10 seconds; 429 when exceeded",
+      "source_url": "https://platform.stability.ai/docs/getting-started",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/tadasant/mcp-server-stability-ai",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://github.com/tadasant/mcp-server-stability-ai",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: community MCP server exists (github.com/tadasant/mcp-server-stability-ai, not affiliated with Stability AI)",
+      "free_tier: platform billing page says 25 free credits, but platform docs text still says new users get 200 free credits; vendor pages disagree"
+    ]
+  },
+  "bland-ai": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "2 credits + an inbound number; 100 calls/day, 10 concurrent calls",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.bland.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <BLAND_API_KEY> (bare key without prefix also accepted)",
+      "source_url": "https://docs.bland.ai/api-v1/post/calls",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.bland.ai/v1",
+    "rate_limits": {
+      "summary": "Start plan: 100 calls/day, 100 calls/hour, 10 concurrent calls; MCP server 120 req/min per org",
+      "source_url": "https://www.bland.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /v1/calls returns call_id; poll call status/logs or pass webhook to receive the call object when it ends",
+      "source_url": "https://docs.bland.ai/platform/agent-quickstart"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.bland.ai/v1/mcp",
+      "repo": null,
+      "tools": [
+        "create_call",
+        "wait_for_call",
+        "stop_call",
+        "get_call_log",
+        "list_voices",
+        "validate_pathway",
+        "get_pathway_schema",
+        "get_pathway_context",
+        "query_analytics",
+        "search_bland_docs",
+        "get_bland_doc",
+        "bland_api_get",
+        "call_bland_api"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://docs.bland.ai/integrations/mcp/overview",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: docs now say 'Authorization: Bearer <api_key>' (bare key still accepted; x-api-key is not read)"
+    ]
+  },
+  "deepgram-voice-agent-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "$200 credit",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://deepgram.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: Token <DEEPGRAM_API_KEY>",
+      "source_url": "https://developers.deepgram.com/reference/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "wss://agent.deepgram.com",
+    "rate_limits": {
+      "summary": "Pay As You Go: up to 45 concurrent Voice Agent WSS connections (60 on Growth); STT 150 WSS / 50 REST; TTS 45",
+      "source_url": "https://deepgram.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "real-time WebSocket session",
+      "source_url": "https://developers.deepgram.com/docs/voice-agent"
+    },
+    "data_policy": {
+      "summary": "Model Improvement Program may keep data for training; opt out per request with mip_opt_out=true (data kept only for processing)",
+      "source_url": "https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://cli.deepgram.com",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://developers.deepgram.com/developer-tools/cli/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: vendor ships an MCP server built into the dg CLI ('dg mcp', stdio or SSE) giving access to Deepgram APIs; also a docs MCP at https://developers.deepgram.com/_mcp/server"
+    ]
+  },
+  "elevenlabs-agents-platform": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "10k credits",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://elevenlabs.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "xi-api-key",
+      "scheme": null,
+      "format": "xi-api-key: <ELEVENLABS_API_KEY>",
+      "source_url": "https://elevenlabs.io/docs/api-reference/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.elevenlabs.io/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": {
+      "summary": "Zero Retention Mode available per agent and for Enterprise API use",
+      "source_url": "https://elevenlabs.io/docs/llms.txt",
+      "checked_at": "2026-09-24"
+    },
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.elevenlabs.io/v1/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page lists no commercial license on Free (Commercial License starts at Starter, $6/month)",
+      "docs: Agents docs moved to elevenlabs.io/docs/eleven-agents/overview"
+    ]
+  },
+  "livekit-cloud": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "1,000 agent session min, 5,000 WebRTC participant min, 50GB transfer, $2.50 inference credits",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://livekit.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <JWT signed with API key + secret>",
+      "source_url": "https://docs.livekit.io/reference/other/roomservice-api.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": {
+      "summary": "Build plan: up to 100 concurrent users and agents",
+      "source_url": "https://livekit.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.livekit.io/reference/developer-tools/docs-mcp.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "homepage: livekit.io now redirects to livekit.com"
+    ]
+  }
+}
