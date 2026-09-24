@@ -2167,7 +2167,7 @@
       "operation": "fetch a web page through Web Unlocker",
       "method": "POST",
       "url": "https://api.brightdata.com/request",
-      "example": "curl https://api.brightdata.com/request -H \"Content-Type: application/json\" -H \"Authorization: Bearer $BRIGHTDATA_API_KEY\" -d '{\"zone\":\"$WEB_UNLOCKER_ZONE\",\"url\":\"https://example.com\",\"format\":\"raw\"}'",
+      "example": "curl https://api.brightdata.com/request -H \"Content-Type: application/json\" -H \"Authorization: Bearer $BRIGHTDATA_API_KEY\" -d '{\"zone\":\"<WEB_UNLOCKER_ZONE>\",\"url\":\"https://example.com\",\"format\":\"raw\"}'",
       "response_fields": [
         "body (raw target page content)"
       ],
@@ -11421,7 +11421,7 @@
       "operation": "translate a model to SVF2 (Model Derivative job)",
       "method": "POST",
       "url": "https://developer.api.autodesk.com/modelderivative/v2/designdata/job",
-      "example": "curl -X POST https://developer.api.autodesk.com/modelderivative/v2/designdata/job -H \"Authorization: Bearer $APS_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"input\": {\"urn\": \"$BASE64_URN_OF_SOURCE_FILE\"}, \"output\": {\"formats\": [{\"type\": \"svf2\", \"views\": [\"2d\", \"3d\"]}]}}'",
+      "example": "curl -X POST https://developer.api.autodesk.com/modelderivative/v2/designdata/job -H \"Authorization: Bearer $APS_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"input\": {\"urn\": \"<BASE64_URN_OF_SOURCE_FILE>\"}, \"output\": {\"formats\": [{\"type\": \"svf2\", \"views\": [\"2d\", \"3d\"]}]}}'",
       "response_fields": [
         "result",
         "urn",
@@ -13667,7 +13667,7 @@
       "operation": "OCR an uploaded PDF",
       "method": "POST",
       "url": "https://pdf-services.adobe.io/operation/ocr",
-      "example": "curl -X POST https://pdf-services.adobe.io/operation/ocr -H \"x-api-key: $ADOBE_CLIENT_ID\" -H \"Authorization: Bearer $ADOBE_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"assetID\":\"$ASSET_ID\",\"ocrLang\":\"en-US\"}'",
+      "example": "curl -X POST https://pdf-services.adobe.io/operation/ocr -H \"x-api-key: $ADOBE_CLIENT_ID\" -H \"Authorization: Bearer $ADOBE_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"assetID\":\"<ASSET_ID>\",\"ocrLang\":\"en-US\"}'",
       "response_fields": [
         "HTTP 201",
         "location header",
@@ -15986,6 +15986,21 @@
     },
     "base_url": "https://api.laratranslate.com",
     "no_auth": false,
+    "call": {
+      "operation": "translate text (Bearer is a 10-minute JWT from POST /v2/auth/, signed with HMAC-SHA256 of the access key secret; see auth_scheme)",
+      "method": "POST",
+      "url": "https://api.laratranslate.com/v2/translate/",
+      "example": "curl -X POST https://api.laratranslate.com/v2/translate/ -H \"Authorization: Bearer $LARA_JWT\" -H \"X-Lara-Date: $(date -u '+%a, %d %b %Y %H:%M:%S GMT')\" -H \"Content-Type: application/json\" -d '{\"q\":\"Hello world\",\"target\":\"pl-PL\"}'",
+      "response_fields": [],
+      "async": null,
+      "source_url": "https://developers.laratranslate.com/docs/switch-from-modernmt",
+      "checked_at": "2026-09-24"
+    },
+    "unit_price": {
+      "summary": "Pro: €20 per 1M characters; Team: €15 per 1M characters; free: 10,000 characters/month",
+      "source_url": "https://app.laratranslate.com/pricing",
+      "checked_at": "2026-09-24"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": true,
@@ -24050,7 +24065,7 @@
       "operation": "send a push message",
       "method": "POST",
       "url": "https://api.line.me/v2/bot/message/push",
-      "example": "curl -X POST https://api.line.me/v2/bot/message/push -H \"Content-Type: application/json\" -H \"Authorization: Bearer $LINE_CHANNEL_ACCESS_TOKEN\" -d '{\"to\":\"$LINE_USER_ID\",\"messages\":[{\"type\":\"text\",\"text\":\"Hello, world\"}]}'",
+      "example": "curl -X POST https://api.line.me/v2/bot/message/push -H \"Content-Type: application/json\" -H \"Authorization: Bearer $LINE_CHANNEL_ACCESS_TOKEN\" -d '{\"to\":\"<LINE_USER_ID>\",\"messages\":[{\"type\":\"text\",\"text\":\"Hello, world\"}]}'",
       "response_fields": [
         "sentMessages[].id",
         "sentMessages[].quoteToken"
@@ -24484,7 +24499,7 @@
       "operation": "send an SMS",
       "method": "POST",
       "url": "https://api.telnyx.com/v2/messages",
-      "example": "curl -X POST https://api.telnyx.com/v2/messages -H \"Authorization: Bearer $TELNYX_API_KEY\" -H \"Content-Type: application/json\" -d '{\"from\":\"$TELNYX_NUMBER\",\"to\":\"+48600000000\",\"text\":\"Hi\"}'",
+      "example": "curl -X POST https://api.telnyx.com/v2/messages -H \"Authorization: Bearer $TELNYX_API_KEY\" -H \"Content-Type: application/json\" -d '{\"from\":\"<TELNYX_NUMBER>\",\"to\":\"+48600000000\",\"text\":\"Hi\"}'",
       "response_fields": [
         "data.id",
         "data.to[].status",
@@ -26051,7 +26066,7 @@
       "operation": "create a task",
       "method": "POST",
       "url": "https://app.asana.com/api/1.0/tasks",
-      "example": "curl -X POST https://app.asana.com/api/1.0/tasks -H \"Authorization: Bearer $ASANA_TOKEN\" -H \"Content-Type: application/json\" -d '{\"data\":{\"name\":\"Buy catnip\",\"workspace\":\"$ASANA_WORKSPACE_GID\"}}'",
+      "example": "curl -X POST https://app.asana.com/api/1.0/tasks -H \"Authorization: Bearer $ASANA_TOKEN\" -H \"Content-Type: application/json\" -d '{\"data\":{\"name\":\"Buy catnip\",\"workspace\":\"<ASANA_WORKSPACE_GID>\"}}'",
       "response_fields": [
         "data.gid",
         "data.name",
@@ -28255,7 +28270,7 @@
       "operation": "reply to a conversation",
       "method": "POST",
       "url": "https://api.intercom.io/conversations/{conversation_id}/reply",
-      "example": "curl -X POST https://api.intercom.io/conversations/$CONVERSATION_ID/reply -H \"Authorization: Bearer $INTERCOM_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -H \"Intercom-Version: 2.16\" -d '{\"message_type\":\"comment\",\"type\":\"user\",\"intercom_user_id\":\"$CONTACT_ID\",\"body\":\"Thanks again :)\"}'",
+      "example": "curl -X POST https://api.intercom.io/conversations/$CONVERSATION_ID/reply -H \"Authorization: Bearer $INTERCOM_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -H \"Intercom-Version: 2.16\" -d '{\"message_type\":\"comment\",\"type\":\"user\",\"intercom_user_id\":\"<CONTACT_ID>\",\"body\":\"Thanks again :)\"}'",
       "response_fields": [
         "id",
         "state",
@@ -29139,7 +29154,7 @@
       "operation": "create a post (accessJwt from com.atproto.server.createSession)",
       "method": "POST",
       "url": "{pds_host}/xrpc/com.atproto.repo.createRecord",
-      "example": "curl -X POST https://bsky.social/xrpc/com.atproto.repo.createRecord -H \"Authorization: Bearer $ACCESS_JWT\" -H \"Content-Type: application/json\" -d '{\"repo\":\"$BLUESKY_HANDLE\",\"collection\":\"app.bsky.feed.post\",\"record\":{\"text\":\"Hello world\",\"createdAt\":\"2026-09-24T12:00:00Z\"}}'",
+      "example": "curl -X POST https://bsky.social/xrpc/com.atproto.repo.createRecord -H \"Authorization: Bearer $ACCESS_JWT\" -H \"Content-Type: application/json\" -d '{\"repo\":\"<BLUESKY_HANDLE>\",\"collection\":\"app.bsky.feed.post\",\"record\":{\"text\":\"Hello world\",\"createdAt\":\"2026-09-24T12:00:00Z\"}}'",
       "response_fields": [
         "uri",
         "cid"
@@ -33317,7 +33332,7 @@
       "operation": "take a card payment",
       "method": "POST",
       "url": "https://connect.squareup.com/v2/payments",
-      "example": "curl -X POST https://connect.squareup.com/v2/payments -H \"Square-Version: 2026-09-16\" -H \"Authorization: Bearer $SQUARE_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"idempotency_key\":\"7b0f3ec5-086a-4871-8f13-3c81b3875218\",\"amount_money\":{\"amount\":1000,\"currency\":\"USD\"},\"source_id\":\"$SOURCE_ID\"}'",
+      "example": "curl -X POST https://connect.squareup.com/v2/payments -H \"Square-Version: 2026-09-16\" -H \"Authorization: Bearer $SQUARE_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"idempotency_key\":\"7b0f3ec5-086a-4871-8f13-3c81b3875218\",\"amount_money\":{\"amount\":1000,\"currency\":\"USD\"},\"source_id\":\"<SOURCE_ID>\"}'",
       "response_fields": [
         "payment.id",
         "payment.status",
@@ -34500,7 +34515,7 @@
       "operation": "execute a tool",
       "method": "POST",
       "url": "https://api.arcade.dev/v1/tools/execute",
-      "example": "curl -X POST https://api.arcade.dev/v1/tools/execute -H \"Authorization: Bearer $ARCADE_API_KEY\" -H \"Content-Type: application/json\" -d '{\"tool_name\":\"Math.Sqrt\",\"input\":{\"a\":\"625\"},\"user_id\":\"$ARCADE_USER_ID\"}'",
+      "example": "curl -X POST https://api.arcade.dev/v1/tools/execute -H \"Authorization: Bearer $ARCADE_API_KEY\" -H \"Content-Type: application/json\" -d '{\"tool_name\":\"Math.Sqrt\",\"input\":{\"a\":\"625\"},\"user_id\":\"<ARCADE_USER_ID>\"}'",
       "response_fields": [
         "success",
         "status",
