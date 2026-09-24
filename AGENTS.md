@@ -10,13 +10,13 @@ Instructions for AI agents (Claude, GPT, Gemini, Copilot, …) that read or edit
 - Each entry tells you: `docs` (read this before calling the API), `auth` + `auth_hint` (what to ask the user for), `mcp` (`official` / `community` / `none`, with a URL), `free_tier`, `sdk`, `openapi`, `llms_txt`, `notes`.
 - Prefer `mcp.type == "official"` when your runtime supports MCP; otherwise call the REST API from `docs`.
 - Never invent credentials. Ask the user for the key named in `auth_hint`, and tell them where to create it (usually linked from `docs`).
-- `verified` is the date the entry was checked. APIs change, so if a call fails, re-read `docs`.
+- `verified` is the date the entry was last checked (links, plus the researched fields that carry their own `checked_at`). It does not prove the service does your task: match `desc_en` / `call.operation` to it, and confirm pricing in `docs`. APIs change, so if a call fails, re-read `docs`.
 
 ## Editing the catalog
 
 Full guide for humans and agents: `CONTRIBUTING.md`.
 
-1. Edit only `data/catalog.json`, `data/categories.json` or `data/directories.json`.
+1. Edit only `data/catalog.json`, `data/usage.json`, `data/categories.json` or `data/directories.json`.
 2. An entry must follow `data/schema.json`, link to the vendor's **official** API docs, and pass the inclusion criteria in the README (public self-serve API or MCP server; at most one human setup step).
 3. Write both `desc_en` and `desc_pl` (one sentence, what the agent can *do*).
 4. Set `verified` to today's date (YYYY-MM-DD).

@@ -19,7 +19,15 @@
     "source_url": "https://www.activepieces.com/docs/mcp/overview",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "url": "https://{your-instance}/mcp",
+     "headers": null,
+     "oauth": true,
+     "source_url": "https://www.activepieces.com/docs/mcp/overview",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free: open-source, self-hostable at no cost; cloud free plan gives 100 credits/day, no card required",
    "sdk": [],
@@ -75,7 +83,19 @@
     "source_url": "https://docs.arcade.dev/en/guides/mcp-gateways",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.arcade.dev/mcp/{gateway-slug}",
+     "headers": {
+      "Authorization": "Bearer $ARCADE_API_KEY",
+      "Arcade-User-ID": "{end_user_id}"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.arcade.dev/en/guides/mcp-gateways",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 2,000 auth events + 2,000 tool calls/mo, no credit card required",
    "sdk": [
@@ -143,7 +163,16 @@
     "source_url": "https://docs.composio.dev/docs/composio-connect",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://connect.composio.dev/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.composio.dev/docs/composio-connect",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 100,000 tool calls + 50,000 trigger events/mo, no credit card required",
    "sdk": [
@@ -221,7 +250,16 @@
     "source_url": "https://docs.gumloop.com/mcp-server/overview",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "sse",
+     "url": "https://mcp.gumloop.com/gumloop/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.gumloop.com/mcp-server/overview",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "14-day free trial of Pro (20,000 credits), requires credit card, no permanent free tier",
    "sdk": [
@@ -285,7 +323,12 @@
     "source_url": "https://ifttt.com/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://ifttt.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "no free-plan access; Webhooks/API require Pro plan ($2.99+/mo)",
    "sdk": [],
@@ -365,7 +408,17 @@
     "source_url": "https://help.keboola.com/ai/mcp-server/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.keboola.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/keboola/mcp-server#readme",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free plan: 1 project, 120 compute minutes in the first month then 60 minutes/month, extra-small Snowflake backend; no credit card",
    "sdk": [
@@ -419,7 +472,17 @@
     "source_url": "https://developers.make.com/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.make.com",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://developers.make.com/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 1,000 operations/mo; most REST API endpoints require a paid plan",
    "sdk": [],
@@ -498,7 +561,18 @@
     "source_url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://ah-api.merge.dev/api/v1/tool-packs/{TOOL_PACK_ID}/registered-users/{REGISTERED_USER_ID}/mcp",
+     "headers": {
+      "Authorization": "Bearer $MERGE_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 2,000 monthly credits for evaluation; production usage needs a paid Starter/Business/Enterprise plan",
    "sdk": [
@@ -572,7 +646,18 @@
     "source_url": "https://docs.n8n.io/connect/connect-to-n8n-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://{your-n8n-host}/mcp-server/http",
+     "headers": {
+      "Authorization": "Bearer $N8N_MCP_ACCESS_TOKEN"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.n8n.io/connect/connect-to-n8n-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, self-hosted (open source, unlimited); n8n Cloud offers a paid-plan trial",
    "sdk": [],
@@ -643,7 +728,8 @@
     "source_url": "https://nango.dev/docs/implementation-guides/use-cases/tool-calling/implement-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null
    },
    "free_tier": "free tier: 10 connections, 10 compute hours, 10GB data transfer/mo",
    "sdk": [
@@ -698,7 +784,25 @@
     "source_url": "https://docs.useparagon.com/actionkit/getting-started",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "http://localhost:3001/mcp?user={user-id}",
+     "headers": null,
+     "oauth": false,
+     "command": "npm",
+     "args": [
+      "run",
+      "start"
+     ],
+     "env": [
+      "PROJECT_ID",
+      "SIGNING_KEY"
+     ],
+     "source_url": "https://github.com/useparagon/paragon-mcp",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free experimentation tier with self-serve keys; production/scale pricing is usage-based or contract",
    "sdk": [],
@@ -745,7 +849,22 @@
     "source_url": "https://pipedream.com/docs/connect/mcp/developers",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://remote.mcp.pipedream.net/v3",
+     "headers": {
+      "Authorization": "Bearer $PIPEDREAM_ACCESS_TOKEN",
+      "x-pd-project-id": "$PIPEDREAM_PROJECT_ID",
+      "x-pd-environment": "development",
+      "x-pd-external-user-id": "{external_user_id}",
+      "x-pd-app-slug": "{app_slug}"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://pipedream.com/docs/connect/mcp/developers",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "check pricing (pipedream.com/pricing) for current Connect free-tier request/credit limits",
    "sdk": [
@@ -805,7 +924,16 @@
     "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.stackone.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 1,000 action-call credits/seat/mo (Starter), no credit card required",
    "sdk": [
@@ -870,7 +998,18 @@
     "source_url": "https://superglue.ai/docs/mcp/using-the-mcp/",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.superglue.cloud/mcp",
+     "headers": {
+      "Authorization": "Bearer $SUPERGLUE_API_KEY"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://superglue.ai/docs/mcp/using-the-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: Pro plan free to start, 3,000 executions/mo and 5M tokens/mo included, self-serve signup",
    "sdk": [],
@@ -934,7 +1073,19 @@
     "source_url": "https://docs.zapier.com/mcp/overview/how-tools-work",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.zapier.com/api/v1/connect",
+     "headers": {
+      "Authorization": "Bearer $ZAPIER_MCP_TOKEN"
+     },
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://docs.zapier.com/mcp/overview/how-connections-work.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Zapier Free plan (100 tasks/mo) covers MCP tool calls; more on paid plans",
    "sdk": [],

@@ -12,6 +12,7 @@ Dziękujemy za pomoc. Ta instrukcja pokazuje, jak przez pull request dodać, pop
 |---|---|---|
 | Dodać lub poprawić usługę | `data/catalog.json` | zob. [Pola wpisu](#pola-wpisu) |
 | Usunąć usługę (brak API, zamknięta…) | usuń wpis z `data/catalog.json` | brak |
+| Dodać przykładowe żądanie, cenę jednostkową lub konfigurację MCP | `data/usage.json` (klucz: `id` wpisu) | `call` / `unit_price` / `mcp_config`, każde z `source_url` i `checked_at`; patrz `data/schema.json` |
 | Dodać kategorię | `data/categories.json` | `id`, `en`, `pl`, `desc_en`, `desc_pl` |
 | Dodać powiązany katalog lub rejestr | `data/directories.json` | `name`, `url`, `machine_readable_url`, `desc_en`, `desc_pl` |
 

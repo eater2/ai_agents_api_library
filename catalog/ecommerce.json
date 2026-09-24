@@ -22,7 +22,12 @@
     "source_url": "https://github.com/amzn/selling-partner-agentic-toolkit",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://sellingpartner-ai.amazon.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "free API access; requires an existing Amazon Seller/Vendor Central account",
    "sdk": [
@@ -108,7 +113,17 @@
     "source_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/storefront/b2c",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://docs.bigcommerce.com/_mcp/server",
+     "headers": null,
+     "oauth": false,
+     "env": [],
+     "docs_only": true,
+     "source_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/storefront/b2c.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free API access; requires an active BigCommerce store plan",
    "sdk": [
@@ -180,7 +195,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free developer tier with call-volume limits; sandbox environment included",
    "sdk": [
@@ -227,7 +243,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free developer keystring (rate-limited, e.g. 10 req/sec, ~5,000 req/day per app by default)",
    "sdk": [],
@@ -262,7 +279,17 @@
     "type": "official",
     "url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": true,
+     "source_url": "https://developers.mercadolibre.com.ar/en_us/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free API access for any Mercado Libre account that creates an app in DevCenter; only normal marketplace selling fees apply",
    "sdk": [],
@@ -294,7 +321,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free API access; pay only for products/fulfillment/shipping ordered",
    "sdk": [],
@@ -339,7 +367,19 @@
     "type": "official",
     "url": "https://shopify.dev/docs/apps/build/devmcp",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@shopify/dev-mcp@latest"
+     ],
+     "env": [],
+     "docs_only": true,
+     "source_url": "https://shopify.dev/docs/apps/build/devmcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free API access; requires an active paid Shopify store subscription to use",
    "sdk": [
@@ -377,7 +417,9 @@
     "type": "community",
     "url": null,
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": null,
+    "issue": "no MCP server listed in entry (mcp.url null)"
    },
    "free_tier": "free (self-hosted plugin; no vendor API fees, only your own WordPress hosting costs)",
    "sdk": [

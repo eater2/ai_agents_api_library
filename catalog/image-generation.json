@@ -31,7 +31,8 @@
     "source_url": "https://github.com/Focus-GTS/firefly-services-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": null
    },
    "free_tier": "check pricing; requires Adobe Developer Console project and Firefly Services entitlement",
    "sdk": [],
@@ -117,7 +118,16 @@
     "source_url": "https://docs.bfl.ai/api_integration/mcp_integration",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.bfl.ai",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.bfl.ai/api_integration/mcp_integration",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "paid only, no free tier (FLUX Schnell weights are open for self-hosting)",
    "sdk": [
@@ -163,6 +173,26 @@
     "text-to-video"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "generate an image from a text prompt (FLUX.2 [pro])",
+    "method": "POST",
+    "url": "https://api.bfl.ai/v1/flux-2-pro-preview",
+    "example": "curl -X POST https://api.bfl.ai/v1/flux-2-pro-preview -H \"x-key: $BFL_API_KEY\" -H 'Content-Type: application/json' -H 'accept: application/json' -d '{\"prompt\": \"A cat on its back legs running like a human\", \"width\": 1024, \"height\": 1024}'",
+    "response_fields": [
+     "id",
+     "polling_url",
+     "status",
+     "result.sample"
+    ],
+    "async": "poll GET {polling_url} with the x-key header until status is \"Ready\" (or \"Error\"/\"Failed\"); image URL is result.sample, a signed URL valid for 10 minutes",
+    "source_url": "https://docs.bfl.ai/flux_2/flux2_text_to_image",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "FLUX.2 [pro] text-to-image from $0.03 per image (megapixel-based, scales with resolution); FLUX1.1 [pro] 4 credits = $0.04 per image; 1 credit = $0.01",
+    "source_url": "https://docs.bfl.ai/quick_start/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": false,
    "no_card": false,
@@ -200,7 +230,12 @@
     "source_url": "https://docs.magnific.com/modelcontextprotocol",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.magnific.com",
+     "derived": true
+    }
    },
    "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
    "sdk": [],
@@ -261,7 +296,8 @@
     "source_url": "https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null
    },
    "free_tier": "check pricing (free API key tier exists but image models are mostly usage-billed)",
    "sdk": [
@@ -341,7 +377,16 @@
     "source_url": "https://ideogram.ai/features/mcp/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.ideogram.ai/mcp",
+     "headers": null,
+     "oauth": true,
+     "source_url": "https://ideogram.ai/features/mcp/",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "no free API credits (web app has 10 slow credits/week); API is pay-per-image, $40 min top-up",
    "sdk": [],
@@ -409,7 +454,18 @@
     "source_url": "https://docs.leonardo.ai/docs/connect-to-leonardoai-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.leonardo.ai/v1/mcp",
+     "headers": {
+      "API-Key": "$LEONARDO_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.leonardo.ai/docs/connect-to-leonardoai-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "$5 free API credits after account verification, then pay-as-you-go",
    "sdk": [],
@@ -481,7 +537,20 @@
     "source_url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "node",
+     "args": [
+      "{repo_dir}/dist/index.js"
+     ],
+     "env": [
+      "OPENAI_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "paid only; no free image credits, usage-based billing",
    "sdk": [
@@ -520,6 +589,18 @@
     "image-editing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "generate an image from a text prompt",
+    "method": "POST",
+    "url": "https://api.openai.com/v1/images/generations",
+    "example": "curl -X POST https://api.openai.com/v1/images/generations -H \"Authorization: Bearer $OPENAI_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"gpt-image-2.5-flare\",\"prompt\":\"A children book drawing of a veterinarian listening to a baby otter heartbeat\"}'",
+    "response_fields": [
+     "data[0].b64_json"
+    ],
+    "async": null,
+    "source_url": "https://developers.openai.com/api/docs/guides/image-generation",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": false,
    "no_card": false,
@@ -570,7 +651,16 @@
     "source_url": "https://www.recraft.ai/docs/mcp-reference/remote-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.recraft.ai/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://www.recraft.ai/docs/mcp-reference/remote-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "paid only; pay-per-image (from $0.007/image on V4.1 Flash), no confirmed free credits",
    "sdk": [],
@@ -649,7 +739,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free: 50 API calls/month (preview/small resolution only), then paid credits",
    "sdk": [],
@@ -712,7 +803,8 @@
     "source_url": "https://github.com/tadasant/mcp-server-stability-ai",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": null
    },
    "free_tier": "25 free credits on signup, then pay-as-you-go",
    "sdk": [

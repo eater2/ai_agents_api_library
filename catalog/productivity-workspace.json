@@ -20,7 +20,18 @@
     "source_url": "https://airtable.com/developers/agents/mcp/getting-started",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.airtable.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $AIRTABLE_PAT"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://airtable.com/developers/agents/mcp/getting-started",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: API access on Free plan, ~5 req/sec per base",
    "sdk": [
@@ -130,7 +141,12 @@
     "source_url": "https://developers.asana.com/docs/mcp-tools-reference.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.asana.com/v2/mcp",
+     "derived": true
+    }
    },
    "free_tier": "free tier: API included on Personal (free) plan, rate limited",
    "sdk": [
@@ -235,7 +251,16 @@
     "source_url": "https://support.atlassian.com/atlassian-ai-gateway/docs/supported-tools/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.atlassian.com/v2/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: available on Free Jira/Confluence plans; rate limits vary by plan",
    "sdk": [
@@ -321,7 +346,12 @@
     "source_url": "https://developer.box.com/guides/box-mcp/tools",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.box.com",
+     "derived": true
+    }
    },
    "free_tier": "check pricing (Box API generally requires a paid Box account for meaningful use)",
    "sdk": [
@@ -407,7 +437,12 @@
     "source_url": "https://cal.com/docs/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.cal.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "free tier: API included on Free plan, 120 req/min (higher limits on request)",
    "sdk": [
@@ -468,7 +503,12 @@
     "source_url": "https://developer.calendly.com/supported-tools",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.calendly.com",
+     "derived": true
+    }
    },
    "free_tier": "check pricing (personal access tokens available for own-account use; broader API access varies by plan)",
    "sdk": [],
@@ -535,7 +575,16 @@
     "source_url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.clickup.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "source_url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: API access included on Free Forever plan",
    "sdk": [],
@@ -610,7 +659,16 @@
     "source_url": "https://docs.superhuman.com/.well-known/oauth-protected-resource/apis/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://docs.superhuman.com/apis/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.superhuman.com/.well-known/oauth-protected-resource/apis/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, included for all users on both free and paid workspaces",
    "sdk": [],
@@ -686,7 +744,12 @@
     "source_url": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.dropbox.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "free tier: API access included on Basic (free) plan, rate limited",
    "sdk": [
@@ -759,7 +822,12 @@
     "source_url": "https://developers.google.com/workspace/guides/configure-mcp-servers",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://gmailmcp.googleapis.com/mcp/v1",
+     "derived": true
+    }
    },
    "free_tier": "free (subject to per-API daily quotas)",
    "sdk": [
@@ -833,7 +901,16 @@
     "source_url": "https://linear.app/docs/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.linear.app/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://linear.app/docs/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: API access included on Free plan (rate limited)",
    "sdk": [
@@ -925,7 +1002,12 @@
     "source_url": "https://learn.microsoft.com/en-us/graph/mcp-server/overview",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.svc.cloud.microsoft/enterprise",
+     "derived": true
+    }
    },
    "free_tier": "free with a Microsoft 365/Entra ID tenant (free dev tenant via Microsoft 365 Developer Program)",
    "sdk": [
@@ -1005,7 +1087,18 @@
     "source_url": "https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.monday.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $MONDAY_API_TOKEN"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: GraphQL API included on Free plan (rate limited)",
    "sdk": [
@@ -1077,7 +1170,17 @@
     "source_url": "https://nocodb.com/docs/apis-and-mcp/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://app.nocodb.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://nocodb.com/docs/apis-and-mcp/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free plan: 1,000 records, 1 GB storage, 1,000 API calls/month, 3 editors, 100 automation runs; no credit card",
    "sdk": [],
@@ -1143,7 +1246,17 @@
     "source_url": "https://developers.notion.com/guides/mcp/mcp-supported-tools.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.notion.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, API access included on all plans (rate limit ~3 req/sec)",
    "sdk": [
@@ -1178,6 +1291,20 @@
     "no-code-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a page under an existing page",
+    "method": "POST",
+    "url": "https://api.notion.com/v1/pages",
+    "example": "curl -X POST https://api.notion.com/v1/pages -H \"Authorization: Bearer $NOTION_API_KEY\" -H 'Notion-Version: 2026-03-11' -H 'Content-Type: application/json' --data '{\"parent\": {\"page_id\": \"{page_id}\"}, \"properties\": {\"title\": {\"title\": [{\"text\": {\"content\": \"New page\"}}]}}, \"markdown\": \"# Hello\n\nFirst paragraph\"}'",
+    "response_fields": [
+     "id",
+     "url",
+     "created_time"
+    ],
+    "async": null,
+    "source_url": "https://developers.notion.com/reference/post-page",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1220,7 +1347,17 @@
     "source_url": "https://developer.todoist.com/api/v1/",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://ai.todoist.net/mcp",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://developer.todoist.com/api/v1/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free to use; some features gated by the user's Todoist plan",
    "sdk": [
@@ -1296,7 +1433,12 @@
     "source_url": "https://support.atlassian.com/trello/docs/connect-trello-to-ai-assistants-with-trello-mcp/",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.trello.com/v1",
+     "derived": true
+    }
    },
    "free_tier": "free, no key needed to register an app; usage is rate limited",
    "sdk": [],

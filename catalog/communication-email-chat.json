@@ -22,7 +22,18 @@
     "source_url": "https://docs.agentmail.to/integrations/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.agentmail.to/mcp",
+     "headers": {
+      "x-api-key": "$AGENTMAIL_API_KEY"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.agentmail.to/integrations/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free: 3 inboxes, 3,000 emails/month (max 100/day), 3GB storage, no card required",
    "sdk": [
@@ -97,7 +108,12 @@
     "source_url": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/understanding-mcp-server-tools.html",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://aws-mcp.us-east-1.api.aws/mcp",
+     "derived": true
+    }
    },
    "free_tier": "Paid only; US SMS $0.00774/message + $0.00421 carrier fee (10DLC or toll-free)",
    "sdk": [
@@ -187,7 +203,12 @@
     "source_url": "https://bird.com/docs/ai/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.bird.com",
+     "derived": true
+    }
    },
    "free_tier": "Paid only; prepaid wallet, US long code or toll-free $0.0035/SMS + carrier fees",
    "sdk": [
@@ -279,7 +300,28 @@
     "source_url": "https://github.com/SaseQ/discord-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "docker",
+     "args": [
+      "run",
+      "--rm",
+      "-i",
+      "-e",
+      "DISCORD_TOKEN",
+      "-e",
+      "DISCORD_GUILD_ID",
+      "saseq/discord-mcp:latest"
+     ],
+     "env": [
+      "DISCORD_TOKEN",
+      "DISCORD_GUILD_ID"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/SaseQ/discord-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key needed beyond creating a bot application",
    "sdk": [
@@ -384,7 +426,21 @@
     "source_url": "https://github.com/line/line-bot-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "@line/line-bot-mcp-server"
+     ],
+     "env": [
+      "CHANNEL_ACCESS_TOKEN",
+      "DESTINATION_USER_ID"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/line/line-bot-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited and never counted. Free quotas vary by region",
    "sdk": [
@@ -441,7 +497,21 @@
     "source_url": "https://documentation.mailgun.com/docs/mailgun/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@mailgun/mcp-server"
+     ],
+     "env": [
+      "MAILGUN_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/mailgun/mailgun-mcp-server#configuration",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free: 100 emails/day; 30-day free trial on paid tiers",
    "sdk": [
@@ -521,7 +591,23 @@
     "source_url": "https://github.com/gitmotion/ntfy-me-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "ntfy-me-mcp"
+     ],
+     "env": [
+      "NTFY_TOPIC",
+      "NTFY_URL",
+      "NTFY_TOKEN"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/gitmotion/ntfy-me-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "No key; anonymous publishing to public topics, rate-limited per visitor IP (burst of 60 requests, then 1 request every 5 s, roughly 17,280/day); paid plans from $6/month add reserved topics, higher limits, email and phone-call notifications.",
    "sdk": [],
@@ -583,7 +669,8 @@
     "source_url": "https://github.com/plivo/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null
    },
    "free_tier": "Trial: $10 free credits, no card; then paid per message (US long code $0.0077/SMS + carrier surcharge)",
    "sdk": [
@@ -678,7 +765,23 @@
     "source_url": "https://github.com/activecampaign/postmark-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@activecampaign/postmark-mcp"
+     ],
+     "env": [
+      "POSTMARK_SERVER_TOKEN",
+      "DEFAULT_SENDER_EMAIL",
+      "DEFAULT_MESSAGE_STREAM"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/ActiveCampaign/postmark-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free: 100 emails/month (Developer plan, no expiry)",
    "sdk": [
@@ -747,7 +850,19 @@
     "source_url": "https://resend.com/docs/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.resend.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $RESEND_API_KEY"
+     },
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://resend.com/docs/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 3,000 emails/mo, 100/day",
    "sdk": [
@@ -788,6 +903,23 @@
     "email-marketing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send an email",
+    "method": "POST",
+    "url": "https://api.resend.com/emails",
+    "example": "curl -X POST 'https://api.resend.com/emails' -H \"Authorization: Bearer $RESEND_API_KEY\" -H 'Content-Type: application/json' -d '{\"from\":\"Acme <onboarding@resend.dev>\",\"to\":[\"delivered@resend.dev\"],\"subject\":\"hello world\",\"html\":\"<p>it works!</p>\"}'",
+    "response_fields": [
+     "id"
+    ],
+    "async": null,
+    "source_url": "https://resend.com/docs/api-reference/emails/send-email",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Free: 3,000 emails/month (100/day); Pro $20/mo for 50,000 emails, then $0.90 per 1,000 extra emails",
+    "source_url": "https://resend.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -836,7 +968,8 @@
     "source_url": "https://github.com/Garoth/sendgrid-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": null
    },
    "free_tier": "Trial: 100 emails/day for 60 days, no card required; paid plan after",
    "sdk": [
@@ -879,6 +1012,24 @@
     "email-marketing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send an email",
+    "method": "POST",
+    "url": "https://api.sendgrid.com/v3/mail/send",
+    "example": "curl -X POST https://api.sendgrid.com/v3/mail/send -H \"Authorization: Bearer $SENDGRID_API_KEY\" -H \"Content-Type: application/json\" -d '{\"personalizations\":[{\"to\":[{\"email\":\"alex@example.com\"}]}],\"from\":{\"email\":\"orders@example.com\"},\"subject\":\"Hello\",\"content\":[{\"type\":\"text/plain\",\"value\":\"Hi\"}]}'",
+    "response_fields": [
+     "HTTP status 202 (empty body)",
+     "X-Message-Id response header"
+    ],
+    "async": "202 means accepted for processing; delivery happens later (track via Event Webhook or Email Activity)",
+    "source_url": "https://www.twilio.com/docs/sendgrid/api-reference/mail-send/mail-send",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Plans from $19.95/month (Essentials 50K emails); overage $0.0013 per email on 50K plan, $0.0009 on 100K plan, $0.0011-$0.0005 on Pro tiers",
+    "source_url": "https://www.twilio.com/en-us/products/email-api/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -928,7 +1079,8 @@
     "source_url": "https://github.com/sinch/sinch-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null
    },
    "free_tier": "Trial: free trial credit and a free test number on signup, no card; then paid (US 10DLC $0.0078/SMS + carrier fees)",
    "sdk": [
@@ -996,7 +1148,17 @@
     "source_url": "https://docs.slack.dev/ai/slack-mcp-server/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.slack.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://docs.slack.dev/ai/slack-mcp-server/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key needed beyond creating a Slack app/workspace",
    "sdk": [
@@ -1042,6 +1204,22 @@
     "team-chat"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "post a message to a channel",
+    "method": "POST",
+    "url": "https://slack.com/api/chat.postMessage",
+    "example": "curl -X POST https://slack.com/api/chat.postMessage -H \"Authorization: Bearer $SLACK_BOT_TOKEN\" -H \"Content-Type: application/json; charset=utf-8\" -d '{\"channel\":\"C0123456789\",\"text\":\"Hello\"}'",
+    "response_fields": [
+     "ok",
+     "channel",
+     "ts",
+     "message",
+     "error"
+    ],
+    "async": null,
+    "source_url": "https://docs.slack.dev/reference/methods/chat.postMessage",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1079,7 +1257,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "Free tier: Build plan with 1,000 MAU/month and 100 concurrent connections, no card; Maker account gives $100/month credit for teams under 5 people and under $10k monthly revenue",
    "sdk": [
@@ -1152,7 +1331,25 @@
     "source_url": "https://github.com/chigwell/telegram-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uv",
+     "args": [
+      "--directory",
+      "/full/path/to/telegram-mcp",
+      "run",
+      "main.py"
+     ],
+     "env": [
+      "TELEGRAM_API_ID",
+      "TELEGRAM_API_HASH",
+      "TELEGRAM_SESSION_STRING"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/chigwell/telegram-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key needed beyond a bot token from @BotFather",
    "sdk": [
@@ -1187,6 +1384,23 @@
     "chat-messaging"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send a text message",
+    "method": "POST",
+    "url": "https://api.telegram.org/bot{token}/sendMessage",
+    "example": "curl -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -H \"Content-Type: application/json\" -d '{\"chat_id\":123456789,\"text\":\"Hi\"}'",
+    "response_fields": [
+     "ok",
+     "result.message_id",
+     "result.chat.id",
+     "result.date",
+     "description",
+     "error_code"
+    ],
+    "async": null,
+    "source_url": "https://core.telegram.org/bots/api",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1231,7 +1445,12 @@
     "source_url": "https://telnyx.com/.well-known/mcp/server-card.json",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.telnyx.com/v2/mcp",
+     "derived": true
+    }
    },
    "free_tier": "Trial: free testing credits on signup (amount not published); then paid (US 10DLC $0.004/SMS part + carrier fees)",
    "sdk": [
@@ -1304,7 +1523,17 @@
     "source_url": "https://github.com/twilio-labs/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.twilio.com/docs",
+     "headers": null,
+     "oauth": false,
+     "env": [],
+     "docs_only": true,
+     "source_url": "https://www.twilio.com/docs/ai/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Trial: 100 SMS, 100 WhatsApp, 3,000 emails, 75 voice minutes; no card; one-time on signup, expires after 30 days",
    "sdk": [
@@ -1341,6 +1570,26 @@
     "phone-calls"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send an SMS",
+    "method": "POST",
+    "url": "https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Messages.json",
+    "example": "curl -X POST \"https://api.twilio.com/2010-04-01/Accounts/$TWILIO_ACCOUNT_SID/Messages.json\" --data-urlencode \"From=$TWILIO_NUMBER\" --data-urlencode \"Body=Hi there\" --data-urlencode \"To=+48600000000\" -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN",
+    "response_fields": [
+     "sid",
+     "status",
+     "error_code",
+     "error_message"
+    ],
+    "async": "status starts as queued; poll GET .../Messages/{sid}.json or set StatusCallback",
+    "source_url": "https://www.twilio.com/docs/messaging/api/message-resource",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "SMS to Poland: $0.0457 per outbound segment (mobile numbers and alphanumeric sender IDs); $0.001 fee per failed message",
+    "source_url": "https://www.twilio.com/en-us/sms/pricing/pl",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -1397,7 +1646,27 @@
     "source_url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@vonage/vonage-mcp-server-api-bindings"
+     ],
+     "env": [
+      "VONAGE_APPLICATION_ID",
+      "VONAGE_PRIVATE_KEY64",
+      "VONAGE_API_KEY",
+      "VONAGE_API_SECRET",
+      "VONAGE_VIRTUAL_NUMBER",
+      "VONAGE_WHATSAPP_NUMBER",
+      "RCS_SENDER_ID"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "trial/test credit on signup, then pay-as-you-go",
    "sdk": [
@@ -1425,6 +1694,27 @@
     "phone-calls"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send an SMS",
+    "method": "POST",
+    "url": "https://rest.nexmo.com/sms/json",
+    "example": "curl -X POST https://rest.nexmo.com/sms/json -u \"$VONAGE_API_KEY:$VONAGE_API_SECRET\" -d \"from=$SMS_SENDER_ID\" -d \"to=48600000000\" -d 'text=Hi there'",
+    "response_fields": [
+     "message-count",
+     "messages[0].status",
+     "messages[0].message-id",
+     "messages[0].message-price",
+     "messages[0].remaining-balance"
+    ],
+    "async": "messages[0].status \"0\" means accepted; delivery receipts arrive via webhook",
+    "source_url": "https://developer.vonage.com/en/messaging/sms/code-snippets/send-an-sms",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "SMS to Poland: $0.04843 per outbound message",
+    "source_url": "https://www.vonage.com/communications-apis/sms/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -1460,7 +1750,23 @@
     "source_url": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "python",
+     "args": [
+      "main.py"
+     ],
+     "env": [
+      "META_ACCESS_TOKEN",
+      "META_PHONE_NUMBER_ID",
+      "META_BUSINESS_ACCOUNT_ID",
+      "WABA_ID"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free: non-template (service) messages inside an open 24h customer service window; template messages billed per message (per-message pricing since 2025-07-01)",
    "sdk": [],
@@ -1536,7 +1842,16 @@
     "source_url": "https://developers.zoom.us/docs/mcp.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.zoom.us/mcp/zoom/streamable",
+     "headers": null,
+     "oauth": true,
+     "source_url": "https://github.com/zoom/mcp-registry",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "usable on free Zoom account within Basic plan limits; some endpoints require paid plan",
    "sdk": [

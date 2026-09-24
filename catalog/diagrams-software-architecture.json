@@ -21,7 +21,12 @@
     "source_url": "https://docs.eraser.io/mcp.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://app.eraser.io/api/mcp",
+     "derived": true
+    }
    },
    "free_tier": "paid only - API tokens require an active paid team plan",
    "sdk": [],
@@ -72,7 +77,12 @@
     "source_url": "https://docs.icepanel.io/integrations/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.icepanel.io/mcp",
+     "derived": true
+    }
    },
    "free_tier": "free tier: 10,000 read requests/mo, 1,000 write requests/mo, 5 import/export requests/mo",
    "sdk": [],
@@ -139,7 +149,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free, no key; public hosted instance at kroki.io sponsored by Exoscale (no SLA)",
    "sdk": [],
@@ -195,7 +206,12 @@
     "source_url": "https://community.lucid.co/community-news-and-announcements-9/introducing-the-lucid-model-context-protocol-mcp-server-12230",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.lucid.app/mcp",
+     "derived": true
+    }
    },
    "free_tier": "check pricing",
    "sdk": [],
@@ -263,7 +279,18 @@
     "source_url": "https://mermaid.ai/docs/ai/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.mermaid.ai/mcp",
+     "headers": {
+      "Authorization": "$MERMAID_CHART_TOKEN"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://mermaid.ai/docs/ai/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "unauthenticated MCP validate/render tools are free; saving to a Mermaid Chart account needs a token, check pricing for limits",
    "sdk": [],
@@ -338,7 +365,16 @@
     "source_url": "https://developers.miro.com/docs/miro-mcp-tools.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.miro.com/",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://developers.miro.com/docs/connecting-to-miro-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan allows up to 3 editable team boards; MCP server available on all plans including free",
    "sdk": [],
@@ -405,7 +441,8 @@
     "source_url": "https://api.napkin.ai/faq",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "included on every plan; any account can create a token and call the API, limited by credits",
    "sdk": [],
@@ -471,7 +508,8 @@
     "source_url": "https://github.com/plantuml/plantuml-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null
    },
    "free_tier": "free, no key; public hosted server at plantuml.com/plantuml",
    "sdk": [],
@@ -535,7 +573,12 @@
     "source_url": "https://docs.structurizr.com/ai/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.structurizr.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "free tier: workspaces up to 0.5MB; paid plans raise the limit to 5MB",
    "sdk": [

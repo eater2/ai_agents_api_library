@@ -27,7 +27,16 @@
     "source_url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://aws-mcp.us-east-1.api.aws/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/getting-started-aws-mcp-server.html",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free tier: 30+ services always free within monthly limits; new accounts also get up to $200 one-time credits ($100 on signup + up to $100 earned) usable over 6 months",
    "sdk": [
@@ -107,7 +116,21 @@
     "source_url": "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/overview",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@azure/mcp@latest",
+      "server",
+      "start"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "12 months of select free services plus $200 credit for 30 days for new accounts; many services also have a permanent always-free monthly amount",
    "sdk": [
@@ -211,7 +234,19 @@
     "source_url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.cloudflare.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $CLOUDFLARE_API_TOKEN"
+     },
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/cloudflare/mcp#get-started",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free with any Cloudflare account; API access itself is free, manages both free and paid Cloudflare products",
    "sdk": [
@@ -304,7 +339,21 @@
     "source_url": "https://docs.fly.io/mcp/flyctl-server/",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "fly",
+     "args": [
+      "mcp",
+      "server"
+     ],
+     "env": [
+      "FLY_ACCESS_TOKEN"
+     ],
+     "docs_only": false,
+     "source_url": "https://docs.fly.io/flyctl/mcp-server/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Trial: 2 machine-hours or 7 days, whichever comes first, no card needed to start (adding a card ends the trial); then pay-as-you-go, no perpetual free tier",
    "sdk": [
@@ -376,7 +425,19 @@
     "source_url": "https://docs.cloud.google.com/mcp/supported-products",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://compute.googleapis.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $GCLOUD_ACCESS_TOKEN",
+      "x-goog-user-project": "$GOOGLE_CLOUD_PROJECT"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.cloud.google.com/mcp/configure-mcp-ai-application",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free trial credit for new customers plus an Always Free tier with perpetual no-cost limits on select products",
    "sdk": [
@@ -459,7 +520,16 @@
     "source_url": "https://www.mux.com/docs/integrations/mcp-server.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.mux.com",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://www.mux.com/docs/integrations/mcp-server.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
    "sdk": [
@@ -526,7 +596,16 @@
     "source_url": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server/",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://netlify-mcp.netlify.app/mcp",
+     "headers": null,
+     "oauth": true,
+     "source_url": "https://github.com/netlify/netlify-mcp/pull/46",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free: $0 forever plan with 300 credits per month (hard limit, no rollover); API usage subject to account plan limits",
    "sdk": [
@@ -636,7 +715,18 @@
     "source_url": "https://github.com/render-oss/render-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.render.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $RENDER_API_KEY"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://render.com/docs/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free static sites; free web services that spin down after inactivity",
    "sdk": [],
@@ -700,7 +790,16 @@
     "source_url": "https://pages.edgeone.ai/document/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp-on-edge.edgeone.app/mcp-server",
+     "headers": null,
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://pages.edgeone.ai/document/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free plan (stated as permanent): 40 projects, 500 builds/month, 3M Edge Function and 1M Cloud Function invocations/month, 5 GB storage, 1 GB KV, 1 GB Blob.",
    "sdk": [],
@@ -769,7 +868,16 @@
     "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp/tools",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.vercel.com",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free on Hobby plan; some resources/endpoints require Pro/paid plan",
    "sdk": [

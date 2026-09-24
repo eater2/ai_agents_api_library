@@ -16,7 +16,9 @@
     "type": "community",
     "url": null,
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": null,
+    "issue": "entry lists no MCP server (mcp.url is null)"
    },
    "free_tier": "free tier: 2M characters/month for 12 months (new AWS accounts)",
    "sdk": [
@@ -65,7 +67,9 @@
     "type": "community",
     "url": null,
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": null,
+    "issue": "no MCP server listed in entry (mcp.url null)"
    },
    "free_tier": "free tier (F0): 2,000,000 characters/month",
    "sdk": [
@@ -105,7 +109,21 @@
     "type": "official",
     "url": "https://github.com/DeepL/deepl-mcp-server",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "deepl-mcp-server"
+     ],
+     "env": [
+      "DEEPL_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/DeepL/deepl-mcp-server#configuration",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "API Free plan retired mid-2026 for new signups; now Developer/Growth paid plans with trial credits",
    "sdk": [
@@ -126,6 +144,19 @@
     "translation"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "translate text",
+    "method": "POST",
+    "url": "https://api.deepl.com/v2/translate",
+    "example": "curl -X POST https://api.deepl.com/v2/translate -H \"Authorization: DeepL-Auth-Key $DEEPL_API_KEY\" -H 'Content-Type: application/json' -d '{\"text\": [\"Hello world!\"], \"target_lang\": \"DE\"}'",
+    "response_fields": [
+     "translations[0].text",
+     "translations[0].detected_source_language"
+    ],
+    "async": null,
+    "source_url": "https://developers.deepl.com/docs/getting-started/quickstart",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -167,7 +198,9 @@
     "type": "community",
     "url": null,
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": null,
+    "issue": "entry lists no MCP server (mcp.url null)"
    },
    "free_tier": "free tier: 500,000 characters/month (permanent, not a trial)",
    "sdk": [
@@ -209,7 +242,9 @@
     "type": "community",
     "url": null,
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": null,
+    "issue": "entry lists no MCP server (mcp.url null)"
    },
    "free_tier": "free, no key needed on public endpoint (rate-limited: 20 req/min, 75,000 chars/min)",
    "sdk": [],
@@ -253,7 +288,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free trial (no credit card); no permanent free tier, paid plans from $8/M characters",
    "sdk": [

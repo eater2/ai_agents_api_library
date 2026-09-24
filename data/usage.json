@@ -1,0 +1,3647 @@
+{
+ "activepieces": {
+  "mcp_config": {
+   "url": "https://{your-instance}/mcp",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://www.activepieces.com/docs/mcp/overview",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "adyen-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@adyen/mcp",
+    "--env=TEST"
+   ],
+   "env": [
+    "ADYEN_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/Adyen/adyen-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "agentmail": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.agentmail.to/mcp",
+   "headers": {
+    "x-api-key": "$AGENTMAIL_API_KEY"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.agentmail.to/integrations/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "agentset": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@agentset/mcp@latest"
+   ],
+   "env": [
+    "AGENTSET_API_KEY",
+    "AGENTSET_NAMESPACE_ID"
+   ],
+   "docs_only": false,
+   "source_url": "https://docs.agentset.ai/production/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "airtable-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.airtable.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $AIRTABLE_PAT"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://airtable.com/developers/agents/mcp/getting-started",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "alpaca-trading-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "alpaca-mcp-server"
+   ],
+   "env": [
+    "ALPACA_API_KEY",
+    "ALPACA_SECRET_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/alpacahq/alpaca-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "alpha-vantage": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.alphavantage.co/mcp",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://github.com/alphavantage/alpha_vantage_mcp",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "amazon-translate": {
+  "mcp_config": null,
+  "mcp_issue": "entry lists no MCP server (mcp.url is null)"
+ },
+ "anchor-browser": {
+  "mcp_config": {
+   "url": "https://api.anchorbrowser.io/mcp",
+   "headers": {
+    "anchor-api-key": "$ANCHOR_API_KEY"
+   },
+   "oauth": false,
+   "env": [
+    "ANCHOR_API_KEY"
+   ],
+   "source_url": "https://docs.anchorbrowser.io/advanced/mcp",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "apify": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.apify.com",
+   "headers": {
+    "Authorization": "Bearer $APIFY_TOKEN"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.apify.com/platform/integrations/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "arcade-dev": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.arcade.dev/mcp/{gateway-slug}",
+   "headers": {
+    "Authorization": "Bearer $ARCADE_API_KEY",
+    "Arcade-User-ID": "{end_user_id}"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.arcade.dev/en/guides/mcp-gateways",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "arxiv-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "arxiv-mcp-server"
+   ],
+   "env": [],
+   "source_url": "https://github.com/blazickjp/arxiv-mcp-server",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "assemblyai-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://assemblyai.com/docs/mcp",
+   "headers": null,
+   "oauth": false,
+   "docs_only": true,
+   "source_url": "https://www.assemblyai.com/docs/coding-agent-prompts",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "atlassian-jira-confluence": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.atlassian.com/v2/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "attio-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.attio.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.attio.com/mcp/overview",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "aws-apis": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://aws-mcp.us-east-1.api.aws/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/getting-started-aws-mcp-server.html",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "aws-textract": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "python",
+   "args": [
+    "mcp_server/main.py",
+    "stdio"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/ag2-mcp-servers/amazon-textract",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "ayrshare": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.ayrshare.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $AYRSHARE_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://www.ayrshare.com/docs/additional/mcp-action-connect",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "azure-ai-speech": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@azure/mcp@latest",
+    "server",
+    "start"
+   ],
+   "env": [
+    "AZURE_TENANT_ID",
+    "AZURE_CLIENT_ID",
+    "AZURE_CLIENT_SECRET"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "azure-ai-translator": {
+  "mcp_config": null,
+  "mcp_issue": "no MCP server listed in entry (mcp.url null)"
+ },
+ "azure-apis": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@azure/mcp@latest",
+    "server",
+    "start"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "bigcommerce-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://docs.bigcommerce.com/_mcp/server",
+   "headers": null,
+   "oauth": false,
+   "env": [],
+   "docs_only": true,
+   "source_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/storefront/b2c.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "black-forest-labs-flux-api": {
+  "call": {
+   "operation": "generate an image from a text prompt (FLUX.2 [pro])",
+   "method": "POST",
+   "url": "https://api.bfl.ai/v1/flux-2-pro-preview",
+   "example": "curl -X POST https://api.bfl.ai/v1/flux-2-pro-preview -H \"x-key: $BFL_API_KEY\" -H 'Content-Type: application/json' -H 'accept: application/json' -d '{\"prompt\": \"A cat on its back legs running like a human\", \"width\": 1024, \"height\": 1024}'",
+   "response_fields": [
+    "id",
+    "polling_url",
+    "status",
+    "result.sample"
+   ],
+   "async": "poll GET {polling_url} with the x-key header until status is \"Ready\" (or \"Error\"/\"Failed\"); image URL is result.sample, a signed URL valid for 10 minutes",
+   "source_url": "https://docs.bfl.ai/flux_2/flux2_text_to_image",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "FLUX.2 [pro] text-to-image from $0.03 per image (megapixel-based, scales with resolution); FLUX1.1 [pro] 4 credits = $0.04 per image; 1 credit = $0.01",
+   "source_url": "https://docs.bfl.ai/quick_start/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.bfl.ai",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.bfl.ai/api_integration/mcp_integration",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "bland-ai": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.bland.ai/v1/mcp",
+   "headers": {
+    "Authorization": "Bearer $BLAND_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.bland.ai/integrations/mcp/overview",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "brave-search-api": {
+  "call": {
+   "operation": "run a web search",
+   "method": "GET",
+   "url": "https://api.search.brave.com/res/v1/web/search?q={query}",
+   "example": "curl \"https://api.search.brave.com/res/v1/web/search?q=machine+learning+tutorials\" -H \"X-Subscription-Token: $BRAVE_API_KEY\"",
+   "response_fields": [
+    "web.results[].title",
+    "web.results[].url",
+    "web.results[].description",
+    "query.more_results_available"
+   ],
+   "async": null,
+   "source_url": "https://api-dashboard.search.brave.com/app/documentation/web-search/get-started",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Search plan: $5 per 1,000 requests ($0.005 per query); $5 free monthly credits",
+   "source_url": "https://brave.com/search/api/",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@brave/brave-search-mcp-server"
+   ],
+   "env": [
+    "BRAVE_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/brave/brave-search-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "bright-data": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.brightdata.com/mcp?token=$BRIGHTDATA_API_TOKEN",
+   "headers": null,
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://github.com/brightdata/brightdata-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "browserbase-stagehand": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.browserbase.com/mcp?browserbaseApiKey=$BROWSERBASE_API_KEY",
+   "headers": null,
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.browserbase.com/integrations/mcp/setup",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "cartesia-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.cartesia.ai/mcp",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://docs.cartesia.ai/tools/ai/mcp.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "chroma-cloud": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "chroma-mcp",
+    "--client-type",
+    "cloud"
+   ],
+   "env": [
+    "CHROMA_TENANT",
+    "CHROMA_DATABASE",
+    "CHROMA_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/chroma-core/chroma-mcp#usage-with-claude-desktop",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "circleci-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.circleci.com/v1/mcp",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://circleci.com/changelog/hosted-mcp-server-now-available/",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "clickhouse-cloud": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.clickhouse.cloud/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://clickhouse.com/docs/products/cloud/features/ai-ml/mcp/remote-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "clickup-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.clickup.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "cloudconvert-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.cloudconvert.com",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://cloudconvert.com/docs/raw/integrations/mcp-server.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "cloudflare-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.cloudflare.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $CLOUDFLARE_API_TOKEN"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/cloudflare/mcp#get-started",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "cloudflare-sandbox-sdk": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://containers.mcp.cloudflare.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://github.com/cloudflare/mcp-server-cloudflare/tree/main/apps/sandbox-container",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "coda-api-superhuman-docs": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://docs.superhuman.com/apis/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.superhuman.com/.well-known/oauth-protected-resource/apis/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "cohere-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://docs.cohere.com/_mcp/server",
+   "headers": null,
+   "oauth": false,
+   "env": [],
+   "docs_only": true,
+   "source_url": "https://docs.cohere.com/llms.txt",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "coinbase-cdp-x402": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "node",
+   "args": [
+    "/Users/your-home-dir/.payments-mcp/bundle.js"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/coinbase/payments-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "coingecko-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.api.coingecko.com/mcp",
+   "headers": null,
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.coingecko.com/reference/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "coinmarketcap-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.coinmarketcap.com/mcp",
+   "headers": {
+    "X-CMC-MCP-API-KEY": "$CMC_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://coinmarketcap.com/api/documentation/ai-agent-hub/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "comet-opik": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://www.comet.com/opik/api/v1/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://www.comet.com/docs/opik/mcp-server/advanced-setup",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "composio": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://connect.composio.dev/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.composio.dev/docs/composio-connect",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "congress-gov": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://congressgov.caseyjhand.com/mcp",
+   "headers": null,
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://github.com/cyanheads/congressgov-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "context7-library-docs-for-agents": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.context7.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $CONTEXT7_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://context7.com/docs/resources/all-clients",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "convex": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "convex@latest",
+    "mcp",
+    "start"
+   ],
+   "env": [
+    "CONVEX_DEPLOY_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://docs.convex.dev/ai/convex-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "crossref-rest-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uv",
+   "args": [
+    "run",
+    "/path/to/academic-search-mcp-server/server.py"
+   ],
+   "env": [
+    "SEMANTIC_SCHOLAR_API_KEY",
+    "CROSSREF_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/afrise/academic-search-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "csm-common-sense-machines-api": {
+  "mcp_config": null,
+  "mcp_issue": "source repo github.com/CommonSenseMachines/blender-mcp returns 404; entry links only a lobehub listing (403)"
+ },
+ "d-id-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://docs.d-id.com/mcp",
+   "headers": null,
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.d-id.com/docs/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "datadog-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.{dd_site}/v1/mcp",
+   "headers": {
+    "Authorization": "Bearer $DD_ACCESS_TOKEN"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.datadoghq.com/mcp_server/setup/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "daytona": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "daytona",
+   "args": [
+    "mcp",
+    "start"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://www.daytona.io/docs/en/mcp/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "deepgram-api": {
+  "call": {
+   "operation": "transcribe a pre-recorded audio file from a URL",
+   "method": "POST",
+   "url": "https://api.deepgram.com/v1/listen",
+   "example": "curl -X POST 'https://api.deepgram.com/v1/listen?model=nova-3' -H \"Authorization: Token $DEEPGRAM_API_KEY\" -H 'Content-Type: application/json' -d '{\"url\": \"https://dpgr.am/spacewalk.wav\"}'",
+   "response_fields": [
+    "results.channels[0].alternatives[0].transcript",
+    "results.channels[0].alternatives[0].confidence",
+    "metadata.request_id",
+    "metadata.duration"
+   ],
+   "async": null,
+   "source_url": "https://developers.deepgram.com/reference/speech-to-text/listen-pre-recorded",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Nova-3 monolingual pre-recorded transcription: $0.0043 per audio minute (pay-as-you-go)",
+   "source_url": "https://deepgram.com/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://developers.deepgram.com/_mcp/server",
+   "headers": null,
+   "oauth": false,
+   "env": [],
+   "docs_only": true,
+   "source_url": "https://developers.deepgram.com/developer-tools/cli/mcp-server.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "deepl-api": {
+  "call": {
+   "operation": "translate text",
+   "method": "POST",
+   "url": "https://api.deepl.com/v2/translate",
+   "example": "curl -X POST https://api.deepl.com/v2/translate -H \"Authorization: DeepL-Auth-Key $DEEPL_API_KEY\" -H 'Content-Type: application/json' -d '{\"text\": [\"Hello world!\"], \"target_lang\": \"DE\"}'",
+   "response_fields": [
+    "translations[0].text",
+    "translations[0].detected_source_language"
+   ],
+   "async": null,
+   "source_url": "https://developers.deepl.com/docs/getting-started/quickstart",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "deepl-mcp-server"
+   ],
+   "env": [
+    "DEEPL_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/DeepL/deepl-mcp-server#configuration",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "dexpaprika": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.dexpaprika.com/streamable-http",
+   "headers": null,
+   "oauth": false,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/coinpaprika/dexpaprika-mcp#hosted-server-no-installation",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "discord-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "docker",
+   "args": [
+    "run",
+    "--rm",
+    "-i",
+    "-e",
+    "DISCORD_TOKEN",
+    "-e",
+    "DISCORD_GUILD_ID",
+    "saseq/discord-mcp:latest"
+   ],
+   "env": [
+    "DISCORD_TOKEN",
+    "DISCORD_GUILD_ID"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/SaseQ/discord-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "docker-hub-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "node",
+   "args": [
+    "/PATH/TO/hub-mcp/dist/index.js",
+    "--transport=stdio",
+    "--username=$DOCKER_HUB_USERNAME"
+   ],
+   "env": [
+    "HUB_PAT_TOKEN"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/docker/hub-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "docusign-esignature-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp-d.docusign.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://developers.docusign.com/platform/mcp-server/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "e2b": {
+  "call": {
+   "operation": "create a sandbox",
+   "method": "POST",
+   "url": "https://api.e2b.app/v2/sandboxes",
+   "example": "curl -X POST https://api.e2b.app/v2/sandboxes -H \"X-API-Key: $E2B_API_KEY\" -H 'Content-Type: application/json' -d '{\"templateID\": \"base\", \"timeout\": 300}'",
+   "response_fields": [
+    "sandboxID",
+    "templateID",
+    "envdAccessToken",
+    "domain"
+   ],
+   "async": null,
+   "source_url": "https://github.com/e2b-dev/E2B/blob/main/spec/openapi.yml",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Per running second: $0.000014 per vCPU + $0.0000045 per GiB RAM (default 2 vCPU = $0.000028/s CPU)",
+   "source_url": "https://e2b.dev/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": null,
+  "mcp_issue": "e2b-dev/mcp-server archived since 2026-04"
+ },
+ "elevenlabs-agents-platform": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.elevenlabs.io/v1/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "elevenlabs-api": {
+  "call": {
+   "operation": "convert text to speech",
+   "method": "POST",
+   "url": "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
+   "example": "curl -X POST https://api.elevenlabs.io/v1/text-to-speech/$VOICE_ID -H \"xi-api-key: $ELEVENLABS_API_KEY\" -H \"Content-Type: application/json\" -d '{\"text\":\"Hello\",\"model_id\":\"eleven_multilingual_v2\"}' --output out.mp3",
+   "response_fields": [
+    "body: binary audio (default mp3_44100_128)",
+    "header character-cost",
+    "header request-id"
+   ],
+   "async": null,
+   "source_url": "https://elevenlabs.io/docs/api-reference/text-to-speech/convert",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "TTS API pay-as-you-go: $0.10 per 1,000 characters (Multilingual v2 / v3), $0.05 per 1,000 (Flash / Turbo)",
+   "source_url": "https://elevenlabs.io/pricing/api",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": null,
+  "mcp_issue": "repo archived 2026-08-20; replaced by hosted OAuth server https://api.elevenlabs.io/v1/mcp"
+ },
+ "elevenlabs-music-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.elevenlabs.io/v1/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://github.com/elevenlabs/elevenlabs-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "exa": {
+  "call": {
+   "operation": "search the web",
+   "method": "POST",
+   "url": "https://api.exa.ai/search",
+   "example": "curl -X POST https://api.exa.ai/search -H \"x-api-key: $EXA_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"Latest developments in LLM capabilities\",\"numResults\":10}'",
+   "response_fields": [
+    "requestId",
+    "results[].title",
+    "results[].url",
+    "results[].id",
+    "costDollars.total"
+   ],
+   "async": null,
+   "source_url": "https://exa.ai/docs/reference/search",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Search: $7 per 1,000 requests (up to 10 results; $0.007 per search), +$1 per 1,000 extra results; deep search $12-$15 per 1,000; contents $1 per 1,000 pages per content type",
+   "source_url": "https://exa.ai/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.exa.ai/mcp",
+   "headers": {
+    "x-api-key": "$EXA_API_KEY"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://exa.ai/docs/reference/exa-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "fal-ai": {
+  "call": {
+   "operation": "generate an image from a text prompt via the queue (FLUX.1 schnell)",
+   "method": "POST",
+   "url": "https://queue.fal.run/{model_id}",
+   "example": "curl -X POST https://queue.fal.run/fal-ai/flux/schnell -H \"Authorization: Key $FAL_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\": \"a sunset over mountains\"}'",
+   "response_fields": [
+    "request_id",
+    "status_url",
+    "response_url"
+   ],
+   "async": "poll GET https://queue.fal.run/{model_id}/requests/{request_id}/status until COMPLETED, then GET .../requests/{request_id} (images[0].url)",
+   "source_url": "https://fal.ai/docs/documentation/model-apis/inference/queue",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "FLUX.1 [schnell]: $0.003 per megapixel (rounded up); price varies per model",
+   "source_url": "https://fal.ai/models/fal-ai/flux/schnell",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.fal.ai/mcp",
+   "headers": {
+    "Authorization": "Bearer $FAL_KEY"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://fal.ai/docs/documentation/setting-up/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "figma-rest-api-dev-mode-mcp": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.figma.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "financial-modeling-prep": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://financialmodelingprep.com/mcp?apikey=$FMP_API_KEY",
+   "headers": null,
+   "oauth": false,
+   "env": [
+    "FMP_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://site.financialmodelingprep.com/developer/docs/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "firecrawl": {
+  "call": {
+   "operation": "scrape a page to markdown",
+   "method": "POST",
+   "url": "https://api.firecrawl.dev/v2/scrape",
+   "example": "curl -X POST https://api.firecrawl.dev/v2/scrape -H \"Authorization: Bearer $FIRECRAWL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"url\":\"https://example.com\"}'",
+   "response_fields": [
+    "success",
+    "data.markdown",
+    "data.metadata.title",
+    "data.metadata.statusCode",
+    "data.links"
+   ],
+   "async": null,
+   "source_url": "https://docs.firecrawl.dev/api-reference/endpoint/scrape",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Scrape: 1 credit per page; Hobby plan 5,000 credits/month for $16/mo billed yearly ($19 monthly); free plan 1,000 credits",
+   "source_url": "https://www.firecrawl.dev/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.firecrawl.dev/v2/mcp",
+   "headers": {
+    "Authorization": "Bearer $FIRECRAWL_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.firecrawl.dev/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "fireworks-ai": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://docs.fireworks.ai/mcp",
+   "headers": null,
+   "oauth": false,
+   "docs_only": true,
+   "source_url": "https://docs.fireworks.ai/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "fly-io-machines-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "fly",
+   "args": [
+    "mcp",
+    "server"
+   ],
+   "env": [
+    "FLY_ACCESS_TOKEN"
+   ],
+   "docs_only": false,
+   "source_url": "https://docs.fly.io/flyctl/mcp-server/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "gamma-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.gamma.app/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://developers.gamma.app/mcp/gamma-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "gdelt-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://gdelt.caseyjhand.com/mcp",
+   "headers": null,
+   "oauth": false,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/cyanheads/gdelt-mcp-server#public-hosted-instance",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "geoapify": {
+  "call": {
+   "operation": "forward geocode a street address",
+   "method": "GET",
+   "url": "https://api.geoapify.com/v1/geocode/search?text={address}&format=json&apiKey={API_KEY}",
+   "example": "curl \"https://api.geoapify.com/v1/geocode/search?text=38%20Upper%20Montagu%20Street%2C%20Westminster%20W1H%201LJ%2C%20United%20Kingdom&format=json&apiKey=$GEOAPIFY_API_KEY\"",
+   "response_fields": [
+    "results[0].lat",
+    "results[0].lon",
+    "results[0].formatted"
+   ],
+   "async": null,
+   "source_url": "https://apidocs.geoapify.com/docs/geocoding/forward-geocoding/",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "1 geocode request = 1 credit; free plan 3,000 credits/day (= 3,000 geocode requests/day, up to 5 req/s); paid plans are daily-credit subscriptions, e.g. API 10: 10,000 credits/day for $59/month",
+   "source_url": "https://www.geoapify.com/pricing/",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.geoapify.com/v1/mcp",
+   "headers": {
+    "x-api-key": "$GEOAPIFY_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://apidocs.geoapify.com/docs/mcp/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "github-api": {
+  "call": {
+   "operation": "create an issue in a repository",
+   "method": "POST",
+   "url": "https://api.github.com/repos/{owner}/{repo}/issues",
+   "example": "curl -L -X POST https://api.github.com/repos/OWNER/REPO/issues -H 'Accept: application/vnd.github+json' -H \"Authorization: Bearer $GITHUB_TOKEN\" -H 'X-GitHub-Api-Version: 2026-03-10' -d '{\"title\": \"Found a bug\", \"body\": \"Steps to reproduce...\"}'",
+   "response_fields": [
+    "number",
+    "html_url",
+    "id",
+    "state"
+   ],
+   "async": null,
+   "source_url": "https://docs.github.com/en/rest/issues/issues#create-an-issue",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.githubcopilot.com/mcp/",
+   "headers": {
+    "Authorization": "Bearer $GITHUB_PAT"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/github/github-mcp-server#install-in-vs-code",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "gitingest": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "gitingestmcp@latest"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/narumiruna/gitingest-mcp#pypi-installation",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "gitlab-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://gitlab.com/api/v4/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "globalping": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.globalping.dev/mcp",
+   "headers": {
+    "Authorization": "Bearer $GLOBALPING_API_TOKEN"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/jsdelivr/globalping-mcp-server#authentication",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "google-bigquery": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://bigquery.googleapis.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "google-cloud-apis": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://compute.googleapis.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $GCLOUD_ACCESS_TOKEN",
+    "x-goog-user-project": "$GOOGLE_CLOUD_PROJECT"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.cloud.google.com/mcp/configure-mcp-ai-application",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "google-cloud-translation": {
+  "mcp_config": null,
+  "mcp_issue": "entry lists no MCP server (mcp.url null)"
+ },
+ "google-gemini-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://gemini-api-docs-mcp.dev",
+   "headers": null,
+   "oauth": false,
+   "docs_only": true,
+   "source_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "google-maps-platform": {
+  "call": {
+   "operation": "forward geocode a street address (Geocoding API)",
+   "method": "GET",
+   "url": "https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={API_KEY}",
+   "example": "curl \"https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=$GOOGLE_MAPS_API_KEY\"",
+   "response_fields": [
+    "status",
+    "results[0].geometry.location.lat",
+    "results[0].geometry.location.lng",
+    "results[0].formatted_address",
+    "results[0].place_id"
+   ],
+   "async": null,
+   "source_url": "https://developers.google.com/maps/documentation/geocoding/requests-geocoding",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Geocoding (Essentials SKU): first 10,000 requests/month free, then $5.00 per 1,000 requests ($0.005 each) for 10,001-100,000; volume discounts above",
+   "source_url": "https://developers.google.com/maps/billing-and-pricing/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mapstools.googleapis.com/mcp",
+   "headers": {
+    "X-Goog-Api-Key": "$GOOGLE_MAPS_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://developers.google.com/maps/ai/grounding-lite",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "google-slides-docs-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://slidesmcp.googleapis.com/mcp/v1",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://developers.google.com/workspace/slides/api/guides/configure-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "gumloop": {
+  "mcp_config": {
+   "transport": "sse",
+   "url": "https://mcp.gumloop.com/gumloop/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.gumloop.com/mcp-server/overview",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "hacker-news-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "node",
+   "args": [
+    "/path/to/hn-server/build/index.js"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/pskill9/hn-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "here-location-services": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "/<local-checkout-directory>/src/node"
+   ],
+   "env": [
+    "HERE_MAPS_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/limingchina/heremaps-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "heygen-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.heygen.com/mcp/v1/",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://developers.heygen.com/mcp/overview.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "hubspot-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.hubspot.com",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "hugging-face-inference-providers": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://huggingface.co/mcp",
+   "headers": {
+    "Authorization": "Bearer $HF_TOKEN"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://github.com/huggingface/hf-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "hume-ai-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://dev.hume.ai/_mcp/server",
+   "headers": null,
+   "oauth": false,
+   "env": [],
+   "docs_only": true,
+   "source_url": "https://dev.hume.ai/docs/integrations/mcp.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "hyperbrowser": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "hyperbrowser-mcp"
+   ],
+   "env": [
+    "HYPERBROWSER_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/hyperbrowserai/mcp#running-on-cursor",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "ideogram-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.ideogram.ai/mcp",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://ideogram.ai/features/mcp/",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "intercom-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.intercom.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $INTERCOM_ACCESS_TOKEN"
+   },
+   "oauth": true,
+   "source_url": "https://developers.intercom.com/docs/guides/mcp",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "ip2location-io": {
+  "mcp_config": {
+   "transport": "stdio",
+   "url": "https://mcp.ip2location.io/",
+   "command": "npx",
+   "args": [
+    "-y",
+    "mcp-remote@latest",
+    "https://mcp.ip2location.io/",
+    "--header",
+    "X-API-Key:$IP2LOCATION_API_KEY"
+   ],
+   "headers": {
+    "X-API-Key": "$IP2LOCATION_API_KEY"
+   },
+   "oauth": false,
+   "source_url": "https://github.com/ip2location/mcp-ip2location-io",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "iplocate": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@iplocate/mcp-server"
+   ],
+   "env": [
+    "IPLOCATE_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/iplocate/mcp-server-iplocate",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "jina-ai-search-reader": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.jina.ai/v1",
+   "headers": {
+    "Authorization": "Bearer $JINA_API_KEY"
+   },
+   "oauth": false,
+   "env": [
+    "JINA_API_KEY"
+   ],
+   "source_url": "https://github.com/jina-ai/MCP",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "kagi-search-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.kagi.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $KAGI_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://github.com/kagisearch/kagimcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "keboola": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.keboola.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/keboola/mcp-server#readme",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "klaviyo-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.klaviyo.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "kling-ai-api": {
+  "call": {
+   "operation": "generate a video from a text prompt (Kling 2.6)",
+   "method": "POST",
+   "url": "https://api-singapore.klingai.com/text-to-video/kling-2.6",
+   "example": "curl -X POST https://api-singapore.klingai.com/text-to-video/kling-2.6 -H \"Authorization: Bearer $KLING_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\":\"A girl sat on the train, looking out the window\",\"settings\":{\"resolution\":\"720p\",\"duration\":5}}'",
+   "response_fields": [
+    "data.id",
+    "data.status"
+   ],
+   "async": "poll GET https://api-singapore.klingai.com/tasks?task_ids={id} until data[0].status is succeeded; video at data[0].outputs[0].url (kept 30 days)",
+   "source_url": "https://kling.ai/document-api/api/video/2-6/text-to-video.md",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Kling 2.6 720p (no audio): 0.3 units/s ($0.042/s), 5 s video = 1.5 units ($0.21); 1 unit = $0.14",
+   "source_url": "https://kling.ai/document-api/pricing/base/video.md",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "mcp-kling@latest"
+   ],
+   "env": [
+    "KLING_ACCESS_KEY",
+    "KLING_SECRET_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/199-mcp/mcp-kling",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "languagetool-api": {
+  "mcp_config": null,
+  "mcp_issue": "entry lists no MCP server (mcp.url null)"
+ },
+ "leonardo-ai-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.leonardo.ai/v1/mcp",
+   "headers": {
+    "API-Key": "$LEONARDO_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.leonardo.ai/docs/connect-to-leonardoai-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "letta": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.letta.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $LETTA_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.letta.com/platform/hosted-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "line-messaging-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "@line/line-bot-mcp-server"
+   ],
+   "env": [
+    "CHANNEL_ACCESS_TOKEN",
+    "DESTINATION_USER_ID"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/line/line-bot-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "linear-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.linear.app/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://linear.app/docs/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "linkup": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.linkup.so/mcp",
+   "headers": {
+    "Authorization": "Bearer $LINKUP_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.linkup.so/pages/integrations/mcp/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "llamaparse-llamacloud": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.llamaindex.ai/mcp",
+   "headers": {
+    "Authorization": "Bearer $LLAMA_CLOUD_API_KEY"
+   },
+   "oauth": true,
+   "source_url": "https://developers.llamaindex.ai/llamaparse/for-agents/mcp/",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "luma-ai-dream-machine-api": {
+  "call": {
+   "operation": "generate a video from a text prompt (Dream Machine API, Ray 2)",
+   "method": "POST",
+   "url": "https://api.lumalabs.ai/dream-machine/v1/generations/video",
+   "example": "curl -X POST https://api.lumalabs.ai/dream-machine/v1/generations/video -H \"Authorization: Bearer $LUMA_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\":\"A serene lake surrounded by mountains at sunset\",\"aspect_ratio\":\"16:9\",\"model\":\"ray-2\"}'",
+   "response_fields": [
+    "id",
+    "state",
+    "assets.video",
+    "failure_reason"
+   ],
+   "async": "poll GET https://api.lumalabs.ai/dream-machine/v1/generations/{id} until state is completed or failed (or pass callback_url)",
+   "source_url": "https://docs.lumalabs.ai/reference/creategeneration.md",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uv",
+   "args": [
+    "run",
+    "--with",
+    "mcp[cli]",
+    "--with",
+    "aiohttp",
+    "mcp",
+    "run",
+    "{repo_dir}/server.py"
+   ],
+   "env": [
+    "LUMA_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/lumalabs/luma-api-mcp/blob/main/setup.sh",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mailchimp-marketing-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "mailchimp-mcp"
+   ],
+   "env": [
+    "MAILCHIMP_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/damientilman/mailchimp-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mailgun": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@mailgun/mcp-server"
+   ],
+   "env": [
+    "MAILGUN_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/mailgun/mailgun-mcp-server#configuration",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "make-api-mcp": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.make.com",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://developers.make.com/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mapbox": {
+  "call": {
+   "operation": "forward geocode a street address (Geocoding API v6)",
+   "method": "GET",
+   "url": "https://api.mapbox.com/search/geocode/v6/forward?q={address}&access_token={ACCESS_TOKEN}",
+   "example": "curl \"https://api.mapbox.com/search/geocode/v6/forward?q=1600%20Pennsylvania%20Avenue%20NW%2C%20Washington%20DC&access_token=$MAPBOX_ACCESS_TOKEN\"",
+   "response_fields": [
+    "features[0].geometry.coordinates",
+    "features[0].properties.full_address",
+    "features[0].properties.coordinates.accuracy"
+   ],
+   "async": null,
+   "source_url": "https://docs.mapbox.com/api/search/geocoding/",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Geocoding API (temporary): first 100,000 requests/month free, then $0.75 per 1,000 requests for 100,001-500,000",
+   "source_url": "https://www.mapbox.com/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.mapbox.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $MAPBOX_ACCESS_TOKEN"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://github.com/mapbox/mcp-server/blob/main/docs/hosted-mcp-guide.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "maven-central-search": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "docker",
+   "args": [
+    "run",
+    "-i",
+    "--rm",
+    "arvindand/maven-tools-mcp:latest"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/arvindand/maven-tools-mcp#quick-start",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mem0": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.mem0.ai/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.mem0.ai/platform/mem0-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mercado-libre-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": true,
+   "source_url": "https://developers.mercadolibre.com.ar/en_us/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mercado-pago-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.mercadopago.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $MERCADOPAGO_ACCESS_TOKEN"
+   },
+   "docs_only": false,
+   "source_url": "https://github.com/mercadolibre/mercadopago-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "merge-agent-handler": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://ah-api.merge.dev/api/v1/tool-packs/{TOOL_PACK_ID}/registered-users/{REGISTERED_USER_ID}/mcp",
+   "headers": {
+    "Authorization": "Bearer $MERGE_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mermaid-chart-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.mermaid.ai/mcp",
+   "headers": {
+    "Authorization": "$MERMAID_CHART_TOKEN"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://mermaid.ai/docs/ai/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "meshy-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@meshy-ai/meshy-mcp-server"
+   ],
+   "env": [
+    "MESHY_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/meshy-dev/meshy-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "minimax-hailuo-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "minimax-mcp"
+   ],
+   "env": [
+    "MINIMAX_API_KEY",
+    "MINIMAX_API_HOST",
+    "MINIMAX_MCP_BASE_PATH"
+   ],
+   "docs_only": false,
+   "source_url": "https://platform.minimax.io/docs/guides/mcp-guide.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "miro-rest-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.miro.com/",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://developers.miro.com/docs/connecting-to-miro-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mistral-ai-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.mistral.ai/mcp",
+   "headers": {
+    "Authorization": "Bearer $MISTRAL_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.mistral.ai/resources/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mistral-ocr-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "--from",
+    "/path/to/mistral-ocr-mcp",
+    "mistral-ocr-mcp"
+   ],
+   "env": [
+    "MISTRAL_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/D-Diaa/mistral-ocr-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "modal": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "mcp4modal-sandbox",
+    "--transport",
+    "stdio",
+    "--app_name",
+    "{app_name}"
+   ],
+   "env": [
+    "MODAL_TOKEN_ID",
+    "MODAL_TOKEN_SECRET"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/milkymap/mcp4modal_sandbox#integration-with-claude-desktop",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "monday-com-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.monday.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $MONDAY_API_TOKEN"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mongodb-atlas": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "mongodb-mcp-server@latest",
+    "--readOnly"
+   ],
+   "env": [
+    "MDB_MCP_CONNECTION_STRING",
+    "MDB_MCP_API_CLIENT_ID",
+    "MDB_MCP_API_CLIENT_SECRET"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/mongodb-js/mongodb-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mux-video-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.mux.com",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://www.mux.com/docs/integrations/mcp-server.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "n8n-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://{your-n8n-host}/mcp-server/http",
+   "headers": {
+    "Authorization": "Bearer $N8N_MCP_ACCESS_TOKEN"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.n8n.io/connect/connect-to-n8n-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "national-weather-service-api-nws": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "node",
+   "args": [
+    "/PATH/TO/Weather-MCP-Server/build/index.js"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/LeandroBerlin/Weather-MCP-Server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "neon-postgres": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.neon.tech/mcp",
+   "headers": {
+    "Authorization": "Bearer $NEON_API_KEY"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/neondatabase/mcp-server-neon#option-3-remote-hosted-mcp-server-api-key-based-authentication",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "netlify-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://netlify-mcp.netlify.app/mcp",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://github.com/netlify/netlify-mcp/pull/46",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "newsapi": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "node",
+   "args": [
+    "/path/to/mcp-newsapi/build/index.js"
+   ],
+   "env": [
+    "NEWSAPI_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/matteoantoci/mcp-newsapi",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "nocodb-cloud": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://app.nocodb.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://nocodb.com/docs/apis-and-mcp/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "notion-api": {
+  "call": {
+   "operation": "create a page under an existing page",
+   "method": "POST",
+   "url": "https://api.notion.com/v1/pages",
+   "example": "curl -X POST https://api.notion.com/v1/pages -H \"Authorization: Bearer $NOTION_API_KEY\" -H 'Notion-Version: 2026-03-11' -H 'Content-Type: application/json' --data '{\"parent\": {\"page_id\": \"{page_id}\"}, \"properties\": {\"title\": {\"title\": [{\"text\": {\"content\": \"New page\"}}]}}, \"markdown\": \"# Hello\n\nFirst paragraph\"}'",
+   "response_fields": [
+    "id",
+    "url",
+    "created_time"
+   ],
+   "async": null,
+   "source_url": "https://developers.notion.com/reference/post-page",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.notion.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://developers.notion.com/guides/mcp/get-started-with-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "ntfy": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "ntfy-me-mcp"
+   ],
+   "env": [
+    "NTFY_TOPIC",
+    "NTFY_URL",
+    "NTFY_TOKEN"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/gitmotion/ntfy-me-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "nytimes": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "--from",
+    "git+https://github.com/jeffmm/nytimes-mcp.git",
+    "nytimes-mcp"
+   ],
+   "env": [
+    "NYT_API_KEY"
+   ],
+   "source_url": "https://github.com/jeffmm/nytimes-mcp",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "open-library": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "mcp-open-library"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/8enSmith/mcp-open-library",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "open-meteo": {
+  "call": {
+   "operation": "get an hourly temperature forecast for a location",
+   "method": "GET",
+   "url": "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&hourly=temperature_2m",
+   "example": "curl \"https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m\"",
+   "response_fields": [
+    "hourly.time",
+    "hourly.temperature_2m",
+    "hourly_units.temperature_2m",
+    "latitude",
+    "longitude",
+    "timezone"
+   ],
+   "async": null,
+   "source_url": "https://open-meteo.com/en/docs",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Free, no key, for non-commercial use (300,000 calls/month); commercial plans are fixed monthly with no per-call price",
+   "source_url": "https://open-meteo.com/en/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "-p",
+    "open-meteo-mcp-server",
+    "open-meteo-mcp-server"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/cmer81/open-meteo-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "openai-images-api-gpt-image": {
+  "call": {
+   "operation": "generate an image from a text prompt",
+   "method": "POST",
+   "url": "https://api.openai.com/v1/images/generations",
+   "example": "curl -X POST https://api.openai.com/v1/images/generations -H \"Authorization: Bearer $OPENAI_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"gpt-image-2.5-flare\",\"prompt\":\"A children book drawing of a veterinarian listening to a baby otter heartbeat\"}'",
+   "response_fields": [
+    "data[0].b64_json"
+   ],
+   "async": null,
+   "source_url": "https://developers.openai.com/api/docs/guides/image-generation",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "node",
+   "args": [
+    "{repo_dir}/dist/index.js"
+   ],
+   "env": [
+    "OPENAI_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "openalex-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@futurelab-studio/latest-science-mcp@latest"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/benedict2310/Scientific-Papers-MCP",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "openrouter": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.openrouter.ai/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://openrouter.ai/docs/guides/overview/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "openrouteservice": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "openroute-mcp"
+   ],
+   "env": [
+    "OPENROUTESERVICE_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/vemonet/openroute-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "openstreetmap-nominatim": {
+  "call": {
+   "operation": "forward geocode a street address",
+   "method": "GET",
+   "url": "https://nominatim.openstreetmap.org/search?q={address}&format=jsonv2",
+   "example": "curl -A \"my-app/1.0 (contact@example.com)\" \"https://nominatim.openstreetmap.org/search?q=135+pilkington+avenue,+birmingham&format=jsonv2\"",
+   "response_fields": [
+    "[0].lat",
+    "[0].lon",
+    "[0].display_name",
+    "[0].place_id"
+   ],
+   "async": null,
+   "source_url": "https://nominatim.org/release-docs/latest/api/Search/",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Free (donated infrastructure), no key; public server limited to max 1 request/second with an identifying User-Agent or Referer; no monthly quota published",
+   "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://openstreetmap.caseyjhand.com/mcp",
+   "headers": null,
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server#readme",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "openweathermap-api": {
+  "call": {
+   "operation": "get current weather for a location",
+   "method": "GET",
+   "url": "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_KEY}",
+   "example": "curl \"https://api.openweathermap.org/data/2.5/weather?lat=52.23&lon=21.01&units=metric&appid=$OPENWEATHER_API_KEY\"",
+   "response_fields": [
+    "main.temp",
+    "weather[0].description",
+    "main.humidity",
+    "wind.speed",
+    "name"
+   ],
+   "async": null,
+   "source_url": "https://openweathermap.org/current",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Current Weather: free up to 1,000,000 calls/month (60/min); One Call API: first 1,000 calls/day free, then 0.0012 GBP per call",
+   "source_url": "https://openweathermap.org/price",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.openweathermap.org/mcp",
+   "headers": {
+    "Authorization": "Bearer $OPENWEATHER_MCP_DATA_KEY"
+   },
+   "oauth": false,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://mcp.openweathermap.org/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "overpass-api-osm": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://openstreetmap.caseyjhand.com/mcp",
+   "headers": null,
+   "oauth": false,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server#public-hosted-instance",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "pagerduty-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.pagerduty.com/mcp",
+   "headers": {
+    "Authorization": "Token token=$PAGERDUTY_API_KEY"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "paragon-actionkit": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "http://localhost:3001/mcp?user={user-id}",
+   "headers": null,
+   "oauth": false,
+   "command": "npm",
+   "args": [
+    "run",
+    "start"
+   ],
+   "env": [
+    "PROJECT_ID",
+    "SIGNING_KEY"
+   ],
+   "source_url": "https://github.com/useparagon/paragon-mcp",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "parallel-web-systems-search-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://search.parallel.ai/mcp",
+   "headers": {
+    "Authorization": "Bearer $PARALLEL_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.parallel.ai/integrations/mcp/search-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "paypal-api": {
+  "mcp_config": {
+   "transport": "sse",
+   "url": "https://mcp.paypal.com/sse",
+   "headers": {
+    "Authorization": "Bearer $PAYPAL_ACCESS_TOKEN"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.paypal.ai/developer/tools/ai/mcp-quickstart",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "pdf-co-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "pdfco-mcp"
+   ],
+   "env": [
+    "X_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/pdfdotco/pdfco-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "penpot-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://design.penpot.app/mcp/stream?userToken=$PENPOT_MCP_KEY",
+   "headers": null,
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://help.penpot.app/mcp/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "perplexity-sonar-search-api": {
+  "call": {
+   "operation": "run a web search",
+   "method": "POST",
+   "url": "https://api.perplexity.ai/search",
+   "example": "curl -X POST https://api.perplexity.ai/search -H \"Authorization: Bearer $PERPLEXITY_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"latest AI developments\",\"max_results\":3}'",
+   "response_fields": [
+    "results[].title",
+    "results[].url",
+    "results[].snippet",
+    "results[].date",
+    "id"
+   ],
+   "async": null,
+   "source_url": "https://docs.perplexity.ai/api-reference/search-post",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Search API: $5 per 1,000 requests ($0.005 per request); fast search $1 per 1,000",
+   "source_url": "https://docs.perplexity.ai/guides/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.perplexity.ai/mcp",
+   "headers": {
+    "Authorization": "Bearer $PERPLEXITY_API_KEY"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.perplexity.ai/guides/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "piapi": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "node",
+   "args": [
+    "/path/to/piapi-mcp-server/dist/index.js"
+   ],
+   "env": [
+    "PIAPI_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/apinetwork/piapi-mcp-server#connecting-to-claude-desktop",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "pinecone": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@pinecone-database/mcp"
+   ],
+   "env": [
+    "PINECONE_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/pinecone-io/pinecone-mcp#setup",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "pipedream-connect": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://remote.mcp.pipedream.net/v3",
+   "headers": {
+    "Authorization": "Bearer $PIPEDREAM_ACCESS_TOKEN",
+    "x-pd-project-id": "$PIPEDREAM_PROJECT_ID",
+    "x-pd-environment": "development",
+    "x-pd-external-user-id": "{external_user_id}",
+    "x-pd-app-slug": "{app_slug}"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://pipedream.com/docs/connect/mcp/developers",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "pipedrive-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.pipedrive.ai/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://support.pipedrive.com/en/article/mcp-claude",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "pixverse-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "pixverse-mcp"
+   ],
+   "env": [
+    "PIXVERSE_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/PixVerseAI/PixVerse-MCP",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "plaid-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.dashboard.plaid.com/mcp/",
+   "headers": {
+    "Authorization": "Bearer $PLAID_DASHBOARD_TOKEN"
+   },
+   "oauth": false,
+   "source_url": "https://plaid.com/docs/resources/mcp/",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "planetscale": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.pscale.dev/mcp/planetscale",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://planetscale.com/docs/connect/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "playwright-mcp-microsoft": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "@playwright/mcp@latest"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/microsoft/playwright-mcp#getting-started",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "polygon-io-massive": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "mcp_massive",
+   "args": [],
+   "env": [
+    "MASSIVE_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/massive-com/mcp_massive",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "postman-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.postman.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $POSTMAN_API_KEY"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://github.com/postmanlabs/postman-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "postmark": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@activecampaign/postmark-mcp"
+   ],
+   "env": [
+    "POSTMARK_SERVER_TOKEN",
+    "DEFAULT_SENDER_EMAIL",
+    "DEFAULT_MESSAGE_STREAM"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/ActiveCampaign/postmark-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "pubmed-e-utilities-ncbi": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uv",
+   "args": [
+    "tool",
+    "run",
+    "paper-search-mcp"
+   ],
+   "env": [
+    "PAPER_SEARCH_MCP_UNPAYWALL_EMAIL"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/openags/paper-search-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "qdrant-cloud": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "mcp-server-qdrant"
+   ],
+   "env": [
+    "QDRANT_URL",
+    "QDRANT_API_KEY",
+    "COLLECTION_NAME"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/qdrant/mcp-server-qdrant",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "recraft-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.recraft.ai/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://www.recraft.ai/docs/mcp-reference/remote-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "reducto-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.reducto.ai/mcp",
+   "headers": {
+    "Authorization": "Bearer $REDUCTO_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.reducto.ai/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "reflag": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://app.reflag.com/api/mcp",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://docs.reflag.com/api/mcp",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "render-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.render.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $RENDER_API_KEY"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://render.com/docs/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "replicate": {
+  "call": {
+   "operation": "run an official model and wait for the output (FLUX schnell text-to-image)",
+   "method": "POST",
+   "url": "https://api.replicate.com/v1/models/{owner}/{name}/predictions",
+   "example": "curl -s -X POST https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions -H \"Authorization: Bearer $REPLICATE_API_TOKEN\" -H 'Content-Type: application/json' -H 'Prefer: wait' -d '{\"input\": {\"prompt\": \"a sunset over mountains\"}}'",
+   "response_fields": [
+    "id",
+    "status",
+    "output",
+    "error",
+    "urls.get"
+   ],
+   "async": "if status is not succeeded after the 60 s wait, poll GET https://api.replicate.com/v1/predictions/{id}",
+   "source_url": "https://replicate.com/docs/reference/http",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "black-forest-labs/flux-schnell: $3.00 per 1,000 output images ($0.003/image); other models billed per output or per second of compute",
+   "source_url": "https://replicate.com/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "sse",
+   "url": "https://mcp.replicate.com/sse",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://mcp.replicate.com",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "resemble-ai-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://docs.resemble.ai/_mcp/server",
+   "headers": null,
+   "oauth": false,
+   "docs_only": true,
+   "source_url": "https://docs.resemble.ai/_mcp/server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "resend": {
+  "call": {
+   "operation": "send an email",
+   "method": "POST",
+   "url": "https://api.resend.com/emails",
+   "example": "curl -X POST 'https://api.resend.com/emails' -H \"Authorization: Bearer $RESEND_API_KEY\" -H 'Content-Type: application/json' -d '{\"from\":\"Acme <onboarding@resend.dev>\",\"to\":[\"delivered@resend.dev\"],\"subject\":\"hello world\",\"html\":\"<p>it works!</p>\"}'",
+   "response_fields": [
+    "id"
+   ],
+   "async": null,
+   "source_url": "https://resend.com/docs/api-reference/emails/send-email",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Free: 3,000 emails/month (100/day); Pro $20/mo for 50,000 emails, then $0.90 per 1,000 extra emails",
+   "source_url": "https://resend.com/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.resend.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $RESEND_API_KEY"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://resend.com/docs/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "retell-ai": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.retellai.com",
+   "headers": {
+    "Authorization": "Bearer $RETELL_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.retellai.com/get-started/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "rev-ai-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://docs.rev.ai/mcp",
+   "headers": null,
+   "oauth": false,
+   "docs_only": true,
+   "source_url": "https://docs.rev.ai/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "riza": {
+  "mcp_config": {
+   "url": "https://mcp.riza.io/code-interpreter",
+   "headers": {
+    "Authorization": "Bearer $RIZA_API_KEY"
+   },
+   "oauth": false,
+   "env": [
+    "RIZA_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://docs.riza.io/getting-started/mcp-servers",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "runloop": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@runloop/api-client-mcp"
+   ],
+   "env": [
+    "RUNLOOP_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/runloopai/api-client-ts/tree/main/packages/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "runway-api": {
+  "call": {
+   "operation": "generate a video from an image and a prompt (Gen-4.5)",
+   "method": "POST",
+   "url": "https://api.dev.runwayml.com/v1/image_to_video",
+   "example": "curl -X POST https://api.dev.runwayml.com/v1/image_to_video -H \"Authorization: Bearer $RUNWAYML_API_SECRET\" -H \"X-Runway-Version: 2024-11-06\" -H \"Content-Type: application/json\" -d '{\"promptImage\":\"https://example.com/image.jpg\",\"promptText\":\"A timelapse on a sunny day\",\"model\":\"gen4.5\",\"ratio\":\"1280:720\",\"duration\":5}'",
+   "response_fields": [
+    "id",
+    "status",
+    "output[0]",
+    "failure",
+    "failureCode"
+   ],
+   "async": "poll GET https://api.dev.runwayml.com/v1/tasks/{id} until status is SUCCEEDED or FAILED; video URLs in output",
+   "source_url": "https://docs.dev.runwayml.com/llms-small.txt",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Gen-4.5 video: 12 credits per second ($0.12/s, $0.60 per 5 s clip); 1 credit = $0.01",
+   "source_url": "https://docs.dev.runwayml.com/guides/pricing/",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.runwayml.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://mcp.runwayml.com/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "salesforce-apis": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.salesforce.com/platform/mcp/v1/platform/sobject-all",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://api.salesforce.com/.well-known/oauth-protected-resource/platform/mcp/v1/platform/sobject-all",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "scrapfly": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.scrapfly.io/mcp",
+   "headers": {
+    "Authorization": "Bearer $SCRAPFLY_API_KEY"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://scrapfly.io/docs/mcp/authentication",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "searchapi-io": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://www.searchapi.io/mcp",
+   "headers": {
+    "X-MCP-Token": "$SEARCHAPI_MCP_TOKEN"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://www.searchapi.io/integrations/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "searxng-self-hosted-json-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "mcp-searxng"
+   ],
+   "env": [
+    "SEARXNG_URL"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/ihor-sokoliuk/mcp-searxng#quick-start",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "semantic-scholar-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "semantic-scholar-fastmcp"
+   ],
+   "env": [
+    "SEMANTIC_SCHOLAR_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server#mcp-client-configuration",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "sendgrid-twilio": {
+  "call": {
+   "operation": "send an email",
+   "method": "POST",
+   "url": "https://api.sendgrid.com/v3/mail/send",
+   "example": "curl -X POST https://api.sendgrid.com/v3/mail/send -H \"Authorization: Bearer $SENDGRID_API_KEY\" -H \"Content-Type: application/json\" -d '{\"personalizations\":[{\"to\":[{\"email\":\"alex@example.com\"}]}],\"from\":{\"email\":\"orders@example.com\"},\"subject\":\"Hello\",\"content\":[{\"type\":\"text/plain\",\"value\":\"Hi\"}]}'",
+   "response_fields": [
+    "HTTP status 202 (empty body)",
+    "X-Message-Id response header"
+   ],
+   "async": "202 means accepted for processing; delivery happens later (track via Event Webhook or Email Activity)",
+   "source_url": "https://www.twilio.com/docs/sendgrid/api-reference/mail-send/mail-send",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Plans from $19.95/month (Essentials 50K emails); overage $0.0013 per email on 50K plan, $0.0009 on 100K plan, $0.0011-$0.0005 on Pro tiers",
+   "source_url": "https://www.twilio.com/en-us/products/email-api/pricing",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "sentry-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.sentry.dev/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://mcp.sentry.dev/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "serpapi": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.serpapi.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $SERPAPI_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://github.com/serpapi/serpapi-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "serper": {
+  "unit_price": {
+   "summary": "Prepaid credits, 1 credit per query: $1.00/1k (50k pack, $50) down to $0.30/1k (12.5M pack); 2,500 free queries",
+   "source_url": "https://serper.dev",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "serper-search-scrape-mcp-server"
+   ],
+   "env": [
+    "SERPER_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/marcopesani/mcp-server-serper",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "shopify-admin-storefront-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@shopify/dev-mcp@latest"
+   ],
+   "env": [],
+   "docs_only": true,
+   "source_url": "https://shopify.dev/docs/apps/build/devmcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "shotstack-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.shotstack.io/",
+   "headers": {
+    "x-api-key": "$SHOTSTACK_API_KEY"
+   },
+   "oauth": true,
+   "source_url": "https://shotstack.io/docs/guide/agents/mcp-server.md",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "sketchfab-data-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "node",
+   "args": [
+    "/path/to/sketchfab-mcp-server/build/index.js",
+    "--api-key",
+    "$SKETCHFAB_API_KEY"
+   ],
+   "env": [
+    "SKETCHFAB_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/gregkop/sketchfab-mcp-server#using-with-claude-desktop",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "slack-api": {
+  "call": {
+   "operation": "post a message to a channel",
+   "method": "POST",
+   "url": "https://slack.com/api/chat.postMessage",
+   "example": "curl -X POST https://slack.com/api/chat.postMessage -H \"Authorization: Bearer $SLACK_BOT_TOKEN\" -H \"Content-Type: application/json; charset=utf-8\" -d '{\"channel\":\"C0123456789\",\"text\":\"Hello\"}'",
+   "response_fields": [
+    "ok",
+    "channel",
+    "ts",
+    "message",
+    "error"
+   ],
+   "async": null,
+   "source_url": "https://docs.slack.dev/reference/methods/chat.postMessage",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.slack.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://docs.slack.dev/ai/slack-mcp-server/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "slidespeak-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.slidespeak.co/mcp",
+   "headers": {
+    "Authorization": "Bearer $SLIDESPEAK_API_KEY"
+   },
+   "oauth": false,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/SlideSpeak/slidespeak-mcp#remote-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "snowflake": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://{account_url}/api/v2/databases/{database}/schemas/{schema}/mcp-servers/{name}",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "speechmatics-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uv",
+   "args": [
+    "--directory",
+    "/path/to/speechmatics_claude_code_mcp",
+    "run",
+    "python",
+    "server.py"
+   ],
+   "env": [
+    "SPEECHMATICS_API_KEY"
+   ],
+   "source_url": "https://github.com/ArchieMcM234/speechmatics_claude_code_mcp",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "spider-cloud": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.spider.cloud/mcp",
+   "headers": {
+    "Authorization": "Bearer $SPIDER_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://spider.cloud/mcp/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "square-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.squareup.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://developer.squareup.com/docs/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "stackone": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.stackone.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "stripe-api": {
+  "call": {
+   "operation": "create a PaymentIntent",
+   "method": "POST",
+   "url": "https://api.stripe.com/v1/payment_intents",
+   "example": "curl https://api.stripe.com/v1/payment_intents -u \"$STRIPE_SECRET_KEY:\" -d amount=2000 -d currency=usd -d \"automatic_payment_methods[enabled]=true\"",
+   "response_fields": [
+    "id",
+    "status",
+    "client_secret",
+    "amount",
+    "currency"
+   ],
+   "async": null,
+   "source_url": "https://docs.stripe.com/api/payment_intents/create",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Poland account, standard EEA cards: 1.5% + 1.00 zł per successful card transaction (rates vary by country)",
+   "source_url": "https://stripe.com/en-pl/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.stripe.com",
+   "headers": {
+    "Authorization": "Bearer $STRIPE_AGENT_API_KEY"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://docs.stripe.com/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "supabase": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.supabase.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $SUPABASE_ACCESS_TOKEN"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://supabase.com/docs/guides/getting-started/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "supabase-management-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.supabase.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://supabase.com/docs/guides/getting-started/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "superglue": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.superglue.cloud/mcp",
+   "headers": {
+    "Authorization": "Bearer $SUPERGLUE_API_KEY"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://superglue.ai/docs/mcp/using-the-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "tavily": {
+  "call": {
+   "operation": "search the web",
+   "method": "POST",
+   "url": "https://api.tavily.com/search",
+   "example": "curl -X POST https://api.tavily.com/search -H \"Authorization: Bearer $TAVILY_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"Who is Leo Messi?\"}'",
+   "response_fields": [
+    "results[].title",
+    "results[].url",
+    "results[].content",
+    "results[].score",
+    "answer",
+    "usage"
+   ],
+   "async": null,
+   "source_url": "https://docs.tavily.com/documentation/api-reference/endpoint/search",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "Search: 1 credit (basic/fast/ultra-fast) or 2 credits (advanced); pay-as-you-go $0.008 per credit",
+   "source_url": "https://www.tavily.com/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.tavily.com/mcp/",
+   "headers": {
+    "Authorization": "Bearer $TAVILY_API_KEY"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://docs.tavily.com/documentation/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "tavus-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.tavus.io/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://docs.tavus.io/sections/agent-tools/mcp-server.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "telegram-bot-api": {
+  "call": {
+   "operation": "send a text message",
+   "method": "POST",
+   "url": "https://api.telegram.org/bot{token}/sendMessage",
+   "example": "curl -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -H \"Content-Type: application/json\" -d '{\"chat_id\":123456789,\"text\":\"Hi\"}'",
+   "response_fields": [
+    "ok",
+    "result.message_id",
+    "result.chat.id",
+    "result.date",
+    "description",
+    "error_code"
+   ],
+   "async": null,
+   "source_url": "https://core.telegram.org/bots/api",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uv",
+   "args": [
+    "--directory",
+    "/full/path/to/telegram-mcp",
+    "run",
+    "main.py"
+   ],
+   "env": [
+    "TELEGRAM_API_ID",
+    "TELEGRAM_API_HASH",
+    "TELEGRAM_SESSION_STRING"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/chigwell/telegram-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "tencent-edgeone-pages": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp-on-edge.edgeone.app/mcp-server",
+   "headers": null,
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://pages.edgeone.ai/document/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "tidb-cloud": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "--from",
+    "pytidb[mcp]",
+    "tidb-mcp-server"
+   ],
+   "env": [
+    "TIDB_HOST",
+    "TIDB_PORT",
+    "TIDB_USERNAME",
+    "TIDB_PASSWORD",
+    "TIDB_DATABASE"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/pingcap/pytidb",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "tinybird": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.tinybird.co?token=$TINYBIRD_TOKEN",
+   "headers": null,
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://www.tinybird.co/docs/forward/analytics-agents/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "todoist-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://ai.todoist.net/mcp",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://developer.todoist.com/api/v1/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "together-ai": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://docs.together.ai/mcp",
+   "headers": null,
+   "oauth": false,
+   "env": [],
+   "docs_only": true,
+   "source_url": "https://docs.together.ai/docs/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "tomorrow-io-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp",
+   "headers": {
+    "X-Api-Key": "$TOMORROW_API_KEY"
+   },
+   "oauth": false,
+   "env": [
+    "TOMORROW_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://docs.tomorrow.io/reference/mcp.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "tripo-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "tripo-mcp"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/VAST-AI-Research/tripo-mcp#installation",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "turso": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.turso.ai/mcp",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/tursodatabase/turso-mcp#how-it-works",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "twilio": {
+  "call": {
+   "operation": "send an SMS",
+   "method": "POST",
+   "url": "https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Messages.json",
+   "example": "curl -X POST \"https://api.twilio.com/2010-04-01/Accounts/$TWILIO_ACCOUNT_SID/Messages.json\" --data-urlencode \"From=$TWILIO_NUMBER\" --data-urlencode \"Body=Hi there\" --data-urlencode \"To=+48600000000\" -u $TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN",
+   "response_fields": [
+    "sid",
+    "status",
+    "error_code",
+    "error_message"
+   ],
+   "async": "status starts as queued; poll GET .../Messages/{sid}.json or set StatusCallback",
+   "source_url": "https://www.twilio.com/docs/messaging/api/message-resource",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "SMS to Poland: $0.0457 per outbound segment (mobile numbers and alphanumeric sender IDs); $0.001 fee per failed message",
+   "source_url": "https://www.twilio.com/en-us/sms/pricing/pl",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.twilio.com/docs",
+   "headers": null,
+   "oauth": false,
+   "env": [],
+   "docs_only": true,
+   "source_url": "https://www.twilio.com/docs/ai/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "twilio-programmable-voice": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@twilio-alpha/mcp",
+    "$TWILIO_ACCOUNT_SID/$TWILIO_API_KEY:$TWILIO_API_SECRET"
+   ],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/twilio-labs/mcp#quick-start",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "unstructured-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.transform.unstructured.io",
+   "headers": null,
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://docs.unstructured.io/transform/get-started/claude-code",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "upstash-redis-vector": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.upstash.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $UPSTASH_EMAIL:$UPSTASH_API_KEY"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://upstash.com/docs/agent-resources/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "vapi": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.vapi.ai/mcp",
+   "headers": {
+    "Authorization": "Bearer $VAPI_API_KEY"
+   },
+   "oauth": false,
+   "env": [
+    "VAPI_API_KEY"
+   ],
+   "docs_only": false,
+   "source_url": "https://docs.vapi.ai/sdk/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "vercel-ai-gateway": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.vercel.com",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "vercel-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.vercel.com",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "vercel-sandbox": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.vercel.com",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "vonage-api": {
+  "call": {
+   "operation": "send an SMS",
+   "method": "POST",
+   "url": "https://rest.nexmo.com/sms/json",
+   "example": "curl -X POST https://rest.nexmo.com/sms/json -u \"$VONAGE_API_KEY:$VONAGE_API_SECRET\" -d \"from=$SMS_SENDER_ID\" -d \"to=48600000000\" -d 'text=Hi there'",
+   "response_fields": [
+    "message-count",
+    "messages[0].status",
+    "messages[0].message-id",
+    "messages[0].message-price",
+    "messages[0].remaining-balance"
+   ],
+   "async": "messages[0].status \"0\" means accepted; delivery receipts arrive via webhook",
+   "source_url": "https://developer.vonage.com/en/messaging/sms/code-snippets/send-an-sms",
+   "checked_at": "2026-09-24"
+  },
+  "unit_price": {
+   "summary": "SMS to Poland: $0.04843 per outbound message",
+   "source_url": "https://www.vonage.com/communications-apis/sms/pricing/",
+   "checked_at": "2026-09-24"
+  },
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "npx",
+   "args": [
+    "-y",
+    "@vonage/vonage-mcp-server-api-bindings"
+   ],
+   "env": [
+    "VONAGE_APPLICATION_ID",
+    "VONAGE_PRIVATE_KEY64",
+    "VONAGE_API_KEY",
+    "VONAGE_API_SECRET",
+    "VONAGE_VIRTUAL_NUMBER",
+    "VONAGE_WHATSAPP_NUMBER",
+    "RCS_SENDER_ID"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "weaviate-cloud": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://{cluster-host}/v1/mcp",
+   "headers": {
+    "Authorization": "Bearer $WEAVIATE_API_KEY"
+   },
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://docs.weaviate.io/weaviate/configuration/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "webflow-data-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.webflow.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://developers.webflow.com/mcp/installing/claude-code",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "whatsapp-business-cloud-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "python",
+   "args": [
+    "main.py"
+   ],
+   "env": [
+    "META_ACCESS_TOKEN",
+    "META_PHONE_NUMBER_ID",
+    "META_BUSINESS_ACCOUNT_ID",
+    "WABA_ID"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "wikidata": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://wd-mcp.wmcloud.org/mcp",
+   "headers": null,
+   "oauth": false,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/wmde/WikidataMCP",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "wikipedia-wikimedia-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "wikipedia-mcp",
+   "args": [],
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://github.com/Rudra-ravi/wikipedia-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "wise-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "docker",
+   "args": [
+    "run",
+    "-i",
+    "--rm",
+    "--init",
+    "-e",
+    "WISE_API_TOKEN",
+    "-e",
+    "WISE_IS_SANDBOX",
+    "io2060/mcp-wise:latest"
+   ],
+   "env": [
+    "WISE_API_TOKEN",
+    "WISE_IS_SANDBOX"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/2060-io/mcp-wise",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "wolfram-alpha-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://agenttools.wolfram.com/mcp",
+   "headers": null,
+   "oauth": false,
+   "docs_only": false,
+   "source_url": "https://support.wolfram.com/75237",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "woocommerce-rest-api": {
+  "mcp_config": null,
+  "mcp_issue": "no MCP server listed in entry (mcp.url null)"
+ },
+ "xai-grok-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://docs.x.ai/api/mcp",
+   "headers": null,
+   "oauth": false,
+   "docs_only": true,
+   "source_url": "https://docs.x.ai/developers/docs-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "you-com-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.you.com/mcp",
+   "headers": {
+    "Authorization": "Bearer $YDC_API_KEY"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://you.com/docs/build-with-agents/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "zapier-mcp-ai-actions": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.zapier.com/api/v1/connect",
+   "headers": {
+    "Authorization": "Bearer $ZAPIER_MCP_TOKEN"
+   },
+   "oauth": true,
+   "env": [],
+   "docs_only": false,
+   "source_url": "https://docs.zapier.com/mcp/overview/how-connections-work.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "zendesk-api": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uv",
+   "args": [
+    "--directory",
+    "/path/to/zendesk-mcp-server",
+    "run",
+    "zendesk"
+   ],
+   "env": [
+    "ZENDESK_SUBDOMAIN",
+    "ZENDESK_CLIENT_ID"
+   ],
+   "docs_only": false,
+   "source_url": "https://github.com/reminia/zendesk-mcp-server#setup",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "zep": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://api.getzep.com/mcp",
+   "headers": null,
+   "oauth": true,
+   "docs_only": false,
+   "source_url": "https://help.getzep.com/memory-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "zilliz-cloud-milvus": {
+  "mcp_config": {
+   "transport": "stdio",
+   "command": "uvx",
+   "args": [
+    "zilliz-mcp-server"
+   ],
+   "env": [
+    "ZILLIZ_CLOUD_TOKEN"
+   ],
+   "source_url": "https://github.com/zilliztech/zilliz-mcp-server",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ },
+ "zoom-api": {
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.zoom.us/mcp/zoom/streamable",
+   "headers": null,
+   "oauth": true,
+   "source_url": "https://github.com/zoom/mcp-registry",
+   "docs_only": false,
+   "checked_at": "2026-09-24"
+  }
+ }
+}

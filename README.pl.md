@@ -16,11 +16,11 @@
 <tr><td><b>Oficjalne serwery MCP</b></td><td>192</td></tr>
 <tr><td><b>Języki</b></td><td>angielski, polski</td></tr>
 <tr><td><b>Format</b></td><td>JSON, Markdown, HTML, llms.txt</td></tr>
-<tr><td><b>Ostatnia weryfikacja</b></td><td>2026-09-24</td></tr>
+<tr><td><b>Ostatnie sprawdzenie</b></td><td>2026-09-24</td></tr>
 <tr><td><b>Licencja</b></td><td>CC BY 4.0 (dane), MIT (kod)</td></tr>
 </table>
 
-**AI Agents Accessible APIs** (pol. *API dostępne dla agentów AI*) to otwarty, dwujęzyczny (angielski/polski) katalog **330 zweryfikowanych usług** w **27 kategoriach**, z których autonomiczny agent AI — np. Claude, ChatGPT, Gemini lub własny agent LLM — może korzystać **bez udziału człowieka**, po jednorazowym kroku wykonanym przez człowieka: rejestracji konta i przekazaniu agentowi **klucza API**, **tokenu OAuth** lub połączenia z **serwerem MCP (Model Context Protocol)**. Każdy wpis zawiera adres dokumentacji, metodę uwierzytelniania, dostępność oficjalnego lub społecznościowego serwera MCP oraz darmowy limit. Nie jest to spis produktów z „AI” w nazwie — kryterium jest możliwość obsługi przez agenta, a nie marketing.
+**AI Agents Accessible APIs** (pol. *API dostępne dla agentów AI*) to otwarty, dwujęzyczny (angielski/polski) katalog **330 usług** (każda z datą ostatniego sprawdzenia) w **27 kategoriach**, z których autonomiczny agent AI — np. Claude, ChatGPT, Gemini lub własny agent LLM — może korzystać **bez udziału człowieka**, po jednorazowym kroku wykonanym przez człowieka: rejestracji konta i przekazaniu agentowi **klucza API**, **tokenu OAuth** lub połączenia z **serwerem MCP (Model Context Protocol)**. Każdy wpis zawiera adres dokumentacji, metodę uwierzytelniania, dostępność oficjalnego lub społecznościowego serwera MCP oraz darmowy limit. Nie jest to spis produktów z „AI” w nazwie — kryterium jest możliwość obsługi przez agenta, a nie marketing.
 
 ## Spis treści
 
@@ -36,7 +36,7 @@
 
 - Usługa udostępnia **publiczny, samoobsługowy** interfejs programowy (REST, GraphQL, SDK) **lub** serwer MCP.
 - Człowiek musi działać **najwyżej raz** — założyć konto i wygenerować klucz lub zatwierdzić OAuth. Potem agent działa samodzielnie.
-- Interfejs jest **udokumentowany** i **aktywny** (zweryfikowano w dniu podanym w infoboksie).
+- Interfejs jest **udokumentowany** i **aktywny** (linki sprawdzono w dniu podanym w infoboksie).
 - Aplikacje wyłącznie konsumenckie, listy oczekujących, produkty dostępne tylko przez dział sprzedaży, frameworki agentów i IDE są **wykluczone** — to agenci lub narzędzia do ich budowy, a nie usługi wywoływane przez agenta.
 
 ## Legenda
