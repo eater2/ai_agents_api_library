@@ -32,6 +32,17 @@ Teksty (skill, llms.txt, README)
 Na koniec
 - [ ] Powtórzyć test produktu (`python scripts/interview_product_test.py`) i porównać z 2026-09-24 (bf)
 
+## P0c — oceny i opinie: wywiady z 7 agentami (2026-09-24)
+
+Źródło: `research/agent-interviews/2026-09-24-ratings/report.md`. Wniosek: średnia gwiazdek i liczba opinii to dla 6/7 agentów szum, zaufania do katalogu nie zwiększają (0/7 wyraźnie). Liczą się: niezależny uptime (7/7), aktywność repo MCP (`archived`, `pushed_at`; 5/7) i opinie o konkretnych awariach API (tylko przy remisie).
+
+- [ ] `search_apis`: kompaktowe pole ocen z jawnym brakiem danych (`status: unavailable`), brak danych nie obniża pozycji; średniej gwiazdek i instalacji nie używać w rankingu (54)
+- [ ] `get_api`: osobno `product_reviews` (źródło, ocena, liczba, zakres dat, `fetched_at`) i `mcp_repo` (`archived`, `pushed_at`, gwiazdki), bez jednego zbiorczego wyniku (54)
+- [ ] `get_reviews`: filtry (świeże, nisko ocenione, dotyczące API), tagi aspektów (błędy, auth, limity, breaking changes vs dashboard/billing), krótkie podsumowanie tematów z linkami; tekst opinii oznaczony jako niezaufany (54)
+- [ ] Sondy katalogu: codzienny pomiar dostępności `base_url` i zdalnych endpointów MCP (status, latencja, klasa błędu, okno, `measured_at`) w GitHub Action → pole `uptime` (bf)
+- [ ] Później: wyniki agentów (telemetria) per operacja — tylko z mianownikiem, definicją sukcesu, minimalną próbą i pochodzeniem; najpierw sondy
+- Nie robić: jednego `health_score`, rankingowania po gwiazdkach, poszerzania scrapowania opinii ludzkich
+
 ## P0 — porządek repozytorium
 - [x] Repozytorium na GitHubie, pierwszy commit
 - [x] `.gitattributes` — końce linii LF dla plików generowanych
