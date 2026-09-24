@@ -17,7 +17,8 @@ Na podstawie wywiadów z agentami (`research/agent-interviews/2026-09-24/report.
 - [x] Zgłoszenie pluginu do katalogu Anthropic (2026-09-24, Claude Code, kontakt: airenovationcalculator@gmail.com) — status: pending review, https://platform.claude.com/plugins/submissions
 - [ ] Publikacja paczki npm (wymaga tokenu npm)
 - [x] Oficjalny rejestr MCP: `io.github.eater2/ai-agents-api-library` 0.1.0 (`server.json`, `mcp-publisher`, 2026-09-24)
-- [ ] Smithery, Glama, PulseMCP
+- [x] Smithery: https://smithery.ai/servers/eater2/ai-agents-api-library (namespace `eater2`, zdalny URL, 2026-09-24)
+- [ ] Glama, PulseMCP
 - [x] Zdalny endpoint MCP (Streamable HTTP, Vercel): https://ai-agents-api-library.vercel.app/mcp
 - [x] Osobne strony HTML per kategoria pod zapytania agentów (np. „video generation API free tier MCP”), w sitemap
 
