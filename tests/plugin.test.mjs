@@ -142,6 +142,10 @@ test("usage data: examples are safe and match the entry", async () => {
     assert.match(method, /^(GET|POST|PUT|PATCH|DELETE)$/);
     // Secrets only as placeholders: no long opaque tokens in examples.
     assert.doesNotMatch(example, /\b(sk|pk|rk|xox[bp]|ghp|key)[-_][A-Za-z0-9]{16,}/, `${e.id}: example contains a real-looking key`);
+    // The shell does not expand $VARS inside single quotes; those must be <PLACEHOLDERS>.
+    for (const [, quoted] of example.matchAll(/'([^']*)'/g)) {
+      assert.doesNotMatch(quoted, /\$[A-Z][A-Z0-9_]{2,}/, `${e.id}: $VAR inside single quotes is not expanded`);
+    }
   }
   for (const e of all.filter((x) => x.mcp.config && !x.mcp.config.derived)) {
     const c = e.mcp.config;
