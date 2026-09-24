@@ -41,6 +41,7 @@ jobs:
 
       - name: Collect release files
         run: |
+          mkdir -p dist
           npm pack --pack-destination dist
           cp catalog/all.json dist/catalog.json
           cp llms.txt llms-full.txt SHA256SUMS docs/ai-agents-api-library-skill.zip dist/
