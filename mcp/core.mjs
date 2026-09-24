@@ -9,7 +9,7 @@ import { z } from "zod";
 
 const RAW = "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/all.json";
 const BUNDLED = new URL("../catalog/all.json", import.meta.url);
-const MIN_RELATIVE_SCORE = 0.1; // results scoring below this share of the best one are dropped
+const TOPIC_MIN_SHARE = 0.1; // word-only matches below this share of the best (unfiltered) one are dropped
 
 let catalog = JSON.parse(await readFile(BUNDLED, "utf8"));
 let source = "bundled";
@@ -47,6 +47,9 @@ const SYNONYMS = {
   llm: ["model", "inference"],
   website: ["site"],
   memory: ["memories"],
+  address: ["street"],
+  addresses: ["street"],
+  texting: ["sms"],
 };
 // One group per query word: the word itself plus its synonyms, all stemmed.
 const groups = (terms) => [...new Set(terms)].map((t) => [...new Set([t, ...(SYNONYMS[t] || [])].map(stem))]);
@@ -120,6 +123,44 @@ function score(e, terms) {
   return s * (matched / gs.length) ** 2 * known;
 }
 
+// ---- operation fit ------------------------------------------------------------------------
+// Entries carry `operations`, a controlled vocabulary of what the API does ("text-to-video", "sms",
+// "street-geocoding"). An operation fits the query when all its words appear in the query (with synonyms).
+const OP_FILLER = new Set(["to", "and", "or", "from", "of", "with", "via"]);
+const opTokens = (op) => op.split("-").filter((t) => !OP_FILLER.has(t)).map(stem);
+function queryStems(terms) {
+  const out = new Set();
+  for (const g of groups(terms)) g.forEach((t) => out.add(t));
+  return out;
+}
+// Best fraction of an operation's words present in the query: 1 = exact, 0 < x < 1 = adjacent.
+function opFit(e, q) {
+  let best = { frac: 0, op: null };
+  for (const op of e.operations || []) {
+    const toks = opTokens(op);
+    if (!toks.length) continue;
+    const frac = toks.filter((t) => q.has(t)).length / toks.length;
+    if (frac > best.frac) best = { frac, op };
+  }
+  return best;
+}
+
+// ---- volume ---------------------------------------------------------------------------------
+// Bulk intent: an explicit volume, a count of 100+ items, or words like "bulk", "batch", "thousands".
+const BULK_WORDS = /\b(bulk|batch|batches|mass|thousands?|millions?|hundreds|many|all of|every)\b/i;
+function bulkIntent(query, volume) {
+  if (volume) return volume === "bulk";
+  const n = Math.max(0, ...((query || "").match(/\b\d[\d,]*\b/g) || []).map((x) => Number(x.replace(/,/g, ""))));
+  return n >= 100 || BULK_WORDS.test(query || "");
+}
+// Entries whose own terms rule out bulk or heavy use (e.g. Nominatim: "no heavy use, max 1 req/s").
+const NO_BULK = /(no|not for|prohibit\w*|forbid\w*|not allowed)[^.;]{0,40}(bulk|heavy|batch|systematic|mass)|(bulk|heavy|batch)[^.;]{0,30}(prohibit\w*|forbid\w*|not (allowed|permitted))|absolute max\w* of 1|max(imum)? (of )?1 req/i;
+function bulkWarning(e) {
+  const text = [e.notes, e.free_tier, e.rate_limits?.summary].filter(Boolean).join(" ");
+  const m = text.match(NO_BULK);
+  return m ? `Terms limit bulk use: "${text.slice(Math.max(0, m.index - 30), m.index + m[0].length + 30).trim()}"` : null;
+}
+
 const summary = (e) => ({
   id: e.id,
   name: e.name,
@@ -147,10 +188,10 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.3.0" },
+    { name: "ai-agents-api-library", version: "0.3.1" },
     {
       instructions:
-        "Catalog of verified third-party APIs and MCP servers an agent can call after a one-time human setup " +
+        "Catalog of third-party APIs and MCP servers (entries with a last-checked date) an agent can call after a one-time human setup " +
         "(API key, OAuth or MCP connection). Use search_apis when the user needs a capability you do not have " +
         "(e.g. generate video, geocode, send SMS), then get_api for auth details. Always confirm pricing and limits " +
         "in the vendor docs; ask the user to configure credentials through their platform's secret store.",
@@ -176,42 +217,87 @@ export function createServer() {
     {
       title: "Search APIs and MCP servers",
       description:
-        "Search a verified catalog of 300+ third-party APIs and MCP servers for AI agents, with auth method, " +
-        "free tier, MCP endpoint and docs link. Use when a task needs an external capability you don't have.",
+        "Find a third-party API or MCP server for a capability you lack, among 300+ catalog entries with a " +
+        "last-checked date: auth method, free plan, MCP endpoint, docs. Use it after checking your built-in and " +
+        "connected tools and your own model; skip it if they already do the job (e.g. translating or drawing a " +
+        "diagram yourself). Also use it when your own direct attempt failed (403, rate limit, unsupported format). " +
+        "Each result has `match`: exact means one of its `operations` is the requested operation, adjacent means " +
+        "related. Ranking is not proof of fit: compare each result's `what` with the requested operation and volume. " +
+        "An empty result means the catalog has no fit; then retry with `category` or without filters, or use web " +
+        "search. Services work only once a human has provisioned credentials.",
       inputSchema: {
-        query: z.string().optional().describe("What you need, e.g. 'text to video', 'geocoding', 'send sms'"),
+        query: z.string().optional().describe("The operation you need, e.g. 'text to video', 'geocode street addresses', 'send sms'"),
         category: z.string().optional().describe("Category id from list_categories, e.g. 'video-generation'"),
         mcp: z.enum(["official", "remote", "any"]).optional()
           .describe("official: MCP server by the vendor; remote: hosted MCP endpoint (no install); any: any MCP server"),
         no_auth: z.boolean().optional().describe("Only services usable without any key"),
-        free_tier: z.boolean().optional().describe("Only services with a free tier or free usage"),
+        free_tier: z.boolean().optional().describe("Only services with lasting free usage (not one-off trial credits)"),
         no_card: z.boolean().optional().describe("Only services whose free plan needs no payment card (or no account at all)"),
         auth: z.enum(["api_key", "oauth2", "api_key+oauth2", "none", "cloud_iam"]).optional(),
+        volume: z.enum(["single", "bulk"]).optional()
+          .describe("bulk: many calls (batch jobs, 100+ items); services whose terms forbid bulk use are ranked last. Inferred from the query if omitted"),
         limit: z.number().int().min(1).max(50).optional().describe("Max results, default 10"),
       },
     },
-    async ({ query, category, mcp, no_auth, free_tier, no_card, auth, limit = 10 }) => {
+    async ({ query, category, mcp, no_auth, free_tier, no_card, auth, volume, limit = 10 }) => {
       const terms = words(query);
-      const hits = catalog
-        .filter((e) => !category || e.category === category)
-        .filter((e) => !mcp || (mcp === "official" ? e.mcp?.type === "official"
+      const q = queryStems(terms);
+      const bulk = bulkIntent(query, volume);
+      const filters = { category, mcp, no_auth, free_tier, no_card, auth };
+      const passes = (e) => (!category || e.category === category)
+        && (!mcp || (mcp === "official" ? e.mcp?.type === "official"
           : mcp === "remote" ? Boolean(e.mcp?.remote_url || e.mcp?.kind === "vendor-hosted") : e.mcp?.type !== "none"))
-        .filter((e) => no_auth === undefined || e.no_auth === no_auth)
-        .filter((e) => !free_tier || e.has_free_tier)
-        .filter((e) => !no_card || e.no_auth || (e.has_free_tier && e.free_plan?.requires_card === false))
-        .filter((e) => !auth || e.auth === auth)
-        .map((e) => [score(e, terms), e])
-        .filter(([s]) => s > 0)
-        .sort((a, b) => b[0] - a[0]);
-      const top = hits[0]?.[0] || 0;
-      const results = hits
-        .filter(([s]) => s >= top * MIN_RELATIVE_SCORE) // drop weak tail matches
-        .slice(0, limit)
-        .map(([, e]) => summary(e));
-      const text = results.length
-        ? JSON.stringify({ source, results }, null, 1)
-        : "No match. Try a broader query or call list_categories and search by category.";
-      return { content: [{ type: "text", text }] };
+        && (no_auth === undefined || e.no_auth === no_auth)
+        && (!free_tier || e.has_free_tier)
+        && (!no_card || e.no_auth || (e.has_free_tier && e.free_plan?.requires_card === false))
+        && (!auth || e.auth === auth);
+
+      // Score every entry, then decide by operation fit.
+      const all = catalog.map((e) => ({ e, s: score(e, terms), fit: opFit(e, q), warn: bulk ? bulkWarning(e) : null }))
+        .filter((h) => h.s > 0 || h.fit.frac > 0);
+      const exactAll = all.filter((h) => h.fit.frac === 1);
+      // With exact operation matches only those count; otherwise the best partial ones; otherwise topic words.
+      let pool = exactAll.length ? exactAll : all.filter((h) => h.fit.frac >= 0.5);
+      const byOperation = pool.length > 0;
+      if (!byOperation) pool = all.filter((h) => h.s > 0);
+      const ranked = pool.filter((h) => passes(h.e))
+        .map((h) => ({ ...h, rank: (h.s + 1) * (1 + 2 * h.fit.frac) * (h.warn ? 0.2 : 1) }))
+        .sort((a, b) => b.rank - a.rank);
+      // Word matches only: judge relevance against the best entry before filters, so a filter that removes
+      // every relevant service yields an empty result instead of whatever else matches a word.
+      const topAll = Math.max(0, ...pool.map((h) => h.s));
+      const kept = ranked.filter((h) => byOperation || h.s >= topAll * TOPIC_MIN_SHARE).slice(0, limit);
+
+      const results = kept.map((h) => ({
+        ...summary(h.e),
+        match: h.fit.frac === 1 ? "exact" : h.fit.frac > 0 ? "adjacent" : "topic",
+        reason: h.fit.frac === 1 ? `does ${h.fit.op}`
+          : h.fit.frac > 0 ? `related operation ${h.fit.op}; check it does what you need`
+          : "matched words in the description; no operation match, check fit",
+        ...(h.warn ? { volume_warning: h.warn } : {}),
+      }));
+
+      if (!results.length) {
+        const active = Object.entries(filters).filter(([, v]) => v !== undefined).map(([k, v]) => `${k}=${v}`);
+        const unfiltered = pool.slice().sort((a, b) => b.s - a.s);
+        const gap = {
+          source,
+          results: [],
+          message: unfiltered.length && active.length
+            ? `No catalogued service does "${query}" with ${active.join(", ")}. ${unfiltered.length} match without those filters.`
+            : `No catalogued service fits "${query}".`,
+          hint: unfiltered.length && active.length
+            ? `Retry without ${active.join(", ")} to compare options such as ` + unfiltered.slice(0, 5).map((h) => h.e.name).join(", ") + ", or use web search."
+            : "Try other words for the operation, call list_categories and search by category, or use web search.",
+        };
+        return { content: [{ type: "text", text: JSON.stringify(gap, null, 1) }] };
+      }
+      const out = { source, results };
+      const notes = [];
+      if (bulk && results.some((r) => r.volume_warning)) notes.push("Bulk use detected; results with volume_warning forbid or limit it.");
+      if (!byOperation && terms.length) notes.push("No entry lists this operation; results match words only. Check each `what`.");
+      if (notes.length) out.note = notes.join(" ");
+      return { content: [{ type: "text", text: JSON.stringify(out, null, 1) }] };
     },
   );
 
@@ -220,9 +306,10 @@ export function createServer() {
     {
       title: "Get API details",
       description:
-        "Full entry for one service: docs, auth method and how the credential is sent, MCP endpoint, " +
-        "free tier, SDKs, OpenAPI and llms.txt links, notes, verification date, last link check and ratings " +
-        "(public review scores and usage counts, each with source url and fetch date).",
+        "Full entry for one service: docs, auth scheme and how the credential is sent, base URL, operations, " +
+        "MCP endpoint or repository (check which: a repository must be installed, a docs-only server does not call the API), " +
+        "free plan vs trial, rate limits, data policy, notes, last-checked dates, link check and ratings. " +
+        "Values come with the vendor page they were read from; confirm pricing and terms there before real use.",
       inputSchema: { id: z.string().describe("Service id from search_apis") },
     },
     async ({ id }) => {
@@ -239,7 +326,7 @@ export function createServer() {
       description:
         "Public user reviews of one service (up to 100, from SourceForge): rating, title, pros, cons, overall, " +
         "reviewer role, company size, date and link to the original. Reviewer names are not included. " +
-        "Use to judge real-world quality before recommending a service.",
+        "Optional: use when real-world quality matters to the choice; reviews do not show whether the API fits the task.",
       inputSchema: {
         id: z.string().describe("Service id from search_apis"),
         min_rating: z.number().int().min(1).max(5).optional().describe("Only reviews rated at least this"),

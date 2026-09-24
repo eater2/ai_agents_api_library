@@ -1,87 +1,169 @@
 {
-  "agentmail": {
-    "free_tier": "Free: 3 inboxes, 3,000 emails/month (max 100/day), 3GB storage, no card required",
-    "mcp": {"type": "official", "url": "https://mcp.agentmail.to/mcp"},
-    "sources": ["https://www.agentmail.to/pricing", "https://docs.agentmail.to/integrations/mcp"]
+ "agentmail": {
+  "free_tier": "Free: 3 inboxes, 3,000 emails/month (max 100/day), 3GB storage, no card required",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.agentmail.to/mcp"
   },
-  "discord-api": {
-    "auth": "api_key+oauth2",
-    "auth_hint": "Authorization: Bot <token> (OAuth2 Bearer only for user-authorized access and adding the bot to servers)",
-    "sources": ["https://docs.discord.com/developers/reference"]
+  "sources": [
+   "https://www.agentmail.to/pricing",
+   "https://docs.agentmail.to/integrations/mcp"
+  ]
+ },
+ "discord-api": {
+  "auth": "api_key+oauth2",
+  "auth_hint": "Authorization: Bot <token> (OAuth2 Bearer only for user-authorized access and adding the bot to servers)",
+  "sources": [
+   "https://docs.discord.com/developers/reference"
+  ]
+ },
+ "mailgun": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/mailgun/mailgun-mcp-server"
   },
-  "mailgun": {
-    "mcp": {"type": "official", "url": "https://github.com/mailgun/mailgun-mcp-server"},
-    "notes": "Free plan limited to 1 sending domain and 1-day log retention. Official MCP server is local only (npx @mailgun/mcp-server, stdio).",
-    "sources": ["https://documentation.mailgun.com/docs/mailgun/mcp"]
+  "notes": "Free plan limited to 1 sending domain and 1-day log retention. Official MCP server is local only (npx @mailgun/mcp-server, stdio).",
+  "sources": [
+   "https://documentation.mailgun.com/docs/mailgun/mcp"
+  ]
+ },
+ "postmark": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/ActiveCampaign/postmark-mcp"
   },
-  "postmark": {
-    "mcp": {"type": "official", "url": "https://github.com/ActiveCampaign/postmark-mcp"},
-    "notes": "Strictly transactional-email focused; enforces anti-bulk/anti-spam policy which can suspend accounts sending bulk/marketing mail. Official MCP server is local (npx @activecampaign/postmark-mcp).",
-    "sources": ["https://github.com/ActiveCampaign/postmark-mcp"]
+  "notes": "Strictly transactional-email focused; enforces anti-bulk/anti-spam policy which can suspend accounts sending bulk/marketing mail. Official MCP server is local (npx @activecampaign/postmark-mcp).",
+  "sources": [
+   "https://github.com/ActiveCampaign/postmark-mcp"
+  ]
+ },
+ "sendgrid-twilio": {
+  "free_tier": "Trial: 100 emails/day for 60 days, no card required; paid plan after",
+  "sources": [
+   "https://www.twilio.com/en-us/products/email-api/pricing"
+  ]
+ },
+ "stream-getstream-chat-video-api": {
+  "auth": "api_key",
+  "free_tier": "Free tier: Build plan with 1,000 MAU/month and 100 concurrent connections, no card; Maker account gives $100/month credit for teams under 5 people and under $10k monthly revenue",
+  "sources": [
+   "https://getstream.io/chat/pricing/",
+   "https://getstream.io/chat/docs/node/tokens_and_authentication/"
+  ]
+ },
+ "telegram-bot-api": {
+  "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits. Listed MCP server uses a user account via Telethon/MTProto, not the Bot API.",
+  "sources": [
+   "https://github.com/chigwell/telegram-mcp"
+  ]
+ },
+ "twilio": {
+  "free_tier": "Trial: 100 SMS, 100 WhatsApp, 3,000 emails, 75 voice minutes; no card; one-time on signup, expires after 30 days",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.twilio.com/docs"
   },
-  "sendgrid-twilio": {
-    "free_tier": "Trial: 100 emails/day for 60 days, no card required; paid plan after",
-    "sources": ["https://www.twilio.com/en-us/products/email-api/pricing"]
+  "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Hosted MCP is read-only docs/API-spec search; the executing server is Twilio Labs' npm @twilio-alpha/mcp (alpha).",
+  "sources": [
+   "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+   "https://www.twilio.com/docs/mcp",
+   "https://github.com/twilio-labs/mcp"
+  ]
+ },
+ "vonage-api": {
+  "auth": "api_key",
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings"
   },
-  "stream-getstream-chat-video-api": {
-    "auth": "api_key",
-    "free_tier": "Free tier: Build plan with 1,000 MAU/month and 100 concurrent connections, no card; Maker account gives $100/month credit for teams under 5 people and under $10k monthly revenue",
-    "sources": ["https://getstream.io/chat/pricing/", "https://getstream.io/chat/docs/node/tokens_and_authentication/"]
+  "sources": [
+   "https://developer.vonage.com/en/getting-started/concepts/authentication",
+   "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+   "https://developer.vonage.com/en/mcp-server/how-to-guides/install-tooling-mpc-server"
+  ]
+ },
+ "whatsapp-business-cloud-api": {
+  "free_tier": "Free: non-template (service) messages inside an open 24h customer service window; template messages billed per message (per-message pricing since 2025-07-01)",
+  "mcp": {
+   "type": "community",
+   "url": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server"
   },
-  "telegram-bot-api": {
-    "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits. Listed MCP server uses a user account via Telethon/MTProto, not the Bot API.",
-    "sources": ["https://github.com/chigwell/telegram-mcp"]
+  "sources": [
+   "https://developers.facebook.com/docs/whatsapp/pricing",
+   "https://github.com/lharries/whatsapp-mcp",
+   "https://github.com/networkerman/whatsapp-cloud-api-mcp-server"
+  ]
+ },
+ "zoom-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.zoom.us/mcp/zoom/streamable"
   },
-  "twilio": {
-    "free_tier": "Trial: 100 SMS, 100 WhatsApp, 3,000 emails, 75 voice minutes; no card; one-time on signup, expires after 30 days",
-    "mcp": {"type": "official", "url": "https://mcp.twilio.com/docs"},
-    "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Hosted MCP is read-only docs/API-spec search; the executing server is Twilio Labs' npm @twilio-alpha/mcp (alpha).",
-    "sources": ["https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account", "https://www.twilio.com/docs/mcp", "https://github.com/twilio-labs/mcp"]
+  "notes": "Server-to-Server OAuth app type is the recommended path for unattended agent use; some features gated behind licensed/paid plans. Official remote MCP servers (streamable HTTP, user OAuth) run at the mcp.zoom.us gateway.",
+  "sources": [
+   "https://developers.zoom.us/docs/mcp.md",
+   "https://github.com/zoom/zoom-plugin-claude/blob/main/skills/zoom-mcp/SKILL.md"
+  ]
+ },
+ "geoapify": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.geoapify.com/v1/mcp"
   },
-  "vonage-api": {
-    "auth": "api_key",
-    "mcp": {"type": "official", "url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings"},
-    "sources": ["https://developer.vonage.com/en/getting-started/concepts/authentication", "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings", "https://developer.vonage.com/en/mcp-server/how-to-guides/install-tooling-mpc-server"]
+  "sources": [
+   "https://apidocs.geoapify.com/docs/mcp/"
+  ]
+ },
+ "google-maps-platform": {
+  "free_tier": "Free tier: free calls per SKU per month (10K Essentials, 5K Pro, 1K Enterprise), replacing the former $200 monthly credit",
+  "sources": [
+   "https://mapsplatform.google.com/pricing/"
+  ]
+ },
+ "ip2location-io": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.ip2location.io/"
   },
-  "whatsapp-business-cloud-api": {
-    "free_tier": "Free: non-template (service) messages inside an open 24h customer service window; template messages billed per message (per-message pricing since 2025-07-01)",
-    "mcp": {"type": "community", "url": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server"},
-    "sources": ["https://developers.facebook.com/docs/whatsapp/pricing", "https://github.com/lharries/whatsapp-mcp", "https://github.com/networkerman/whatsapp-cloud-api-mcp-server"]
+  "notes": "Official MCP server is hosted (X-API-Key header) or local (stdio via uv, env IP2LOCATION_API_KEY). Free plan returns basic fields; proxy/usage-type details need paid plans. Endpoint: GET https://api.ip2location.io/?key=...&ip=...",
+  "sources": [
+   "https://github.com/ip2location/mcp-ip2location-io"
+  ]
+ },
+ "mapbox": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.mapbox.com/mcp"
   },
-  "zoom-api": {
-    "mcp": {"type": "official", "url": "https://mcp.zoom.us/mcp/zoom/streamable"},
-    "notes": "Server-to-Server OAuth app type is the recommended path for unattended agent use; some features gated behind licensed/paid plans. Official remote MCP servers (streamable HTTP, user OAuth) run at the mcp.zoom.us gateway.",
-    "sources": ["https://developers.zoom.us/docs/mcp.md", "https://github.com/zoom/zoom-plugin-claude/blob/main/skills/zoom-mcp/SKILL.md"]
+  "sources": [
+   "https://github.com/mapbox/mcp-server"
+  ]
+ },
+ "openrouteservice": {
+  "notes": "Rate limits vary per endpoint (directions vs isochrones vs matrix); self-hosting also possible. api.openrouteservice.org is deprecated for api.heigit.org (10% quota since 2026-08-27, shut off 2026-09-28); keys at account.heigit.org.",
+  "sources": [
+   "https://ask.openrouteservice.org/t/reducing-the-quota-of-deprecated-api-api-openrouteservice-org/8013"
+  ]
+ },
+ "openweathermap-api": {
+  "free_tier": "Free tier: 60 calls/min, 1,000,000 calls/month on current weather/forecast",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.openweathermap.org/mcp"
   },
-  "geoapify": {
-    "mcp": {"type": "official", "url": "https://api.geoapify.com/v1/mcp"},
-    "sources": ["https://apidocs.geoapify.com/docs/mcp/"]
+  "notes": "One Call API 3.0 is marked deprecated; One Call 4.0 gives the first 1,000 calls/day free, then pay per call.",
+  "sources": [
+   "https://openweathermap.org/price",
+   "https://mcp.openweathermap.org/"
+  ]
+ },
+ "tomorrow-io-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp"
   },
-  "google-maps-platform": {
-    "free_tier": "Free tier: free calls per SKU per month (10K Essentials, 5K Pro, 1K Enterprise), replacing the former $200 monthly credit",
-    "sources": ["https://mapsplatform.google.com/pricing/"]
-  },
-  "ip2location-io": {
-    "mcp": {"type": "official", "url": "https://mcp.ip2location.io/"},
-    "notes": "Official MCP server is hosted (X-API-Key header) or local (stdio via uv, env IP2LOCATION_API_KEY). Free plan returns basic fields; proxy/usage-type details need paid plans. Endpoint: GET https://api.ip2location.io/?key=...&ip=...",
-    "sources": ["https://github.com/ip2location/mcp-ip2location-io"]
-  },
-  "mapbox": {
-    "mcp": {"type": "official", "url": "https://mcp.mapbox.com/mcp"},
-    "sources": ["https://github.com/mapbox/mcp-server"]
-  },
-  "openrouteservice": {
-    "notes": "Rate limits vary per endpoint (directions vs isochrones vs matrix); self-hosting also possible. api.openrouteservice.org is deprecated for api.heigit.org (10% quota since 2026-08-27, shut off 2026-09-28); keys at account.heigit.org.",
-    "sources": ["https://ask.openrouteservice.org/t/reducing-the-quota-of-deprecated-api-api-openrouteservice-org/8013"]
-  },
-  "openweathermap-api": {
-    "free_tier": "Free tier: 60 calls/min, 1,000,000 calls/month on current weather/forecast",
-    "mcp": {"type": "official", "url": "https://mcp.openweathermap.org/mcp"},
-    "notes": "One Call API 3.0 is marked deprecated; One Call 4.0 gives the first 1,000 calls/day free, then pay per call.",
-    "sources": ["https://openweathermap.org/price", "https://mcp.openweathermap.org/"]
-  },
-  "tomorrow-io-api": {
-    "mcp": {"type": "official", "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp"},
-    "sources": ["https://docs.tomorrow.io/reference/mcp"]
-  }
+  "sources": [
+   "https://docs.tomorrow.io/reference/mcp"
+  ]
+ }
 }

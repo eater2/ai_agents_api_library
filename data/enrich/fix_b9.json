@@ -1,0 +1,249 @@
+{
+ "canva-connect-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.canva.com/mcp"
+  },
+  "sources": [
+   "https://www.canva.dev/docs/apps/mcp/",
+   "https://www.canva.dev/docs/apps/mcp/access.md"
+  ]
+ },
+ "framer": {
+  "free_tier": "Free: Server API is free while in beta; Framer plans per-use pricing with a monthly free allowance later",
+  "sources": [
+   "https://www.framer.com/developers/server-api-faq"
+  ]
+ },
+ "penpot-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/penpot/penpot/tree/develop/mcp"
+  },
+  "notes": "API is RPC-style (e.g. /api/rpc/command/get-profile) with auto-generated reference docs, not a conventional OpenAPI/Swagger file. Fully open source; can be self-hosted. MCP server runs locally (npx @penpot/mcp, http://localhost:4401/mcp); no hosted endpoint.",
+  "sources": [
+   "https://github.com/penpot/penpot/tree/develop/mcp"
+  ]
+ },
+ "v0-platform-api-vercel": {
+  "mcp": {
+   "type": "official",
+   "url": "https://v0.app/api/mcp"
+  },
+  "notes": "Different product from Vercel's core platform API; API access is tied to v0 plan credits rather than a standalone free signup. The official remote MCP server (v0.app/api/mcp) uses OAuth, not the API key.",
+  "sources": [
+   "https://v0.app/docs/api/v2/guides/mcp-server"
+  ]
+ },
+ "webflow-data-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.webflow.com/mcp"
+  },
+  "sources": [
+   "https://developers.webflow.com/mcp/reference/getting-started",
+   "https://github.com/webflow/mcp-server"
+  ]
+ },
+ "circleci-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.circleci.com/v1/mcp"
+  },
+  "notes": "Use the v3 API for new work (v2 still supported). The mcp-server-circleci npm package is deprecated in favor of CircleCI's hosted MCP (mcp.circleci.com/v1/mcp, OAuth2 or personal API token) or CLI MCP mode.",
+  "sources": [
+   "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/"
+  ]
+ },
+ "docker-hub-api": {
+  "notes": "API is v2-beta; free/anonymous pulls are rate-limited. Docker's MCP Catalog/Toolkit offers 300+ containerized MCP servers. The hub-mcp server runs locally (stdio or self-run HTTP); no hosted endpoint.",
+  "sources": [
+   "https://github.com/docker/hub-mcp"
+  ]
+ },
+ "github-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.githubcopilot.com/mcp/"
+  },
+  "sources": [
+   "https://github.com/github/github-mcp-server"
+  ]
+ },
+ "gitlab-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://gitlab.com/api/v4/mcp"
+  },
+  "notes": "GitLab's official MCP server is in beta (GitLab 18.6+) at https://<gitlab-host>/api/v4/mcp with OAuth dynamic client registration, on all tiers incl. Free; no GitLab-maintained multi-language SDK, but community libraries (python-gitlab, node-gitlab) exist.",
+  "sources": [
+   "https://docs.gitlab.com/user/model_context_protocol/mcp_server/"
+  ]
+ },
+ "maven-central-search": {
+  "notes": "Solr-style queries (g:, a:, v:, fc:); core=gav lists all versions. Sonatype may throttle heavy automated use. Sonatype's own Guide MCP (mcp.guide.sonatype.com/mcp, bearer token) covers dependency intelligence, not this search API.",
+  "sources": [
+   "https://github.com/arvindand/maven-tools-mcp",
+   "https://guide.sonatype.com/mcp"
+  ]
+ },
+ "pagerduty-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.pagerduty.com/mcp"
+  },
+  "notes": "The self-hosted pagerduty-mcp-server repo is deprecated and archived; use the PagerDuty-hosted Remote MCP server (US: mcp.pagerduty.com/mcp, EU: mcp.eu.pagerduty.com/mcp).",
+  "sources": [
+   "https://support.pagerduty.com/main/docs/pagerduty-mcp-server"
+  ]
+ },
+ "postman-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.postman.com/mcp"
+  },
+  "free_tier": "Free plan: 10,000 Postman API calls/month; rate limits ~300 req/min general, stricter for specific endpoints",
+  "notes": "Reference docs are at learning.postman.com. The Postman API MCP server has full (/mcp), minimal (default, /minimal) and code (/code) variants; EU at mcp.eu.postman.com (API key only); npm @postman/postman-mcp-server.",
+  "sources": [
+   "https://learning.postman.com/docs/developer/postman-api/postman-mcp-server/overview/",
+   "https://www.postman.com/pricing/"
+  ]
+ },
+ "activepieces": {
+  "notes": "MCP server URL is per-instance (https://your-instance.com/mcp); OAuth-based client auth, and connection secrets/API keys are never exposed through MCP tools. Endpoints docs say API key management is only in Platform and Enterprise editions.",
+  "sources": [
+   "https://www.activepieces.com/docs/endpoints/overview",
+   "https://www.activepieces.com/docs/mcp/overview"
+  ]
+ },
+ "arcade-dev": {
+  "mcp": {
+   "type": "official",
+   "url": "https://docs.arcade.dev/en/guides/mcp-gateways"
+  },
+  "notes": "First use of an OAuth-gated tool requires the human to approve a browser consent screen; token is then reused automatically. Team plan adds $0.10/auth event and $0.01/tool call beyond free quota. MCP gateways: https://api.arcade.dev/mcp/<gateway-slug>.",
+  "sources": [
+   "https://docs.arcade.dev/en/guides/mcp-gateways"
+  ]
+ },
+ "composio": {
+  "auth_hint": "x-api-key: <api_key> (org-level keys: x-org-api-key); per-toolkit connections use managed OAuth",
+  "mcp": {
+   "type": "official",
+   "url": "https://connect.composio.dev/mcp"
+  },
+  "sources": [
+   "https://docs.composio.dev/llms-full.txt",
+   "https://docs.composio.dev/docs/composio-connect"
+  ]
+ },
+ "ifttt-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://ifttt.com/mcp"
+  },
+  "sources": [
+   "https://ifttt.com/.well-known/oauth-protected-resource"
+  ]
+ },
+ "keboola": {
+  "docs": "https://help.keboola.com/storage/api/",
+  "sources": [
+   "https://help.keboola.com/storage/api/",
+   "https://api.keboola.com/?service=storage"
+  ]
+ },
+ "make-api-mcp": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.make.com"
+  },
+  "free_tier": "Free tier: 1,000 credits/month, 2 active scenarios; Make API access requires Core plan or higher",
+  "notes": "MCP scenario-run tools are available on all Make plans, management tools on paid plans only; you pay for operations consumed when scenarios run. Token variant: https://<zone>/mcp with Authorization: Bearer <MCP_TOKEN>.",
+  "sources": [
+   "https://developers.make.com/mcp-server",
+   "https://www.make.com/en/pricing"
+  ]
+ },
+ "merge-agent-handler": {
+  "free_tier": "Free tier: 2,000 credits/month for prototyping/testing; production usage needs a paid Pro ($1,000/mo, 25,000 credits) or Enterprise plan",
+  "notes": "Separate product from Merge's classic Unified API (HRIS/ATS/CRM sync); Agent Handler is the AI-agent-facing tool-calling layer. All plans include unlimited registered users and tool packs.",
+  "sources": [
+   "https://www.merge.dev/pricing/agent-handler"
+  ]
+ },
+ "n8n-api": {
+  "docs": "https://docs.n8n.io/connect/n8n-api",
+  "free_tier": "Free: self-hosted Community Edition (open source, unlimited); n8n Cloud trial has no API access",
+  "mcp": {
+   "type": "official",
+   "url": "https://docs.n8n.io/connect/connect-to-n8n-mcp-server"
+  },
+  "notes": "REST API manages workflows/executions/credentials/users, not per-node business logic. Built-in instance-level MCP server at https://<instance>/mcp-server/http (OAuth or Bearer token), plus MCP Server Trigger nodes. Scoped API keys need Enterprise plan.",
+  "sources": [
+   "https://docs.n8n.io/connect/connect-to-n8n-mcp-server",
+   "https://docs.n8n.io/connect/n8n-api"
+  ]
+ },
+ "nango": {
+  "mcp": {
+   "type": "official",
+   "url": "https://nango.dev/docs/implementation-guides/use-cases/tool-calling/implement-mcp-server"
+  },
+  "notes": "Nango is primarily an auth/proxy broker (open source). It also hosts a per-session MCP server (Streamable HTTP): POST /sessions returns mcp_url + session_token (Bearer). Free self-hosting is not offered outside the Enterprise (BYOC) plan.",
+  "sources": [
+   "https://nango.dev/docs/implementation-guides/use-cases/tool-calling/implement-mcp-server"
+  ]
+ },
+ "paragon-actionkit": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/useparagon/paragon-mcp"
+  },
+  "free_tier": "Trial: free trial only; no lasting free tier confirmed; Pro/Enterprise pricing by quote",
+  "notes": "Paragon's embedded-iPaaS platform and ActionKit are sales-quoted after a free trial. The ActionKit MCP server is self-hosted (Docker) from github.com/useparagon/paragon-mcp; no hosted endpoint.",
+  "sources": [
+   "https://www.useparagon.com/pricing",
+   "https://github.com/useparagon/paragon-mcp"
+  ]
+ },
+ "pipedream-connect": {
+  "mcp": {
+   "type": "official",
+   "url": "https://remote.mcp.pipedream.net/v3"
+  },
+  "notes": "Requires a Pipedream project plus client ID/secret/project ID to call the MCP server; managed auth handles end-user OAuth for connected apps. Send Bearer token plus x-pd-project-id, x-pd-environment, x-pd-external-user-id, x-pd-app-slug headers.",
+  "sources": [
+   "https://pipedream.com/docs/connect/mcp/developers"
+  ]
+ },
+ "stackone": {
+  "auth_hint": "Authorization: Basic base64(<api_key>:) plus x-account-id: <account_id>",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.stackone.com/mcp"
+  },
+  "sources": [
+   "https://docs.stackone.com/llms-full.txt",
+   "https://docs.stackone.com/connect/ai-platforms/overview"
+  ]
+ },
+ "superglue": {
+  "auth_hint": "Authorization: Bearer <api_key>",
+  "mcp": {
+   "type": "official",
+   "url": "https://superglue.ai/docs/mcp/using-the-mcp/"
+  },
+  "notes": "Open-source, self-serve integration/migration agent for enterprise systems (NetSuite, SAP, Sage Intacct, Dynamics). Default MCP server at https://<api-endpoint>/mcp (OAuth or creator API key); custom servers at /mcp/{orgId}/{serverName}.",
+  "sources": [
+   "https://superglue.ai/docs/api/overview/",
+   "https://superglue.ai/docs/mcp/using-the-mcp/"
+  ]
+ },
+ "zapier-mcp-ai-actions": {
+  "free_tier": "Free tier: 100 tasks/month; each successful MCP tool call uses 2 tasks (~50 calls/month); more on paid plans",
+  "sources": [
+   "https://docs.zapier.com/llms-full.txt"
+  ]
+ }
+}

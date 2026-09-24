@@ -1,0 +1,198 @@
+{
+ "csm-common-sense-machines-api": {
+  "notes": "Service appears discontinued: csm.ai domains do not resolve (checked 2026-09-24).",
+  "free_tier": "Unavailable: service appears discontinued",
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "sources": [
+   "https://csm.ai",
+   "https://www.csm.ai",
+   "https://docs.csm.ai",
+   "https://github.com/CommonSenseMachines",
+   "https://github.com/CommonSenseMachines/blender-mcp"
+  ]
+ },
+ "hyper3d-rodin-api": {
+  "docs": "https://docs.hyper3d.ai/",
+  "auth_hint": "Authorization: Bearer <RODIN_API_KEY>",
+  "free_tier": "Paid only: API access requires the Business plan ($120/mo, $96/mo billed annually) or Enterprise; direct credits $1.5 each",
+  "sources": [
+   "https://hyper3d.ai/pricing?lang=en",
+   "https://docs.hyper3d.ai/en/get-started/quick-start",
+   "https://developer.hyper3d.ai/"
+  ]
+ },
+ "sketchfab-data-api": {
+  "auth_hint": "Authorization: Token <API_TOKEN> (personal token) or OAuth2 Authorization: Bearer <access_token>; legacy v2 endpoints are deprecated",
+  "free_tier": "Free: no key needed for search and model listing (GET /v3/search, /v3/models); downloads (/v3/models/{uid}/download) need a free account token",
+  "sources": [
+   "https://docs.sketchfab.com/data-api/v3/swagger.json",
+   "https://api.sketchfab.com/v3/search?type=models&q=chair"
+  ]
+ },
+ "tencent-hunyuan3d-api": {
+  "free_tier": "Trial: 200 free credits one-time on first activation (valid 1 year); then postpaid $0.02/credit, Professional generation 25 credits (~$0.50), Express 15",
+  "sources": [
+   "https://www.tencentcloud.com/document/product/1284/75281"
+  ]
+ },
+ "tripo-api": {
+  "free_tier": "Trial: one-time free credits on first API key (amount varies by signup path, not listed on the pricing page); then pay-as-you-go at $0.01/credit",
+  "notes": "MCP server by VAST AI Research (Tripo's developer) is alpha and works only through the Tripo Blender add-on (generate and import into Blender), not as a standalone API wrapper. Free-credit amounts vary; verify in console.",
+  "sources": [
+   "https://github.com/VAST-AI-Research/tripo-mcp",
+   "https://developers.tripo3d.ai/en/pricing",
+   "https://www.tripo3d.ai/blog/ai-3d-api-free-credits-testing"
+  ]
+ },
+ "eraser-api-diagramgpt": {
+  "mcp": {
+   "type": "official",
+   "url": "https://app.eraser.io/api/mcp",
+   "maintainer": "vendor",
+   "remote_url": "https://app.eraser.io/api/mcp",
+   "repo": "https://www.npmjs.com/package/@eraserlabs/eraser-mcp",
+   "source_url": "https://docs.eraser.io/mcp.md",
+   "checked_at": "2026-09-24"
+  },
+  "notes": "No free tier for API access - tokens are only issued to paid teams, not free accounts. The official remote MCP server (OAuth or API key; local npm @eraserlabs/eraser-mcp) is free within in-app free-tier limits.",
+  "sources": [
+   "https://docs.eraser.io/mcp.md"
+  ]
+ },
+ "icepanel-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.icepanel.io/mcp",
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.icepanel.io/mcp",
+   "covers_full_api": false,
+   "source_url": "https://docs.icepanel.io/integrations/mcp-server",
+   "checked_at": "2026-09-24"
+  },
+  "auth_hint": "X-API-Key: <ICEPANEL_API_KEY>; OpenAPI 3.1 spec published at api.icepanel.io",
+  "notes": "Free plan has monthly request caps; higher volume requires Growth ($40/editor/mo), Scale ($80/editor/mo) or Enterprise. Official remote MCP (OAuth) is documented as paid plans only; the local IcePanel/mcp-server repo is deprecated.",
+  "sources": [
+   "https://docs.icepanel.io/integrations/mcp-server",
+   "https://developer.icepanel.io/developer-guide/getting-started/quickstart.md",
+   "https://github.com/IcePanel/mcp-server"
+  ]
+ },
+ "lucid-lucidchart-rest-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.lucid.app/mcp",
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.lucid.app/mcp",
+   "covers_full_api": false,
+   "source_url": "https://community.lucid.co/community-news-and-announcements-9/introducing-the-lucid-model-context-protocol-mcp-server-12230",
+   "checked_at": "2026-09-24"
+  },
+  "llms_txt": "https://developer.lucid.co/llms.txt",
+  "notes": "Requires enabling Developer Tools on the account first; supports both API-key and OAuth 2.0 client-credential flows; exact free-tier API quota not published in docs. The official MCP server (OAuth, since 2025-11-18) must be enabled by an account admin.",
+  "sources": [
+   "https://community.lucid.co/community-news-and-announcements-9/introducing-the-lucid-model-context-protocol-mcp-server-12230",
+   "https://github.com/lucidsoftware/lucid-mcp-server",
+   "https://mcp.lucid.app/mcp",
+   "https://developer.lucid.co/llms.txt",
+   "https://lucid.readme.io/llms.txt"
+  ]
+ },
+ "mermaid-chart-api": {
+  "llms_txt": null,
+  "sources": [
+   "https://mermaid.ai/llms.txt"
+  ]
+ },
+ "miro-rest-api": {
+  "free_tier": "Free tier: up to 3 editable team boards; MCP on all plans, capped per day at 100 tool calls on Free (Starter 500, Business 2,000, Enterprise 10,000)",
+  "sources": [
+   "https://developers.miro.com/docs/mcp-usage-and-daily-limits.md"
+  ]
+ },
+ "plantuml-server-api": {
+  "notes": "Extremely widely used for UML/C4/architecture-as-code; no signup; self-hostable via plantuml.war for privacy or rate-limit control. The official plantuml/plantuml-mcp is an MVP exposing only plantuml_version (no rendering yet).",
+  "sources": [
+   "https://github.com/plantuml/plantuml-mcp"
+  ]
+ },
+ "structurizr": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.structurizr.com/mcp",
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.structurizr.com/mcp",
+   "tools": [
+    "inspect",
+    "parse",
+    "validate",
+    "export-mermaid",
+    "export-c4plantuml",
+    "export-plantuml"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://docs.structurizr.com/ai/mcp",
+   "checked_at": "2026-09-24"
+  },
+  "notes": "Cloud service is end-of-life (migrate to playground, local or self-hosted server per docs.structurizr.com/cloud). Uses a nonstandard HMAC signing scheme rather than a bearer token; docs recommend the Structurizr CLI or client libraries over the raw API.",
+  "sources": [
+   "https://structurizr.com/",
+   "https://docs.structurizr.com/cloud",
+   "https://docs.structurizr.com/ai/mcp"
+  ]
+ },
+ "anthropic-claude-api": {
+  "auth_hint": "Authorization: Bearer <ANTHROPIC_API_KEY> (x-api-key still supported as legacy fallback), plus anthropic-version header",
+  "sources": [
+   "https://platform.claude.com/docs/en/api/overview"
+  ]
+ },
+ "deepseek-api": {
+  "llms_txt": null,
+  "notes": "No native SDK: use the OpenAI SDK (base_url https://api.deepseek.com) or the Anthropic SDK (https://api.deepseek.com/anthropic). Off-peak is 50% off; peak is 01:00-04:00 and 06:00-10:00 UTC Mon-Fri. Fees come from a topped-up or granted balance.",
+  "sources": [
+   "https://api-docs.deepseek.com/quick_start/pricing",
+   "https://api-docs.deepseek.com/llms.txt"
+  ]
+ },
+ "fal-ai": {
+  "free_tier": "Paid only: prepaid credits bought in advance; no free tier stated",
+  "sources": [
+   "https://fal.ai/docs/documentation/model-apis/pricing"
+  ]
+ },
+ "hugging-face-inference-providers": {
+  "free_tier": "Free tier: $0.10/month in Inference Providers credits (PRO $2.00/month)",
+  "sources": [
+   "https://huggingface.co/docs/inference-providers/pricing"
+  ]
+ },
+ "openai-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://developers.openai.com/mcp"
+  },
+  "notes": "Docs moved from platform.openai.com to developers.openai.com (old URLs redirect). Usage-based billing with a payment method; rate limits scale with usage tier. The official MCP server is documentation-only and does not call the API.",
+  "sources": [
+   "https://developers.openai.com/learn/docs-mcp"
+  ]
+ },
+ "replicate": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.replicate.com/sse"
+  },
+  "sources": [
+   "https://mcp.replicate.com/",
+   "https://replicate.com/docs/reference/mcp"
+  ]
+ },
+ "together-ai": {
+  "free_tier": "Paid only: no free trial; minimum $5 prepaid credit purchase",
+  "sources": [
+   "https://docs.together.ai/docs/billing-credits"
+  ]
+ }
+}

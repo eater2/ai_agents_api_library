@@ -1,0 +1,230 @@
+{
+ "beatoven-ai-api": {
+  "auth_hint": "Authorization: Bearer <API_TOKEN> (base URL https://public-api.beatoven.ai)",
+  "notes": "Auth and endpoints are documented in the public API spec on GitHub (Beatoven/public-api); free-credit amount is not disclosed on public pages.",
+  "sources": [
+   "https://raw.githubusercontent.com/Beatoven/public-api/main/docs/api-spec.md"
+  ]
+ },
+ "elevenlabs-music-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.elevenlabs.io/v1/mcp"
+  },
+  "free_tier": "Free tier: 10,000 credits per month shared with TTS (music included, no commercial use of music on Free; Starter $6/mo or higher needed)",
+  "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS. The local elevenlabs-mcp repo is deprecated in favor of the hosted OAuth MCP server.",
+  "sources": [
+   "https://elevenlabs.io/pricing",
+   "https://github.com/elevenlabs/elevenlabs-mcp"
+  ]
+ },
+ "loudly-api": {
+  "auth_hint": "API-KEY: <API_KEY> (base URL https://soundtracks.loudly.com)",
+  "sources": [
+   "https://b2b-soundtracks-swagger-prd.loudly.com/swagger/b2b_swagger.yaml"
+  ]
+ },
+ "soundraw-api": {
+  "free_tier": "Trial: one-time 2-week free API trial with no commitment; then Starter $29.99/mo for 100 songs with a 6-month minimum commitment",
+  "sources": [
+   "https://docs.channel.io/soundraw-faq/en/articles/SOUNDRAW-API-fbf580fd"
+  ]
+ },
+ "airtable-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.airtable.com/mcp"
+  },
+  "free_tier": "Free tier: 1,000 API calls per workspace per month on the Free plan, 5 req/sec per base",
+  "sources": [
+   "https://airtable.com/developers/agents/mcp/getting-started",
+   "https://support.airtable.com/articles/7735693959-managing-api-call-limits-in-airtable"
+  ]
+ },
+ "asana-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.asana.com/v2/mcp"
+  },
+  "notes": "Official remote MCP server uses OAuth; MCP tokens work only with the MCP server, not the REST API.",
+  "sources": [
+   "https://developers.asana.com/docs/integrating-with-asanas-mcp-server"
+  ]
+ },
+ "atlassian-jira-confluence": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.atlassian.com/v2/mcp"
+  },
+  "sources": [
+   "https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/"
+  ]
+ },
+ "box-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.box.com"
+  },
+  "free_tier": "Free: developer plan with 10 GB storage, full API access and 1,000 AI units per month, no payment required",
+  "sources": [
+   "https://developer.box.com/guides/box-mcp",
+   "https://developer.box.com/guides/getting-started/free-developer-plan"
+  ]
+ },
+ "cal-com-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.cal.com/mcp"
+  },
+  "sources": [
+   "https://cal.com/docs/mcp-server"
+  ]
+ },
+ "calendly-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.calendly.com"
+  },
+  "free_tier": "Free: API GET/POST works on every plan incl. Free (except 3 Enterprise-only endpoints); webhooks need a Standard, Teams or Enterprise plan",
+  "sources": [
+   "https://developer.calendly.com/calendly-mcp-server",
+   "https://developer.calendly.com/frequently-asked-questions"
+  ]
+ },
+ "clickup-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.clickup.com/mcp"
+  },
+  "notes": "MCP server is OAuth-only (no API keys); Free Forever is limited to 50 MCP calls per 24h without the AI add-on.",
+  "sources": [
+   "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server"
+  ]
+ },
+ "coda-api-superhuman-docs": {
+  "mcp": {
+   "type": "official",
+   "url": "https://docs.superhuman.com/apis/mcp"
+  },
+  "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL (coda.io/apis/v1) still works. The official MCP server uses OAuth via id.superhuman.com (scope mcp:all).",
+  "sources": [
+   "https://docs.superhuman.com/.well-known/oauth-protected-resource/apis/mcp"
+  ]
+ },
+ "dropbox-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.dropbox.com/mcp"
+  },
+  "notes": "Official remote MCP server is in open beta and uses Dropbox OAuth.",
+  "sources": [
+   "https://help.dropbox.com/integrations/connect-dropbox-mcp-server"
+  ]
+ },
+ "linear-api": {
+  "auth_hint": "Authorization: <API_KEY> (personal key, no Bearer) or Authorization: Bearer <OAuth2 token>",
+  "sources": [
+   "https://linear.app/developers/graphql"
+  ]
+ },
+ "google-workspace-apis-gmail-calendar-drive": {
+  "mcp": {
+   "type": "official",
+   "url": "https://developers.google.com/workspace/guides/configure-mcp-servers"
+  },
+  "free_tier": "Free: no charge within per-API daily quotas; Google plans to bill quota overages to the Cloud billing account later in 2026",
+  "notes": "Each Workspace API (Gmail, Calendar, Drive, Docs, Sheets) has its own quota; sensitive/restricted scopes require OAuth consent screen verification. Official remote MCP servers (Developer Preview, OAuth) run per product, e.g. gmailmcp.googleapis.com/mcp/v1.",
+  "sources": [
+   "https://developers.google.com/workspace/guides/configure-mcp-servers",
+   "https://developers.google.com/workspace/gmail/api/reference/quota"
+  ]
+ },
+ "microsoft-graph-outlook-teams-onedrive": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.svc.cloud.microsoft/enterprise"
+  },
+  "notes": "Requires app registration in Microsoft Entra ID; delegated vs application permissions determine required consent. The official MCP Server for Enterprise (preview) only runs read-only Entra directory queries.",
+  "sources": [
+   "https://learn.microsoft.com/en-us/graph/mcp-server/overview"
+  ]
+ },
+ "monday-com-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.monday.com/mcp"
+  },
+  "notes": "Hosted MCP accepts a personal API token or OAuth 2.0; SSE transport is deprecated in favor of Streamable HTTP.",
+  "sources": [
+   "https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp"
+  ]
+ },
+ "trello-api": {
+  "auth_hint": "key=<API_KEY>&token=<API_TOKEN> query params, or Authorization: OAuth oauth_consumer_key=\"<API_KEY>\", oauth_token=\"<API_TOKEN>\"",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.trello.com/v1"
+  },
+  "notes": "Now documented under the Atlassian developer platform; REST calls send an API key plus a user token (no Bearer). The official MCP server uses OAuth 2.0 and works on all Trello plans.",
+  "sources": [
+   "https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/",
+   "https://support.atlassian.com/trello/docs/connect-trello-to-ai-assistants-with-trello-mcp/"
+  ]
+ },
+ "ayrshare": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.ayrshare.com/mcp"
+  },
+  "free_tier": "Trial: one-time 28-day free trial of the Launch plan ($299/mo), no card required; Premium from $149/mo",
+  "auth_hint": "Authorization: Bearer <API_KEY>; since 2026-03-31 X/Twitter requests also need X-Twitter-OAuth1-Api-Key and X-Twitter-OAuth1-Api-Secret headers",
+  "notes": "Ayrshare holds most per-platform app approvals, so agents avoid applying for Meta/TikTok developer access (X now needs your own X app keys). Action MCP has 27 tools with API-key auth.",
+  "sources": [
+   "https://www.ayrshare.com/docs/additional/mcp-action-server",
+   "https://www.ayrshare.com/pricing/",
+   "https://www.ayrshare.com/docs/apis/overview"
+  ]
+ },
+ "bluesky-at-protocol": {
+  "docs": "https://bsky.network/",
+  "homepage": "https://bsky.network/",
+  "sources": [
+   "https://docs.bsky.app",
+   "https://bsky.network/"
+  ]
+ },
+ "meta-graph-api-facebook-instagram": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.facebook.com/ads"
+  },
+  "notes": "Most useful permissions (posting, Instagram content, insights) require Meta App Review; basic/dev-mode access is limited to admins/testers. The official MCP covers ads, catalogs and reporting only, not organic posting.",
+  "sources": [
+   "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview"
+  ]
+ },
+ "tiktok-api": {
+  "free_tier": "Free: no fee; requires app review for production access, sandbox mode for testing; posts from unaudited clients are private-only until the app passes TikTok's audit",
+  "sources": [
+   "https://developers.tiktok.com/doc/content-posting-api-get-started"
+  ]
+ },
+ "x-twitter-api": {
+  "free_tier": "Paid only: pay-per-usage with prepaid credits (e.g. $0.005 per Post read, $0.001 per owned read), no subscriptions and no free tier",
+  "mcp": {
+   "type": "official",
+   "url": "https://api.x.com/mcp"
+  },
+  "notes": "Credits are deducted per request; pay-per-usage is capped at 3M Post reads per billing cycle, higher volumes need an Enterprise plan. The official xurl bridge (xdevplatform) handles OAuth for the MCP server.",
+  "sources": [
+   "https://docs.x.com/x-api/getting-started/pricing",
+   "https://docs.x.com/tools/mcp"
+  ]
+ },
+ "youtube-data-api": {
+  "free_tier": "Free tier: 10,000 quota units/day plus separate caps of 100 search.list and 100 videos.insert calls/day (extendable on request)",
+  "sources": [
+   "https://developers.google.com/youtube/v3/determine_quota_cost"
+  ]
+ }
+}
