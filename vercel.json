@@ -5,11 +5,14 @@
   "outputDirectory": "docs",
   "functions": {
     "api/mcp.mjs": {
-      "includeFiles": "catalog/all.json",
+      "includeFiles": "catalog/**",
       "maxDuration": 30
     }
   },
   "rewrites": [
-    { "source": "/mcp", "destination": "/api/mcp" }
+    {
+      "source": "/mcp",
+      "destination": "/api/mcp"
+    }
   ]
 }

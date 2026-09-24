@@ -18,7 +18,14 @@ jobs:
         with:
           node-version: "24"
       - run: npm ci
+      # Claude Code CLI for `claude plugin validate` and the install test in tests/claude-install.test.mjs
+      - run: npm install -g @anthropic-ai/claude-code
       - run: npm test
+      - name: Deployed MCP endpoint
+        if: github.event_name != 'pull_request'
+        env:
+          MCP_URL: https://ai-agents-api-library.vercel.app/mcp
+        run: node --test tests/http.test.mjs
 
   check:
     runs-on: ubuntu-latest
