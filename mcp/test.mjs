@@ -47,5 +47,16 @@ const reviews = JSON.parse(await call("get_reviews", { id: "slack-api", max_rati
 assert.ok(reviews.reviews.length > 0 && reviews.reviews.every((r) => r.rating <= 4));
 assert.ok(reviews.reviews.every((r) => !("name" in r)));
 console.log(`slack-api reviews rated <= 4: ${reviews.returned}`);
+assert.ok(reviews.untrusted_content && reviews.topics.length && reviews.reviews.every((r) => Array.isArray(r.aspects)));
+const apiReviews = JSON.parse(await call("get_reviews", { id: "slack-api", about_api: true, since: "2024" }));
+assert.ok(apiReviews.reviews.every((r) => r.date >= "2024" && r.aspects.length));
+
+// Ratings: separate signals, explicit gaps, no aggregate score.
+const twilio = JSON.parse(await call("get_api", { id: "twilio" }));
+assert.ok(!("ratings" in twilio) && twilio.mcp_repo.pushed_at && twilio.product_reviews.count > 0);
+assert.ok(video.results.every((r) => typeof r.ratings.reviews === "string" && typeof r.ratings.mcp_repo === "string"));
+// Docs-only MCP servers don't count for the mcp filter.
+const sms = JSON.parse(await call("search_apis", { query: "send sms", mcp: "official" }));
+assert.ok(!sms.results.some((r) => r.mcp?.config?.docs_only), "docs-only MCP in mcp=official results");
 console.log("OK");
 await client.close();
