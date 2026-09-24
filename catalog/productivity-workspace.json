@@ -108,6 +108,31 @@
      "fetched_at": "2026-09-24T16:59Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.airtable.com/v0",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 250,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.airtable.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 270,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/airtable-api.json"
   },
   {
@@ -220,6 +245,31 @@
      "fetched_at": "2026-09-24T16:59Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://app.asana.com/api/1.0",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 211,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.asana.com/v2/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 348,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/asana-api.json"
   },
   {
@@ -315,6 +365,20 @@
     "docs": "ok",
     "mcp": "reachable",
     "openapi": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mcp.atlassian.com/v2/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 259,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -405,6 +469,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.box.com/2.0",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 280,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.box.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 230,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -478,6 +567,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.cal.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 518,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.cal.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 718,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -557,6 +671,31 @@
      "fetched_at": "2026-09-24T16:59Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.calendly.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 231,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.calendly.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 220,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/calendly-api.json"
   },
   {
@@ -642,6 +781,31 @@
      "fetched_at": "2026-09-24T16:59Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.clickup.com/api/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 239,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.clickup.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 325,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/clickup-api.json"
   },
   {
@@ -713,6 +877,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://coda.io/apis/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 311,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://docs.superhuman.com/apis/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 261,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -796,6 +985,31 @@
      "fetched_at": "2026-09-24T16:59Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.dropboxapi.com/2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 283,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.dropbox.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 236,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/dropbox-api.json"
   },
   {
@@ -883,6 +1097,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://gmailmcp.googleapis.com/mcp/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 265,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -979,6 +1207,31 @@
      "fetched_at": "2026-09-24T16:59Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.linear.app/graphql",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 445,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 400
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.linear.app/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 332,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/linear-api.json"
   },
   {
@@ -1056,6 +1309,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://graph.microsoft.com/v1.0",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 164,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.svc.cloud.microsoft/enterprise",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 389,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -1152,6 +1430,31 @@
      "fetched_at": "2026-09-24T17:00Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.monday.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 215,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.monday.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 295,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/monday-com-api.json"
   },
   {
@@ -1212,7 +1515,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://app.nocodb.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 322,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "notion-api",
@@ -1330,6 +1647,31 @@
      "fetched_at": "2026-09-24T17:00Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.notion.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 496,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 400
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.notion.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 282,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/notion-api.json"
   },
   {
@@ -1415,6 +1757,31 @@
      "fetched_at": "2026-09-24T17:00Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.todoist.com/api/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 380,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://ai.todoist.net/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 496,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/todoist-api.json"
   },
   {
@@ -1481,6 +1848,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.trello.com/1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 445,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.trello.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 295,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   }
  ]

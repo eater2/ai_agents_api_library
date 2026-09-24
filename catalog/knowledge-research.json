@@ -108,7 +108,21 @@
      "url": "https://smithery.ai/servers/arxiv",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "http://export.arxiv.org/api/query",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 423,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 400
+     }
+    }
+   }
   },
   {
    "id": "congress-gov",
@@ -185,7 +199,32 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.congress.gov/v3",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 514,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    },
+    "mcp_remote": {
+     "url": "https://congressgov.caseyjhand.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 406,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "context7-library-docs-for-agents",
@@ -271,7 +310,32 @@
      "url": "https://smithery.ai/servers/upstash/context7-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://context7.com/api/",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 585,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.context7.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 320,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "crossref-rest-api",
@@ -361,7 +425,21 @@
      "url": "https://github.com/afrise/academic-search-mcp-server",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.crossref.org",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 549,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "gdelt-api",
@@ -451,7 +529,32 @@
      "url": "https://github.com/cyanheads/gdelt-mcp-server",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 15969,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://gdelt.caseyjhand.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 312,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "gitingest",
@@ -519,7 +622,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://gitingest.com/api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 434,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "hacker-news-api",
@@ -617,7 +734,21 @@
      "url": "https://github.com/pskill9/hn-server",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://hacker-news.firebaseio.com/v0/",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 648,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "open-library",
@@ -690,7 +821,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://openlibrary.org",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 345,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "nytimes",
@@ -775,7 +920,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.nytimes.com/svc",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 337,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "newsapi",
@@ -866,7 +1025,21 @@
      "url": "https://github.com/matteoantoci/mcp-newsapi",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://newsapi.org/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 392,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "openalex-api",
@@ -965,7 +1138,21 @@
      "url": "https://github.com/benedict2310/Scientific-Papers-MCP",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.openalex.org",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 456,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "pubmed-e-utilities-ncbi",
@@ -1056,7 +1243,21 @@
      "url": "https://github.com/openags/paper-search-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 217,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 400
+     }
+    }
+   }
   },
   {
    "id": "semantic-scholar-api",
@@ -1156,7 +1357,21 @@
      "url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.semanticscholar.org/graph/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 326,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "wikidata",
@@ -1232,6 +1447,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://query.wikidata.org/sparql",
+     "probes": 1,
+     "up": 0,
+     "median_ms": null,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": false,
+      "detail": "timeout"
+     }
+    },
+    "mcp_remote": {
+     "url": "https://wd-mcp.wmcloud.org/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 204,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -1326,7 +1566,21 @@
      "url": "https://github.com/Rudra-ravi/wikipedia-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://en.wikipedia.org/w/api.php",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 326,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "wolfram-alpha-api",
@@ -1393,6 +1647,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://www.wolframalpha.com/api/v1/llm-api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 561,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 400
+     }
+    }
    }
   }
  ]

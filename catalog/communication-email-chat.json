@@ -79,6 +79,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.agentmail.to/v0",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 209,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.agentmail.to/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 472,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -168,7 +193,21 @@
    "has_free_tier": false,
    "has_trial": false,
    "no_card": false,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://aws-mcp.us-east-1.api.aws/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 355,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "bird",
@@ -270,7 +309,32 @@
    "has_free_tier": false,
    "has_trial": false,
    "no_card": false,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://us1.platform.bird.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 365,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.bird.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 381,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "discord-api",
@@ -393,7 +457,21 @@
      "url": "https://smithery.ai/servers/discord",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://discord.com/api/v10",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 166,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    }
+   }
   },
   {
    "id": "line-messaging-api",
@@ -479,7 +557,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.line.me",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 2647,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "mailgun",
@@ -569,6 +661,20 @@
      "fetched_at": "2026-09-24T16:58Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.mailgun.net",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 441,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/mailgun.json"
   },
   {
@@ -642,7 +748,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://ntfy.sh",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 397,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "plivo",
@@ -831,6 +951,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.postmarkapp.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 546,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -938,6 +1072,31 @@
      "fetched_at": "2026-09-24T16:58Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.resend.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 177,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.resend.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 189,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/resend.json"
   },
   {
@@ -1047,6 +1206,20 @@
      "fetched_at": "2026-09-24T16:58Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.sendgrid.com/v3",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 130,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/sendgrid-twilio.json"
   },
   {
@@ -1244,6 +1417,31 @@
      "fetched_at": "2026-09-24T16:58Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://slack.com/api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 546,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.slack.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 164,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/slack-api.json"
   },
   {
@@ -1505,7 +1703,32 @@
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.telnyx.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 136,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.telnyx.com/v2/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 210,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "twilio",
@@ -1897,6 +2120,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.zoom.us/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 265,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   }
  ]

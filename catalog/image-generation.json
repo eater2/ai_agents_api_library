@@ -91,6 +91,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://firefly-api.adobe.io/v3",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 242,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -201,6 +215,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.bfl.ai/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 443,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.bfl.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 499,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -278,6 +317,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.magnific.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 699,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.magnific.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 295,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -348,6 +412,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://generativelanguage.googleapis.com/v1beta",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 166,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -433,6 +511,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.ideogram.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 347,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.ideogram.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 289,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -515,6 +618,31 @@
      "fetched_at": "2026-09-24T16:55Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://cloud.leonardo.ai/api/rest/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 511,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.leonardo.ai/v1/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 267,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/leonardo-ai-api.json"
   },
   {
@@ -621,7 +749,21 @@
      "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.openai.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 232,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "recraft-api",
@@ -726,7 +868,32 @@
      "url": "https://github.com/recraft-ai/mcp-recraft-server",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://external.api.recraft.ai/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 267,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.recraft.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 326,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "remove-bg-api",
@@ -786,6 +953,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.remove.bg/v1.0",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 381,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -863,6 +1044,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.stability.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 501,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   }
  ]

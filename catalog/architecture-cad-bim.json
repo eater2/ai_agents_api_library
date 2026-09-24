@@ -75,6 +75,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://developer.api.autodesk.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 258,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -142,6 +156,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.bentley.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 200,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -214,6 +242,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://cad.onshape.com/api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 757,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://fs-mcp.labs.onshape.app/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 467,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -294,6 +347,31 @@
      "fetched_at": "2026-09-24T16:56Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.procore.com/rest/v1.0",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 207,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://app.procore.com/rest/v1.0/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 189,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/procore-api.json"
   },
   {
@@ -409,6 +487,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://app.speckle.systems/api/graphql",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 464,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -526,6 +618,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.zoo.dev",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 428,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   }
  ]

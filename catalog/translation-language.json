@@ -147,6 +147,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.cognitive.microsofttranslator.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 354,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -265,6 +279,20 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.deepl.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 613,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/deepl-api.json"
   },
   {
@@ -324,6 +352,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://translation.googleapis.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 343,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -399,6 +441,20 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.languagetool.org/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 701,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 400
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/languagetool-api.json"
   },
   {
@@ -451,6 +507,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.modernmt.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 618,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   }
  ]

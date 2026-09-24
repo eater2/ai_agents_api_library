@@ -65,6 +65,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://geocode-api.arcgis.com/arcgis/rest/services",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 283,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    }
    }
   },
   {
@@ -179,6 +193,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.geoapify.com",
+     "probes": 1,
+     "up": 0,
+     "median_ms": 332,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": false,
+      "detail": 503
+     }
+    }
    }
   },
   {
@@ -297,6 +325,20 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mapstools.googleapis.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 331,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/google-maps-platform.json"
   },
   {
@@ -461,7 +503,32 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.ip2location.io",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 428,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.ip2location.io/",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 211,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "iplocate",
@@ -546,7 +613,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://iplocate.io/api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 446,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "locationiq",
@@ -613,7 +694,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://us1.locationiq.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 431,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    }
+   }
   },
   {
    "id": "mapbox",
@@ -740,7 +835,32 @@
      "url": "https://smithery.ai/servers/mapbox",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.mapbox.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 317,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.mapbox.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 372,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "national-weather-service-api-nws",
@@ -812,6 +932,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.weather.gov",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 520,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -927,6 +1061,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.open-meteo.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 765,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -1005,7 +1153,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.opencagedata.com/geocode/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 547,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 400
+     }
+    }
+   }
   },
   {
    "id": "openrouteservice",
@@ -1080,6 +1242,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.heigit.org/openrouteservice",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 793,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -1175,6 +1351,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://nominatim.openstreetmap.org",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 314,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -1288,7 +1478,32 @@
      "url": "https://github.com/robertn702/mcp-openweathermap",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.openweathermap.org",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 754,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.openweathermap.org/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 644,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "overpass-api-osm",
@@ -1361,6 +1576,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://overpass-api.de/api/interpreter",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 874,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 406
+     }
+    }
    }
   },
   {
@@ -1447,6 +1676,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.tomorrow.io/v4",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 495,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 487,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   }
  ]

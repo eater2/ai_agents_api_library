@@ -83,6 +83,31 @@
      "fetched_at": "2026-09-24T17:00Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.ayrshare.com/api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 274,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.ayrshare.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 220,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/ayrshare.json"
   },
   {
@@ -154,6 +179,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://public.api.bsky.app/xrpc",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 357,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -207,6 +246,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.linkedin.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 230,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -334,6 +387,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mcp.facebook.com/ads",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 219,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -401,6 +468,20 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.pinterest.com/v5",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 163,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/pinterest-api.json"
   },
   {
@@ -466,6 +547,20 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://oauth.reddit.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 160,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/reddit-api.json"
   },
   {
@@ -535,6 +630,20 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://open.tiktokapis.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 443,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/tiktok-api.json"
   },
   {
@@ -596,6 +705,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.x.com/2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 192,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.x.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 194,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -666,6 +800,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://www.googleapis.com/youtube/v3",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 272,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   }
  ]

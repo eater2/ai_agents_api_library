@@ -93,6 +93,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.hyper3d.com/api/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 922,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -218,7 +232,21 @@
      "url": "https://github.com/meshy-dev/meshy-mcp-server",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.meshy.ai/openapi/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 352,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "sketchfab-data-api",
@@ -308,7 +336,21 @@
      "url": "https://github.com/gregkop/sketchfab-mcp-server",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.sketchfab.com/v3",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 731,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "stability-ai-3d-stable-fast-3d-spar3d-api",
@@ -361,6 +403,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.stability.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 475,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -420,6 +476,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://hunyuan.intl.tencentcloudapi.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 547,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -501,7 +571,21 @@
      "url": "https://github.com/VAST-AI-Research/tripo-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://openapi.tripo3d.ai/v3",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 420,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   }
  ]
 }

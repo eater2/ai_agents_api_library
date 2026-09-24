@@ -98,7 +98,21 @@
      "url": "https://github.com/awslabs/mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://aws-mcp.us-east-1.api.aws/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 611,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "azure-apis",
@@ -211,7 +225,21 @@
      "url": "https://github.com/microsoft/mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://management.azure.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 249,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 400
+     }
+    }
+   }
   },
   {
    "id": "cloudflare-api",
@@ -311,6 +339,31 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.cloudflare.com/client/v4",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 363,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.cloudflare.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 327,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/cloudflare-api.json"
   },
   {
@@ -406,6 +459,20 @@
     "docs": "ok",
     "mcp": "ok",
     "openapi": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.machines.dev/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 405,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -497,7 +564,21 @@
      "url": "https://github.com/googleapis/mcp-toolbox",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://compute.googleapis.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 439,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "mux-video-api",
@@ -577,6 +658,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.mux.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 360,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.mux.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 377,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -669,6 +775,31 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.netlify.com/api/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 360,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://netlify-mcp.netlify.app/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 1144,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/netlify-api.json"
   },
   {
@@ -769,6 +900,31 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.render.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 191,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.render.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 214,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -828,7 +984,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mcp-on-edge.edgeone.app/mcp-server",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 821,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "vercel-api",
@@ -942,6 +1112,31 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.vercel.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 606,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.vercel.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 248,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/vercel-api.json"
   }
  ]

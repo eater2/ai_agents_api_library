@@ -66,6 +66,20 @@
      "fetched_at": "2026-09-24T16:56Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://public-api.beatoven.ai",
+     "probes": 1,
+     "up": 0,
+     "median_ms": null,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": false,
+      "detail": "dns"
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/beatoven-ai-api.json"
   },
   {
@@ -155,7 +169,32 @@
      "url": "https://github.com/elevenlabs/elevenlabs-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.elevenlabs.io",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 319,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.elevenlabs.io/v1/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 172,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "loudly-api",
@@ -219,6 +258,20 @@
      "fetched_at": "2026-09-24T16:56Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://soundtracks.loudly.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 799,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/loudly-api.json"
   },
   {
@@ -272,6 +325,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://music-api.mubert.com/api/v3/public",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 654,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -386,6 +453,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.stability.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 383,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   }
  ]
