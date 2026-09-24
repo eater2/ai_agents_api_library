@@ -11,7 +11,7 @@ Thanks for helping. This guide shows how to add, change or remove a service with
 | You want to… | Edit this file | Fields you must fill in |
 |---|---|---|
 | Add or fix a service | `data/catalog.json` | see [Entry fields](#entry-fields) |
-| Remove a service (no API any more, shut down…) | move it from `data/catalog.json` to `data/excluded.json` | `name`, `category`, `homepage`, `reason_en`, `reason_pl` |
+| Remove a service (no API any more, shut down…) | delete the entry from `data/catalog.json` | none |
 | Add a category | `data/categories.json` | `id`, `en`, `pl`, `desc_en`, `desc_pl` |
 | Add a related directory or registry | `data/directories.json` | `name`, `url`, `machine_readable_url`, `desc_en`, `desc_pl` |
 
@@ -48,10 +48,11 @@ Both languages come from the same entry: `desc_en` feeds the English files, and 
    python scripts/check_links.py
    ```
    Every URL of your entry should be `ok` or `reachable`. `reachable` means the server answered but refused an anonymous request, which is normal for APIs and MCP endpoints.
-5. **Test the MCP server**, if you changed `mcp/` (Node 20+):
+5. **Test the MCP server, plugin and skill**, if you changed `mcp/`, `api/`, `skills/`, `.claude-plugin/` or a version (Node 22+):
    ```bash
    npm ci && npm test
    ```
+   `tests/` checks the manifests, the skill and its zip, installs the npm package and the Claude Code plugin into temporary folders, and runs the HTTP endpoint locally. The Claude Code checks are skipped when the `claude` CLI is missing. To test the deployed endpoint: `MCP_URL=https://ai-agents-api-library.vercel.app/mcp node --test tests/http.test.mjs`.
 6. **Commit the data change together with the regenerated files**:
    ```bash
    git add -A
@@ -113,7 +114,7 @@ A service belongs in the catalog when all of these hold:
 - A human needs to act **at most once** (sign up, create a key or approve OAuth); after that, an agent can work unattended.
 - The API is **documented** and **currently active**.
 
-It does not belong if it is only a consumer app, is behind a waitlist or a sales call, or is an agent framework or IDE. Put such services in `data/excluded.json` with the reason, so nobody proposes them again.
+It does not belong if it is only a consumer app, is behind a waitlist or a sales call, or is an agent framework or IDE. Don't add them.
 
 ## Review
 

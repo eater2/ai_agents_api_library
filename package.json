@@ -1,6 +1,6 @@
 {
   "name": "ai-agents-api-library",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "MCP server: search a verified catalog of 300+ APIs and MCP servers that AI agents can call (auth, free tier, MCP endpoint, docs).",
   "type": "module",
   "bin": {
@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "start": "node mcp/server.mjs",
-    "test": "node mcp/test.mjs && node mcp/ranking.test.mjs"
+    "test": "node mcp/test.mjs && node mcp/ranking.test.mjs && node --test \"tests/*.test.mjs\""
   },
   "engines": {
     "node": ">=20"

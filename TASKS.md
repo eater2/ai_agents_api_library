@@ -27,6 +27,11 @@ Na podstawie wywiadów z agentami (`research/agent-interviews/2026-09-24/report.
 - [x] GitHub Action: test co tydzień + przy PR, wyniki commitowane do repo
 - [x] Pole `link_check` w JSON dla agentów (status + data ostatniego testu)
 - [x] Polityka świeżości: `stale: true`, gdy `verified` starsze niż 90 dni
+- [x] Automatyczne testy instalacji (`tests/`, `npm test`, CI): spójność wersji w package.json / plugin.json / marketplace.json / server.json, frontmatter SKILL.md, skill wymienia tylko istniejące narzędzia i wszystkie kategorie, ZIP skilla aktualny, `claude plugin validate --strict`, `npm pack` + instalacja + MCP po stdio, endpoint HTTP lokalnie (i wdrożony z `MCP_URL`), pełna instalacja pluginu w Claude Code w tymczasowym `CLAUDE_CONFIG_DIR` (2026-09-24)
+- [x] `claude plugin details` pokazywał „MCP servers (0)”: CLI liczy tylko serwery z `.mcp.json` w katalogu pluginu, a nie `mcpServers` w `plugin.json` (ani wpisane, ani jako ścieżka). Konfiguracja przeniesiona do `.mcp.json`, test pilnuje tego w `tests/plugin.test.mjs` (2026-09-24)
+- [x] Wersja 0.2.0 (nowe narzędzie `get_reviews`) we wszystkich manifestach i w `mcp/core.mjs`; test „one version everywhere” sprawdza też wersję serwera (2026-09-24)
+- [ ] Tag gita `v0.2.0` przy wypchnięciu; przy każdej zmianie narzędzi podbijać wersję, żeby `/plugin update` ją zauważył
+- [x] `vercel.json` includeFiles: `catalog/**`, więc `get_reviews` na Vercelu ma lokalną kopię opinii, gdy GitHub nie odpowiada (2026-09-24)
 - [ ] Weryfikacja per pole: `source_url` + `checked_at` dla `auth`, `free_tier`, `mcp`
 - [ ] Rozróżnienie MCP `official` / `vendor-hosted` / `community` + weryfikacja domeny
 
@@ -64,8 +69,9 @@ Propozycja startu: GitHub + npm/PyPI + Smithery/Glama (legalne API, mierzą uży
 
 ## P4 — format i bezpieczeństwo
 - [x] Pliki kategorii < 30 KB (kontrola w build)
-- [ ] Podpisane wydania / sumy kontrolne (`SHA256SUMS`)
-- [ ] Przegląd `auth_hint` pod kątem trybu rozkazującego
+- [x] Sumy kontrolne `SHA256SUMS` (w katalogu głównym i `docs/`, generowane przez build, link w `llms.txt`)
+- [ ] Podpisane wydania
+- [x] Przegląd `auth_hint` pod kątem trybu rozkazującego: żaden nie wydaje poleceń; tryb rozkazujący tylko w nieszkodliwych `notes`
 
 ## P5 — pomiar
 - [ ] Statystyki ruchu (GitHub Traffic API, pobrania npm, wywołania MCP)

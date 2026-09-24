@@ -11,7 +11,7 @@ Dziękujemy za pomoc. Ta instrukcja pokazuje, jak przez pull request dodać, pop
 | Chcesz… | Edytuj plik | Wymagane pola |
 |---|---|---|
 | Dodać lub poprawić usługę | `data/catalog.json` | zob. [Pola wpisu](#pola-wpisu) |
-| Usunąć usługę (brak API, zamknięta…) | przenieś ją z `data/catalog.json` do `data/excluded.json` | `name`, `category`, `homepage`, `reason_en`, `reason_pl` |
+| Usunąć usługę (brak API, zamknięta…) | usuń wpis z `data/catalog.json` | brak |
 | Dodać kategorię | `data/categories.json` | `id`, `en`, `pl`, `desc_en`, `desc_pl` |
 | Dodać powiązany katalog lub rejestr | `data/directories.json` | `name`, `url`, `machine_readable_url`, `desc_en`, `desc_pl` |
 
@@ -48,10 +48,11 @@ Obie wersje językowe powstają z tego samego wpisu: z `desc_en` powstają pliki
    python scripts/check_links.py
    ```
    Każdy adres z Twojego wpisu powinien mieć status `ok` lub `reachable`. `reachable` oznacza, że serwer odpowiedział, ale odmówił anonimowego zapytania. To normalne dla API i endpointów MCP.
-5. **Przetestuj serwer MCP**, jeśli zmieniałeś `mcp/` (Node 20+):
+5. **Przetestuj serwer MCP, plugin i skill**, jeśli zmieniałeś `mcp/`, `api/`, `skills/`, `.claude-plugin/` albo wersję (Node 22+):
    ```bash
    npm ci && npm test
    ```
+   `tests/` sprawdza manifesty, skill i jego ZIP, instaluje paczkę npm i plugin Claude Code w folderach tymczasowych i uruchamia lokalnie endpoint HTTP. Testy Claude Code są pomijane, gdy brak CLI `claude`. Test wdrożonego endpointu: `MCP_URL=https://ai-agents-api-library.vercel.app/mcp node --test tests/http.test.mjs`.
 6. **Zrób commit zmiany danych razem z wygenerowanymi plikami**:
    ```bash
    git add -A
@@ -90,7 +91,7 @@ Usługa trafia do katalogu, gdy spełnia wszystkie warunki:
 - Człowiek działa **najwyżej raz** (rejestracja, klucz lub zgoda OAuth). Potem agent pracuje sam.
 - API jest **udokumentowane** i **aktywne**.
 
-Nie trafia, gdy jest wyłącznie aplikacją konsumencką, wymaga listy oczekujących lub kontaktu z działem sprzedaży, albo jest frameworkiem agentów lub IDE. Taką usługę dopisz do `data/excluded.json` z powodem, żeby nikt nie proponował jej ponownie.
+Nie trafia, gdy jest wyłącznie aplikacją konsumencką, wymaga listy oczekujących lub kontaktu z działem sprzedaży, albo jest frameworkiem agentów lub IDE. Takich usług nie dodawaj.
 
 ## Przegląd
 
