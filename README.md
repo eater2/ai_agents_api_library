@@ -595,7 +595,7 @@ Other machine-readable sources agents can use to discover tools:
 
 ## Contributing
 
-Edit `data/catalog.json` (one object per service, see `data/schema.json`), run `python scripts/build.py`, open a pull request. Every new entry must link to the vendor's official API documentation.
+Edit only the files in `data/` (usually `data/catalog.json`), run `python scripts/build.py` to regenerate the English, Polish and LLM files, and open a pull request. Every new entry must link to the vendor's official API documentation. Step-by-step guide: `CONTRIBUTING.md`.
 
 ## See also
 

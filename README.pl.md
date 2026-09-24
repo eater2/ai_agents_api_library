@@ -52,7 +52,7 @@
 | Usługa | Co agent może zrobić | Autoryzacja | MCP | Darmowy limit | Dokumentacja |
 |---|---|---|:-:|---|---|
 | [Brave Search API](https://brave.com/search/api/) | Pozwala agentowi przeszukiwać niezależny indeks Brave (web, obrazy, wideo, wiadomości) i uzyskiwać wyniki z cytowaniami gotowe dla LLM. | klucz API | [✅](https://github.com/brave/brave-search-mcp-server) | 🆓 $5 free monthly credits (~1,000 queries on Search plan); credit card required at signup as anti-fraud measure | [dokumentacja](https://api-dashboard.search.brave.com/app/documentation/web-search/get-started) |
-| [Exa](https://exa.ai) | Pozwala agentowi wykonywać neuronowe lub słowo-kluczowe wyszukiwanie w sieci, pobierać treść stron i znajdować podobne linki przez API Exa. | klucz API | [✅](https://mcp.exa.ai/mcp) | 🆓 free tier: $10 free credits/month (~1,400 searches), no payment method required | [dokumentacja](https://docs.exa.ai/reference/getting-started) |
+| [Exa](https://exa.ai) | Wyszukiwanie w sieci (neuronowe lub po słowach kluczowych), pobieranie treści stron i znajdowanie podobnych linków przez API Exa. | klucz API | [✅](https://mcp.exa.ai/mcp) | 🆓 free tier: $10 free credits/month (~1,400 searches), no payment method required | [dokumentacja](https://docs.exa.ai/reference/getting-started) |
 | [Jina AI Search / Reader](https://jina.ai) | Przeszukuj sieć lub konwertuj dowolny URL na czysty markdown gotowy dla LLM przez proste zapytania HTTP GET. | klucz API | — | 🆓 no key needed: 100 RPM (s.jina.ai search) / 500 RPM (r.jina.ai reader); free API key raises limits to 1,000/5,000 RPM with token-based billing | [dokumentacja](https://docs.jina.ai) |
 | [Kagi Search API](https://kagi.com) | Wykonuj programowo płatne, wolne od reklam wyszukiwania (web/wiadomości/obrazy/wideo) i wyciągaj markdown stron przez płatne REST API. | klucz API | [✅](https://github.com/kagisearch/kagimcp) | no free tier: pay-per-use, $12 per 1,000 search requests, invoiced monthly or at $100 usage, whichever first | [dokumentacja](https://help.kagi.com/kagi/api/overview.html) |
 | [Linkup](https://www.linkup.so) | Pozwala agentowi wyszukiwać, pobierać strony i wykonywać dogłębne badania wieloźródłowe przez endpointy Search/Fetch/Research API Linkup. | klucz API | [✅](https://mcp.linkup.so/mcp) | 🆓 $20 free credits/month for new accounts signing up with a professional email | [dokumentacja](https://docs.linkup.so/pages/documentation/endpoints/search/reference) |
@@ -563,7 +563,7 @@ Inne czytelne maszynowo źródła, w których agenci mogą wyszukiwać narzędzi
 
 ## Współtworzenie
 
-Edytuj `data/catalog.json` (jeden obiekt na usługę, zob. `data/schema.json`), uruchom `python scripts/build.py` i otwórz pull request. Każdy nowy wpis musi wskazywać oficjalną dokumentację API dostawcy.
+Edytuj tylko pliki w `data/` (zwykle `data/catalog.json`), uruchom `python scripts/build.py`, który odtworzy wersję angielską, polską i pliki dla LLM, i otwórz pull request. Każdy nowy wpis musi wskazywać oficjalną dokumentację API dostawcy. Instrukcja krok po kroku: `CONTRIBUTING.pl.md`.
 
 ## Zobacz też
 
