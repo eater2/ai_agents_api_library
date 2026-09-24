@@ -2,6 +2,36 @@
 
 Na podstawie wywiadów z agentami (`research/agent-interviews/2026-09-24/report.md`). Kolejność = priorytet.
 
+## P0b — wyniki testu produktu z 7 agentami (2026-09-24)
+
+Źródło: `research/agent-interviews/2026-09-24-product-test/report.md`, strona z wynikami: https://claude.ai/artifact/3gH1aWdZxZaJ9zvHugBorj.
+Wniosek: skill dobrze wyzwala `search_apis`, ale agenci porzucają narzędzie po 1–2 chybionych wynikach. Plan na noc 2026-09-24/25, właściciel w nawiasie.
+
+Wyszukiwanie (`mcp/core.mjs`)
+- [ ] Pusty wynik zamiast dopełniania listy: próg trafności, komunikat o luce w pokryciu („no catalogued text-to-video API with a free tier”) i podpowiedź (inna kategoria / bez filtra / web search) — 5/7 agentów (54)
+- [ ] Ranking po czynności: pole `operations` z wpisów, wynik `match: exact | adjacent` z krótkim powodem — blokada nr 1 dla 6/7 (54, po danych od bf)
+- [ ] Ranking uwzględnia wolumen i limity (`rate_limits`, zakaz pracy wsadowej, np. Nominatim) (54)
+- [ ] Test regresyjny z 3 zadań testu: wideo bez Voyage/Mux/Gemini; geokodowanie z Geoapify/Mapbox/HERE, bez IP2Location; SMS z Twilio/Vonage na górze, bez LINE/Discord/WhatsApp (54)
+- [ ] Opisy narzędzi MCP: warunek pominięcia (podłączone narzędzie lub własny model), „once a human has provisioned credentials”, „ranking is not proof of fit”, `get_reviews` opcjonalne (54)
+
+Dane (`data/catalog.json`)
+- [ ] `operations`: kontrolowany słownik czynności (np. `text-to-video`, `sms`, `street-geocoding`, `ip-geolocation`, `video-hosting`) dla wszystkich 323 wpisów + opis słownika w schemacie (bf)
+- [ ] `has_free_tier` / `has_trial` liczone z `free_plan.kind`, a nie z tekstu (dziś „free trial…” liczy się jako darmowy plan); dodać `no_card` do JSON dla agentów (bf)
+- [ ] Poprawki z testu: Esri → `maps-geo-weather`; `video-generation` bez usług hostingu (Mux) i szablonów, albo jawne `operations`; przegląd kategorii pod kątem podobnych pomyłek (bf)
+- [ ] Brakujący dostawcy wskazani przez agentów: SMS — Plivo, Sinch, Telnyx, AWS SNS (End User Messaging), Bird; geokodowanie — OpenCage, LocationIQ (bf)
+
+Wywołanie i MCP (`get_api`)
+- [ ] Minimalny przykład żądania + ścieżka endpointu + metoda + kluczowe pola odpowiedzi dla ok. 30 najczęściej wybieranych usług — 7/7 agentów (3b)
+- [ ] Gotowy snippet konfiguracji MCP per wpis (transport, `url` lub `command`, zmienne środowiskowe), oznaczenie `docs-only`, gdy serwer tylko przeszukuje dokumentację (3b)
+- [ ] Cena za jednostkę operacji (np. 1 geokod = 1 kredyt, SMS do PL), gdzie dostawca ją publikuje (3b)
+
+Teksty (skill, llms.txt, README)
+- [ ] Skill: najpierw dopasowanie do czynności i wolumenu, dopiero potem `no_auth` / free tier; trial ≠ free tier; sprawdzić, czy `mcp` to endpoint czy repozytorium; `get_reviews` opcjonalne; wyzwalacz „naprawczy” (403, limit, nieobsługiwany format); pominąć zadania, które model robi sam (tłumaczenie, diagramy) (3b)
+- [ ] „verified” → „last checked” wszędzie, gdzie sprawdzamy tylko linki; osobno data sprawdzenia linku i danych (3b)
+
+Na koniec
+- [ ] Powtórzyć test produktu (`python scripts/interview_product_test.py`) i porównać z 2026-09-24 (bf)
+
 ## P0 — porządek repozytorium
 - [x] Repozytorium na GitHubie, pierwszy commit
 - [x] `.gitattributes` — końce linii LF dla plików generowanych
