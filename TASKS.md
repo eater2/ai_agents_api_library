@@ -39,7 +39,7 @@ Na koniec
 - [x] `search_apis`: kompaktowe pole ocen z jawnym brakiem danych (`status: unavailable`), brak danych nie obniża pozycji; średniej gwiazdek i instalacji nie używać w rankingu (54)
 - [x] `get_api`: osobno `product_reviews` (źródło, ocena, liczba, zakres dat, `fetched_at`) i `mcp_repo` (`archived`, `pushed_at`, gwiazdki), bez jednego zbiorczego wyniku (54)
 - [x] `get_reviews`: filtry (świeże, nisko ocenione, dotyczące API), tagi aspektów (błędy, auth, limity, breaking changes vs dashboard/billing), krótkie podsumowanie tematów z linkami; tekst opinii oznaczony jako niezaufany (54)
-- [ ] Sondy katalogu: codzienny pomiar dostępności `base_url` i zdalnych endpointów MCP (status, latencja, klasa błędu, okno, `measured_at`) w GitHub Action → pole `uptime` (bf)
+- [x] Sondy katalogu: `scripts/probe_uptime.py` + `.github/workflows/uptime.yml` (codziennie), `data/uptime.json` (30 dni) → pole `uptime` (`probes`, `up`, `median_ms`, ostatni wynik); szablony URL (`<region>`, `{subdomain}`) pomijane (bf, 2026-09-24)
 - [ ] Później: wyniki agentów (telemetria) per operacja — tylko z mianownikiem, definicją sukcesu, minimalną próbą i pochodzeniem; najpierw sondy
 - Nie robić: jednego `health_score`, rankingowania po gwiazdkach, poszerzania scrapowania opinii ludzkich
 
