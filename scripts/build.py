@@ -22,6 +22,7 @@ PAGES = f"https://{REPO.split('/')[0]}.github.io/{REPO.split('/')[1]}/"
 RAW = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/"
 GH = f"https://github.com/{REPO}"
 
+MCP_URL = "https://ai-agents-api-library.vercel.app/mcp"
 STALE_DAYS = 90
 MAX_CATEGORY_BYTES = 30 * 1024
 
@@ -247,6 +248,10 @@ def readme(lang, cats, items, excluded, dirs):
         o.append('```json\n{\n  "mcpServers": {\n    "ai-agents-api-library": {\n      "command": "npx",\n'
                  f'      "args": ["-y", "github:{REPO}"]\n    }}\n  }}\n}}\n```\n')
         o.append(f"Claude Code: `claude mcp add ai-agents-api-library -- npx -y github:{REPO}`\n")
+        o.append(f"No install: remote endpoint (Streamable HTTP, no key) `{MCP_URL}`, e.g. "
+                 f"`claude mcp add --transport http ai-agents-api-library {MCP_URL}`. "
+                 "Listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ai-agents-api-library) "
+                 "as `io.github.eater2/ai-agents-api-library`.\n")
         o.append("### Claude skill and plugin\n\nThe skill tells Claude when to reach for the catalog and how to pick a service. "
                  "The plugin bundles the skill with the MCP server:\n")
         o.append(f"- **Claude Code plugin** (skill + MCP server):\n  ```\n  /plugin marketplace add {REPO}\n"
@@ -315,7 +320,7 @@ def llms(cats, items, dirs):
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
          f"- [JSON Schema]({RAW}data/schema.json): entry schema",
          f"- [Excluded services]({RAW}data/excluded.json): reviewed and rejected, with reasons",
-         f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` — tools search_apis, get_api, list_categories",
+         f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` or remote {MCP_URL} (Streamable HTTP) — tools search_apis, get_api, list_categories",
          "", "## Start free", "",
          f"{sum(map(is_free, items))} of {len(items)} services have a lasting free tier or free usage (JSON field `has_free_tier`; "
          f"exact limits in `free_tier`), and {sum(map(is_trial, items))} more give one-off free trial credits (`has_trial`). "

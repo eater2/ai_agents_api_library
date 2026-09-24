@@ -63,6 +63,8 @@ The catalog is also an MCP server with three tools: `search_apis` (filters: `que
 
 Claude Code: `claude mcp add ai-agents-api-library -- npx -y github:eater2/ai_agents_api_library`
 
+No install: remote endpoint (Streamable HTTP, no key) `https://ai-agents-api-library.vercel.app/mcp`, e.g. `claude mcp add --transport http ai-agents-api-library https://ai-agents-api-library.vercel.app/mcp`. Listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ai-agents-api-library) as `io.github.eater2/ai-agents-api-library`.
+
 ### Claude skill and plugin
 
 The skill tells Claude when to reach for the catalog and how to pick a service. The plugin bundles the skill with the MCP server:
