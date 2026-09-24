@@ -8,6 +8,7 @@ Outputs: README.md, README.pl.md, llms.txt, llms-full.txt, catalog/*.json,
          docs/robots.txt, docs/sitemap.xml
 """
 import base64
+import hashlib
 import html
 import io
 import json
@@ -374,6 +375,7 @@ def llms(cats, items, dirs):
          f"- [Full catalog (JSON)]({RAW}catalog/all.json): all entries in one array",
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
          f"- [JSON Schema]({RAW}data/schema.json): entry schema",
+         f"- [SHA256SUMS]({RAW}SHA256SUMS): checksums of llms.txt, llms-full.txt, schema and catalog/*.json (`sha256sum -c SHA256SUMS`)",
          f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` or remote {MCP_URL} (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories",
          "", "## Start free", "",
          f"{sum(map(is_free, items))} of {len(items)} services have a lasting free tier or free usage (JSON field `has_free_tier`; "
@@ -701,7 +703,19 @@ def main():
           + "".join(f"<url><loc>{u}</loc><lastmod>{VERIFIED}</lastmod></url>\n" for u in
                     [PAGES, PAGES + "catalog.json", PAGES + "llms.txt"] + [f"{PAGES}c/{c['id']}/" for c in cats])
           + "</urlset>\n")
+    checksums()
     print(f"{len(items)} entries, {len(cats)} categories -> built")
+
+
+def checksums():
+    """SHA256SUMS for the files agents download, in `sha256sum -c` format (repo root and the Pages copy)."""
+    def sums(base, paths):
+        rows = [f"{hashlib.sha256((base / q).read_bytes()).hexdigest()}  {q}" for q in sorted(paths)]
+        return "\n".join(rows) + "\n"
+    root = ["llms.txt", "llms-full.txt", "data/schema.json"] + [p.relative_to(ROOT).as_posix() for p in (ROOT / "catalog").rglob("*.json")]
+    write("SHA256SUMS", sums(ROOT, root))
+    docs = ["llms.txt", "llms-full.txt", "catalog.json", "ai-agents-api-library-skill.zip"]
+    write("docs/SHA256SUMS", sums(ROOT / "docs", docs))
 
 
 VERIFIED = ""

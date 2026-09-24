@@ -21,4 +21,4 @@ Full guide for humans and agents: `CONTRIBUTING.md`.
 3. Write both `desc_en` and `desc_pl` (one sentence, what the agent can *do*).
 4. Set `verified` to today's date (YYYY-MM-DD).
 5. Run `python scripts/build.py`. Commit the data change and the regenerated files together.
-6. Do not hand-edit generated files: `README.md`, `README.pl.md`, `llms.txt`, `llms-full.txt`, `catalog/*.json`, `docs/*`.
+6. Do not hand-edit generated files: `README.md`, `README.pl.md`, `llms.txt`, `llms-full.txt`, `catalog/*.json`, `SHA256SUMS`, `docs/*`.
