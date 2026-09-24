@@ -102,6 +102,21 @@
     "crm"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a company record",
+    "method": "POST",
+    "url": "https://api.attio.com/v2/objects/{object}/records",
+    "example": "curl -X POST https://api.attio.com/v2/objects/companies/records -H \"Authorization: Bearer $ATTIO_API_KEY\" -H \"Content-Type: application/json\" -d '{\"data\":{\"values\":{\"name\":\"Acme\"}}}'",
+    "response_fields": [
+     "data.id.record_id",
+     "data.id.object_id",
+     "data.web_url",
+     "data.values"
+    ],
+    "async": null,
+    "source_url": "https://docs.attio.com/rest-api/endpoint-reference/records/create-a-record",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -242,6 +257,21 @@
     "email-marketing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a CRM contact",
+    "method": "POST",
+    "url": "https://api.hubapi.com/crm/v3/objects/contacts",
+    "example": "curl -X POST https://api.hubapi.com/crm/v3/objects/contacts -H \"Authorization: Bearer $HUBSPOT_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"properties\": {\"email\": \"example@hubspot.com\", \"firstname\": \"Jane\", \"lastname\": \"Doe\"}}'",
+    "response_fields": [
+     "id",
+     "properties",
+     "createdAt",
+     "archived"
+    ],
+    "async": null,
+    "source_url": "https://developers.hubspot.com/docs/api-reference/crm-contacts-v3/basic/post-crm-v3-objects-contacts",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -363,6 +393,22 @@
     "crm"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "reply to a conversation",
+    "method": "POST",
+    "url": "https://api.intercom.io/conversations/{conversation_id}/reply",
+    "example": "curl -X POST https://api.intercom.io/conversations/$CONVERSATION_ID/reply -H \"Authorization: Bearer $INTERCOM_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -H \"Intercom-Version: 2.16\" -d '{\"message_type\":\"comment\",\"type\":\"user\",\"intercom_user_id\":\"$CONTACT_ID\",\"body\":\"Thanks again :)\"}'",
+    "response_fields": [
+     "id",
+     "state",
+     "open",
+     "updated_at",
+     "conversation_parts"
+    ],
+    "async": null,
+    "source_url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/conversations/replyconversation",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -508,6 +554,19 @@
     "sms"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a profile",
+    "method": "POST",
+    "url": "https://a.klaviyo.com/api/profiles",
+    "example": "curl -X POST https://a.klaviyo.com/api/profiles -H \"Authorization: Klaviyo-API-Key $KLAVIYO_PRIVATE_API_KEY\" -H 'revision: 2026-07-15' -H 'Content-Type: application/vnd.api+json' -d '{\"data\":{\"type\":\"profile\",\"attributes\":{\"email\":\"sarah.mason@klaviyo-demo.com\"}}}'",
+    "response_fields": [
+     "data.id",
+     "data.attributes.email"
+    ],
+    "async": null,
+    "source_url": "https://developers.klaviyo.com/en/reference/create_profile",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -635,6 +694,20 @@
     "email-marketing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "add a contact to an audience",
+    "method": "POST",
+    "url": "https://{dc}.api.mailchimp.com/3.0/lists/{list_id}/members",
+    "example": "curl -sS -X POST \"https://$MAILCHIMP_DC.api.mailchimp.com/3.0/lists/$LIST_ID/members\" --user \"key:$MAILCHIMP_API_KEY\" -H 'content-type: application/json' -d '{\"email_address\": \"prudence.mcvankab@example.com\", \"status\": \"subscribed\", \"merge_fields\": {\"FNAME\": \"Prudence\", \"LNAME\": \"McVankab\"}}'",
+    "response_fields": [
+     "id",
+     "email_address",
+     "status"
+    ],
+    "async": null,
+    "source_url": "https://mailchimp.com/developer/marketing/guides/create-your-first-audience/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -719,6 +792,21 @@
     "crm"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a deal",
+    "method": "POST",
+    "url": "https://api.pipedrive.com/api/v2/deals",
+    "example": "curl -X POST https://api.pipedrive.com/api/v2/deals -H \"x-api-token: $PIPEDRIVE_API_TOKEN\" -H \"Content-Type: application/json\" -d '{\"title\":\"New deal\"}'",
+    "response_fields": [
+     "success",
+     "data.id",
+     "data.title",
+     "data.stage_id"
+    ],
+    "async": null,
+    "source_url": "https://developers.pipedrive.com/docs/api/v1/openapi-v2.yaml",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -954,6 +1042,20 @@
     "support-ticketing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a support ticket",
+    "method": "POST",
+    "url": "https://{subdomain}.zendesk.com/api/v2/tickets",
+    "example": "curl -X POST https://$ZENDESK_SUBDOMAIN.zendesk.com/api/v2/tickets -H \"Authorization: Bearer $ZENDESK_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"ticket\": {\"subject\": \"My printer is on fire!\", \"comment\": {\"body\": \"The smoke is very colorful.\"}}}'",
+    "response_fields": [
+     "ticket.id",
+     "ticket.status",
+     "ticket.url",
+     "ticket.created_at"
+    ],
+    "source_url": "https://developer.zendesk.com/api-reference/ticketing/tickets/tickets/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,

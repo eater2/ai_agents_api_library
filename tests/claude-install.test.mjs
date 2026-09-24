@@ -26,9 +26,9 @@ const claude = (args, timeout = 60_000) => {
 };
 
 test("marketplace add + plugin install", { skip }, () => {
-  let r = claude(`plugin marketplace add "${ROOT}"`);
+  let r = claude(`plugin marketplace add "${ROOT}"`, 240_000);
   assert.ok(r.ok, r.out);
-  r = claude("plugin install ai-agents-api-library@eater2");
+  r = claude("plugin install ai-agents-api-library@eater2", 240_000); // copies the working tree, node_modules included
   assert.ok(r.ok, r.out);
   r = claude("plugin list");
   assert.match(r.out, /ai-agents-api-library@eater2[\s\S]*enabled/);

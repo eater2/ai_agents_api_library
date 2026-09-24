@@ -72,6 +72,25 @@
     "speech-to-text"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "synthesize speech from text (Polly)",
+    "method": "POST",
+    "url": "https://polly.{region}.amazonaws.com/v1/speech",
+    "example": "curl -X POST https://polly.us-east-1.amazonaws.com/v1/speech --aws-sigv4 \"aws:amz:us-east-1:polly\" --user \"$AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY\" -H \"Content-Type: application/json\" -d '{\"Text\":\"Hello from Polly\",\"OutputFormat\":\"mp3\",\"VoiceId\":\"Joanna\",\"Engine\":\"neural\"}' -o speech.mp3",
+    "response_fields": [
+     "body: audio stream",
+     "Content-Type header",
+     "x-amzn-RequestCharacters header"
+    ],
+    "async": null,
+    "source_url": "https://docs.aws.amazon.com/polly/latest/dg/API_SynthesizeSpeech.html",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Polly: standard $4.00, neural $16.00, generative $30.00, long-form $100.00 per 1M characters (beyond free tier)",
+    "source_url": "https://aws.amazon.com/polly/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -144,6 +163,26 @@
     "speech-to-text"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "transcribe an audio file",
+    "method": "POST",
+    "url": "https://api.assemblyai.com/v2/transcript",
+    "example": "curl -X POST https://api.assemblyai.com/v2/transcript -H \"authorization: $ASSEMBLYAI_API_KEY\" -H \"content-type: application/json\" -d '{\"audio_url\": \"https://assembly.ai/wildfires.mp3\"}'",
+    "response_fields": [
+     "id",
+     "status",
+     "text",
+     "confidence"
+    ],
+    "async": "poll GET https://api.assemblyai.com/v2/transcript/{id} until status is completed or error",
+    "source_url": "https://www.assemblyai.com/docs/api-reference/transcripts/submit",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Pre-recorded speech-to-text: Universal-3.5 Pro $0.21 per audio hour, Universal-2 $0.15 per hour",
+    "source_url": "https://www.assemblyai.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -261,6 +300,23 @@
     "speech-to-text"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "convert text to speech",
+    "method": "POST",
+    "url": "https://{region}.tts.speech.microsoft.com/cognitiveservices/v1",
+    "example": "curl -X POST \"https://$SPEECH_REGION.tts.speech.microsoft.com/cognitiveservices/v1\" -H \"Ocp-Apim-Subscription-Key: $SPEECH_KEY\" -H \"Content-Type: application/ssml+xml\" -H \"X-Microsoft-OutputFormat: audio-16khz-128kbitrate-mono-mp3\" -H \"User-Agent: curl\" --data-raw \"<speak version='1.0' xml:lang='en-US'><voice xml:lang='en-US' xml:gender='Female' name='en-US-Ava:DragonHDLatestNeural'>Hello from Azure Speech</voice></speak>\" --output output.mp3",
+    "response_fields": [
+     "binary audio body in the X-Microsoft-OutputFormat format (HTTP 200)"
+    ],
+    "async": null,
+    "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-text-to-speech?pivots=programming-language-rest",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Pay-as-you-go (East US, S1): neural text to speech $15 per 1M characters; real-time speech to text $1 per audio hour",
+    "source_url": "https://prices.azure.com/api/retail/prices?$filter=productName eq 'Azure Speech' and armRegionName eq 'eastus'",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -371,6 +427,23 @@
     "voice-cloning"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "text-to-speech (audio file)",
+    "method": "POST",
+    "url": "https://api.cartesia.ai/tts/bytes",
+    "example": "curl -X POST https://api.cartesia.ai/tts/bytes -H \"Cartesia-Version: 2026-08-14\" -H \"Authorization: Bearer $CARTESIA_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model_id\":\"sonic-3.6\",\"transcript\":\"Hi there, nice to meet you.\",\"voice\":\"db6b0ed5-d5d3-463d-ae85-518a07d3c2b4\",\"output_format\":{\"container\":\"wav\",\"encoding\":\"pcm_s16le\",\"sample_rate\":44100}}' -o out.wav",
+    "response_fields": [
+     "body (audio bytes in output_format)"
+    ],
+    "async": null,
+    "source_url": "https://docs.cartesia.ai/api-reference/tts/bytes",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "TTS: about 1 credit per character; Pro plan $5/mo for 100K credits, Startup $49/mo for 1.25M credits",
+    "source_url": "https://docs.cartesia.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -747,6 +820,23 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "synthesize speech from text",
+    "method": "POST",
+    "url": "https://texttospeech.googleapis.com/v1/text:synthesize",
+    "example": "curl -X POST https://texttospeech.googleapis.com/v1/text:synthesize -H \"Authorization: Bearer $(gcloud auth print-access-token)\" -H \"x-goog-user-project: $GCP_PROJECT_ID\" -H \"Content-Type: application/json; charset=utf-8\" -d '{\"input\":{\"text\":\"Hello world\"},\"voice\":{\"languageCode\":\"en-gb\",\"name\":\"en-GB-Standard-A\"},\"audioConfig\":{\"audioEncoding\":\"MP3\"}}'",
+    "response_fields": [
+     "audioContent"
+    ],
+    "async": null,
+    "source_url": "https://docs.cloud.google.com/text-to-speech/docs/create-audio-text-command-line",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "TTS after free tier: Standard and WaveNet $4, Neural2 $16, Chirp 3 HD $30, Studio $160 per 1M characters",
+    "source_url": "https://docs.cloud.google.com/text-to-speech/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -847,6 +937,26 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "text-to-speech",
+    "method": "POST",
+    "url": "https://api.hume.ai/v0/tts",
+    "example": "curl -X POST https://api.hume.ai/v0/tts -H \"X-Hume-Api-Key: $HUME_API_KEY\" -H \"Content-Type: application/json\" -d '{\"utterances\": [{\"text\": \"Hello from Hume.\", \"description\": \"a calm, friendly narrator\"}], \"format\": {\"type\": \"mp3\"}}'",
+    "response_fields": [
+     "generations[0].audio",
+     "generations[0].duration",
+     "generations[0].generation_id",
+     "request_id"
+    ],
+    "async": null,
+    "source_url": "https://dev.hume.ai/reference/text-to-speech-tts/synthesize-json",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "TTS overage per 1,000 characters: $0.15 (Creator), $0.12 (Pro), $0.10 (Scale), $0.05 (Business); EVI $0.04-0.07/minute",
+    "source_url": "https://www.hume.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -925,6 +1035,26 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "text-to-speech (generate a voiceover file)",
+    "method": "POST",
+    "url": "https://api.murf.ai/v1/speech/generate",
+    "example": "curl -X POST https://api.murf.ai/v1/speech/generate -H \"api-key: $MURF_API_KEY\" -H 'Content-Type: application/json' -d '{\"text\": \"Hi, how are you doing today?\", \"voiceId\": \"en-US-natalie\"}'",
+    "response_fields": [
+     "audioFile",
+     "audioLengthInSeconds",
+     "remainingCharacterCount",
+     "wordDurations"
+    ],
+    "async": null,
+    "source_url": "https://murf.ai/api/docs/api-reference/text-to-speech/generate",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Pay-as-you-go: $0.03 per 1,000 characters (minimum purchase $2); Falcon streaming model advertised at $0.01 per minute of speech",
+    "source_url": "https://help.murf.ai/murf-api-plans-and-limits",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -1188,6 +1318,25 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "submit an async transcription job",
+    "method": "POST",
+    "url": "https://api.rev.ai/speechtotext/v1/jobs",
+    "example": "curl -X POST https://api.rev.ai/speechtotext/v1/jobs -H \"Authorization: Bearer $REVAI_ACCESS_TOKEN\" -H 'Content-Type: application/json' -d '{\"source_config\":{\"url\":\"https://www.rev.ai/FTC_Sample_1.mp3\"}}'",
+    "response_fields": [
+     "id",
+     "status",
+     "created_on"
+    ],
+    "async": "poll GET https://api.rev.ai/speechtotext/v1/jobs/{id} until status is transcribed, then GET .../jobs/{id}/transcript (Accept: text/plain)",
+    "source_url": "https://docs.rev.ai/api/asynchronous/get-started/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Reverb ASR: $0.20 per hour English, $0.30 per hour other languages (per-second billing, 15 s minimum)",
+    "source_url": "https://www.rev.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -1293,6 +1442,25 @@
     "source_url": "https://docs.speechmatics.com/speech-to-text/batch/limits.md"
    },
    "no_auth": false,
+   "call": {
+    "operation": "transcribe an audio file (batch job, wait for result)",
+    "method": "POST",
+    "url": "https://eu1.asr.api.speechmatics.com/v2/jobs/?wait=60&format=txt",
+    "example": "curl -L -X POST \"https://eu1.asr.api.speechmatics.com/v2/jobs/?wait=60&format=txt\" -H \"Authorization: Bearer $SPEECHMATICS_API_KEY\" -F data_file=@example.wav -F config='{\"type\": \"transcription\", \"transcription_config\": {\"model\": \"enhanced\", \"language\": \"en\"}}'",
+    "response_fields": [
+     "id",
+     "status",
+     "txt"
+    ],
+    "async": "if status is still created when wait elapses, GET /v2/jobs/{id}/transcript?format=txt (also accepts wait) until done",
+    "source_url": "https://docs.speechmatics.com/speech-to-text/batch/synchronous.md",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Pro pay-as-you-go: batch Standard $0.24 per audio hour, batch Enhanced $0.40/hr, Melia 1 $0.129/hr; real-time Standard $0.24/hr, Enhanced $0.43/hr",
+    "source_url": "https://www.speechmatics.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,

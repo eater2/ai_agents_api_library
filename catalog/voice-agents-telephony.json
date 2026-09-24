@@ -86,6 +86,25 @@
     "phone-calls"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "place an outbound AI phone call",
+    "method": "POST",
+    "url": "https://api.bland.ai/v1/calls",
+    "example": "curl https://api.bland.ai/v1/calls -H \"Authorization: Bearer $BLAND_API_KEY\" -H \"Content-Type: application/json\" -d '{\"phone_number\": \"+15555550123\", \"task\": \"You are a customer service agent calling about an account update.\"}'",
+    "response_fields": [
+     "status",
+     "call_id",
+     "message"
+    ],
+    "async": "call runs asynchronously; get transcript/outcome via GET https://api.bland.ai/v1/calls/{call_id} or the webhook parameter",
+    "source_url": "https://docs.bland.ai/api-v1/post/calls",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Connected calls: $0.14/min on Start (no platform fee), $0.12/min on Build ($299/mo platform fee)",
+    "source_url": "https://www.bland.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -193,6 +212,11 @@
     "text-to-speech"
    ],
    "no_auth": false,
+   "unit_price": {
+    "summary": "Voice Agent Standard: $0.075 per minute of WebSocket connection (Pay As You Go); BYO TTS $0.065/min, BYO LLM $0.059/min, BYO LLM+TTS $0.050/min",
+    "source_url": "https://deepgram.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -268,6 +292,23 @@
     "phone-calls"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a conversational agent",
+    "method": "POST",
+    "url": "https://api.elevenlabs.io/v1/convai/agents/create",
+    "example": "curl -X POST https://api.elevenlabs.io/v1/convai/agents/create -H \"xi-api-key: $ELEVENLABS_API_KEY\" -H 'Content-Type: application/json' -d '{\"conversation_config\":{}}'",
+    "response_fields": [
+     "agent_id"
+    ],
+    "async": null,
+    "source_url": "https://elevenlabs.io/docs/api-reference/agents/create",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Agents (Speech Engine): $0.08 per minute beyond plan-included minutes, $0.16 per burst minute",
+    "source_url": "https://elevenlabs.io/pricing/api",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -362,6 +403,26 @@
     "phone-calls"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "dispatch a voice agent into a room",
+    "method": "POST",
+    "url": "https://{projectDomain}/twirp/livekit.AgentDispatchService/CreateDispatch",
+    "example": "curl -X POST https://$LIVEKIT_PROJECT_DOMAIN/twirp/livekit.AgentDispatchService/CreateDispatch -H \"Authorization: Bearer $LIVEKIT_ADMIN_JWT\" -H 'Content-Type: application/json' -d '{\"agent_name\": \"my-agent\", \"room\": \"my-room\"}'",
+    "response_fields": [
+     "id",
+     "agent_name",
+     "room",
+     "state"
+    ],
+    "async": null,
+    "source_url": "https://docs.livekit.io/reference/agents/agent-dispatch-service-api.md",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Agent sessions: $0.01 per minute overage on paid plans (Build includes 1,000 min/mo free); WebRTC overage $0.0004-$0.0005 per participant minute",
+    "source_url": "https://livekit.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -435,6 +496,25 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "place an outbound AI phone call",
+    "method": "POST",
+    "url": "https://api.retellai.com/v2/create-phone-call",
+    "example": "curl -X POST https://api.retellai.com/v2/create-phone-call -H \"Authorization: Bearer $RETELL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"from_number\":\"+14157774444\",\"to_number\":\"+12137774445\"}'",
+    "response_fields": [
+     "call_id",
+     "call_status",
+     "agent_id"
+    ],
+    "async": "poll GET https://api.retellai.com/v2/get-call/{call_id} (or use webhooks) for transcript and outcome",
+    "source_url": "https://docs.retellai.com/api-references/create-phone-call",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Per call minute: voice infra $0.055 + LLM (e.g. $0.064 GPT 5.6 Terra) + telephony ($0.015 US via Twilio); advertised $0.07-$0.31/min",
+    "source_url": "https://www.retellai.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -663,6 +743,26 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "make an outbound call",
+    "method": "POST",
+    "url": "https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Calls.json",
+    "example": "curl -X POST \"https://api.twilio.com/2010-04-01/Accounts/$TWILIO_ACCOUNT_SID/Calls.json\" -u \"$TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN\" --data-urlencode \"To=+15558675310\" --data-urlencode \"From=$TWILIO_NUMBER\" --data-urlencode \"Twiml=<Response><Say>Hello</Say></Response>\"",
+    "response_fields": [
+     "sid",
+     "status",
+     "duration",
+     "price"
+    ],
+    "async": "poll GET .../Calls/{sid}.json for status, or set StatusCallback",
+    "source_url": "https://www.twilio.com/docs/voice/api/call-resource",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "US: outbound calls $0.0140/min; inbound $0.0085/min on local numbers (+$1.15/mo per number)",
+    "source_url": "https://www.twilio.com/en-us/voice/pricing/us",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -790,6 +890,24 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "start an outbound phone call with an assistant",
+    "method": "POST",
+    "url": "https://api.vapi.ai/call",
+    "example": "curl -X POST https://api.vapi.ai/call -H \"Authorization: Bearer $VAPI_PRIVATE_API_KEY\" -H \"Content-Type: application/json\" -d '{\"assistantId\": \"your-assistant-id\", \"phoneNumberId\": \"your-phone-number-id\", \"customer\": {\"number\": \"+14155551234\"}}'",
+    "response_fields": [
+     "id",
+     "status"
+    ],
+    "async": "call runs asynchronously; GET https://api.vapi.ai/call/{id} for status and results",
+    "source_url": "https://docs.vapi.ai/api-reference/calls/create",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "$0.05 per call minute Vapi hosting fee; transcriber, LLM, voice and telephony billed separately at cost",
+    "source_url": "https://vapi.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,

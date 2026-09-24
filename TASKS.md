@@ -35,7 +35,7 @@ Teksty (skill, llms.txt, README)
 Na koniec
 - [ ] Powtórzyć test produktu (`python scripts/interview_product_test.py`) i porównać z 2026-09-24 (bf)
   - Porównanie mechaniczne zrobione: `research/agent-interviews/2026-09-24-product-test-retest/comparison.md` (szum w wynikach zniknął we wszystkich 3 zadaniach). Wywiady zablokowane: OpenRouter 402 (brak środków); po doładowaniu `--suffix=retest --missing`.
-- [ ] `call` (przykładowe wywołanie) ma tylko 31/330 wpisów, `unit_price` 25/330 — uzupełnić przynajmniej dla wpisów z `free_plan` (3b)
+- [x] `call` (przykładowe wywołanie) ma tylko 31/330 wpisów, `unit_price` 25/330 — uzupełnić przynajmniej dla wpisów z `free_plan` (3b): teraz `call` 251/330, `unit_price` 140/330; brak `call` tylko tam, gdzie dostawca nie publikuje odwołania HTTP (SDK/WebSocket/za logowaniem) lub strona blokuje dostęp; korekty: `research/p0b-3b/corrections-2026-09-24-round2.md`
 
 ## P0c — oceny i opinie: wywiady z 7 agentami (2026-09-24)
 

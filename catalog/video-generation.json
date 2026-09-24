@@ -46,6 +46,21 @@
     "video-translation"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a talking avatar video",
+    "method": "POST",
+    "url": "https://openapi.akool.com/api/open/v3/talkingavatar/create",
+    "example": "curl -X POST https://openapi.akool.com/api/open/v3/talkingavatar/create -H \"x-api-key: $AKOOL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"width\": 3840, \"height\": 2160, \"avatar_from\": 3, \"elements\": [{\"type\": \"avatar\", \"url\": \"https://example.com/avatar.mp4\", \"scale_x\": 1, \"scale_y\": 1, \"width\": 1080, \"height\": 1080, \"offset_x\": 1920, \"offset_y\": 1080}, {\"type\": \"audio\", \"url\": \"https://example.com/audio.mp3\"}]}'",
+    "response_fields": [
+     "code",
+     "data._id",
+     "data.video_status",
+     "data.video"
+    ],
+    "async": "poll GET https://openapi.akool.com/api/open/v3/content/video/infobymodelid?video_model_id={_id} until video_status=3 (4=failed); video URL valid 7 days",
+    "source_url": "https://docs.akool.com/ai-tools-suite/talking-avatar",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -143,6 +158,26 @@
     "video-templating"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "render a video from a template",
+    "method": "POST",
+    "url": "https://api.creatomate.com/v2/renders",
+    "example": "curl -X POST https://api.creatomate.com/v2/renders -H 'Content-Type: application/json' -H \"Authorization: Bearer $CREATOMATE_API_KEY\" -d '{\"template_id\": \"{template_id}\", \"modifications\": {\"Primary-Text\": \"Hello\"}}'",
+    "response_fields": [
+     "id",
+     "status",
+     "url",
+     "snapshot_url"
+    ],
+    "async": "poll GET https://api.creatomate.com/v2/renders/{id} until status is succeeded (url then points to the file), or pass webhook_url",
+    "source_url": "https://creatomate.com/docs/api/quick-start/create-a-video-by-template",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 image = 1 credit; 1 minute of 720p/25fps video = about 14 credits; credits from $29/mo for 2,000 (Essential, about $0.0145 per credit)",
+    "source_url": "https://creatomate.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -243,6 +278,20 @@
     "lip-sync"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a talking-head video from a photo and text",
+    "method": "POST",
+    "url": "https://api.d-id.com/talks",
+    "example": "curl -X POST https://api.d-id.com/talks -H \"Authorization: Basic $DID_API_KEY\" -H 'Content-Type: application/json' -d '{\"source_url\":\"https://d-id-public-bucket.s3.us-west-2.amazonaws.com/alice.jpg\",\"script\":{\"type\":\"text\",\"input\":\"Making videos is easy with D-ID\"}}'",
+    "response_fields": [
+     "id",
+     "status",
+     "result_url"
+    ],
+    "async": "poll GET https://api.d-id.com/talks/{id} until status is done, then read result_url",
+    "source_url": "https://docs.d-id.com/reference/createtalk",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -1234,6 +1283,24 @@
     "video-editing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "render a video from an Edit JSON timeline",
+    "method": "POST",
+    "url": "https://api.shotstack.io/edit/{version}/render",
+    "example": "curl -X POST https://api.shotstack.io/edit/stage/render -H 'Content-Type: application/json' -H \"x-api-key: $SHOTSTACK_API_KEY\" -d '{\"timeline\": {\"tracks\": [{\"clips\": [{\"asset\": {\"type\": \"video\", \"src\": \"https://example.com/in.mp4\"}, \"start\": 0, \"length\": 5}]}]}, \"output\": {\"format\": \"mp4\", \"resolution\": \"sd\"}}'",
+    "response_fields": [
+     "response.id",
+     "response.message"
+    ],
+    "async": "poll GET https://api.shotstack.io/edit/{version}/render/{id} until response.status is done, then read response.url",
+    "source_url": "https://shotstack.io/docs/api/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 credit = 1 minute of rendered video (or 10 images); pay-as-you-go $0.30/min ($75 one-time purchase), subscription from $0.20/min ($39/mo for 200 credits)",
+    "source_url": "https://shotstack.io/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -1441,6 +1508,25 @@
     "voice-agent"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "start a real-time conversational video session (CVI)",
+    "method": "POST",
+    "url": "https://tavusapi.com/v2/conversations",
+    "example": "curl -X POST https://tavusapi.com/v2/conversations -H \"x-api-key: $TAVUS_API_KEY\" -H \"Content-Type: application/json\" -d '{\"pal_id\":\"{pal_id}\",\"face_id\":\"{face_id}\"}'",
+    "response_fields": [
+     "conversation_id",
+     "conversation_url",
+     "status"
+    ],
+    "async": null,
+    "source_url": "https://docs.tavus.io/api-reference/conversations/create-conversation",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "CVI conversation overage $0.37/min (Starter, $59/mo) or $0.32/min (Growth, $397/mo), rounded to 6 s; video generation overage $1/min on Starter",
+    "source_url": "https://www.tavus.io/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,

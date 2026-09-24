@@ -182,6 +182,21 @@
     "crypto-market-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "place a stock order (paper)",
+    "method": "POST",
+    "url": "https://paper-api.alpaca.markets/v2/orders",
+    "example": "curl -X POST https://paper-api.alpaca.markets/v2/orders -H \"APCA-API-KEY-ID: $APCA_API_KEY_ID\" -H \"APCA-API-SECRET-KEY: $APCA_API_SECRET_KEY\" -H \"Content-Type: application/json\" -d '{\"symbol\":\"AAPL\",\"qty\":\"2\",\"side\":\"buy\",\"type\":\"limit\",\"limit_price\":\"150\",\"time_in_force\":\"gtc\"}'",
+    "response_fields": [
+     "id",
+     "status",
+     "filled_qty",
+     "filled_avg_price"
+    ],
+    "async": "fills happen later; poll GET https://paper-api.alpaca.markets/v2/orders/{order_id} or stream trade_updates",
+    "source_url": "https://docs.alpaca.markets/reference/postorder",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -278,6 +293,21 @@
     "crypto-market-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "get a stock quote",
+    "method": "GET",
+    "url": "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey={API_KEY}",
+    "example": "curl \"https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=$ALPHAVANTAGE_API_KEY\"",
+    "response_fields": [
+     "Global Quote.05. price",
+     "Global Quote.07. latest trading day",
+     "Global Quote.09. change",
+     "Global Quote.10. change percent"
+    ],
+    "async": null,
+    "source_url": "https://www.alphavantage.co/documentation/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -371,6 +401,26 @@
     "payments"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create an EVM wallet account",
+    "method": "POST",
+    "url": "https://api.cdp.coinbase.com/platform/v2/evm/accounts",
+    "example": "curl -X POST https://api.cdp.coinbase.com/platform/v2/evm/accounts -H \"Authorization: Bearer $CDP_JWT\" -H \"X-Wallet-Auth: $CDP_WALLET_JWT\" -H \"Content-Type: application/json\" -d '{\"name\":\"my-wallet\"}'",
+    "response_fields": [
+     "address",
+     "name",
+     "policies",
+     "createdAt"
+    ],
+    "async": null,
+    "source_url": "https://docs.cdp.coinbase.com/api-reference/v2/rest-api/evm-accounts/create-evm-account",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Server Wallet: $0.005 per wallet operation (account creation = 1 op), first 5,000 ops/month free; x402 facilitator: $0.001 per settled tx after 1,000 free/month, verification free",
+    "source_url": "https://docs.cdp.coinbase.com/server-wallets/v2/introduction/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -464,6 +514,23 @@
     "crypto-market-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "get current coin price",
+    "method": "GET",
+    "url": "https://api.coingecko.com/api/v3/simple/price?ids={ids}&vs_currencies={currencies}",
+    "example": "curl 'https://api.coingecko.com/api/v3/simple/price?vs_currencies=usd&ids=bitcoin' -H \"x-cg-demo-api-key: $COINGECKO_API_KEY\"",
+    "response_fields": [
+     "bitcoin.usd"
+    ],
+    "async": null,
+    "source_url": "https://docs.coingecko.com/v3.0.1/reference/simple-price",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 request = 1 call credit; paid plans from $35/mo for 100k credits; overage $0.0005 per call",
+    "source_url": "https://www.coingecko.com/en/api/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -574,6 +641,26 @@
     "crypto-market-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "get latest price quotes for coins",
+    "method": "GET",
+    "url": "https://pro-api.coinmarketcap.com/v3/cryptocurrency/quotes/latest?id={ids}&convert=USD",
+    "example": "curl -G https://pro-api.coinmarketcap.com/v3/cryptocurrency/quotes/latest --data-urlencode 'id=1,1027' --data-urlencode 'convert=USD' -H 'Accept: application/json' -H \"X-CMC_PRO_API_KEY: $CMC_API_KEY\"",
+    "response_fields": [
+     "data[].symbol",
+     "data[].quote.USD.price",
+     "data[].quote.USD.market_cap",
+     "status.credit_count"
+    ],
+    "async": null,
+    "source_url": "https://coinmarketcap.com/api/documentation/guides/get-latest-crypto-prices.md",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "x402 pay-per-request: $0.01 USDC per API request (no key needed)",
+    "source_url": "https://coinmarketcap.com/api/documentation/ai-agent-hub/x402.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -687,6 +774,27 @@
     "crypto-market-data"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "get a token's latest price and metrics",
+    "method": "GET",
+    "url": "https://api.dexpaprika.com/networks/{network}/tokens/{token_address}",
+    "example": "curl \"https://api.dexpaprika.com/networks/solana/tokens/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN\"",
+    "response_fields": [
+     "name",
+     "symbol",
+     "summary.price_usd",
+     "summary.liquidity_usd",
+     "last_updated"
+    ],
+    "async": null,
+    "source_url": "https://docs.dexpaprika.com/api-reference/tokens/get-a-tokens-latest-data-on-a-network",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 credit per request (batch endpoints 1 per item); Dev 500k / Pro 5M credits per month included, then $20 per additional 1M credits; free: 30k credits per 30 days without key",
+    "source_url": "https://docs.dexpaprika.com/knowledge-base/credit-usage",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -886,6 +994,19 @@
     "payments"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a Checkout Pro payment preference",
+    "method": "POST",
+    "url": "https://api.mercadopago.com/checkout/preferences",
+    "example": "curl -X POST https://api.mercadopago.com/checkout/preferences -H \"Content-Type: application/json\" -H \"Authorization: Bearer $MP_ACCESS_TOKEN\" -d '{\"items\": [{\"title\": \"Dummy Title\", \"quantity\": 1, \"currency_id\": \"ARS\", \"unit_price\": 24.5}]}'",
+    "response_fields": [
+     "id",
+     "init_point",
+     "sandbox_init_point"
+    ],
+    "source_url": "https://www.mercadopago.com/developers/en/reference/online-payments/checkout-pro-preferences/create-preference/post",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -962,6 +1083,20 @@
     "currency-exchange"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "get the latest exchange rates",
+    "method": "GET",
+    "url": "https://openexchangerates.org/api/latest.json?app_id={APP_ID}",
+    "example": "curl \"https://openexchangerates.org/api/latest.json?app_id=$OXR_APP_ID&symbols=EUR,GBP,PLN\"",
+    "response_fields": [
+     "base",
+     "timestamp",
+     "rates"
+    ],
+    "async": null,
+    "source_url": "https://docs.openexchangerates.org/reference/latest-json",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1084,6 +1219,25 @@
     "invoicing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a checkout order (access token from POST /v1/oauth2/token)",
+    "method": "POST",
+    "url": "https://api-m.sandbox.paypal.com/v2/checkout/orders",
+    "example": "curl -X POST https://api-m.sandbox.paypal.com/v2/checkout/orders -H \"Content-Type: application/json\" -H \"Authorization: Bearer $PAYPAL_ACCESS_TOKEN\" -d '{\"intent\":\"CAPTURE\",\"purchase_units\":[{\"amount\":{\"currency_code\":\"USD\",\"value\":\"100.00\"}}]}'",
+    "response_fields": [
+     "id",
+     "status",
+     "links[rel=payer-action].href"
+    ],
+    "async": "buyer approves at the payer-action link; then POST /v2/checkout/orders/{id}/capture",
+    "source_url": "https://developer.paypal.com/api/rest/integration/orders-api/api-use-cases/standard",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "US domestic PayPal Checkout: 3.49% + $0.49 per transaction (standard card payments 2.99% + $0.49)",
+    "source_url": "https://www.paypal.com/us/business/paypal-business-fees",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1210,6 +1364,22 @@
     "banking-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "sync transactions for a linked Item",
+    "method": "POST",
+    "url": "https://sandbox.plaid.com/transactions/sync",
+    "example": "curl -X POST https://sandbox.plaid.com/transactions/sync -H \"Content-Type: application/json\" -d '{\"client_id\":\"'\"$PLAID_CLIENT_ID\"'\",\"secret\":\"'\"$PLAID_SECRET\"'\",\"access_token\":\"'\"$PLAID_ACCESS_TOKEN\"'\",\"count\":250}'",
+    "response_fields": [
+     "added",
+     "modified",
+     "removed",
+     "next_cursor",
+     "has_more"
+    ],
+    "async": null,
+    "source_url": "https://plaid.com/docs/api/products/transactions/#transactionssync",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -1336,6 +1506,22 @@
     "crypto-market-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "get the previous day OHLC bar for a stock",
+    "method": "GET",
+    "url": "https://api.massive.com/v2/aggs/ticker/{stocksTicker}/prev",
+    "example": "curl \"https://api.massive.com/v2/aggs/ticker/AAPL/prev?apiKey=$MASSIVE_API_KEY\"",
+    "response_fields": [
+     "status",
+     "results[0].o",
+     "results[0].c",
+     "results[0].v",
+     "results[0].t"
+    ],
+    "async": null,
+    "source_url": "https://massive.com/docs/rest/stocks/aggregates/previous-day-bar",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1432,6 +1618,27 @@
     "invoicing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "take a card payment",
+    "method": "POST",
+    "url": "https://connect.squareup.com/v2/payments",
+    "example": "curl -X POST https://connect.squareup.com/v2/payments -H \"Square-Version: 2026-09-16\" -H \"Authorization: Bearer $SQUARE_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"idempotency_key\":\"7b0f3ec5-086a-4871-8f13-3c81b3875218\",\"amount_money\":{\"amount\":1000,\"currency\":\"USD\"},\"source_id\":\"$SOURCE_ID\"}'",
+    "response_fields": [
+     "payment.id",
+     "payment.status",
+     "payment.amount_money",
+     "payment.card_details.status",
+     "payment.receipt_url"
+    ],
+    "async": null,
+    "source_url": "https://developer.squareup.com/reference/square/payments-api/create-payment",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "US online/API card payment: 2.9% + 30c per transaction",
+    "source_url": "https://squareup.com/us/en/payments/our-fees",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1710,6 +1917,21 @@
     "banking-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a transfer quote (rate and fees)",
+    "method": "POST",
+    "url": "https://api.wise.com/2026Q3/profiles/{profileId}/quotes",
+    "example": "curl -X POST https://api.wise.com/2026Q3/profiles/$WISE_PROFILE_ID/quotes -H \"Authorization: Bearer $WISE_API_TOKEN\" -H 'Content-Type: application/json' -d '{\"sourceCurrency\":\"USD\",\"targetCurrency\":\"EUR\",\"sourceAmount\":1000}'",
+    "response_fields": [
+     "id",
+     "rate",
+     "targetAmount",
+     "paymentOptions[].price.total.value.amount"
+    ],
+    "async": null,
+    "source_url": "https://docs.wise.com/guides/product/send-money/quotes/authenticated-quote.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,

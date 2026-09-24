@@ -82,6 +82,20 @@
     "cloud-infrastructure"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "verify credentials (STS GetCallerIdentity)",
+    "method": "POST",
+    "url": "https://sts.amazonaws.com/",
+    "example": "curl https://sts.amazonaws.com/ --aws-sigv4 \"aws:amz:us-east-1:sts\" --user \"$AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY\" -d \"Action=GetCallerIdentity&Version=2011-06-15\"",
+    "response_fields": [
+     "GetCallerIdentityResult.Account",
+     "GetCallerIdentityResult.Arn",
+     "GetCallerIdentityResult.UserId"
+    ],
+    "async": null,
+    "source_url": "https://docs.aws.amazon.com/STS/latest/APIReference/API_GetCallerIdentity.html",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -199,6 +213,21 @@
     "cloud-infrastructure"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create or update a resource group",
+    "method": "PUT",
+    "url": "https://management.azure.com/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}?api-version=2021-04-01",
+    "example": "curl -X PUT \"https://management.azure.com/subscriptions/$AZURE_SUBSCRIPTION_ID/resourcegroups/my-resource-group?api-version=2021-04-01\" -H \"Authorization: Bearer $(az account get-access-token --query accessToken -o tsv)\" -H \"Content-Type: application/json\" -d '{\"location\":\"eastus\"}'",
+    "response_fields": [
+     "id",
+     "name",
+     "location",
+     "properties.provisioningState"
+    ],
+    "async": null,
+    "source_url": "https://learn.microsoft.com/en-us/rest/api/resources/resource-groups/create-or-update",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -318,6 +347,21 @@
     "serverless-deploy"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a DNS record",
+    "method": "POST",
+    "url": "https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records",
+    "example": "curl -X POST https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/dns_records -H \"Authorization: Bearer $CLOUDFLARE_API_TOKEN\" -H \"Content-Type: application/json\" -d '{\"type\": \"A\", \"name\": \"www.example.com\", \"content\": \"198.51.100.4\", \"ttl\": 3600, \"proxied\": false}'",
+    "response_fields": [
+     "success",
+     "errors",
+     "result.id",
+     "result.name"
+    ],
+    "async": null,
+    "source_url": "https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/create/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -455,6 +499,28 @@
     "cloud-infrastructure"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create and start a Machine (VM)",
+    "method": "POST",
+    "url": "https://api.machines.dev/v1/apps/{app_name}/machines",
+    "example": "curl -X POST https://api.machines.dev/v1/apps/$FLY_APP_NAME/machines -H \"Authorization: Bearer $FLY_API_TOKEN\" -H \"Content-Type: application/json\" -d '{\"config\":{\"image\":\"registry-1.docker.io/library/ubuntu:latest\",\"init\":{\"exec\":[\"/bin/sleep\",\"inf\"]},\"guest\":{\"cpu_kind\":\"shared\",\"cpus\":1,\"memory_mb\":256}}}'",
+    "response_fields": [
+     "id",
+     "name",
+     "state",
+     "region",
+     "instance_id",
+     "private_ip"
+    ],
+    "async": "GET https://api.machines.dev/v1/apps/{app_name}/machines/{id}/wait?state=started to block until it is running",
+    "source_url": "https://docs.fly.io/machines/api/machines-resource/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "shared-cpu-1x 256MB Machine: $0.00000078 per second running (~$0.0028/hour) base price, regional multipliers apply; stopped rootfs $0.15 per GB per 30 days",
+    "source_url": "https://docs.fly.io/about/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -549,6 +615,15 @@
     "cloud-infrastructure"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "get a project (Resource Manager)",
+    "method": "GET",
+    "url": "https://cloudresourcemanager.googleapis.com/v3/projects/{PROJECT_ID}",
+    "example": "curl -H \"Authorization: Bearer $(gcloud auth print-access-token)\" https://cloudresourcemanager.googleapis.com/v3/projects/$GOOGLE_CLOUD_PROJECT",
+    "async": null,
+    "source_url": "https://docs.cloud.google.com/docs/authentication/rest",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -655,6 +730,25 @@
     "video-hosting"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a video asset from a URL",
+    "method": "POST",
+    "url": "https://api.mux.com/video/v1/assets",
+    "example": "curl https://api.mux.com/video/v1/assets -X POST -H 'Content-Type: application/json' -u $MUX_TOKEN_ID:$MUX_TOKEN_SECRET -d '{\"inputs\": [{\"url\": \"https://muxed.s3.amazonaws.com/leds.mp4\"}], \"playback_policies\": [\"public\"], \"video_quality\": \"basic\"}'",
+    "response_fields": [
+     "data.id",
+     "data.status",
+     "data.playback_ids[0].id"
+    ],
+    "async": "poll GET https://api.mux.com/video/v1/assets/{id} (max 1/s) or wait for webhook video.asset.ready until data.status is ready; play at https://stream.mux.com/{PLAYBACK_ID}.m3u8",
+    "source_url": "https://www.mux.com/docs/core/make-api-requests.md",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Basic-quality input free; storage from $0.0024 per minute stored per month; delivery 100,000 min/month free, then from $0.0008 per minute delivered",
+    "source_url": "https://www.mux.com/pricing/video",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -754,6 +848,24 @@
     "dns-cdn"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "deploy a site from a ZIP file",
+    "method": "POST",
+    "url": "https://api.netlify.com/api/v1/sites/{site_id}/deploys",
+    "example": "curl -H \"Content-Type: application/zip\" -H \"Authorization: Bearer $NETLIFY_AUTH_TOKEN\" --data-binary \"@website.zip\" https://api.netlify.com/api/v1/sites/mysite.netlify.app/deploys",
+    "response_fields": [
+     "id",
+     "state"
+    ],
+    "async": "poll GET https://api.netlify.com/api/v1/deploys/{deploy_id} until state is ready",
+    "source_url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Production deploy costs 15 credits; add-on credits $5 per 500 (Personal, ~$0.15/deploy) or $10 per 1,500 (Pro, ~$0.10/deploy)",
+    "source_url": "https://www.netlify.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -895,6 +1007,22 @@
     "static-site-hosting"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "trigger a deploy",
+    "method": "POST",
+    "url": "https://api.render.com/v1/services/{serviceId}/deploys",
+    "example": "curl -X POST \"https://api.render.com/v1/services/$RENDER_SERVICE_ID/deploys\" -H \"Authorization: Bearer $RENDER_API_KEY\" -H \"Content-Type: application/json\" -d '{\"deployMode\":\"build_and_deploy\"}'",
+    "response_fields": [
+     "id",
+     "status",
+     "trigger",
+     "commit.id",
+     "createdAt"
+    ],
+    "async": "poll GET https://api.render.com/v1/services/{serviceId}/deploys/{deployId} until status is live or failed",
+    "source_url": "https://api-docs.render.com/reference/create-deploy",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1092,6 +1220,21 @@
     "dns-cdn"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a deployment from inline files",
+    "method": "POST",
+    "url": "https://api.vercel.com/v13/deployments",
+    "example": "curl -X POST https://api.vercel.com/v13/deployments -H \"Authorization: Bearer $VERCEL_TOKEN\" -H \"Content-Type: application/json\" -d '{\"name\":\"my-site\",\"files\":[{\"file\":\"index.html\",\"data\":\"<h1>Hello</h1>\"}],\"projectSettings\":{\"framework\":null}}'",
+    "response_fields": [
+     "id",
+     "url",
+     "readyState",
+     "inspectorUrl"
+    ],
+    "async": "build continues after the response (QUEUED -> BUILDING -> READY or ERROR); poll GET https://api.vercel.com/v13/deployments/{id} for readyState",
+    "source_url": "https://vercel.com/docs/rest-api/reference/endpoints/deployments/create-a-new-deployment",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,

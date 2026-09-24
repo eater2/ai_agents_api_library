@@ -58,6 +58,26 @@
     "map-tiles"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "geocode an address",
+    "method": "GET",
+    "url": "https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine={address}&f=json&token={API_KEY}",
+    "example": "curl \"https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?SingleLine=380%20New%20York%20St%2C%20Redlands%2C%20CA%2092373&f=json&token=$ARCGIS_API_KEY\"",
+    "response_fields": [
+     "candidates[0].address",
+     "candidates[0].location.x",
+     "candidates[0].location.y",
+     "candidates[0].score"
+    ],
+    "async": null,
+    "source_url": "https://developers.arcgis.com/rest/geocode/find-address-candidates/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Geocoding (not stored): 20,000 free per month, then $0.50 per 1,000 geocodes",
+    "source_url": "https://location.arcgis.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -500,6 +520,28 @@
     "ip-geolocation"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "geolocate an IP address",
+    "method": "GET",
+    "url": "https://api.ip2location.io/?ip={ip}&key={API_KEY}",
+    "example": "curl \"https://api.ip2location.io/?ip=8.8.8.8&key=$IP2LOCATION_API_KEY\"",
+    "response_fields": [
+     "country_code",
+     "region_name",
+     "city_name",
+     "latitude",
+     "longitude",
+     "asn"
+    ],
+    "async": null,
+    "source_url": "https://www.ip2location.io/ip2location-documentation",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "IP geolocation overage on Starter plan ($49/mo, 150K queries included): $10 per 30,000 extra queries (~$0.00033/query); Free plan 50K/month",
+    "source_url": "https://www.ip2location.io/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -610,6 +652,23 @@
     "ip-geolocation"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "look up an IP address",
+    "method": "GET",
+    "url": "https://iplocate.io/api/lookup/{ip}",
+    "example": "curl https://iplocate.io/api/lookup/8.8.8.8 -H \"X-API-Key: $IPLOCATE_API_KEY\"",
+    "response_fields": [
+     "country_code",
+     "city",
+     "latitude",
+     "longitude",
+     "asn",
+     "privacy.is_vpn"
+    ],
+    "async": null,
+    "source_url": "https://www.iplocate.io/docs",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -691,6 +750,21 @@
    "async_jobs": null,
    "data_policy": null,
    "no_auth": false,
+   "call": {
+    "operation": "geocode an address",
+    "method": "GET",
+    "url": "https://us1.locationiq.com/v1/search?key={ACCESS_TOKEN}&q={query}&format=json",
+    "example": "curl \"https://us1.locationiq.com/v1/search?key=$LOCATIONIQ_TOKEN&q=Empire+State+Building&format=json\"",
+    "response_fields": [
+     "[0].lat",
+     "[0].lon",
+     "[0].display_name",
+     "[0].place_id"
+    ],
+    "async": null,
+    "source_url": "https://docs.locationiq.com/reference/search",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -924,6 +998,21 @@
     "weather-forecast"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "get the 7-day forecast for a grid point (find office/gridX/gridY via GET /points/{lat},{lon} -> properties.forecast)",
+    "method": "GET",
+    "url": "https://api.weather.gov/gridpoints/{office}/{gridX},{gridY}/forecast",
+    "example": "curl -H \"User-Agent: (myweatherapp.com, contact@myweatherapp.com)\" https://api.weather.gov/gridpoints/TOP/31,80/forecast",
+    "response_fields": [
+     "properties.periods[].name",
+     "properties.periods[].temperature",
+     "properties.periods[].shortForecast",
+     "properties.periods[].detailedForecast"
+    ],
+    "async": null,
+    "source_url": "https://www.weather.gov/documentation/services-web-api",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1150,6 +1239,28 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "forward geocode a street address",
+    "method": "GET",
+    "url": "https://api.opencagedata.com/geocode/v1/json?q={address}&key={key}",
+    "example": "curl -G https://api.opencagedata.com/geocode/v1/json --data-urlencode \"q=Rua Cafelandia, Carapicuiba, Brasil\" --data-urlencode \"key=$OPENCAGE_API_KEY\"",
+    "response_fields": [
+     "results[0].geometry.lat",
+     "results[0].geometry.lng",
+     "results[0].formatted",
+     "results[0].confidence",
+     "status.code",
+     "rate.remaining"
+    ],
+    "async": null,
+    "source_url": "https://opencagedata.com/api",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Subscription X-Small: $50/mo (EUR 45) for 10,000 requests/day, about $0.17 per 1,000 requests; cheaper per request on larger plans",
+    "source_url": "https://opencagedata.com/pricing?currency=USD",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1235,6 +1346,20 @@
     "street-geocoding"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "calculate a route between coordinates",
+    "method": "POST",
+    "url": "https://api.heigit.org/openrouteservice/v2/directions/{profile}",
+    "example": "curl -X POST https://api.heigit.org/openrouteservice/v2/directions/driving-car -H \"Authorization: $ORS_API_KEY\" -H \"Content-Type: application/json\" -d '{\"coordinates\": [[8.681495, 49.41461], [8.687872, 49.420318]]}'",
+    "response_fields": [
+     "routes[0].summary.distance",
+     "routes[0].summary.duration",
+     "routes[0].geometry",
+     "routes[0].segments[].steps"
+    ],
+    "source_url": "https://github.com/GIScience/openrouteservice/blob/main/docs/api-reference/endpoints/directions/requests-and-return-types.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1571,6 +1696,21 @@
     "places-search"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "query OpenStreetMap features with Overpass QL",
+    "method": "POST",
+    "url": "https://overpass-api.de/api/interpreter",
+    "example": "curl -X POST https://overpass-api.de/api/interpreter -A \"my-agent/1.0 (contact@example.com)\" --data-urlencode 'data=[out:json];node[\"amenity\"=\"cafe\"](52.22,21.00,52.23,21.02);out 5;'",
+    "response_fields": [
+     "elements[].id",
+     "elements[].lat",
+     "elements[].lon",
+     "elements[].tags"
+    ],
+    "async": null,
+    "source_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1670,6 +1810,21 @@
     "weather-forecast"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "hourly weather forecast for coordinates",
+    "method": "GET",
+    "url": "https://api.tomorrow.io/v4/weather/forecast?location={lat},{lon}&timesteps=1h&apikey={key}",
+    "example": "curl \"https://api.tomorrow.io/v4/weather/forecast?location=52.23,21.01&timesteps=1h&apikey=$TOMORROW_API_KEY\"",
+    "response_fields": [
+     "timelines.hourly[].time",
+     "timelines.hourly[].values.temperature",
+     "timelines.hourly[].values.precipitationProbability",
+     "location"
+    ],
+    "async": null,
+    "source_url": "https://docs.tomorrow.io/reference/weather-forecast",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,

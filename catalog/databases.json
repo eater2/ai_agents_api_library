@@ -85,6 +85,21 @@
     "sql-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "run a SQL query over the HTTPS interface",
+    "method": "POST",
+    "url": "https://{service_host}:8443/",
+    "example": "curl \"https://$CLICKHOUSE_HOST:8443/\" --user \"default:$CLICKHOUSE_PASSWORD\" --data-binary \"SELECT 1 FORMAT JSON\"",
+    "response_fields": [
+     "data",
+     "meta",
+     "rows",
+     "statistics"
+    ],
+    "async": null,
+    "source_url": "https://clickhouse.com/docs/interfaces/http",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -211,6 +226,26 @@
     "vector-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "call a query function over HTTP",
+    "method": "POST",
+    "url": "https://{deployment}.convex.cloud/api/query",
+    "example": "curl https://$CONVEX_DEPLOYMENT.convex.cloud/api/query -H \"Content-Type: application/json\" -d '{\"path\":\"messages:list\",\"args\":{},\"format\":\"json\"}'",
+    "response_fields": [
+     "status",
+     "value",
+     "errorMessage",
+     "logLines"
+    ],
+    "async": null,
+    "source_url": "https://docs.convex.dev/http-api/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Function calls: Free plan 1M/month included, then $2.20 per extra 1M; Pro 25M included, then $2 per extra 1M",
+    "source_url": "https://www.convex.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -316,6 +351,27 @@
     "sql-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "run a SQL query",
+    "method": "POST",
+    "url": "https://bigquery.googleapis.com/bigquery/v2/projects/{projectId}/queries",
+    "example": "curl -X POST https://bigquery.googleapis.com/bigquery/v2/projects/$PROJECT_ID/queries -H \"Authorization: Bearer $(gcloud auth print-access-token)\" -H \"Content-Type: application/json\" -d '{\"query\": \"SELECT name FROM `bigquery-public-data.usa_names.usa_1910_2013` LIMIT 10\", \"useLegacySql\": false}'",
+    "response_fields": [
+     "jobComplete",
+     "schema.fields",
+     "rows[].f[].v",
+     "jobReference.jobId",
+     "totalBytesProcessed"
+    ],
+    "async": "if jobComplete is false, poll GET .../projects/{projectId}/queries/{jobId} (jobs.getQueryResults)",
+    "source_url": "https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/jobs/query",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "On-demand queries: $6.25 per TiB scanned (first 1 TiB/month free)",
+    "source_url": "https://cloud.google.com/bigquery/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -453,6 +509,26 @@
     "nosql-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list clusters in a project",
+    "method": "GET",
+    "url": "https://cloud.mongodb.com/api/atlas/v2/groups/{groupId}/clusters",
+    "example": "curl -H \"Authorization: Bearer $ATLAS_ACCESS_TOKEN\" -H \"Accept: application/vnd.atlas.2025-03-12+json\" https://cloud.mongodb.com/api/atlas/v2/groups/$ATLAS_GROUP_ID/clusters",
+    "response_fields": [
+     "results[].name",
+     "results[].stateName",
+     "results[].connectionStrings.standardSrv",
+     "totalCount"
+    ],
+    "async": null,
+    "source_url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/operation/operation-listgroupclusters",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Flex cluster from $0.011/hour (capped at $8/month); dedicated M10 from $0.08/hour; M0 free",
+    "source_url": "https://www.mongodb.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -597,6 +673,20 @@
     "sql-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a Postgres project",
+    "method": "POST",
+    "url": "https://console.neon.tech/api/v2/projects",
+    "example": "curl -X POST https://console.neon.tech/api/v2/projects -H \"Authorization: Bearer $NEON_API_KEY\" -H 'Content-Type: application/json' -d '{\"project\":{\"name\":\"my-db\",\"region_id\":\"aws-us-east-2\"}}'",
+    "response_fields": [
+     "project.id",
+     "connection_uris[0].connection_uri",
+     "endpoints[0].host"
+    ],
+    "async": null,
+    "source_url": "https://neon.com/docs/reference/api/projects/create-project.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -812,6 +902,21 @@
     "sql-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "execute a SQL statement",
+    "method": "POST",
+    "url": "https://{account_identifier}.snowflakecomputing.com/api/v2/statements",
+    "example": "curl -X POST \"https://$SNOWFLAKE_ACCOUNT.snowflakecomputing.com/api/v2/statements\" -H 'Content-Type: application/json' -H \"Authorization: Bearer $SNOWFLAKE_JWT\" -H 'Accept: application/json' -H 'User-Agent: myApplicationName/1.0' -d '{\"statement\": \"select current_date()\", \"timeout\": 60, \"warehouse\": \"TESTWH\"}'",
+    "response_fields": [
+     "statementHandle",
+     "resultSetMetaData.numRows",
+     "data",
+     "statementStatusUrl"
+    ],
+    "async": "if HTTP 202, poll GET statementStatusUrl (/api/v2/statements/{statementHandle}) until 200",
+    "source_url": "https://docs.snowflake.com/en/developer-guide/sql-api/submitting-requests",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -942,6 +1047,18 @@
     "object-storage"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "query rows from a table via the Data REST API",
+    "method": "GET",
+    "url": "https://{project_ref}.supabase.co/rest/v1/{table}?select=*",
+    "example": "curl \"https://$SUPABASE_PROJECT_REF.supabase.co/rest/v1/leaderboard?select=*&order=score.desc\" -H \"apikey: $SUPABASE_PUBLISHABLE_KEY\"",
+    "response_fields": [
+     "[] (JSON array of row objects)"
+    ],
+    "async": null,
+    "source_url": "https://supabase.com/docs/guides/api/quickstart",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1062,6 +1179,27 @@
     "vector-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list Starter clusters",
+    "method": "GET",
+    "url": "https://serverless.tidbapi.com/v1beta1/clusters",
+    "example": "curl --digest --user \"$TIDB_PUBLIC_KEY:$TIDB_PRIVATE_KEY\" https://serverless.tidbapi.com/v1beta1/clusters",
+    "response_fields": [
+     "clusters[].clusterId",
+     "clusters[].displayName",
+     "clusters[].state",
+     "clusters[].endpoints",
+     "nextPageToken"
+    ],
+    "async": null,
+    "source_url": "https://pkg.go.dev/github.com/tidbcloud/tidbcloud-cli/pkg/tidbcloud/v1beta1/serverless/cluster",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Starter: $0.10 per 1M Request Units in US regions ($0.12 APAC/Europe); row storage $0.20/GiB-month",
+    "source_url": "https://www.pingcap.com/tidb-cloud-starter-pricing-details/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1140,6 +1278,20 @@
     "data-pipeline"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "run a SQL query",
+    "method": "POST",
+    "url": "https://{api_host}/v0/sql",
+    "example": "curl -H \"Authorization: Bearer $TINYBIRD_TOKEN\" --data \"q=SELECT * FROM my_datasource LIMIT 10 FORMAT JSON\" https://api.tinybird.co/v0/sql",
+    "response_fields": [
+     "meta",
+     "data",
+     "rows",
+     "statistics.elapsed"
+    ],
+    "source_url": "https://www.tinybird.co/docs/api-reference/query-api",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1233,6 +1385,20 @@
     "sql-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a database",
+    "method": "POST",
+    "url": "https://api.turso.tech/v1/organizations/{organizationSlug}/databases",
+    "example": "curl -X POST \"https://api.turso.tech/v1/organizations/$TURSO_ORG/databases\" -H \"Authorization: Bearer $TURSO_API_TOKEN\" -H \"Content-Type: application/json\" -d '{\"name\":\"new-database\",\"group\":\"default\"}'",
+    "response_fields": [
+     "database.DbId",
+     "database.Hostname",
+     "database.Name"
+    ],
+    "async": null,
+    "source_url": "https://docs.turso.tech/api-reference/databases/create",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1330,6 +1496,24 @@
     "vector-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "set a Redis key over REST",
+    "method": "GET",
+    "url": "{UPSTASH_REDIS_REST_URL}/set/{key}/{value}",
+    "example": "curl $UPSTASH_REDIS_REST_URL/set/foo/bar -H \"Authorization: Bearer $UPSTASH_REDIS_REST_TOKEN\"",
+    "response_fields": [
+     "result",
+     "error"
+    ],
+    "async": null,
+    "source_url": "https://upstash.com/docs/redis/features/restapi",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Redis pay-as-you-go: $0.20 per 100K commands",
+    "source_url": "https://upstash.com/pricing/redis",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,

@@ -69,6 +69,27 @@
     "vector-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "search a namespace",
+    "method": "POST",
+    "url": "https://api.agentset.ai/v1/namespace/{namespaceId}/search",
+    "example": "curl -X POST https://api.agentset.ai/v1/namespace/$AGENTSET_NAMESPACE_ID/search -H \"Authorization: Bearer $AGENTSET_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"What is the refund policy?\",\"topK\":10}'",
+    "response_fields": [
+     "success",
+     "data[].id",
+     "data[].score",
+     "data[].text",
+     "data[].metadata"
+    ],
+    "async": null,
+    "source_url": "https://docs.agentset.ai/api-reference/endpoint/search",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Retrievals: 10,000/month on Free, unlimited on Pro ($49/mo, 10,000 pages included); ingestion $0.01 per additional page",
+    "source_url": "https://agentset.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -167,6 +188,26 @@
     "vector-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "query a collection by embedding",
+    "method": "POST",
+    "url": "https://api.trychroma.com/api/v2/tenants/{tenant}/databases/{database}/collections/{collection_id}/query",
+    "example": "curl -X POST https://api.trychroma.com/api/v2/tenants/$CHROMA_TENANT/databases/$CHROMA_DATABASE/collections/$COLLECTION_ID/query -H \"x-chroma-token: $CHROMA_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query_embeddings\": [[0.1, 0.2, 0.3]], \"n_results\": 10, \"include\": [\"documents\", \"metadatas\", \"distances\"]}'",
+    "response_fields": [
+     "ids",
+     "documents",
+     "metadatas",
+     "distances"
+    ],
+    "async": null,
+    "source_url": "https://docs.trychroma.com/reference/chroma-api/record/query-collection",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Reads: $0.0075 per TiB queried + $0.09 per GiB returned; writes $2.50 per logical GiB; storage $0.33 per GiB-month",
+    "source_url": "https://docs.trychroma.com/cloud/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -271,6 +312,26 @@
     "agent-memory"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send a message to a stateful agent",
+    "method": "POST",
+    "url": "https://api.letta.com/v1/agents/{agent_id}/messages",
+    "example": "curl https://api.letta.com/v1/agents/$AGENT_ID/messages -H \"Content-Type: application/json\" -H \"Authorization: Bearer $LETTA_API_KEY\" -d '{\"input\":\"Hello\"}'",
+    "response_fields": [
+     "messages[].message_type",
+     "messages[].content",
+     "stop_reason.stop_reason",
+     "usage"
+    ],
+    "async": null,
+    "source_url": "https://docs.letta.com/api/resources/agents/subresources/messages/methods/create/index.md",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "API plan $20/month + $0.10 per active agent/month + $0.00015 per second of tool execution; LLM tokens billed at model rates",
+    "source_url": "https://docs.letta.com/letta-code/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -381,6 +442,19 @@
     "agent-memory"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "add memories from a conversation",
+    "method": "POST",
+    "url": "https://api.mem0.ai/v3/memories/add/",
+    "example": "curl -X POST https://api.mem0.ai/v3/memories/add/ -H \"Authorization: Token $MEM0_API_KEY\" -H 'Content-Type: application/json' -d '{\"messages\":[{\"role\":\"user\",\"content\":\"I just moved to San Francisco.\"}],\"user_id\":\"alice\"}'",
+    "response_fields": [
+     "event_id",
+     "status"
+    ],
+    "async": "queued (status PENDING); poll GET https://api.mem0.ai/v1/event/{event_id}/",
+    "source_url": "https://docs.mem0.ai/api-reference/memory/add-memories",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -498,6 +572,26 @@
     "reranking"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "query an index for nearest vectors",
+    "method": "POST",
+    "url": "https://{INDEX_HOST}/query",
+    "example": "curl \"https://$INDEX_HOST/query\" -H \"Api-Key: $PINECONE_API_KEY\" -H 'Content-Type: application/json' -H 'X-Pinecone-Api-Version: 2026-07' -d '{\"namespace\": \"example-namespace\", \"vector\": [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3], \"topK\": 3, \"includeMetadata\": true}'",
+    "response_fields": [
+     "matches[].id",
+     "matches[].score",
+     "matches[].metadata",
+     "usage.readUnits"
+    ],
+    "async": null,
+    "source_url": "https://docs.pinecone.io/reference/api/latest/data-plane/query",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Standard plan: read units $16-$18 per million, write units $4-$4.50 per million, storage $0.33/GB-month; $50/month minimum",
+    "source_url": "https://www.pinecone.io/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -602,6 +696,21 @@
     "vector-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "query nearest points by vector",
+    "method": "POST",
+    "url": "https://{cluster_host}:6333/collections/{collection_name}/points/query",
+    "example": "curl -X POST \"https://$QDRANT_HOST:6333/collections/my_collection/points/query\" -H \"api-key: $QDRANT_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":[0.2,0.1,0.9,0.7],\"limit\":3,\"with_payload\":true}'",
+    "response_fields": [
+     "result.points[].id",
+     "result.points[].score",
+     "result.points[].payload",
+     "status"
+    ],
+    "async": null,
+    "source_url": "https://api.qdrant.tech/api-reference/search/query-points",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -692,6 +801,20 @@
     "vector-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "semantic (nearText) search in a collection",
+    "method": "POST",
+    "url": "https://{cluster-host}/v1/graphql",
+    "example": "curl -X POST \"https://$WEAVIATE_HOST/v1/graphql\" -H \"Authorization: Bearer $WEAVIATE_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"{ Get { Publication(nearText: {concepts: [\\\"fashion\\\"]}, limit: 3) { name _additional { distance } } } }\"}'",
+    "response_fields": [
+     "data.Get.<Collection>[]",
+     "data.Get.<Collection>[]._additional.distance",
+     "errors"
+    ],
+    "async": null,
+    "source_url": "https://docs.weaviate.io/weaviate/api/graphql/search-operators",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -788,6 +911,25 @@
     "knowledge-graph-query"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "add chat messages to a user's thread memory",
+    "method": "POST",
+    "url": "https://api.getzep.com/api/v2/threads/{threadId}/messages",
+    "example": "curl -X POST https://api.getzep.com/api/v2/threads/$THREAD_ID/messages -H \"Authorization: Api-Key $ZEP_API_KEY\" -H \"Content-Type: application/json\" -d '{\"messages\": [{\"role\": \"user\", \"content\": \"I prefer window seats\"}], \"return_context\": true}'",
+    "response_fields": [
+     "message_uuids",
+     "task_id",
+     "context"
+    ],
+    "async": "graph ingestion runs in the background (task_id); read memory later with GET /api/v2/threads/{threadId}/context",
+    "source_url": "https://help.getzep.com/sdk-reference/thread/add-messages-to-a-thread",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 credit per episode up to 350 bytes (+1 per extra 350 bytes); extra credits $25 per 10,000 on Flex",
+    "source_url": "https://www.getzep.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -906,6 +1048,21 @@
     "vector-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "vector similarity search in a collection",
+    "method": "POST",
+    "url": "{CLUSTER_ENDPOINT}/v2/vectordb/entities/search",
+    "example": "curl -X POST \"$CLUSTER_ENDPOINT/v2/vectordb/entities/search\" -H \"Authorization: Bearer $ZILLIZ_TOKEN\" -H \"Content-Type: application/json\" -d '{\"collectionName\":\"quick_setup\",\"data\":[[0.358,-0.602,0.184,-0.263,0.903]],\"annsField\":\"vector\",\"limit\":3}'",
+    "response_fields": [
+     "code",
+     "data[].id",
+     "data[].distance",
+     "cost"
+    ],
+    "async": null,
+    "source_url": "https://docs.zilliz.com/reference/restful/search-v2",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,

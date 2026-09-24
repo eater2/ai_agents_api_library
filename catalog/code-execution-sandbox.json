@@ -232,6 +232,26 @@
     "code-execution"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a sandbox",
+    "method": "POST",
+    "url": "https://app.daytona.io/api/sandbox",
+    "example": "curl -X POST https://app.daytona.io/api/sandbox -H \"Authorization: Bearer $DAYTONA_API_KEY\" -H 'Content-Type: application/json' -d '{}'",
+    "response_fields": [
+     "id",
+     "state",
+     "cpu",
+     "memory"
+    ],
+    "async": "state starts as creating; poll GET https://app.daytona.io/api/sandbox/{sandboxIdOrName} until state is started",
+    "source_url": "https://www.daytona.io/docs/en/tools/api/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "billed per second: $0.0504 per vCPU-hour, $0.0162 per GiB RAM-hour, $0.000108 per GiB disk-hour (first 5 GiB free)",
+    "source_url": "https://www.daytona.io/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -521,6 +541,11 @@
     "code-execution"
    ],
    "no_auth": false,
+   "unit_price": {
+    "summary": "Sandboxes: CPU $0.00003942 per core-second, memory $0.00000667 per GiB-second; GPUs e.g. T4 $0.000164/s, H100 $0.001097/s",
+    "source_url": "https://modal.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -681,6 +706,20 @@
     "sandbox-vm"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "execute untrusted Python code in a sandbox",
+    "method": "POST",
+    "url": "https://api.riza.io/v1/execute",
+    "example": "curl https://api.riza.io/v1/execute -H \"Content-Type: application/json\" -H \"Authorization: Bearer $RIZA_API_KEY\" -d '{\"language\":\"python\",\"code\":\"import sys\\nprint(sys.stdin.read()[::-1])\",\"stdin\":\"Hello\"}'",
+    "response_fields": [
+     "exit_code",
+     "stdout",
+     "stderr"
+    ],
+    "async": null,
+    "source_url": "https://docs.riza.io/api-reference/command/execute-code",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -781,6 +820,25 @@
     "code-execution"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a devbox",
+    "method": "POST",
+    "url": "https://api.runloop.ai/v1/devboxes",
+    "example": "curl -X POST https://api.runloop.ai/v1/devboxes -H \"Authorization: Bearer $RUNLOOP_API_KEY\" -H \"Content-Type: application/json\" -d '{\"name\":\"agent-box\"}'",
+    "response_fields": [
+     "id",
+     "status",
+     "name"
+    ],
+    "async": "poll GET https://api.runloop.ai/v1/devboxes/{id} until status is running",
+    "source_url": "https://docs.runloop.ai/api-reference/devbox/create-a-devbox",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Devbox: $0.108 per CPU-hour + $0.0252 per GB-hour memory; blueprint build $0.252/hour",
+    "source_url": "https://www.runloop.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -867,6 +925,26 @@
     "code-execution"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a sandbox microVM",
+    "method": "POST",
+    "url": "https://api.vercel.com/v4/sandboxes?teamId={teamId}",
+    "example": "curl -X POST \"https://api.vercel.com/v4/sandboxes?teamId=$VERCEL_TEAM_ID\" -H \"Authorization: Bearer $VERCEL_TOKEN\" -H \"Content-Type: application/json\" -d '{\"projectId\": \"prj_abc123\", \"name\": \"my-sandbox\", \"timeout\": 300000}'",
+    "response_fields": [
+     "sandbox.name",
+     "sandbox.status",
+     "sandbox.currentSessionId",
+     "session.id",
+     "routes[].url"
+    ],
+    "source_url": "https://vercel.com/docs/rest-api/sandboxes/create-a-named-sandbox-2",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Pro: $0.60 per 1M sandbox creations + $0.128 per active CPU hour + $0.0212 per GB-hour of memory (iad1); Hobby includes 5,000 creations and 5 CPU hours/month",
+    "source_url": "https://vercel.com/docs/sandbox/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,

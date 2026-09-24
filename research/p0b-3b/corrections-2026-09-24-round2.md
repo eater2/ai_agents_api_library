@@ -1,0 +1,49 @@
+# Corrections found while researching call/unit_price, round 2 (2026-09-24)
+
+For the owner of data/catalog.json. One line per finding: id: field: what is wrong, source.
+
+- calendly-api: free_tier: booking via Scheduling API (POST /invitees) needs a paid Calendly plan. https://developer.calendly.com/docs/api-guides/schedule-events-with-ai-agents
+- groq-api: Llama 3.x models (llama-3.3-70b-versatile, llama-3.1-8b-instant) now "contact sales", not self-serve per-token. https://console.groq.com/docs/models
+- murf-ai-api: notes name Falcon/Gen2; vendor now markets Falcon 2 at $0.01/min. https://murf.ai/api/docs/text-to-speech-models/falcon-2
+- zyte-api: docs link (get-started) has no request example; better https://docs.zyte.com/zyte-api/usage/http.html
+- languagetool-api: free host api.languagetool.org documented only on a page that forbids automated requests; spec lists only Premium host. https://dev.languagetool.org/public-http-api
+- d-id-api: free_tier "~$5.90/min API" unverifiable (JS-rendered pricing). https://www.d-id.com/pricing/api/
+- wise-api: docs use versioned paths e.g. https://api.wise.com/2026Q3/profiles/{profileId}/quotes (note, not error).
+- stable-audio-api-stability-ai: endpoint /v2beta/audio/stable-audio-2/text-to-audio, default model 2.5 (20 credits); Stable Audio 3.0 (6 min, 26 credits, async) exists; desc "2.0, up to 3 min" outdated. https://platform.stability.ai/pricing
+- unstructured-api: base_url null; current endpoint https://transform.unstructured.io/api/v2/parse; `unstructured-api-key` header confirmed. https://docs.unstructured.io/transform/parse
+- gitingest: API also returns summary/tree/content inline (not only download URL); llms.txt covers CLI/Python only.
+- gumloop: personal API keys also need `x-auth-key: <user_id>`; API keys need Pro plan+. https://docs.gumloop.com/api-reference/authentication
+- ayrshare: docs points to homepage; API docs https://www.ayrshare.com/docs/apis/overview
+- apify: paths now /v2/actors/{actorId}/... not /v2/acts/. https://docs.apify.com/api/v2/act-run-sync-get-dataset-items-post
+- cohere-api: flagship now command-a-plus-05-2026; pricing lists Command R, R7B, Embed 4, Rerank 4. https://docs.cohere.com/v2/reference/chat
+- pipedream-connect: docs https://pipedream.com/docs/connect/mcp/developers and all /docs/* paths (incl. /docs/rest-api/auth) return 404 today. https://pipedream.com/docs/connect
+- penpot-api: example path /api/rpc/command/get-profile outdated (403); methods now https://design.penpot.app/api/main/methods/<name>. https://design.penpot.app/api/_doc
+- pinecone: X-Pinecone-Api-Version 2025-10 outdated; current 2026-07. https://docs.pinecone.io/reference/api/latest/data-plane/query
+- coda-api-superhuman-docs: OpenAPI server now https://docs.superhuman.com/apis/v1 (coda.io still works). https://coda.io/apis/v1/openapi.json
+- mistral-ocr-api: current model Mistral OCR 4 (ocr-4-1). https://mistral.ai/news/ocr-4/
+- amazon-selling-partner-api: Orders v0 getOrders deprecated; use searchOrders v2026-01-01; planned SP-API fees were cancelled. https://developer-docs.amazon/sp-api/reference/searchorders.md
+- scrapegraphai-api: free_tier: Free plan is 500 one-time credits (10 req/min), not 500/month. https://scrapegraphai.com/pricing
+- line-messaging-api: free_tier: 200 msgs/month is Communication plan; beyond that only paid Light (JPY 5,000/5,000 msgs) / Standard (JPY 15,000/30,000, extra up to JPY 3 each). https://developers.line.biz/en/docs/messaging-api/pricing/
+- salesforce-apis, financial-modeling-prep: vendor docs sites returned 403 to automated requests 2026-09-24 (check link_check).
+- nocodb-cloud: notes link https://data-apis-v3.nocodb.com/ now 301 -> https://nocodb.com/apis/v3/data/; base_url null (spec: https://app.nocodb.com); v3 also accepts Authorization: Bearer besides xc-token. https://nocodb.com/apis/v3/swagger-v3.json
+- telnyx: per-country messaging pricing pages gone (308 to US page). https://telnyx.com/pricing/messaging
+- amazon-translate: notes contain editorial text ("missing from the candidate list despite...") — remove.
+- keboola: Storage API reference now https://api.keboola.com/?service=storage (Apiary retired).
+- speckle-api: base_url https://app.speckle.systems/api/graphql wrong; docs give https://app.speckle.systems/graphql. https://docs.speckle.systems/developers/api/graphql
+- v0-platform-api-vercel: base_url v1 legacy; current https://api.v0.dev/v2. https://v0.app/docs/api/v2/reference/chats/create-chat
+- pipedrive-api: base_url/docs point to v1, but POST /deals only in v2 (https://api.pipedrive.com/api/v2/deals). https://developers.pipedrive.com/docs/api/v1/openapi-v2.yaml
+- postman-api: base_url https://api.getpostman.com legacy; reference lists https://api.postman.com (EU api.eu.postman.com). https://learning.postman.com/api-docs/api-reference/collections/get-collections
+- stackone: desc "500+ integrations … 27,000+ actions" stale -> 520+ connectors, 32,000+ actions; pricing tiers now Starter free / Team $600/mo / Enterprise. https://www.stackone.com/pricing
+- netlify-api: docs URL redirects to /api-and-cli-guides/api-guides/get-started-with-api/.
+- vercel-sandbox: notes "32GB ephemeral NVMe" outdated; 64 GB for SDK 3.0.0+/custom images. https://vercel.com/docs/sandbox/pricing
+- composio: desc "1,500+ toolkits" vs API reference "1000+ toolkits" (low confidence). https://docs.composio.dev/reference.md
+- freepik-api: desc_en covers only image gen/editing/stock; API also offers video, music, SFX generation — relevant for video search. https://docs.magnific.com/llms.txt
+- openrouteservice: API host now api.heigit.org (/openrouteservice/v2/...) per vendor migration post.
+- youtube-data-api: notes "search is expensive" outdated; search.list costs 1 unit in separate Search Queries bucket, 100 calls/day cap. https://developers.google.com/youtube/v3/docs/search/list
+- atlassian-jira-confluence: base_url /rest/api/2; current Cloud reference is v3 (minor). https://developer.atlassian.com/cloud/jira/platform/swagger-v3.v3.json
+- spider-cloud: free_tier "25 free runs/day" unconfirmed; keyless /scrape rate-limited, others 402 without key. https://spider.cloud/llms.txt
+- browser-use-cloud-api: pricing now model cost + 20% and browsers $0.02/hour; billing guide: no per-run fees. https://browser-use.com/pricing
+- google-cloud-translation: auth_scheme.source_url now shows v3 Bearer + x-goog-user-project, not "Basic v2 ?key=". https://docs.cloud.google.com/translate/docs/basic/translating-text
+- parallel-web-systems-search-api: Search defaults to mode advanced ($5/1k) not fast ($1/1k). https://docs.parallel.ai/search/modes
+- merge-agent-handler: POST https://ah-api.merge.dev/api/v1/agent/signup/ needs no auth and creates org+API key — zero human setup. https://docs.merge.dev/merge-agent-handler/setup/agent-quickstart.md
+- google-gemini-api: quickstart now uses POST /v1beta/interactions (gemini-3.5-flash, header Api-Revision: 2026-05-20), not generateContent.

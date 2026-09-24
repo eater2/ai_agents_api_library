@@ -65,6 +65,22 @@
     "social-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "publish a post to connected social networks",
+    "method": "POST",
+    "url": "https://api.ayrshare.com/api/post",
+    "example": "curl -X POST https://api.ayrshare.com/api/post -H \"Authorization: Bearer $AYRSHARE_API_KEY\" -H \"Content-Type: application/json\" -d '{\"post\":\"Today is a great day!\",\"platforms\":[\"facebook\",\"linkedin\"]}'",
+    "response_fields": [
+     "status",
+     "errors",
+     "postIds[].platform",
+     "postIds[].id",
+     "postIds[].postUrl"
+    ],
+    "async": null,
+    "source_url": "https://www.ayrshare.com/docs/apis/post/post",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -172,6 +188,19 @@
     "social-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a post (accessJwt from com.atproto.server.createSession)",
+    "method": "POST",
+    "url": "{pds_host}/xrpc/com.atproto.repo.createRecord",
+    "example": "curl -X POST https://bsky.social/xrpc/com.atproto.repo.createRecord -H \"Authorization: Bearer $ACCESS_JWT\" -H \"Content-Type: application/json\" -d '{\"repo\":\"$BLUESKY_HANDLE\",\"collection\":\"app.bsky.feed.post\",\"record\":{\"text\":\"Hello world\",\"createdAt\":\"2026-09-24T12:00:00Z\"}}'",
+    "response_fields": [
+     "uri",
+     "cid"
+    ],
+    "async": null,
+    "source_url": "https://raw.githubusercontent.com/bluesky-social/bsky-docs/main/docs/get-started.mdx",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -793,6 +822,21 @@
     "social-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "search videos",
+    "method": "GET",
+    "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q={query}&key={API_KEY}",
+    "example": "curl \"https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=surfing&maxResults=5&key=$YOUTUBE_API_KEY\"",
+    "response_fields": [
+     "items[].id.videoId",
+     "items[].snippet.title",
+     "items[].snippet.channelTitle",
+     "nextPageToken"
+    ],
+    "async": null,
+    "source_url": "https://developers.google.com/youtube/v3/docs/search/list",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
