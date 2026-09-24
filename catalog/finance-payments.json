@@ -98,6 +98,20 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://checkout-test.adyen.com/v71",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 527,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/adyen-api.json"
   },
   {
@@ -176,6 +190,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://paper-api.alpaca.markets",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 276,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -257,6 +285,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://www.alphavantage.co/query",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 262,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.alphavantage.co/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 302,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -335,6 +388,20 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.cdp.coinbase.com/platform",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 253,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/coinbase-cdp-x402.json"
   },
   {
@@ -415,6 +482,31 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.coingecko.com/api/v3",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 295,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.api.coingecko.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 785,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/coingecko-api.json"
   },
   {
@@ -485,7 +577,32 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://pro-api.coinmarketcap.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 216,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.coinmarketcap.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 233,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "dexpaprika",
@@ -573,7 +690,32 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.dexpaprika.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 200,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 402
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.dexpaprika.com/streamable-http",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 801,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "financial-modeling-prep",
@@ -654,6 +796,20 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://financialmodelingprep.com/stable",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 215,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/financial-modeling-prep.json"
   },
   {
@@ -733,7 +889,32 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.mercadopago.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 225,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.mercadopago.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 287,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "open-exchange-rates",
@@ -788,6 +969,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://openexchangerates.org/api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 360,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 405
+     }
+    }
    }
   },
   {
@@ -913,6 +1108,31 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api-m.paypal.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 128,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.paypal.com/http",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 165,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/paypal-api.json"
   },
   {
@@ -1018,6 +1238,31 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://production.plaid.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 227,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.dashboard.plaid.com/mcp/",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 207,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/plaid-api.json"
   },
   {
@@ -1099,6 +1344,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.massive.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 320,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -1193,7 +1452,32 @@
      "url": "https://github.com/square/connect-api-specification",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://connect.squareup.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 219,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.squareup.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 288,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "stripe-api",
@@ -1321,6 +1605,31 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.stripe.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 170,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.stripe.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 269,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/stripe-api.json"
   },
   {
@@ -1408,6 +1717,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.wise.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 973,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   }
  ]

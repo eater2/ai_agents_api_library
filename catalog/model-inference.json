@@ -71,6 +71,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.anthropic.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 161,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -161,6 +175,31 @@
      "fetched_at": "2026-09-24T17:02Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.cohere.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 270,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://docs.cohere.com/_mcp/server",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 289,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/cohere-api.json"
   },
   {
@@ -235,7 +274,32 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://www.comet.com/opik/api/v1/private",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 422,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://www.comet.com/opik/api/v1/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 354,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "deepseek-api",
@@ -298,6 +362,20 @@
      "fetched_at": "2026-09-24T17:02Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.deepseek.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 536,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/deepseek-api.json"
   },
   {
@@ -416,6 +494,31 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://queue.fal.run",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 209,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.fal.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 183,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -504,6 +607,31 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.fireworks.ai/inference/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 181,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://docs.fireworks.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 404,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -596,6 +724,31 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://generativelanguage.googleapis.com/v1beta",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 131,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://gemini-api-docs-mcp.dev",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 388,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -665,6 +818,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.groq.com/openai/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 196,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -749,6 +916,31 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://router.huggingface.co/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 186,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://huggingface.co/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 202,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -843,6 +1035,31 @@
      "fetched_at": "2026-09-24T17:02Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.mistral.ai/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 268,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.mistral.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 268,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/mistral-ai-api.json"
   },
   {
@@ -939,6 +1156,31 @@
      "fetched_at": "2026-09-24T17:02Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.openai.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 252,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://developers.openai.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 266,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/openai-api.json"
   },
   {
@@ -1048,6 +1290,31 @@
      "fetched_at": "2026-09-24T17:02Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://openrouter.ai/api/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 336,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.openrouter.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 183,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/openrouter.json"
   },
   {
@@ -1136,7 +1403,21 @@
      "url": "https://github.com/apinetwork/piapi-mcp-server",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.piapi.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 435,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "replicate",
@@ -1240,6 +1521,31 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.replicate.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 259,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.replicate.com/sse",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 279,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -1323,6 +1629,31 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.together.ai/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 453,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://docs.together.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 591,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -1402,6 +1733,31 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://ai-gateway.vercel.sh/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 447,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.vercel.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 238,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -1470,6 +1826,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.voyageai.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 212,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -1555,6 +1925,31 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.x.ai/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 259,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://docs.x.ai/api/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 224,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   }
  ]

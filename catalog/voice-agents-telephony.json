@@ -95,6 +95,31 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.bland.ai/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 271,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.bland.ai/v1/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 339,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -253,6 +278,31 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.elevenlabs.io/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 200,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.elevenlabs.io/v1/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 275,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -404,6 +454,31 @@
      "fetched_at": "2026-09-24T16:58Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.retellai.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 278,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.retellai.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 406,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/retell-ai.json"
   },
   {
@@ -491,6 +566,31 @@
      "fetched_at": "2026-09-24T16:58Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.synthflow.ai/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 678,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.synthflow.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 427,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/synthflow-api.json"
   },
   {
@@ -594,7 +694,21 @@
      "url": "https://github.com/twilio-labs/mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.twilio.com/2010-04-01",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 152,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "vapi",
@@ -686,6 +800,31 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.vapi.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 424,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.vapi.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 163,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   }
  ]

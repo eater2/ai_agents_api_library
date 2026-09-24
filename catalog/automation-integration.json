@@ -66,6 +66,20 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://cloud.activepieces.com/api/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 745,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -137,6 +151,20 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.arcade.dev",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 510,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -219,6 +247,31 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://backend.composio.dev/api/v3.1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 406,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://connect.composio.dev/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 271,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -306,6 +359,31 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.gumloop.com/api/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 172,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.gumloop.com/gumloop/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 223,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -372,6 +450,31 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://maker.ifttt.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 209,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://ifttt.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 215,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/ifttt-api.json"
   },
   {
@@ -455,7 +558,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mcp.keboola.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 357,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "make-api-mcp",
@@ -544,6 +661,20 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mcp.make.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 470,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -612,6 +743,20 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://ah-api.merge.dev/api/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 167,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -771,6 +916,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.nango.dev",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 681,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -836,6 +995,20 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://actionkit.useparagon.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 349,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -911,6 +1084,31 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.pipedream.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 178,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://remote.mcp.pipedream.net/v3",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 202,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -986,6 +1184,31 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.stackone.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 315,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.stackone.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 514,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -1050,6 +1273,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.superglue.cloud/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 185,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -1128,6 +1365,31 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://mcp.zapier.com/api/v1/connect",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 267,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.zapier.com/api/v1/connect",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 255,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   }
  ]

@@ -93,6 +93,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.canva.com/rest/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 119,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.canva.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 298,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -205,7 +230,32 @@
      "url": "https://github.com/figma/rest-api-spec",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.figma.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 437,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.figma.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 264,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "framer",
@@ -342,6 +392,20 @@
      "fetched_at": "2026-09-24T16:56Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://design.penpot.app/api/main/methods",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 771,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/penpot-api.json"
   },
   {
@@ -425,6 +489,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.v0.dev/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 401,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://v0.app/api/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 434,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -502,6 +591,31 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.webflow.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 310,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.webflow.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 294,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   }
  ]

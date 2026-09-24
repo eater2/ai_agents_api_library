@@ -104,6 +104,31 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://circleci.com/api/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 309,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.circleci.com/v1/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 332,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/circleci-api.json"
   },
   {
@@ -207,6 +232,20 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.datadoghq.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 226,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/datadog-api.json"
   },
   {
@@ -306,7 +345,21 @@
      "url": "https://github.com/docker/hub-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://hub.docker.com",
+     "probes": 1,
+     "up": 0,
+     "median_ms": 8171,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": false,
+      "detail": 503
+     }
+    }
+   }
   },
   {
    "id": "github-api",
@@ -448,6 +501,31 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.github.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 229,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.githubcopilot.com/mcp/",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 156,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/github-api.json"
   },
   {
@@ -547,6 +625,31 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://gitlab.com/api/v4",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 175,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://gitlab.com/api/v4/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 299,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/gitlab-api.json"
   },
   {
@@ -634,7 +737,32 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.globalping.io/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 505,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.globalping.dev/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 264,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "maven-central-search",
@@ -706,7 +834,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://search.maven.org/solrsearch/select",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 188,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 400
+     }
+    }
+   }
   },
   {
    "id": "pagerduty-api",
@@ -818,6 +960,31 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.pagerduty.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 472,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.pagerduty.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 489,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/pagerduty-api.json"
   },
   {
@@ -908,6 +1075,31 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.getpostman.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 454,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.postman.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 481,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/postman-api.json"
   },
   {
@@ -968,7 +1160,32 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://app.reflag.com/api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 410,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://app.reflag.com/api/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 411,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "sentry-api",
@@ -1052,7 +1269,32 @@
      "url": "https://smithery.ai/servers/sentry",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://sentry.io/api/0",
+     "probes": 1,
+     "up": 0,
+     "median_ms": null,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": false,
+      "detail": "timeout"
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.sentry.dev/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 406,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "supabase-management-api",
@@ -1145,6 +1387,31 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.supabase.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 295,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.supabase.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 366,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   }
  ]

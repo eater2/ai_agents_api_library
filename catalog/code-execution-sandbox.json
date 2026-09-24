@@ -81,6 +81,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.cloudflare.com/client/v4",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 327,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://containers.mcp.cloudflare.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 466,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -126,6 +151,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.codesandbox.io",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 566,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -202,6 +241,20 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://app.daytona.io/api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 429,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -302,7 +355,21 @@
      "url": "https://github.com/e2b-dev/mcp-server",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.e2b.app",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 236,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "judge0",
@@ -355,6 +422,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://ce.judge0.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 552,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -507,7 +588,21 @@
      "url": "https://github.com/engineer-man/piston",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://emkc.org/api/v2/piston",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 305,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "riza",
@@ -596,6 +691,31 @@
     "mcp": "error",
     "mcp_detail": "timeout",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.riza.io",
+     "probes": 1,
+     "up": 0,
+     "median_ms": null,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": false,
+      "detail": "tls"
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.riza.io/code-interpreter",
+     "probes": 1,
+     "up": 0,
+     "median_ms": null,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": false,
+      "detail": "tls"
+     }
+    }
    }
   },
   {
@@ -669,6 +789,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.runloop.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 371,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -742,6 +876,31 @@
     "docs": "ok",
     "mcp": "ok",
     "openapi": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.vercel.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 802,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.vercel.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 212,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   }
  ]

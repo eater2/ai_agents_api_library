@@ -72,7 +72,21 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.agentset.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 1471,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "chroma-cloud",
@@ -173,7 +187,21 @@
      "url": "https://github.com/chroma-core/chroma-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.trychroma.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 444,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "clickhouse-cloud",
@@ -275,7 +303,32 @@
      "url": "https://github.com/ClickHouse/mcp-clickhouse",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.clickhouse.cloud/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 534,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.clickhouse.cloud/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 420,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "convex",
@@ -477,7 +530,32 @@
      "url": "https://smithery.ai/servers/bigquery",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://bigquery.googleapis.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 385,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://bigquery.googleapis.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 391,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "letta",
@@ -555,6 +633,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.letta.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 327,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.letta.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 303,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -640,6 +743,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.mem0.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 518,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.mem0.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 522,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 307
+     }
+    }
    }
   },
   {
@@ -764,6 +892,20 @@
      "fetched_at": "2026-09-24T16:58Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://cloud.mongodb.com/api/atlas/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 364,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/mongodb-atlas.json"
   },
   {
@@ -888,7 +1030,32 @@
      "url": "https://github.com/neondatabase/mcp-server-neon",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://console.neon.tech/api/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 391,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.neon.tech/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 424,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "pinecone",
@@ -992,7 +1159,21 @@
      "url": "https://github.com/pinecone-io/pinecone-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.pinecone.io",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 312,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "planetscale",
@@ -1070,7 +1251,32 @@
      "url": "https://smithery.ai/servers/planetscale",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.planetscale.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 471,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.pscale.dev/mcp/planetscale",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 828,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "qdrant-cloud",
@@ -1371,7 +1577,32 @@
      "url": "https://smithery.ai/servers/Supabase",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.supabase.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 234,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.supabase.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 149,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "tidb-cloud",
@@ -1531,7 +1762,32 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.tinybird.co",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 3197,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 302
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 240,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "turso",
@@ -1603,6 +1859,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.turso.tech/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 358,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.turso.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 350,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -1850,6 +2131,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.getzep.com/api/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 368,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.getzep.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 377,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -1955,7 +2261,21 @@
      "url": "https://github.com/zilliztech/zilliz-mcp-server",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.cloud.zilliz.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 383,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   }
  ]
 }

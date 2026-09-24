@@ -1,0 +1,5450 @@
+{
+ "activepieces": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 745,
+     "up": true
+    }
+   ],
+   "url": "https://cloud.activepieces.com/api/v1"
+  }
+ },
+ "adobe-firefly-services-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 242,
+     "up": true
+    }
+   ],
+   "url": "https://firefly-api.adobe.io/v3"
+  }
+ },
+ "adobe-pdf-services-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 308,
+     "up": true
+    }
+   ],
+   "url": "https://pdf-services.adobe.io"
+  }
+ },
+ "adyen-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 527,
+     "up": true
+    }
+   ],
+   "url": "https://checkout-test.adyen.com/v71"
+  }
+ },
+ "agentmail": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 209,
+     "up": true
+    }
+   ],
+   "url": "https://api.agentmail.to/v0"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 472,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.agentmail.to/mcp"
+  }
+ },
+ "agentset": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 1471,
+     "up": true
+    }
+   ],
+   "url": "https://api.agentset.ai"
+  }
+ },
+ "airtable-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 250,
+     "up": true
+    }
+   ],
+   "url": "https://api.airtable.com/v0"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 270,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.airtable.com/mcp"
+  }
+ },
+ "akool-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 365,
+     "up": true
+    }
+   ],
+   "url": "https://openapi.akool.com/api/open"
+  }
+ },
+ "alpaca-trading-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 276,
+     "up": true
+    }
+   ],
+   "url": "https://paper-api.alpaca.markets"
+  }
+ },
+ "alpha-vantage": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 262,
+     "up": true
+    }
+   ],
+   "url": "https://www.alphavantage.co/query"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 302,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.alphavantage.co/mcp"
+  }
+ },
+ "amazon-selling-partner-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 246,
+     "up": true
+    }
+   ],
+   "url": "https://sellingpartnerapi-na.amazon.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 405,
+     "up": true
+    }
+   ],
+   "url": "https://sellingpartner-ai.amazon.com/mcp"
+  }
+ },
+ "anchor-browser": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 608,
+     "up": true
+    }
+   ],
+   "url": "https://api.anchorbrowser.io"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 601,
+     "up": true
+    }
+   ],
+   "url": "https://api.anchorbrowser.io/mcp"
+  }
+ },
+ "anthropic-claude-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 161,
+     "up": true
+    }
+   ],
+   "url": "https://api.anthropic.com"
+  }
+ },
+ "apify": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 261,
+     "up": true
+    }
+   ],
+   "url": "https://api.apify.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 207,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.apify.com"
+  }
+ },
+ "arcade-dev": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 510,
+     "up": true
+    }
+   ],
+   "url": "https://api.arcade.dev"
+  }
+ },
+ "arxiv-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 423,
+     "up": true
+    }
+   ],
+   "url": "http://export.arxiv.org/api/query"
+  }
+ },
+ "asana-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 211,
+     "up": true
+    }
+   ],
+   "url": "https://app.asana.com/api/1.0"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 348,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.asana.com/v2/mcp"
+  }
+ },
+ "assemblyai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 402,
+     "up": true
+    }
+   ],
+   "url": "https://api.assemblyai.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 308,
+     "ms": 282,
+     "up": true
+    }
+   ],
+   "url": "https://assemblyai.com/docs/mcp"
+  }
+ },
+ "atlassian-jira-confluence": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 259,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.atlassian.com/v2/mcp"
+  }
+ },
+ "attio-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 350,
+     "up": true
+    }
+   ],
+   "url": "https://api.attio.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 465,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.attio.com/mcp"
+  }
+ },
+ "autodesk-platform-services-aps": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 258,
+     "up": true
+    }
+   ],
+   "url": "https://developer.api.autodesk.com"
+  }
+ },
+ "aws-apis": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 611,
+     "up": true
+    }
+   ],
+   "url": "https://aws-mcp.us-east-1.api.aws/mcp"
+  }
+ },
+ "aws-end-user-messaging-sms": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 355,
+     "up": true
+    }
+   ],
+   "url": "https://aws-mcp.us-east-1.api.aws/mcp"
+  }
+ },
+ "aws-textract": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 372,
+     "up": true
+    }
+   ],
+   "url": "https://textract.us-east-1.amazonaws.com"
+  }
+ },
+ "ayrshare": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 274,
+     "up": true
+    }
+   ],
+   "url": "https://api.ayrshare.com/api"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 220,
+     "up": true
+    }
+   ],
+   "url": "https://api.ayrshare.com/mcp"
+  }
+ },
+ "azure-ai-translator": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 354,
+     "up": true
+    }
+   ],
+   "url": "https://api.cognitive.microsofttranslator.com"
+  }
+ },
+ "azure-apis": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 249,
+     "up": true
+    }
+   ],
+   "url": "https://management.azure.com"
+  }
+ },
+ "beatoven-ai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": "dns",
+     "ms": null,
+     "up": false
+    }
+   ],
+   "url": "https://public-api.beatoven.ai"
+  }
+ },
+ "bentley-itwin-platform-apis": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 200,
+     "up": true
+    }
+   ],
+   "url": "https://api.bentley.com"
+  }
+ },
+ "bird": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 365,
+     "up": true
+    }
+   ],
+   "url": "https://us1.platform.bird.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 381,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.bird.com"
+  }
+ },
+ "black-forest-labs-flux-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 443,
+     "up": true
+    }
+   ],
+   "url": "https://api.bfl.ai/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 499,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.bfl.ai"
+  }
+ },
+ "bland-ai": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 271,
+     "up": true
+    }
+   ],
+   "url": "https://api.bland.ai/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 339,
+     "up": true
+    }
+   ],
+   "url": "https://api.bland.ai/v1/mcp"
+  }
+ },
+ "bluesky-at-protocol": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 357,
+     "up": true
+    }
+   ],
+   "url": "https://public.api.bsky.app/xrpc"
+  }
+ },
+ "box-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 280,
+     "up": true
+    }
+   ],
+   "url": "https://api.box.com/2.0"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 230,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.box.com"
+  }
+ },
+ "brave-search-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 422,
+     "ms": 537,
+     "up": true
+    }
+   ],
+   "url": "https://api.search.brave.com/res/v1"
+  }
+ },
+ "bright-data": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 245,
+     "up": true
+    }
+   ],
+   "url": "https://api.brightdata.com"
+  }
+ },
+ "browse-ai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 372,
+     "up": true
+    }
+   ],
+   "url": "https://api.browse.ai/v2"
+  }
+ },
+ "browser-use-cloud-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 372,
+     "up": true
+    }
+   ],
+   "url": "https://api.browser-use.com/api/v4"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 296,
+     "up": true
+    }
+   ],
+   "url": "https://api.browser-use.com/v3/mcp"
+  }
+ },
+ "browserbase-stagehand": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 568,
+     "up": true
+    }
+   ],
+   "url": "https://api.browserbase.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 568,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.browserbase.com/mcp"
+  }
+ },
+ "cal-com-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 518,
+     "up": true
+    }
+   ],
+   "url": "https://api.cal.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 718,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.cal.com/mcp"
+  }
+ },
+ "calendly-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 231,
+     "up": true
+    }
+   ],
+   "url": "https://api.calendly.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 220,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.calendly.com"
+  }
+ },
+ "canva-connect-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 119,
+     "up": true
+    }
+   ],
+   "url": "https://api.canva.com/rest/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 298,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.canva.com/mcp"
+  }
+ },
+ "cartesia-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 694,
+     "up": true
+    }
+   ],
+   "url": "https://api.cartesia.ai"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 569,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.cartesia.ai/mcp"
+  }
+ },
+ "chroma-cloud": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 444,
+     "up": true
+    }
+   ],
+   "url": "https://api.trychroma.com"
+  }
+ },
+ "circleci-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 309,
+     "up": true
+    }
+   ],
+   "url": "https://circleci.com/api/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 332,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.circleci.com/v1/mcp"
+  }
+ },
+ "clickhouse-cloud": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 534,
+     "up": true
+    }
+   ],
+   "url": "https://api.clickhouse.cloud/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 420,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.clickhouse.cloud/mcp"
+  }
+ },
+ "clickup-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 239,
+     "up": true
+    }
+   ],
+   "url": "https://api.clickup.com/api/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 325,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.clickup.com/mcp"
+  }
+ },
+ "cloudconvert-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 335,
+     "up": true
+    }
+   ],
+   "url": "https://api.cloudconvert.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 662,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.cloudconvert.com"
+  }
+ },
+ "cloudflare-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 363,
+     "up": true
+    }
+   ],
+   "url": "https://api.cloudflare.com/client/v4"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 327,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.cloudflare.com/mcp"
+  }
+ },
+ "cloudflare-sandbox-sdk": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 327,
+     "up": true
+    }
+   ],
+   "url": "https://api.cloudflare.com/client/v4"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 466,
+     "up": true
+    }
+   ],
+   "url": "https://containers.mcp.cloudflare.com/mcp"
+  }
+ },
+ "coda-api-superhuman-docs": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 311,
+     "up": true
+    }
+   ],
+   "url": "https://coda.io/apis/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 261,
+     "up": true
+    }
+   ],
+   "url": "https://docs.superhuman.com/apis/mcp"
+  }
+ },
+ "codesandbox-sdk": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 566,
+     "up": true
+    }
+   ],
+   "url": "https://api.codesandbox.io"
+  }
+ },
+ "cohere-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 270,
+     "up": true
+    }
+   ],
+   "url": "https://api.cohere.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 289,
+     "up": true
+    }
+   ],
+   "url": "https://docs.cohere.com/_mcp/server"
+  }
+ },
+ "coinbase-cdp-x402": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 253,
+     "up": true
+    }
+   ],
+   "url": "https://api.cdp.coinbase.com/platform"
+  }
+ },
+ "coingecko-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 295,
+     "up": true
+    }
+   ],
+   "url": "https://api.coingecko.com/api/v3"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 785,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.api.coingecko.com/mcp"
+  }
+ },
+ "coinmarketcap-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 216,
+     "up": true
+    }
+   ],
+   "url": "https://pro-api.coinmarketcap.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 233,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.coinmarketcap.com/mcp"
+  }
+ },
+ "comet-opik": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 422,
+     "up": true
+    }
+   ],
+   "url": "https://www.comet.com/opik/api/v1/private"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 354,
+     "up": true
+    }
+   ],
+   "url": "https://www.comet.com/opik/api/v1/mcp"
+  }
+ },
+ "composio": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 406,
+     "up": true
+    }
+   ],
+   "url": "https://backend.composio.dev/api/v3.1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 271,
+     "up": true
+    }
+   ],
+   "url": "https://connect.composio.dev/mcp"
+  }
+ },
+ "congress-gov": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 514,
+     "up": true
+    }
+   ],
+   "url": "https://api.congress.gov/v3"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 406,
+     "up": true
+    }
+   ],
+   "url": "https://congressgov.caseyjhand.com/mcp"
+  }
+ },
+ "context7-library-docs-for-agents": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 585,
+     "up": true
+    }
+   ],
+   "url": "https://context7.com/api/"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 320,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.context7.com/mcp"
+  }
+ },
+ "creatomate-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 525,
+     "up": true
+    }
+   ],
+   "url": "https://api.creatomate.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 499,
+     "up": true
+    }
+   ],
+   "url": "https://api.creatomate.com/mcp"
+  }
+ },
+ "crossref-rest-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 549,
+     "up": true
+    }
+   ],
+   "url": "https://api.crossref.org"
+  }
+ },
+ "d-id-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 363,
+     "up": true
+    }
+   ],
+   "url": "https://api.d-id.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 504,
+     "up": true
+    }
+   ],
+   "url": "https://docs.d-id.com/mcp"
+  }
+ },
+ "datadog-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 226,
+     "up": true
+    }
+   ],
+   "url": "https://api.datadoghq.com"
+  }
+ },
+ "daytona": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 429,
+     "up": true
+    }
+   ],
+   "url": "https://app.daytona.io/api"
+  }
+ },
+ "deepgram-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 402,
+     "up": true
+    }
+   ],
+   "url": "https://api.deepgram.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 414,
+     "up": true
+    }
+   ],
+   "url": "https://developers.deepgram.com/_mcp/server"
+  }
+ },
+ "deepl-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 613,
+     "up": true
+    }
+   ],
+   "url": "https://api.deepl.com"
+  }
+ },
+ "deepseek-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 536,
+     "up": true
+    }
+   ],
+   "url": "https://api.deepseek.com"
+  }
+ },
+ "dexpaprika": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 402,
+     "ms": 200,
+     "up": true
+    }
+   ],
+   "url": "https://api.dexpaprika.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 801,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.dexpaprika.com/streamable-http"
+  }
+ },
+ "diffbot": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 579,
+     "up": true
+    }
+   ],
+   "url": "https://api.diffbot.com/v3"
+  }
+ },
+ "discord-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 166,
+     "up": true
+    }
+   ],
+   "url": "https://discord.com/api/v10"
+  }
+ },
+ "docker-hub-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 503,
+     "ms": 8171,
+     "up": false
+    }
+   ],
+   "url": "https://hub.docker.com"
+  }
+ },
+ "docusign-esignature-api": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 406,
+     "up": true
+    }
+   ],
+   "url": "https://mcp-d.docusign.com/mcp"
+  }
+ },
+ "dropbox-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 283,
+     "up": true
+    }
+   ],
+   "url": "https://api.dropboxapi.com/2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 236,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.dropbox.com/mcp"
+  }
+ },
+ "e2b": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 236,
+     "up": true
+    }
+   ],
+   "url": "https://api.e2b.app"
+  }
+ },
+ "elevenlabs-agents-platform": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 200,
+     "up": true
+    }
+   ],
+   "url": "https://api.elevenlabs.io/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 275,
+     "up": true
+    }
+   ],
+   "url": "https://api.elevenlabs.io/v1/mcp"
+  }
+ },
+ "elevenlabs-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 340,
+     "up": true
+    }
+   ],
+   "url": "https://api.elevenlabs.io/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 310,
+     "up": true
+    }
+   ],
+   "url": "https://api.elevenlabs.io/v1/mcp"
+  }
+ },
+ "elevenlabs-music-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 319,
+     "up": true
+    }
+   ],
+   "url": "https://api.elevenlabs.io"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 172,
+     "up": true
+    }
+   ],
+   "url": "https://api.elevenlabs.io/v1/mcp"
+  }
+ },
+ "eraser-api-diagramgpt": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 417,
+     "up": true
+    }
+   ],
+   "url": "https://app.eraser.io/api"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 378,
+     "up": true
+    }
+   ],
+   "url": "https://app.eraser.io/api/mcp"
+  }
+ },
+ "esri-arcgis-location-platform": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 283,
+     "up": true
+    }
+   ],
+   "url": "https://geocode-api.arcgis.com/arcgis/rest/services"
+  }
+ },
+ "etsy-open-api-v3": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 436,
+     "up": true
+    }
+   ],
+   "url": "https://api.etsy.com/v3"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 300,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.api.etsycloud.com/mcp"
+  }
+ },
+ "exa": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 575,
+     "up": true
+    }
+   ],
+   "url": "https://api.exa.ai"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 607,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.exa.ai/mcp"
+  }
+ },
+ "fal-ai": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 209,
+     "up": true
+    }
+   ],
+   "url": "https://queue.fal.run"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 183,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.fal.ai/mcp"
+  }
+ },
+ "figma-rest-api-dev-mode-mcp": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 437,
+     "up": true
+    }
+   ],
+   "url": "https://api.figma.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 264,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.figma.com/mcp"
+  }
+ },
+ "financial-modeling-prep": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 215,
+     "up": true
+    }
+   ],
+   "url": "https://financialmodelingprep.com/stable"
+  }
+ },
+ "firecrawl": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 438,
+     "up": true
+    }
+   ],
+   "url": "https://api.firecrawl.dev"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 312,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.firecrawl.dev/v2/mcp"
+  }
+ },
+ "fireworks-ai": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 181,
+     "up": true
+    }
+   ],
+   "url": "https://api.fireworks.ai/inference/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 404,
+     "up": true
+    }
+   ],
+   "url": "https://docs.fireworks.ai/mcp"
+  }
+ },
+ "fly-io-machines-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 405,
+     "up": true
+    }
+   ],
+   "url": "https://api.machines.dev/v1"
+  }
+ },
+ "freepik-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 699,
+     "up": true
+    }
+   ],
+   "url": "https://api.magnific.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 295,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.magnific.com"
+  }
+ },
+ "gamma-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 253,
+     "up": true
+    }
+   ],
+   "url": "https://public-api.gamma.app/v1.0"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 237,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.gamma.app/mcp"
+  }
+ },
+ "gdelt-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 15969,
+     "up": true
+    }
+   ],
+   "url": "https://api.gdeltproject.org/api/v2/doc/doc"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 312,
+     "up": true
+    }
+   ],
+   "url": "https://gdelt.caseyjhand.com/mcp"
+  }
+ },
+ "geoapify": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 503,
+     "ms": 332,
+     "up": false
+    }
+   ],
+   "url": "https://api.geoapify.com"
+  }
+ },
+ "github-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 229,
+     "up": true
+    }
+   ],
+   "url": "https://api.github.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 156,
+     "up": true
+    }
+   ],
+   "url": "https://api.githubcopilot.com/mcp/"
+  }
+ },
+ "gitingest": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 434,
+     "up": true
+    }
+   ],
+   "url": "https://gitingest.com/api"
+  }
+ },
+ "gitlab-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 175,
+     "up": true
+    }
+   ],
+   "url": "https://gitlab.com/api/v4"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 299,
+     "up": true
+    }
+   ],
+   "url": "https://gitlab.com/api/v4/mcp"
+  }
+ },
+ "globalping": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 505,
+     "up": true
+    }
+   ],
+   "url": "https://api.globalping.io/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 264,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.globalping.dev/mcp"
+  }
+ },
+ "google-bigquery": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 385,
+     "up": true
+    }
+   ],
+   "url": "https://bigquery.googleapis.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 391,
+     "up": true
+    }
+   ],
+   "url": "https://bigquery.googleapis.com/mcp"
+  }
+ },
+ "google-cloud-apis": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 439,
+     "up": true
+    }
+   ],
+   "url": "https://compute.googleapis.com/mcp"
+  }
+ },
+ "google-cloud-text-to-speech-speech-to-text": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 246,
+     "up": true
+    }
+   ],
+   "url": "https://texttospeech.googleapis.com/v1"
+  }
+ },
+ "google-cloud-translation": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 343,
+     "up": true
+    }
+   ],
+   "url": "https://translation.googleapis.com"
+  }
+ },
+ "google-document-ai": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 252,
+     "up": true
+    }
+   ],
+   "url": "https://documentai.googleapis.com"
+  }
+ },
+ "google-gemini-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 131,
+     "up": true
+    }
+   ],
+   "url": "https://generativelanguage.googleapis.com/v1beta"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 388,
+     "up": true
+    }
+   ],
+   "url": "https://gemini-api-docs-mcp.dev"
+  }
+ },
+ "google-gemini-imagen-image-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 166,
+     "up": true
+    }
+   ],
+   "url": "https://generativelanguage.googleapis.com/v1beta"
+  }
+ },
+ "google-maps-platform": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 331,
+     "up": true
+    }
+   ],
+   "url": "https://mapstools.googleapis.com/mcp"
+  }
+ },
+ "google-slides-docs-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 264,
+     "up": true
+    }
+   ],
+   "url": "https://slides.googleapis.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 270,
+     "up": true
+    }
+   ],
+   "url": "https://slidesmcp.googleapis.com/mcp/v1"
+  }
+ },
+ "google-veo-gemini-api-vertex-ai": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 213,
+     "up": true
+    }
+   ],
+   "url": "https://generativelanguage.googleapis.com/v1beta"
+  }
+ },
+ "google-workspace-apis-gmail-calendar-drive": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 265,
+     "up": true
+    }
+   ],
+   "url": "https://gmailmcp.googleapis.com/mcp/v1"
+  }
+ },
+ "groq-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 196,
+     "up": true
+    }
+   ],
+   "url": "https://api.groq.com/openai/v1"
+  }
+ },
+ "gumloop": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 172,
+     "up": true
+    }
+   ],
+   "url": "https://api.gumloop.com/api/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 223,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.gumloop.com/gumloop/mcp"
+  }
+ },
+ "hacker-news-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 648,
+     "up": true
+    }
+   ],
+   "url": "https://hacker-news.firebaseio.com/v0/"
+  }
+ },
+ "heygen-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 339,
+     "up": true
+    }
+   ],
+   "url": "https://api.heygen.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 262,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.heygen.com/mcp/v1/"
+  }
+ },
+ "hubspot-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 634,
+     "up": true
+    }
+   ],
+   "url": "https://api.hubapi.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 333,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.hubspot.com"
+  }
+ },
+ "hugging-face-inference-providers": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 186,
+     "up": true
+    }
+   ],
+   "url": "https://router.huggingface.co/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 202,
+     "up": true
+    }
+   ],
+   "url": "https://huggingface.co/mcp"
+  }
+ },
+ "hume-ai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 502,
+     "up": true
+    }
+   ],
+   "url": "https://api.hume.ai/v0"
+  }
+ },
+ "hyper3d-rodin-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 922,
+     "up": true
+    }
+   ],
+   "url": "https://api.hyper3d.com/api/v2"
+  }
+ },
+ "hyperbrowser": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 474,
+     "up": true
+    }
+   ],
+   "url": "https://api.hyperbrowser.ai"
+  }
+ },
+ "icepanel-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 384,
+     "up": true
+    }
+   ],
+   "url": "https://api.icepanel.io/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 309,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.icepanel.io/mcp"
+  }
+ },
+ "ideogram-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 347,
+     "up": true
+    }
+   ],
+   "url": "https://api.ideogram.ai"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 289,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.ideogram.ai/mcp"
+  }
+ },
+ "ifttt-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 209,
+     "up": true
+    }
+   ],
+   "url": "https://maker.ifttt.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 215,
+     "up": true
+    }
+   ],
+   "url": "https://ifttt.com/mcp"
+  }
+ },
+ "intercom-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 495,
+     "up": true
+    }
+   ],
+   "url": "https://api.intercom.io"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 233,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.intercom.com/mcp"
+  }
+ },
+ "ip2location-io": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 428,
+     "up": true
+    }
+   ],
+   "url": "https://api.ip2location.io"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 211,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.ip2location.io/"
+  }
+ },
+ "iplocate": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 446,
+     "up": true
+    }
+   ],
+   "url": "https://iplocate.io/api"
+  }
+ },
+ "jina-ai-search-reader": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 548,
+     "up": true
+    }
+   ],
+   "url": "https://r.jina.ai"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 552,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.jina.ai/v1"
+  }
+ },
+ "judge0": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 552,
+     "up": true
+    }
+   ],
+   "url": "https://ce.judge0.com"
+  }
+ },
+ "kagi-search-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 1328,
+     "up": true
+    }
+   ],
+   "url": "https://kagi.com/api/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 508,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.kagi.com/mcp"
+  }
+ },
+ "keboola": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 357,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.keboola.com/mcp"
+  }
+ },
+ "klap-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 326,
+     "up": true
+    }
+   ],
+   "url": "https://api.klap.app/v2"
+  }
+ },
+ "klaviyo-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 226,
+     "up": true
+    }
+   ],
+   "url": "https://a.klaviyo.com/api"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 235,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.klaviyo.com/mcp"
+  }
+ },
+ "kling-ai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 649,
+     "up": true
+    }
+   ],
+   "url": "https://api-singapore.klingai.com"
+  }
+ },
+ "kroki": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 820,
+     "up": true
+    }
+   ],
+   "url": "https://kroki.io"
+  }
+ },
+ "languagetool-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 701,
+     "up": true
+    }
+   ],
+   "url": "https://api.languagetool.org/v2"
+  }
+ },
+ "leonardo-ai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 511,
+     "up": true
+    }
+   ],
+   "url": "https://cloud.leonardo.ai/api/rest/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 267,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.leonardo.ai/v1/mcp"
+  }
+ },
+ "letta": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 327,
+     "up": true
+    }
+   ],
+   "url": "https://api.letta.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 303,
+     "up": true
+    }
+   ],
+   "url": "https://api.letta.com/mcp"
+  }
+ },
+ "line-messaging-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 2647,
+     "up": true
+    }
+   ],
+   "url": "https://api.line.me"
+  }
+ },
+ "linear-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 445,
+     "up": true
+    }
+   ],
+   "url": "https://api.linear.app/graphql"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 332,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.linear.app/mcp"
+  }
+ },
+ "linkedin-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 230,
+     "up": true
+    }
+   ],
+   "url": "https://api.linkedin.com/v2"
+  }
+ },
+ "linkup": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 904,
+     "up": true
+    }
+   ],
+   "url": "https://api.linkup.so/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 564,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.linkup.so/mcp"
+  }
+ },
+ "llamaparse-llamacloud": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 483,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.llamaindex.ai/mcp"
+  }
+ },
+ "locationiq": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 431,
+     "up": true
+    }
+   ],
+   "url": "https://us1.locationiq.com/v1"
+  }
+ },
+ "loudly-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 799,
+     "up": true
+    }
+   ],
+   "url": "https://soundtracks.loudly.com"
+  }
+ },
+ "lucid-lucidchart-rest-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 295,
+     "up": true
+    }
+   ],
+   "url": "https://api.lucid.co"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 311,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.lucid.app/mcp"
+  }
+ },
+ "luma-ai-dream-machine-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 424,
+     "up": true
+    }
+   ],
+   "url": "https://api.lumalabs.ai/dream-machine/v1"
+  }
+ },
+ "mailgun": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 441,
+     "up": true
+    }
+   ],
+   "url": "https://api.mailgun.net"
+  }
+ },
+ "make-api-mcp": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 470,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.make.com"
+  }
+ },
+ "mapbox": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 317,
+     "up": true
+    }
+   ],
+   "url": "https://api.mapbox.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 372,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.mapbox.com/mcp"
+  }
+ },
+ "maven-central-search": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 188,
+     "up": true
+    }
+   ],
+   "url": "https://search.maven.org/solrsearch/select"
+  }
+ },
+ "mem0": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 518,
+     "up": true
+    }
+   ],
+   "url": "https://api.mem0.ai"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 307,
+     "ms": 522,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.mem0.ai/mcp"
+  }
+ },
+ "mercado-libre-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 172,
+     "up": true
+    }
+   ],
+   "url": "https://api.mercadolibre.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 260,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.mercadolibre.com/devsite/v1/mcp"
+  }
+ },
+ "mercado-pago-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 225,
+     "up": true
+    }
+   ],
+   "url": "https://api.mercadopago.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 287,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.mercadopago.com/mcp"
+  }
+ },
+ "merge-agent-handler": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 167,
+     "up": true
+    }
+   ],
+   "url": "https://ah-api.merge.dev/api/v1"
+  }
+ },
+ "mermaid-chart-api": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 561,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.mermaid.ai/mcp"
+  }
+ },
+ "meshy-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 352,
+     "up": true
+    }
+   ],
+   "url": "https://api.meshy.ai/openapi/v1"
+  }
+ },
+ "meta-graph-api-facebook-instagram": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 219,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.facebook.com/ads"
+  }
+ },
+ "microsoft-graph-outlook-teams-onedrive": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 164,
+     "up": true
+    }
+   ],
+   "url": "https://graph.microsoft.com/v1.0"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 389,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.svc.cloud.microsoft/enterprise"
+  }
+ },
+ "minimax-hailuo-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 418,
+     "up": true
+    }
+   ],
+   "url": "https://api.minimax.io"
+  }
+ },
+ "miro-rest-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 409,
+     "up": true
+    }
+   ],
+   "url": "https://api.miro.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 323,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.miro.com/"
+  }
+ },
+ "mistral-ai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 268,
+     "up": true
+    }
+   ],
+   "url": "https://api.mistral.ai/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 268,
+     "up": true
+    }
+   ],
+   "url": "https://api.mistral.ai/mcp"
+  }
+ },
+ "mistral-ocr-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 317,
+     "up": true
+    }
+   ],
+   "url": "https://api.mistral.ai"
+  }
+ },
+ "modernmt-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 618,
+     "up": true
+    }
+   ],
+   "url": "https://api.modernmt.com"
+  }
+ },
+ "mojeek-search-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 849,
+     "up": true
+    }
+   ],
+   "url": "https://api.mojeek.com"
+  }
+ },
+ "monday-com-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 215,
+     "up": true
+    }
+   ],
+   "url": "https://api.monday.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 295,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.monday.com/mcp"
+  }
+ },
+ "mongodb-atlas": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 364,
+     "up": true
+    }
+   ],
+   "url": "https://cloud.mongodb.com/api/atlas/v2"
+  }
+ },
+ "mubert-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 654,
+     "up": true
+    }
+   ],
+   "url": "https://music-api.mubert.com/api/v3/public"
+  }
+ },
+ "murf-ai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 481,
+     "up": true
+    }
+   ],
+   "url": "https://api.murf.ai/v1"
+  }
+ },
+ "mux-video-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 360,
+     "up": true
+    }
+   ],
+   "url": "https://api.mux.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 377,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.mux.com"
+  }
+ },
+ "nango": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 681,
+     "up": true
+    }
+   ],
+   "url": "https://api.nango.dev"
+  }
+ },
+ "napkin-ai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 463,
+     "up": true
+    }
+   ],
+   "url": "https://api.napkin.ai/v1"
+  }
+ },
+ "national-weather-service-api-nws": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 520,
+     "up": true
+    }
+   ],
+   "url": "https://api.weather.gov"
+  }
+ },
+ "neon-postgres": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 391,
+     "up": true
+    }
+   ],
+   "url": "https://console.neon.tech/api/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 424,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.neon.tech/mcp"
+  }
+ },
+ "netlify-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 360,
+     "up": true
+    }
+   ],
+   "url": "https://api.netlify.com/api/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 1144,
+     "up": true
+    }
+   ],
+   "url": "https://netlify-mcp.netlify.app/mcp"
+  }
+ },
+ "newsapi": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 392,
+     "up": true
+    }
+   ],
+   "url": "https://newsapi.org/v2"
+  }
+ },
+ "nocodb-cloud": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 322,
+     "up": true
+    }
+   ],
+   "url": "https://app.nocodb.com/mcp"
+  }
+ },
+ "notion-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 496,
+     "up": true
+    }
+   ],
+   "url": "https://api.notion.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 282,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.notion.com/mcp"
+  }
+ },
+ "ntfy": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 397,
+     "up": true
+    }
+   ],
+   "url": "https://ntfy.sh"
+  }
+ },
+ "nytimes": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 337,
+     "up": true
+    }
+   ],
+   "url": "https://api.nytimes.com/svc"
+  }
+ },
+ "onshape-rest-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 757,
+     "up": true
+    }
+   ],
+   "url": "https://cad.onshape.com/api"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 467,
+     "up": true
+    }
+   ],
+   "url": "https://fs-mcp.labs.onshape.app/mcp"
+  }
+ },
+ "open-exchange-rates": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 405,
+     "ms": 360,
+     "up": true
+    }
+   ],
+   "url": "https://openexchangerates.org/api"
+  }
+ },
+ "open-library": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 345,
+     "up": true
+    }
+   ],
+   "url": "https://openlibrary.org"
+  }
+ },
+ "open-meteo": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 765,
+     "up": true
+    }
+   ],
+   "url": "https://api.open-meteo.com/v1"
+  }
+ },
+ "openai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 252,
+     "up": true
+    }
+   ],
+   "url": "https://api.openai.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 266,
+     "up": true
+    }
+   ],
+   "url": "https://developers.openai.com/mcp"
+  }
+ },
+ "openai-audio-api-tts-transcription": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 268,
+     "up": true
+    }
+   ],
+   "url": "https://api.openai.com/v1"
+  }
+ },
+ "openai-images-api-gpt-image": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 232,
+     "up": true
+    }
+   ],
+   "url": "https://api.openai.com/v1"
+  }
+ },
+ "openalex-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 456,
+     "up": true
+    }
+   ],
+   "url": "https://api.openalex.org"
+  }
+ },
+ "opencage": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 547,
+     "up": true
+    }
+   ],
+   "url": "https://api.opencagedata.com/geocode/v1"
+  }
+ },
+ "openrouter": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 336,
+     "up": true
+    }
+   ],
+   "url": "https://openrouter.ai/api/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 183,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.openrouter.ai/mcp"
+  }
+ },
+ "openrouteservice": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 793,
+     "up": true
+    }
+   ],
+   "url": "https://api.heigit.org/openrouteservice"
+  }
+ },
+ "openstreetmap-nominatim": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 314,
+     "up": true
+    }
+   ],
+   "url": "https://nominatim.openstreetmap.org"
+  }
+ },
+ "openweathermap-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 754,
+     "up": true
+    }
+   ],
+   "url": "https://api.openweathermap.org"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 644,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.openweathermap.org/mcp"
+  }
+ },
+ "overpass-api-osm": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 406,
+     "ms": 874,
+     "up": true
+    }
+   ],
+   "url": "https://overpass-api.de/api/interpreter"
+  }
+ },
+ "oxylabs": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 1035,
+     "up": true
+    }
+   ],
+   "url": "https://realtime.oxylabs.io/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 768,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.oxylabs.io/mcp"
+  }
+ },
+ "pagerduty-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 472,
+     "up": true
+    }
+   ],
+   "url": "https://api.pagerduty.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 489,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.pagerduty.com/mcp"
+  }
+ },
+ "paragon-actionkit": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 349,
+     "up": true
+    }
+   ],
+   "url": "https://actionkit.useparagon.com"
+  }
+ },
+ "parallel-web-systems-search-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 621,
+     "up": true
+    }
+   ],
+   "url": "https://api.parallel.ai/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 605,
+     "up": true
+    }
+   ],
+   "url": "https://search.parallel.ai/mcp"
+  }
+ },
+ "paypal-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 128,
+     "up": true
+    }
+   ],
+   "url": "https://api-m.paypal.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 165,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.paypal.com/http"
+  }
+ },
+ "pdf-co-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 407,
+     "up": true
+    }
+   ],
+   "url": "https://api.pdf.co/v1"
+  }
+ },
+ "penpot-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 771,
+     "up": true
+    }
+   ],
+   "url": "https://design.penpot.app/api/main/methods"
+  }
+ },
+ "perplexity-sonar-search-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 549,
+     "up": true
+    }
+   ],
+   "url": "https://api.perplexity.ai"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 522,
+     "up": true
+    }
+   ],
+   "url": "https://api.perplexity.ai/mcp"
+  }
+ },
+ "piapi": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 435,
+     "up": true
+    }
+   ],
+   "url": "https://api.piapi.ai"
+  }
+ },
+ "pinecone": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 312,
+     "up": true
+    }
+   ],
+   "url": "https://api.pinecone.io"
+  }
+ },
+ "pinterest-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 163,
+     "up": true
+    }
+   ],
+   "url": "https://api.pinterest.com/v5"
+  }
+ },
+ "pipedream-connect": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 178,
+     "up": true
+    }
+   ],
+   "url": "https://api.pipedream.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 202,
+     "up": true
+    }
+   ],
+   "url": "https://remote.mcp.pipedream.net/v3"
+  }
+ },
+ "pipedrive-api": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 353,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.pipedrive.ai/mcp"
+  }
+ },
+ "piston": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 305,
+     "up": true
+    }
+   ],
+   "url": "https://emkc.org/api/v2/piston"
+  }
+ },
+ "pixverse-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 318,
+     "up": true
+    }
+   ],
+   "url": "https://app-api.pixverse.ai"
+  }
+ },
+ "plaid-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 227,
+     "up": true
+    }
+   ],
+   "url": "https://production.plaid.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 207,
+     "up": true
+    }
+   ],
+   "url": "https://api.dashboard.plaid.com/mcp/"
+  }
+ },
+ "planetscale": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 471,
+     "up": true
+    }
+   ],
+   "url": "https://api.planetscale.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 828,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.pscale.dev/mcp/planetscale"
+  }
+ },
+ "plantuml-server-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 799,
+     "up": true
+    }
+   ],
+   "url": "https://www.plantuml.com/plantuml"
+  }
+ },
+ "polygon-io-massive": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 320,
+     "up": true
+    }
+   ],
+   "url": "https://api.massive.com"
+  }
+ },
+ "postman-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 454,
+     "up": true
+    }
+   ],
+   "url": "https://api.getpostman.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 481,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.postman.com/mcp"
+  }
+ },
+ "postmark": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 546,
+     "up": true
+    }
+   ],
+   "url": "https://api.postmarkapp.com"
+  }
+ },
+ "printful-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 261,
+     "up": true
+    }
+   ],
+   "url": "https://api.printful.com"
+  }
+ },
+ "procore-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 207,
+     "up": true
+    }
+   ],
+   "url": "https://api.procore.com/rest/v1.0"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 189,
+     "up": true
+    }
+   ],
+   "url": "https://app.procore.com/rest/v1.0/mcp"
+  }
+ },
+ "pubmed-e-utilities-ncbi": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 217,
+     "up": true
+    }
+   ],
+   "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+  }
+ },
+ "recraft-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 267,
+     "up": true
+    }
+   ],
+   "url": "https://external.api.recraft.ai/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 326,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.recraft.ai/mcp"
+  }
+ },
+ "reddit-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 160,
+     "up": true
+    }
+   ],
+   "url": "https://oauth.reddit.com"
+  }
+ },
+ "reducto-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 383,
+     "up": true
+    }
+   ],
+   "url": "https://platform.reducto.ai"
+  }
+ },
+ "reflag": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 410,
+     "up": true
+    }
+   ],
+   "url": "https://app.reflag.com/api"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 411,
+     "up": true
+    }
+   ],
+   "url": "https://app.reflag.com/api/mcp"
+  }
+ },
+ "remove-bg-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 381,
+     "up": true
+    }
+   ],
+   "url": "https://api.remove.bg/v1.0"
+  }
+ },
+ "render-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 191,
+     "up": true
+    }
+   ],
+   "url": "https://api.render.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 214,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.render.com/mcp"
+  }
+ },
+ "replicate": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 259,
+     "up": true
+    }
+   ],
+   "url": "https://api.replicate.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 279,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.replicate.com/sse"
+  }
+ },
+ "resemble-ai-api": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 602,
+     "up": true
+    }
+   ],
+   "url": "https://docs.resemble.ai/_mcp/server"
+  }
+ },
+ "resend": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 177,
+     "up": true
+    }
+   ],
+   "url": "https://api.resend.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 189,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.resend.com/mcp"
+  }
+ },
+ "retell-ai": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 278,
+     "up": true
+    }
+   ],
+   "url": "https://api.retellai.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 406,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.retellai.com"
+  }
+ },
+ "rev-ai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 689,
+     "up": true
+    }
+   ],
+   "url": "https://api.rev.ai/speechtotext/v1"
+  }
+ },
+ "riza": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": "tls",
+     "ms": null,
+     "up": false
+    }
+   ],
+   "url": "https://api.riza.io"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": "tls",
+     "ms": null,
+     "up": false
+    }
+   ],
+   "url": "https://mcp.riza.io/code-interpreter"
+  }
+ },
+ "runloop": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 371,
+     "up": true
+    }
+   ],
+   "url": "https://api.runloop.ai"
+  }
+ },
+ "runway-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 299,
+     "up": true
+    }
+   ],
+   "url": "https://api.dev.runwayml.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 280,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.runwayml.com/mcp"
+  }
+ },
+ "salesforce-apis": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 301,
+     "up": true
+    }
+   ],
+   "url": "https://api.salesforce.com/platform/mcp/v1/platform/sobject-all"
+  }
+ },
+ "scrapegraphai-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 584,
+     "up": true
+    }
+   ],
+   "url": "https://v2-api.scrapegraphai.com/api"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 735,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.scrapegraphai.com/mcp"
+  }
+ },
+ "scraperapi": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 530,
+     "up": true
+    }
+   ],
+   "url": "https://api.scraperapi.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 636,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.scraperapi.com/mcp"
+  }
+ },
+ "scrapfly": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 558,
+     "up": true
+    }
+   ],
+   "url": "https://api.scrapfly.io"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 793,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.scrapfly.io/mcp"
+  }
+ },
+ "scrapingbee": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 854,
+     "up": true
+    }
+   ],
+   "url": "https://app.scrapingbee.com/api/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 926,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.scrapingbee.com/mcp"
+  }
+ },
+ "searchapi-io": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 665,
+     "up": true
+    }
+   ],
+   "url": "https://www.searchapi.io/api/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 593,
+     "up": true
+    }
+   ],
+   "url": "https://www.searchapi.io/mcp"
+  }
+ },
+ "semantic-scholar-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 326,
+     "up": true
+    }
+   ],
+   "url": "https://api.semanticscholar.org/graph/v1"
+  }
+ },
+ "sendgrid-twilio": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 130,
+     "up": true
+    }
+   ],
+   "url": "https://api.sendgrid.com/v3"
+  }
+ },
+ "sentry-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": "timeout",
+     "ms": null,
+     "up": false
+    }
+   ],
+   "url": "https://sentry.io/api/0"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 406,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.sentry.dev/mcp"
+  }
+ },
+ "serpapi": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 541,
+     "up": true
+    }
+   ],
+   "url": "https://serpapi.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 477,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.serpapi.com/mcp"
+  }
+ },
+ "shotstack-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 790,
+     "up": true
+    }
+   ],
+   "url": "https://api.shotstack.io/edit/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 771,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.shotstack.io/"
+  }
+ },
+ "sketchfab-data-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 731,
+     "up": true
+    }
+   ],
+   "url": "https://api.sketchfab.com/v3"
+  }
+ },
+ "slack-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 546,
+     "up": true
+    }
+   ],
+   "url": "https://slack.com/api"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 164,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.slack.com/mcp"
+  }
+ },
+ "slidespeak-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 584,
+     "up": true
+    }
+   ],
+   "url": "https://api.slidespeak.co/api/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 549,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.slidespeak.co/mcp"
+  }
+ },
+ "speckle-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 464,
+     "up": true
+    }
+   ],
+   "url": "https://app.speckle.systems/api/graphql"
+  }
+ },
+ "speechmatics-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 532,
+     "up": true
+    }
+   ],
+   "url": "https://eu1.asr.api.speechmatics.com/v2"
+  }
+ },
+ "spider-cloud": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 402,
+     "ms": 342,
+     "up": true
+    }
+   ],
+   "url": "https://api.spider.cloud"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 425,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.spider.cloud/mcp"
+  }
+ },
+ "square-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 219,
+     "up": true
+    }
+   ],
+   "url": "https://connect.squareup.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 288,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.squareup.com/mcp"
+  }
+ },
+ "stability-ai-3d-stable-fast-3d-spar3d-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 475,
+     "up": true
+    }
+   ],
+   "url": "https://api.stability.ai"
+  }
+ },
+ "stability-ai-platform-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 501,
+     "up": true
+    }
+   ],
+   "url": "https://api.stability.ai"
+  }
+ },
+ "stable-audio-api-stability-ai": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 383,
+     "up": true
+    }
+   ],
+   "url": "https://api.stability.ai"
+  }
+ },
+ "stackone": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 315,
+     "up": true
+    }
+   ],
+   "url": "https://api.stackone.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 514,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.stackone.com/mcp"
+  }
+ },
+ "steel": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 448,
+     "up": true
+    }
+   ],
+   "url": "https://api.steel.dev"
+  }
+ },
+ "stripe-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 170,
+     "up": true
+    }
+   ],
+   "url": "https://api.stripe.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 269,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.stripe.com"
+  }
+ },
+ "structurizr": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 1062,
+     "up": true
+    }
+   ],
+   "url": "https://api.structurizr.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 621,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.structurizr.com/mcp"
+  }
+ },
+ "supabase": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 234,
+     "up": true
+    }
+   ],
+   "url": "https://api.supabase.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 149,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.supabase.com/mcp"
+  }
+ },
+ "supabase-management-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 295,
+     "up": true
+    }
+   ],
+   "url": "https://api.supabase.com/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 366,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.supabase.com/mcp"
+  }
+ },
+ "superglue": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 185,
+     "up": true
+    }
+   ],
+   "url": "https://api.superglue.cloud/v1"
+  }
+ },
+ "synthesia-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 491,
+     "up": true
+    }
+   ],
+   "url": "https://api.synthesia.io/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 655,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.synthesia.io/mcp"
+  }
+ },
+ "synthflow-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 678,
+     "up": true
+    }
+   ],
+   "url": "https://api.synthflow.ai/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 427,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.synthflow.ai/mcp"
+  }
+ },
+ "tavily": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 570,
+     "up": true
+    }
+   ],
+   "url": "https://api.tavily.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 619,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.tavily.com/mcp/"
+  }
+ },
+ "tavus-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 415,
+     "up": true
+    }
+   ],
+   "url": "https://tavusapi.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 316,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.tavus.io/mcp"
+  }
+ },
+ "telnyx": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 136,
+     "up": true
+    }
+   ],
+   "url": "https://api.telnyx.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 210,
+     "up": true
+    }
+   ],
+   "url": "https://api.telnyx.com/v2/mcp"
+  }
+ },
+ "tencent-edgeone-pages": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 821,
+     "up": true
+    }
+   ],
+   "url": "https://mcp-on-edge.edgeone.app/mcp-server"
+  }
+ },
+ "tencent-hunyuan3d-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 547,
+     "up": true
+    }
+   ],
+   "url": "https://hunyuan.intl.tencentcloudapi.com"
+  }
+ },
+ "tiktok-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 443,
+     "up": true
+    }
+   ],
+   "url": "https://open.tiktokapis.com/v2"
+  }
+ },
+ "tinybird": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 302,
+     "ms": 3197,
+     "up": true
+    }
+   ],
+   "url": "https://api.tinybird.co"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 240,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN"
+  }
+ },
+ "todoist-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 380,
+     "up": true
+    }
+   ],
+   "url": "https://api.todoist.com/api/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 496,
+     "up": true
+    }
+   ],
+   "url": "https://ai.todoist.net/mcp"
+  }
+ },
+ "together-ai": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 453,
+     "up": true
+    }
+   ],
+   "url": "https://api.together.ai/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 591,
+     "up": true
+    }
+   ],
+   "url": "https://docs.together.ai/mcp"
+  }
+ },
+ "tomorrow-io-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 495,
+     "up": true
+    }
+   ],
+   "url": "https://api.tomorrow.io/v4"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 487,
+     "up": true
+    }
+   ],
+   "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp"
+  }
+ },
+ "trello-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 445,
+     "up": true
+    }
+   ],
+   "url": "https://api.trello.com/1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 295,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.trello.com/v1"
+  }
+ },
+ "tripo-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 420,
+     "up": true
+    }
+   ],
+   "url": "https://openapi.tripo3d.ai/v3"
+  }
+ },
+ "turso": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 358,
+     "up": true
+    }
+   ],
+   "url": "https://api.turso.tech/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 350,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.turso.ai/mcp"
+  }
+ },
+ "twilio-programmable-voice": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 152,
+     "up": true
+    }
+   ],
+   "url": "https://api.twilio.com/2010-04-01"
+  }
+ },
+ "unstructured-api": {
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 526,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.transform.unstructured.io"
+  }
+ },
+ "v0-platform-api-vercel": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 401,
+     "up": true
+    }
+   ],
+   "url": "https://api.v0.dev/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 434,
+     "up": true
+    }
+   ],
+   "url": "https://v0.app/api/mcp"
+  }
+ },
+ "vapi": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 424,
+     "up": true
+    }
+   ],
+   "url": "https://api.vapi.ai"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 163,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.vapi.ai/mcp"
+  }
+ },
+ "vercel-ai-gateway": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 447,
+     "up": true
+    }
+   ],
+   "url": "https://ai-gateway.vercel.sh/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 238,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.vercel.com"
+  }
+ },
+ "vercel-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 606,
+     "up": true
+    }
+   ],
+   "url": "https://api.vercel.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 248,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.vercel.com"
+  }
+ },
+ "vercel-sandbox": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 802,
+     "up": true
+    }
+   ],
+   "url": "https://api.vercel.com"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 212,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.vercel.com"
+  }
+ },
+ "voyage-ai-embeddings-rerank": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 212,
+     "up": true
+    }
+   ],
+   "url": "https://api.voyageai.com/v1"
+  }
+ },
+ "webflow-data-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 310,
+     "up": true
+    }
+   ],
+   "url": "https://api.webflow.com/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 294,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.webflow.com/mcp"
+  }
+ },
+ "wikidata": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": "timeout",
+     "ms": null,
+     "up": false
+    }
+   ],
+   "url": "https://query.wikidata.org/sparql"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 204,
+     "up": true
+    }
+   ],
+   "url": "https://wd-mcp.wmcloud.org/mcp"
+  }
+ },
+ "wikipedia-wikimedia-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 326,
+     "up": true
+    }
+   ],
+   "url": "https://en.wikipedia.org/w/api.php"
+  }
+ },
+ "wise-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 973,
+     "up": true
+    }
+   ],
+   "url": "https://api.wise.com"
+  }
+ },
+ "wolfram-alpha-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 400,
+     "ms": 561,
+     "up": true
+    }
+   ],
+   "url": "https://www.wolframalpha.com/api/v1/llm-api"
+  }
+ },
+ "x-twitter-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 192,
+     "up": true
+    }
+   ],
+   "url": "https://api.x.com/2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 194,
+     "up": true
+    }
+   ],
+   "url": "https://api.x.com/mcp"
+  }
+ },
+ "xai-grok-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 259,
+     "up": true
+    }
+   ],
+   "url": "https://api.x.ai/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 224,
+     "up": true
+    }
+   ],
+   "url": "https://docs.x.ai/api/mcp"
+  }
+ },
+ "you-com-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 403,
+     "ms": 579,
+     "up": true
+    }
+   ],
+   "url": "https://ydc-index.io/v1"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 592,
+     "up": true
+    }
+   ],
+   "url": "https://api.you.com/mcp"
+  }
+ },
+ "youtube-data-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 272,
+     "up": true
+    }
+   ],
+   "url": "https://www.googleapis.com/youtube/v3"
+  }
+ },
+ "zapier-mcp-ai-actions": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 267,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.zapier.com/api/v1/connect"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 255,
+     "up": true
+    }
+   ],
+   "url": "https://mcp.zapier.com/api/v1/connect"
+  }
+ },
+ "zep": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 368,
+     "up": true
+    }
+   ],
+   "url": "https://api.getzep.com/api/v2"
+  },
+  "mcp": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 401,
+     "ms": 377,
+     "up": true
+    }
+   ],
+   "url": "https://api.getzep.com/mcp"
+  }
+ },
+ "zilliz-cloud-milvus": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 383,
+     "up": true
+    }
+   ],
+   "url": "https://api.cloud.zilliz.com/v2"
+  }
+ },
+ "zoo-text-to-cad-api-kittycad": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 200,
+     "ms": 428,
+     "up": true
+    }
+   ],
+   "url": "https://api.zoo.dev"
+  }
+ },
+ "zoom-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 265,
+     "up": true
+    }
+   ],
+   "url": "https://api.zoom.us/v2"
+  }
+ },
+ "zyte-api": {
+  "api": {
+   "history": [
+    {
+     "at": "2026-09-24T18:26Z",
+     "detail": 404,
+     "ms": 336,
+     "up": true
+    }
+   ],
+   "url": "https://api.zyte.com/v1"
+  }
+ }
+}

@@ -59,6 +59,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://app.eraser.io/api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 417,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://app.eraser.io/api/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 378,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -136,6 +161,31 @@
      "fetched_at": "2026-09-24T16:56Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.icepanel.io/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 384,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.icepanel.io/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 309,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/icepanel-api.json"
   },
   {
@@ -188,6 +238,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://kroki.io",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 820,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -249,6 +313,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.lucid.co",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 295,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.lucid.app/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 311,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -325,6 +414,20 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mcp.mermaid.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 561,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -425,6 +528,31 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.miro.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 409,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.miro.com/",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 323,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -487,6 +615,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.napkin.ai/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 463,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -547,6 +689,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://www.plantuml.com/plantuml",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 799,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -614,6 +770,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.structurizr.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 1062,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.structurizr.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 621,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   }
  ]

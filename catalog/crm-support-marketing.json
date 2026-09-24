@@ -120,7 +120,32 @@
      "url": "https://smithery.ai/servers/attio",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.attio.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 350,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.attio.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 465,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "hubspot-api",
@@ -235,7 +260,32 @@
      "url": "https://smithery.ai/servers/hubspot",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.hubapi.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 634,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.hubspot.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 333,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "intercom-api",
@@ -331,6 +381,31 @@
      "fetched_at": "2026-09-24T17:00Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.intercom.io",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 495,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.intercom.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 233,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/intercom-api.json"
   },
   {
@@ -458,6 +533,31 @@
      "fetched_at": "2026-09-24T17:00Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://a.klaviyo.com/api",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 226,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.klaviyo.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 235,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/klaviyo-api.json"
   },
   {
@@ -637,6 +737,20 @@
      "fetched_at": "2026-09-24T17:00Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mcp.pipedrive.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 353,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/pipedrive-api.json"
   },
   {
@@ -740,6 +854,20 @@
      "fetched_at": "2026-09-24T17:00Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://api.salesforce.com/platform/mcp/v1/platform/sobject-all",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 301,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/salesforce-apis.json"
   },
   {

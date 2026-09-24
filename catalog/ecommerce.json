@@ -87,7 +87,32 @@
      "url": "https://github.com/amzn/selling-partner-api-models",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://sellingpartnerapi-na.amazon.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 246,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://sellingpartner-ai.amazon.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 405,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "bigcommerce-api",
@@ -328,6 +353,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.etsy.com/v3",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 436,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.api.etsycloud.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 300,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -382,7 +432,32 @@
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
-   "stale": false
+   "stale": false,
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.mercadolibre.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 172,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 260,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   },
   {
    "id": "printful-api",
@@ -460,6 +535,20 @@
      "fetched_at": "2026-09-24T17:01Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.printful.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 261,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/printful-api.json"
   },
   {

@@ -164,6 +164,31 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.assemblyai.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 402,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://assemblyai.com/docs/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 282,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 308
+     }
+    }
    }
   },
   {
@@ -363,6 +388,31 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.cartesia.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 694,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.cartesia.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 569,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -480,7 +530,32 @@
      "url": "https://github.com/deepgram/mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.deepgram.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 402,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://developers.deepgram.com/_mcp/server",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 414,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "elevenlabs-api",
@@ -590,6 +665,31 @@
      "fetched_at": "2026-09-24T16:56Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.elevenlabs.io/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 340,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.elevenlabs.io/v1/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 310,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/elevenlabs-api.json"
   },
   {
@@ -663,6 +763,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://texttospeech.googleapis.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 246,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -749,6 +863,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.hume.ai/v0",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 502,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -822,6 +950,20 @@
      "fetched_at": "2026-09-24T16:56Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.murf.ai/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 481,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/murf-ai-api.json"
   },
   {
@@ -895,7 +1037,21 @@
      "url": "https://github.com/openai/openai-openapi",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.openai.com/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 268,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "resemble-ai-api",
@@ -977,6 +1133,20 @@
      "fetched_at": "2026-09-24T16:56Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://docs.resemble.ai/_mcp/server",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 602,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/resemble-ai-api.json"
   },
   {
@@ -1054,6 +1224,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.rev.ai/speechtotext/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 689,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -1140,6 +1324,20 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://eu1.asr.api.speechmatics.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 532,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   }
  ]

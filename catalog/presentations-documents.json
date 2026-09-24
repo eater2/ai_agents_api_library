@@ -69,6 +69,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://pdf-services.adobe.io",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 308,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -164,7 +178,21 @@
      "url": "https://github.com/ag2-mcp-servers/amazon-textract",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://textract.us-east-1.amazonaws.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 372,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "azure-ai-document-intelligence",
@@ -336,6 +364,31 @@
      "fetched_at": "2026-09-24T16:56Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.cloudconvert.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 335,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.cloudconvert.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 662,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/cloudconvert-api.json"
   },
   {
@@ -426,7 +479,21 @@
      "url": "https://github.com/docusign/OpenAPI-Specifications",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mcp-d.docusign.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 406,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    }
+   }
   },
   {
    "id": "gamma-api",
@@ -527,6 +594,31 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://public-api.gamma.app/v1.0",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 253,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.gamma.app/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 237,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -602,6 +694,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://documentai.googleapis.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 252,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -694,6 +800,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://slides.googleapis.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 264,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 400
+     }
+    },
+    "mcp_remote": {
+     "url": "https://slidesmcp.googleapis.com/mcp/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 270,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -779,6 +910,20 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mcp.llamaindex.ai/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 483,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -878,7 +1023,21 @@
      "url": "https://github.com/D-Diaa/mistral-ocr-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.mistral.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 317,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "pdf-co-api",
@@ -997,6 +1156,20 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.pdf.co/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 407,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -1091,6 +1264,20 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://platform.reducto.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 383,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    }
    }
   },
   {
@@ -1189,6 +1376,31 @@
      "fetched_at": "2026-09-24T16:57Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.slidespeak.co/api/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 584,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.slidespeak.co/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 549,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/slidespeak-api.json"
   },
   {
@@ -1279,7 +1491,21 @@
      "url": "https://github.com/Unstructured-IO/UNS-MCP",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "mcp_remote": {
+     "url": "https://mcp.transform.unstructured.io",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 526,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   }
   }
  ]
 }

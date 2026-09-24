@@ -53,6 +53,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://openapi.akool.com/api/open",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 365,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -136,6 +150,31 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.creatomate.com/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 525,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://api.creatomate.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 499,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -204,6 +243,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.d-id.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 363,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 403
+     }
+    },
+    "mcp_remote": {
+     "url": "https://docs.d-id.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 504,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
    }
   },
   {
@@ -282,6 +346,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://generativelanguage.googleapis.com/v1beta",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 213,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -386,6 +464,31 @@
      "fetched_at": "2026-09-24T16:55Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.heygen.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 339,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.heygen.com/mcp/v1/",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 262,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/heygen-api.json"
   },
   {
@@ -433,6 +536,20 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.klap.app/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 326,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
    }
   },
   {
@@ -557,7 +674,21 @@
      "url": "https://github.com/199-mcp/mcp-kling",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api-singapore.klingai.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 649,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    }
+   }
   },
   {
    "id": "luma-ai-dream-machine-api",
@@ -670,7 +801,21 @@
      "url": "https://github.com/lumalabs/luma-api-mcp",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.lumalabs.ai/dream-machine/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 424,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "minimax-hailuo-api",
@@ -772,7 +917,21 @@
      "url": "https://github.com/MiniMax-AI/MiniMax-MCP",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.minimax.io",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 418,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "pixverse-api",
@@ -855,7 +1014,21 @@
      "url": "https://github.com/PixVerseAI/PixVerse-MCP",
      "fetched_at": "2026-09-24T16:54Z"
     }
-   ]
+   ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://app-api.pixverse.ai",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 318,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    }
+   }
   },
   {
    "id": "runway-api",
@@ -952,6 +1125,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.dev.runwayml.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 299,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.runwayml.com/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 280,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -1036,6 +1234,31 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.shotstack.io/edit/v1",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 790,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.shotstack.io/",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 771,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   },
   {
@@ -1113,6 +1336,31 @@
      "fetched_at": "2026-09-24T16:56Z"
     }
    ],
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://api.synthesia.io/v2",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 491,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 404
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.synthesia.io/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 655,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
+   },
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/synthesia-api.json"
   },
   {
@@ -1195,6 +1443,31 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
+   },
+   "uptime": {
+    "window_days": 30,
+    "api": {
+     "url": "https://tavusapi.com",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 415,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 200
+     }
+    },
+    "mcp_remote": {
+     "url": "https://mcp.tavus.io/mcp",
+     "probes": 1,
+     "up": 1,
+     "median_ms": 316,
+     "last": {
+      "at": "2026-09-24T18:26Z",
+      "up": true,
+      "detail": 401
+     }
+    }
    }
   }
  ]
