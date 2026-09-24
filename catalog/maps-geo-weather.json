@@ -1,252 +1,324 @@
 {
-  "category": {
-    "id": "maps-geo-weather",
-    "name": "Maps, geolocation and weather",
-    "description": "Geocoding, routing, places, map tiles and weather forecasts."
+ "category": {
+  "id": "maps-geo-weather",
+  "name": "Maps, geolocation and weather",
+  "description": "Geocoding, routing, places, map tiles and weather forecasts."
+ },
+ "entries": [
+  {
+   "id": "geoapify",
+   "name": "Geoapify",
+   "homepage": "https://www.geoapify.com",
+   "docs": "https://apidocs.geoapify.com/",
+   "auth": "api_key",
+   "auth_hint": "apiKey query param",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free tier: 3,000 credits/day (~90,000/month), no card required",
+   "sdk": [
+    "javascript"
+   ],
+   "openapi": "https://apidocs.geoapify.com/",
+   "llms_txt": null,
+   "desc_en": "Geocode, search places, and calculate routes/isochrones via REST APIs built on open geodata.",
+   "notes": "",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "geoapify",
-      "name": "Geoapify",
-      "category": "maps-geo-weather",
-      "homepage": "https://www.geoapify.com",
-      "docs": "https://apidocs.geoapify.com/",
-      "auth": "api_key",
-      "auth_hint": "apiKey query param",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free tier: 3,000 credits/day (~90,000/month), no card required",
-      "sdk": [
-        "javascript"
-      ],
-      "openapi": "https://apidocs.geoapify.com/",
-      "llms_txt": null,
-      "desc_en": "Geocode, search places, and calculate routes/isochrones via REST APIs built on open geodata.",
-      "notes": "",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "google-maps-platform",
-      "name": "Google Maps Platform",
-      "category": "maps-geo-weather",
-      "homepage": "https://developers.google.com/maps",
-      "docs": "https://developers.google.com/maps/documentation",
-      "auth": "api_key",
-      "auth_hint": "key query param (OAuth2/IAM for some enterprise/Datasets APIs)",
-      "mcp": {
-        "type": "official",
-        "url": "https://mapstools.googleapis.com/mcp"
-      },
-      "free_tier": "$200 free monthly usage credit across most Maps APIs",
-      "sdk": [
-        "python",
-        "javascript",
-        "java",
-        "go",
-        ".net"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Geocode addresses, get directions/routes, places data, and static/dynamic maps via REST APIs or Google's remote MCP server.",
-      "notes": "Google also has a separate Code Assist MCP (mapscodeassist.googleapis.com/mcp) for docs grounding, distinct from this Maps Grounding Lite data MCP.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "here-location-services",
-      "name": "HERE Location Services",
-      "category": "maps-geo-weather",
-      "homepage": "https://developer.here.com",
-      "docs": "https://www.here.com/docs",
-      "auth": "api_key",
-      "auth_hint": "apiKey query param (OAuth2 app tokens also supported)",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free tier: roughly 30,000 transactions/month on the Base/Freemium plan",
-      "sdk": [
-        "javascript",
-        "python",
-        "java",
-        "swift",
-        "kotlin"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Geocode, route, and search places worldwide via REST APIs and SDKs.",
-      "notes": "Free-tier limits and pricing vary by plan/signup date; confirm current allowance on the dashboard.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "mapbox",
-      "name": "Mapbox",
-      "category": "maps-geo-weather",
-      "homepage": "https://www.mapbox.com",
-      "docs": "https://docs.mapbox.com/api/",
-      "auth": "api_key",
-      "auth_hint": "access_token query param or Bearer token",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/mapbox/mcp-server"
-      },
-      "free_tier": "free tier: monthly free quotas per API (e.g. 50,000 map loads/month)",
-      "sdk": [
-        "javascript",
-        "swift",
-        "android"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Geocode, route, and render maps/POI search via REST APIs, SDKs, or an official MCP server.",
-      "notes": "A separate official Mapbox Docs MCP server also exists for documentation Q&A.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "national-weather-service-api-nws",
-      "name": "National Weather Service API (NWS)",
-      "category": "maps-geo-weather",
-      "homepage": "https://www.weather.gov/documentation/services-web-api",
-      "docs": "https://www.weather.gov/documentation/services-web-api",
-      "auth": "none",
-      "auth_hint": "none, but requires a descriptive User-Agent header",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free, no key, no rate-limit tier (fair-use)",
-      "sdk": [],
-      "openapi": "https://api.weather.gov/openapi.json",
-      "llms_txt": null,
-      "desc_en": "Fetch official US government weather forecasts, alerts, and observations via a free public REST API.",
-      "notes": "US-only coverage; no API key needed, just a valid User-Agent identifying your app. Missing from candidate list despite being a very commonly used free weather API.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "open-meteo",
-      "name": "Open-Meteo",
-      "category": "maps-geo-weather",
-      "homepage": "https://open-meteo.com",
-      "docs": "https://open-meteo.com/en/docs",
-      "auth": "none",
-      "auth_hint": "none for non-commercial use; API key + 'customer-' host prefix for commercial tier",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free, no key for non-commercial use (fair-use limits apply)",
-      "sdk": [
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Fetch weather forecasts, historical weather, and climate data worldwide via a free open REST API, no key required.",
-      "notes": "Commercial use requires an API key and the 'customer-api.open-meteo.com' host.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "openrouteservice",
-      "name": "OpenRouteService",
-      "category": "maps-geo-weather",
-      "homepage": "https://openrouteservice.org",
-      "docs": "https://openrouteservice.org/dev/#/api-docs",
-      "auth": "api_key",
-      "auth_hint": "Authorization header with API key",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free tier: ~2,000 requests/day (varies by endpoint), signup required",
-      "sdk": [
-        "python",
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Calculate routes, isochrones, distance matrices, and geocoding over OpenStreetMap data via a free REST API.",
-      "notes": "Rate limits vary per endpoint (directions vs isochrones vs matrix); self-hosting also possible.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "openstreetmap-nominatim",
-      "name": "OpenStreetMap Nominatim",
-      "category": "maps-geo-weather",
-      "homepage": "https://nominatim.org",
-      "docs": "https://nominatim.org/release-docs/latest/api/Overview/",
-      "auth": "none",
-      "auth_hint": "none, but must send a valid User-Agent/Referer identifying the app",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free, no key; public demo server capped at 1 request/second, bulk use prohibited",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Geocode and reverse-geocode addresses from OpenStreetMap data via a free public REST API.",
-      "notes": "Public demo instance is fair-use only (1 req/s, no bulk/systematic queries); self-host or use a commercial provider for production volume.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "openweathermap-api",
-      "name": "OpenWeatherMap API",
-      "category": "maps-geo-weather",
-      "homepage": "https://openweathermap.org/api",
-      "docs": "https://openweathermap.org/api",
-      "auth": "api_key",
-      "auth_hint": "appid query param",
-      "mcp": {
-        "type": "community",
-        "url": "https://github.com/robertn702/mcp-openweathermap"
-      },
-      "free_tier": "free tier: 1,000 calls/day (60 calls/min) on current weather/forecast",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Fetch current weather, forecasts, and historical/air-quality data for any location via a REST API.",
-      "notes": "One Call API 3.0 has a separate 1,000 calls/day free allotment but requires adding billing details.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "overpass-api-osm",
-      "name": "Overpass API (OSM)",
-      "category": "maps-geo-weather",
-      "homepage": "https://wiki.openstreetmap.org/wiki/Overpass_API",
-      "docs": "https://wiki.openstreetmap.org/wiki/Overpass_API",
-      "auth": "none",
-      "auth_hint": "none",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free, no key; public instances are fair-use/rate-limited",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Run custom queries (Overpass QL) over OpenStreetMap data - POIs, roads, boundaries - via a public read-only API.",
-      "notes": "No official SLA; heavy queries can be throttled or time out on public servers.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "tomorrow-io-api",
-      "name": "Tomorrow.io API",
-      "category": "maps-geo-weather",
-      "homepage": "https://www.tomorrow.io/weather-api/",
-      "docs": "https://docs.tomorrow.io",
-      "auth": "api_key",
-      "auth_hint": "apikey query param",
-      "mcp": {
-        "type": "official",
-        "url": "https://www.pulsemcp.com/servers/tomorrow-io"
-      },
-      "free_tier": "free tier: 500 requests/day, 3 req/sec, 1 monitored location/alert",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Get hyperlocal weather forecasts, historical data, and alerts for any coordinates via REST API or an official MCP server.",
-      "notes": "No self-serve tier between Free and Enterprise - scaling past free requires a sales call.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "google-maps-platform",
+   "name": "Google Maps Platform",
+   "homepage": "https://developers.google.com/maps",
+   "docs": "https://developers.google.com/maps/documentation",
+   "auth": "api_key",
+   "auth_hint": "key query param (OAuth2/IAM for some enterprise/Datasets APIs)",
+   "mcp": {
+    "type": "official",
+    "url": "https://mapstools.googleapis.com/mcp"
+   },
+   "free_tier": "$200 free monthly usage credit across most Maps APIs",
+   "sdk": [
+    "python",
+    "javascript",
+    "java",
+    "go",
+    ".net"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Geocode addresses, get directions/routes, places data, and static/dynamic maps via REST APIs or Google's remote MCP server.",
+   "notes": "Google also has a separate Code Assist MCP (mapscodeassist.googleapis.com/mcp) for docs grounding, distinct from this Maps Grounding Lite data MCP.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "here-location-services",
+   "name": "HERE Location Services",
+   "homepage": "https://developer.here.com",
+   "docs": "https://www.here.com/docs",
+   "auth": "api_key",
+   "auth_hint": "apiKey query param (OAuth2 app tokens also supported)",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free tier: roughly 30,000 transactions/month on the Base/Freemium plan",
+   "sdk": [
+    "javascript",
+    "python",
+    "java",
+    "swift",
+    "kotlin"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Geocode, route, and search places worldwide via REST APIs and SDKs.",
+   "notes": "Free-tier limits and pricing vary by plan/signup date; confirm current allowance on the dashboard.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "mapbox",
+   "name": "Mapbox",
+   "homepage": "https://www.mapbox.com",
+   "docs": "https://docs.mapbox.com/api/",
+   "auth": "api_key",
+   "auth_hint": "access_token query param or Bearer token",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/mapbox/mcp-server"
+   },
+   "free_tier": "free tier: monthly free quotas per API (e.g. 50,000 map loads/month)",
+   "sdk": [
+    "javascript",
+    "swift",
+    "android"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Geocode, route, and render maps/POI search via REST APIs, SDKs, or an official MCP server.",
+   "notes": "A separate official Mapbox Docs MCP server also exists for documentation Q&A.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "national-weather-service-api-nws",
+   "name": "National Weather Service API (NWS)",
+   "homepage": "https://www.weather.gov/documentation/services-web-api",
+   "docs": "https://www.weather.gov/documentation/services-web-api",
+   "auth": "none",
+   "auth_hint": "none, but requires a descriptive User-Agent header",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free, no key, no rate-limit tier (fair-use)",
+   "sdk": [],
+   "openapi": "https://api.weather.gov/openapi.json",
+   "llms_txt": null,
+   "desc_en": "Fetch official US government weather forecasts, alerts, and observations via a free public REST API.",
+   "notes": "US-only coverage; no API key needed, just a valid User-Agent identifying your app. Missing from candidate list despite being a very commonly used free weather API.",
+   "verified": "2026-09-24",
+   "no_auth": true,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
+  },
+  {
+   "id": "open-meteo",
+   "name": "Open-Meteo",
+   "homepage": "https://open-meteo.com",
+   "docs": "https://open-meteo.com/en/docs",
+   "auth": "none",
+   "auth_hint": "none for non-commercial use; API key + 'customer-' host prefix for commercial tier",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free, no key for non-commercial use (fair-use limits apply)",
+   "sdk": [
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Fetch weather forecasts, historical weather, and climate data worldwide via a free open REST API, no key required.",
+   "notes": "Commercial use requires an API key and the 'customer-api.open-meteo.com' host.",
+   "verified": "2026-09-24",
+   "no_auth": true,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "openrouteservice",
+   "name": "OpenRouteService",
+   "homepage": "https://openrouteservice.org",
+   "docs": "https://openrouteservice.org/dev/#/api-docs",
+   "auth": "api_key",
+   "auth_hint": "Authorization header with API key",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free tier: ~2,000 requests/day (varies by endpoint), signup required",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Calculate routes, isochrones, distance matrices, and geocoding over OpenStreetMap data via a free REST API.",
+   "notes": "Rate limits vary per endpoint (directions vs isochrones vs matrix); self-hosting also possible.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "openstreetmap-nominatim",
+   "name": "OpenStreetMap Nominatim",
+   "homepage": "https://nominatim.org",
+   "docs": "https://nominatim.org/release-docs/latest/api/Overview/",
+   "auth": "none",
+   "auth_hint": "none, but must send a valid User-Agent/Referer identifying the app",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free, no key; public demo server capped at 1 request/second, bulk use prohibited",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Geocode and reverse-geocode addresses from OpenStreetMap data via a free public REST API.",
+   "notes": "Public demo instance is fair-use only (1 req/s, no bulk/systematic queries); self-host or use a commercial provider for production volume.",
+   "verified": "2026-09-24",
+   "no_auth": true,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "openweathermap-api",
+   "name": "OpenWeatherMap API",
+   "homepage": "https://openweathermap.org/api",
+   "docs": "https://openweathermap.org/api",
+   "auth": "api_key",
+   "auth_hint": "appid query param",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/robertn702/mcp-openweathermap"
+   },
+   "free_tier": "free tier: 1,000 calls/day (60 calls/min) on current weather/forecast",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Fetch current weather, forecasts, and historical/air-quality data for any location via a REST API.",
+   "notes": "One Call API 3.0 has a separate 1,000 calls/day free allotment but requires adding billing details.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "overpass-api-osm",
+   "name": "Overpass API (OSM)",
+   "homepage": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+   "docs": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+   "auth": "none",
+   "auth_hint": "none",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free, no key; public instances are fair-use/rate-limited",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Run custom queries (Overpass QL) over OpenStreetMap data - POIs, roads, boundaries - via a public read-only API.",
+   "notes": "No official SLA; heavy queries can be throttled or time out on public servers.",
+   "verified": "2026-09-24",
+   "no_auth": true,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "tomorrow-io-api",
+   "name": "Tomorrow.io API",
+   "homepage": "https://www.tomorrow.io/weather-api/",
+   "docs": "https://docs.tomorrow.io",
+   "auth": "api_key",
+   "auth_hint": "apikey query param",
+   "mcp": {
+    "type": "official",
+    "url": "https://www.pulsemcp.com/servers/tomorrow-io"
+   },
+   "free_tier": "free tier: 500 requests/day, 3 req/sec, 1 monitored location/alert",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Get hyperlocal weather forecasts, historical data, and alerts for any coordinates via REST API or an official MCP server.",
+   "notes": "No self-serve tier between Free and Enterprise - scaling past free requires a sales call.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  }
+ ]
 }

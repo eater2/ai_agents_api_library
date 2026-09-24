@@ -1,335 +1,438 @@
 {
-  "category": {
-    "id": "video-generation",
-    "name": "Video generation and editing",
-    "description": "Text/image-to-video models, talking avatars, programmatic video rendering and video hosting."
+ "category": {
+  "id": "video-generation",
+  "name": "Video generation and editing",
+  "description": "Text/image-to-video models, talking avatars, programmatic video rendering and video hosting."
+ },
+ "entries": [
+  {
+   "id": "akool-api",
+   "name": "Akool API",
+   "homepage": "https://akool.com",
+   "docs": "https://docs.akool.com",
+   "auth": "api_key",
+   "auth_hint": "x-api-key: <api_key> (or Client ID/Secret to obtain a token, then Authorization: Bearer <token>)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free Basic plan with limited credits, no card required",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate face-swap, talking avatar, and video-translation content programmatically via REST API.",
+   "notes": "Credit-based usage across face swap, avatar video, image generation, video translation endpoints.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "akool-api",
-      "name": "Akool API",
-      "category": "video-generation",
-      "homepage": "https://akool.com",
-      "docs": "https://docs.akool.com",
-      "auth": "api_key",
-      "auth_hint": "x-api-key: <api_key> (or Client ID/Secret to obtain a token, then Authorization: Bearer <token>)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free Basic plan with limited credits, no card required",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate face-swap, talking avatar, and video-translation content programmatically via REST API.",
-      "notes": "Credit-based usage across face swap, avatar video, image generation, video translation endpoints.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "creatomate-api",
-      "name": "Creatomate API",
-      "category": "video-generation",
-      "homepage": "https://creatomate.com",
-      "docs": "https://creatomate.com/docs/api/rest-api/authentication",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <api_key>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free trial, 50 API credits",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Programmatically generate and render videos/images from templates via REST API.",
-      "notes": "Per-project API keys; ~14 credits per minute of 720p video.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "d-id-api",
-      "name": "D-ID API",
-      "category": "video-generation",
-      "homepage": "https://www.d-id.com",
-      "docs": "https://docs.d-id.com",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Basic <api_key> (generated from Account page)",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.d-id.com/mcp"
-      },
-      "free_tier": "14-day trial with 3 minutes of video credits, then paid only (~$5.90/min API)",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Animate photos into talking-head videos with lip-sync from text or audio via REST API.",
-      "notes": "No permanent free plan; trial has full-screen watermark.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "google-veo-gemini-api-vertex-ai",
-      "name": "Google Veo (Gemini API / Vertex AI)",
-      "category": "video-generation",
-      "homepage": "https://ai.google.dev/gemini-api/docs/video",
-      "docs": "https://ai.google.dev/gemini-api/docs/video",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Gemini API: x-goog-api-key header or ?key= param. Vertex AI alternative uses cloud_iam (service-account OAuth2 access token).",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "no free tier for video; Veo generation requires a paid Gemini API / Vertex AI billing account",
-      "sdk": [
-        "python",
-        "node",
-        "go",
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate video from text or image prompts via Gemini API (api key) or Vertex AI (cloud IAM), incl. Veo 3.1 scene extension.",
-      "notes": "Same underlying model reachable via two auth paths: Gemini API (simple api_key, good for agents) or Vertex AI (cloud_iam, enterprise/region control).",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "heygen-api",
-      "name": "HeyGen API",
-      "category": "video-generation",
-      "homepage": "https://www.heygen.com",
-      "docs": "https://developers.heygen.com",
-      "auth": "api_key+oauth2",
-      "auth_hint": "API key: X-Api-Key: <key> (bills to API plan). OAuth2: Authorization: Bearer <token> via https://api2.heygen.com/v1/oauth/token (bills to user's subscription credits).",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.heygen.com/mcp/v1/"
-      },
-      "free_tier": "no free API credits since Feb 2026; pay-as-you-go from $5, $0.50-$0.99/credit. Free plan (3 videos/mo) exists but is for the web app, not standalone API.",
-      "sdk": [
-        "python",
-        "node"
-      ],
-      "openapi": null,
-      "llms_txt": "https://developers.heygen.com/llms.txt",
-      "desc_en": "Create AI avatar/talking-head videos from text or audio, manage avatars and voices, via REST API.",
-      "notes": "Official remote MCP server uses OAuth (no API key needed) and spends the user's plan credits directly, separate from API-key billing.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "klap-api",
-      "name": "Klap API",
-      "category": "video-generation",
-      "homepage": "https://klap.app",
-      "docs": "https://docs.klap.app",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <api_key>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "check pricing (no free API tier found; consumer plans from $14/mo, API is usage-based)",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Automatically turn long videos into short clips with captions and reframing via REST API.",
-      "notes": "Base URL https://api.klap.app/v2.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "kling-ai-api",
-      "name": "Kling AI API",
-      "category": "video-generation",
-      "homepage": "https://klingai.com",
-      "docs": "https://app.klingai.com/global/dev/document-api/quickStart/userManual",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <JWT> - JWT signed (HS256) client-side from an Access Key/Secret Key pair issued in the Kling Open Platform console",
-      "mcp": {
-        "type": "community",
-        "url": "https://github.com/199-mcp/mcp-kling"
-      },
-      "free_tier": "paid only; prepaid credit packages from $0.14/unit, e.g. 5,000 units/$700, 180-day validity",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API with JWT-signed requests.",
-      "notes": "Auth is JWT built from an Access/Secret key pair, not a static bearer token - more setup than typical API-key services.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "luma-ai-dream-machine-api",
-      "name": "Luma AI Dream Machine API",
-      "category": "video-generation",
-      "homepage": "https://lumalabs.ai",
-      "docs": "https://docs.lumalabs.ai",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <API_KEY> (key from platform.lumalabs.ai)",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/lumalabs/luma-api-mcp"
-      },
-      "free_tier": "paid only; pay-as-you-go, ~$0.60-$1.05 per 5s clip (Ray 2), $5,000/mo cap on default Build tier",
-      "sdk": [
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate and extend AI videos from text or start/end keyframe images via async REST API (Ray 2).",
-      "notes": "API credits are separate from Dream Machine subscription credits (do not transfer); failed generations are refunded.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "minimax-hailuo-api",
-      "name": "MiniMax Hailuo API",
-      "category": "video-generation",
-      "homepage": "https://www.minimax.io",
-      "docs": "https://platform.minimax.io/docs/api-reference/video-generation-t2v",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/MiniMax-AI/MiniMax-MCP"
-      },
-      "free_tier": "new accounts get 50 signup credits (~1 short clip); 5s video costs ~45-70 credits, 1000 credits=$1",
-      "sdk": [
-        "python",
-        "node"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Async text-to-video, image-to-video and subject-reference video generation via REST API, up to 1080p.",
-      "notes": "Region-specific hosts/keys: platform.minimax.io / api.minimax.io vs intl.minimaxi.com for international accounts - key and host must match.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "mux-video-api",
-      "name": "Mux Video API",
-      "category": "video-generation",
-      "homepage": "https://www.mux.com",
-      "docs": "https://www.mux.com/docs",
-      "auth": "api_key",
-      "auth_hint": "HTTP Basic auth: <token_id>:<token_secret>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.mux.com"
-      },
-      "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
-      "sdk": [
-        "node",
-        "python",
-        "go",
-        "ruby",
-        "php"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST.",
-      "notes": "Hosting/streaming infrastructure; does not generate video from prompts.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "pixverse-api",
-      "name": "PixVerse API",
-      "category": "video-generation",
-      "homepage": "https://pixverse.ai",
-      "docs": "https://docs.platform.pixverse.ai",
-      "auth": "api_key",
-      "auth_hint": "API key from platform.pixverse.ai, sent as bearer/header per docs",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/PixVerseAI/PixVerse-MCP"
-      },
-      "free_tier": "paid only; prepaid credits from $10, ~$0.28-$0.45 per 5s clip",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate text-to-video, image-to-video, transition and fusion clips (360p-1080p) via REST API.",
-      "notes": "Developer API credit pool (Essential/Scale/Business) is separate from consumer subscription plans.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "runway-api",
-      "name": "Runway API",
-      "category": "video-generation",
-      "homepage": "https://runwayml.com",
-      "docs": "https://docs.dev.runwayml.com",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <API_KEY> plus required X-Runway-Version header",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.runwayml.com/mcp"
-      },
-      "free_tier": "no free tier; $10 minimum credit top-up, $0.01/credit",
-      "sdk": [
-        "python",
-        "node"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate and edit images/video (Gen-4.5) via async task-based REST API: submit, poll, download.",
-      "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Official MCP also usable from Claude/ChatGPT/Cursor.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "shotstack-api",
-      "name": "Shotstack API",
-      "category": "video-generation",
-      "homepage": "https://shotstack.io",
-      "docs": "https://shotstack.io/docs/api/",
-      "auth": "api_key",
-      "auth_hint": "x-api-key: <api_key>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.shotstack.io/"
-      },
-      "free_tier": "10 free credits (valid 30 days), then pay-as-you-go or subscription",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Compose Edit JSON timelines to programmatically render, edit, and template videos, images and audio.",
-      "notes": "Separate stage (sandbox, watermarked) and production API keys; MCP server is in beta.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "synthesia-api",
-      "name": "Synthesia API",
-      "category": "video-generation",
-      "homepage": "https://www.synthesia.io",
-      "docs": "https://docs.synthesia.io/reference/introduction",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <api_key>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "check pricing (no permanent free API tier; paid plans include API minutes)",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate AI avatar talking-head videos from text scripts via REST API; supports custom avatars and voices.",
-      "notes": "API access tied to paid plans; base URL https://api.synthesia.io/v2.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "tavus-api",
-      "name": "Tavus API",
-      "category": "video-generation",
-      "homepage": "https://www.tavus.io",
-      "docs": "https://docs.tavus.io/api-reference/overview",
-      "auth": "api_key",
-      "auth_hint": "x-api-key: <api_key>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.tavus.io/mcp"
-      },
-      "free_tier": "check pricing",
-      "sdk": [
-        "typescript",
-        "javascript",
-        "python"
-      ],
-      "openapi": "https://docs.tavus.io/openapi.yaml",
-      "llms_txt": "https://docs.tavus.io/llms-full.txt",
-      "desc_en": "Create AI video replicas and real-time conversational video agents (CVI) via REST API.",
-      "notes": "llms_txt found at /llms-full.txt rather than /llms.txt exactly.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "creatomate-api",
+   "name": "Creatomate API",
+   "homepage": "https://creatomate.com",
+   "docs": "https://creatomate.com/docs/api/rest-api/authentication",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <api_key>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free trial, 50 API credits",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Programmatically generate and render videos/images from templates via REST API.",
+   "notes": "Per-project API keys; ~14 credits per minute of 720p video.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "d-id-api",
+   "name": "D-ID API",
+   "homepage": "https://www.d-id.com",
+   "docs": "https://docs.d-id.com",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Basic <api_key> (generated from Account page)",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.d-id.com/mcp"
+   },
+   "free_tier": "14-day trial with 3 minutes of video credits, then paid only (~$5.90/min API)",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Animate photos into talking-head videos with lip-sync from text or audio via REST API.",
+   "notes": "No permanent free plan; trial has full-screen watermark.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "google-veo-gemini-api-vertex-ai",
+   "name": "Google Veo (Gemini API / Vertex AI)",
+   "homepage": "https://ai.google.dev/gemini-api/docs/video",
+   "docs": "https://ai.google.dev/gemini-api/docs/video",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Gemini API: x-goog-api-key header or ?key= param. Vertex AI alternative uses cloud_iam (service-account OAuth2 access token).",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "no free tier for video; Veo generation requires a paid Gemini API / Vertex AI billing account",
+   "sdk": [
+    "python",
+    "node",
+    "go",
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate video from text or image prompts via Gemini API (api key) or Vertex AI (cloud IAM), incl. Veo 3.1 scene extension.",
+   "notes": "Same underlying model reachable via two auth paths: Gemini API (simple api_key, good for agents) or Vertex AI (cloud_iam, enterprise/region control).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "heygen-api",
+   "name": "HeyGen API",
+   "homepage": "https://www.heygen.com",
+   "docs": "https://developers.heygen.com",
+   "auth": "api_key+oauth2",
+   "auth_hint": "API key: X-Api-Key: <key> (bills to API plan). OAuth2: Authorization: Bearer <token> via https://api2.heygen.com/v1/oauth/token (bills to user's subscription credits).",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.heygen.com/mcp/v1/"
+   },
+   "free_tier": "no free API credits since Feb 2026; pay-as-you-go from $5, $0.50-$0.99/credit. Free plan (3 videos/mo) exists but is for the web app, not standalone API.",
+   "sdk": [
+    "python",
+    "node"
+   ],
+   "openapi": null,
+   "llms_txt": "https://developers.heygen.com/llms.txt",
+   "desc_en": "Create AI avatar/talking-head videos from text or audio, manage avatars and voices, via REST API.",
+   "notes": "Official remote MCP server uses OAuth (no API key needed) and spends the user's plan credits directly, separate from API-key billing.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "klap-api",
+   "name": "Klap API",
+   "homepage": "https://klap.app",
+   "docs": "https://docs.klap.app",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <api_key>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "check pricing (no free API tier found; consumer plans from $14/mo, API is usage-based)",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Automatically turn long videos into short clips with captions and reframing via REST API.",
+   "notes": "Base URL https://api.klap.app/v2.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "kling-ai-api",
+   "name": "Kling AI API",
+   "homepage": "https://klingai.com",
+   "docs": "https://app.klingai.com/global/dev/document-api/quickStart/userManual",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <JWT> - JWT signed (HS256) client-side from an Access Key/Secret Key pair issued in the Kling Open Platform console",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/199-mcp/mcp-kling"
+   },
+   "free_tier": "paid only; prepaid credit packages from $0.14/unit, e.g. 5,000 units/$700, 180-day validity",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API with JWT-signed requests.",
+   "notes": "Auth is JWT built from an Access/Secret key pair, not a static bearer token - more setup than typical API-key services.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "luma-ai-dream-machine-api",
+   "name": "Luma AI Dream Machine API",
+   "homepage": "https://lumalabs.ai",
+   "docs": "https://docs.lumalabs.ai",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <API_KEY> (key from platform.lumalabs.ai)",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/lumalabs/luma-api-mcp"
+   },
+   "free_tier": "paid only; pay-as-you-go, ~$0.60-$1.05 per 5s clip (Ray 2), $5,000/mo cap on default Build tier",
+   "sdk": [
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate and extend AI videos from text or start/end keyframe images via async REST API (Ray 2).",
+   "notes": "API credits are separate from Dream Machine subscription credits (do not transfer); failed generations are refunded.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "minimax-hailuo-api",
+   "name": "MiniMax Hailuo API",
+   "homepage": "https://www.minimax.io",
+   "docs": "https://platform.minimax.io/docs/api-reference/video-generation-t2v",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/MiniMax-AI/MiniMax-MCP"
+   },
+   "free_tier": "new accounts get 50 signup credits (~1 short clip); 5s video costs ~45-70 credits, 1000 credits=$1",
+   "sdk": [
+    "python",
+    "node"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Async text-to-video, image-to-video and subject-reference video generation via REST API, up to 1080p.",
+   "notes": "Region-specific hosts/keys: platform.minimax.io / api.minimax.io vs intl.minimaxi.com for international accounts - key and host must match.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "mux-video-api",
+   "name": "Mux Video API",
+   "homepage": "https://www.mux.com",
+   "docs": "https://www.mux.com/docs",
+   "auth": "api_key",
+   "auth_hint": "HTTP Basic auth: <token_id>:<token_secret>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.mux.com"
+   },
+   "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
+   "sdk": [
+    "node",
+    "python",
+    "go",
+    "ruby",
+    "php"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST.",
+   "notes": "Hosting/streaming infrastructure; does not generate video from prompts.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "pixverse-api",
+   "name": "PixVerse API",
+   "homepage": "https://pixverse.ai",
+   "docs": "https://docs.platform.pixverse.ai",
+   "auth": "api_key",
+   "auth_hint": "API key from platform.pixverse.ai, sent as bearer/header per docs",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/PixVerseAI/PixVerse-MCP"
+   },
+   "free_tier": "paid only; prepaid credits from $10, ~$0.28-$0.45 per 5s clip",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate text-to-video, image-to-video, transition and fusion clips (360p-1080p) via REST API.",
+   "notes": "Developer API credit pool (Essential/Scale/Business) is separate from consumer subscription plans.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "runway-api",
+   "name": "Runway API",
+   "homepage": "https://runwayml.com",
+   "docs": "https://docs.dev.runwayml.com",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <API_KEY> plus required X-Runway-Version header",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.runwayml.com/mcp"
+   },
+   "free_tier": "no free tier; $10 minimum credit top-up, $0.01/credit",
+   "sdk": [
+    "python",
+    "node"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate and edit images/video (Gen-4.5) via async task-based REST API: submit, poll, download.",
+   "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Official MCP also usable from Claude/ChatGPT/Cursor.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "shotstack-api",
+   "name": "Shotstack API",
+   "homepage": "https://shotstack.io",
+   "docs": "https://shotstack.io/docs/api/",
+   "auth": "api_key",
+   "auth_hint": "x-api-key: <api_key>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.shotstack.io/"
+   },
+   "free_tier": "10 free credits (valid 30 days), then pay-as-you-go or subscription",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Compose Edit JSON timelines to programmatically render, edit, and template videos, images and audio.",
+   "notes": "Separate stage (sandbox, watermarked) and production API keys; MCP server is in beta.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "synthesia-api",
+   "name": "Synthesia API",
+   "homepage": "https://www.synthesia.io",
+   "docs": "https://docs.synthesia.io/reference/introduction",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <api_key>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "check pricing (no permanent free API tier; paid plans include API minutes)",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate AI avatar talking-head videos from text scripts via REST API; supports custom avatars and voices.",
+   "notes": "API access tied to paid plans; base URL https://api.synthesia.io/v2.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "tavus-api",
+   "name": "Tavus API",
+   "homepage": "https://www.tavus.io",
+   "docs": "https://docs.tavus.io/api-reference/overview",
+   "auth": "api_key",
+   "auth_hint": "x-api-key: <api_key>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.tavus.io/mcp"
+   },
+   "free_tier": "check pricing",
+   "sdk": [
+    "typescript",
+    "javascript",
+    "python"
+   ],
+   "openapi": "https://docs.tavus.io/openapi.yaml",
+   "llms_txt": "https://docs.tavus.io/llms-full.txt",
+   "desc_en": "Create AI video replicas and real-time conversational video agents (CVI) via REST API.",
+   "notes": "llms_txt found at /llms-full.txt rather than /llms.txt exactly.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  }
+ ]
 }

@@ -1,209 +1,265 @@
 {
-  "category": {
-    "id": "architecture-cad-bim",
-    "name": "Architecture, CAD and BIM",
-    "description": "Building information models, CAD geometry, construction management and GIS platforms with programmatic access."
+ "category": {
+  "id": "architecture-cad-bim",
+  "name": "Architecture, CAD and BIM",
+  "description": "Building information models, CAD geometry, construction management and GIS platforms with programmatic access."
+ },
+ "entries": [
+  {
+   "id": "autodesk-platform-services-aps",
+   "name": "Autodesk Platform Services (APS)",
+   "homepage": "https://aps.autodesk.com",
+   "docs": "https://aps.autodesk.com/en/docs/",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <token> (2-legged or 3-legged OAuth2)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free trial credits, then pay-as-you-go",
+   "sdk": [
+    "javascript",
+    "dotnet"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Upload, translate, view and automate CAD/BIM files (Model Derivative, Data Management, Design Automation) via REST APIs.",
+   "notes": "Successor to Autodesk Forge; requires an Autodesk account and app registration in the APS console.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "autodesk-platform-services-aps",
-      "name": "Autodesk Platform Services (APS)",
-      "category": "architecture-cad-bim",
-      "homepage": "https://aps.autodesk.com",
-      "docs": "https://aps.autodesk.com/en/docs/",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <token> (2-legged or 3-legged OAuth2)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free trial credits, then pay-as-you-go",
-      "sdk": [
-        "javascript",
-        "dotnet"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Upload, translate, view and automate CAD/BIM files (Model Derivative, Data Management, Design Automation) via REST APIs.",
-      "notes": "Successor to Autodesk Forge; requires an Autodesk account and app registration in the APS console.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "bentley-itwin-platform-apis",
-      "name": "Bentley iTwin Platform APIs",
-      "category": "architecture-cad-bim",
-      "homepage": "https://developer.bentley.com",
-      "docs": "https://developer.bentley.com/apis/",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <token> (OAuth2 via Bentley IMS)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free developer sign-up/trial, then consumption-based pricing",
-      "sdk": [
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Create, manage and query digital twins, iModels and reality/reporting data for infrastructure projects via REST APIs.",
-      "notes": "Built on iTwin.js; free developer account, but production data volumes/usage are billed.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "esri-arcgis-location-platform",
-      "name": "Esri ArcGIS Location Platform",
-      "category": "architecture-cad-bim",
-      "homepage": "https://location.arcgis.com",
-      "docs": "https://developers.arcgis.com/documentation/",
-      "auth": "api_key+oauth2",
-      "auth_hint": "API key (token param) or OAuth2 Bearer token",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier with monthly free credits, then usage-based pricing",
-      "sdk": [
-        "javascript",
-        "python",
-        "dotnet",
-        "swift",
-        "kotlin"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
-      "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "onshape-rest-api",
-      "name": "Onshape REST API",
-      "category": "architecture-cad-bim",
-      "homepage": "https://onshape-public.github.io/docs/",
-      "docs": "https://onshape-public.github.io/docs/",
-      "auth": "api_key+oauth2",
-      "auth_hint": "HMAC-signed API key pair (access/secret) for personal scripts, or OAuth2 Bearer token for published apps",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier (public documents only); private documents need a paid plan",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Create, read and modify Onshape CAD documents, parts, assemblies and drawings programmatically via REST API.",
-      "notes": "Free-tier API access is limited to public documents; private/commercial use needs a paid Onshape subscription.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "procore-api",
-      "name": "Procore API",
-      "category": "architecture-cad-bim",
-      "homepage": "https://developers.procore.com",
-      "docs": "https://developers.procore.com/reference/rest/v1",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <token> (OAuth2 authorization code / client credentials)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free developer sandbox; production requires customer's paid Procore plan",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Read and write construction project data - RFIs, submittals, drawings, budgets, schedules - via REST API.",
-      "notes": "Requires joining the Procore Developer Program and OAuth app approval for production scopes; sandbox is free.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "rhino-compute-mcneel",
-      "name": "Rhino.Compute (McNeel)",
-      "category": "architecture-cad-bim",
-      "homepage": "https://www.rhino3d.com/compute",
-      "docs": "https://developer.rhino3d.com/guides/compute/",
-      "auth": "api_key",
-      "auth_hint": "optional RhinoComputeKey header; endpoint is otherwise open once deployed",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "self-hosted only; requires a Rhino license, cloud deployment billed by core-hour",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Run Rhino/Grasshopper geometry operations headlessly via a stateless REST API you deploy yourself.",
-      "notes": "Not a hosted SaaS signup - must self-host on Windows/Linux (IIS, Azure, AWS); requires a Rhino license.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "speckle-api",
-      "name": "Speckle API",
-      "category": "architecture-cad-bim",
-      "homepage": "https://speckle.systems",
-      "docs": "https://docs.speckle.systems/dev/",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <personal access token>, or OAuth2 for published apps",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free Explore plan (1 project, 3 users), unlimited API calls",
-      "sdk": [
-        "python",
-        "javascript",
-        "dotnet"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.speckle.systems/llms.txt",
-      "desc_en": "Send, receive and query 3D/BIM model data across CAD tools (Revit, Rhino, Grasshopper, Tekla) via GraphQL API and SDKs.",
-      "notes": "Open-source data platform; free tier has unlimited API calls but limits project/user counts.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "trimble-connect-api",
-      "name": "Trimble Connect API",
-      "category": "architecture-cad-bim",
-      "homepage": "https://developer.trimble.com",
-      "docs": "https://developer.trimble.com/docs/connect",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <token> (Trimble Identity OAuth2)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "check pricing",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Manage Trimble Connect projects, files, BIM models, issues/topics and metadata via REST APIs (Core, Model, Organizer).",
-      "notes": "Requires a Trimble Identity developer account and a registered application.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "zoo-text-to-cad-api-kittycad",
-      "name": "Zoo Text-to-CAD API (KittyCAD)",
-      "category": "architecture-cad-bim",
-      "homepage": "https://zoo.dev",
-      "docs": "https://zoo.dev/docs/api",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "start free trial credits, then usage-based pay-as-you-go",
-      "sdk": [
-        "python",
-        "typescript",
-        "rust",
-        "go"
-      ],
-      "openapi": "https://api.zoo.dev",
-      "llms_txt": null,
-      "desc_en": "Generate 3D CAD models from text prompts and run modeling/file-conversion operations via REST API.",
-      "notes": "ML endpoints handle text-to-CAD generation; base API URL is api.zoo.dev, OpenAPI schema served from there.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "bentley-itwin-platform-apis",
+   "name": "Bentley iTwin Platform APIs",
+   "homepage": "https://developer.bentley.com",
+   "docs": "https://developer.bentley.com/apis/",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <token> (OAuth2 via Bentley IMS)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free developer sign-up/trial, then consumption-based pricing",
+   "sdk": [
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Create, manage and query digital twins, iModels and reality/reporting data for infrastructure projects via REST APIs.",
+   "notes": "Built on iTwin.js; free developer account, but production data volumes/usage are billed.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "esri-arcgis-location-platform",
+   "name": "Esri ArcGIS Location Platform",
+   "homepage": "https://location.arcgis.com",
+   "docs": "https://developers.arcgis.com/documentation/",
+   "auth": "api_key+oauth2",
+   "auth_hint": "API key (token param) or OAuth2 Bearer token",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier with monthly free credits, then usage-based pricing",
+   "sdk": [
+    "javascript",
+    "python",
+    "dotnet",
+    "swift",
+    "kotlin"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
+   "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "onshape-rest-api",
+   "name": "Onshape REST API",
+   "homepage": "https://onshape-public.github.io/docs/",
+   "docs": "https://onshape-public.github.io/docs/",
+   "auth": "api_key+oauth2",
+   "auth_hint": "HMAC-signed API key pair (access/secret) for personal scripts, or OAuth2 Bearer token for published apps",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier (public documents only); private documents need a paid plan",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Create, read and modify Onshape CAD documents, parts, assemblies and drawings programmatically via REST API.",
+   "notes": "Free-tier API access is limited to public documents; private/commercial use needs a paid Onshape subscription.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "procore-api",
+   "name": "Procore API",
+   "homepage": "https://developers.procore.com",
+   "docs": "https://developers.procore.com/reference/rest/v1",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <token> (OAuth2 authorization code / client credentials)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free developer sandbox; production requires customer's paid Procore plan",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Read and write construction project data - RFIs, submittals, drawings, budgets, schedules - via REST API.",
+   "notes": "Requires joining the Procore Developer Program and OAuth app approval for production scopes; sandbox is free.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "rhino-compute-mcneel",
+   "name": "Rhino.Compute (McNeel)",
+   "homepage": "https://www.rhino3d.com/compute",
+   "docs": "https://developer.rhino3d.com/guides/compute/",
+   "auth": "api_key",
+   "auth_hint": "optional RhinoComputeKey header; endpoint is otherwise open once deployed",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "self-hosted only; requires a Rhino license, cloud deployment billed by core-hour",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Run Rhino/Grasshopper geometry operations headlessly via a stateless REST API you deploy yourself.",
+   "notes": "Not a hosted SaaS signup - must self-host on Windows/Linux (IIS, Azure, AWS); requires a Rhino license.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "speckle-api",
+   "name": "Speckle API",
+   "homepage": "https://speckle.systems",
+   "docs": "https://docs.speckle.systems/dev/",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <personal access token>, or OAuth2 for published apps",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free Explore plan (1 project, 3 users), unlimited API calls",
+   "sdk": [
+    "python",
+    "javascript",
+    "dotnet"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.speckle.systems/llms.txt",
+   "desc_en": "Send, receive and query 3D/BIM model data across CAD tools (Revit, Rhino, Grasshopper, Tekla) via GraphQL API and SDKs.",
+   "notes": "Open-source data platform; free tier has unlimited API calls but limits project/user counts.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "trimble-connect-api",
+   "name": "Trimble Connect API",
+   "homepage": "https://developer.trimble.com",
+   "docs": "https://developer.trimble.com/docs/connect",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <token> (Trimble Identity OAuth2)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "check pricing",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Manage Trimble Connect projects, files, BIM models, issues/topics and metadata via REST APIs (Core, Model, Organizer).",
+   "notes": "Requires a Trimble Identity developer account and a registered application.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "zoo-text-to-cad-api-kittycad",
+   "name": "Zoo Text-to-CAD API (KittyCAD)",
+   "homepage": "https://zoo.dev",
+   "docs": "https://zoo.dev/docs/api",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "start free trial credits, then usage-based pay-as-you-go",
+   "sdk": [
+    "python",
+    "typescript",
+    "rust",
+    "go"
+   ],
+   "openapi": "https://api.zoo.dev",
+   "llms_txt": null,
+   "desc_en": "Generate 3D CAD models from text prompts and run modeling/file-conversion operations via REST API.",
+   "notes": "ML endpoints handle text-to-CAD generation; base API URL is api.zoo.dev, OpenAPI schema served from there.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
+  }
+ ]
 }

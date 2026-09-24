@@ -1,340 +1,426 @@
 {
-  "category": {
-    "id": "communication-email-chat",
-    "name": "Email, messaging and chat",
-    "description": "Send and receive email, SMS and chat messages; manage meetings."
+ "category": {
+  "id": "communication-email-chat",
+  "name": "Email, messaging and chat",
+  "description": "Send and receive email, SMS and chat messages; manage meetings."
+ },
+ "entries": [
+  {
+   "id": "agentmail",
+   "name": "AgentMail",
+   "homepage": "https://www.agentmail.to",
+   "docs": "https://docs.agentmail.to",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <api_key>",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.agentmail.to"
+   },
+   "free_tier": "free: 3 inboxes, 3,000 emails/mo, 3GB storage, no card required",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Programmatically create inboxes and send/receive email autonomously, purpose-built for AI agents.",
+   "notes": "Newer, smaller vendor than legacy ESPs; markets itself specifically as agent-native email infra with a built-in MCP server.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "agentmail",
-      "name": "AgentMail",
-      "category": "communication-email-chat",
-      "homepage": "https://www.agentmail.to",
-      "docs": "https://docs.agentmail.to",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <api_key>",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.agentmail.to"
-      },
-      "free_tier": "free: 3 inboxes, 3,000 emails/mo, 3GB storage, no card required",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Programmatically create inboxes and send/receive email autonomously, purpose-built for AI agents.",
-      "notes": "Newer, smaller vendor than legacy ESPs; markets itself specifically as agent-native email infra with a built-in MCP server.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "discord-api",
-      "name": "Discord API",
-      "category": "communication-email-chat",
-      "homepage": "https://discord.com/developers/docs",
-      "docs": "https://docs.discord.com/developers/intro",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bot <token>",
-      "mcp": {
-        "type": "community",
-        "url": "https://github.com/SaseQ/discord-mcp"
-      },
-      "free_tier": "free, no key needed beyond creating a bot application",
-      "sdk": [
-        "python",
-        "javascript",
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.discord.com/llms.txt",
-      "desc_en": "Send messages, manage channels/roles, and build interactive bots via REST and Gateway API.",
-      "notes": "Per-route rate limits; bots in 100+ servers require Discord verification/approval.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "mailgun",
-      "name": "Mailgun",
-      "category": "communication-email-chat",
-      "homepage": "https://www.mailgun.com",
-      "docs": "https://documentation.mailgun.com/docs/mailgun/api-reference/intro/",
-      "auth": "api_key",
-      "auth_hint": "Basic auth: api:<API_KEY>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free: 100 emails/day; 30-day free trial on paid tiers",
-      "sdk": [
-        "node",
-        "python",
-        "php",
-        "ruby",
-        "java",
-        "csharp",
-        "go"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Send and validate transactional email via REST API and SMTP relay with webhooks.",
-      "notes": "Free plan limited to 1 sending domain and 1-day log retention.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "postmark",
-      "name": "Postmark",
-      "category": "communication-email-chat",
-      "homepage": "https://postmarkapp.com",
-      "docs": "https://postmarkapp.com/developer/api/overview",
-      "auth": "api_key",
-      "auth_hint": "X-Postmark-Server-Token: <token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free: 100 emails/month (Developer plan, no expiry)",
-      "sdk": [
-        "node",
-        "python",
-        "php",
-        "dotnet",
-        "ruby",
-        "go",
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Send transactional email via REST API with delivery tracking, bounce handling, and templates.",
-      "notes": "Strictly transactional-email focused; enforces anti-bulk/anti-spam policy which can suspend accounts sending bulk/marketing mail.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "resend",
-      "name": "Resend",
-      "category": "communication-email-chat",
-      "homepage": "https://resend.com",
-      "docs": "https://resend.com/docs/api-reference/introduction",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer re_xxxxxxxxx",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.resend.com/mcp"
-      },
-      "free_tier": "free tier: 3,000 emails/mo, 100/day",
-      "sdk": [
-        "node",
-        "python",
-        "php",
-        "ruby",
-        "go",
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Send transactional and marketing email via REST API with templates, domains, and webhooks.",
-      "notes": "Official remote MCP server at mcp.resend.com/mcp; sandbox domain available for testing before custom domain verification.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "sendgrid-twilio",
-      "name": "SendGrid (Twilio)",
-      "category": "communication-email-chat",
-      "homepage": "https://sendgrid.com",
-      "docs": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer SG.xxxxxxxxx",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "check pricing (trial-based; no confirmed permanent free plan)",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        "csharp",
-        "php",
-        "ruby",
-        "go"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Send transactional and marketing email via REST/SMTP API with templates and analytics.",
-      "notes": "Now a Twilio product; sender identity/domain authentication required before sending.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "slack-api",
-      "name": "Slack API",
-      "category": "communication-email-chat",
-      "homepage": "https://api.slack.com",
-      "docs": "https://docs.slack.dev/reference/methods",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer xoxb-...",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.slack.com/mcp"
-      },
-      "free_tier": "free, no key needed beyond creating a Slack app/workspace",
-      "sdk": [
-        "python",
-        "node",
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Post messages, manage channels, and read conversation history in Slack via the Web API.",
-      "notes": "Requires creating a Slack app with OAuth scopes; per-method rate-limit tiers apply. The official remote MCP (OAuth 2.0) works only for directory-published or internal Slack apps, and in partner clients such as Claude.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "stream-getstream-chat-video-api",
-      "name": "Stream (GetStream) Chat & Video API",
-      "category": "communication-email-chat",
-      "homepage": "https://getstream.io",
-      "docs": "https://getstream.io/chat/docs/",
-      "auth": "api_key+oauth2",
-      "auth_hint": "API key + server-side secret used to mint short-lived user JWT tokens",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier available (limited monthly active users), then usage-based pricing",
-      "sdk": [
-        "node",
-        "python",
-        "java",
-        "swift",
-        "kotlin"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Build and moderate in-app chat and video with REST/SDK APIs, channels, and real-time messaging.",
-      "notes": "Client access requires server-minted short-lived user tokens; not a pure send-and-forget messaging API like email/SMS providers.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "telegram-bot-api",
-      "name": "Telegram Bot API",
-      "category": "communication-email-chat",
-      "homepage": "https://core.telegram.org/bots/api",
-      "docs": "https://core.telegram.org/bots/api",
-      "auth": "api_key",
-      "auth_hint": "token in URL path: https://api.telegram.org/bot<token>/METHOD",
-      "mcp": {
-        "type": "community",
-        "url": "https://github.com/chigwell/telegram-mcp"
-      },
-      "free_tier": "free, no key needed beyond a bot token from @BotFather",
-      "sdk": [
-        "python",
-        "node",
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Send/receive messages, media, and inline interactions via a simple HTTPS bot API.",
-      "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "twilio",
-      "name": "Twilio",
-      "category": "communication-email-chat",
-      "homepage": "https://www.twilio.com",
-      "docs": "https://www.twilio.com/docs/usage/api",
-      "auth": "api_key",
-      "auth_hint": "Basic auth: AccountSID:AuthToken (or API Key SID:Secret)",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/twilio-labs/mcp"
-      },
-      "free_tier": "free trial credit, no permanent free tier (pay-as-you-go after)",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        "csharp",
-        "php",
-        "ruby"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Send/receive SMS, WhatsApp messages, and voice calls programmatically via REST API.",
-      "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Official Twilio Labs MCP server exposes the full API.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "vonage-api",
-      "name": "Vonage API",
-      "category": "communication-email-chat",
-      "homepage": "https://developer.vonage.com",
-      "docs": "https://developer.vonage.com/en/documentation",
-      "auth": "api_key+oauth2",
-      "auth_hint": "API key+secret for SMS/Number Insight; JWT bearer token for Voice/Video APIs",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "trial/test credit on signup, then pay-as-you-go",
-      "sdk": [
-        "node",
-        "python",
-        "java",
-        "php",
-        "ruby",
-        "dotnet"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Send SMS, make voice calls, and build video apps via a unified communications REST API.",
-      "notes": "Auth method differs per sub-API (API key/secret vs JWT), which agents must account for.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "whatsapp-business-cloud-api",
-      "name": "WhatsApp Business Cloud API",
-      "category": "communication-email-chat",
-      "homepage": "https://developers.facebook.com/docs/whatsapp/cloud-api",
-      "docs": "https://developers.facebook.com/docs/whatsapp/cloud-api",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <system-user access token>",
-      "mcp": {
-        "type": "community",
-        "url": "https://github.com/lharries/whatsapp-mcp"
-      },
-      "free_tier": "1,000 free service conversations/mo (Meta), then per-conversation pricing",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Send/receive WhatsApp messages, template messages, and media programmatically via Graph API.",
-      "notes": "Requires Meta Business verification and pre-approved message templates for outbound marketing/utility messages outside the 24h session window.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "zoom-api",
-      "name": "Zoom API",
-      "category": "communication-email-chat",
-      "homepage": "https://developers.zoom.us",
-      "docs": "https://developers.zoom.us/docs/api/",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <access_token> (Server-to-Server OAuth recommended for agents)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "usable on free Zoom account within Basic plan limits; some endpoints require paid plan",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        "csharp"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Schedule, update, and manage meetings, webinars, and cloud recordings programmatically via REST API.",
-      "notes": "Server-to-Server OAuth app type is the recommended path for unattended agent use; some features gated behind licensed/paid plans.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "discord-api",
+   "name": "Discord API",
+   "homepage": "https://discord.com/developers/docs",
+   "docs": "https://docs.discord.com/developers/intro",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bot <token>",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/SaseQ/discord-mcp"
+   },
+   "free_tier": "free, no key needed beyond creating a bot application",
+   "sdk": [
+    "python",
+    "javascript",
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.discord.com/llms.txt",
+   "desc_en": "Send messages, manage channels/roles, and build interactive bots via REST and Gateway API.",
+   "notes": "Per-route rate limits; bots in 100+ servers require Discord verification/approval.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "mailgun",
+   "name": "Mailgun",
+   "homepage": "https://www.mailgun.com",
+   "docs": "https://documentation.mailgun.com/docs/mailgun/api-reference/intro/",
+   "auth": "api_key",
+   "auth_hint": "Basic auth: api:<API_KEY>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free: 100 emails/day; 30-day free trial on paid tiers",
+   "sdk": [
+    "node",
+    "python",
+    "php",
+    "ruby",
+    "java",
+    "csharp",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Send and validate transactional email via REST API and SMTP relay with webhooks.",
+   "notes": "Free plan limited to 1 sending domain and 1-day log retention.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "postmark",
+   "name": "Postmark",
+   "homepage": "https://postmarkapp.com",
+   "docs": "https://postmarkapp.com/developer/api/overview",
+   "auth": "api_key",
+   "auth_hint": "X-Postmark-Server-Token: <token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free: 100 emails/month (Developer plan, no expiry)",
+   "sdk": [
+    "node",
+    "python",
+    "php",
+    "dotnet",
+    "ruby",
+    "go",
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Send transactional email via REST API with delivery tracking, bounce handling, and templates.",
+   "notes": "Strictly transactional-email focused; enforces anti-bulk/anti-spam policy which can suspend accounts sending bulk/marketing mail.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "resend",
+   "name": "Resend",
+   "homepage": "https://resend.com",
+   "docs": "https://resend.com/docs/api-reference/introduction",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer re_xxxxxxxxx",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.resend.com/mcp"
+   },
+   "free_tier": "free tier: 3,000 emails/mo, 100/day",
+   "sdk": [
+    "node",
+    "python",
+    "php",
+    "ruby",
+    "go",
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Send transactional and marketing email via REST API with templates, domains, and webhooks.",
+   "notes": "Official remote MCP server at mcp.resend.com/mcp; sandbox domain available for testing before custom domain verification.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "sendgrid-twilio",
+   "name": "SendGrid (Twilio)",
+   "homepage": "https://sendgrid.com",
+   "docs": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer SG.xxxxxxxxx",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "check pricing (trial-based; no confirmed permanent free plan)",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    "csharp",
+    "php",
+    "ruby",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Send transactional and marketing email via REST/SMTP API with templates and analytics.",
+   "notes": "Now a Twilio product; sender identity/domain authentication required before sending.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "slack-api",
+   "name": "Slack API",
+   "homepage": "https://api.slack.com",
+   "docs": "https://docs.slack.dev/reference/methods",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer xoxb-...",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.slack.com/mcp"
+   },
+   "free_tier": "free, no key needed beyond creating a Slack app/workspace",
+   "sdk": [
+    "python",
+    "node",
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Post messages, manage channels, and read conversation history in Slack via the Web API.",
+   "notes": "Requires creating a Slack app with OAuth scopes; per-method rate-limit tiers apply. The official remote MCP (OAuth 2.0) works only for directory-published or internal Slack apps, and in partner clients such as Claude.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "stream-getstream-chat-video-api",
+   "name": "Stream (GetStream) Chat & Video API",
+   "homepage": "https://getstream.io",
+   "docs": "https://getstream.io/chat/docs/",
+   "auth": "api_key+oauth2",
+   "auth_hint": "API key + server-side secret used to mint short-lived user JWT tokens",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier available (limited monthly active users), then usage-based pricing",
+   "sdk": [
+    "node",
+    "python",
+    "java",
+    "swift",
+    "kotlin"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Build and moderate in-app chat and video with REST/SDK APIs, channels, and real-time messaging.",
+   "notes": "Client access requires server-minted short-lived user tokens; not a pure send-and-forget messaging API like email/SMS providers.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "telegram-bot-api",
+   "name": "Telegram Bot API",
+   "homepage": "https://core.telegram.org/bots/api",
+   "docs": "https://core.telegram.org/bots/api",
+   "auth": "api_key",
+   "auth_hint": "token in URL path: https://api.telegram.org/bot<token>/METHOD",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/chigwell/telegram-mcp"
+   },
+   "free_tier": "free, no key needed beyond a bot token from @BotFather",
+   "sdk": [
+    "python",
+    "node",
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Send/receive messages, media, and inline interactions via a simple HTTPS bot API.",
+   "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "twilio",
+   "name": "Twilio",
+   "homepage": "https://www.twilio.com",
+   "docs": "https://www.twilio.com/docs/usage/api",
+   "auth": "api_key",
+   "auth_hint": "Basic auth: AccountSID:AuthToken (or API Key SID:Secret)",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/twilio-labs/mcp"
+   },
+   "free_tier": "free trial credit, no permanent free tier (pay-as-you-go after)",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    "csharp",
+    "php",
+    "ruby"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Send/receive SMS, WhatsApp messages, and voice calls programmatically via REST API.",
+   "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Official Twilio Labs MCP server exposes the full API.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "vonage-api",
+   "name": "Vonage API",
+   "homepage": "https://developer.vonage.com",
+   "docs": "https://developer.vonage.com/en/documentation",
+   "auth": "api_key+oauth2",
+   "auth_hint": "API key+secret for SMS/Number Insight; JWT bearer token for Voice/Video APIs",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "trial/test credit on signup, then pay-as-you-go",
+   "sdk": [
+    "node",
+    "python",
+    "java",
+    "php",
+    "ruby",
+    "dotnet"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Send SMS, make voice calls, and build video apps via a unified communications REST API.",
+   "notes": "Auth method differs per sub-API (API key/secret vs JWT), which agents must account for.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "whatsapp-business-cloud-api",
+   "name": "WhatsApp Business Cloud API",
+   "homepage": "https://developers.facebook.com/docs/whatsapp/cloud-api",
+   "docs": "https://developers.facebook.com/docs/whatsapp/cloud-api",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <system-user access token>",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/lharries/whatsapp-mcp"
+   },
+   "free_tier": "1,000 free service conversations/mo (Meta), then per-conversation pricing",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Send/receive WhatsApp messages, template messages, and media programmatically via Graph API.",
+   "notes": "Requires Meta Business verification and pre-approved message templates for outbound marketing/utility messages outside the 24h session window.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "zoom-api",
+   "name": "Zoom API",
+   "homepage": "https://developers.zoom.us",
+   "docs": "https://developers.zoom.us/docs/api/",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <access_token> (Server-to-Server OAuth recommended for agents)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "usable on free Zoom account within Basic plan limits; some endpoints require paid plan",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    "csharp"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Schedule, update, and manage meetings, webinars, and cloud recordings programmatically via REST API.",
+   "notes": "Server-to-Server OAuth app type is the recommended path for unattended agent use; some features gated behind licensed/paid plans.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  }
+ ]
 }

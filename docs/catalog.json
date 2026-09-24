@@ -17,7 +17,16 @@
     "llms_txt": "https://api-dashboard.search.brave.com/llms.txt",
     "desc_en": "Lets an agent query Brave's independent web/image/video/news search index and get cited, LLM-ready results.",
     "notes": "Official MCP server (@brave/brave-search-mcp-server) is self-hosted only via npx/Docker/HTTP transport, no vendor-hosted remote endpoint found; Answers plan is separate ($4/1,000 req + token costs).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "exa",
@@ -40,7 +49,17 @@
     "llms_txt": "https://exa.ai/docs/llms.txt",
     "desc_en": "Lets an agent run neural or keyword web search, retrieve page contents, and find similar links via Exa's API.",
     "notes": "Remote MCP endpoint requires no API key to start; self-hosted npm package (exa-mcp-server) also available.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "jina-ai-search-reader",
@@ -60,7 +79,16 @@
     "llms_txt": "https://jina.ai/models/llms.txt",
     "desc_en": "Search the web or convert any URL into clean LLM-ready markdown via simple HTTP GET requests.",
     "notes": "Usable without an API key at reduced rate limits; interactive docs/playground at https://api.jina.ai/scalar. No official MCP server found.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "kagi-search-api",
@@ -85,7 +113,15 @@
     "llms_txt": null,
     "desc_en": "Run programmatic, ad-free premium web/news/image/video searches and extract page markdown via a paid REST API.",
     "notes": "Requires a funded/billed Kagi account; on Family/Team plans only the account owner can access the API portal. Official hosted MCP endpoint also available at https://mcp.kagi.com/mcp using just an API key.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "linkup",
@@ -108,7 +144,16 @@
     "llms_txt": "https://docs.linkup.so/llms.txt",
     "desc_en": "Lets an agent search, fetch pages, or run deep multi-source research via Linkup's Search/Fetch/Research API endpoints.",
     "notes": "Also supports the x402 protocol: pay-per-request in USDC on Base with no account required; Extract endpoint is in closed beta; MCP endpoint also supports ?apiKey= query param auth.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "mojeek-search-api",
@@ -128,7 +173,14 @@
     "llms_txt": null,
     "desc_en": "Query Mojeek's independent web index for titles, URLs and snippets in JSON or XML, with country/language boosting.",
     "notes": "Sign-up is not instant self-serve, requires contacting Mojeek via their contact form to get a key/plan (Startup/Business/Enterprise). Independent (non-Google/Bing-derived) index.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "parallel-web-systems-search-api",
@@ -151,7 +203,17 @@
     "llms_txt": "https://docs.parallel.ai/llms.txt",
     "desc_en": "Lets an agent run Parallel's low-latency Search API for web research, content extraction, and entity discovery.",
     "notes": "The remote MCP server is free and requires no account/API key; the main REST API requires an API key from the dashboard.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "perplexity-sonar-search-api",
@@ -174,7 +236,16 @@
     "llms_txt": "https://docs.perplexity.ai/llms.txt",
     "desc_en": "Lets an agent call Perplexity's Search API or MCP tools (search/ask/research/reason) for real-time grounded web answers.",
     "notes": "Sonar Chat Completions endpoint is being migrated to the new Agent API with a migration deadline around 2026-09-27; platform now exposes four APIs: Search, Router, Agent, Embeddings.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "searchapi-io",
@@ -194,7 +265,15 @@
     "llms_txt": null,
     "desc_en": "Fetch structured JSON results from Google, Bing, YouTube, Amazon, TikTok and 50+ other search engines via one REST API.",
     "notes": "Separate OpenAPI spec per engine (e.g. /openapi/google.yaml); no official MCP server found.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "searxng-self-hosted-json-api",
@@ -214,7 +293,15 @@
     "llms_txt": null,
     "desc_en": "Query a self-hosted SearXNG metasearch instance's JSON API to aggregate results from many search engines at once.",
     "notes": "Not a vendor with a signup/API key, it's open-source software you self-host (or point at a trusted public instance from searx.space). JSON/CSV/RSS output formats must be explicitly enabled by the instance admin in settings.yml (search.formats); most public instances disable JSON and return 403. Included because it gives agents a genuine no-signup programmatic search interface once deployed.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "serpapi",
@@ -244,7 +331,16 @@
     "llms_txt": "https://serpapi.com/llms.txt",
     "desc_en": "Lets an agent scrape structured JSON results from Google and 20+ other search engines via SerpApi's REST API.",
     "notes": "Cached searches are free and don't count toward the monthly search quota.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "serper",
@@ -264,7 +360,15 @@
     "llms_txt": null,
     "desc_en": "Lets an agent fetch fast, low-cost Google search results (web, images, news, maps, shopping) via Serper's REST API.",
     "notes": "serper.dev's docs/playground is a JS-rendered, login-gated SPA so automated fetch could not fully re-verify all details beyond the public marketing page (2,500 free queries confirmed there). No official MCP server found; listed repo is the most-starred community one.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "tavily",
@@ -287,7 +391,16 @@
     "llms_txt": "https://docs.tavily.com/llms.txt",
     "desc_en": "Lets an agent call Tavily's search API or MCP server to run web searches and get AI-ready summarized results.",
     "notes": "Advanced search depth costs 2 credits vs 1 for basic/fast; remote MCP server supports both API key and OAuth authentication; repo: github.com/tavily-ai/tavily-mcp.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "you-com-api",
@@ -310,7 +423,17 @@
     "llms_txt": "https://you.com/docs/llms.txt",
     "desc_en": "Lets an agent call You.com's Search/Answer/Research API or MCP server for LLM-ready web search and grounded answers.",
     "notes": "Current endpoint is POST https://ydc-index.io/v1/search (recommended); legacy GET still works but won't get new features; also offers a separate keyless Docs MCP server at you.com/docs/_mcp/server for searching You.com's own docs.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "anchor-browser",
@@ -330,7 +453,15 @@
     "llms_txt": null,
     "desc_en": "Provision authenticated cloud browser sessions and turn any website into callable MCP tools for agents.",
     "notes": "Authenticated (logged-in) browser sessions require a paid tier; free tier covers unauthenticated browsing only.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "apify",
@@ -353,7 +484,15 @@
     "llms_txt": null,
     "desc_en": "Run web scraping/automation 'Actors' from a marketplace of thousands, and manage datasets, via REST API or MCP server.",
     "notes": "MCP search/docs tools work unauthenticated; running paid Actors consumes platform usage credit.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "bright-data",
@@ -376,7 +515,15 @@
     "llms_txt": null,
     "desc_en": "Access Web Unlocker, SERP API, Scraping Browser, and structured datasets via REST API or MCP to pull web data at scale.",
     "notes": "Large multi-product suite; pricing and free-tier limits vary significantly by product (Web Unlocker vs Scraping Browser vs Datasets).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "browse-ai-api",
@@ -401,7 +548,14 @@
     "llms_txt": null,
     "desc_en": "Trigger pre-built or custom 'robots' to extract and monitor web data via REST API, returning structured JSON.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "browser-use-cloud-api",
@@ -424,7 +578,15 @@
     "llms_txt": "https://docs.browser-use.com/llms.txt",
     "desc_en": "Launch cloud browser sessions and run AI browser-automation agent tasks via REST API or Python/TypeScript SDK.",
     "notes": "Pay-as-you-go pricing: browser-hours + per-task fee + token markup; no ongoing free tier beyond signup credit.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "browserbase-stagehand",
@@ -447,7 +609,15 @@
     "llms_txt": null,
     "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
     "notes": "Billed by browser-hours/compute time; Stagehand SDK itself is open source but needs a browser backend such as Browserbase.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "diffbot",
@@ -467,7 +637,14 @@
     "llms_txt": null,
     "desc_en": "Automatically extract structured data (articles, products, people) from any URL via REST API, no custom parsing rules needed.",
     "notes": "Also offers Knowledge Graph and Crawl products with separate pricing; official client library docs listed as 'coming soon'.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "firecrawl",
@@ -490,7 +667,16 @@
     "llms_txt": "https://docs.firecrawl.dev/llms.txt",
     "desc_en": "Scrape, crawl, and extract structured data from any website via a single REST API call.",
     "notes": "Also offers OAuth-based remote MCP endpoint (mcp.firecrawl.dev/v2/mcp-oauth) and a keyless trial with daily limits.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "hyperbrowser",
@@ -513,7 +699,15 @@
     "llms_txt": null,
     "desc_en": "Spin up cloud browsers and call scrape, crawl, and structured-extract endpoints via REST API or MCP server.",
     "notes": "SDKs are compatible with Playwright, Puppeteer, and Selenium.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "oxylabs",
@@ -535,7 +729,15 @@
     "llms_txt": "https://developers.oxylabs.io/llms-full.txt",
     "desc_en": "Fetch web pages, search-engine results, and e-commerce data at scale via REST API with built-in proxy/unblocking infrastructure.",
     "notes": "Enterprise-oriented pricing overall, but self-serve API-user creation and free trial are available via the dashboard.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "playwright-mcp-microsoft",
@@ -555,7 +757,15 @@
     "llms_txt": null,
     "desc_en": "Official Microsoft MCP server giving agents structured browser control (click, type, navigate) via Playwright's accessibility tree.",
     "notes": "Runs locally/self-hosted via `npx @playwright/mcp`; no cloud hosting, account, or API key required, but needs a local or self-managed browser runtime. Apache-2.0 licensed.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "scrapegraphai-api",
@@ -578,7 +788,15 @@
     "llms_txt": "https://docs.scrapegraphai.com/llms.txt",
     "desc_en": "Use AI-driven prompts to scrape and extract structured data from webpages via REST API or Python/JS SDK.",
     "notes": "Also offers the open-source scrapegraph-ai library with LangChain/LlamaIndex integrations.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "scraperapi",
@@ -598,7 +816,14 @@
     "llms_txt": null,
     "desc_en": "Scrape any webpage with automatic proxy rotation, CAPTCHA handling, and JS rendering via a single REST API call.",
     "notes": "Widely used alternative to ScrapingBee/Zyte; no official MCP server found.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "scrapfly",
@@ -621,7 +846,15 @@
     "llms_txt": null,
     "desc_en": "Scrape webpages, run cloud browsers, and capture screenshots via REST API or hosted MCP server with anti-bot bypass.",
     "notes": "MCP usage draws from the same credit balance as direct API calls.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "scrapingbee",
@@ -644,7 +877,14 @@
     "llms_txt": null,
     "desc_en": "Scrape any webpage with JS rendering, proxy rotation, and screenshot capture via a single REST API call.",
     "notes": "Postman collection provided in place of a published OpenAPI spec.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "spider-cloud",
@@ -668,7 +908,15 @@
     "llms_txt": null,
     "desc_en": "Crawl and scrape websites at scale, returning JSON/XML/CSV, via REST API, CLI, or MCP server.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "steel",
@@ -691,7 +939,14 @@
     "llms_txt": null,
     "desc_en": "Create managed cloud browser sessions with stealth proxies and CAPTCHA solving, controllable via REST API or Playwright/Puppeteer.",
     "notes": "Open-source self-hostable browser engine (steel-browser) also available; no official MCP server confirmed as of check.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "zyte-api",
@@ -713,7 +968,14 @@
     "llms_txt": null,
     "desc_en": "Fetch and auto-extract web pages (HTML, browser rendering, product/article data) via one HTTP API with ban avoidance.",
     "notes": "Part of Zyte's broader suite (Scrapy Cloud, Zyte IDE).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "arxiv-api",
@@ -733,7 +995,15 @@
     "llms_txt": null,
     "desc_en": "Search arXiv preprints by keyword, author, category or ID and retrieve metadata, abstracts and PDF links.",
     "notes": "Endpoint: http://export.arxiv.org/api/query, returns Atom XML. Terms of Use allow no more than one request every three seconds over a single connection. For bulk harvesting use OAI-PMH or bulk data instead.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "context7-library-docs-for-agents",
@@ -755,7 +1025,16 @@
     "llms_txt": "https://context7.com/docs/llms.txt",
     "desc_en": "Fetch up-to-date, version-specific library documentation and code examples into a coding agent's context via MCP or REST.",
     "notes": "Maintained by Upstash; repo https://github.com/upstash/context7. Local server @upstash/context7-mcp, also a ctx7 CLI and @upstash/context7-sdk. REST base URL: https://context7.com/api/. Exceeding the limit returns 429 with Retry-After/RateLimit-* headers. Paid plans cover teams and private repos.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "crossref-rest-api",
@@ -775,7 +1054,16 @@
     "llms_txt": null,
     "desc_en": "Look up and search scholarly metadata such as DOIs, references, authors, funders and licenses across Crossref-registered works.",
     "notes": "Base URL https://api.crossref.org (/works, /journals, /funders, /members). Rate limits are adaptive, reported in X-Rate-Limit-Limit/X-Rate-Limit-Interval headers. Identify yourself with mailto for better service. Metadata Plus is a paid SLA tier.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "gdelt-api",
@@ -795,7 +1083,15 @@
     "llms_txt": null,
     "desc_en": "Full-text search global news in about 65 languages and analyze coverage volume, tone and geography in near real time.",
     "notes": "DOC 2.0 API: https://api.gdeltproject.org/api/v2/doc/doc. Covers a rolling window of about 3 months, max 250 records per query. GEO 2.0 and TV APIs also exist. Full historical Events/GKG data available via Google BigQuery (needs a billed Google Cloud account).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "hacker-news-api",
@@ -815,7 +1111,15 @@
     "llms_txt": null,
     "desc_en": "Read Hacker News stories, comments, jobs, polls, user profiles and front-page rankings as real-time JSON.",
     "notes": "Base URL https://hacker-news.firebaseio.com/v0/. Read-only, no documented rate limit. No full-text search; use the separate Algolia HN Search API for that.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "newsapi",
@@ -835,7 +1139,15 @@
     "llms_txt": null,
     "desc_en": "Search and retrieve current and historical news articles and top headlines from thousands of sources worldwide.",
     "notes": "Free plan is barred from staging/production, including internal use; CORS allowed from localhost only. Production use needs the Business plan ($449/mo, 250k req/mo). Endpoints: /v2/everything, /v2/top-headlines.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "openalex-api",
@@ -855,7 +1167,17 @@
     "llms_txt": "https://help.openalex.org/llms.txt",
     "desc_en": "Query an open catalog of scholarly works, authors, institutions, sources and topics, including citation data, via REST.",
     "notes": "Base URL https://api.openalex.org. docs.openalex.org now redirects to help.openalex.org. Free daily budget resets at midnight UTC; above it, pay-as-you-go with prepaid $1 increments. Annual Member plans start at $5,000/yr. Data is CC0.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "pubmed-e-utilities-ncbi",
@@ -875,7 +1197,15 @@
     "llms_txt": null,
     "desc_en": "Search, fetch, summarize and cross-link biomedical literature records from PubMed, PMC and other Entrez databases.",
     "notes": "Base URL https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ (esearch, efetch, esummary, elink). Free API key from NCBI account settings. Run heavy jobs off-peak.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "semantic-scholar-api",
@@ -895,7 +1225,16 @@
     "llms_txt": null,
     "desc_en": "Search papers, authors and citation graphs, and get paper recommendations from Semantic Scholar's academic corpus.",
     "notes": "Without a key, all users share a pool of 1000 req/s that can be throttled under load. A key starts at 1 req/s dedicated; requested via web form, arrives by email (not instant). Three APIs: Academic Graph, Recommendations, Datasets.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "wikidata",
@@ -915,7 +1254,15 @@
     "llms_txt": null,
     "desc_en": "Query the Wikidata knowledge graph of entities, facts and relations via SPARQL, the REST API or MCP.",
     "notes": "Official MCP comes from Wikimedia Deutschland (github.com/wmde/WikidataMCP). SPARQL endpoint: https://query.wikidata.org/sparql, query timeout ~60s. REST API at /w/rest.php/wikibase/v1. Wikimedia rate limits and User-Agent policy apply. Added because it's a widely-used structured-knowledge source missing from the candidate list.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "wikipedia-wikimedia-api",
@@ -935,7 +1282,15 @@
     "llms_txt": null,
     "desc_en": "Search, read and summarize Wikipedia and other Wikimedia content and metadata via REST and Action APIs.",
     "notes": "The old API Portal at api.wikimedia.org now 301-redirects to mediawiki.org/wiki/Wikimedia_APIs. Documented limits: 10 req/min for requests identified only by IP, 200 req/min for unauthenticated requests with a proper User-Agent, 2000 req/min for established editors. Main endpoints are the per-wiki MediaWiki Action API (/w/api.php) and REST APIs.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "wolfram-alpha-api",
@@ -955,7 +1310,15 @@
     "llms_txt": null,
     "desc_en": "Get computed answers, structured data and step-by-step results for math, science and factual queries.",
     "notes": "LLM API endpoint https://www.wolframalpha.com/api/v1/llm-api is built for agents; output length set by maxchars (default 6800). Get an AppID via the Developer Portal. Other APIs: Full Results, Simple, Short Answers, Spoken Results. Commercial use requires a paid license. The official MCP is the Wolfram Cloud MCP, covering Wolfram technology broadly.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "adobe-firefly-services-api",
@@ -975,7 +1338,14 @@
     "llms_txt": null,
     "desc_en": "Generate and edit images and manage creative assets programmatically via Adobe's Firefly REST APIs.",
     "notes": "Enterprise-leaning; needs OAuth Server-to-Server credentials from Adobe Developer Console, not a simple sign-up API key.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "black-forest-labs-flux-api",
@@ -997,7 +1367,15 @@
     "llms_txt": null,
     "desc_en": "Generate, edit, and vary FLUX model images from text prompts via REST or the official OAuth MCP server.",
     "notes": "Official MCP server (flux-mcp) is remote/hosted at mcp.bfl.ai with OAuth-only login, billed to your BFL org.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "freepik-api",
@@ -1017,7 +1395,14 @@
     "llms_txt": null,
     "desc_en": "Generate and edit images programmatically via REST API, plus access Freepik's stock asset library.",
     "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "google-gemini-imagen-image-api",
@@ -1042,7 +1427,14 @@
     "llms_txt": null,
     "desc_en": "Generate and multi-turn edit images from text via REST (Nano Banana/Imagen models), up to 4K with reference-image support.",
     "notes": "Also available via Vertex AI for enterprise/cloud_iam auth as an alternative.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "ideogram-api",
@@ -1062,7 +1454,15 @@
     "llms_txt": null,
     "desc_en": "Generate, edit, remix, upscale, and describe images via REST or an official OAuth MCP server, strong at in-image text.",
     "notes": "API billing is separate from Ideogram web subscriptions; requires payment method for API access.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "leonardo-ai-api",
@@ -1082,7 +1482,15 @@
     "llms_txt": null,
     "desc_en": "Generate images and videos from text via REST or the official MCP server, with model selection and job status polling.",
     "notes": "Requires a verified account with a payment method to receive API credits.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "openai-images-api-gpt-image",
@@ -1109,7 +1517,15 @@
     "llms_txt": null,
     "desc_en": "Generate, edit, and iteratively refine images from text prompts via REST, with mask-based inpainting and streaming previews.",
     "notes": "Requires an OpenAI API account with billing enabled; part of the Images API / Responses API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "recraft-api",
@@ -1129,7 +1545,17 @@
     "llms_txt": "https://www.recraft.ai/docs/llms.txt",
     "desc_en": "Generate, edit, upscale, and vectorize images via REST API using Recraft's proprietary models.",
     "notes": "REST API, OpenAI-Python-library compatible for some endpoints (not all params supported); official MCP server on GitHub.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "remove-bg-api",
@@ -1149,7 +1575,14 @@
     "llms_txt": null,
     "desc_en": "Remove image backgrounds programmatically via a simple REST API with JSON or multipart uploads.",
     "notes": "IMPORTANT: remove.bg API is being discontinued - stops accepting requests on December 1, 2026, with removal moving to Leonardo.ai.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "stability-ai-platform-api",
@@ -1171,7 +1604,14 @@
     "llms_txt": null,
     "desc_en": "Generate, upscale, and edit images via REST (Stable Image Ultra/Core/SD3 models) using simple credit-based billing.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "akool-api",
@@ -1191,7 +1631,14 @@
     "llms_txt": null,
     "desc_en": "Generate face-swap, talking avatar, and video-translation content programmatically via REST API.",
     "notes": "Credit-based usage across face swap, avatar video, image generation, video translation endpoints.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "creatomate-api",
@@ -1211,7 +1658,14 @@
     "llms_txt": null,
     "desc_en": "Programmatically generate and render videos/images from templates via REST API.",
     "notes": "Per-project API keys; ~14 credits per minute of 720p video.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "d-id-api",
@@ -1231,7 +1685,15 @@
     "llms_txt": null,
     "desc_en": "Animate photos into talking-head videos with lip-sync from text or audio via REST API.",
     "notes": "No permanent free plan; trial has full-screen watermark.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "google-veo-gemini-api-vertex-ai",
@@ -1256,7 +1718,14 @@
     "llms_txt": null,
     "desc_en": "Generate video from text or image prompts via Gemini API (api key) or Vertex AI (cloud IAM), incl. Veo 3.1 scene extension.",
     "notes": "Same underlying model reachable via two auth paths: Gemini API (simple api_key, good for agents) or Vertex AI (cloud_iam, enterprise/region control).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "heygen-api",
@@ -1279,7 +1748,16 @@
     "llms_txt": "https://developers.heygen.com/llms.txt",
     "desc_en": "Create AI avatar/talking-head videos from text or audio, manage avatars and voices, via REST API.",
     "notes": "Official remote MCP server uses OAuth (no API key needed) and spends the user's plan credits directly, separate from API-key billing.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "klap-api",
@@ -1299,7 +1777,14 @@
     "llms_txt": null,
     "desc_en": "Automatically turn long videos into short clips with captions and reframing via REST API.",
     "notes": "Base URL https://api.klap.app/v2.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "kling-ai-api",
@@ -1319,7 +1804,15 @@
     "llms_txt": null,
     "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API with JWT-signed requests.",
     "notes": "Auth is JWT built from an Access/Secret key pair, not a static bearer token - more setup than typical API-key services.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "luma-ai-dream-machine-api",
@@ -1341,7 +1834,15 @@
     "llms_txt": null,
     "desc_en": "Generate and extend AI videos from text or start/end keyframe images via async REST API (Ray 2).",
     "notes": "API credits are separate from Dream Machine subscription credits (do not transfer); failed generations are refunded.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "minimax-hailuo-api",
@@ -1364,7 +1865,15 @@
     "llms_txt": null,
     "desc_en": "Async text-to-video, image-to-video and subject-reference video generation via REST API, up to 1080p.",
     "notes": "Region-specific hosts/keys: platform.minimax.io / api.minimax.io vs intl.minimaxi.com for international accounts - key and host must match.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "mux-video-api",
@@ -1390,7 +1899,15 @@
     "llms_txt": null,
     "desc_en": "Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST.",
     "notes": "Hosting/streaming infrastructure; does not generate video from prompts.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "pixverse-api",
@@ -1410,7 +1927,15 @@
     "llms_txt": null,
     "desc_en": "Generate text-to-video, image-to-video, transition and fusion clips (360p-1080p) via REST API.",
     "notes": "Developer API credit pool (Essential/Scale/Business) is separate from consumer subscription plans.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "runway-api",
@@ -1433,7 +1958,15 @@
     "llms_txt": null,
     "desc_en": "Generate and edit images/video (Gen-4.5) via async task-based REST API: submit, poll, download.",
     "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Official MCP also usable from Claude/ChatGPT/Cursor.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "shotstack-api",
@@ -1453,7 +1986,15 @@
     "llms_txt": null,
     "desc_en": "Compose Edit JSON timelines to programmatically render, edit, and template videos, images and audio.",
     "notes": "Separate stage (sandbox, watermarked) and production API keys; MCP server is in beta.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "synthesia-api",
@@ -1473,7 +2014,14 @@
     "llms_txt": null,
     "desc_en": "Generate AI avatar talking-head videos from text scripts via REST API; supports custom avatars and voices.",
     "notes": "API access tied to paid plans; base URL https://api.synthesia.io/v2.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "tavus-api",
@@ -1497,7 +2045,17 @@
     "llms_txt": "https://docs.tavus.io/llms-full.txt",
     "desc_en": "Create AI video replicas and real-time conversational video agents (CVI) via REST API.",
     "notes": "llms_txt found at /llms-full.txt rather than /llms.txt exactly.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "amazon-polly-amazon-transcribe-aws",
@@ -1523,7 +2081,14 @@
     "llms_txt": null,
     "desc_en": "Convert text to lifelike speech (Polly) and transcribe audio with speaker diarization (Transcribe) via AWS API.",
     "notes": "Needs an AWS account and IAM credentials. Voice and feature availability differs by region. Transcribe docs: https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "assemblyai-api",
@@ -1542,11 +2107,21 @@
       "python",
       "typescript"
     ],
-    "openapi": "https://github.com/AssemblyAI/assemblyai-api-spec/blob/main/openapi.yml",
+    "openapi": "https://www.assemblyai.com/docs/openapi.json",
     "llms_txt": "https://www.assemblyai.com/docs/llms.txt",
     "desc_en": "Transcribe recorded or streaming audio with speaker diarization, sentiment analysis and LLM-based audio insights via REST.",
     "notes": "The official hosted MCP only searches the documentation. To run transcriptions, call the REST API or an SDK.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "azure-ai-speech",
@@ -1574,7 +2149,15 @@
     "llms_txt": null,
     "desc_en": "Convert text to speech, transcribe speech to text and translate speech via REST or Speech SDK.",
     "notes": "Now branded 'Azure Speech in Foundry Tools'. Needs an Azure Speech resource, and endpoints are per region.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "cartesia-api",
@@ -1598,7 +2181,16 @@
     "llms_txt": "https://docs.cartesia.ai/llms.txt",
     "desc_en": "Generate low-latency real-time text-to-speech, transcribe speech and clone voices via REST/WebSocket API.",
     "notes": "The hosted MCP endpoint uses OAuth. The local MCP server is at https://github.com/cartesia-ai/cartesia-mcp.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "deepgram-api",
@@ -1624,7 +2216,17 @@
     "llms_txt": "https://developers.deepgram.com/llms.txt",
     "desc_en": "Transcribe batch or streaming audio with diarization, synthesize speech, and run real-time voice agents via REST/WebSocket.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "elevenlabs-api",
@@ -1650,7 +2252,17 @@
     "llms_txt": "https://elevenlabs.io/docs/llms.txt",
     "desc_en": "Generate, clone and stream text-to-speech voices and transcribe audio via REST/WebSocket API.",
     "notes": "Besides the local stdio MCP server, ElevenLabs also offers an official remote MCP endpoint that uses OAuth.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "google-cloud-text-to-speech-speech-to-text",
@@ -1678,7 +2290,15 @@
     "llms_txt": null,
     "desc_en": "Synthesize lifelike speech from text and transcribe audio to text via REST/gRPC using GCP credentials.",
     "notes": "Requires a GCP project with billing enabled. Speech-to-Text docs are separate: https://cloud.google.com/speech-to-text/docs.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "hume-ai-api",
@@ -1701,7 +2321,15 @@
     "llms_txt": null,
     "desc_en": "Generate expressive text-to-speech and run real-time empathic voice conversations (EVI) via REST/WebSocket.",
     "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "murf-ai-api",
@@ -1723,7 +2351,14 @@
     "llms_txt": null,
     "desc_en": "Generate AI voiceovers, clone voices and dub audio in 35+ languages via REST API.",
     "notes": "Two models are offered: Falcon (low latency, for streaming) and Gen2 (studio quality).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "openai-audio-api-tts-transcription",
@@ -1749,7 +2384,16 @@
     "llms_txt": "https://developers.openai.com/llms.txt",
     "desc_en": "Synthesize speech with TTS models and transcribe or translate audio with Whisper/GPT-4o transcribe via REST.",
     "notes": "Whisper transcription costs about $0.006/min. TTS is billed per character or per token, depending on the model.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "resemble-ai-api",
@@ -1769,7 +2413,15 @@
     "llms_txt": null,
     "desc_en": "Synthesize speech, clone voices, convert speech-to-speech and detect deepfake audio via REST API.",
     "notes": "Enterprise plans are available for on-prem deployment and custom model training.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "rev-ai-api",
@@ -1793,7 +2445,15 @@
     "llms_txt": null,
     "desc_en": "Submit audio for asynchronous or streaming speech-to-text transcription, plus sentiment and topic extraction, via REST.",
     "notes": "The docs site offers an MCP install for Cursor and VS Code, but no remote endpoint URL was confirmed. Human transcription is sold separately as a paid option.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "speechmatics-api",
@@ -1816,7 +2476,16 @@
     "llms_txt": "https://docs.speechmatics.com/llms.txt",
     "desc_en": "Transcribe audio in batch or real time with speaker diarization across many languages via REST/WebSocket.",
     "notes": "The free tier also includes 2 concurrent real-time sessions. No official vendor MCP server was found.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "beatoven-ai-api",
@@ -1836,7 +2505,14 @@
     "llms_txt": null,
     "desc_en": "Generate royalty-cleared background music and sound effects from text prompts via REST API (Maestro).",
     "notes": "Public marketing pages don't disclose exact auth header or free-credit amount; requires dashboard signup to see full docs.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "elevenlabs-music-api",
@@ -1859,7 +2535,15 @@
     "llms_txt": null,
     "desc_en": "Generate original music tracks from text prompts or detailed composition plans via REST API, with commercial licensing.",
     "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "loudly-api",
@@ -1879,7 +2563,14 @@
     "llms_txt": null,
     "desc_en": "Generate, remix, stem-split, and master music tracks programmatically via REST API.",
     "notes": "Vendor lists an MCP server as 'in development' (not yet released) as of this check.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "mubert-api",
@@ -1899,7 +2590,14 @@
     "llms_txt": null,
     "desc_en": "Generate streaming or file-based background music from text/image prompts via REST/WebRTC API, 15s-25min tracks.",
     "notes": "No self-serve free trial; must purchase a plan before receiving API credentials.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "soundraw-api",
@@ -1919,7 +2617,14 @@
     "llms_txt": null,
     "desc_en": "Generate royalty-free background music tracks by mood, genre, and duration via REST API for embedding in apps.",
     "notes": "Full technical API reference is gated behind sales/docs portal; only an FAQ page and pricing were publicly confirmed.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "stable-audio-api-stability-ai",
@@ -1941,7 +2646,14 @@
     "llms_txt": null,
     "desc_en": "Generate music and sound effects from text prompts via REST API (Stable Audio 2.0 models), up to 3 minutes.",
     "notes": "Audio endpoint lives under the same platform.stability.ai API and credit system as Stability's image API; exact endpoint path not independently re-verified this pass.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "csm-common-sense-machines-api",
@@ -1961,7 +2673,16 @@
     "llms_txt": null,
     "desc_en": "Create 3D assets and multi-part kits from images via async REST sessions (image-to-3D, retopology).",
     "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. A Blender/MCP integration exists but its official vendor-maintained status could not be fully confirmed.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "broken",
+      "docs_detail": "[Errno 11001] getaddrinfo failed",
+      "mcp": "ok"
+    }
   },
   {
     "id": "hyper3d-rodin-api",
@@ -1981,7 +2702,14 @@
     "llms_txt": null,
     "desc_en": "Generate 3D meshes from text or images (sketch/regular/detail quality tiers) via an async REST job API.",
     "notes": "Async task-based API: submit generation, then poll or use webhooks to retrieve the finished asset.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "meshy-api",
@@ -2001,7 +2729,17 @@
     "llms_txt": "https://docs.meshy.ai/llms.txt",
     "desc_en": "Generate, retexture, rig, and animate 3D models from text or images via REST API or official MCP server.",
     "notes": "Free web accounts get only a limited built-in Playground key; creating/managing your own API keys requires a paid subscription.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "sketchfab-data-api",
@@ -2021,7 +2759,15 @@
     "llms_txt": null,
     "desc_en": "Search, download, and upload 3D models on Sketchfab programmatically via the REST Data API v3.",
     "notes": "This is an asset hosting/marketplace API, not a generative AI model; downloading models generally requires an authenticated Sketchfab account (and often the uploader's permission/license). Use v3 endpoints; v2 is deprecated.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "stability-ai-3d-stable-fast-3d-spar3d-api",
@@ -2041,7 +2787,14 @@
     "llms_txt": null,
     "desc_en": "Convert a single 2D image into a textured 3D mesh (GLB) via the v2beta/3d REST endpoints.",
     "notes": "Endpoints such as POST https://api.stability.ai/v2beta/3d/stable-fast-3d; part of Stability's broader multi-modal Platform API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "tencent-hunyuan3d-api",
@@ -2061,7 +2814,14 @@
     "llms_txt": null,
     "desc_en": "Generate textured 3D meshes (GLB, PBR) from text, images, or sketches via Tencent Cloud's Hunyuan 3D API.",
     "notes": "3d.hunyuan.tencent.com is the consumer web app; programmatic access requires a Tencent Cloud account and the Tencent Cloud API console, not the consumer site directly. An open-source self-hostable model (Hunyuan3D-2.1) is also available on GitHub for those who don't want the managed cloud API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "tripo-api",
@@ -2081,7 +2841,15 @@
     "llms_txt": null,
     "desc_en": "Generate textured 3D meshes from text or images via REST API, with an official MCP server for agents.",
     "notes": "Maintained by VAST AI Research (Tripo's developer). Exact free-credit amounts vary by promotion; verify in console.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "autodesk-platform-services-aps",
@@ -2104,7 +2872,14 @@
     "llms_txt": null,
     "desc_en": "Upload, translate, view and automate CAD/BIM files (Model Derivative, Data Management, Design Automation) via REST APIs.",
     "notes": "Successor to Autodesk Forge; requires an Autodesk account and app registration in the APS console.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "bentley-itwin-platform-apis",
@@ -2126,7 +2901,14 @@
     "llms_txt": null,
     "desc_en": "Create, manage and query digital twins, iModels and reality/reporting data for infrastructure projects via REST APIs.",
     "notes": "Built on iTwin.js; free developer account, but production data volumes/usage are billed.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "esri-arcgis-location-platform",
@@ -2152,7 +2934,14 @@
     "llms_txt": null,
     "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
     "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "onshape-rest-api",
@@ -2172,7 +2961,14 @@
     "llms_txt": null,
     "desc_en": "Create, read and modify Onshape CAD documents, parts, assemblies and drawings programmatically via REST API.",
     "notes": "Free-tier API access is limited to public documents; private/commercial use needs a paid Onshape subscription.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "procore-api",
@@ -2192,7 +2988,14 @@
     "llms_txt": null,
     "desc_en": "Read and write construction project data - RFIs, submittals, drawings, budgets, schedules - via REST API.",
     "notes": "Requires joining the Procore Developer Program and OAuth app approval for production scopes; sandbox is free.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "rhino-compute-mcneel",
@@ -2212,7 +3015,14 @@
     "llms_txt": null,
     "desc_en": "Run Rhino/Grasshopper geometry operations headlessly via a stateless REST API you deploy yourself.",
     "notes": "Not a hosted SaaS signup - must self-host on Windows/Linux (IIS, Azure, AWS); requires a Rhino license.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "speckle-api",
@@ -2236,7 +3046,15 @@
     "llms_txt": "https://docs.speckle.systems/llms.txt",
     "desc_en": "Send, receive and query 3D/BIM model data across CAD tools (Revit, Rhino, Grasshopper, Tekla) via GraphQL API and SDKs.",
     "notes": "Open-source data platform; free tier has unlimited API calls but limits project/user counts.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "trimble-connect-api",
@@ -2256,7 +3074,14 @@
     "llms_txt": null,
     "desc_en": "Manage Trimble Connect projects, files, BIM models, issues/topics and metadata via REST APIs (Core, Model, Organizer).",
     "notes": "Requires a Trimble Identity developer account and a registered application.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "zoo-text-to-cad-api-kittycad",
@@ -2281,7 +3106,15 @@
     "llms_txt": null,
     "desc_en": "Generate 3D CAD models from text prompts and run modeling/file-conversion operations via REST API.",
     "notes": "ML endpoints handle text-to-CAD generation; base API URL is api.zoo.dev, OpenAPI schema served from there.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "eraser-api-diagramgpt",
@@ -2301,7 +3134,14 @@
     "llms_txt": null,
     "desc_en": "Generate diagrams from text prompts (DiagramGPT) and manage Eraser files programmatically via REST API.",
     "notes": "No free tier for API access - tokens are only issued to paid teams, not free accounts.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "icepanel-api",
@@ -2321,7 +3161,16 @@
     "llms_txt": "https://developer.icepanel.io/llms.txt",
     "desc_en": "Programmatically create, read, import, and export C4-style architecture landscapes and models via REST API.",
     "notes": "Free plan has meaningful monthly request caps; higher volume requires Growth ($40/editor/mo), Scale ($80/editor/mo), or Enterprise plans.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "kroki",
@@ -2341,7 +3190,14 @@
     "llms_txt": null,
     "desc_en": "Render 25+ diagram-as-code formats (PlantUML, Mermaid, C4, GraphViz, BPMN, etc.) from text via a free HTTP GET/POST API.",
     "notes": "No authentication or signup required; text diagram in, image out; can be self-hosted via Docker for privacy or higher volume.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "lucid-lucidchart-rest-api",
@@ -2361,7 +3217,14 @@
     "llms_txt": null,
     "desc_en": "Create, read, search, and manage Lucidchart documents and folders programmatically via REST API.",
     "notes": "Requires enabling Developer Tools on the account first; supports both API-key and OAuth 2.0 client-credential flows; exact free-tier API quota not published in docs.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "mermaid-chart-api",
@@ -2381,7 +3244,16 @@
     "llms_txt": "https://mermaid.ai/llms.txt",
     "desc_en": "Validate, render, and save Mermaid diagrams via Mermaid Chart's official MCP server using an account API token.",
     "notes": "Broad REST API docs are gated behind a Google Form request (contact-to-access); the MCP server (HTTP https://mcp.mermaid.ai/mcp, SSE https://mcp.mermaid.ai/sse) is the practical self-serve agent interface today.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "reachable"
+    }
   },
   {
     "id": "miro-rest-api",
@@ -2401,7 +3273,16 @@
     "llms_txt": "https://developers.miro.com/llms.txt",
     "desc_en": "Create/read boards and items via REST API, or use Miro's official MCP server to search, build, and summarize boards.",
     "notes": "REST access tokens expire in 1 hour (refresh token 60 days); MCP server supports OIDC for enterprise data-safety controls.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "napkin-ai-api",
@@ -2421,7 +3302,14 @@
     "llms_txt": null,
     "desc_en": "Generate diagrams, flowcharts, mind maps, and charts from text via REST API, exporting to SVG, PNG, or PPT.",
     "notes": "Credit-based usage; requests fail with a no_credits error once a team's credits are exhausted.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "plantuml-server-api",
@@ -2441,7 +3329,14 @@
     "llms_txt": null,
     "desc_en": "Render UML and architecture-as-code diagrams to PNG/SVG/ASCII via a free public HTTP GET API using encoded diagram text.",
     "notes": "Extremely widely used for UML/C4/architecture-as-code; no signup; self-hostable via plantuml.war for privacy or rate-limit control. Added because it's a very common agent-callable diagram-as-code service missing from the candidate list.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "structurizr",
@@ -2463,7 +3358,14 @@
     "llms_txt": null,
     "desc_en": "Create and update C4-model software architecture diagram workspaces as JSON via a signed HTTPS API.",
     "notes": "Uses a nonstandard HMAC signing scheme rather than a plain bearer token; docs recommend using the Structurizr CLI or client libraries (e.g. Structurizr for Java) instead of calling the raw API directly.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "canva-connect-api",
@@ -2483,7 +3385,15 @@
     "llms_txt": null,
     "desc_en": "Programmatically create, autofill, and export Canva designs, and manage assets and comments via a REST API.",
     "notes": "Auth is OAuth2 only (no raw API key/static token option). Apps using preview/beta scopes cannot pass Canva's required review for production/public use. A general apps llms.txt exists at canva.dev/docs/apps/llms.txt but no Connect-specific one was found.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "figma-rest-api-dev-mode-mcp",
@@ -2503,7 +3413,17 @@
     "llms_txt": "https://developers.figma.com/llms.txt",
     "desc_en": "Read and write Figma file/comment/component data via REST, and feed live design context to coding agents via the official Dev Mode MCP server.",
     "notes": "REST API rate limits vary by seat/plan (e.g. Tier 1 ~10-20 req/min), returns 429 with Retry-After. Remote MCP (mcp.figma.com/mcp) works on all plans and is free during beta, will move to usage-based pricing; local desktop MCP variant requires a paid Dev/Full seat.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "framer",
@@ -2525,7 +3445,14 @@
     "llms_txt": null,
     "desc_en": "Automate publishing of Framer sites programmatically (get project info, publish previews, promote to production) via a Node SDK.",
     "notes": "Framer's genuine server-side surface is narrow: the Server API (npm package framer-api) only covers publish/deploy automation, not general design editing. The in-editor Plugin API, Code Components, and Fetch are for the visual editor/site runtime, not agent-callable server-side. No MCP server confirmed; 'External Agents' docs reference coding-agent workflows (Claude Code/Cursor) rather than a formal MCP endpoint.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "penpot-api",
@@ -2545,7 +3472,15 @@
     "llms_txt": null,
     "desc_en": "Read, create, and modify Penpot design files, comments, and webhooks via a token-authenticated RPC/REST API, or via the official MCP server.",
     "notes": "API is RPC-style (e.g. /api/rpc/command/get-profile) with auto-generated reference docs, not a conventional OpenAPI/Swagger file. Fully open source; can be self-hosted. MCP server repo: github.com/penpot/penpot/tree/develop/mcp.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "v0-platform-api-vercel",
@@ -2567,7 +3502,14 @@
     "llms_txt": null,
     "desc_en": "Generate full UI/frontend code from natural-language prompts, iterate via chat, and deploy the result directly to Vercel via REST API.",
     "notes": "Different product from Vercel's core platform API; API access is tied to v0 plan credits rather than a standalone free signup. No MCP server confirmed for v0 specifically.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "webflow-data-api",
@@ -2587,7 +3529,16 @@
     "llms_txt": "https://developers.webflow.com/llms.txt",
     "desc_en": "Create/update CMS collections, items, and pages, and publish Webflow sites programmatically via REST API or the official MCP server.",
     "notes": "Three token types: Site tokens (single site), Workspace tokens (multi-site read-only), OAuth tokens (multi-site apps). Official SDKs exist but specific languages weren't confirmed in docs excerpt; rate limits documented separately under 'Rate Limiting'.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "adobe-pdf-services-api",
@@ -2612,7 +3563,14 @@
     "llms_txt": null,
     "desc_en": "Programmatically create, convert, combine, compress, OCR, and extract data from PDF documents.",
     "notes": "As of January 2025, JWT/service-account auth is deprecated; all new integrations must use OAuth Server-to-Server (2-legged client-credentials) via Adobe Developer Console.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "aws-textract",
@@ -2640,7 +3598,15 @@
     "llms_txt": null,
     "desc_en": "Detect and extract text, forms, tables, and data from scanned documents and images via API calls.",
     "notes": "Requires an AWS account and IAM credentials; region-specific; free tier applies only for the first 3 months after the first Textract request; official AWS Labs MCP catalog exists (github.com/awslabs/mcp) but has no dedicated Textract server, only community ones.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "azure-ai-document-intelligence",
@@ -2651,8 +3617,8 @@
     "auth": "cloud_iam",
     "auth_hint": "Ocp-Apim-Subscription-Key: <key> header (Azure AD/Entra ID Bearer token also supported)",
     "mcp": {
-      "type": "community",
-      "url": "https://playbooks.com/mcp/cognitive-stack-azure-form-recognizer"
+      "type": "none",
+      "url": null
     },
     "free_tier": "free tier: F0 pricing tier, 500 pages/month, rate-limited",
     "sdk": [
@@ -2665,7 +3631,14 @@
     "llms_txt": null,
     "desc_en": "Analyze forms, invoices, receipts, and scanned documents to extract structured JSON via REST API.",
     "notes": "Auth via Azure subscription key or Entra ID (Azure AD) OAuth2; current GA version is 4.0; legacy v3.0 API scheduled to retire March 30, 2029; no official Microsoft MCP server specific to Document Intelligence, only community implementations and the general-purpose Azure MCP Server.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "cloudconvert-api",
@@ -2692,7 +3665,16 @@
     "llms_txt": "https://cloudconvert.com/llms.txt",
     "desc_en": "Convert, compress, merge, watermark, and OCR files across 200+ formats via REST API or MCP.",
     "notes": "Official MCP server at https://mcp.cloudconvert.com uses Streamable HTTP transport and authenticates via OAuth2 against the user's CloudConvert account (no API key needed for MCP); no public OpenAPI/Swagger file is served by CloudConvert itself.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "docusign-esignature-api",
@@ -2719,7 +3701,16 @@
     "llms_txt": null,
     "desc_en": "Send, sign, track, and manage electronic signature envelopes and agreement workflows via REST API.",
     "notes": "Official Docusign MCP Server is in Open Beta and covers eSignature plus Navigator/Maestro/Workspaces; JWT grant requires one-time user consent; production API calls require a paid plan beyond the free developer sandbox.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "gamma-api",
@@ -2739,7 +3730,16 @@
     "llms_txt": "https://developers.gamma.app/llms.txt",
     "desc_en": "Generate, poll, and export AI-made presentations, documents, or social posts as PDF/PPTX via REST API.",
     "notes": "Async workflow (POST /v1.0/generations then poll GET .../{id}); base URL https://public-api.gamma.app/v1.0; official remote MCP server is OAuth2-secured (RFC 7591 dynamic client registration).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "google-document-ai",
@@ -2768,7 +3768,15 @@
     "llms_txt": null,
     "desc_en": "Extract text, tables, and structured data from documents like invoices, forms, and IDs via REST API.",
     "notes": "Requires a GCP project and service-account/OAuth2 credentials (standard Google Cloud IAM auth); region-specific endpoints (global/us/eu); no official MCP server found.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "google-slides-docs-api",
@@ -2794,7 +3802,15 @@
     "llms_txt": null,
     "desc_en": "Read and programmatically edit Google Slides presentations (slides, shapes, text, tables) via REST API or MCP.",
     "notes": "Official remote MCP server (slidesmcp.googleapis.com, tools: read_presentation, update_presentation) is part of the Google Workspace Developer Preview Program - limited/early access. Non-OpenAPI Discovery Doc available at https://slides.googleapis.com/$discovery/rest?version=v1.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "llamaparse-llamacloud",
@@ -2819,7 +3835,16 @@
     "llms_txt": "https://developers.llamaindex.ai/llms.txt",
     "desc_en": "Parse, classify, extract, and split complex documents (tables, forms, charts) into LLM-ready structured data via API.",
     "notes": "Regional MCP endpoints: mcp.llamaindex.ai (North America) and mcp.eu.llamaindex.ai (Europe), sign in with LlamaCloud account. Pricing tiers: Fast/Cost-effective/Agentic/Agentic Plus.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "mistral-ocr-api",
@@ -2842,7 +3867,16 @@
     "llms_txt": "https://docs.mistral.ai/llms.txt",
     "desc_en": "Extract text, tables, and layout structure from PDFs and images as structured Markdown/JSON via REST API.",
     "notes": "Fixed model id e.g. mistral-ocr-2512; block/table/bounding-box extraction requires OCR 4+/2512+; no official Mistral-maintained MCP server, only community implementations.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "pdf-co-api",
@@ -2862,7 +3896,15 @@
     "llms_txt": "https://developer.pdf.co/llms.txt",
     "desc_en": "Convert, merge, split, edit, fill forms, OCR, and extract data from PDFs via REST API.",
     "notes": "Base URL https://api.pdf.co/v1; credit-based usage pricing after trial; code samples (not formal SDKs) published at github.com/pdfdotco/pdf-co-api-samples.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "reducto-api",
@@ -2886,7 +3928,17 @@
     "llms_txt": "https://docs.reducto.ai/llms.txt",
     "desc_en": "Parse, extract, split, edit, and classify complex documents into structured JSON/Markdown via REST API or SDKs.",
     "notes": "Pay-as-you-go after free credits: ~$10/1,000 pages (Parse), ~$20/1,000 pages (Extract); official MCP repo at github.com/reductoai/mcp-server-reducto; hosted MCP variant does not support local file paths, only URLs.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "slidespeak-api",
@@ -2906,7 +3958,15 @@
     "llms_txt": null,
     "desc_en": "Generate, edit, and download PowerPoint/PDF presentations from text, documents, or outlines via REST API.",
     "notes": "Async task-based workflow with polling (GET /task_status/{task_id}); download URLs are short-lived; no official language SDK, only a Postman collection plus the MCP server.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "unstructured-api",
@@ -2928,7 +3988,16 @@
     "llms_txt": "https://docs.unstructured.io/llms.txt",
     "desc_en": "Partition and extract structured elements (text, tables, layout) from PDFs, docs, and images for RAG pipelines via API.",
     "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Pipeline/Workflow API. Official MCP server (UNS-MCP) manages sources, destinations, workflows and jobs rather than one-shot partitioning.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "amazon-translate",
@@ -2954,7 +4023,14 @@
     "llms_txt": null,
     "desc_en": "Translate text and documents in real time or batch across 75+ languages via the AWS SDK/API.",
     "notes": "Requires an AWS account and IAM credentials; missing from the candidate list despite being a major agent-callable translation API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "azure-ai-translator",
@@ -2980,7 +4056,14 @@
     "llms_txt": null,
     "desc_en": "Translate text, detect language, and transliterate across 100+ languages via REST API within Azure AI Services.",
     "notes": "F0 free tier excludes custom model training/hosting, which are billed separately.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "deepl-api",
@@ -3008,7 +4091,15 @@
     "llms_txt": null,
     "desc_en": "Translate and rephrase text or documents between 30+ languages via REST API, SDKs, or an official MCP server.",
     "notes": "DeepL retired the API Free plan around July 2026; no more permanent free tier for new signups.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "google-cloud-translation",
@@ -3036,7 +4127,14 @@
     "llms_txt": null,
     "desc_en": "Translate text/documents and detect language across 100+ languages via REST/gRPC API within Google Cloud.",
     "notes": "Advanced (v3) edition supports glossaries/custom models; requires a GCP project with billing enabled even for free usage.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "languagetool-api",
@@ -3056,7 +4154,15 @@
     "llms_txt": null,
     "desc_en": "Check grammar, style, and spelling in 30+ languages via a public HTTP API, with an optional Premium key for higher limits.",
     "notes": "This is a proofreading/grammar API, not machine translation.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "modernmt-api",
@@ -3080,7 +4186,14 @@
     "llms_txt": null,
     "desc_en": "Send adaptive neural machine translation requests with in-context learning via a REST API.",
     "notes": "ModernMT is being folded into a new product called Lara; ModernMT API compatibility is stated to continue only until Dec 31, 2026 - plan for migration.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "cloudflare-sandbox-sdk",
@@ -3102,7 +4215,14 @@
     "llms_txt": null,
     "desc_en": "Deploy a Cloudflare Worker embedding this SDK to run untrusted code in per-request container sandboxes.",
     "notes": "Not a hosted API called directly with a key — you build and deploy your own Worker using the SDK on top of Cloudflare Containers/Durable Objects.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "codesandbox-sdk",
@@ -3124,7 +4244,14 @@
     "llms_txt": null,
     "desc_en": "Programmatically create, resume, and control cloud VM sandboxes to run and preview AI-written code.",
     "notes": "Also powers Together AI's white-labeled 'Code Sandbox' product; unofficial community MCP wrappers exist but none vendor-maintained.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "reachable"
+    }
   },
   {
     "id": "daytona",
@@ -3147,7 +4274,16 @@
     "llms_txt": "https://www.daytona.io/docs/llms-full.txt",
     "desc_en": "Create elastic remote sandboxes via SDK/API to run AI-generated code with sub-second startup.",
     "notes": "Billed per second; supports sandbox snapshots and preview URLs for web apps.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "e2b",
@@ -3170,7 +4306,16 @@
     "llms_txt": "https://docs.e2b.dev/llms.txt",
     "desc_en": "Spin up isolated Firecracker cloud sandboxes via SDK/REST to execute AI-generated code and return results.",
     "notes": "Sandboxes auto-expire after a configurable timeout (default ~5 min); used by many agent frameworks (OpenHands, etc.).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "judge0",
@@ -3190,7 +4335,14 @@
     "llms_txt": null,
     "desc_en": "Submit source code and stdin via REST to compile/run it in 60+ languages and poll for the result.",
     "notes": "Built for compile-run-compare judging (like competitive programming), not long-lived interactive agent sandboxes; self-hosting recommended for production agent use.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "modal",
@@ -3214,7 +4366,15 @@
     "llms_txt": null,
     "desc_en": "Programmatically launch serverless sandboxes, optionally with GPUs, to execute untrusted or agent code.",
     "notes": "Sandbox compute billed separately from regular function compute (~$0.14/vCPU-hr); Python SDK is most mature/complete.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "piston",
@@ -3234,7 +4394,14 @@
     "llms_txt": null,
     "desc_en": "Call a free public REST API to compile and run code in 70+ languages inside isolated containers.",
     "notes": "The public emkc.org instance is for low-volume/non-commercial use; widely used by Discord/Slack bots and agents; self-host via Docker for heavier agent workloads.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "riza",
@@ -3258,7 +4425,17 @@
     "llms_txt": "https://docs.riza.io/llms.txt",
     "desc_en": "Call a REST API to execute untrusted Python/JS/Ruby/PHP code in sandboxes that start in under 10ms.",
     "notes": "Also supports saving reusable 'tools' (functions) via a Tools API for repeated agent calls.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "error",
+      "mcp_detail": "timeout",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "runloop",
@@ -3281,7 +4458,15 @@
     "llms_txt": "https://docs.runloop.ai/llms.txt",
     "desc_en": "Create, snapshot, suspend/resume, and run commands in Linux Devboxes via API/SDK for agent coding tasks.",
     "notes": "Includes an 'MCP Hub' feature letting Devboxes connect outward to other MCP tool servers; no confirmed official vendor MCP server exposing Runloop itself.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "vercel-sandbox",
@@ -3304,7 +4489,16 @@
     "llms_txt": null,
     "desc_en": "Boot ephemeral Firecracker microVMs via SDK/REST to run agent- or AI-generated code and shell commands.",
     "notes": "Pricing = active CPU + provisioned memory + per Sandbox.create() call + data transfer; 32GB ephemeral NVMe per sandbox.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "aws-apis",
@@ -3337,7 +4531,16 @@
     "llms_txt": "https://docs.aws.amazon.com/llms.txt",
     "desc_en": "An agent can provision and control thousands of AWS resources (compute, storage, databases, ML) via SDKs/CLI/REST.",
     "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own IAM scoping, rate limits, and regional availability; no single unified OpenAPI spec.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "azure-apis",
@@ -3366,7 +4569,16 @@
     "llms_txt": null,
     "desc_en": "An agent can deploy and manage Azure resources (compute, storage, databases, AI) across resource-provider REST APIs.",
     "notes": "Umbrella platform: hundreds of resource-provider APIs, each independently versioned (api-version query param required); the Azure MCP repo moved from Azure/azure-mcp (archived) to microsoft/mcp.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "circleci-api",
@@ -3386,7 +4598,16 @@
     "llms_txt": "https://circleci.com/docs/llms.txt",
     "desc_en": "An agent can trigger pipelines, rerun workflows, fetch logs/test results, and validate CI/CD configuration via REST.",
     "notes": "CircleCI recommends the v3 API for new development; v2 remains supported. The CircleCI-Public/mcp-server-circleci npm package is deprecated in favor of CircleCI's newer hosted MCP server / CLI MCP mode, whose exact endpoint could not be confirmed from fetchable docs at research time.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "cloudflare-api",
@@ -3410,7 +4631,17 @@
     "llms_txt": "https://developers.cloudflare.com/llms.txt",
     "desc_en": "An agent can manage DNS, Workers, zones, WAF/security rules, and caching for Cloudflare accounts programmatically.",
     "notes": "Global rate limit ~1,200 requests/5 min per user; per-IP limit ~200 req/sec; GraphQL Analytics API has a separate cost-based limit. Legacy X-Auth-Key global key auth also exists but is discouraged.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "datadog-api",
@@ -3437,14 +4668,23 @@
     "llms_txt": "https://docs.datadoghq.com/llms.txt",
     "desc_en": "An agent can query metrics, logs, traces, monitors, and dashboards, and manage Datadog configuration via REST.",
     "notes": "Datadog MCP server endpoint is site-specific (app.datadoghq.com, datadoghq.eu, etc.); supports OAuth2, personal/service tokens, or DD-API-KEY/DD-APPLICATION-KEY headers.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "docker-hub-api",
     "name": "Docker Hub API",
     "category": "developer-devops",
     "homepage": "https://docs.docker.com/docker-hub/api/latest/",
-    "docs": "https://hub.docker.com/reference/api/hub/latest/",
+    "docs": "https://docs.docker.com/reference/api/hub/latest/",
     "auth": "api_key",
     "auth_hint": "Authorization: Bearer <token> (obtained via login or a Personal/Organization Access Token)",
     "mcp": {
@@ -3453,11 +4693,20 @@
     },
     "free_tier": "free personal accounts with rate-limited image pulls; paid Pro/Team/Business tiers raise pull limits",
     "sdk": [],
-    "openapi": "https://hub.docker.com/reference/api/hub/latest.yaml",
+    "openapi": "https://docs.docker.com/reference/api/hub/latest.yaml",
     "llms_txt": null,
     "desc_en": "An agent can search, push, pull, tag, and manage container images and repositories on Docker Hub.",
     "notes": "API is labeled v2-beta; rate limits apply to anonymous/free image pulls. Docker also has a broader official MCP Catalog/Toolkit (docs.docker.com/ai/mcp-catalog-and-toolkit/) with 300+ containerized MCP servers.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "fly-io-machines-api",
@@ -3479,7 +4728,16 @@
     "llms_txt": null,
     "desc_en": "An agent can create, start, stop, and destroy Fly.io Machines (lightweight VMs) programmatically via REST.",
     "notes": "The official MCP server ships under Fly.io's Sprites product, adjacent to but distinct from the core Machines API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "github-api",
@@ -3503,7 +4761,17 @@
     "llms_txt": "https://docs.github.com/llms.txt",
     "desc_en": "An agent can manage repositories, issues, pull requests, releases, and code search via REST or GraphQL.",
     "notes": "Rate limits scale with auth type (60/hr unauth, 5,000/hr PAT, higher for GitHub Apps); secondary abuse limits also apply; GraphQL uses a separate points-based limit.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "gitlab-api",
@@ -3523,7 +4791,17 @@
     "llms_txt": "https://docs.gitlab.com/llms.txt",
     "desc_en": "An agent can manage projects, issues, merge requests, CI/CD pipelines, and repository files via REST/GraphQL.",
     "notes": "GitLab's official MCP server is in beta (GitLab 18.6+); no GitLab-maintained multi-language SDK, but popular community libraries (python-gitlab, node-gitlab) exist.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "google-cloud-apis",
@@ -3553,7 +4831,15 @@
     "llms_txt": null,
     "desc_en": "An agent can create and manage Google Cloud resources (compute, storage, data, AI/ML) via REST, gRPC, or client libraries.",
     "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own scopes/quotas; many APIs require explicit per-project enabling. MCP Toolbox for Databases is Google's main official MCP offering (Cloud SQL, AlloyDB, BigQuery, Spanner).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "netlify-api",
@@ -3576,7 +4862,17 @@
     "llms_txt": "https://docs.netlify.com/llms.txt",
     "desc_en": "An agent can create/manage sites, trigger and monitor deploys, and configure DNS, domains, and env vars.",
     "notes": "Rate limits: 500 req/min general, 3 deploys/min (100/day). Tokens are invalidated on password reset.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "pagerduty-api",
@@ -3596,7 +4892,16 @@
     "llms_txt": null,
     "desc_en": "An agent can create/manage incidents, on-call schedules, escalation policies, and services via REST.",
     "notes": "The linked pagerduty-mcp-server GitHub repo is deprecated/read-only; PagerDuty has moved MCP development to a hosted Remote MCP Server with OAuth, but its exact endpoint URL could not be confirmed from fetchable docs at research time.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "postman-api",
@@ -3616,7 +4921,17 @@
     "llms_txt": "https://learning.postman.com/llms.txt",
     "desc_en": "An agent can manage Postman collections, workspaces, environments, mocks, monitors, and API specs via REST.",
     "notes": "The given candidate homepage is a UI workspace, not docs; the official docs.postman.com/learning.postman.com site is the real reference. Postman's confirmed official MCP endpoint is oriented at querying Postman's own docs/learning content, distinct from a full account-management MCP.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "render-api",
@@ -3628,15 +4943,25 @@
     "auth_hint": "Authorization: Bearer <api-key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.render.com"
+      "url": "https://mcp.render.com/mcp"
     },
     "free_tier": "free static sites; free web services that spin down after inactivity",
     "sdk": [],
-    "openapi": "https://api-docs.render.com/openapi.json",
+    "openapi": "https://api-docs.render.com/openapi/render-public-api-1.json",
     "llms_txt": "https://api-docs.render.com/llms.txt",
     "desc_en": "An agent can create and manage Render services, trigger deployments, and configure databases and env vars.",
     "notes": "OpenAPI spec endpoint/tag names may change over time even though the API itself stays backward compatible. Render's official MCP server supports potentially destructive operations (env var changes, triggering deploys).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "sentry-api",
@@ -3656,7 +4981,17 @@
     "llms_txt": "https://docs.sentry.io/llms.txt",
     "desc_en": "An agent can query and triage error/performance issues and manage projects, releases, and org data.",
     "notes": "API is v0 (public endpoints stable, beta endpoints may change); per-endpoint rate limits via X-Sentry-Rate-Limit-* headers; legacy Basic-auth API keys are deprecated in favor of Bearer auth tokens.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "supabase-management-api",
@@ -3676,7 +5011,17 @@
     "llms_txt": "https://supabase.com/llms.txt",
     "desc_en": "An agent can programmatically create and manage Supabase projects, databases, API keys, and config.",
     "notes": "Personal Access Tokens carry full account privileges - treat as highly sensitive. Client SDKs (javascript, python, dart, swift, kotlin) are for the data/auth/storage APIs, not the Management API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "vercel-api",
@@ -3698,7 +5043,17 @@
     "llms_txt": "https://vercel.com/llms.txt",
     "desc_en": "An agent can create deployments, manage projects/domains/env vars, and query analytics and logs.",
     "notes": "Vercel MCP (Beta) is remote/OAuth-based; write actions like deployments or purchases require explicit OAuth consent.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "chroma-cloud",
@@ -3721,7 +5076,15 @@
     "llms_txt": null,
     "desc_en": "Create databases and store/query vector embeddings for retrieval via REST/SDK or MCP server.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "clickhouse-cloud",
@@ -3746,7 +5109,15 @@
     "llms_txt": null,
     "desc_en": "Run SQL analytics queries and manage Cloud services/backups via REST API or official MCP server.",
     "notes": "Cloud-hosted remote MCP adds service management, billing, and ClickPipe visibility.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "convex",
@@ -3770,7 +5141,15 @@
     "llms_txt": null,
     "desc_en": "Introspect tables/functions, call functions, and read/write data in a reactive database via MCP or client SDKs.",
     "notes": "Vector search available even on the free tier.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "google-bigquery",
@@ -3795,7 +5174,15 @@
     "llms_txt": null,
     "desc_en": "Run SQL queries and inspect datasets/tables in BigQuery via REST API or the fully-managed remote MCP server.",
     "notes": "Remote MCP server is hosted by Google, no local install needed.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "letta",
@@ -3818,7 +5205,15 @@
     "llms_txt": null,
     "desc_en": "Create and run stateful agents with persistent memory blocks via REST API or hosted MCP server.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "mem0",
@@ -3841,7 +5236,15 @@
     "llms_txt": null,
     "desc_en": "Add, search, update, and delete long-term agent memories via REST API or hosted MCP server.",
     "notes": "Graph memory feature is gated to the Pro plan.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "mongodb-atlas",
@@ -3868,7 +5271,15 @@
     "llms_txt": null,
     "desc_en": "Create/manage Atlas clusters and query MongoDB data via Admin API, drivers, or official MCP server.",
     "notes": "MongoDB also offers a managed MCP server hosted by Atlas itself.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "neon-postgres",
@@ -3884,11 +5295,21 @@
     },
     "free_tier": "free tier: 1 project, 0.5GB storage",
     "sdk": [],
-    "openapi": "https://api-docs.neon.tech/reference/openapi",
+    "openapi": "https://neon.com/api_spec/release/v2.json",
     "llms_txt": "https://api-docs.neon.tech/llms.txt",
     "desc_en": "Provision and manage serverless Postgres projects/branches and run SQL via REST API or MCP server.",
     "notes": "OAuth recommended for local IDEs, static API key for headless agents.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "pinecone",
@@ -3914,7 +5335,15 @@
     "llms_txt": null,
     "desc_en": "Upsert, query, and rerank vector embeddings in managed indexes via REST/SDK or MCP server.",
     "notes": "Two official MCP servers: Developer/Assistant remote MCP and a local variant.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "planetscale",
@@ -3936,7 +5365,16 @@
     "llms_txt": "https://planetscale.com/docs/llms.txt",
     "desc_en": "Manage MySQL databases, branches, and schema, and view Insights via hosted MCP server or API.",
     "notes": "MCP server launched Jan 2026; configurable read-only vs full-access permissions.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "qdrant-cloud",
@@ -3961,7 +5399,15 @@
     "llms_txt": null,
     "desc_en": "Create clusters and store/search vector embeddings via REST/gRPC API, SDKs, or official MCP server.",
     "notes": "Free clusters delete after 4 weeks of inactivity if not reactivated.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "snowflake",
@@ -3986,7 +5432,15 @@
     "llms_txt": null,
     "desc_en": "Run SQL, Cortex Analyst, and Cortex Search over warehoused data via REST API or managed MCP server.",
     "notes": "Snowflake-managed MCP server reached GA Nov 2025.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "supabase",
@@ -4011,7 +5465,15 @@
     "llms_txt": null,
     "desc_en": "Manage Postgres tables, auth, storage, and edge functions via REST/GraphQL APIs or client SDKs.",
     "notes": "Official MCP server can also create/manage whole projects, not just query data.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "turso",
@@ -4036,7 +5498,14 @@
     "llms_txt": null,
     "desc_en": "Create and query edge SQLite (libSQL) databases programmatically via HTTP/SDK client libraries.",
     "notes": "No confirmed official MCP server found at verification time.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "upstash-redis-vector",
@@ -4060,7 +5529,15 @@
     "llms_txt": null,
     "desc_en": "Call serverless Redis, Vector, and QStash over HTTP REST API from edge/serverless runtimes.",
     "notes": "Remote MCP endpoint supports OAuth or API key.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "weaviate-cloud",
@@ -4085,7 +5562,15 @@
     "llms_txt": null,
     "desc_en": "Store and semantically search vector objects in a managed cluster via REST/GraphQL or MCP server.",
     "notes": "MCP endpoint built into the database at /v1/mcp, disabled by default.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "zep",
@@ -4108,7 +5593,15 @@
     "llms_txt": null,
     "desc_en": "Store and retrieve temporal knowledge-graph agent memory via REST API or a single MCP endpoint.",
     "notes": "One MCP URL serves both Zep managed cloud and BYOC deployments.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "zilliz-cloud-milvus",
@@ -4133,7 +5626,15 @@
     "llms_txt": null,
     "desc_en": "Manage Milvus clusters and perform vector search/ingestion via REST API, SDKs, or MCP server.",
     "notes": "MCP server can even provision a new free-tier cluster on request.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "agentmail",
@@ -4156,7 +5657,15 @@
     "llms_txt": null,
     "desc_en": "Programmatically create inboxes and send/receive email autonomously, purpose-built for AI agents.",
     "notes": "Newer, smaller vendor than legacy ESPs; markets itself specifically as agent-native email infra with a built-in MCP server.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "discord-api",
@@ -4180,7 +5689,16 @@
     "llms_txt": "https://docs.discord.com/llms.txt",
     "desc_en": "Send messages, manage channels/roles, and build interactive bots via REST and Gateway API.",
     "notes": "Per-route rate limits; bots in 100+ servers require Discord verification/approval.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "mailgun",
@@ -4208,7 +5726,14 @@
     "llms_txt": null,
     "desc_en": "Send and validate transactional email via REST API and SMTP relay with webhooks.",
     "notes": "Free plan limited to 1 sending domain and 1-day log retention.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "postmark",
@@ -4236,7 +5761,14 @@
     "llms_txt": null,
     "desc_en": "Send transactional email via REST API with delivery tracking, bounce handling, and templates.",
     "notes": "Strictly transactional-email focused; enforces anti-bulk/anti-spam policy which can suspend accounts sending bulk/marketing mail.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "resend",
@@ -4263,7 +5795,15 @@
     "llms_txt": null,
     "desc_en": "Send transactional and marketing email via REST API with templates, domains, and webhooks.",
     "notes": "Official remote MCP server at mcp.resend.com/mcp; sandbox domain available for testing before custom domain verification.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "sendgrid-twilio",
@@ -4291,7 +5831,14 @@
     "llms_txt": null,
     "desc_en": "Send transactional and marketing email via REST/SMTP API with templates and analytics.",
     "notes": "Now a Twilio product; sender identity/domain authentication required before sending.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "slack-api",
@@ -4315,7 +5862,15 @@
     "llms_txt": null,
     "desc_en": "Post messages, manage channels, and read conversation history in Slack via the Web API.",
     "notes": "Requires creating a Slack app with OAuth scopes; per-method rate-limit tiers apply. The official remote MCP (OAuth 2.0) works only for directory-published or internal Slack apps, and in partner clients such as Claude.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "stream-getstream-chat-video-api",
@@ -4341,7 +5896,14 @@
     "llms_txt": null,
     "desc_en": "Build and moderate in-app chat and video with REST/SDK APIs, channels, and real-time messaging.",
     "notes": "Client access requires server-minted short-lived user tokens; not a pure send-and-forget messaging API like email/SMS providers.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "telegram-bot-api",
@@ -4365,7 +5927,15 @@
     "llms_txt": null,
     "desc_en": "Send/receive messages, media, and inline interactions via a simple HTTPS bot API.",
     "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "twilio",
@@ -4392,7 +5962,15 @@
     "llms_txt": null,
     "desc_en": "Send/receive SMS, WhatsApp messages, and voice calls programmatically via REST API.",
     "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Official Twilio Labs MCP server exposes the full API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "vonage-api",
@@ -4419,7 +5997,14 @@
     "llms_txt": null,
     "desc_en": "Send SMS, make voice calls, and build video apps via a unified communications REST API.",
     "notes": "Auth method differs per sub-API (API key/secret vs JWT), which agents must account for.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "whatsapp-business-cloud-api",
@@ -4439,7 +6024,15 @@
     "llms_txt": null,
     "desc_en": "Send/receive WhatsApp messages, template messages, and media programmatically via Graph API.",
     "notes": "Requires Meta Business verification and pre-approved message templates for outbound marketing/utility messages outside the 24h session window.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "zoom-api",
@@ -4464,7 +6057,14 @@
     "llms_txt": null,
     "desc_en": "Schedule, update, and manage meetings, webinars, and cloud recordings programmatically via REST API.",
     "notes": "Server-to-Server OAuth app type is the recommended path for unattended agent use; some features gated behind licensed/paid plans.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "bland-ai",
@@ -4484,7 +6084,16 @@
     "llms_txt": "https://docs.bland.ai/llms.txt",
     "desc_en": "Programmatically create AI phone agents and place/manage automated outbound and inbound calls.",
     "notes": "MCP server rate-limited to 120 req/min/org; distinguishes read-only vs destructive operations.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "deepgram-voice-agent-api",
@@ -4509,7 +6118,14 @@
     "llms_txt": null,
     "desc_en": "Run a full-duplex speech-to-speech voice agent pipeline (STT+LLM+TTS) over a WebSocket API.",
     "notes": "Primarily an STT/TTS/voice-agent infra layer, often paired with a telephony provider like Twilio to reach phone calls.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "elevenlabs-agents-platform",
@@ -4535,7 +6151,17 @@
     "llms_txt": "https://elevenlabs.io/docs/llms.txt",
     "desc_en": "Build and deploy conversational AI voice agents with telephony (SIP/Twilio) integration via API and SDKs.",
     "notes": "Official hosted MCP server uses OAuth (sign in with ElevenLabs account) rather than a raw API key; core REST API uses api-key auth.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "livekit-cloud",
@@ -4563,7 +6189,15 @@
     "llms_txt": "https://docs.livekit.io/llms.txt",
     "desc_en": "Build and deploy real-time voice AI agents with SIP telephony support using LiveKit's server SDKs and APIs.",
     "notes": "Self-hosted open-source option also exists; Cloud is the managed offering with usage-based billing beyond the free tier.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "retell-ai",
@@ -4586,7 +6220,16 @@
     "llms_txt": "https://docs.retellai.com/llms.txt",
     "desc_en": "Build, deploy, and manage AI voice agents that handle phone and web calls via REST API and SDKs.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "synthflow-api",
@@ -4606,7 +6249,15 @@
     "llms_txt": "https://docs.synthflow.ai/llms-full.txt",
     "desc_en": "Create and manage AI phone voice agents and trigger/manage outbound calls programmatically via REST API.",
     "notes": "Go-to-market leans enterprise-sales for scaled deployments; a self-serve trial with API access exists for building/testing.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "twilio-programmable-voice",
@@ -4633,7 +6284,16 @@
     "llms_txt": null,
     "desc_en": "Programmatically make, receive, and control phone calls (IVR, recording, conferencing) via REST API.",
     "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "vapi",
@@ -4656,7 +6316,17 @@
     "llms_txt": "https://docs.vapi.ai/llms.txt",
     "desc_en": "Create, configure, and run AI voice assistants that make and receive phone calls via REST API.",
     "notes": "Also has an official MCP server (streamable-HTTP and SSE endpoints) exposing assistants/calls/phone numbers as tools.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "airtable-api",
@@ -4678,7 +6348,15 @@
     "llms_txt": null,
     "desc_en": "Read and write records in Airtable bases and tables via REST API.",
     "notes": "Official JS client available; Python/Ruby/.NET clients are community-maintained.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "asana-api",
@@ -4704,7 +6382,15 @@
     "llms_txt": "https://developers.asana.com/llms.txt",
     "desc_en": "Create tasks, projects, and comments in Asana workspaces via REST API.",
     "notes": "No official MCP server confirmed as of this check.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "atlassian-jira-confluence",
@@ -4728,7 +6414,16 @@
     "llms_txt": null,
     "desc_en": "Create and manage Jira issues and Confluence pages via REST API or the official remote MCP server.",
     "notes": "Official Atlassian Remote MCP (Rovo) rate limits range 500-10,000+ calls/hour depending on subscription tier; does not store/cache content.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok"
+    }
   },
   {
     "id": "box-api",
@@ -4753,7 +6448,14 @@
     "llms_txt": null,
     "desc_en": "Upload, download, and manage files, folders, and metadata in Box via REST API.",
     "notes": "Also supports JWT/Client Credentials Grant for server-to-server auth.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "cal-com-api",
@@ -4775,7 +6477,15 @@
     "llms_txt": "https://cal.com/docs/llms.txt",
     "desc_en": "Create and manage bookings, event types, and availability via the Cal.com REST API v2.",
     "notes": "OAuth strongly recommended for production integrations; API keys are simpler but less secure.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "calendly-api",
@@ -4795,7 +6505,14 @@
     "llms_txt": null,
     "desc_en": "Programmatically book meetings and read/write scheduling, event, and contact data via REST API v2.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "clickup-api",
@@ -4815,7 +6532,15 @@
     "llms_txt": null,
     "desc_en": "Create and manage ClickUp tasks, lists, and docs via REST API or the official MCP server.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "coda-api-superhuman-docs",
@@ -4835,7 +6560,15 @@
     "llms_txt": null,
     "desc_en": "Read and write Coda (now 'Superhuman Docs') documents, tables, and rows via REST API or an MCP server.",
     "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL (coda.io/apis/v1) still works. Docs mention an official MCP server optimized for LLM usage, but the exact remote endpoint wasn't independently confirmed this session.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "dropbox-api",
@@ -4859,7 +6592,14 @@
     "llms_txt": null,
     "desc_en": "Upload, download, and manage files and folders in Dropbox via the HTTP REST API.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "google-workspace-apis-gmail-calendar-drive",
@@ -4884,7 +6624,14 @@
     "llms_txt": null,
     "desc_en": "Read/write Gmail messages, Calendar events, and Drive files programmatically via REST APIs.",
     "notes": "Each Workspace API (Gmail, Calendar, Drive, Docs, Sheets) has its own quota; sensitive/restricted scopes require OAuth consent screen verification.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "linear-api",
@@ -4906,7 +6653,15 @@
     "llms_txt": null,
     "desc_en": "Create, query, and update Linear issues, projects, and comments via GraphQL API or the official MCP server.",
     "notes": "GraphQL API (not REST). Official MCP also has a read-only variant at mcp.linear.app/mcp/readonly.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "microsoft-graph-outlook-teams-onedrive",
@@ -4932,7 +6687,14 @@
     "llms_txt": null,
     "desc_en": "Single REST endpoint to read/write Outlook mail, Calendar events, Teams, and OneDrive/SharePoint data.",
     "notes": "Requires app registration in Microsoft Entra ID; delegated vs application permissions determine required consent.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "monday-com-api",
@@ -4954,7 +6716,14 @@
     "llms_txt": null,
     "desc_en": "Query and update monday.com boards, items, and workflows via GraphQL API or a hosted MCP endpoint.",
     "notes": "monday.com docs confirm a native/hosted MCP connection option for AI assistants, but the exact current endpoint URL could not be independently confirmed this session — check developer.monday.com.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "notion-api",
@@ -4977,7 +6746,16 @@
     "llms_txt": "https://developers.notion.com/llms.txt",
     "desc_en": "Read, create, and update Notion pages, databases, and comments via REST API.",
     "notes": "Internal integrations use static tokens; public integrations use OAuth2. Official hosted MCP endpoint requires sign-in (returns 401 unauthenticated).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "todoist-api",
@@ -5000,7 +6778,15 @@
     "llms_txt": null,
     "desc_en": "Create, read, and complete Todoist tasks and projects via REST API or the official MCP server.",
     "notes": "Official MCP works with Claude, ChatGPT, Cursor, VS Code; supports OAuth dynamic client registration (RFC 7591).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "trello-api",
@@ -5020,7 +6806,14 @@
     "llms_txt": null,
     "desc_en": "Create and manage Trello boards, lists, and cards via REST API.",
     "notes": "Now documented under the Atlassian developer platform; supports both legacy key+token and OAuth2 bearer auth.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "attio-api",
@@ -5040,7 +6833,17 @@
     "llms_txt": "https://docs.attio.com/llms.txt",
     "desc_en": "Search, create, and update records, lists, and notes in an Attio CRM workspace via REST API or official MCP.",
     "notes": "Official MCP at mcp.attio.com/mcp uses OAuth login (no API key needed); read ops auto-approved, write ops require user confirmation in the MCP client.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "hubspot-api",
@@ -5065,14 +6868,24 @@
     "llms_txt": "https://developers.hubspot.com/docs/llms.txt",
     "desc_en": "Create/update CRM contacts, deals, companies, and engagements, or send marketing emails, via REST API or remote MCP.",
     "notes": "Remote MCP server at mcp.hubspot.com requires account admin authorization first (OAuth2); some API endpoints gated by subscription tier.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "intercom-api",
     "name": "Intercom API",
     "category": "crm-support-marketing",
     "homepage": "https://developers.intercom.com",
-    "docs": "https://developers.intercom.com/docs/references/rest-api/",
+    "docs": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io",
     "auth": "oauth2",
     "auth_hint": "Authorization: Bearer <access_token>",
     "mcp": {
@@ -5085,7 +6898,15 @@
     "llms_txt": null,
     "desc_en": "Manage conversations, contacts, companies, and Help Center articles via REST API or Intercom's official remote MCP server.",
     "notes": "Official MCP has region-specific endpoints: US at mcp.intercom.com/mcp, EU at mcp.eu.intercom.com/mcp; supports OAuth or bearer token auth.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "klaviyo-api",
@@ -5105,7 +6926,16 @@
     "llms_txt": null,
     "desc_en": "Manage email/SMS marketing profiles, lists, flows, and campaign analytics via Klaviyo's REST API or official MCP server.",
     "notes": "Official remote MCP at mcp.klaviyo.com/mcp uses OAuth with dynamic client registration; a local MCP server option also exists. Private key scopes cannot be edited after creation.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok"
+    }
   },
   {
     "id": "mailchimp-marketing-api",
@@ -5125,7 +6955,15 @@
     "llms_txt": null,
     "desc_en": "Manage email marketing audiences, campaigns, and automation via Mailchimp's Marketing REST API.",
     "notes": "No official MCP server found; no widely-adopted community MCP identified. API base URL includes account-specific data-center subdomain.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "pipedrive-api",
@@ -5148,7 +6986,15 @@
     "llms_txt": null,
     "desc_en": "Create and update deals, contacts (persons/organizations), and activities in a Pipedrive CRM pipeline via REST API.",
     "notes": "No official or notably popular community MCP server found. Offers a free Sandbox account for development/testing separate from production pricing.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "salesforce-apis",
@@ -5172,7 +7018,15 @@
     "llms_txt": null,
     "desc_en": "Read and write Salesforce CRM records (leads, opportunities, cases) programmatically via REST, GraphQL, or Bulk API.",
     "notes": "Official salesforcecli/mcp server is scoped to developer/DevOps tooling (metadata deploy, Apex, LWC) against an authorized org, not a general end-user CRM-data MCP; requires local Salesforce CLI org authorization. Core data access is via REST/GraphQL/Bulk APIs with OAuth2.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "zendesk-api",
@@ -5192,7 +7046,15 @@
     "llms_txt": null,
     "desc_en": "Create, update, and search support tickets, users, and Help Center articles via Zendesk's REST API.",
     "notes": "No official Zendesk-maintained MCP server found as of research date; several community MCP servers exist. API tokens can impersonate any account user, including admins.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "ayrshare",
@@ -5215,7 +7077,15 @@
     "llms_txt": null,
     "desc_en": "Unified API to post, schedule, and analyze content across 14+ social networks (X, Instagram, LinkedIn, TikTok, etc.) with one API key.",
     "notes": "Ayrshare itself holds the underlying per-platform app approvals, so agents avoid individually applying for X/Meta/TikTok developer access. Vendor confirms an MCP server for AI agents; exact endpoint URL not independently verified this session.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "bluesky-at-protocol",
@@ -5238,7 +7108,14 @@
     "llms_txt": null,
     "desc_en": "Post, read, and moderate content on Bluesky via the open, self-hostable AT Protocol REST/XRPC API.",
     "notes": "Decentralized protocol; official OAuth2 is replacing legacy app passwords as the recommended auth method.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "linkedin-api",
@@ -5258,7 +7135,14 @@
     "llms_txt": null,
     "desc_en": "Sign users in and share basic posts via OAuth2/OpenID Connect; most other endpoints require partner approval.",
     "notes": "LinkedIn API access is heavily gated; only a narrow self-serve subset (Sign In with LinkedIn/OpenID Connect, basic Share on LinkedIn) is available without applying to a partner program (Marketing, Sales, Talent, Learning solutions).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "mastodon-api",
@@ -5278,7 +7162,14 @@
     "llms_txt": null,
     "desc_en": "Post statuses, read timelines, and manage accounts on any Mastodon instance via REST API.",
     "notes": "Decentralized: each Mastodon instance is its own API endpoint; app registration is per-instance and free.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "meta-graph-api-facebook-instagram",
@@ -5302,7 +7193,14 @@
     "llms_txt": null,
     "desc_en": "Read and publish posts, manage Pages, and access Instagram business content via Meta's Graph API.",
     "notes": "Most useful permissions (posting, Instagram content, insights) require Meta App Review; basic/dev-mode access is limited to admins/testers.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "pinterest-api",
@@ -5322,7 +7220,14 @@
     "llms_txt": null,
     "desc_en": "Create pins and boards and read analytics data on Pinterest via REST API v5.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "reddit-api",
@@ -5344,7 +7249,14 @@
     "llms_txt": null,
     "desc_en": "Read posts/comments and submit posts, comments, or votes on Reddit via OAuth2 REST API.",
     "notes": "Since 2023, commercial/high-volume access requires a separate paid Reddit Data API agreement.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "tiktok-api",
@@ -5364,7 +7276,14 @@
     "llms_txt": null,
     "desc_en": "Post videos/drafts and query content on TikTok via the Content Posting and Display OAuth2 REST APIs.",
     "notes": "Apps must pass TikTok's review process before production/unaudited-client-mode access is granted.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "x-twitter-api",
@@ -5387,7 +7306,14 @@
     "llms_txt": null,
     "desc_en": "Post, search, and read tweets and manage X (Twitter) content via REST API v2.",
     "notes": "Free tier is write-only and extremely restricted; practical agent use (reading timelines/search) generally requires a paid API tier. Docs page returned HTTP 402 during this check, consistent with the paid-access posture.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "youtube-data-api",
@@ -5411,7 +7337,14 @@
     "llms_txt": null,
     "desc_en": "Search videos, manage playlists/comments, and upload videos to YouTube via REST API.",
     "notes": "Daily quota shared across all calls; different operations cost different quota amounts (e.g. search is expensive).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "geoapify",
@@ -5433,7 +7366,15 @@
     "llms_txt": null,
     "desc_en": "Geocode, search places, and calculate routes/isochrones via REST APIs built on open geodata.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "google-maps-platform",
@@ -5459,7 +7400,15 @@
     "llms_txt": null,
     "desc_en": "Geocode addresses, get directions/routes, places data, and static/dynamic maps via REST APIs or Google's remote MCP server.",
     "notes": "Google also has a separate Code Assist MCP (mapscodeassist.googleapis.com/mcp) for docs grounding, distinct from this Maps Grounding Lite data MCP.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "here-location-services",
@@ -5485,7 +7434,14 @@
     "llms_txt": null,
     "desc_en": "Geocode, route, and search places worldwide via REST APIs and SDKs.",
     "notes": "Free-tier limits and pricing vary by plan/signup date; confirm current allowance on the dashboard.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "mapbox",
@@ -5509,7 +7465,15 @@
     "llms_txt": null,
     "desc_en": "Geocode, route, and render maps/POI search via REST APIs, SDKs, or an official MCP server.",
     "notes": "A separate official Mapbox Docs MCP server also exists for documentation Q&A.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "national-weather-service-api-nws",
@@ -5529,7 +7493,15 @@
     "llms_txt": null,
     "desc_en": "Fetch official US government weather forecasts, alerts, and observations via a free public REST API.",
     "notes": "US-only coverage; no API key needed, just a valid User-Agent identifying your app. Missing from candidate list despite being a very commonly used free weather API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "open-meteo",
@@ -5551,7 +7523,14 @@
     "llms_txt": null,
     "desc_en": "Fetch weather forecasts, historical weather, and climate data worldwide via a free open REST API, no key required.",
     "notes": "Commercial use requires an API key and the 'customer-api.open-meteo.com' host.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "openrouteservice",
@@ -5574,7 +7553,14 @@
     "llms_txt": null,
     "desc_en": "Calculate routes, isochrones, distance matrices, and geocoding over OpenStreetMap data via a free REST API.",
     "notes": "Rate limits vary per endpoint (directions vs isochrones vs matrix); self-hosting also possible.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "openstreetmap-nominatim",
@@ -5594,7 +7580,14 @@
     "llms_txt": null,
     "desc_en": "Geocode and reverse-geocode addresses from OpenStreetMap data via a free public REST API.",
     "notes": "Public demo instance is fair-use only (1 req/s, no bulk/systematic queries); self-host or use a commercial provider for production volume.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "openweathermap-api",
@@ -5614,7 +7607,15 @@
     "llms_txt": null,
     "desc_en": "Fetch current weather, forecasts, and historical/air-quality data for any location via a REST API.",
     "notes": "One Call API 3.0 has a separate 1,000 calls/day free allotment but requires adding billing details.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "overpass-api-osm",
@@ -5634,7 +7635,14 @@
     "llms_txt": null,
     "desc_en": "Run custom queries (Overpass QL) over OpenStreetMap data - POIs, roads, boundaries - via a public read-only API.",
     "notes": "No official SLA; heavy queries can be throttled or time out on public servers.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": true,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "tomorrow-io-api",
@@ -5654,7 +7662,15 @@
     "llms_txt": null,
     "desc_en": "Get hyperlocal weather forecasts, historical data, and alerts for any coordinates via REST API or an official MCP server.",
     "notes": "No self-serve tier between Free and Enterprise - scaling past free requires a sales call.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable"
+    }
   },
   {
     "id": "adyen-api",
@@ -5681,7 +7697,15 @@
     "llms_txt": null,
     "desc_en": "Process payments, payouts, and manage disputes/balances across global payment methods via REST API.",
     "notes": "Requires an approved Adyen merchant account before API keys are issued; no self-serve free signup like Stripe.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "alpaca-trading-api",
@@ -5704,7 +7728,15 @@
     "llms_txt": "https://docs.alpaca.markets/us/llms.txt",
     "desc_en": "Place stock/options/crypto trades and stream market data via REST/WebSocket API, with free paper trading.",
     "notes": "Commission-free live trading requires a funded brokerage account (US persons/entities eligibility rules apply).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "alpha-vantage",
@@ -5724,7 +7756,14 @@
     "llms_txt": null,
     "desc_en": "Fetch stock, forex, crypto prices and technical/fundamental indicators via a free REST API.",
     "notes": "Free tier is limited to 25 requests/day; paid Premium plans needed for real-time/higher volume.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "coinbase-cdp-x402",
@@ -5747,7 +7786,14 @@
     "llms_txt": null,
     "desc_en": "Create wallets, send crypto, and pay per-API-call with stablecoins over HTTP (x402) via the Coinbase Developer Platform SDK.",
     "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API - useful for agent-to-agent micropayments. No official MCP server confirmed.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "coingecko-api",
@@ -5767,7 +7813,15 @@
     "llms_txt": null,
     "desc_en": "Fetch live and historical crypto prices, market data, and NFT data via REST API or the official CoinGecko MCP server.",
     "notes": "Free MCP endpoint (mcp.api.coingecko.com) requires no key at all, just shared rate limits; a Pro-key MCP endpoint also exists.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "financial-modeling-prep",
@@ -5787,7 +7841,14 @@
     "llms_txt": null,
     "desc_en": "Fetch company financials, stock prices, and fundamental data via a REST API.",
     "notes": "Many endpoints (full financial statements, etc.) require a paid plan.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "open-exchange-rates",
@@ -5807,7 +7868,14 @@
     "llms_txt": null,
     "desc_en": "Fetch current and historical foreign-exchange rates for 200+ currencies via a REST API.",
     "notes": "Free plan is restricted to USD as the base currency; multi-base conversion requires a paid plan.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "paypal-api",
@@ -5833,7 +7901,15 @@
     "llms_txt": null,
     "desc_en": "Process payments, payouts, invoices, and subscriptions via REST API or PayPal's official MCP server.",
     "notes": "Separate sandbox MCP endpoint at https://mcp.sandbox.paypal.com for testing.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "plaid-api",
@@ -5859,7 +7935,15 @@
     "llms_txt": null,
     "desc_en": "Link bank accounts and fetch balances, transactions, and identity data via REST API/SDKs.",
     "notes": "Sandbox is free and unlimited for development; moving to Production requires a Plaid approval/compliance review.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "polygon-io-massive",
@@ -5883,7 +7967,15 @@
     "llms_txt": null,
     "desc_en": "Query real-time and historical stocks, options, forex, and crypto market data via REST/WebSocket API.",
     "notes": "Polygon.io rebranded to 'Massive' in 2026; the old polygon.io domain now redirects there. Massive also offers an MCP server for AI tools.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "square-api",
@@ -5910,7 +8002,15 @@
     "llms_txt": null,
     "desc_en": "Process in-person/online payments, manage orders, invoices, and catalog via REST API and SDKs.",
     "notes": "Requires a Square merchant account; Sandbox environment is free for development/testing. Missing from candidate list despite being a major agent-callable payments API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "stripe-api",
@@ -5938,7 +8038,16 @@
     "llms_txt": null,
     "desc_en": "Create payments, subscriptions, invoices, and refunds programmatically via REST API or the official Stripe MCP server.",
     "notes": "From Oct 31, 2026, Stripe MCP requires an 'Agent' API key or OAuth - full-access/restricted keys without the Agent tag stop working.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok"
+    }
   },
   {
     "id": "wise-api",
@@ -5958,7 +8067,14 @@
     "llms_txt": null,
     "desc_en": "Send international transfers, check exchange rates, and manage multi-currency balances via REST API.",
     "notes": "Full Wise Platform (send-money-as-a-partner) access requires a partnership agreement; a personal token covers your own account only.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "amazon-selling-partner-api",
@@ -5983,7 +8099,15 @@
     "llms_txt": null,
     "desc_en": "Manage listings, orders, inventory, and reports for an Amazon seller/vendor account via REST API.",
     "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "bigcommerce-api",
@@ -6005,7 +8129,15 @@
     "llms_txt": null,
     "desc_en": "Manage catalog, orders, customers, and carts on a BigCommerce store via REST/GraphQL APIs.",
     "notes": "Official MCP server is for documentation search/dev assistance, not direct storefront execution - use API tokens for that.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "ebay-apis",
@@ -6027,7 +8159,14 @@
     "llms_txt": null,
     "desc_en": "List items, manage orders/inventory, and search listings across eBay marketplaces via REST APIs.",
     "notes": "Production access requires an eBay developer account and app keys; rate limits scale with account compliance tier.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "reachable"
+    }
   },
   {
     "id": "etsy-open-api-v3",
@@ -6047,7 +8186,14 @@
     "llms_txt": null,
     "desc_en": "List products, manage orders/shop, and search listings on the Etsy marketplace via REST API.",
     "notes": "Requires an approved Etsy developer app; OAuth2 user consent needed for shop-management scopes. Missing from candidate list despite being a major agent-callable marketplace API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "printful-api",
@@ -6067,7 +8213,15 @@
     "llms_txt": null,
     "desc_en": "Create print-on-demand products, sync catalogs, and submit fulfillment orders via REST API.",
     "notes": "",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok"
+    }
   },
   {
     "id": "shopify-admin-storefront-api",
@@ -6087,10 +8241,18 @@
       "ruby"
     ],
     "openapi": null,
-    "llms_txt": "https://shopify.dev/llms.txt",
+    "llms_txt": null,
     "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
     "notes": "The official Dev MCP server helps build/debug Shopify apps via docs & schema search; store operations themselves go through Admin/Storefront API tokens.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "woocommerce-rest-api",
@@ -6112,7 +8274,14 @@
     "llms_txt": null,
     "desc_en": "Manage products, orders, and customers on a self-hosted WooCommerce store via REST API.",
     "notes": "Requires your own WordPress+WooCommerce installation; there is no shared multi-tenant cloud endpoint.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok"
+    }
   },
   {
     "id": "activepieces",
@@ -6132,7 +8301,16 @@
     "llms_txt": "https://www.activepieces.com/docs/llms.txt",
     "desc_en": "Build, run and manage no-code flows across 400+ apps via REST API or the built-in MCP server.",
     "notes": "MCP server URL is per-instance (https://your-instance.com/mcp); OAuth-based client auth, and connection secrets/API keys are never exposed through MCP tools.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "arcade-dev",
@@ -6155,7 +8333,16 @@
     "llms_txt": "https://docs.arcade.dev/llms.txt",
     "desc_en": "Execute authorized tool calls (GitHub, Slack, Google, etc.) with managed OAuth via API, SDK, or 200+ MCP servers.",
     "notes": "First use of an OAuth-gated tool requires the human to approve a browser consent screen; token is then reused automatically. Team plan adds $0.10/auth event and $0.01/tool call beyond free quota.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "composio",
@@ -6178,7 +8365,16 @@
     "llms_txt": "https://docs.composio.dev/llms.txt",
     "desc_en": "Discover, authorize and execute actions across 1,500+ SaaS toolkits through a unified API, SDK, or MCP session.",
     "notes": "Free plan hard-caps usage with no overage billing; Scale plan ($29/mo) adds per-call overage pricing ($0.0003/tool call).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "gumloop",
@@ -6201,7 +8397,16 @@
     "llms_txt": "https://docs.gumloop.com/llms.txt",
     "desc_en": "Create AI agents, start chat sessions, and trigger no-code automations via REST API, SDKs, or the Gumloop MCP server.",
     "notes": "Added: missing from the candidate list but a widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "ifttt-api",
@@ -6221,7 +8426,15 @@
     "llms_txt": "https://platform.ifttt.com/llms.txt",
     "desc_en": "Fire a webhook event to trigger pre-configured Applets that act in connected consumer apps (Pro plan required).",
     "notes": "Weaker fit than other entries: an agent can only fire events for Applets a human already built in the IFTTT UI (no dynamic/generic action catalog like Zapier), free plan excludes Webhooks entirely, and the Platform/Connect API is aimed at building new IFTTT services, not calling existing consumer integrations.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "make-api-mcp",
@@ -6241,7 +8454,16 @@
     "llms_txt": "https://developers.make.com/llms.txt",
     "desc_en": "Trigger and manage Make automation scenarios, or call MCP tools, via REST API and a native MCP server/client.",
     "notes": "MCP Server and MCP Client are included free on all Make plans; you pay only for operations consumed when scenarios run. Most REST API endpoints are reserved for paid subscriptions.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "merge-agent-handler",
@@ -6264,7 +8486,16 @@
     "llms_txt": "https://docs.merge.dev/llms.txt",
     "desc_en": "Give an agent governed, audited tool access to Salesforce, Slack, Jira and 100+ enterprise apps via API or MCP.",
     "notes": "Separate product from Merge's classic Unified API (HRIS/ATS/CRM sync); Agent Handler is the AI-agent-facing tool-calling layer. Paid tier starts around $650/mo for 10 linked accounts, then per-account pricing.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "n8n-api",
@@ -6284,7 +8515,16 @@
     "llms_txt": "https://docs.n8n.io/llms.txt",
     "desc_en": "Create, run and monitor n8n workflows via REST API, and expose or consume tools through MCP trigger/client nodes.",
     "notes": "REST API manages workflows/executions/credentials/users, not per-node business logic. MCP support is a first-party node (MCP Server Trigger / MCP Client Tool) inside a running n8n instance, not a single hosted vendor endpoint. Non-Enterprise API keys have full account access; scoped keys need Enterprise plan.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "nango",
@@ -6306,7 +8546,15 @@
     "llms_txt": "https://nango.dev/llms.txt",
     "desc_en": "Authorize end users to 400+ third-party APIs/MCP servers and proxy authenticated calls to them from your app or agent.",
     "notes": "Nango is primarily an auth/proxy broker (open source, self-hostable) rather than itself an MCP server; its 'MCP Auth' feature lets your app authorize users to OTHER vendors' MCP servers (Notion, HubSpot, etc.) and call them via Nango's proxy. Free self-hosting is not offered outside the Enterprise (BYOC) plan.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "paragon-actionkit",
@@ -6326,7 +8574,16 @@
     "llms_txt": "https://docs.useparagon.com/llms.txt",
     "desc_en": "Call thousands of pre-built Tools and Triggers across 130+ SaaS apps (Slack, Salesforce, Gmail) via API or MCP.",
     "notes": "ActionKit specifically has a self-serve free tier for experimentation; Paragon's broader embedded-iPaaS platform is contract/sales-only with no public self-serve tier. ActionKit MCP uses SSE transport and is listed on the Anthropic MCP registry.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "pipedream-connect",
@@ -6348,7 +8605,16 @@
     "llms_txt": "https://pipedream.com/docs/llms.txt",
     "desc_en": "Call 2,700+ app APIs and run managed-auth actions on end users' behalf via REST API or Pipedream MCP servers.",
     "notes": "Requires a Pipedream project plus client ID/secret/project ID to call the MCP server; managed auth handles end-user OAuth for connected apps.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "stackone",
@@ -6371,7 +8637,16 @@
     "llms_txt": "https://docs.stackone.com/llms.txt",
     "desc_en": "Call 500+ SaaS integrations (HRIS, ATS, CRM, documents) through one unified API or MCP gateway covering 27,000+ actions.",
     "notes": "Beyond the free 1,000 credits/seat, Starter bills $0.003/extra call; Core and Enterprise tiers are quote-based (contact sales).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "superglue",
@@ -6391,7 +8666,15 @@
     "llms_txt": null,
     "desc_en": "Connect and orchestrate enterprise systems (ERP, CRM, databases) through a self-serve API and per-integration MCP servers.",
     "notes": "Added: open-source, self-serve integration/migration agent for enterprise systems (NetSuite, SAP, Sage Intacct, Dynamics) with per-app MCP servers; some exact API details (auth header, SDK) could not be independently confirmed in this pass and should be double-checked in the live docs before use.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok"
+    }
   },
   {
     "id": "zapier-mcp-ai-actions",
@@ -6411,7 +8694,16 @@
     "llms_txt": "https://docs.zapier.com/llms.txt",
     "desc_en": "Call 9,000+ apps and 40,000+ pre-built actions (Slack, Gmail, Sheets, etc.) through one MCP endpoint.",
     "notes": "\"AI Actions\"/Natural Language Actions is deprecated; Zapier now steers agents to Zapier MCP. Tool calls consume the same 'tasks' quota as regular Zaps.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "anthropic-claude-api",
@@ -6439,7 +8731,15 @@
     "llms_txt": "https://platform.claude.com/docs/llms.txt",
     "desc_en": "Send messages to Claude models for text and vision generation, tool use, batch jobs and document analysis.",
     "notes": "docs.anthropic.com and docs.claude.com redirect to platform.claude.com. Rate limits depend on usage tier. The API's MCP connector lets Claude call remote MCP servers; there is no MCP server that wraps the API itself.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "cohere-api",
@@ -6464,7 +8764,16 @@
     "llms_txt": "https://docs.cohere.com/llms.txt",
     "desc_en": "Call chat, embed, rerank and classify endpoints for text generation, semantic search and RAG.",
     "notes": "Official MCP server only searches documentation. Trial keys are not for production use. v2 API is current; v1 is legacy.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "deepseek-api",
@@ -6484,7 +8793,15 @@
     "llms_txt": "https://api-docs.deepseek.com/llms.txt",
     "desc_en": "Send chat and reasoning requests to DeepSeek models via an OpenAI- and Anthropic-compatible REST API.",
     "notes": "No native SDK: use the OpenAI SDK (base_url https://api.deepseek.com) or the Anthropic SDK (https://api.deepseek.com/anthropic). Off-peak hours (UTC) are discounted.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "fal-ai",
@@ -6507,7 +8824,16 @@
     "llms_txt": "https://fal.ai/docs/llms.txt",
     "desc_en": "Generate images, video, audio and 3D with 1,000+ hosted models via queued REST or real-time WebSocket.",
     "notes": "The auth header prefix is 'Key', not 'Bearer'. The MCP server accepts an API key or OAuth. Long jobs use the queue API (submit, status, result).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "fireworks-ai",
@@ -6529,7 +8855,17 @@
     "llms_txt": "https://docs.fireworks.ai/llms.txt",
     "desc_en": "Run serverless or dedicated inference and fine-tuning for open models via OpenAI-compatible APIs.",
     "notes": "Official MCP server only searches documentation. The Responses API can call external MCP servers as tools.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "google-gemini-api",
@@ -6554,7 +8890,16 @@
     "llms_txt": "https://ai.google.dev/gemini-api/docs/llms.txt",
     "desc_en": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
     "notes": "Official MCP server only searches documentation; it does not run inference. Free-tier content may be used to improve Google products. Google is replacing standard API keys with authorization keys; unrestricted standard keys are rejected in 2026, so use a current key type. Google publishes a Discovery document, not an OpenAPI spec.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "groq-api",
@@ -6577,7 +8922,15 @@
     "llms_txt": "https://console.groq.com/llms.txt",
     "desc_en": "Run fast LLM chat, tool use and speech-to-text on hosted open models via an OpenAI-compatible API.",
     "notes": "Free-tier limits vary by model (e.g. 30 RPM / 1K RPD); see console.groq.com/settings/limits. Not to be confused with xAI Grok.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "hugging-face-inference-providers",
@@ -6600,7 +8953,16 @@
     "llms_txt": "https://huggingface.co/docs/inference-providers/llms.txt",
     "desc_en": "Call hundreds of open-weight chat, vision, image, video and audio models across many providers with one HF token.",
     "notes": "The OpenAI-compatible endpoint (router.huggingface.co/v1) handles chat only; use InferenceClient for other tasks. The token needs the 'Make calls to Inference Providers' scope. Pick a provider with a model suffix such as :fastest or :cheapest.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "mistral-ai-api",
@@ -6623,7 +8985,17 @@
     "llms_txt": "https://docs.mistral.ai/llms.txt",
     "desc_en": "Run chat completions, embeddings, OCR and document processing with Mistral models via REST.",
     "notes": "Official MCP (same API key) currently exposes only Studio Skills management tools, not chat inference; call the REST API for inference.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "openai-api",
@@ -6650,7 +9022,16 @@
     "llms_txt": "https://developers.openai.com/llms.txt",
     "desc_en": "Generate text, images, audio and embeddings, and run tool-calling via the Responses and Chat Completions APIs.",
     "notes": "Docs moved from platform.openai.com to developers.openai.com (old URLs redirect). Usage-based billing with a payment method; rate limits scale with usage tier. OpenAI MCP docs cover building MCP servers for ChatGPT, not an MCP wrapping the API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "openrouter",
@@ -6673,7 +9054,17 @@
     "llms_txt": "https://openrouter.ai/docs/llms.txt",
     "desc_en": "Route chat requests to hundreds of LLMs from many providers through one OpenAI-compatible endpoint with fallback.",
     "notes": "The official remote MCP server uses OAuth PKCE and mints a 7-day key with a $10 default spend limit. It includes send-message and generate-image tools. OAuth PKCE is also available for apps.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "piapi",
@@ -6693,7 +9084,16 @@
     "llms_txt": "https://piapi.ai/llms.txt",
     "desc_en": "Generate images, video and music through one API proxying Midjourney, Flux, Kling and other models.",
     "notes": "Third-party reseller, not the model owner. The Midjourney access is unofficial, so it can break or violate Midjourney's terms of service. Tasks are async (create task, then poll or webhook).",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "replicate",
@@ -6718,7 +9118,17 @@
     "llms_txt": "https://replicate.com/llms.txt",
     "desc_en": "Run thousands of hosted image, video, audio and text models via HTTP predictions; also fine-tune and deploy.",
     "notes": "Billed per second of compute or per output. The MCP server is also available locally via npx replicate-mcp.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "together-ai",
@@ -6741,7 +9151,17 @@
     "llms_txt": "https://docs.together.ai/llms.txt",
     "desc_en": "Run serverless inference, batch jobs, fine-tuning and dedicated GPU endpoints for open-source models.",
     "notes": "Official MCP server only searches documentation. The API is OpenAI-compatible.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "vercel-ai-gateway",
@@ -6764,7 +9184,16 @@
     "llms_txt": "https://vercel.com/llms.txt",
     "desc_en": "Send chat, image, embedding and rerank requests to 100+ models through one gateway with failover and spend tracking.",
     "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's MCP server is for the whole platform and does not run inference. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "voyage-ai-embeddings-rerank",
@@ -6786,7 +9215,15 @@
     "llms_txt": "https://docs.voyageai.com/llms.txt",
     "desc_en": "Generate text, code and multimodal embeddings and rerank documents for RAG and semantic search.",
     "notes": "Owned by MongoDB, but the standalone API at api.voyageai.com is still self-serve. Free tokens do not apply to the Batch API.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "xai-grok-api",
@@ -6808,6 +9245,16 @@
     "llms_txt": "https://docs.x.ai/llms.txt",
     "desc_en": "Generate text, images, video and voice with Grok models, with built-in web search and code tools.",
     "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Official MCP server only searches documentation.",
-    "verified": "2026-09-24"
+    "verified": "2026-09-24",
+    "no_auth": false,
+    "has_free_tier": false,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-09-24",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   }
 ]

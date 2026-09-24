@@ -1,406 +1,544 @@
 {
-  "category": {
-    "id": "model-inference",
-    "name": "Model APIs and inference",
-    "description": "LLM, embedding and multimodal model endpoints an agent can delegate sub-tasks to."
+ "category": {
+  "id": "model-inference",
+  "name": "Model APIs and inference",
+  "description": "LLM, embedding and multimodal model endpoints an agent can delegate sub-tasks to."
+ },
+ "entries": [
+  {
+   "id": "anthropic-claude-api",
+   "name": "Anthropic Claude API",
+   "homepage": "https://docs.anthropic.com",
+   "docs": "https://platform.claude.com/docs/en/api/messages",
+   "auth": "api_key",
+   "auth_hint": "x-api-key: <ANTHROPIC_API_KEY> (plus anthropic-version header)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "paid only",
+   "sdk": [
+    "python",
+    "typescript",
+    "java",
+    "go",
+    "csharp",
+    "php",
+    "ruby"
+   ],
+   "openapi": null,
+   "llms_txt": "https://platform.claude.com/docs/llms.txt",
+   "desc_en": "Send messages to Claude models for text and vision generation, tool use, batch jobs and document analysis.",
+   "notes": "docs.anthropic.com and docs.claude.com redirect to platform.claude.com. Rate limits depend on usage tier. The API's MCP connector lets Claude call remote MCP servers; there is no MCP server that wraps the API itself.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "anthropic-claude-api",
-      "name": "Anthropic Claude API",
-      "category": "model-inference",
-      "homepage": "https://docs.anthropic.com",
-      "docs": "https://platform.claude.com/docs/en/api/messages",
-      "auth": "api_key",
-      "auth_hint": "x-api-key: <ANTHROPIC_API_KEY> (plus anthropic-version header)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "paid only",
-      "sdk": [
-        "python",
-        "typescript",
-        "java",
-        "go",
-        "csharp",
-        "php",
-        "ruby"
-      ],
-      "openapi": null,
-      "llms_txt": "https://platform.claude.com/docs/llms.txt",
-      "desc_en": "Send messages to Claude models for text and vision generation, tool use, batch jobs and document analysis.",
-      "notes": "docs.anthropic.com and docs.claude.com redirect to platform.claude.com. Rate limits depend on usage tier. The API's MCP connector lets Claude call remote MCP servers; there is no MCP server that wraps the API itself.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "cohere-api",
-      "name": "Cohere API",
-      "category": "model-inference",
-      "homepage": "https://docs.cohere.com",
-      "docs": "https://docs.cohere.com/reference/about",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <COHERE_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.cohere.com/_mcp/server"
-      },
-      "free_tier": "free trial key: 1,000 calls/mo, rate-limited",
-      "sdk": [
-        "python",
-        "typescript",
-        "java",
-        "go"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.cohere.com/llms.txt",
-      "desc_en": "Call chat, embed, rerank and classify endpoints for text generation, semantic search and RAG.",
-      "notes": "Official MCP server only searches documentation. Trial keys are not for production use. v2 API is current; v1 is legacy.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "deepseek-api",
-      "name": "DeepSeek API",
-      "category": "model-inference",
-      "homepage": "https://api-docs.deepseek.com",
-      "docs": "https://api-docs.deepseek.com/api/deepseek-api",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <DEEPSEEK_API_KEY>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "paid only",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": "https://api-docs.deepseek.com/llms.txt",
-      "desc_en": "Send chat and reasoning requests to DeepSeek models via an OpenAI- and Anthropic-compatible REST API.",
-      "notes": "No native SDK: use the OpenAI SDK (base_url https://api.deepseek.com) or the Anthropic SDK (https://api.deepseek.com/anthropic). Off-peak hours (UTC) are discounted.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "fal-ai",
-      "name": "fal.ai",
-      "category": "model-inference",
-      "homepage": "https://fal.ai",
-      "docs": "https://fal.ai/docs/model-apis",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Key <FAL_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.fal.ai/mcp"
-      },
-      "free_tier": "check pricing",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": "https://fal.ai/docs/llms.txt",
-      "desc_en": "Generate images, video, audio and 3D with 1,000+ hosted models via queued REST or real-time WebSocket.",
-      "notes": "The auth header prefix is 'Key', not 'Bearer'. The MCP server accepts an API key or OAuth. Long jobs use the queue API (submit, status, result).",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "fireworks-ai",
-      "name": "Fireworks AI",
-      "category": "model-inference",
-      "homepage": "https://fireworks.ai",
-      "docs": "https://docs.fireworks.ai",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <FIREWORKS_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.fireworks.ai/mcp"
-      },
-      "free_tier": "trial credits: $1 on signup",
-      "sdk": [
-        "python"
-      ],
-      "openapi": "https://docs.fireworks.ai/merged.openapi.yaml",
-      "llms_txt": "https://docs.fireworks.ai/llms.txt",
-      "desc_en": "Run serverless or dedicated inference and fine-tuning for open models via OpenAI-compatible APIs.",
-      "notes": "Official MCP server only searches documentation. The Responses API can call external MCP servers as tools.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "google-gemini-api",
-      "name": "Google Gemini API",
-      "category": "model-inference",
-      "homepage": "https://ai.google.dev",
-      "docs": "https://ai.google.dev/api",
-      "auth": "api_key",
-      "auth_hint": "x-goog-api-key: <GEMINI_API_KEY> (or ?key= query param)",
-      "mcp": {
-        "type": "official",
-        "url": "https://gemini-api-docs-mcp.dev"
-      },
-      "free_tier": "free tier: rate-limited access to Flash/Pro models",
-      "sdk": [
-        "python",
-        "typescript",
-        "java",
-        "go"
-      ],
-      "openapi": null,
-      "llms_txt": "https://ai.google.dev/gemini-api/docs/llms.txt",
-      "desc_en": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
-      "notes": "Official MCP server only searches documentation; it does not run inference. Free-tier content may be used to improve Google products. Google is replacing standard API keys with authorization keys; unrestricted standard keys are rejected in 2026, so use a current key type. Google publishes a Discovery document, not an OpenAPI spec.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "groq-api",
-      "name": "Groq API",
-      "category": "model-inference",
-      "homepage": "https://console.groq.com",
-      "docs": "https://console.groq.com/docs/api-reference",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <GROQ_API_KEY>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: rate-limited per model, no card",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": "https://console.groq.com/llms.txt",
-      "desc_en": "Run fast LLM chat, tool use and speech-to-text on hosted open models via an OpenAI-compatible API.",
-      "notes": "Free-tier limits vary by model (e.g. 30 RPM / 1K RPD); see console.groq.com/settings/limits. Not to be confused with xAI Grok.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "hugging-face-inference-providers",
-      "name": "Hugging Face Inference Providers",
-      "category": "model-inference",
-      "homepage": "https://huggingface.co/docs/inference-providers",
-      "docs": "https://huggingface.co/docs/inference-providers/index",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <HF_TOKEN>",
-      "mcp": {
-        "type": "official",
-        "url": "https://huggingface.co/mcp"
-      },
-      "free_tier": "free tier: monthly credits (more with PRO)",
-      "sdk": [
-        "python",
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": "https://huggingface.co/docs/inference-providers/llms.txt",
-      "desc_en": "Call hundreds of open-weight chat, vision, image, video and audio models across many providers with one HF token.",
-      "notes": "The OpenAI-compatible endpoint (router.huggingface.co/v1) handles chat only; use InferenceClient for other tasks. The token needs the 'Make calls to Inference Providers' scope. Pick a provider with a model suffix such as :fastest or :cheapest.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "mistral-ai-api",
-      "name": "Mistral AI API",
-      "category": "model-inference",
-      "homepage": "https://docs.mistral.ai",
-      "docs": "https://docs.mistral.ai/api",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <MISTRAL_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://api.mistral.ai/mcp"
-      },
-      "free_tier": "free tier: Studio free mode, rate-limited",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": "https://docs.mistral.ai/openapi.yaml",
-      "llms_txt": "https://docs.mistral.ai/llms.txt",
-      "desc_en": "Run chat completions, embeddings, OCR and document processing with Mistral models via REST.",
-      "notes": "Official MCP (same API key) currently exposes only Studio Skills management tools, not chat inference; call the REST API for inference.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "openai-api",
-      "name": "OpenAI API",
-      "category": "model-inference",
-      "homepage": "https://platform.openai.com",
-      "docs": "https://developers.openai.com/api/reference/overview",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <OPENAI_API_KEY>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "paid only",
-      "sdk": [
-        "python",
-        "typescript",
-        "csharp",
-        "java",
-        "go",
-        "ruby"
-      ],
-      "openapi": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
-      "llms_txt": "https://developers.openai.com/llms.txt",
-      "desc_en": "Generate text, images, audio and embeddings, and run tool-calling via the Responses and Chat Completions APIs.",
-      "notes": "Docs moved from platform.openai.com to developers.openai.com (old URLs redirect). Usage-based billing with a payment method; rate limits scale with usage tier. OpenAI MCP docs cover building MCP servers for ChatGPT, not an MCP wrapping the API.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "openrouter",
-      "name": "OpenRouter",
-      "category": "model-inference",
-      "homepage": "https://openrouter.ai",
-      "docs": "https://openrouter.ai/docs/api-reference/overview",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <OPENROUTER_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.openrouter.ai/mcp"
-      },
-      "free_tier": "free models: 50 req/day (1,000/day after $10 purchase)",
-      "sdk": [
-        "typescript",
-        "python"
-      ],
-      "openapi": "https://openrouter.ai/openapi.json",
-      "llms_txt": "https://openrouter.ai/docs/llms.txt",
-      "desc_en": "Route chat requests to hundreds of LLMs from many providers through one OpenAI-compatible endpoint with fallback.",
-      "notes": "The official remote MCP server uses OAuth PKCE and mints a 7-day key with a $10 default spend limit. It includes send-message and generate-image tools. OAuth PKCE is also available for apps.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "piapi",
-      "name": "PiAPI",
-      "category": "model-inference",
-      "homepage": "https://piapi.ai",
-      "docs": "https://piapi.ai/docs/overview",
-      "auth": "api_key",
-      "auth_hint": "X-API-Key: <key>",
-      "mcp": {
-        "type": "community",
-        "url": "https://github.com/apinetwork/piapi-mcp-server"
-      },
-      "free_tier": "trial credits: $0.50 on signup",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": "https://piapi.ai/llms.txt",
-      "desc_en": "Generate images, video and music through one API proxying Midjourney, Flux, Kling and other models.",
-      "notes": "Third-party reseller, not the model owner. The Midjourney access is unofficial, so it can break or violate Midjourney's terms of service. Tasks are async (create task, then poll or webhook).",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "replicate",
-      "name": "Replicate",
-      "category": "model-inference",
-      "homepage": "https://replicate.com",
-      "docs": "https://replicate.com/docs/reference/http",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <REPLICATE_API_TOKEN>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.replicate.com"
-      },
-      "free_tier": "paid only",
-      "sdk": [
-        "python",
-        "javascript",
-        "swift",
-        "go"
-      ],
-      "openapi": "https://api.replicate.com/openapi.json",
-      "llms_txt": "https://replicate.com/llms.txt",
-      "desc_en": "Run thousands of hosted image, video, audio and text models via HTTP predictions; also fine-tune and deploy.",
-      "notes": "Billed per second of compute or per output. The MCP server is also available locally via npx replicate-mcp.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "together-ai",
-      "name": "Together AI",
-      "category": "model-inference",
-      "homepage": "https://www.together.ai",
-      "docs": "https://docs.together.ai",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <TOGETHER_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.together.ai/mcp"
-      },
-      "free_tier": "check pricing",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": "https://docs.together.ai/openapi.yaml",
-      "llms_txt": "https://docs.together.ai/llms.txt",
-      "desc_en": "Run serverless inference, batch jobs, fine-tuning and dedicated GPU endpoints for open-source models.",
-      "notes": "Official MCP server only searches documentation. The API is OpenAI-compatible.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "vercel-ai-gateway",
-      "name": "Vercel AI Gateway",
-      "category": "model-inference",
-      "homepage": "https://vercel.com/ai-gateway",
-      "docs": "https://vercel.com/docs/ai-gateway/sdks-and-apis",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <AI_GATEWAY_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.vercel.com"
-      },
-      "free_tier": "free tier: monthly credits on subset of models",
-      "sdk": [
-        "typescript",
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": "https://vercel.com/llms.txt",
-      "desc_en": "Send chat, image, embedding and rerank requests to 100+ models through one gateway with failover and spend tracking.",
-      "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's MCP server is for the whole platform and does not run inference. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "voyage-ai-embeddings-rerank",
-      "name": "Voyage AI (embeddings/rerank)",
-      "category": "model-inference",
-      "homepage": "https://www.voyageai.com",
-      "docs": "https://docs.voyageai.com/reference/embeddings-api",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <VOYAGE_API_KEY>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: 200M tokens on current models",
-      "sdk": [
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.voyageai.com/llms.txt",
-      "desc_en": "Generate text, code and multimodal embeddings and rerank documents for RAG and semantic search.",
-      "notes": "Owned by MongoDB, but the standalone API at api.voyageai.com is still self-serve. Free tokens do not apply to the Batch API.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "xai-grok-api",
-      "name": "xAI Grok API",
-      "category": "model-inference",
-      "homepage": "https://docs.x.ai",
-      "docs": "https://docs.x.ai/developers/rest-api-reference/inference",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <XAI_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.x.ai/api/mcp"
-      },
-      "free_tier": "paid only (prepaid credits)",
-      "sdk": [
-        "python"
-      ],
-      "openapi": "https://docs.x.ai/openapi.json",
-      "llms_txt": "https://docs.x.ai/llms.txt",
-      "desc_en": "Generate text, images, video and voice with Grok models, with built-in web search and code tools.",
-      "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Official MCP server only searches documentation.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "cohere-api",
+   "name": "Cohere API",
+   "homepage": "https://docs.cohere.com",
+   "docs": "https://docs.cohere.com/reference/about",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <COHERE_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.cohere.com/_mcp/server"
+   },
+   "free_tier": "free trial key: 1,000 calls/mo, rate-limited",
+   "sdk": [
+    "python",
+    "typescript",
+    "java",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.cohere.com/llms.txt",
+   "desc_en": "Call chat, embed, rerank and classify endpoints for text generation, semantic search and RAG.",
+   "notes": "Official MCP server only searches documentation. Trial keys are not for production use. v2 API is current; v1 is legacy.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "deepseek-api",
+   "name": "DeepSeek API",
+   "homepage": "https://api-docs.deepseek.com",
+   "docs": "https://api-docs.deepseek.com/api/deepseek-api",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <DEEPSEEK_API_KEY>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "paid only",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": "https://api-docs.deepseek.com/llms.txt",
+   "desc_en": "Send chat and reasoning requests to DeepSeek models via an OpenAI- and Anthropic-compatible REST API.",
+   "notes": "No native SDK: use the OpenAI SDK (base_url https://api.deepseek.com) or the Anthropic SDK (https://api.deepseek.com/anthropic). Off-peak hours (UTC) are discounted.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "fal-ai",
+   "name": "fal.ai",
+   "homepage": "https://fal.ai",
+   "docs": "https://fal.ai/docs/model-apis",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Key <FAL_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.fal.ai/mcp"
+   },
+   "free_tier": "check pricing",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://fal.ai/docs/llms.txt",
+   "desc_en": "Generate images, video, audio and 3D with 1,000+ hosted models via queued REST or real-time WebSocket.",
+   "notes": "The auth header prefix is 'Key', not 'Bearer'. The MCP server accepts an API key or OAuth. Long jobs use the queue API (submit, status, result).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "fireworks-ai",
+   "name": "Fireworks AI",
+   "homepage": "https://fireworks.ai",
+   "docs": "https://docs.fireworks.ai",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <FIREWORKS_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.fireworks.ai/mcp"
+   },
+   "free_tier": "trial credits: $1 on signup",
+   "sdk": [
+    "python"
+   ],
+   "openapi": "https://docs.fireworks.ai/merged.openapi.yaml",
+   "llms_txt": "https://docs.fireworks.ai/llms.txt",
+   "desc_en": "Run serverless or dedicated inference and fine-tuning for open models via OpenAI-compatible APIs.",
+   "notes": "Official MCP server only searches documentation. The Responses API can call external MCP servers as tools.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "google-gemini-api",
+   "name": "Google Gemini API",
+   "homepage": "https://ai.google.dev",
+   "docs": "https://ai.google.dev/api",
+   "auth": "api_key",
+   "auth_hint": "x-goog-api-key: <GEMINI_API_KEY> (or ?key= query param)",
+   "mcp": {
+    "type": "official",
+    "url": "https://gemini-api-docs-mcp.dev"
+   },
+   "free_tier": "free tier: rate-limited access to Flash/Pro models",
+   "sdk": [
+    "python",
+    "typescript",
+    "java",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": "https://ai.google.dev/gemini-api/docs/llms.txt",
+   "desc_en": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
+   "notes": "Official MCP server only searches documentation; it does not run inference. Free-tier content may be used to improve Google products. Google is replacing standard API keys with authorization keys; unrestricted standard keys are rejected in 2026, so use a current key type. Google publishes a Discovery document, not an OpenAPI spec.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "groq-api",
+   "name": "Groq API",
+   "homepage": "https://console.groq.com",
+   "docs": "https://console.groq.com/docs/api-reference",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <GROQ_API_KEY>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: rate-limited per model, no card",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://console.groq.com/llms.txt",
+   "desc_en": "Run fast LLM chat, tool use and speech-to-text on hosted open models via an OpenAI-compatible API.",
+   "notes": "Free-tier limits vary by model (e.g. 30 RPM / 1K RPD); see console.groq.com/settings/limits. Not to be confused with xAI Grok.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "hugging-face-inference-providers",
+   "name": "Hugging Face Inference Providers",
+   "homepage": "https://huggingface.co/docs/inference-providers",
+   "docs": "https://huggingface.co/docs/inference-providers/index",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <HF_TOKEN>",
+   "mcp": {
+    "type": "official",
+    "url": "https://huggingface.co/mcp"
+   },
+   "free_tier": "free tier: monthly credits (more with PRO)",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://huggingface.co/docs/inference-providers/llms.txt",
+   "desc_en": "Call hundreds of open-weight chat, vision, image, video and audio models across many providers with one HF token.",
+   "notes": "The OpenAI-compatible endpoint (router.huggingface.co/v1) handles chat only; use InferenceClient for other tasks. The token needs the 'Make calls to Inference Providers' scope. Pick a provider with a model suffix such as :fastest or :cheapest.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "mistral-ai-api",
+   "name": "Mistral AI API",
+   "homepage": "https://docs.mistral.ai",
+   "docs": "https://docs.mistral.ai/api",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <MISTRAL_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://api.mistral.ai/mcp"
+   },
+   "free_tier": "free tier: Studio free mode, rate-limited",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": "https://docs.mistral.ai/openapi.yaml",
+   "llms_txt": "https://docs.mistral.ai/llms.txt",
+   "desc_en": "Run chat completions, embeddings, OCR and document processing with Mistral models via REST.",
+   "notes": "Official MCP (same API key) currently exposes only Studio Skills management tools, not chat inference; call the REST API for inference.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "openai-api",
+   "name": "OpenAI API",
+   "homepage": "https://platform.openai.com",
+   "docs": "https://developers.openai.com/api/reference/overview",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <OPENAI_API_KEY>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "paid only",
+   "sdk": [
+    "python",
+    "typescript",
+    "csharp",
+    "java",
+    "go",
+    "ruby"
+   ],
+   "openapi": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
+   "llms_txt": "https://developers.openai.com/llms.txt",
+   "desc_en": "Generate text, images, audio and embeddings, and run tool-calling via the Responses and Chat Completions APIs.",
+   "notes": "Docs moved from platform.openai.com to developers.openai.com (old URLs redirect). Usage-based billing with a payment method; rate limits scale with usage tier. OpenAI MCP docs cover building MCP servers for ChatGPT, not an MCP wrapping the API.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "openrouter",
+   "name": "OpenRouter",
+   "homepage": "https://openrouter.ai",
+   "docs": "https://openrouter.ai/docs/api-reference/overview",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <OPENROUTER_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.openrouter.ai/mcp"
+   },
+   "free_tier": "free models: 50 req/day (1,000/day after $10 purchase)",
+   "sdk": [
+    "typescript",
+    "python"
+   ],
+   "openapi": "https://openrouter.ai/openapi.json",
+   "llms_txt": "https://openrouter.ai/docs/llms.txt",
+   "desc_en": "Route chat requests to hundreds of LLMs from many providers through one OpenAI-compatible endpoint with fallback.",
+   "notes": "The official remote MCP server uses OAuth PKCE and mints a 7-day key with a $10 default spend limit. It includes send-message and generate-image tools. OAuth PKCE is also available for apps.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "piapi",
+   "name": "PiAPI",
+   "homepage": "https://piapi.ai",
+   "docs": "https://piapi.ai/docs/overview",
+   "auth": "api_key",
+   "auth_hint": "X-API-Key: <key>",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/apinetwork/piapi-mcp-server"
+   },
+   "free_tier": "trial credits: $0.50 on signup",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": "https://piapi.ai/llms.txt",
+   "desc_en": "Generate images, video and music through one API proxying Midjourney, Flux, Kling and other models.",
+   "notes": "Third-party reseller, not the model owner. The Midjourney access is unofficial, so it can break or violate Midjourney's terms of service. Tasks are async (create task, then poll or webhook).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "replicate",
+   "name": "Replicate",
+   "homepage": "https://replicate.com",
+   "docs": "https://replicate.com/docs/reference/http",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <REPLICATE_API_TOKEN>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.replicate.com"
+   },
+   "free_tier": "paid only",
+   "sdk": [
+    "python",
+    "javascript",
+    "swift",
+    "go"
+   ],
+   "openapi": "https://api.replicate.com/openapi.json",
+   "llms_txt": "https://replicate.com/llms.txt",
+   "desc_en": "Run thousands of hosted image, video, audio and text models via HTTP predictions; also fine-tune and deploy.",
+   "notes": "Billed per second of compute or per output. The MCP server is also available locally via npx replicate-mcp.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "together-ai",
+   "name": "Together AI",
+   "homepage": "https://www.together.ai",
+   "docs": "https://docs.together.ai",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <TOGETHER_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.together.ai/mcp"
+   },
+   "free_tier": "check pricing",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": "https://docs.together.ai/openapi.yaml",
+   "llms_txt": "https://docs.together.ai/llms.txt",
+   "desc_en": "Run serverless inference, batch jobs, fine-tuning and dedicated GPU endpoints for open-source models.",
+   "notes": "Official MCP server only searches documentation. The API is OpenAI-compatible.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "vercel-ai-gateway",
+   "name": "Vercel AI Gateway",
+   "homepage": "https://vercel.com/ai-gateway",
+   "docs": "https://vercel.com/docs/ai-gateway/sdks-and-apis",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <AI_GATEWAY_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.vercel.com"
+   },
+   "free_tier": "free tier: monthly credits on subset of models",
+   "sdk": [
+    "typescript",
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": "https://vercel.com/llms.txt",
+   "desc_en": "Send chat, image, embedding and rerank requests to 100+ models through one gateway with failover and spend tracking.",
+   "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's MCP server is for the whole platform and does not run inference. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "voyage-ai-embeddings-rerank",
+   "name": "Voyage AI (embeddings/rerank)",
+   "homepage": "https://www.voyageai.com",
+   "docs": "https://docs.voyageai.com/reference/embeddings-api",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <VOYAGE_API_KEY>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: 200M tokens on current models",
+   "sdk": [
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.voyageai.com/llms.txt",
+   "desc_en": "Generate text, code and multimodal embeddings and rerank documents for RAG and semantic search.",
+   "notes": "Owned by MongoDB, but the standalone API at api.voyageai.com is still self-serve. Free tokens do not apply to the Batch API.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "xai-grok-api",
+   "name": "xAI Grok API",
+   "homepage": "https://docs.x.ai",
+   "docs": "https://docs.x.ai/developers/rest-api-reference/inference",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <XAI_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.x.ai/api/mcp"
+   },
+   "free_tier": "paid only (prepaid credits)",
+   "sdk": [
+    "python"
+   ],
+   "openapi": "https://docs.x.ai/openapi.json",
+   "llms_txt": "https://docs.x.ai/llms.txt",
+   "desc_en": "Generate text, images, video and voice with Grok models, with built-in web search and code tools.",
+   "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Official MCP server only searches documentation.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  }
+ ]
 }

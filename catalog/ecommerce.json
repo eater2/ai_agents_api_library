@@ -1,163 +1,209 @@
 {
-  "category": {
-    "id": "ecommerce",
-    "name": "E-commerce",
-    "description": "Manage stores, products, orders and marketplace listings."
+ "category": {
+  "id": "ecommerce",
+  "name": "E-commerce",
+  "description": "Manage stores, products, orders and marketplace listings."
+ },
+ "entries": [
+  {
+   "id": "amazon-selling-partner-api",
+   "name": "Amazon Selling Partner API",
+   "homepage": "https://developer-docs.amazon.com/sp-api/",
+   "docs": "https://developer-docs.amazon.com/sp-api/",
+   "auth": "oauth2",
+   "auth_hint": "LWA (Login with Amazon) OAuth2 access token via x-amz-access-token header",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free API access; requires an existing Amazon Seller/Vendor Central account",
+   "sdk": [
+    "python",
+    "java",
+    "node",
+    "csharp"
+   ],
+   "openapi": "https://github.com/amzn/selling-partner-api-models",
+   "llms_txt": null,
+   "desc_en": "Manage listings, orders, inventory, and reports for an Amazon seller/vendor account via REST API.",
+   "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "amazon-selling-partner-api",
-      "name": "Amazon Selling Partner API",
-      "category": "ecommerce",
-      "homepage": "https://developer-docs.amazon.com/sp-api/",
-      "docs": "https://developer-docs.amazon.com/sp-api/",
-      "auth": "oauth2",
-      "auth_hint": "LWA (Login with Amazon) OAuth2 access token via x-amz-access-token header",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free API access; requires an existing Amazon Seller/Vendor Central account",
-      "sdk": [
-        "python",
-        "java",
-        "node",
-        "csharp"
-      ],
-      "openapi": "https://github.com/amzn/selling-partner-api-models",
-      "llms_txt": null,
-      "desc_en": "Manage listings, orders, inventory, and reports for an Amazon seller/vendor account via REST API.",
-      "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "bigcommerce-api",
-      "name": "BigCommerce API",
-      "category": "ecommerce",
-      "homepage": "https://developer.bigcommerce.com",
-      "docs": "https://developer.bigcommerce.com/docs/rest",
-      "auth": "api_key+oauth2",
-      "auth_hint": "X-Auth-Token header (store API account) or OAuth2 for public apps",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.bigcommerce.com/_mcp/server"
-      },
-      "free_tier": "free API access; requires an active BigCommerce store plan",
-      "sdk": [
-        "node"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Manage catalog, orders, customers, and carts on a BigCommerce store via REST/GraphQL APIs.",
-      "notes": "Official MCP server is for documentation search/dev assistance, not direct storefront execution - use API tokens for that.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "ebay-apis",
-      "name": "eBay APIs",
-      "category": "ecommerce",
-      "homepage": "https://developer.ebay.com",
-      "docs": "https://developer.ebay.com/docs",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <OAuth2 token> (application or user token)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free developer tier with call-volume limits; sandbox environment included",
-      "sdk": [
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "List items, manage orders/inventory, and search listings across eBay marketplaces via REST APIs.",
-      "notes": "Production access requires an eBay developer account and app keys; rate limits scale with account compliance tier.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "etsy-open-api-v3",
-      "name": "Etsy Open API v3",
-      "category": "ecommerce",
-      "homepage": "https://developer.etsy.com",
-      "docs": "https://developer.etsy.com/documentation/",
-      "auth": "oauth2",
-      "auth_hint": "OAuth2 Bearer token + x-api-key header (app keystring)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free developer keystring (rate-limited, e.g. 10 req/sec, ~5,000 req/day per app by default)",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "List products, manage orders/shop, and search listings on the Etsy marketplace via REST API.",
-      "notes": "Requires an approved Etsy developer app; OAuth2 user consent needed for shop-management scopes. Missing from candidate list despite being a major agent-callable marketplace API.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "printful-api",
-      "name": "Printful API",
-      "category": "ecommerce",
-      "homepage": "https://developers.printful.com",
-      "docs": "https://developers.printful.com/docs/",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <token> (Private token or OAuth2 for public apps)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free API access; pay only for products/fulfillment/shipping ordered",
-      "sdk": [],
-      "openapi": "https://developers.printful.com/openapi/",
-      "llms_txt": null,
-      "desc_en": "Create print-on-demand products, sync catalogs, and submit fulfillment orders via REST API.",
-      "notes": "",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "shopify-admin-storefront-api",
-      "name": "Shopify Admin / Storefront API",
-      "category": "ecommerce",
-      "homepage": "https://shopify.dev",
-      "docs": "https://shopify.dev/docs/api/admin-rest",
-      "auth": "api_key+oauth2",
-      "auth_hint": "X-Shopify-Access-Token header (custom app token or OAuth2 for public apps)",
-      "mcp": {
-        "type": "official",
-        "url": "https://shopify.dev/docs/apps/build/devmcp"
-      },
-      "free_tier": "free API access; requires an active paid Shopify store subscription to use",
-      "sdk": [
-        "node",
-        "ruby"
-      ],
-      "openapi": null,
-      "llms_txt": "https://shopify.dev/llms.txt",
-      "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
-      "notes": "The official Dev MCP server helps build/debug Shopify apps via docs & schema search; store operations themselves go through Admin/Storefront API tokens.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "woocommerce-rest-api",
-      "name": "WooCommerce REST API",
-      "category": "ecommerce",
-      "homepage": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
-      "docs": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
-      "auth": "api_key",
-      "auth_hint": "OAuth1.0a signature (HTTP) or Basic auth with Consumer Key/Secret (HTTPS)",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free (self-hosted plugin; no vendor API fees, only your own WordPress hosting costs)",
-      "sdk": [
-        "php"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Manage products, orders, and customers on a self-hosted WooCommerce store via REST API.",
-      "notes": "Requires your own WordPress+WooCommerce installation; there is no shared multi-tenant cloud endpoint.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "bigcommerce-api",
+   "name": "BigCommerce API",
+   "homepage": "https://developer.bigcommerce.com",
+   "docs": "https://developer.bigcommerce.com/docs/rest",
+   "auth": "api_key+oauth2",
+   "auth_hint": "X-Auth-Token header (store API account) or OAuth2 for public apps",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.bigcommerce.com/_mcp/server"
+   },
+   "free_tier": "free API access; requires an active BigCommerce store plan",
+   "sdk": [
+    "node"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Manage catalog, orders, customers, and carts on a BigCommerce store via REST/GraphQL APIs.",
+   "notes": "Official MCP server is for documentation search/dev assistance, not direct storefront execution - use API tokens for that.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "ebay-apis",
+   "name": "eBay APIs",
+   "homepage": "https://developer.ebay.com",
+   "docs": "https://developer.ebay.com/docs",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <OAuth2 token> (application or user token)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free developer tier with call-volume limits; sandbox environment included",
+   "sdk": [
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "List items, manage orders/inventory, and search listings across eBay marketplaces via REST APIs.",
+   "notes": "Production access requires an eBay developer account and app keys; rate limits scale with account compliance tier.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "reachable"
+   }
+  },
+  {
+   "id": "etsy-open-api-v3",
+   "name": "Etsy Open API v3",
+   "homepage": "https://developer.etsy.com",
+   "docs": "https://developer.etsy.com/documentation/",
+   "auth": "oauth2",
+   "auth_hint": "OAuth2 Bearer token + x-api-key header (app keystring)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free developer keystring (rate-limited, e.g. 10 req/sec, ~5,000 req/day per app by default)",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "List products, manage orders/shop, and search listings on the Etsy marketplace via REST API.",
+   "notes": "Requires an approved Etsy developer app; OAuth2 user consent needed for shop-management scopes. Missing from candidate list despite being a major agent-callable marketplace API.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "printful-api",
+   "name": "Printful API",
+   "homepage": "https://developers.printful.com",
+   "docs": "https://developers.printful.com/docs/",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <token> (Private token or OAuth2 for public apps)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free API access; pay only for products/fulfillment/shipping ordered",
+   "sdk": [],
+   "openapi": "https://developers.printful.com/openapi/",
+   "llms_txt": null,
+   "desc_en": "Create print-on-demand products, sync catalogs, and submit fulfillment orders via REST API.",
+   "notes": "",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
+  },
+  {
+   "id": "shopify-admin-storefront-api",
+   "name": "Shopify Admin / Storefront API",
+   "homepage": "https://shopify.dev",
+   "docs": "https://shopify.dev/docs/api/admin-rest",
+   "auth": "api_key+oauth2",
+   "auth_hint": "X-Shopify-Access-Token header (custom app token or OAuth2 for public apps)",
+   "mcp": {
+    "type": "official",
+    "url": "https://shopify.dev/docs/apps/build/devmcp"
+   },
+   "free_tier": "free API access; requires an active paid Shopify store subscription to use",
+   "sdk": [
+    "node",
+    "ruby"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
+   "notes": "The official Dev MCP server helps build/debug Shopify apps via docs & schema search; store operations themselves go through Admin/Storefront API tokens.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "woocommerce-rest-api",
+   "name": "WooCommerce REST API",
+   "homepage": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+   "docs": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+   "auth": "api_key",
+   "auth_hint": "OAuth1.0a signature (HTTP) or Basic auth with Consumer Key/Secret (HTTPS)",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free (self-hosted plugin; no vendor API fees, only your own WordPress hosting costs)",
+   "sdk": [
+    "php"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Manage products, orders, and customers on a self-hosted WooCommerce store via REST API.",
+   "notes": "Requires your own WordPress+WooCommerce installation; there is no shared multi-tenant cloud endpoint.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  }
+ ]
 }

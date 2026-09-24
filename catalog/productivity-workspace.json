@@ -1,373 +1,480 @@
 {
-  "category": {
-    "id": "productivity-workspace",
-    "name": "Productivity and workspace",
-    "description": "Email, calendars, files, notes, tasks and project management."
+ "category": {
+  "id": "productivity-workspace",
+  "name": "Productivity and workspace",
+  "description": "Email, calendars, files, notes, tasks and project management."
+ },
+ "entries": [
+  {
+   "id": "airtable-api",
+   "name": "Airtable API",
+   "homepage": "https://airtable.com/developers",
+   "docs": "https://airtable.com/developers/web/api/introduction",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <personal access token>",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/domdomegg/airtable-mcp-server"
+   },
+   "free_tier": "free tier: API access on Free plan, ~5 req/sec per base",
+   "sdk": [
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Read and write records in Airtable bases and tables via REST API.",
+   "notes": "Official JS client available; Python/Ruby/.NET clients are community-maintained.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "airtable-api",
-      "name": "Airtable API",
-      "category": "productivity-workspace",
-      "homepage": "https://airtable.com/developers",
-      "docs": "https://airtable.com/developers/web/api/introduction",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <personal access token>",
-      "mcp": {
-        "type": "community",
-        "url": "https://github.com/domdomegg/airtable-mcp-server"
-      },
-      "free_tier": "free tier: API access on Free plan, ~5 req/sec per base",
-      "sdk": [
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Read and write records in Airtable bases and tables via REST API.",
-      "notes": "Official JS client available; Python/Ruby/.NET clients are community-maintained.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "asana-api",
-      "name": "Asana API",
-      "category": "productivity-workspace",
-      "homepage": "https://developers.asana.com",
-      "docs": "https://developers.asana.com",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <personal access token or OAuth2 token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: API included on Personal (free) plan, rate limited",
-      "sdk": [
-        "python",
-        "javascript",
-        "java",
-        "php",
-        "ruby"
-      ],
-      "openapi": null,
-      "llms_txt": "https://developers.asana.com/llms.txt",
-      "desc_en": "Create tasks, projects, and comments in Asana workspaces via REST API.",
-      "notes": "No official MCP server confirmed as of this check.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "atlassian-jira-confluence",
-      "name": "Atlassian (Jira, Confluence)",
-      "category": "productivity-workspace",
-      "homepage": "https://developer.atlassian.com",
-      "docs": "https://developer.atlassian.com",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <OAuth2 token> (or basic auth with API token for Cloud REST)",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.atlassian.com/v1/mcp/authv2"
-      },
-      "free_tier": "free tier: available on Free Jira/Confluence plans; rate limits vary by plan",
-      "sdk": [
-        "python",
-        "javascript",
-        "java"
-      ],
-      "openapi": "https://developer.atlassian.com/cloud/jira/platform/swagger.v3.json",
-      "llms_txt": null,
-      "desc_en": "Create and manage Jira issues and Confluence pages via REST API or the official remote MCP server.",
-      "notes": "Official Atlassian Remote MCP (Rovo) rate limits range 500-10,000+ calls/hour depending on subscription tier; does not store/cache content.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "box-api",
-      "name": "Box API",
-      "category": "productivity-workspace",
-      "homepage": "https://developer.box.com",
-      "docs": "https://developer.box.com/guides/api-calls/",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <access_token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "check pricing (Box API generally requires a paid Box account for meaningful use)",
-      "sdk": [
-        "python",
-        "javascript",
-        "java",
-        "csharp"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Upload, download, and manage files, folders, and metadata in Box via REST API.",
-      "notes": "Also supports JWT/Client Credentials Grant for server-to-server auth.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "cal-com-api",
-      "name": "Cal.com API",
-      "category": "productivity-workspace",
-      "homepage": "https://cal.com/docs/api-reference",
-      "docs": "https://cal.com/docs/api-reference/v2/introduction",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <API key>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: API included on Free plan, 120 req/min (higher limits on request)",
-      "sdk": [
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": "https://cal.com/docs/llms.txt",
-      "desc_en": "Create and manage bookings, event types, and availability via the Cal.com REST API v2.",
-      "notes": "OAuth strongly recommended for production integrations; API keys are simpler but less secure.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "calendly-api",
-      "name": "Calendly API",
-      "category": "productivity-workspace",
-      "homepage": "https://developer.calendly.com",
-      "docs": "https://developer.calendly.com/api-docs",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <personal access token or OAuth2 token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "check pricing (personal access tokens available for own-account use; broader API access varies by plan)",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Programmatically book meetings and read/write scheduling, event, and contact data via REST API v2.",
-      "notes": "",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "clickup-api",
-      "name": "ClickUp API",
-      "category": "productivity-workspace",
-      "homepage": "https://developer.clickup.com",
-      "docs": "https://developer.clickup.com/reference",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: <personal API token> (no Bearer prefix) or OAuth2 token",
-      "mcp": {
-        "type": "official",
-        "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server"
-      },
-      "free_tier": "free tier: API access included on Free Forever plan",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Create and manage ClickUp tasks, lists, and docs via REST API or the official MCP server.",
-      "notes": "",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "coda-api-superhuman-docs",
-      "name": "Coda API (Superhuman Docs)",
-      "category": "productivity-workspace",
-      "homepage": "https://coda.io",
-      "docs": "https://docs.superhuman.com/developers/apis/v1",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <API token>",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.superhuman.com/developers/apis/v1"
-      },
-      "free_tier": "free, included for all users on both free and paid workspaces",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Read and write Coda (now 'Superhuman Docs') documents, tables, and rows via REST API or an MCP server.",
-      "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL (coda.io/apis/v1) still works. Docs mention an official MCP server optimized for LLM usage, but the exact remote endpoint wasn't independently confirmed this session.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "dropbox-api",
-      "name": "Dropbox API",
-      "category": "productivity-workspace",
-      "homepage": "https://www.dropbox.com/developers",
-      "docs": "https://www.dropbox.com/developers/documentation/http/documentation",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <access_token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: API access included on Basic (free) plan, rate limited",
-      "sdk": [
-        "python",
-        "javascript",
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Upload, download, and manage files and folders in Dropbox via the HTTP REST API.",
-      "notes": "",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "google-workspace-apis-gmail-calendar-drive",
-      "name": "Google Workspace APIs (Gmail, Calendar, Drive)",
-      "category": "productivity-workspace",
-      "homepage": "https://developers.google.com/workspace",
-      "docs": "https://developers.google.com/workspace",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <OAuth2 token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free (subject to per-API daily quotas)",
-      "sdk": [
-        "python",
-        "javascript",
-        "java",
-        "go"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Read/write Gmail messages, Calendar events, and Drive files programmatically via REST APIs.",
-      "notes": "Each Workspace API (Gmail, Calendar, Drive, Docs, Sheets) has its own quota; sensitive/restricted scopes require OAuth consent screen verification.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "linear-api",
-      "name": "Linear API",
-      "category": "productivity-workspace",
-      "homepage": "https://linear.app/developers",
-      "docs": "https://linear.app/developers",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <API key or OAuth2 token>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.linear.app/mcp"
-      },
-      "free_tier": "free tier: API access included on Free plan (rate limited)",
-      "sdk": [
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Create, query, and update Linear issues, projects, and comments via GraphQL API or the official MCP server.",
-      "notes": "GraphQL API (not REST). Official MCP also has a read-only variant at mcp.linear.app/mcp/readonly.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "microsoft-graph-outlook-teams-onedrive",
-      "name": "Microsoft Graph (Outlook, Teams, OneDrive)",
-      "category": "productivity-workspace",
-      "homepage": "https://learn.microsoft.com/graph/",
-      "docs": "https://learn.microsoft.com/en-us/graph/overview",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free with a Microsoft 365/Entra ID tenant (free dev tenant via Microsoft 365 Developer Program)",
-      "sdk": [
-        "python",
-        "javascript",
-        "java",
-        "csharp",
-        "go"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Single REST endpoint to read/write Outlook mail, Calendar events, Teams, and OneDrive/SharePoint data.",
-      "notes": "Requires app registration in Microsoft Entra ID; delegated vs application permissions determine required consent.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "monday-com-api",
-      "name": "monday.com API",
-      "category": "productivity-workspace",
-      "homepage": "https://developer.monday.com",
-      "docs": "https://developer.monday.com",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: <personal API token or OAuth2 token>",
-      "mcp": {
-        "type": "official",
-        "url": null
-      },
-      "free_tier": "free tier: GraphQL API included on Free plan (rate limited)",
-      "sdk": [
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Query and update monday.com boards, items, and workflows via GraphQL API or a hosted MCP endpoint.",
-      "notes": "monday.com docs confirm a native/hosted MCP connection option for AI assistants, but the exact current endpoint URL could not be independently confirmed this session — check developer.monday.com.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "notion-api",
-      "name": "Notion API",
-      "category": "productivity-workspace",
-      "homepage": "https://developers.notion.com",
-      "docs": "https://developers.notion.com",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <integration token or OAuth2 token>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.notion.com/mcp"
-      },
-      "free_tier": "free, API access included on all plans (rate limit ~3 req/sec)",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": "https://developers.notion.com/llms.txt",
-      "desc_en": "Read, create, and update Notion pages, databases, and comments via REST API.",
-      "notes": "Internal integrations use static tokens; public integrations use OAuth2. Official hosted MCP endpoint requires sign-in (returns 401 unauthenticated).",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "todoist-api",
-      "name": "Todoist API",
-      "category": "productivity-workspace",
-      "homepage": "https://developer.todoist.com",
-      "docs": "https://developer.todoist.com/api/v1/",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <API token or OAuth2 token>",
-      "mcp": {
-        "type": "official",
-        "url": "https://ai.todoist.net/mcp"
-      },
-      "free_tier": "free to use; some features gated by the user's Todoist plan",
-      "sdk": [
-        "python",
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Create, read, and complete Todoist tasks and projects via REST API or the official MCP server.",
-      "notes": "Official MCP works with Claude, ChatGPT, Cursor, VS Code; supports OAuth dynamic client registration (RFC 7591).",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "trello-api",
-      "name": "Trello API",
-      "category": "productivity-workspace",
-      "homepage": "https://developer.atlassian.com/cloud/trello/",
-      "docs": "https://developer.atlassian.com/cloud/trello/rest/",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <access_token> (or legacy key+token query params)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free, no key needed to register an app; usage is rate limited",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Create and manage Trello boards, lists, and cards via REST API.",
-      "notes": "Now documented under the Atlassian developer platform; supports both legacy key+token and OAuth2 bearer auth.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "asana-api",
+   "name": "Asana API",
+   "homepage": "https://developers.asana.com",
+   "docs": "https://developers.asana.com",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <personal access token or OAuth2 token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: API included on Personal (free) plan, rate limited",
+   "sdk": [
+    "python",
+    "javascript",
+    "java",
+    "php",
+    "ruby"
+   ],
+   "openapi": null,
+   "llms_txt": "https://developers.asana.com/llms.txt",
+   "desc_en": "Create tasks, projects, and comments in Asana workspaces via REST API.",
+   "notes": "No official MCP server confirmed as of this check.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "atlassian-jira-confluence",
+   "name": "Atlassian (Jira, Confluence)",
+   "homepage": "https://developer.atlassian.com",
+   "docs": "https://developer.atlassian.com",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <OAuth2 token> (or basic auth with API token for Cloud REST)",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.atlassian.com/v1/mcp/authv2"
+   },
+   "free_tier": "free tier: available on Free Jira/Confluence plans; rate limits vary by plan",
+   "sdk": [
+    "python",
+    "javascript",
+    "java"
+   ],
+   "openapi": "https://developer.atlassian.com/cloud/jira/platform/swagger.v3.json",
+   "llms_txt": null,
+   "desc_en": "Create and manage Jira issues and Confluence pages via REST API or the official remote MCP server.",
+   "notes": "Official Atlassian Remote MCP (Rovo) rate limits range 500-10,000+ calls/hour depending on subscription tier; does not store/cache content.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "openapi": "ok"
+   }
+  },
+  {
+   "id": "box-api",
+   "name": "Box API",
+   "homepage": "https://developer.box.com",
+   "docs": "https://developer.box.com/guides/api-calls/",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <access_token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "check pricing (Box API generally requires a paid Box account for meaningful use)",
+   "sdk": [
+    "python",
+    "javascript",
+    "java",
+    "csharp"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Upload, download, and manage files, folders, and metadata in Box via REST API.",
+   "notes": "Also supports JWT/Client Credentials Grant for server-to-server auth.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "cal-com-api",
+   "name": "Cal.com API",
+   "homepage": "https://cal.com/docs/api-reference",
+   "docs": "https://cal.com/docs/api-reference/v2/introduction",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <API key>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: API included on Free plan, 120 req/min (higher limits on request)",
+   "sdk": [
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://cal.com/docs/llms.txt",
+   "desc_en": "Create and manage bookings, event types, and availability via the Cal.com REST API v2.",
+   "notes": "OAuth strongly recommended for production integrations; API keys are simpler but less secure.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "calendly-api",
+   "name": "Calendly API",
+   "homepage": "https://developer.calendly.com",
+   "docs": "https://developer.calendly.com/api-docs",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <personal access token or OAuth2 token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "check pricing (personal access tokens available for own-account use; broader API access varies by plan)",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Programmatically book meetings and read/write scheduling, event, and contact data via REST API v2.",
+   "notes": "",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "clickup-api",
+   "name": "ClickUp API",
+   "homepage": "https://developer.clickup.com",
+   "docs": "https://developer.clickup.com/reference",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: <personal API token> (no Bearer prefix) or OAuth2 token",
+   "mcp": {
+    "type": "official",
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server"
+   },
+   "free_tier": "free tier: API access included on Free Forever plan",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Create and manage ClickUp tasks, lists, and docs via REST API or the official MCP server.",
+   "notes": "",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "coda-api-superhuman-docs",
+   "name": "Coda API (Superhuman Docs)",
+   "homepage": "https://coda.io",
+   "docs": "https://docs.superhuman.com/developers/apis/v1",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <API token>",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.superhuman.com/developers/apis/v1"
+   },
+   "free_tier": "free, included for all users on both free and paid workspaces",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Read and write Coda (now 'Superhuman Docs') documents, tables, and rows via REST API or an MCP server.",
+   "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL (coda.io/apis/v1) still works. Docs mention an official MCP server optimized for LLM usage, but the exact remote endpoint wasn't independently confirmed this session.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "dropbox-api",
+   "name": "Dropbox API",
+   "homepage": "https://www.dropbox.com/developers",
+   "docs": "https://www.dropbox.com/developers/documentation/http/documentation",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <access_token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: API access included on Basic (free) plan, rate limited",
+   "sdk": [
+    "python",
+    "javascript",
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Upload, download, and manage files and folders in Dropbox via the HTTP REST API.",
+   "notes": "",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "google-workspace-apis-gmail-calendar-drive",
+   "name": "Google Workspace APIs (Gmail, Calendar, Drive)",
+   "homepage": "https://developers.google.com/workspace",
+   "docs": "https://developers.google.com/workspace",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <OAuth2 token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free (subject to per-API daily quotas)",
+   "sdk": [
+    "python",
+    "javascript",
+    "java",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Read/write Gmail messages, Calendar events, and Drive files programmatically via REST APIs.",
+   "notes": "Each Workspace API (Gmail, Calendar, Drive, Docs, Sheets) has its own quota; sensitive/restricted scopes require OAuth consent screen verification.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "linear-api",
+   "name": "Linear API",
+   "homepage": "https://linear.app/developers",
+   "docs": "https://linear.app/developers",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <API key or OAuth2 token>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.linear.app/mcp"
+   },
+   "free_tier": "free tier: API access included on Free plan (rate limited)",
+   "sdk": [
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Create, query, and update Linear issues, projects, and comments via GraphQL API or the official MCP server.",
+   "notes": "GraphQL API (not REST). Official MCP also has a read-only variant at mcp.linear.app/mcp/readonly.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "microsoft-graph-outlook-teams-onedrive",
+   "name": "Microsoft Graph (Outlook, Teams, OneDrive)",
+   "homepage": "https://learn.microsoft.com/graph/",
+   "docs": "https://learn.microsoft.com/en-us/graph/overview",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free with a Microsoft 365/Entra ID tenant (free dev tenant via Microsoft 365 Developer Program)",
+   "sdk": [
+    "python",
+    "javascript",
+    "java",
+    "csharp",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Single REST endpoint to read/write Outlook mail, Calendar events, Teams, and OneDrive/SharePoint data.",
+   "notes": "Requires app registration in Microsoft Entra ID; delegated vs application permissions determine required consent.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "monday-com-api",
+   "name": "monday.com API",
+   "homepage": "https://developer.monday.com",
+   "docs": "https://developer.monday.com",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: <personal API token or OAuth2 token>",
+   "mcp": {
+    "type": "official",
+    "url": null
+   },
+   "free_tier": "free tier: GraphQL API included on Free plan (rate limited)",
+   "sdk": [
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Query and update monday.com boards, items, and workflows via GraphQL API or a hosted MCP endpoint.",
+   "notes": "monday.com docs confirm a native/hosted MCP connection option for AI assistants, but the exact current endpoint URL could not be independently confirmed this session — check developer.monday.com.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "notion-api",
+   "name": "Notion API",
+   "homepage": "https://developers.notion.com",
+   "docs": "https://developers.notion.com",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <integration token or OAuth2 token>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.notion.com/mcp"
+   },
+   "free_tier": "free, API access included on all plans (rate limit ~3 req/sec)",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://developers.notion.com/llms.txt",
+   "desc_en": "Read, create, and update Notion pages, databases, and comments via REST API.",
+   "notes": "Internal integrations use static tokens; public integrations use OAuth2. Official hosted MCP endpoint requires sign-in (returns 401 unauthenticated).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "todoist-api",
+   "name": "Todoist API",
+   "homepage": "https://developer.todoist.com",
+   "docs": "https://developer.todoist.com/api/v1/",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <API token or OAuth2 token>",
+   "mcp": {
+    "type": "official",
+    "url": "https://ai.todoist.net/mcp"
+   },
+   "free_tier": "free to use; some features gated by the user's Todoist plan",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Create, read, and complete Todoist tasks and projects via REST API or the official MCP server.",
+   "notes": "Official MCP works with Claude, ChatGPT, Cursor, VS Code; supports OAuth dynamic client registration (RFC 7591).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "trello-api",
+   "name": "Trello API",
+   "homepage": "https://developer.atlassian.com/cloud/trello/",
+   "docs": "https://developer.atlassian.com/cloud/trello/rest/",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <access_token> (or legacy key+token query params)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free, no key needed to register an app; usage is rate limited",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Create and manage Trello boards, lists, and cards via REST API.",
+   "notes": "Now documented under the Atlassian developer platform; supports both legacy key+token and OAuth2 bearer auth.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  }
+ ]
 }
