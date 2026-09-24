@@ -73,7 +73,17 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Cohere/",
+     "fetched_at": "2026-09-24T17:02Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/cohere-api.json"
   },
   {
    "id": "deepseek-api",
@@ -101,7 +111,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/DeepSeek/",
+     "fetched_at": "2026-09-24T17:02Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/deepseek-api.json"
   },
   {
    "id": "fal-ai",
@@ -295,7 +315,17 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Mistral-AI/",
+     "fetched_at": "2026-09-24T17:02Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/mistral-ai-api.json"
   },
   {
    "id": "openai-api",
@@ -331,7 +361,17 @@
     "docs": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 3,
+     "url": "https://sourceforge.net/software/product/OpenAI/",
+     "fetched_at": "2026-09-24T17:02Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/openai-api.json"
   },
   {
    "id": "openrouter",
@@ -364,7 +404,17 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/OpenRouter/",
+     "fetched_at": "2026-09-24T17:02Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/openrouter.json"
   },
   {
    "id": "piapi",
@@ -393,7 +443,19 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "apinetwork/piapi-mcp-server",
+     "stars": 75,
+     "forks": 22,
+     "pushed_at": "2026-09-17",
+     "archived": false,
+     "url": "https://github.com/apinetwork/piapi-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "replicate",

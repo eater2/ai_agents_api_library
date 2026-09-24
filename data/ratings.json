@@ -1,0 +1,1828 @@
+{
+ "adyen-api": [
+  {
+   "source": "github",
+   "repo": "Adyen/adyen-openapi",
+   "stars": 79,
+   "forks": 60,
+   "pushed_at": "2026-09-23",
+   "archived": false,
+   "url": "https://github.com/Adyen/adyen-openapi",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Adyen/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "airtable-api": [
+  {
+   "source": "github",
+   "repo": "domdomegg/airtable-mcp-server",
+   "stars": 457,
+   "forks": 133,
+   "pushed_at": "2026-09-09",
+   "archived": false,
+   "url": "https://github.com/domdomegg/airtable-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "smithery",
+   "uses": 500,
+   "url": "https://smithery.ai/servers/airtable",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 28,
+   "url": "https://sourceforge.net/software/product/Airtable/",
+   "fetched_at": "2026-09-24T16:59Z"
+  }
+ ],
+ "amazon-selling-partner-api": [
+  {
+   "source": "github",
+   "repo": "amzn/selling-partner-api-models",
+   "stars": 912,
+   "forks": 795,
+   "pushed_at": "2026-09-22",
+   "archived": false,
+   "url": "https://github.com/amzn/selling-partner-api-models",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "amazon-translate": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Amazon-Translate/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "anchor-browser": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Anchor-Browser/",
+   "fetched_at": "2026-09-24T16:55Z"
+  }
+ ],
+ "apify": [
+  {
+   "source": "smithery",
+   "uses": 218,
+   "url": "https://smithery.ai/servers/apify",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.8,
+   "reviews": 1714,
+   "url": "https://sourceforge.net/software/product/Apify/",
+   "fetched_at": "2026-09-24T17:02Z"
+  }
+ ],
+ "arxiv-api": [
+  {
+   "source": "github",
+   "repo": "blazickjp/arxiv-mcp-server",
+   "stars": 3172,
+   "forks": 258,
+   "pushed_at": "2026-08-26",
+   "archived": false,
+   "url": "https://github.com/blazickjp/arxiv-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "smithery",
+   "uses": 5142,
+   "url": "https://smithery.ai/servers/arxiv",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "asana-api": [
+  {
+   "source": "smithery",
+   "uses": 94,
+   "url": "https://smithery.ai/servers/asana",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 97,
+   "url": "https://sourceforge.net/software/product/Asana/",
+   "fetched_at": "2026-09-24T16:59Z"
+  }
+ ],
+ "attio-api": [
+  {
+   "source": "smithery",
+   "uses": 277,
+   "url": "https://smithery.ai/servers/attio",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "aws-apis": [
+  {
+   "source": "github",
+   "repo": "awslabs/mcp",
+   "stars": 9728,
+   "forks": 1770,
+   "pushed_at": "2026-09-24",
+   "archived": false,
+   "url": "https://github.com/awslabs/mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "aws-textract": [
+  {
+   "source": "github",
+   "repo": "ag2-mcp-servers/amazon-textract",
+   "stars": 0,
+   "forks": 0,
+   "pushed_at": "2025-07-15",
+   "archived": false,
+   "url": "https://github.com/ag2-mcp-servers/amazon-textract",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "ayrshare": [
+  {
+   "source": "sourceforge",
+   "rating": 3.4,
+   "reviews": 5,
+   "url": "https://sourceforge.net/software/product/Ayrshare/",
+   "fetched_at": "2026-09-24T17:00Z"
+  }
+ ],
+ "azure-ai-speech": [
+  {
+   "source": "github",
+   "repo": "microsoft/azure-speech-mcp-server",
+   "stars": 1,
+   "forks": 1,
+   "pushed_at": "2025-11-24",
+   "archived": false,
+   "url": "https://github.com/microsoft/azure-speech-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "azure-apis": [
+  {
+   "source": "github",
+   "repo": "Azure/azure-rest-api-specs",
+   "stars": 3094,
+   "forks": 5974,
+   "pushed_at": "2026-09-24",
+   "archived": false,
+   "url": "https://github.com/Azure/azure-rest-api-specs",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "github",
+   "repo": "microsoft/mcp",
+   "stars": 3707,
+   "forks": 628,
+   "pushed_at": "2026-09-24",
+   "archived": false,
+   "url": "https://github.com/microsoft/mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "beatoven-ai-api": [
+  {
+   "source": "sourceforge",
+   "rating": 3.8,
+   "reviews": 4,
+   "url": "https://sourceforge.net/software/product/Beatoven.ai/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "bigcommerce-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Bigcommerce/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "brave-search-api": [
+  {
+   "source": "github",
+   "repo": "brave/brave-search-mcp-server",
+   "stars": 1467,
+   "forks": 208,
+   "pushed_at": "2026-09-23",
+   "archived": false,
+   "url": "https://github.com/brave/brave-search-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "smithery",
+   "uses": 119026,
+   "url": "https://smithery.ai/servers/brave",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.5,
+   "reviews": 2,
+   "url": "https://sourceforge.net/software/product/Brave-Search/",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "bright-data": [
+  {
+   "source": "github",
+   "repo": "brightdata/brightdata-mcp",
+   "stars": 2655,
+   "forks": 329,
+   "pushed_at": "2026-09-17",
+   "archived": false,
+   "url": "https://github.com/brightdata/brightdata-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "smithery",
+   "uses": 300,
+   "url": "https://smithery.ai/servers/brightdata",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.4,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Bright-Data/",
+   "fetched_at": "2026-09-24T16:55Z"
+  }
+ ],
+ "browserbase-stagehand": [
+  {
+   "source": "smithery",
+   "uses": 433,
+   "url": "https://smithery.ai/servers/browserbase",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 3.0,
+   "reviews": 2,
+   "url": "https://sourceforge.net/software/product/Browserbase/",
+   "fetched_at": "2026-09-24T16:55Z"
+  }
+ ],
+ "calendly-api": [
+  {
+   "source": "smithery",
+   "uses": 23,
+   "url": "https://smithery.ai/servers/calendly",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 14,
+   "url": "https://sourceforge.net/software/product/Calendly/",
+   "fetched_at": "2026-09-24T16:59Z"
+  }
+ ],
+ "chroma-cloud": [
+  {
+   "source": "github",
+   "repo": "chroma-core/chroma-mcp",
+   "stars": 599,
+   "forks": 115,
+   "pushed_at": "2025-09-17",
+   "archived": false,
+   "url": "https://github.com/chroma-core/chroma-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "circleci-api": [
+  {
+   "source": "github",
+   "repo": "CircleCI-Public/mcp-server-circleci",
+   "stars": 94,
+   "forks": 63,
+   "pushed_at": "2026-09-22",
+   "archived": false,
+   "url": "https://github.com/CircleCI-Public/mcp-server-circleci",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 3.0,
+   "reviews": 2,
+   "url": "https://sourceforge.net/software/product/CircleCI/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "clickhouse-cloud": [
+  {
+   "source": "github",
+   "repo": "ClickHouse/mcp-clickhouse",
+   "stars": 879,
+   "forks": 208,
+   "pushed_at": "2026-09-21",
+   "archived": false,
+   "url": "https://github.com/ClickHouse/mcp-clickhouse",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "clickup-api": [
+  {
+   "source": "smithery",
+   "uses": 0,
+   "url": "https://smithery.ai/servers/clickup",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.6,
+   "reviews": 122,
+   "url": "https://sourceforge.net/software/product/ClickUp/",
+   "fetched_at": "2026-09-24T16:59Z"
+  }
+ ],
+ "cloudconvert-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/CloudConvert/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "cloudflare-api": [
+  {
+   "source": "smithery",
+   "uses": 199,
+   "url": "https://smithery.ai/servers/cloudflare",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.6,
+   "reviews": 12,
+   "url": "https://sourceforge.net/software/product/Cloudflare/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "cohere-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Cohere/",
+   "fetched_at": "2026-09-24T17:02Z"
+  }
+ ],
+ "coinbase-cdp-x402": [
+  {
+   "source": "sourceforge",
+   "rating": 4.4,
+   "reviews": 10,
+   "url": "https://sourceforge.net/software/product/Coinbase/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "coingecko-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/CoinGecko/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "context7-library-docs-for-agents": [
+  {
+   "source": "smithery",
+   "uses": 5563,
+   "url": "https://smithery.ai/servers/upstash/context7-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "convex": [
+  {
+   "source": "github",
+   "repo": "get-convex/convex-backend",
+   "stars": 12604,
+   "forks": 818,
+   "pushed_at": "2026-09-24",
+   "archived": false,
+   "url": "https://github.com/get-convex/convex-backend",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "crossref-rest-api": [
+  {
+   "source": "github",
+   "repo": "afrise/academic-search-mcp-server",
+   "stars": 117,
+   "forks": 12,
+   "pushed_at": "2025-02-12",
+   "archived": false,
+   "url": "https://github.com/afrise/academic-search-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "datadog-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.9,
+   "reviews": 7,
+   "url": "https://sourceforge.net/software/product/Datadog/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "deepgram-api": [
+  {
+   "source": "github",
+   "repo": "deepgram/mcp",
+   "stars": 2,
+   "forks": 2,
+   "pushed_at": "2026-05-06",
+   "archived": false,
+   "url": "https://github.com/deepgram/mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "deepl-api": [
+  {
+   "source": "github",
+   "repo": "DeepL/deepl-mcp-server",
+   "stars": 116,
+   "forks": 19,
+   "pushed_at": "2026-09-21",
+   "archived": false,
+   "url": "https://github.com/DeepL/deepl-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/DeepL/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "deepseek-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/DeepSeek/",
+   "fetched_at": "2026-09-24T17:02Z"
+  }
+ ],
+ "discord-api": [
+  {
+   "source": "github",
+   "repo": "SaseQ/discord-mcp",
+   "stars": 507,
+   "forks": 104,
+   "pushed_at": "2026-04-25",
+   "archived": false,
+   "url": "https://github.com/SaseQ/discord-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "smithery",
+   "uses": 82,
+   "url": "https://smithery.ai/servers/discord",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "docker-hub-api": [
+  {
+   "source": "github",
+   "repo": "docker/hub-mcp",
+   "stars": 165,
+   "forks": 101,
+   "pushed_at": "2026-08-27",
+   "archived": false,
+   "url": "https://github.com/docker/hub-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "docusign-esignature-api": [
+  {
+   "source": "github",
+   "repo": "docusign/OpenAPI-Specifications",
+   "stars": 24,
+   "forks": 20,
+   "pushed_at": "2026-08-31",
+   "archived": false,
+   "url": "https://github.com/docusign/OpenAPI-Specifications",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "dropbox-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.5,
+   "reviews": 226,
+   "url": "https://sourceforge.net/software/product/Dropbox/",
+   "fetched_at": "2026-09-24T16:59Z"
+  }
+ ],
+ "e2b": [
+  {
+   "source": "github",
+   "repo": "e2b-dev/mcp-server",
+   "stars": 394,
+   "forks": 72,
+   "pushed_at": "2026-04-16",
+   "archived": true,
+   "url": "https://github.com/e2b-dev/mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "ebay-apis": [
+  {
+   "source": "sourceforge",
+   "rating": 4.0,
+   "reviews": 10,
+   "url": "https://sourceforge.net/software/product/eBay/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "elevenlabs-api": [
+  {
+   "source": "github",
+   "repo": "elevenlabs/elevenlabs-mcp",
+   "stars": 1537,
+   "forks": 256,
+   "pushed_at": "2026-08-20",
+   "archived": true,
+   "url": "https://github.com/elevenlabs/elevenlabs-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.0,
+   "reviews": 4,
+   "url": "https://sourceforge.net/software/product/ElevenLabs/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "elevenlabs-music-api": [
+  {
+   "source": "github",
+   "repo": "elevenlabs/elevenlabs-mcp",
+   "stars": 1537,
+   "forks": 256,
+   "pushed_at": "2026-08-20",
+   "archived": true,
+   "url": "https://github.com/elevenlabs/elevenlabs-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "exa": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Exa/",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "figma-rest-api-dev-mode-mcp": [
+  {
+   "source": "github",
+   "repo": "figma/rest-api-spec",
+   "stars": 219,
+   "forks": 29,
+   "pushed_at": "2026-09-16",
+   "archived": false,
+   "url": "https://github.com/figma/rest-api-spec",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "financial-modeling-prep": [
+  {
+   "source": "sourceforge",
+   "rating": 3.6,
+   "reviews": 13,
+   "url": "https://sourceforge.net/software/product/Financial-Modeling-Prep/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "firecrawl": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Firecrawl/",
+   "fetched_at": "2026-09-24T16:55Z"
+  }
+ ],
+ "framer": [
+  {
+   "source": "sourceforge",
+   "rating": 4.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Framer/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "gdelt-api": [
+  {
+   "source": "github",
+   "repo": "cyanheads/gdelt-mcp-server",
+   "stars": 6,
+   "forks": 0,
+   "pushed_at": "2026-09-22",
+   "archived": false,
+   "url": "https://github.com/cyanheads/gdelt-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "github-api": [
+  {
+   "source": "github",
+   "repo": "github/github-mcp-server",
+   "stars": 33176,
+   "forks": 5045,
+   "pushed_at": "2026-09-22",
+   "archived": false,
+   "url": "https://github.com/github/github-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "smithery",
+   "uses": 6059,
+   "url": "https://smithery.ai/servers/github",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 21,
+   "url": "https://sourceforge.net/software/product/GitHub/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "gitlab-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.4,
+   "reviews": 14,
+   "url": "https://sourceforge.net/software/product/GitLab/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "google-bigquery": [
+  {
+   "source": "smithery",
+   "uses": 6986,
+   "url": "https://smithery.ai/servers/bigquery",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "google-cloud-apis": [
+  {
+   "source": "github",
+   "repo": "googleapis/mcp-toolbox",
+   "stars": 16488,
+   "forks": 1732,
+   "pushed_at": "2026-09-24",
+   "archived": false,
+   "url": "https://github.com/googleapis/mcp-toolbox",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "google-maps-platform": [
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 6,
+   "url": "https://sourceforge.net/software/product/Google-Maps/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "hacker-news-api": [
+  {
+   "source": "github",
+   "repo": "HackerNews/API",
+   "stars": 13336,
+   "forks": 762,
+   "pushed_at": "2025-01-01",
+   "archived": false,
+   "url": "https://github.com/HackerNews/API",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "github",
+   "repo": "pskill9/hn-server",
+   "stars": 40,
+   "forks": 7,
+   "pushed_at": "2024-12-31",
+   "archived": false,
+   "url": "https://github.com/pskill9/hn-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "heygen-api": [
+  {
+   "source": "sourceforge",
+   "rating": 2.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/HeyGen/",
+   "fetched_at": "2026-09-24T16:55Z"
+  }
+ ],
+ "hubspot-api": [
+  {
+   "source": "smithery",
+   "uses": 1166,
+   "url": "https://smithery.ai/servers/hubspot",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "hyperbrowser": [
+  {
+   "source": "github",
+   "repo": "hyperbrowserai/mcp",
+   "stars": 792,
+   "forks": 74,
+   "pushed_at": "2025-11-20",
+   "archived": false,
+   "url": "https://github.com/hyperbrowserai/mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "icepanel-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/IcePanel/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "ifttt-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 4,
+   "url": "https://sourceforge.net/software/product/IFTTT/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "intercom-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 9,
+   "url": "https://sourceforge.net/software/product/Intercom/",
+   "fetched_at": "2026-09-24T17:00Z"
+  }
+ ],
+ "kagi-search-api": [
+  {
+   "source": "github",
+   "repo": "kagisearch/kagimcp",
+   "stars": 528,
+   "forks": 48,
+   "pushed_at": "2026-07-07",
+   "archived": false,
+   "url": "https://github.com/kagisearch/kagimcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "klaviyo-api": [
+  {
+   "source": "smithery",
+   "uses": 2,
+   "url": "https://smithery.ai/servers/klaviyo",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.5,
+   "reviews": 8,
+   "url": "https://sourceforge.net/software/product/Klaviyo/",
+   "fetched_at": "2026-09-24T17:00Z"
+  }
+ ],
+ "kling-ai-api": [
+  {
+   "source": "github",
+   "repo": "199-mcp/mcp-kling",
+   "stars": 41,
+   "forks": 20,
+   "pushed_at": "2025-06-14",
+   "archived": false,
+   "url": "https://github.com/199-mcp/mcp-kling",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "languagetool-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/LanguageTool/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "leonardo-ai-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Leonardo.ai/",
+   "fetched_at": "2026-09-24T16:55Z"
+  }
+ ],
+ "linear-api": [
+  {
+   "source": "smithery",
+   "uses": 3816,
+   "url": "https://smithery.ai/servers/linear",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Linear/",
+   "fetched_at": "2026-09-24T16:59Z"
+  }
+ ],
+ "linkup": [
+  {
+   "source": "smithery",
+   "uses": 213,
+   "url": "https://smithery.ai/servers/LinkupPlatform/linkup-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "loudly-api": [
+  {
+   "source": "sourceforge",
+   "rating": 1.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Loudly/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "luma-ai-dream-machine-api": [
+  {
+   "source": "github",
+   "repo": "lumalabs/luma-api-mcp",
+   "stars": 26,
+   "forks": 11,
+   "pushed_at": "2025-04-18",
+   "archived": false,
+   "url": "https://github.com/lumalabs/luma-api-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "mailgun": [
+  {
+   "source": "sourceforge",
+   "rating": 1.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Mailgun/",
+   "fetched_at": "2026-09-24T16:58Z"
+  }
+ ],
+ "mapbox": [
+  {
+   "source": "github",
+   "repo": "mapbox/mcp-server",
+   "stars": 356,
+   "forks": 44,
+   "pushed_at": "2026-09-24",
+   "archived": false,
+   "url": "https://github.com/mapbox/mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "smithery",
+   "uses": 0,
+   "url": "https://smithery.ai/servers/mapbox",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "mastodon-api": [
+  {
+   "source": "sourceforge",
+   "rating": 2.5,
+   "reviews": 11,
+   "url": "https://sourceforge.net/software/product/Mastodon/",
+   "fetched_at": "2026-09-24T17:00Z"
+  }
+ ],
+ "meshy-api": [
+  {
+   "source": "github",
+   "repo": "meshy-dev/meshy-mcp-server",
+   "stars": 48,
+   "forks": 11,
+   "pushed_at": "2026-09-22",
+   "archived": false,
+   "url": "https://github.com/meshy-dev/meshy-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "minimax-hailuo-api": [
+  {
+   "source": "github",
+   "repo": "MiniMax-AI/MiniMax-MCP",
+   "stars": 1585,
+   "forks": 284,
+   "pushed_at": "2026-08-20",
+   "archived": false,
+   "url": "https://github.com/MiniMax-AI/MiniMax-MCP",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "mistral-ai-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Mistral-AI/",
+   "fetched_at": "2026-09-24T17:02Z"
+  }
+ ],
+ "mistral-ocr-api": [
+  {
+   "source": "github",
+   "repo": "D-Diaa/mistral-ocr-mcp",
+   "stars": 0,
+   "forks": 0,
+   "pushed_at": "2025-08-04",
+   "archived": false,
+   "url": "https://github.com/D-Diaa/mistral-ocr-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "modal": [
+  {
+   "source": "github",
+   "repo": "milkymap/mcp4modal_sandbox",
+   "stars": 1,
+   "forks": 0,
+   "pushed_at": "2025-07-09",
+   "archived": false,
+   "url": "https://github.com/milkymap/mcp4modal_sandbox",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "monday-com-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.8,
+   "reviews": 98,
+   "url": "https://sourceforge.net/software/product/monday.com/",
+   "fetched_at": "2026-09-24T17:00Z"
+  }
+ ],
+ "mongodb-atlas": [
+  {
+   "source": "github",
+   "repo": "mongodb-js/mongodb-mcp-server",
+   "stars": 1137,
+   "forks": 294,
+   "pushed_at": "2026-09-23",
+   "archived": false,
+   "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/MongoDB-Atlas/",
+   "fetched_at": "2026-09-24T16:58Z"
+  }
+ ],
+ "murf-ai-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 7,
+   "url": "https://sourceforge.net/software/product/Murf-AI/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "n8n-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/n8n/",
+   "fetched_at": "2026-09-24T17:02Z"
+  }
+ ],
+ "neon-postgres": [
+  {
+   "source": "github",
+   "repo": "neondatabase/mcp-server-neon",
+   "stars": 650,
+   "forks": 126,
+   "pushed_at": "2026-09-23",
+   "archived": false,
+   "url": "https://github.com/neondatabase/mcp-server-neon",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "netlify-api": [
+  {
+   "source": "smithery",
+   "uses": 0,
+   "url": "https://smithery.ai/servers/netlify",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.0,
+   "reviews": 5,
+   "url": "https://sourceforge.net/software/product/Netlify/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "newsapi": [
+  {
+   "source": "github",
+   "repo": "matteoantoci/mcp-newsapi",
+   "stars": 3,
+   "forks": 7,
+   "pushed_at": "2025-05-08",
+   "archived": false,
+   "url": "https://github.com/matteoantoci/mcp-newsapi",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "notion-api": [
+  {
+   "source": "smithery",
+   "uses": 3841,
+   "url": "https://smithery.ai/servers/notion",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 26,
+   "url": "https://sourceforge.net/software/product/Notion/",
+   "fetched_at": "2026-09-24T17:00Z"
+  }
+ ],
+ "openai-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 3,
+   "url": "https://sourceforge.net/software/product/OpenAI/",
+   "fetched_at": "2026-09-24T17:02Z"
+  }
+ ],
+ "openai-audio-api-tts-transcription": [
+  {
+   "source": "github",
+   "repo": "openai/openai-openapi",
+   "stars": 2524,
+   "forks": 526,
+   "pushed_at": "2026-09-23",
+   "archived": false,
+   "url": "https://github.com/openai/openai-openapi",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "openai-images-api-gpt-image": [
+  {
+   "source": "github",
+   "repo": "SureScaleAI/openai-gpt-image-mcp",
+   "stars": 111,
+   "forks": 3,
+   "pushed_at": "2025-05-31",
+   "archived": false,
+   "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "openalex-api": [
+  {
+   "source": "github",
+   "repo": "benedict2310/Scientific-Papers-MCP",
+   "stars": 57,
+   "forks": 9,
+   "pushed_at": "2025-08-14",
+   "archived": false,
+   "url": "https://github.com/benedict2310/Scientific-Papers-MCP",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "openrouter": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/OpenRouter/",
+   "fetched_at": "2026-09-24T17:02Z"
+  }
+ ],
+ "openweathermap-api": [
+  {
+   "source": "github",
+   "repo": "robertn702/mcp-openweathermap",
+   "stars": 5,
+   "forks": 7,
+   "pushed_at": "2025-06-20",
+   "archived": false,
+   "url": "https://github.com/robertn702/mcp-openweathermap",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "oxylabs": [
+  {
+   "source": "sourceforge",
+   "rating": 4.2,
+   "reviews": 1211,
+   "url": "https://sourceforge.net/software/product/Oxylabs/",
+   "fetched_at": "2026-09-24T17:02Z"
+  }
+ ],
+ "pagerduty-api": [
+  {
+   "source": "github",
+   "repo": "PagerDuty/api-schema",
+   "stars": 34,
+   "forks": 27,
+   "pushed_at": "2026-09-24",
+   "archived": false,
+   "url": "https://github.com/PagerDuty/api-schema",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "github",
+   "repo": "PagerDuty/pagerduty-mcp-server",
+   "stars": 79,
+   "forks": 41,
+   "pushed_at": "2026-09-04",
+   "archived": true,
+   "url": "https://github.com/PagerDuty/pagerduty-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 44,
+   "url": "https://sourceforge.net/software/product/PagerDuty/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "paypal-api": [
+  {
+   "source": "smithery",
+   "uses": 0,
+   "url": "https://smithery.ai/servers/paypal",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.3,
+   "reviews": 22,
+   "url": "https://sourceforge.net/software/product/PayPal/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "penpot-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/penpot/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "piapi": [
+  {
+   "source": "github",
+   "repo": "apinetwork/piapi-mcp-server",
+   "stars": 75,
+   "forks": 22,
+   "pushed_at": "2026-09-17",
+   "archived": false,
+   "url": "https://github.com/apinetwork/piapi-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "pinecone": [
+  {
+   "source": "github",
+   "repo": "pinecone-io/pinecone-mcp",
+   "stars": 72,
+   "forks": 21,
+   "pushed_at": "2026-09-13",
+   "archived": false,
+   "url": "https://github.com/pinecone-io/pinecone-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "pinterest-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 14,
+   "url": "https://sourceforge.net/software/product/Pinterest/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "pipedrive-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.4,
+   "reviews": 50,
+   "url": "https://sourceforge.net/software/product/Pipedrive/",
+   "fetched_at": "2026-09-24T17:00Z"
+  }
+ ],
+ "piston": [
+  {
+   "source": "github",
+   "repo": "engineer-man/piston",
+   "stars": 2823,
+   "forks": 468,
+   "pushed_at": "2026-07-31",
+   "archived": false,
+   "url": "https://github.com/engineer-man/piston",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "pixverse-api": [
+  {
+   "source": "github",
+   "repo": "PixVerseAI/PixVerse-MCP",
+   "stars": 52,
+   "forks": 14,
+   "pushed_at": "2025-10-22",
+   "archived": false,
+   "url": "https://github.com/PixVerseAI/PixVerse-MCP",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "plaid-api": [
+  {
+   "source": "github",
+   "repo": "plaid/plaid-openapi",
+   "stars": 118,
+   "forks": 63,
+   "pushed_at": "2026-09-01",
+   "archived": false,
+   "url": "https://github.com/plaid/plaid-openapi",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.4,
+   "reviews": 5,
+   "url": "https://sourceforge.net/software/product/Plaid/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "planetscale": [
+  {
+   "source": "smithery",
+   "uses": 2,
+   "url": "https://smithery.ai/servers/planetscale",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "playwright-mcp-microsoft": [
+  {
+   "source": "github",
+   "repo": "microsoft/playwright-mcp",
+   "stars": 37537,
+   "forks": 3196,
+   "pushed_at": "2026-09-18",
+   "archived": false,
+   "url": "https://github.com/microsoft/playwright-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "postman-api": [
+  {
+   "source": "smithery",
+   "uses": 3,
+   "url": "https://smithery.ai/servers/postman",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.8,
+   "reviews": 24,
+   "url": "https://sourceforge.net/software/product/Postman/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "printful-api": [
+  {
+   "source": "sourceforge",
+   "rating": 3.0,
+   "reviews": 3,
+   "url": "https://sourceforge.net/software/product/Printful/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "procore-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 2,
+   "url": "https://sourceforge.net/software/product/Procore/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "pubmed-e-utilities-ncbi": [
+  {
+   "source": "github",
+   "repo": "openags/paper-search-mcp",
+   "stars": 2692,
+   "forks": 280,
+   "pushed_at": "2026-09-22",
+   "archived": false,
+   "url": "https://github.com/openags/paper-search-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "qdrant-cloud": [
+  {
+   "source": "github",
+   "repo": "qdrant/mcp-server-qdrant",
+   "stars": 1537,
+   "forks": 309,
+   "pushed_at": "2026-09-04",
+   "archived": false,
+   "url": "https://github.com/qdrant/mcp-server-qdrant",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "recraft-api": [
+  {
+   "source": "github",
+   "repo": "recraft-ai/mcp-recraft-server",
+   "stars": 60,
+   "forks": 11,
+   "pushed_at": "2026-07-13",
+   "archived": true,
+   "url": "https://github.com/recraft-ai/mcp-recraft-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "reddit-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.2,
+   "reviews": 8,
+   "url": "https://sourceforge.net/software/product/Reddit/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "resemble-ai-api": [
+  {
+   "source": "sourceforge",
+   "rating": 1.7,
+   "reviews": 3,
+   "url": "https://sourceforge.net/software/product/Resemble-AI/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "resend": [
+  {
+   "source": "sourceforge",
+   "rating": 4.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Resend/",
+   "fetched_at": "2026-09-24T16:58Z"
+  }
+ ],
+ "retell-ai": [
+  {
+   "source": "sourceforge",
+   "rating": 1.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Retell-AI/",
+   "fetched_at": "2026-09-24T16:58Z"
+  }
+ ],
+ "salesforce-apis": [
+  {
+   "source": "github",
+   "repo": "salesforcecli/mcp",
+   "stars": 479,
+   "forks": 111,
+   "pushed_at": "2026-09-23",
+   "archived": false,
+   "url": "https://github.com/salesforcecli/mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 60,
+   "url": "https://sourceforge.net/software/product/Salesforce/",
+   "fetched_at": "2026-09-24T17:00Z"
+  }
+ ],
+ "searxng-self-hosted-json-api": [
+  {
+   "source": "github",
+   "repo": "ihor-sokoliuk/mcp-searxng",
+   "stars": 1260,
+   "forks": 165,
+   "pushed_at": "2026-09-22",
+   "archived": false,
+   "url": "https://github.com/ihor-sokoliuk/mcp-searxng",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "semantic-scholar-api": [
+  {
+   "source": "github",
+   "repo": "zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+   "stars": 165,
+   "forks": 24,
+   "pushed_at": "2026-03-20",
+   "archived": false,
+   "url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "sendgrid-twilio": [
+  {
+   "source": "sourceforge",
+   "rating": 3.9,
+   "reviews": 8,
+   "url": "https://sourceforge.net/software/product/SendGrid/",
+   "fetched_at": "2026-09-24T16:58Z"
+  }
+ ],
+ "sentry-api": [
+  {
+   "source": "smithery",
+   "uses": 35,
+   "url": "https://smithery.ai/servers/sentry",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "serpapi": [
+  {
+   "source": "github",
+   "repo": "serpapi/serpapi-mcp",
+   "stars": 173,
+   "forks": 42,
+   "pushed_at": "2026-09-22",
+   "archived": false,
+   "url": "https://github.com/serpapi/serpapi-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "serper": [
+  {
+   "source": "github",
+   "repo": "marcopesani/mcp-server-serper",
+   "stars": 169,
+   "forks": 25,
+   "pushed_at": "2025-03-13",
+   "archived": false,
+   "url": "https://github.com/marcopesani/mcp-server-serper",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "sketchfab-data-api": [
+  {
+   "source": "github",
+   "repo": "gregkop/sketchfab-mcp-server",
+   "stars": 40,
+   "forks": 10,
+   "pushed_at": "2025-03-09",
+   "archived": false,
+   "url": "https://github.com/gregkop/sketchfab-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "slack-api": [
+  {
+   "source": "smithery",
+   "uses": 12110,
+   "url": "https://smithery.ai/servers/slack",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.6,
+   "reviews": 250,
+   "url": "https://sourceforge.net/software/product/Slack/",
+   "fetched_at": "2026-09-24T16:58Z"
+  }
+ ],
+ "slidespeak-api": [
+  {
+   "source": "github",
+   "repo": "SlideSpeak/slidespeak-mcp",
+   "stars": 14,
+   "forks": 12,
+   "pushed_at": "2026-04-30",
+   "archived": false,
+   "url": "https://github.com/SlideSpeak/slidespeak-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 1.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/SlideSpeak/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "snowflake": [
+  {
+   "source": "github",
+   "repo": "Snowflake-Labs/mcp",
+   "stars": 299,
+   "forks": 108,
+   "pushed_at": "2026-05-15",
+   "archived": false,
+   "url": "https://github.com/Snowflake-Labs/mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.8,
+   "reviews": 4,
+   "url": "https://sourceforge.net/software/product/Snowflake/",
+   "fetched_at": "2026-09-24T16:58Z"
+  }
+ ],
+ "soundraw-api": [
+  {
+   "source": "sourceforge",
+   "rating": 1.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Soundraw/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "square-api": [
+  {
+   "source": "github",
+   "repo": "square/connect-api-specification",
+   "stars": 76,
+   "forks": 36,
+   "pushed_at": "2026-09-15",
+   "archived": false,
+   "url": "https://github.com/square/connect-api-specification",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "stripe-api": [
+  {
+   "source": "smithery",
+   "uses": 48,
+   "url": "https://smithery.ai/servers/stripe",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.1,
+   "reviews": 17,
+   "url": "https://sourceforge.net/software/product/Stripe/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "supabase": [
+  {
+   "source": "smithery",
+   "uses": 189,
+   "url": "https://smithery.ai/servers/Supabase",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "synthesia-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Synthesia/",
+   "fetched_at": "2026-09-24T16:56Z"
+  }
+ ],
+ "synthflow-api": [
+  {
+   "source": "sourceforge",
+   "rating": 1.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Synthflow/",
+   "fetched_at": "2026-09-24T16:58Z"
+  }
+ ],
+ "tavily": [
+  {
+   "source": "smithery",
+   "uses": 1575,
+   "url": "https://smithery.ai/servers/Tavily",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "telegram-bot-api": [
+  {
+   "source": "github",
+   "repo": "chigwell/telegram-mcp",
+   "stars": 1692,
+   "forks": 434,
+   "pushed_at": "2026-09-21",
+   "archived": false,
+   "url": "https://github.com/chigwell/telegram-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "tiktok-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 6,
+   "url": "https://sourceforge.net/software/product/TikTok/",
+   "fetched_at": "2026-09-24T17:01Z"
+  }
+ ],
+ "todoist-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.8,
+   "reviews": 14,
+   "url": "https://sourceforge.net/software/product/Todoist/",
+   "fetched_at": "2026-09-24T17:00Z"
+  }
+ ],
+ "tripo-api": [
+  {
+   "source": "github",
+   "repo": "VAST-AI-Research/tripo-mcp",
+   "stars": 206,
+   "forks": 29,
+   "pushed_at": "2025-04-14",
+   "archived": false,
+   "url": "https://github.com/VAST-AI-Research/tripo-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "twilio": [
+  {
+   "source": "github",
+   "repo": "twilio-labs/mcp",
+   "stars": 111,
+   "forks": 41,
+   "pushed_at": "2026-02-14",
+   "archived": false,
+   "url": "https://github.com/twilio-labs/mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.8,
+   "reviews": 13,
+   "url": "https://sourceforge.net/software/product/Twilio/",
+   "fetched_at": "2026-09-24T16:58Z"
+  }
+ ],
+ "twilio-programmable-voice": [
+  {
+   "source": "github",
+   "repo": "twilio/twilio-oai",
+   "stars": 169,
+   "forks": 106,
+   "pushed_at": "2026-09-09",
+   "archived": false,
+   "url": "https://github.com/twilio/twilio-oai",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "github",
+   "repo": "twilio-labs/mcp",
+   "stars": 111,
+   "forks": 41,
+   "pushed_at": "2026-02-14",
+   "archived": false,
+   "url": "https://github.com/twilio-labs/mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "unstructured-api": [
+  {
+   "source": "github",
+   "repo": "Unstructured-IO/UNS-MCP",
+   "stars": 43,
+   "forks": 18,
+   "pushed_at": "2026-07-21",
+   "archived": false,
+   "url": "https://github.com/Unstructured-IO/UNS-MCP",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "vercel-api": [
+  {
+   "source": "smithery",
+   "uses": 549,
+   "url": "https://smithery.ai/servers/vercel",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.5,
+   "reviews": 2,
+   "url": "https://sourceforge.net/software/product/Vercel/",
+   "fetched_at": "2026-09-24T16:57Z"
+  }
+ ],
+ "weaviate-cloud": [
+  {
+   "source": "github",
+   "repo": "weaviate/mcp-server-weaviate",
+   "stars": 163,
+   "forks": 43,
+   "pushed_at": "2026-05-26",
+   "archived": false,
+   "url": "https://github.com/weaviate/mcp-server-weaviate",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "whatsapp-business-cloud-api": [
+  {
+   "source": "github",
+   "repo": "lharries/whatsapp-mcp",
+   "stars": 6310,
+   "forks": 1336,
+   "pushed_at": "2025-07-13",
+   "archived": false,
+   "url": "https://github.com/lharries/whatsapp-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "wikipedia-wikimedia-api": [
+  {
+   "source": "github",
+   "repo": "Rudra-ravi/wikipedia-mcp",
+   "stars": 295,
+   "forks": 58,
+   "pushed_at": "2026-05-01",
+   "archived": false,
+   "url": "https://github.com/Rudra-ravi/wikipedia-mcp",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ],
+ "you-com-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/You.com/",
+   "fetched_at": "2026-09-24T16:55Z"
+  }
+ ],
+ "zendesk-api": [
+  {
+   "source": "github",
+   "repo": "reminia/zendesk-mcp-server",
+   "stars": 122,
+   "forks": 84,
+   "pushed_at": "2026-08-27",
+   "archived": false,
+   "url": "https://github.com/reminia/zendesk-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.3,
+   "reviews": 20,
+   "url": "https://sourceforge.net/software/product/Zendesk/",
+   "fetched_at": "2026-09-24T17:00Z"
+  }
+ ],
+ "zilliz-cloud-milvus": [
+  {
+   "source": "github",
+   "repo": "zilliztech/zilliz-mcp-server",
+   "stars": 34,
+   "forks": 5,
+   "pushed_at": "2026-08-18",
+   "archived": false,
+   "url": "https://github.com/zilliztech/zilliz-mcp-server",
+   "fetched_at": "2026-09-24T16:54Z"
+  }
+ ]
+}

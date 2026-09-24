@@ -34,7 +34,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "chroma-core/chroma-mcp",
+     "stars": 599,
+     "forks": 115,
+     "pushed_at": "2025-09-17",
+     "archived": false,
+     "url": "https://github.com/chroma-core/chroma-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "clickhouse-cloud",
@@ -67,7 +79,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "ClickHouse/mcp-clickhouse",
+     "stars": 879,
+     "forks": 208,
+     "pushed_at": "2026-09-21",
+     "archived": false,
+     "url": "https://github.com/ClickHouse/mcp-clickhouse",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "convex",
@@ -99,7 +123,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "get-convex/convex-backend",
+     "stars": 12604,
+     "forks": 818,
+     "pushed_at": "2026-09-24",
+     "archived": false,
+     "url": "https://github.com/get-convex/convex-backend",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "google-bigquery",
@@ -132,7 +168,15 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 6986,
+     "url": "https://smithery.ai/servers/bigquery",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "letta",
@@ -229,7 +273,27 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "mongodb-js/mongodb-mcp-server",
+     "stars": 1137,
+     "forks": 294,
+     "pushed_at": "2026-09-23",
+     "archived": false,
+     "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/MongoDB-Atlas/",
+     "fetched_at": "2026-09-24T16:58Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/mongodb-atlas.json"
   },
   {
    "id": "neon-postgres",
@@ -259,7 +323,19 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "neondatabase/mcp-server-neon",
+     "stars": 650,
+     "forks": 126,
+     "pushed_at": "2026-09-23",
+     "archived": false,
+     "url": "https://github.com/neondatabase/mcp-server-neon",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "pinecone",
@@ -293,7 +369,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "pinecone-io/pinecone-mcp",
+     "stars": 72,
+     "forks": 21,
+     "pushed_at": "2026-09-13",
+     "archived": false,
+     "url": "https://github.com/pinecone-io/pinecone-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "planetscale",
@@ -324,7 +412,15 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 2,
+     "url": "https://smithery.ai/servers/planetscale",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "qdrant-cloud",
@@ -357,7 +453,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "qdrant/mcp-server-qdrant",
+     "stars": 1537,
+     "forks": 309,
+     "pushed_at": "2026-09-04",
+     "archived": false,
+     "url": "https://github.com/qdrant/mcp-server-qdrant",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "snowflake",
@@ -390,7 +498,27 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "Snowflake-Labs/mcp",
+     "stars": 299,
+     "forks": 108,
+     "pushed_at": "2026-05-15",
+     "archived": false,
+     "url": "https://github.com/Snowflake-Labs/mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.8,
+     "reviews": 4,
+     "url": "https://sourceforge.net/software/product/Snowflake/",
+     "fetched_at": "2026-09-24T16:58Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/snowflake.json"
   },
   {
    "id": "supabase",
@@ -423,7 +551,15 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 189,
+     "url": "https://smithery.ai/servers/Supabase",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "turso",
@@ -520,7 +656,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "weaviate/mcp-server-weaviate",
+     "stars": 163,
+     "forks": 43,
+     "pushed_at": "2026-05-26",
+     "archived": false,
+     "url": "https://github.com/weaviate/mcp-server-weaviate",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "zep",
@@ -584,7 +732,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "zilliztech/zilliz-mcp-server",
+     "stars": 34,
+     "forks": 5,
+     "pushed_at": "2026-08-18",
+     "archived": false,
+     "url": "https://github.com/zilliztech/zilliz-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   }
  ]
 }

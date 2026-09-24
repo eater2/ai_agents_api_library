@@ -1,0 +1,34 @@
+{
+ "id": "circleci-api",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/CircleCI/",
+ "fetched_at": "2026-09-24T16:57Z",
+ "rating": 3.0,
+ "reviews_total": 2,
+ "reviews": [
+  {
+   "id": "651253dcad9f33b5405ab93d",
+   "date": "2023-09-26",
+   "rating": 1,
+   "title": "Terrible support and rubbish billing!",
+   "pros": "Continuous integration, continuous delivery.",
+   "cons": "Occasional connectivity issues with cloud resources and build failure due to it's own internal system setup and environment. That costs us credits. Support engineers do not thoroughly read and understand issues when email them and reply me with totally different context about the problem. Just yesterday, my web applications fail to `yarn build` after I downgrade the resource class from xlarge to large. Contacted support but no reply. \n\nBilling is a mess and nightmare! There are duplicate information in the bill downloaded from their website and when I asked for consolidated bill, they just answer don't have it. There is no transparency on how many build minutes and credits I spent each day both on their website and the monthly bill which make it difficult to understand when the monthly bill contains many refill item charges. It is difficult or impossible to track usage and burndown of my subscription and total outstanding refill amounts on a daily basis. Their website INFO doesn't provide sufficient information on credits allocated / calculated for my xlarge resource class.\n\nBeware of sky-roketting bills as CircleCI does NOT provide transparency in how they charge refills and their monthly billing statement is almost unreadable and their online dashboard doesn't provide details on how your subscription burns down and how much is carried forward to the next billing cycle!",
+   "overall": "Considering alternative provider!",
+   "reviewer_role": "CTO",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/CircleCI/#review-651253dcad9f33b5405ab93d"
+  },
+  {
+   "id": "5ef9cd216ad73b72041569c1",
+   "date": "2020-06-29",
+   "rating": 5,
+   "title": "Good CI/CD tool",
+   "pros": "Highly Customizable\n\nExcellent insight via endpoints\n\nMultiple integration options\n\nAvailable across platforms and on cloud\n\nFree tier available\n\nExtensive documentation",
+   "cons": "Setup requires a lot of yaml configurations - not beginner friendly.\n\nPricing can be reduced for premium plans.",
+   "overall": "CircleCI is a decent choice for Continuous Integration & Deployment offering a range of features and high configurability. It has excellent integration capabilities and provides a decent free tier.",
+   "reviewer_role": "Software Developer",
+   "company_size": "100 - 499",
+   "url": "https://sourceforge.net/software/product/CircleCI/#review-5ef9cd216ad73b72041569c1"
+  }
+ ]
+}

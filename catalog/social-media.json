@@ -34,7 +34,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 3.4,
+     "reviews": 5,
+     "url": "https://sourceforge.net/software/product/Ayrshare/",
+     "fetched_at": "2026-09-24T17:00Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/ayrshare.json"
   },
   {
    "id": "bluesky-at-protocol",
@@ -118,7 +128,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 2.5,
+     "reviews": 11,
+     "url": "https://sourceforge.net/software/product/Mastodon/",
+     "fetched_at": "2026-09-24T17:00Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/mastodon-api.json"
   },
   {
    "id": "meta-graph-api-facebook-instagram",
@@ -176,7 +196,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.7,
+     "reviews": 14,
+     "url": "https://sourceforge.net/software/product/Pinterest/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/pinterest-api.json"
   },
   {
    "id": "reddit-api",
@@ -205,7 +235,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.2,
+     "reviews": 8,
+     "url": "https://sourceforge.net/software/product/Reddit/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/reddit-api.json"
   },
   {
    "id": "tiktok-api",
@@ -232,7 +272,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.7,
+     "reviews": 6,
+     "url": "https://sourceforge.net/software/product/TikTok/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/tiktok-api.json"
   },
   {
    "id": "x-twitter-api",

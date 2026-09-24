@@ -33,7 +33,33 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "domdomegg/airtable-mcp-server",
+     "stars": 457,
+     "forks": 133,
+     "pushed_at": "2026-09-09",
+     "archived": false,
+     "url": "https://github.com/domdomegg/airtable-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "smithery",
+     "uses": 500,
+     "url": "https://smithery.ai/servers/airtable",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.7,
+     "reviews": 28,
+     "url": "https://sourceforge.net/software/product/Airtable/",
+     "fetched_at": "2026-09-24T16:59Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/airtable-api.json"
   },
   {
    "id": "asana-api",
@@ -67,7 +93,23 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 94,
+     "url": "https://smithery.ai/servers/asana",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.7,
+     "reviews": 97,
+     "url": "https://sourceforge.net/software/product/Asana/",
+     "fetched_at": "2026-09-24T16:59Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/asana-api.json"
   },
   {
    "id": "atlassian-jira-confluence",
@@ -189,7 +231,23 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 23,
+     "url": "https://smithery.ai/servers/calendly",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.7,
+     "reviews": 14,
+     "url": "https://sourceforge.net/software/product/Calendly/",
+     "fetched_at": "2026-09-24T16:59Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/calendly-api.json"
   },
   {
    "id": "clickup-api",
@@ -217,7 +275,23 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 0,
+     "url": "https://smithery.ai/servers/clickup",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.6,
+     "reviews": 122,
+     "url": "https://sourceforge.net/software/product/ClickUp/",
+     "fetched_at": "2026-09-24T16:59Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/clickup-api.json"
   },
   {
    "id": "coda-api-superhuman-docs",
@@ -276,7 +350,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.5,
+     "reviews": 226,
+     "url": "https://sourceforge.net/software/product/Dropbox/",
+     "fetched_at": "2026-09-24T16:59Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/dropbox-api.json"
   },
   {
    "id": "google-workspace-apis-gmail-calendar-drive",
@@ -338,7 +422,23 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 3816,
+     "url": "https://smithery.ai/servers/linear",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Linear/",
+     "fetched_at": "2026-09-24T16:59Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/linear-api.json"
   },
   {
    "id": "microsoft-graph-outlook-teams-onedrive",
@@ -400,7 +500,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.8,
+     "reviews": 98,
+     "url": "https://sourceforge.net/software/product/monday.com/",
+     "fetched_at": "2026-09-24T17:00Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/monday-com-api.json"
   },
   {
    "id": "notion-api",
@@ -432,7 +542,23 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 3841,
+     "url": "https://smithery.ai/servers/notion",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.7,
+     "reviews": 26,
+     "url": "https://sourceforge.net/software/product/Notion/",
+     "fetched_at": "2026-09-24T17:00Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/notion-api.json"
   },
   {
    "id": "todoist-api",
@@ -463,7 +589,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.8,
+     "reviews": 14,
+     "url": "https://sourceforge.net/software/product/Todoist/",
+     "fetched_at": "2026-09-24T17:00Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/todoist-api.json"
   },
   {
    "id": "trello-api",

@@ -36,7 +36,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Amazon-Translate/",
+     "fetched_at": "2026-09-24T16:57Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/amazon-translate.json"
   },
   {
    "id": "azure-ai-translator",
@@ -105,7 +115,27 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "DeepL/deepl-mcp-server",
+     "stars": 116,
+     "forks": 19,
+     "pushed_at": "2026-09-21",
+     "archived": false,
+     "url": "https://github.com/DeepL/deepl-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/DeepL/",
+     "fetched_at": "2026-09-24T16:57Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/deepl-api.json"
   },
   {
    "id": "google-cloud-translation",
@@ -168,7 +198,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/LanguageTool/",
+     "fetched_at": "2026-09-24T16:57Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/languagetool-api.json"
   },
   {
    "id": "modernmt-api",

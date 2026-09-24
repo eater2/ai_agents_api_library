@@ -1,0 +1,34 @@
+{
+ "id": "vercel-api",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Vercel/",
+ "fetched_at": "2026-09-24T16:57Z",
+ "rating": 4.5,
+ "reviews_total": 2,
+ "reviews": [
+  {
+   "id": "68d309ef6464a8c244111f05",
+   "date": "2025-09-23",
+   "rating": 4,
+   "title": "Vercel for hosting Next JS Apps",
+   "pros": "We leverage Vercel to host all of our internally Next JS apps that our team use for managing our internal operations. Vercel offers a great developer experience that is easy to use and deployment of Next JS apps in particular is straightforward.",
+   "cons": "We do have to leverage other hosting providers for more backend heavy applications. This isn't a criticism of Vercel directly. It just means we have to manage more accounts across more platforms.",
+   "overall": "Overall Vercel is a great hosting provider, particularly for Next JS applications with a clean UI and easy to navigate developer experience.",
+   "reviewer_role": "Managing Director",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Vercel/#review-68d309ef6464a8c244111f05"
+  },
+  {
+   "id": "6138cb1a7e332f58d2e10cef",
+   "date": "2021-09-08",
+   "rating": 5,
+   "title": "Deploying projects with Vercel",
+   "pros": "Easy configuration, Quick build, Deployments and Prod environment, Env variables easy to configure.",
+   "cons": "Maybe I didn't find it yet but not easy to switch a branch from a git repository. Had to unlink it, change branch.",
+   "overall": "I'm doing small and medium front-end developments. With Vercel and CI, I can have a production url really quick without 0 configuration.",
+   "reviewer_role": "Frontend Developer",
+   "company_size": "26 - 99",
+   "url": "https://sourceforge.net/software/product/Vercel/#review-6138cb1a7e332f58d2e10cef"
+  }
+ ]
+}

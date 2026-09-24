@@ -12,7 +12,7 @@ const client = new Client({ name: "smoke-test", version: "1.0.0" });
 await client.connect(transport);
 
 const tools = (await client.listTools()).tools.map((t) => t.name).sort();
-assert.deepEqual(tools, ["get_api", "list_categories", "search_apis"]);
+assert.deepEqual(tools, ["get_api", "get_reviews", "list_categories", "search_apis"]);
 
 const call = async (name, args = {}) => {
   const r = await client.callTool({ name, arguments: args });
@@ -35,5 +35,10 @@ const detail = JSON.parse(await call("get_api", { id: video.results[0].id }));
 assert.ok(detail.docs.startsWith("http"));
 
 assert.match(await call("get_api", { id: "does-not-exist" }), /Unknown id/);
+
+const reviews = JSON.parse(await call("get_reviews", { id: "slack-api", max_rating: 4, limit: 5 }));
+assert.ok(reviews.reviews.length > 0 && reviews.reviews.every((r) => r.rating <= 4));
+assert.ok(reviews.reviews.every((r) => !("name" in r)));
+console.log(`slack-api reviews rated <= 4: ${reviews.returned}`);
 console.log("OK");
 await client.close();

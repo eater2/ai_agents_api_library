@@ -1,0 +1,22 @@
+{
+ "id": "firecrawl",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Firecrawl/",
+ "fetched_at": "2026-09-24T16:55Z",
+ "rating": 5.0,
+ "reviews_total": 1,
+ "reviews": [
+  {
+   "id": "68229a30d17f15e2543ec9bb",
+   "date": "2025-05-13",
+   "rating": 5,
+   "title": "Firecrawl review",
+   "pros": "Firecrawl has been an absolute game-changer for my web scraping projects. As someone who just started integrating it with n8n, I was impressed by how seamless the setup process was. The ability to scrape clean, structured data from websites in various formats like JSON, Markdown, and even screenshots has been incredibly helpful. The integration with dynamic content is one of its standout features – it handles JavaScript and SPAs effortlessly, which makes the process smoother than I expected. Additionally, the robust API and zero-config setup mean I don’t have to worry about complex configurations like rotating proxies or rate limits.",
+   "cons": "While the tool is extremely powerful, I did notice that some advanced features, such as crawling a large number of pages concurrently, can be a bit slow with the lower-tier plans. It would be nice to see even more flexibility in this area, but for most users, the free plan and lower-tier options are more than sufficient.",
+   "overall": "Overall, I’m really impressed with Firecrawl. It has significantly improved the efficiency of my data scraping tasks and saved me a lot of time by eliminating the need for complicated setup. I highly recommend Firecrawl for anyone who needs reliable and scalable web scraping integrated with AI or other automation workflows like n8n. The fact that it’s open-source is a big bonus for anyone wanting to customize their experience. Firecrawl is definitely worth checking out if you’re looking to level up your data extraction capabilities.",
+   "reviewer_role": "COO",
+   "company_size": "26 - 99",
+   "url": "https://sourceforge.net/software/product/Firecrawl/#review-68229a30d17f15e2543ec9bb"
+  }
+ ]
+}

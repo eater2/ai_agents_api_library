@@ -67,7 +67,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.7,
+     "reviews": 6,
+     "url": "https://sourceforge.net/software/product/Google-Maps/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/google-maps-platform.json"
   },
   {
    "id": "here-location-services",
@@ -132,7 +142,25 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "mapbox/mcp-server",
+     "stars": 356,
+     "forks": 44,
+     "pushed_at": "2026-09-24",
+     "archived": false,
+     "url": "https://github.com/mapbox/mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "smithery",
+     "uses": 0,
+     "url": "https://smithery.ai/servers/mapbox",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "national-weather-service-api-nws",
@@ -274,7 +302,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "robertn702/mcp-openweathermap",
+     "stars": 5,
+     "forks": 7,
+     "pushed_at": "2025-06-20",
+     "archived": false,
+     "url": "https://github.com/robertn702/mcp-openweathermap",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "overpass-api-osm",

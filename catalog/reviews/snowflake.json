@@ -1,0 +1,58 @@
+{
+ "id": "snowflake",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Snowflake/",
+ "fetched_at": "2026-09-24T16:58Z",
+ "rating": 4.8,
+ "reviews_total": 4,
+ "reviews": [
+  {
+   "id": "60cec1f434c03e56408236ce",
+   "date": "2021-06-20",
+   "rating": 5,
+   "title": "Snowflake is unique, fast and efficient data warehouse tool. Impressive data retrieval and data compression ratio!",
+   "pros": "Snowflake is being used across our whole organization. It addresses the need to combine disparate data sources into one single data source and discover insights into our business that would not be easily possible with lots of disconnected data sources.\n\nIt has great SQL features like LISTAGG or Count Distinct, which go above and beyond Oracle and MS SQL.\n\n- Reporting queries run in a fraction of the time that they would in our production systems\n\n- We can run simple SQL queries.\n\n- Scales up and down seamlessly\n\n- Optimized table structures under the hood\n\n- Sharing data between accounts\n\n- Easy if use\n\n- Continuous data pipelines\n\n- Snowflake also includes caching at various levels to help speed up your queries and minimum costs.\n\n- Support members are very good.",
+   "cons": "Nothing to dislike in Snowflake. Awesome data warehouse for huge data set.",
+   "overall": "Snowflake is great for storing data and using it as an endpoint to query off of. It is cloud-based so the it can be scaled to any business need. It is great for analytics as well as simply storing data.\n\nSnowflake is well suited for performing data ETL when data is stored in AWS S3 and one needs fine control over instance costs.\n\n- Performance is extremely fast\n\n- Great documentation\n\n- Pay for what you use\n\n- You only pay for the resources when you are using them\n\n- Native Apache Spark connector\n\n- Simple and pleasant User Interface",
+   "reviewer_role": "Sr. QA Consultant",
+   "company_size": "5,000 - 9,999",
+   "url": "https://sourceforge.net/software/product/Snowflake/#review-60cec1f434c03e56408236ce"
+  },
+  {
+   "id": "60cc10d6f07259f3af032396",
+   "date": "2021-06-18",
+   "rating": 5,
+   "title": "Managing data warehouse with Snowflake is amazing! It's a future full stack database.",
+   "pros": "Snowflake is acting as a company-wide Data Repository. With its cloud architecture and scalability, it addresses our storage, warehouse, and computation problem at the same time. Snowflake has powerful group roles and policy, which makes it beneficial for enterprise edition and usage.\n\nSnowflake acts as a single platform for both data storage and warehousing needs. For deployment purposes, it has the best group policy management and the best UI I've encountered personally. It also accommodates direct connection with AWS and Azure, which is another advantage.\n\n- Hosted on cloud: Helps with scalability.\n\n- Handling large data scale and ingestion\n\n- Separation of compute and storage\n\n- Community is active and ever-growing: You will have someone from the community to help whenever you need it.",
+   "cons": "- Very expensive\n\n- Indexing by primary key is non performant",
+   "overall": "Snowflake is suitable for the situations that you are working with all levels of analysts in terms of data science skills. By using SQL, the user does not need to understand data type, etc. before using the tool.\n\nIt works extremely well for storing a data warehouse as the querying is optimized for larger tables that are filled in batches. It also works extremely well with unstructured data and has basically replaced any need we previously had for NoSQL databases\n\n- It can now sit on Google Cloud, S3, and Azure.\n\n- Zero-copy cloning is an excellent feature which saves hours to refresh latest data in development instance.\n\n- Well suited when handling high volume of data.\n\n- In the cloud computing. Quick availability of data online.",
+   "reviewer_role": "Senior QA Engineer",
+   "company_size": "5,000 - 9,999",
+   "url": "https://sourceforge.net/software/product/Snowflake/#review-60cc10d6f07259f3af032396"
+  },
+  {
+   "id": "5eec89186ad73b48e4d57b98",
+   "date": "2020-06-19",
+   "rating": 5,
+   "title": "A great Cloud-based Data Warehouse",
+   "pros": "Simple & clean interface\n\nGreat querying performance\n\nIntegration with all the major cloud providers\n\nEasy to learn querying language\n\nGood documentation",
+   "cons": "Web based IDE is not suitable for writing complex queries, it feels sluggish when heavily used.",
+   "overall": "Snowflake is an easy to use & high performance data warehouse solution on cloud. It helps in efficient & quick search on huge data-sets and can be utilized in various use-cases. I used it for metadata storage in a  data migration project and it turned out to be really good.",
+   "reviewer_role": "Software Developer",
+   "company_size": "100 - 499",
+   "url": "https://sourceforge.net/software/product/Snowflake/#review-5eec89186ad73b48e4d57b98"
+  },
+  {
+   "id": "5edbf9ee6ad73b2e24901077",
+   "date": "2020-06-06",
+   "rating": 4,
+   "title": "Snowflake - Cloud based database",
+   "pros": "(+) Easy to adapt and easy to use.\n\n(+) The run time of queries is much faster compared to other products in the market.\n\n(+) One can select a part of a query for execution.\n\n(+) Integration with S3 and other data storage platforms makes snowflake more compatible.\n\n(+) One may run concurrent queries without giving up on speed.",
+   "cons": "(-) Performance drops in the case of multiple users.\n\n(-) No option for scheduling of a task or a query.\n\n(-) The coding syntax has some restrictions like the case-sensitivity issue.",
+   "overall": "I have been using snowflake for almost a year now, my experience on an overall level is quite smooth. Snowflake is very easy to maintain data warehouse system. It can integrate with Amazon S3.\n\nSnowflake is a very good recommendation for a company of any size. The analytics workload can be easily handled by snowflake.",
+   "reviewer_role": "Business Analyst",
+   "company_size": "500 - 999",
+   "url": "https://sourceforge.net/software/product/Snowflake/#review-5edbf9ee6ad73b2e24901077"
+  }
+ ]
+}

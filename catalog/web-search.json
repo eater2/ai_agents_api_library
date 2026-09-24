@@ -32,7 +32,33 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "brave/brave-search-mcp-server",
+     "stars": 1467,
+     "forks": 208,
+     "pushed_at": "2026-09-23",
+     "archived": false,
+     "url": "https://github.com/brave/brave-search-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "smithery",
+     "uses": 119026,
+     "url": "https://smithery.ai/servers/brave",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.5,
+     "reviews": 2,
+     "url": "https://sourceforge.net/software/product/Brave-Search/",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/brave-search-api.json"
   },
   {
    "id": "exa",
@@ -65,7 +91,17 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Exa/",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/exa.json"
   },
   {
    "id": "jina-ai-search-reader",
@@ -127,7 +163,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "kagisearch/kagimcp",
+     "stars": 528,
+     "forks": 48,
+     "pushed_at": "2026-07-07",
+     "archived": false,
+     "url": "https://github.com/kagisearch/kagimcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "linkup",
@@ -159,7 +207,15 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 213,
+     "url": "https://smithery.ai/servers/LinkupPlatform/linkup-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "mojeek-search-api",
@@ -307,7 +363,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "ihor-sokoliuk/mcp-searxng",
+     "stars": 1260,
+     "forks": 165,
+     "pushed_at": "2026-09-22",
+     "archived": false,
+     "url": "https://github.com/ihor-sokoliuk/mcp-searxng",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "serpapi",
@@ -346,7 +414,19 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "serpapi/serpapi-mcp",
+     "stars": 173,
+     "forks": 42,
+     "pushed_at": "2026-09-22",
+     "archived": false,
+     "url": "https://github.com/serpapi/serpapi-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "serper",
@@ -374,7 +454,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "marcopesani/mcp-server-serper",
+     "stars": 169,
+     "forks": 25,
+     "pushed_at": "2025-03-13",
+     "archived": false,
+     "url": "https://github.com/marcopesani/mcp-server-serper",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "tavily",
@@ -406,7 +498,15 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 1575,
+     "url": "https://smithery.ai/servers/Tavily",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "you-com-api",
@@ -439,7 +539,17 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/You.com/",
+     "fetched_at": "2026-09-24T16:55Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/you-com-api.json"
   }
  ]
 }

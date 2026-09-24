@@ -125,7 +125,19 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "e2b-dev/mcp-server",
+     "stars": 394,
+     "forks": 72,
+     "pushed_at": "2026-04-16",
+     "archived": true,
+     "url": "https://github.com/e2b-dev/mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "judge0",
@@ -184,7 +196,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "milkymap/mcp4modal_sandbox",
+     "stars": 1,
+     "forks": 0,
+     "pushed_at": "2025-07-09",
+     "archived": false,
+     "url": "https://github.com/milkymap/mcp4modal_sandbox",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "piston",
@@ -211,7 +235,19 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "engineer-man/piston",
+     "stars": 2823,
+     "forks": 468,
+     "pushed_at": "2026-07-31",
+     "archived": false,
+     "url": "https://github.com/engineer-man/piston",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "riza",

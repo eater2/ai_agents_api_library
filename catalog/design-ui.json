@@ -61,7 +61,19 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "figma/rest-api-spec",
+     "stars": 219,
+     "forks": 29,
+     "pushed_at": "2026-09-16",
+     "archived": false,
+     "url": "https://github.com/figma/rest-api-spec",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "framer",
@@ -90,7 +102,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Framer/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/framer.json"
   },
   {
    "id": "penpot-api",
@@ -118,7 +140,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/penpot/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/penpot-api.json"
   },
   {
    "id": "v0-platform-api-vercel",

@@ -1,0 +1,22 @@
+{
+ "id": "n8n-api",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/n8n/",
+ "fetched_at": "2026-09-24T17:02Z",
+ "rating": 5.0,
+ "reviews_total": 1,
+ "reviews": [
+  {
+   "id": "681e85e67f2986dc628864da",
+   "date": "2025-05-09",
+   "rating": 5,
+   "title": "Amazing",
+   "pros": "Unmatched Flexibility: n8n's open-source nature and extensive integration capabilities allow me to craft AI agents that seamlessly interact with various services, from Google Sheets to custom APIs. \n\nNative AI Integration: The platform's native support for LangChain and large language models (LLMs) enables the development of sophisticated, context-aware AI agents without the need for complex coding. \n\nVisual Workflow Builder: The intuitive drag-and-drop interface simplifies the creation of multi-step workflows, making automation accessible even for those with limited coding experience. \n\nScalability and Control: With options for both cloud-based and self-hosted deployments, n8n offers scalability and control over data, catering to diverse organizational needs.",
+   "cons": "Learning Curve: While powerful, n8n's depth can be daunting for beginners. Some users have noted that the platform's complexity may require a steeper learning curve compared to other tools. \n\nDocumentation Gaps: Occasionally, the documentation lacks detailed examples, which can lead to trial and error during the development process. \n\nPerformance Considerations: For large-scale workflows, some users have observed that the platform may experience performance issues, such as slower refresh times.",
+   "overall": "As someone deeply involved in building AI agents, n8n has been a game-changer. Its combination of flexibility, AI integration, and user-friendly design makes it an invaluable tool for developing intelligent, automated workflows. While there are areas for improvement, the platform's strengths far outweigh its limitations, making it a top choice for AI-driven automation.",
+   "reviewer_role": "COO",
+   "company_size": "26 - 99",
+   "url": "https://sourceforge.net/software/product/n8n/#review-681e85e67f2986dc628864da"
+  }
+ ]
+}

@@ -90,7 +90,8 @@ T = {
         ],
         "h_legend": "Legend",
         "legend": [("MCP ✅", "official MCP server maintained by the vendor"), ("MCP ◐", "community-maintained MCP server"),
-                   ("MCP —", "no MCP server known; use the REST API"), ("🆓", "free tier or free usage without payment")],
+                   ("MCP —", "no MCP server known; use the REST API"), ("🆓", "free tier or free usage without payment"),
+                   ("★ (date)", "proof under the service name: SourceForge rating and review count, GitHub stars, Smithery uses — linked, with the date fetched")],
         "cols": ["Service", "What an agent can do", "Auth", "MCP", "Free tier", "Docs"],
         "h_excluded": "Excluded services",
         "excluded_intro": "Services that were reviewed and **rejected** because an agent cannot operate them programmatically today:",
@@ -144,7 +145,8 @@ T = {
         ],
         "h_legend": "Legenda",
         "legend": [("MCP ✅", "oficjalny serwer MCP utrzymywany przez dostawcę"), ("MCP ◐", "serwer MCP utrzymywany przez społeczność"),
-                   ("MCP —", "brak znanego serwera MCP; należy użyć REST API"), ("🆓", "darmowy limit lub użycie bez opłat")],
+                   ("MCP —", "brak znanego serwera MCP; należy użyć REST API"), ("🆓", "darmowy limit lub użycie bez opłat"),
+                   ("★ (data)", "dowód pod nazwą usługi: ocena i liczba opinii z SourceForge, gwiazdki GitHub, użycia w Smithery — z linkiem i datą pobrania")],
         "cols": ["Usługa", "Co agent może zrobić", "Autoryzacja", "MCP", "Darmowy limit", "Dokumentacja"],
         "h_excluded": "Usługi wykluczone",
         "excluded_intro": "Usługi, które sprawdzono i **odrzucono**, ponieważ agent nie może ich dziś obsługiwać programowo:",
@@ -207,6 +209,51 @@ def is_trial(e):
     return not is_free(e) and bool(one_off) and "no free-plan" not in f
 
 
+RATINGS = {}  # id -> list of signals from data/ratings.json (scripts/fetch_ratings.py)
+SOURCE_NAMES = {"sourceforge": "SourceForge", "github": "GitHub", "smithery": "Smithery"}
+
+
+def short_count(n):
+    return f"{n / 1e6:.1f}M" if n >= 1e6 else f"{n / 1e3:.1f}k" if n >= 1e4 else f"{n:,}"
+
+
+def proof_items(e):
+    """(label, url, fetched_at) per signal, e.g. ("SourceForge 4.6★/250 reviews", url, "2026-09-24")."""
+    out = []
+    for r in RATINGS.get(e["id"], []):
+        src = SOURCE_NAMES.get(r["source"], r["source"])
+        if r["source"] == "sourceforge" and r.get("reviews"):
+            label = f"{src} {r['rating']}★/{short_count(r['reviews'])} review{'s' if r['reviews'] > 1 else ''}"
+        elif r["source"] == "github":
+            label = f"{src} {short_count(r['stars'])}★ {r['repo']}"
+        elif r["source"] == "smithery" and r.get("uses"):
+            label = f"{src} {short_count(r['uses'])} uses"
+        else:
+            continue
+        out.append((label, r["url"], r["fetched_at"]))
+    return out
+
+
+def stamp(ts):
+    """'2026-09-24T17:05Z' -> '2026-09-24 17:05 UTC'; a bare date stays as is."""
+    return ts.replace("T", " ").replace("Z", " UTC")
+
+
+def proof_html(e):
+    return "".join(f'<br><small class="proof"><a href="{html.escape(u)}">{html.escape(l)}</a> '
+                   f'<time datetime="{d}">({stamp(d)})</time></small>' for l, u, d in proof_items(e))
+
+
+def ratings_note(lang):
+    """Line above the tables: when the ratings were fetched (newest and oldest timestamp)."""
+    ts = sorted({r["fetched_at"] for rs in RATINGS.values() for r in rs})
+    if not ts:
+        return ""
+    span = stamp(ts[-1]) if ts[0] == ts[-1] else f"{stamp(ts[0])} – {stamp(ts[-1])}"
+    text = {"en": "Ratings and usage (★) fetched", "pl": "Oceny i użycie (★) pobrane"}[lang]
+    return f'<p class="proof-note">{text}: <time datetime="{ts[-1]}">{span}</time>.</p>'
+
+
 def mcp_mark(e, fmt="md"):
     m = e.get("mcp") or {}
     sym = {"official": "✅", "community": "◐"}.get(m.get("type"), "—")
@@ -260,8 +307,8 @@ def readme(lang, cats, items, excluded, dirs):
             url = RAW + path if "<" not in path else RAW + "catalog/"
             o.append(f"| `{path}` — {d} | {url} |")
         o.append(f"\n{t['agents_recipe']}\n")
-        o.append("### MCP server\n\nThe catalog is also an MCP server with three tools: `search_apis` (filters: `query`, `category`, "
-                 "`mcp`, `no_auth`, `free_tier`, `auth`), `get_api` and `list_categories`. No key needed. Add it to your MCP client:\n")
+        o.append("### MCP server\n\nThe catalog is also an MCP server with four tools: `search_apis` (filters: `query`, `category`, "
+                 "`mcp`, `no_auth`, `free_tier`, `auth`), `get_api`, `get_reviews` (user reviews with pros and cons) and `list_categories`. No key needed. Add it to your MCP client:\n")
         o.append('```json\n{\n  "mcpServers": {\n    "ai-agents-api-library": {\n      "command": "npx",\n'
                  f'      "args": ["-y", "github:{REPO}"]\n    }}\n  }}\n}}\n```\n')
         o.append(f"Claude Code: `claude mcp add ai-agents-api-library -- npx -y github:{REPO}`\n")
@@ -331,13 +378,15 @@ def llms(cats, items, dirs):
          f"after a one-time API key / OAuth / MCP setup. {st['c']} categories. Last verified {VERIFIED}. "
          "Each entry: docs URL, auth method + header hint, MCP server (official/community), free tier, SDKs, OpenAPI and llms.txt links.",
          "", "Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, "
-         "plus derived booleans has_free_tier, has_trial, no_auth, stale and link_check{checked_at, docs, mcp}.",
+         "plus derived booleans has_free_tier, has_trial, no_auth, stale, link_check{checked_at, docs, mcp} and "
+         "ratings[] (proof of use: SourceForge rating and review count, GitHub stars, Smithery uses; each with url and fetched_at) "
+         "and reviews_url (up to 100 user reviews with pros/cons, reviewer names removed; also via the MCP tool get_reviews).",
          "", "## Data", "",
          f"- [Full catalog (JSON)]({RAW}catalog/all.json): all entries in one array",
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
          f"- [JSON Schema]({RAW}data/schema.json): entry schema",
          f"- [Excluded services]({RAW}data/excluded.json): reviewed and rejected, with reasons",
-         f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` or remote {MCP_URL} (Streamable HTTP) — tools search_apis, get_api, list_categories",
+         f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` or remote {MCP_URL} (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories",
          "", "## Start free", "",
          f"{sum(map(is_free, items))} of {len(items)} services have a lasting free tier or free usage (JSON field `has_free_tier`; "
          f"exact limits in `free_tier`), and {sum(map(is_trial, items))} more give one-off free trial credits (`has_trial`). "
@@ -364,7 +413,8 @@ def llms_full(cats, items):
     o = [f"# {TITLE} — full list ({len(items)} services, verified {VERIFIED})",
          "# format: [tags] name | what it does | auth (hint) | mcp | free tier | docs",
          "# tags: [FREE] lasting free tier or free usage, [TRIAL] one-off free trial credits, "
-         "[NO-KEY] callable without any credential, [MCP] official MCP server", ""]
+         "[NO-KEY] callable without any credential, [MCP] official MCP server",
+         "# proof: public ratings and usage (SourceForge rating/reviews, GitHub stars, Smithery uses), date = when fetched", ""]
     for c in cats:
         rows = [e for e in items if e["category"] == c["id"]]
         o.append(f"## {c['en']} [{c['id']}]")
@@ -375,8 +425,10 @@ def llms_full(cats, items):
             note = f" | note: {e['notes']}" if e.get("notes") else ""
             tags = "".join(tag for tag, on in (("[FREE]", is_free(e)), ("[TRIAL]", is_trial(e)), ("[NO-KEY]", e["auth"] == "none"),
                                                 ("[MCP]", m.get("type") == "official")) if on)
+            proof = proof_items(e)
+            proof = f" | proof: {'; '.join(l for l, _, _ in proof)} (fetched {stamp(proof[0][2])})" if proof else ""
             o.append(f"- {tags + ' ' if tags else ''}{e['name']} | {e['desc_en']} | auth:{e['auth']}{hint} | {mcp} | "
-                     f"{e.get('free_tier') or '?'} | {e['docs']}{note}")
+                     f"{e.get('free_tier') or '?'} | {e['docs']}{proof}{note}")
         o.append("")
     return "\n".join(o)
 
@@ -416,6 +468,7 @@ code{background:var(--soft);padding:1px 4px;border-radius:2px;font-size:13px}
 .filter input[type=search]{flex:1;min-width:200px;padding:6px 8px;border:1px solid var(--border);background:var(--page);color:var(--text);border-radius:2px;font-size:14px}
 .cat-desc{font-style:italic;color:var(--muted)}
 .refs{font-size:13px}
+.proof{color:var(--muted);white-space:nowrap}.proof time{font-size:11px}.proof-note{color:var(--muted);font-size:13px}
 footer{color:var(--muted);font-size:12px;margin-top:2em;border-top:1px solid var(--soft);padding-top:8px}
 @media (max-width:720px){.infobox{float:none;width:100%;margin:0 0 1em}.toc ol ol{columns:1}.tabs a{margin:0 12px 0 0}}
 """
@@ -506,6 +559,7 @@ def page(lang, cats, items, excluded, dirs):
     o.append(f'<h2 id="criteria">{e_(t["h_criteria"])}</h2><ol>' + "".join(f"<li>{md_inline(x)}</li>" for x in t["criteria"]) + "</ol>")
     o.append(f'<h2 id="legend">{e_(t["h_legend"])}</h2><ul>' + "".join(f"<li><b>{e_(a)}</b> — {e_(b)}</li>" for a, b in t["legend"]) + "</ul>")
 
+    o.append(ratings_note(lang))
     o.append(f'<div class="filter"><input type="search" id="q" placeholder="{e_(t["filter"])}" aria-label="{e_(t["filter"])}">'
              f'<label><input type="checkbox" id="mcp"> {e_(t["mcp_only"])}</label><label><input type="checkbox" id="free"> {e_(t["free_only"])}</label></div>')
 
@@ -521,7 +575,7 @@ def page(lang, cats, items, excluded, dirs):
         for e in rows:
             mtype = (e.get("mcp") or {}).get("type", "none")
             free = is_free(e)
-            name = f'<a href="{e_(e["homepage"])}">{e_(e["name"])}</a>' if e.get("homepage") else e_(e["name"])
+            name = (f'<a href="{e_(e["homepage"])}">{e_(e["name"])}</a>' if e.get("homepage") else e_(e["name"])) + proof_html(e)
             o.append(f'<tr id="{e["id"]}" data-mcp="{mtype}" data-free="{int(free)}"><td>{name}</td><td>{e_(e["desc_" + lang])}</td>'
                      f'<td>{e_(t["auth"].get(e["auth"], e["auth"]))}</td><td class="c">{mcp_mark(e, "html")}</td>'
                      f'<td>{"🆓 " if free else ""}{e_(e.get("free_tier") or "")}</td><td><a href="{e_(e["docs"])}">{t["docs"]}</a></td></tr>')
@@ -572,8 +626,9 @@ def category_page(c, rows, cats):
          f"<h1>{e_(title)}</h1>", f'<div class="sub">{e_(c["desc_en"])}</div>',
          f"<p>{e_(desc)} Agents: fetch <a href=\"{RAW}catalog/{c['id']}.json\"><code>catalog/{c['id']}.json</code></a> "
          f"instead of parsing this page. Last verified {VERIFIED}.</p>",
+         ratings_note("en"),
          '<div class="tw"><table class="wikitable"><thead><tr><th>Service</th><th>What an agent can do</th><th>Auth</th>'
-         '<th>MCP server</th><th>Free tier</th><th>Notes</th></tr></thead><tbody>']
+         '<th>MCP server</th><th>Free tier</th><th>Notes</th><th>Proof (ratings, usage)</th></tr></thead><tbody>']
     for e in rows:
         m = e.get("mcp") or {}
         mcp = {"official": "official", "community": "community"}.get(m.get("type"), "—")
@@ -581,7 +636,8 @@ def category_page(c, rows, cats):
             mcp = f'<a href="{e_(m["url"])}">{mcp}</a>'
         auth = e_(t["auth"].get(e["auth"], e["auth"])) + (f'<br><code>{e_(e["auth_hint"])}</code>' if e.get("auth_hint") else "")
         o.append(f'<tr id="{e["id"]}"><td><a href="{e_(e["docs"])}"><b>{e_(e["name"])}</b></a></td><td>{e_(e["desc_en"])}</td>'
-                 f'<td>{auth}</td><td class="c">{mcp}</td><td>{e_(e.get("free_tier") or "")}</td><td>{e_(e.get("notes") or "")}</td></tr>')
+                 f'<td>{auth}</td><td class="c">{mcp}</td><td>{e_(e.get("free_tier") or "")}</td><td>{e_(e.get("notes") or "")}</td>'
+                 f'<td>{proof_html(e).removeprefix("<br>") or "—"}</td></tr>')
     o.append("</tbody></table></div>")
     o.append("<h2>Other categories</h2><ul>" + "".join(
         f'<li><a href="../{x["id"]}/">{e_(x["en"])}</a></li>' for x in cats if x["id"] != c["id"]) + "</ul>")
@@ -598,8 +654,10 @@ def write(path, text):
 
 
 def main():
-    global VERIFIED
+    global VERIFIED, RATINGS
     cats, items, excluded, dirs = load()
+    ratings_file = DATA / "ratings.json"
+    RATINGS = json.loads(ratings_file.read_text("utf-8")) if ratings_file.exists() else {}
     VERIFIED = max((e.get("verified") or "" for e in items), default="") or date.today().isoformat()
     ids = set()
     for e in items:
@@ -630,6 +688,10 @@ def main():
         x["stale"] = bool(e.get("verified")) and (today - date.fromisoformat(e["verified"])).days > STALE_DAYS
         if e["id"] in links:
             x["link_check"] = links[e["id"]]
+        if RATINGS.get(e["id"]):
+            x["ratings"] = RATINGS[e["id"]]
+        if (ROOT / "catalog" / "reviews" / f"{e['id']}.json").exists():
+            x["reviews_url"] = f"{RAW}catalog/reviews/{e['id']}.json"  # review texts: JSON and MCP only, not on the website
         en.append(x)
     dump = json.dumps(en, ensure_ascii=False, indent=2) + "\n"
     write("catalog/all.json", dump)

@@ -175,7 +175,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Leonardo.ai/",
+     "fetched_at": "2026-09-24T16:55Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/leonardo-ai-api.json"
   },
   {
    "id": "openai-images-api-gpt-image",
@@ -210,7 +220,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "SureScaleAI/openai-gpt-image-mcp",
+     "stars": 111,
+     "forks": 3,
+     "pushed_at": "2025-05-31",
+     "archived": false,
+     "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "recraft-api",
@@ -240,7 +262,19 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "recraft-ai/mcp-recraft-server",
+     "stars": 60,
+     "forks": 11,
+     "pushed_at": "2026-07-13",
+     "archived": true,
+     "url": "https://github.com/recraft-ai/mcp-recraft-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "remove-bg-api",

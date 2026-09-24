@@ -149,7 +149,17 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 2.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/HeyGen/",
+     "fetched_at": "2026-09-24T16:55Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/heygen-api.json"
   },
   {
    "id": "klap-api",
@@ -204,7 +214,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "199-mcp/mcp-kling",
+     "stars": 41,
+     "forks": 20,
+     "pushed_at": "2025-06-14",
+     "archived": false,
+     "url": "https://github.com/199-mcp/mcp-kling",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "luma-ai-dream-machine-api",
@@ -234,7 +256,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "lumalabs/luma-api-mcp",
+     "stars": 26,
+     "forks": 11,
+     "pushed_at": "2025-04-18",
+     "archived": false,
+     "url": "https://github.com/lumalabs/luma-api-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "minimax-hailuo-api",
@@ -265,7 +299,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "MiniMax-AI/MiniMax-MCP",
+     "stars": 1585,
+     "forks": 284,
+     "pushed_at": "2026-08-20",
+     "archived": false,
+     "url": "https://github.com/MiniMax-AI/MiniMax-MCP",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "mux-video-api",
@@ -327,7 +373,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "PixVerseAI/PixVerse-MCP",
+     "stars": 52,
+     "forks": 14,
+     "pushed_at": "2025-10-22",
+     "archived": false,
+     "url": "https://github.com/PixVerseAI/PixVerse-MCP",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "runway-api",
@@ -413,7 +471,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Synthesia/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/synthesia-api.json"
   },
   {
    "id": "tavus-api",

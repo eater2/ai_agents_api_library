@@ -1,0 +1,34 @@
+{
+ "id": "browserbase-stagehand",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Browserbase/",
+ "fetched_at": "2026-09-24T16:55Z",
+ "rating": 3.0,
+ "reviews_total": 2,
+ "reviews": [
+  {
+   "id": "6997bb4af54af68d9de48f46",
+   "date": "2026-02-20",
+   "rating": 5,
+   "title": "Great stealth, stagehand library is nice",
+   "pros": "Browserbase's stealth / captcha solving seems to be the best out of the modern AI-centric browser hosts. I like the stagehand library too.",
+   "cons": "Support for SMS 2FA codes requires some manual setup to connect an MCP server to their agent.",
+   "overall": "The suite is nice, I like how Director.ai stacks on top of Stagehand which stacks on top of the browser. Browser platform is solid, being able to get all session recordings as mp4s / embed live sessions as iframes in your apps is great.",
+   "reviewer_role": "Software Engineer",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Browserbase/#review-6997bb4af54af68d9de48f46"
+  },
+  {
+   "id": "6758d6044791f446515dc8d9",
+   "date": "2024-12-11",
+   "rating": 1,
+   "title": "STRONGLY AVOID - really unreliable and will cancel without warning and core features dont work",
+   "pros": "Makes it easy to stream a browser. in theory the proxy stuff would be good but didn't work very well.\n\nThat's about all... unfortunately.",
+   "cons": "Buggy - browser playback doesn't work.\n\nAsked for a fix to bug and they cancelled my account.\n\nDisreputable founder; unhelpful support.",
+   "overall": "Would not use them nor would i recommend them.\n\nEspecially for an important workflow or part of your product.",
+   "reviewer_role": "Founder",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Browserbase/#review-6758d6044791f446515dc8d9"
+  }
+ ]
+}

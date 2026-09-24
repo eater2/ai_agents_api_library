@@ -31,7 +31,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Anchor-Browser/",
+     "fetched_at": "2026-09-24T16:55Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/anchor-browser.json"
   },
   {
    "id": "apify",
@@ -62,7 +72,22 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 218,
+     "url": "https://smithery.ai/servers/apify",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.8,
+     "reviews": 1714,
+     "url": "https://sourceforge.net/software/product/Apify/",
+     "fetched_at": "2026-09-24T17:02Z"
+    }
+   ]
   },
   {
    "id": "bright-data",
@@ -93,7 +118,33 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "brightdata/brightdata-mcp",
+     "stars": 2655,
+     "forks": 329,
+     "pushed_at": "2026-09-17",
+     "archived": false,
+     "url": "https://github.com/brightdata/brightdata-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "smithery",
+     "uses": 300,
+     "url": "https://smithery.ai/servers/brightdata",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.4,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Bright-Data/",
+     "fetched_at": "2026-09-24T16:55Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/bright-data.json"
   },
   {
    "id": "browse-ai-api",
@@ -187,7 +238,23 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 433,
+     "url": "https://smithery.ai/servers/browserbase",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 3.0,
+     "reviews": 2,
+     "url": "https://sourceforge.net/software/product/Browserbase/",
+     "fetched_at": "2026-09-24T16:55Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/browserbase-stagehand.json"
   },
   {
    "id": "diffbot",
@@ -246,7 +313,17 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Firecrawl/",
+     "fetched_at": "2026-09-24T16:55Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/firecrawl.json"
   },
   {
    "id": "hyperbrowser",
@@ -277,7 +354,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "hyperbrowserai/mcp",
+     "stars": 792,
+     "forks": 74,
+     "pushed_at": "2025-11-20",
+     "archived": false,
+     "url": "https://github.com/hyperbrowserai/mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "oxylabs",
@@ -307,7 +396,16 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.2,
+     "reviews": 1211,
+     "url": "https://sourceforge.net/software/product/Oxylabs/",
+     "fetched_at": "2026-09-24T17:02Z"
+    }
+   ]
   },
   {
    "id": "playwright-mcp-microsoft",
@@ -335,7 +433,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "microsoft/playwright-mcp",
+     "stars": 37537,
+     "forks": 3196,
+     "pushed_at": "2026-09-18",
+     "archived": false,
+     "url": "https://github.com/microsoft/playwright-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "scrapegraphai-api",

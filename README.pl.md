@@ -46,6 +46,7 @@
 - **MCP ◐** — serwer MCP utrzymywany przez społeczność
 - **MCP —** — brak znanego serwera MCP; należy użyć REST API
 - **🆓** — darmowy limit lub użycie bez opłat
+- **★ (data)** — dowód pod nazwą usługi: ocena i liczba opinii z SourceForge, gwiazdki GitHub, użycia w Smithery — z linkiem i datą pobrania
 
 ## Wyszukiwanie w sieci
 

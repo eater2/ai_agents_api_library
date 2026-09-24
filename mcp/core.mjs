@@ -132,6 +132,7 @@ const summary = (e) => ({
   has_free_tier: e.has_free_tier,
   has_trial: e.has_trial,
   docs: e.docs,
+  ratings: e.ratings, // proof of use: SourceForge rating/reviews, GitHub stars, Smithery uses (with url, fetched_at)
 });
 
 
@@ -214,7 +215,8 @@ export function createServer() {
       title: "Get API details",
       description:
         "Full entry for one service: docs, auth method and how the credential is sent, MCP endpoint, " +
-        "free tier, SDKs, OpenAPI and llms.txt links, notes, verification date and last link check.",
+        "free tier, SDKs, OpenAPI and llms.txt links, notes, verification date, last link check and ratings " +
+        "(public review scores and usage counts, each with source url and fetch date).",
       inputSchema: { id: z.string().describe("Service id from search_apis") },
     },
     async ({ id }) => {
@@ -223,5 +225,49 @@ export function createServer() {
       return { content: [{ type: "text", text }], isError: !e };
     },
   );
+
+  server.registerTool(
+    "get_reviews",
+    {
+      title: "Get user reviews",
+      description:
+        "Public user reviews of one service (up to 100, from SourceForge): rating, title, pros, cons, overall, " +
+        "reviewer role, company size, date and link to the original. Reviewer names are not included. " +
+        "Use to judge real-world quality before recommending a service.",
+      inputSchema: {
+        id: z.string().describe("Service id from search_apis"),
+        min_rating: z.number().int().min(1).max(5).optional().describe("Only reviews rated at least this"),
+        max_rating: z.number().int().min(1).max(5).optional().describe("Only reviews rated at most this, e.g. 2 for complaints"),
+        limit: z.number().int().min(1).max(100).optional().describe("Max reviews, default 20"),
+      },
+    },
+    async ({ id, min_rating = 1, max_rating = 5, limit = 20 }) => {
+      const data = await loadReviews(id);
+      if (!data) {
+        return { content: [{ type: "text", text: `No reviews stored for '${id}'. Check get_api ratings for other signals.` }] };
+      }
+      const reviews = data.reviews.filter((r) => (r.rating ?? 0) >= min_rating && (r.rating ?? 5) <= max_rating);
+      const text = JSON.stringify({ ...data, returned: Math.min(limit, reviews.length), reviews: reviews.slice(0, limit) }, null, 1);
+      return { content: [{ type: "text", text }] };
+    },
+  );
   return server;
+}
+
+// Review texts live in catalog/reviews/<id>.json: GitHub copy first, bundled copy as fallback.
+async function loadReviews(id) {
+  if (!/^[a-z0-9-]+$/.test(id)) return null;
+  if (process.env.AGENTS_API_LIBRARY_OFFLINE !== "1") {
+    try {
+      const res = await fetch(RAW.replace("all.json", `reviews/${id}.json`), { signal: AbortSignal.timeout(8000) });
+      if (res.ok) return await res.json();
+    } catch {
+      // fall through to the bundled copy
+    }
+  }
+  try {
+    return JSON.parse(await readFile(new URL(`../catalog/reviews/${id}.json`, import.meta.url), "utf8"));
+  } catch {
+    return null;
+  }
 }

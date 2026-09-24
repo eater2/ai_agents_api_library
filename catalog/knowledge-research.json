@@ -31,7 +31,25 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "blazickjp/arxiv-mcp-server",
+     "stars": 3172,
+     "forks": 258,
+     "pushed_at": "2026-08-26",
+     "archived": false,
+     "url": "https://github.com/blazickjp/arxiv-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "smithery",
+     "uses": 5142,
+     "url": "https://smithery.ai/servers/arxiv",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "context7-library-docs-for-agents",
@@ -62,7 +80,15 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 5563,
+     "url": "https://smithery.ai/servers/upstash/context7-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "crossref-rest-api",
@@ -91,7 +117,19 @@
     "docs": "ok",
     "mcp": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "afrise/academic-search-mcp-server",
+     "stars": 117,
+     "forks": 12,
+     "pushed_at": "2025-02-12",
+     "archived": false,
+     "url": "https://github.com/afrise/academic-search-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "gdelt-api",
@@ -119,7 +157,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "cyanheads/gdelt-mcp-server",
+     "stars": 6,
+     "forks": 0,
+     "pushed_at": "2026-09-22",
+     "archived": false,
+     "url": "https://github.com/cyanheads/gdelt-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "hacker-news-api",
@@ -147,7 +197,29 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "HackerNews/API",
+     "stars": 13336,
+     "forks": 762,
+     "pushed_at": "2025-01-01",
+     "archived": false,
+     "url": "https://github.com/HackerNews/API",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "github",
+     "repo": "pskill9/hn-server",
+     "stars": 40,
+     "forks": 7,
+     "pushed_at": "2024-12-31",
+     "archived": false,
+     "url": "https://github.com/pskill9/hn-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "newsapi",
@@ -175,7 +247,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "matteoantoci/mcp-newsapi",
+     "stars": 3,
+     "forks": 7,
+     "pushed_at": "2025-05-08",
+     "archived": false,
+     "url": "https://github.com/matteoantoci/mcp-newsapi",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "openalex-api",
@@ -205,7 +289,19 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "benedict2310/Scientific-Papers-MCP",
+     "stars": 57,
+     "forks": 9,
+     "pushed_at": "2025-08-14",
+     "archived": false,
+     "url": "https://github.com/benedict2310/Scientific-Papers-MCP",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "pubmed-e-utilities-ncbi",
@@ -233,7 +329,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "openags/paper-search-mcp",
+     "stars": 2692,
+     "forks": 280,
+     "pushed_at": "2026-09-22",
+     "archived": false,
+     "url": "https://github.com/openags/paper-search-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "semantic-scholar-api",
@@ -262,7 +370,19 @@
     "docs": "ok",
     "mcp": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+     "stars": 165,
+     "forks": 24,
+     "pushed_at": "2026-03-20",
+     "archived": false,
+     "url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "wikidata",
@@ -318,7 +438,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "Rudra-ravi/wikipedia-mcp",
+     "stars": 295,
+     "forks": 58,
+     "pushed_at": "2026-05-01",
+     "archived": false,
+     "url": "https://github.com/Rudra-ravi/wikipedia-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "wolfram-alpha-api",

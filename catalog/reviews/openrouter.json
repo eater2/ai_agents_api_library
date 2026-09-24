@@ -1,0 +1,22 @@
+{
+ "id": "openrouter",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/OpenRouter/",
+ "fetched_at": "2026-09-24T17:02Z",
+ "rating": 5.0,
+ "reviews_total": 1,
+ "reviews": [
+  {
+   "id": "681fd24f6f44cbd82540150d",
+   "date": "2025-05-10",
+   "rating": 5,
+   "title": "You can sample LLMS with power and flexibility  - just no online storage",
+   "pros": "Instead of getting married to ChatGPT or Claude and being locked into that relationship, OpenRouter is way more polyamorous. LMAO. And it's less messy than the real life relationship version.  I can use different LLMs for different types of tasks and you learn quickly which LLMs excel in certain areas.  In the beginning I did multichats where I'd ask 1 question to 2 or 3 bots at a time (their multichat features) and whoever gave the best answer was who I continued interacting with. I guess it's more like speed dating than polyamory.  But the bottom line is, instead of spending $20-$30/mo with one system, I am spending a la carte, which is WAAAAYYYY cheaper, and using the right tool at any given moment. It just takes discipline to copy and paste your chats elsewhere.  It does give you a copy markdown button to make it easier.  And if you enable markdown in Google docs, there is a paste as markdown feature that makes it look like RTF when it's pasted in, with no codes.  Because the chats are browser bound, they are stuck on one computer and everybody is on a bunch of different devices these days. So pasting into Google Docs is the best bet for portability all around. Privacy isn't an issue, because they aren't storing your chats!  For some people, this is a big plus. To use the service, they charge you a 9 or 10% charge for however much money you put towards tokens. So if I refill for $10, the total is $10.90, with $10 of usable token for whichever LLM I feel like using.  Keep in mind, there are free LLMs too which you can choose and never pay.  When you add models, type 'free' in the search box and you'll see several free, from Maverick to Scout to Gemma, etc. It will make you feel like a serious power user and you'll feel smarter everytime you use it.  It also has access to the secret parameters that the online LLMs don't show you, like Temperature, Top P, Frequency penalty, etc. It can save you money if you tell it ahead of time what type of vocab you like or how divergent you want the suggestions to be, vs. training ChatGPT or Gemini manually.",
+   "cons": "The chats aren't persistent - you must copy and save them elsewhere before you close a browser window, or all that info from that chat is gone.",
+   "overall": "I love it. It's great. It's opened a whole new world for me and has made me delve deeper into the potential of AI.",
+   "reviewer_role": "Nerd",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/OpenRouter/#review-681fd24f6f44cbd82540150d"
+  }
+ ]
+}

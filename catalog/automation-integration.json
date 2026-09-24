@@ -156,7 +156,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 4,
+     "url": "https://sourceforge.net/software/product/IFTTT/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/ifttt-api.json"
   },
   {
    "id": "make-api-mcp",
@@ -246,7 +256,17 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/n8n/",
+     "fetched_at": "2026-09-24T17:02Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/n8n-api.json"
   },
   {
    "id": "nango",
