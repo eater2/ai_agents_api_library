@@ -149,8 +149,8 @@
    "notes": "Pay-as-you-go pricing: browser-hours + per-task fee + token markup; no ongoing free tier beyond signup credit.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

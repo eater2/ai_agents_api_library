@@ -53,8 +53,8 @@
    "notes": "Async task-based API: submit generation, then poll or use webhooks to retrieve the finished asset.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -138,8 +138,8 @@
    "notes": "Endpoints such as POST https://api.stability.ai/v2beta/3d/stable-fast-3d; part of Stability's broader multi-modal Platform API.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -165,8 +165,8 @@
    "notes": "3d.hunyuan.tencent.com is the consumer web app; programmatic access requires a Tencent Cloud account and the Tencent Cloud API console, not the consumer site directly. An open-source self-hostable model (Hunyuan3D-2.1) is also available on GitHub for those who don't want the managed cloud API.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

@@ -258,8 +258,8 @@
    "notes": "Region-specific hosts/keys: platform.minimax.io / api.minimax.io vs intl.minimaxi.com for international accounts - key and host must match.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -379,8 +379,8 @@
    "notes": "Separate stage (sandbox, watermarked) and production API keys; MCP server is in beta.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
