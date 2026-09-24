@@ -186,7 +186,15 @@ def load():
 
 
 def is_free(e):
+    # The researched free_plan.kind wins over parsing the free_tier text (which read "free trial…" as a free tier).
+    kind = (e.get("free_plan") or {}).get("kind")
+    if kind:
+        return kind in ("free_tier", "no_key")
     f = (e.get("free_tier") or "").lower()
+    if f.startswith("unavailable"):
+        return False
+    if re.match(r"free[- ]trial|trial\b", f):
+        return False
     recurring = re.search(r"/(day|mo|month|year)\b|per (day|month)|monthly|daily|always free|perpetual", f)
     if f.startswith(("no key", "free")) or re.search(r"free [\w ]*/(day|mo|month)\b", f):
         return True
@@ -200,12 +208,18 @@ def is_free(e):
 
 def is_trial(e):
     """No lasting free tier, but one-off trial credits to test without paying."""
+    kind = (e.get("free_plan") or {}).get("kind")
+    if kind:
+        return kind == "trial"
     f = (e.get("free_tier") or "").lower()
+    if f.startswith("unavailable"):
+        return False
     one_off = re.search(r"trial|sign[- ]?up|on sign|one[- ]time|valid \d+ days|after account verification", f)
     return not is_free(e) and bool(one_off) and "no free-plan" not in f
 
 
 RATINGS = {}  # id -> list of signals from data/ratings.json (scripts/fetch_ratings.py)
+OPERATIONS = json.loads((DATA / "operations.json").read_text("utf-8"))  # id -> definition; vocabulary of the operations field
 SOURCE_NAMES = {"sourceforge": "SourceForge", "github": "GitHub", "smithery": "Smithery"}
 
 
@@ -446,6 +460,7 @@ def llms(cats, items, dirs):
          f"- [Full catalog (JSON)]({RAW}catalog/all.json): all entries in one array",
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
          f"- [JSON Schema]({RAW}data/schema.json): entry schema",
+         f"- [Operations]({RAW}catalog/operations.json): vocabulary of the `operations` field (what an agent can do with a service, e.g. text-to-video, sms, street-geocoding); match your task to these ids",
          f"- [SHA256SUMS]({RAW}SHA256SUMS): checksums of llms.txt, llms-full.txt, schema and catalog/*.json (`sha256sum -c SHA256SUMS`)",
          f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` or remote {MCP_URL} (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories",
          "", "## Start free", "",
@@ -723,6 +738,8 @@ def main():
         assert e["id"] not in ids, f"duplicate id {e['id']}"
         ids.add(e["id"])
         assert e["category"] in {c["id"] for c in cats}, e["name"]
+        unknown = set(e.get("operations") or []) - set(OPERATIONS)
+        assert not unknown, f"{e['id']}: operations not in data/operations.json: {sorted(unknown)}"
     for lang in ("en", "pl"):
         write(T[lang]["readme"], readme(lang, cats, items, dirs))
     write("docs/index.html", page("en", cats, items, dirs))
@@ -744,6 +761,8 @@ def main():
         x["mcp"] = mcp_details(e)
         x["has_free_tier"] = is_free(e)
         x["has_trial"] = is_trial(e)
+        # Usable for free without a payment card: no key at all, or a free/trial plan confirmed card-free.
+        x["no_card"] = e["auth"] == "none" or ((is_free(e) or is_trial(e)) and (e.get("free_plan") or {}).get("requires_card") is False)
         x["stale"] = bool(e.get("verified")) and (today - date.fromisoformat(e["verified"])).days > STALE_DAYS
         if e["id"] in links:
             x["link_check"] = links[e["id"]]
@@ -754,6 +773,7 @@ def main():
         en.append(x)
     dump = json.dumps(en, ensure_ascii=False, indent=2) + "\n"
     write("catalog/all.json", dump)
+    write("catalog/operations.json", json.dumps(OPERATIONS, ensure_ascii=False, indent=1) + "\n")
     write("docs/catalog.json", dump)
     for c in cats:
         rows = [{k: v for k, v in e.items() if k != "category"} for e in en if e["category"] == c["id"]]

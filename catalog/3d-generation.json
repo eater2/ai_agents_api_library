@@ -25,9 +25,13 @@
    "desc_en": "Create 3D assets and multi-part kits from images via async REST sessions (image-to-3D, retopology).",
    "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. A Blender/MCP integration exists but its official vendor-maintained status could not be fully confirmed.",
    "verified": "2026-09-24",
+   "operations": [
+    "image-to-3d"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -74,9 +78,14 @@
     "how": "POST /rodin returns uuid + jobs.subscription_key; poll POST /status, then POST /download with task_uuid",
     "source_url": "https://docs.hyper3d.ai/en/get-started/quick-start"
    },
+   "operations": [
+    "text-to-3d",
+    "image-to-3d"
+   ],
    "no_auth": false,
    "has_free_tier": false,
-   "has_trial": true,
+   "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -162,9 +171,17 @@
     "source_url": "https://docs.meshy.ai/en/api/quick-start",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-3d",
+    "image-to-3d",
+    "3d-texturing",
+    "text-to-image",
+    "image-to-image"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -235,9 +252,13 @@
     "source_url": "https://docs.sketchfab.com/data-api/v3/swagger.json",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "3d-asset-marketplace"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -296,9 +317,13 @@
     "how": "POST /v2beta/3d/stable-fast-3d and /v2beta/3d/stable-point-aware-3d return the GLB binary directly",
     "source_url": "https://api.stability.ai/v2alpha/openapi"
    },
+   "operations": [
+    "image-to-3d"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -349,9 +374,14 @@
     "how": "SubmitHunyuanTo3DProJob returns JobId (valid 24h); poll QueryHunyuanTo3DProJob",
     "source_url": "https://www.tencentcloud.com/document/product/1284/75540"
    },
+   "operations": [
+    "text-to-3d",
+    "image-to-3d"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -401,9 +431,14 @@
     "how": "poll GET /v3/tasks/{task_id} or receive webhooks",
     "source_url": "https://developers.tripo3d.ai/en/docs/webhooks"
    },
+   "operations": [
+    "text-to-3d",
+    "image-to-3d"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

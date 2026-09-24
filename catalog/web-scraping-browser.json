@@ -51,9 +51,14 @@
     "source_url": "https://docs.anchorbrowser.io/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "browser-automation",
+    "web-scraping"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -135,9 +140,15 @@
     "how": "POST run returns run object; poll GET run or use webhooks; sync run endpoints wait up to 300 s",
     "source_url": "https://docs.apify.com/api/v2"
    },
+   "operations": [
+    "web-scraping",
+    "web-crawling",
+    "browser-automation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -211,9 +222,16 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.brightdata.com",
+   "operations": [
+    "web-scraping",
+    "serp-scraping",
+    "browser-automation",
+    "structured-extraction"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -293,9 +311,14 @@
     "how": "robot tasks run asynchronously; get results via webhooks or by retrieving the task",
     "source_url": "https://docs.browse.ai/api/v2"
    },
+   "operations": [
+    "structured-extraction",
+    "web-scraping"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -366,9 +389,13 @@
     "how": "tasks run asynchronously; poll the run/session status until complete",
     "source_url": "https://docs.browser-use.com"
    },
+   "operations": [
+    "browser-automation"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -439,9 +466,14 @@
     "source_url": "https://www.browserbase.com/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "browser-automation",
+    "web-scraping"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -507,9 +539,14 @@
     "source_url": "https://www.diffbot.com/pricing/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "structured-extraction",
+    "web-scraping"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -584,9 +621,17 @@
     "how": "crawl returns a job id; poll GET /v2/crawl/{id} or use webhooks (crawl.page, crawl.completed)",
     "source_url": "https://docs.firecrawl.dev/features/crawl"
    },
+   "operations": [
+    "web-scraping",
+    "web-crawling",
+    "structured-extraction",
+    "web-search",
+    "browser-automation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -654,9 +699,16 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.hyperbrowser.ai",
+   "operations": [
+    "browser-automation",
+    "web-scraping",
+    "web-crawling",
+    "structured-extraction"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -732,9 +784,16 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://realtime.oxylabs.io/v1",
+   "operations": [
+    "web-scraping",
+    "serp-scraping",
+    "structured-extraction",
+    "browser-automation"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -808,9 +867,14 @@
     "source_url": "https://github.com/microsoft/playwright-mcp",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "browser-automation",
+    "screenshot"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -907,9 +971,16 @@
     "how": "crawl is async: start returns an id, poll the crawl get-status endpoint",
     "source_url": "https://docs.scrapegraphai.com/api-reference/introduction.md"
    },
+   "operations": [
+    "web-scraping",
+    "structured-extraction",
+    "web-crawling",
+    "web-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -967,9 +1038,13 @@
     "how": "optional async endpoint https://async.scraperapi.com returns a job to fetch later",
     "source_url": "https://docs.scraperapi.com"
    },
+   "operations": [
+    "web-scraping"
+   ],
    "no_auth": false,
-   "has_free_tier": false,
-   "has_trial": true,
+   "has_free_tier": true,
+   "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1043,9 +1118,15 @@
     "how": "optional: pass webhook_name to queue the request and receive the result on a webhook",
     "source_url": "https://scrapfly.io/docs/scrape-api/getting-started"
    },
+   "operations": [
+    "web-scraping",
+    "screenshot",
+    "browser-automation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1113,9 +1194,17 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://app.scrapingbee.com/api/v1",
+   "operations": [
+    "web-scraping",
+    "screenshot",
+    "serp-scraping",
+    "structured-extraction",
+    "web-search"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1192,9 +1281,17 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.spider.cloud",
+   "operations": [
+    "web-crawling",
+    "web-scraping",
+    "browser-automation",
+    "web-search",
+    "screenshot"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1275,9 +1372,15 @@
     "source_url": "https://docs.steel.dev/overview/pricinglimits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "browser-automation",
+    "web-scraping",
+    "screenshot"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1326,9 +1429,15 @@
     "source_url": "https://docs.zyte.com/zyte-api/usage/errors.html",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "web-scraping",
+    "structured-extraction",
+    "browser-automation"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

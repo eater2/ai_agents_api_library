@@ -55,9 +55,15 @@
     "how": "job creation returns a location header; poll it until status done/failed",
     "source_url": "https://developer.adobe.com/document-services/docs/overview/pdf-services-api/gettingstarted/"
    },
+   "operations": [
+    "pdf-processing",
+    "ocr",
+    "document-parsing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -121,9 +127,14 @@
     "how": "Start* operations (e.g. StartDocumentAnalysis) return a JobId; poll Get* operations; sync APIs also available",
     "source_url": "https://docs.aws.amazon.com/general/latest/gr/textract.html"
    },
+   "operations": [
+    "ocr",
+    "document-parsing"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -193,9 +204,14 @@
     "how": "POST ...:analyze returns 202 with Operation-Location header; poll GET until status succeeded/failed",
     "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/quickstarts/get-started-sdks-rest-api?pivots=programming-language-rest-api"
    },
+   "operations": [
+    "document-parsing",
+    "ocr"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -273,9 +289,14 @@
     "how": "jobs/tasks run asynchronously; poll job status or receive webhooks",
     "source_url": "https://cloudconvert.com/api/v2"
    },
+   "operations": [
+    "pdf-processing",
+    "ocr"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -347,9 +368,13 @@
     "source_url": "https://developers.docusign.com/platform/auth/reference/scopes/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "e-signature"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -446,9 +471,14 @@
     "how": "POST /generations returns generationId; poll GET /generations/{id}",
     "source_url": "https://developers.gamma.app/generations/create-generation"
    },
+   "operations": [
+    "slides-generation",
+    "document-generation"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -516,9 +546,14 @@
     "source_url": "https://docs.cloud.google.com/document-ai/docs/data-usage",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "document-parsing",
+    "ocr"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -595,9 +630,13 @@
     "how": "synchronous REST calls (presentations.get / batchUpdate)",
     "source_url": "https://developers.google.com/workspace/slides/api/reference/rest"
    },
+   "operations": [
+    "slides-generation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -664,9 +703,13 @@
     "source_url": "https://www.llamaindex.ai/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "document-parsing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -731,9 +774,14 @@
     "source_url": "https://mistral.ai/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "ocr",
+    "document-parsing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -844,9 +892,15 @@
     "source_url": "https://developer.pdf.co/llms.txt",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "pdf-processing",
+    "ocr",
+    "document-parsing"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -921,9 +975,13 @@
     "source_url": "https://reducto.ai/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "document-parsing"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -984,9 +1042,14 @@
     "source_url": "https://slidespeak.co/slidespeak-api/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "slides-generation",
+    "document-generation"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1067,9 +1130,13 @@
     "source_url": "https://unstructured.io/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "document-parsing"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

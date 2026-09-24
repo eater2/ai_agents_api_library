@@ -6,6 +6,63 @@
  },
  "entries": [
   {
+   "id": "esri-arcgis-location-platform",
+   "name": "Esri ArcGIS Location Platform",
+   "homepage": "https://location.arcgis.com",
+   "docs": "https://developers.arcgis.com/documentation/",
+   "auth": "api_key+oauth2",
+   "auth_hint": "API key (token param) or OAuth2 Bearer token",
+   "mcp": {
+    "type": "none",
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
+   },
+   "free_tier": "free tier with monthly free credits, then usage-based pricing",
+   "sdk": [
+    "javascript",
+    "python",
+    "dotnet",
+    "swift",
+    "kotlin"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
+   "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
+   "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": true,
+    "quota": "e.g. 2M basemap tiles, 20K geocodes, 20K routes, 500 place searches",
+    "period": "month",
+    "source_url": "https://location.arcgis.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "token",
+    "format": "?token=<API_KEY> or header X-Esri-Authorization: Bearer <API_KEY>",
+    "source_url": "https://developers.arcgis.com/rest/geocode/find-address-candidates/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://geocode-api.arcgis.com/arcgis/rest/services",
+   "operations": [
+    "street-geocoding",
+    "map-tiles"
+   ],
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "no_card": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
    "id": "geoapify",
    "name": "Geoapify",
    "homepage": "https://www.geoapify.com",
@@ -72,9 +129,16 @@
     "how": "Batch Geocoding: POST /v1/batch/geocode/search returns job id; poll GET until 200 (202 while pending)",
     "source_url": "https://apidocs.geoapify.com/docs/geocoding/batch/"
    },
+   "operations": [
+    "street-geocoding",
+    "places-search",
+    "routing",
+    "reverse-geocoding"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -140,9 +204,17 @@
     "source_url": "https://developers.google.com/maps/ai/grounding-lite",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "street-geocoding",
+    "routing",
+    "places-search",
+    "map-tiles",
+    "weather-forecast"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -207,9 +279,17 @@
     "source_url": "https://docs.here.com/geocoding-and-search/docs/code-geocode-address",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "street-geocoding",
+    "routing",
+    "places-search",
+    "reverse-geocoding",
+    "map-tiles"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -274,9 +354,13 @@
     "source_url": "https://www.ip2location.io/ip2location-documentation",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "ip-geolocation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false
   },
   {
@@ -341,9 +425,13 @@
     "source_url": "https://www.iplocate.io/docs/getting-started/quota-rate-limits/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "ip-geolocation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -408,9 +496,16 @@
     "source_url": "https://docs.mapbox.com/api/overview/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "street-geocoding",
+    "routing",
+    "map-tiles",
+    "places-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -483,9 +578,13 @@
     "source_url": "https://www.weather.gov/documentation/services-web-api",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "weather-forecast"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -557,9 +656,15 @@
     "source_url": "https://open-meteo.com/en/terms",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "weather-forecast",
+    "air-quality",
+    "street-geocoding"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -614,9 +719,14 @@
     "source_url": "https://ask.openrouteservice.org/t/reducing-the-quota-of-deprecated-api-api-openrouteservice-org/8013",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "routing",
+    "street-geocoding"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -675,9 +785,14 @@
     "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "street-geocoding",
+    "reverse-geocoding"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -737,9 +852,14 @@
     "source_url": "https://openweathermap.org/price",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "weather-forecast",
+    "air-quality"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -809,9 +929,13 @@
     "source_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "places-search"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -876,9 +1000,13 @@
     "source_url": "https://docs.tomorrow.io/reference/rate-limiting",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "weather-forecast"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

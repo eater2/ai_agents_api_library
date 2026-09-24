@@ -44,9 +44,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://cloud.activepieces.com/api/v1",
+   "operations": [
+    "workflow-automation",
+    "app-connectors"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -99,9 +104,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.arcade.dev",
+   "operations": [
+    "app-connectors"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -168,9 +177,13 @@
     "source_url": "https://composio.dev/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "app-connectors"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -241,9 +254,14 @@
     "how": "Runs start asynchronously; webhook triggers return {success:true} immediately, results via run history/tools",
     "source_url": "https://docs.gumloop.com/api-reference/getting-started"
    },
+   "operations": [
+    "workflow-automation",
+    "app-connectors"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -289,9 +307,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://maker.ifttt.com",
+   "operations": [
+    "workflow-automation"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -371,9 +393,15 @@
     "source_url": "https://help.keboola.com/storage/api/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "data-pipeline",
+    "analytics-query",
+    "workflow-automation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -439,9 +467,14 @@
     "how": "MCP scenario-run tools return after 25-40 s; longer runs continue (up to 40 min) and results are fetched by executionId",
     "source_url": "https://developers.make.com/mcp-server"
    },
+   "operations": [
+    "workflow-automation",
+    "app-connectors"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -492,9 +525,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://ah-api.merge.dev/api/v1",
+   "operations": [
+    "app-connectors"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -560,9 +597,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://<instance>/api/v1",
+   "operations": [
+    "workflow-automation",
+    "app-connectors"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -627,9 +669,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.nango.dev",
+   "operations": [
+    "app-connectors"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -669,9 +715,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://actionkit.useparagon.com",
+   "operations": [
+    "app-connectors"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -725,9 +775,13 @@
     "source_url": "https://pipedream.com/docs/connect/api-reference/rate-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "app-connectors"
+   ],
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -787,9 +841,13 @@
     "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "app-connectors"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -836,9 +894,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.superglue.cloud/v1",
+   "operations": [
+    "app-connectors",
+    "data-pipeline"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -896,9 +959,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://mcp.zapier.com/api/v1/connect",
+   "operations": [
+    "app-connectors",
+    "workflow-automation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

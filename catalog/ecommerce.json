@@ -57,9 +57,14 @@
     "source_url": "https://developer-docs.amazon/sp-api/docs/usage-plans-and-rate-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "marketplace-listing",
+    "store-management"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -139,9 +144,14 @@
     "source_url": "https://docs.bigcommerce.com/docs/start/authentication/api-accounts",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "store-management",
+    "product-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -181,9 +191,15 @@
    "desc_en": "List items, manage orders/inventory, and search listings across eBay marketplaces via REST APIs.",
    "notes": "Production access requires an eBay developer account and app keys; rate limits scale with account compliance tier.",
    "verified": "2026-09-24",
+   "operations": [
+    "marketplace-listing",
+    "store-management",
+    "product-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -220,9 +236,15 @@
    "desc_en": "List products, manage orders/shop, and search listings on the Etsy marketplace via REST API.",
    "notes": "Requires an approved Etsy developer app; OAuth2 user consent needed for shop-management scopes. Missing from candidate list despite being a major agent-callable marketplace API.",
    "verified": "2026-09-24",
+   "operations": [
+    "marketplace-listing",
+    "store-management",
+    "product-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -249,9 +271,16 @@
    "desc_en": "Lets an agent search items and categories and manage a seller's listings, orders, questions, shipments and promotions on the Mercado Libre marketplace.",
    "notes": "In AR, MX, BR and CL the account holder's details must be validated before creating an app; redirect URI must be HTTPS; rate limited (HTTP 429). Official MCP (OAuth, streamable HTTP) only searches and reads developer documentation.",
    "verified": "2026-09-24",
+   "operations": [
+    "product-search",
+    "marketplace-listing",
+    "store-management",
+    "shipping"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false
   },
   {
@@ -274,9 +303,14 @@
    "desc_en": "Create print-on-demand products, sync catalogs, and submit fulfillment orders via REST API.",
    "notes": "",
    "verified": "2026-09-24",
+   "operations": [
+    "store-management",
+    "shipping"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -317,9 +351,14 @@
    "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
    "notes": "The official Dev MCP server helps build/debug Shopify apps via docs & schema search; store operations themselves go through Admin/Storefront API tokens.",
    "verified": "2026-09-24",
+   "operations": [
+    "store-management",
+    "product-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -349,9 +388,13 @@
    "desc_en": "Manage products, orders, and customers on a self-hosted WooCommerce store via REST API.",
    "notes": "Requires your own WordPress+WooCommerce installation; there is no shared multi-tenant cloud endpoint.",
    "verified": "2026-09-24",
+   "operations": [
+    "store-management"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

@@ -55,9 +55,14 @@
     "source_url": "https://docs.agentmail.to/knowledge-base/rate-limits.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "email-send",
+    "email-inbox"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -134,9 +139,13 @@
     "source_url": "https://docs.discord.com/developers/topics/oauth2",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "team-chat"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -226,9 +235,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.line.me",
+   "operations": [
+    "chat-messaging"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -284,9 +297,13 @@
     "source_url": "https://documentation.mailgun.com/docs/mailgun/api-reference/api-overview",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "email-send"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -351,9 +368,13 @@
     "source_url": "https://docs.ntfy.sh/config/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "push-notification"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -437,9 +458,13 @@
     "source_url": "https://postmarkapp.com/developer/api/overview",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "email-send"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -499,9 +524,14 @@
     "source_url": "https://resend.com/docs/api-reference/introduction",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "email-send",
+    "email-marketing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -585,9 +615,14 @@
     "source_url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/rate-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "email-send",
+    "email-marketing"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -662,9 +697,13 @@
     "source_url": "https://docs.slack.dev/reference/methods/conversations.history",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "team-chat"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -735,9 +774,13 @@
     "source_url": "https://getstream.io/chat/docs/node/rate_limits/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "chat-messaging"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -799,9 +842,13 @@
     "source_url": "https://core.telegram.org/bots/faq",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "chat-messaging"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -868,9 +915,15 @@
     "source_url": "https://www.twilio.com/docs/usage/requests-to-twilio",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "sms",
+    "chat-messaging",
+    "phone-calls"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -947,9 +1000,14 @@
     "source_url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "sms",
+    "phone-calls"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1017,9 +1075,13 @@
     "source_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "chat-messaging"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1088,9 +1150,14 @@
     "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "video-conferencing",
+    "calendar"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

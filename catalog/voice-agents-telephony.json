@@ -70,9 +70,14 @@
     "how": "POST /v1/calls returns call_id; poll call status/logs or pass webhook to receive the call object when it ends",
     "source_url": "https://docs.bland.ai/platform/agent-quickstart"
    },
+   "operations": [
+    "voice-agent",
+    "phone-calls"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -141,9 +146,15 @@
     "source_url": "https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "voice-agent",
+    "speech-to-text",
+    "text-to-speech"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -202,9 +213,14 @@
     "source_url": "https://elevenlabs.io/docs/llms.txt",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "voice-agent",
+    "phone-calls"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -265,9 +281,14 @@
     "source_url": "https://livekit.com/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "voice-agent",
+    "phone-calls"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -298,9 +319,14 @@
    "desc_en": "Build, deploy, and manage AI voice agents that handle phone and web calls via REST API and SDKs.",
    "notes": "",
    "verified": "2026-09-24",
+   "operations": [
+    "voice-agent",
+    "phone-calls"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -339,9 +365,14 @@
    "desc_en": "Create and manage AI phone voice agents and trigger/manage outbound calls programmatically via REST API.",
    "notes": "Go-to-market leans enterprise-sales for scaled deployments; a self-serve trial with API access exists for building/testing.",
    "verified": "2026-09-24",
+   "operations": [
+    "voice-agent",
+    "phone-calls"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -386,9 +417,13 @@
    "desc_en": "Programmatically make, receive, and control phone calls (IVR, recording, conferencing) via REST API.",
    "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage.",
    "verified": "2026-09-24",
+   "operations": [
+    "phone-calls"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -442,9 +477,14 @@
    "desc_en": "Create, configure, and run AI voice assistants that make and receive phone calls via REST API.",
    "notes": "Also has an official MCP server (streamable-HTTP and SSE endpoints) exposing assistants/calls/phone numbers as tools.",
    "verified": "2026-09-24",
+   "operations": [
+    "voice-agent",
+    "phone-calls"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

@@ -72,9 +72,17 @@
     "source_url": "https://brave.com/search/api/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "web-search",
+    "news-search",
+    "image-search",
+    "places-search",
+    "answer-engine"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -171,9 +179,14 @@
     "source_url": "https://exa.ai/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "web-search",
+    "web-scraping"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -258,9 +271,17 @@
     "source_url": "https://jina.ai/reader/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "web-search",
+    "web-scraping",
+    "image-search",
+    "academic-search",
+    "screenshot"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -317,9 +338,16 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://kagi.com/api/v1",
+   "operations": [
+    "web-search",
+    "news-search",
+    "image-search",
+    "web-scraping"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -393,9 +421,15 @@
     "how": "research tasks are started then polled for status/results (MCP tools linkup-research + linkup-get-research)",
     "source_url": "https://docs.linkup.so/pages/integrations/mcp/mcp"
    },
+   "operations": [
+    "answer-engine",
+    "web-search",
+    "web-scraping"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -463,9 +497,13 @@
     "source_url": "https://www.mojeek.com/services/search/web-search-api/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "web-search"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -530,9 +568,14 @@
     "source_url": "https://parallel.ai/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "web-search",
+    "web-scraping"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -589,9 +632,14 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.perplexity.ai",
+   "operations": [
+    "answer-engine",
+    "web-search"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -652,9 +700,14 @@
     "how": "synchronous GET /api/v1/search returns JSON",
     "source_url": "https://www.searchapi.io/docs/google"
    },
+   "operations": [
+    "serp-scraping",
+    "web-search"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -710,9 +763,13 @@
     "how": "synchronous GET/POST / or /search",
     "source_url": "https://docs.searxng.org/dev/search_api.html"
    },
+   "operations": [
+    "web-search"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -805,9 +862,14 @@
     "source_url": "https://serpapi.com/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "serp-scraping",
+    "web-search"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -870,9 +932,17 @@
     "source_url": "https://serper.dev",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "web-search",
+    "serp-scraping",
+    "image-search",
+    "news-search",
+    "places-search"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -948,9 +1018,15 @@
     "source_url": "https://docs.tavily.com/documentation/rate-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "web-search",
+    "web-scraping",
+    "web-crawling"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -1025,9 +1101,16 @@
     "source_url": "https://you.com/pricing",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "web-search",
+    "answer-engine",
+    "web-scraping",
+    "stock-market-data"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

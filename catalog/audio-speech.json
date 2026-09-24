@@ -66,9 +66,14 @@
     "source_url": "https://aws.amazon.com/transcribe/faqs/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-speech",
+    "speech-to-text"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -135,9 +140,13 @@
     "source_url": "https://www.assemblyai.com/docs/data-retention-and-model-training",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "speech-to-text"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -204,9 +213,15 @@
     "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-speech",
+    "speech-to-text",
+    "translation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -296,9 +311,15 @@
     "source_url": "https://docs.cartesia.ai/enterprise/zero-data-retention.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "text-to-speech",
+    "speech-to-text",
+    "voice-cloning"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -364,9 +385,15 @@
     "source_url": "https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program.md",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "speech-to-text",
+    "text-to-speech",
+    "voice-agent"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -414,9 +441,15 @@
    "desc_en": "Generate, clone and stream text-to-speech voices and transcribe audio via REST/WebSocket API.",
    "notes": "Besides the local stdio MCP server, ElevenLabs also offers an official remote MCP endpoint that uses OAuth.",
    "verified": "2026-09-24",
+   "operations": [
+    "text-to-speech",
+    "voice-cloning",
+    "speech-to-text"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -474,9 +507,14 @@
    "desc_en": "Synthesize lifelike speech from text and transcribe audio to text via REST/gRPC using GCP credentials.",
    "notes": "Requires a GCP project with billing enabled. Speech-to-Text docs are separate: https://cloud.google.com/speech-to-text/docs.",
    "verified": "2026-09-24",
+   "operations": [
+    "text-to-speech",
+    "speech-to-text"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -507,9 +545,14 @@
    "desc_en": "Generate expressive text-to-speech and run real-time empathic voice conversations (EVI) via REST/WebSocket.",
    "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans.",
    "verified": "2026-09-24",
+   "operations": [
+    "text-to-speech",
+    "voice-agent"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -539,9 +582,15 @@
    "desc_en": "Generate AI voiceovers, clone voices and dub audio in 35+ languages via REST API.",
    "notes": "Two models are offered: Falcon (low latency, for streaming) and Gen2 (studio quality).",
    "verified": "2026-09-24",
+   "operations": [
+    "text-to-speech",
+    "voice-cloning",
+    "translation"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -584,9 +633,15 @@
    "desc_en": "Synthesize speech with TTS models and transcribe or translate audio with Whisper/GPT-4o transcribe via REST.",
    "notes": "Whisper transcription costs about $0.006/min. TTS is billed per character or per token, depending on the model.",
    "verified": "2026-09-24",
+   "operations": [
+    "text-to-speech",
+    "speech-to-text",
+    "translation"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -627,9 +682,14 @@
    "desc_en": "Synthesize speech, clone voices, convert speech-to-speech and detect deepfake audio via REST API.",
    "notes": "Enterprise plans are available for on-prem deployment and custom model training.",
    "verified": "2026-09-24",
+   "operations": [
+    "text-to-speech",
+    "voice-cloning"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -671,9 +731,13 @@
    "desc_en": "Submit audio for asynchronous or streaming speech-to-text transcription, plus sentiment and topic extraction, via REST.",
    "notes": "The docs site offers an MCP install for Cursor and VS Code, but no remote endpoint URL was confirmed. Human transcription is sold separately as a paid option.",
    "verified": "2026-09-24",
+   "operations": [
+    "speech-to-text"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -704,9 +768,13 @@
    "desc_en": "Transcribe audio in batch or real time with speaker diarization across many languages via REST/WebSocket.",
    "notes": "The free tier also includes 2 concurrent real-time sessions. No official vendor MCP server was found.",
    "verified": "2026-09-24",
+   "operations": [
+    "speech-to-text"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

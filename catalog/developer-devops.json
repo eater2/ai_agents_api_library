@@ -62,9 +62,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://circleci.com/api/v2",
+   "operations": [
+    "ci-cd"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -159,9 +163,14 @@
     "source_url": "https://docs.datadoghq.com/api/latest/rate-limits/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "monitoring",
+    "incident-management"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -237,9 +246,13 @@
     "source_url": "https://docs.docker.com/docker-hub/usage/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "package-registry"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -332,9 +345,14 @@
     "source_url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "source-control",
+    "ci-cd"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -433,9 +451,14 @@
     "source_url": "https://docs.gitlab.com/user/gitlab_com/rate_limits/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "source-control",
+    "ci-cd"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -521,9 +544,13 @@
     "how": "POST /v1/measurements returns an id; poll GET /v1/measurements/{id}",
     "source_url": "https://github.com/jsdelivr/globalping"
    },
+   "operations": [
+    "network-probing"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -575,9 +602,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://search.maven.org/solrsearch/select",
+   "operations": [
+    "package-lookup"
+   ],
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false
   },
   {
@@ -636,9 +667,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://api.pagerduty.com",
+   "operations": [
+    "incident-management"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -724,9 +759,13 @@
     "source_url": "https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "api-testing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -794,9 +833,13 @@
     "checked_at": "2026-09-24"
    },
    "base_url": "https://app.reflag.com/api",
+   "operations": [
+    "feature-flags"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false
   },
   {
@@ -849,9 +892,14 @@
     "source_url": "https://docs.sentry.io/api/ratelimits/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "error-tracking",
+    "monitoring"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -936,9 +984,14 @@
     "source_url": "https://supabase.com/docs/reference/api/introduction",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "cloud-infrastructure",
+    "sql-database"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

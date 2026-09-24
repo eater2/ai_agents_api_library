@@ -31,9 +31,13 @@
    "desc_en": "Translate text and documents in real time or batch across 75+ languages via the AWS SDK/API.",
    "notes": "Requires an AWS account and IAM credentials; missing from the candidate list despite being a major agent-callable translation API.",
    "verified": "2026-09-24",
+   "operations": [
+    "translation"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -76,9 +80,14 @@
    "desc_en": "Translate text, detect language, and transliterate across 100+ languages via REST API within Azure AI Services.",
    "notes": "F0 free tier excludes custom model training/hosting, which are billed separately.",
    "verified": "2026-09-24",
+   "operations": [
+    "translation",
+    "language-detection"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -113,9 +122,13 @@
    "desc_en": "Translate and rephrase text or documents between 30+ languages via REST API, SDKs, or an official MCP server.",
    "notes": "DeepL retired the API Free plan around July 2026; no more permanent free tier for new signups.",
    "verified": "2026-09-24",
+   "operations": [
+    "translation"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -171,9 +184,14 @@
    "desc_en": "Translate text/documents and detect language across 100+ languages via REST/gRPC API within Google Cloud.",
    "notes": "Advanced (v3) edition supports glossaries/custom models; requires a GCP project with billing enabled even for free usage.",
    "verified": "2026-09-24",
+   "operations": [
+    "translation",
+    "language-detection"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -200,9 +218,13 @@
    "desc_en": "Check grammar, style, and spelling in 30+ languages via a public HTTP API, with an optional Premium key for higher limits.",
    "notes": "This is a proofreading/grammar API, not machine translation.",
    "verified": "2026-09-24",
+   "operations": [
+    "grammar-check"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -244,9 +266,13 @@
    "desc_en": "Send adaptive neural machine translation requests with in-context learning via a REST API.",
    "notes": "ModernMT is being folded into a new product called Lara; ModernMT API compatibility is stated to continue only until Dec 31, 2026 - plan for migration.",
    "verified": "2026-09-24",
+   "operations": [
+    "translation"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

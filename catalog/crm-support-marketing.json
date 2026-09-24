@@ -89,9 +89,13 @@
     "source_url": "https://docs.attio.com/rest-api/endpoint-reference/records/create-a-record",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "crm"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -190,9 +194,14 @@
     "source_url": "https://developers.hubspot.com/docs/api-reference/crm-contacts-v3/guide",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "crm",
+    "email-marketing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -270,9 +279,14 @@
     "source_url": "https://developers.intercom.com/docs/references/rest-api/errors/rate-limiting",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "support-ticketing",
+    "crm"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -376,9 +390,14 @@
     "how": "bulk import/catalog and campaign send operations create jobs; poll the corresponding get_*_job endpoint",
     "source_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server_available_tools"
    },
+   "operations": [
+    "email-marketing",
+    "sms"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -461,9 +480,13 @@
     "how": "batch operations endpoint processes requests asynchronously; poll the batch status",
     "source_url": "https://mailchimp.com/developer/marketing/docs/fundamentals/"
    },
+   "operations": [
+    "email-marketing"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -532,9 +555,13 @@
     "source_url": "https://pipedrive.readme.io/docs/marketplace-scopes-and-permissions-explanations",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "crm"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -611,9 +638,13 @@
     "source_url": "https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "crm"
+   ],
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -704,9 +735,13 @@
     "source_url": "https://developer.zendesk.com/api-reference/ticketing/oauth/oauth_tokens/",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "support-ticketing"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

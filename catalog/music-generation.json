@@ -43,9 +43,14 @@
     "how": "POST /api/v1/tracks/compose returns task_id; poll GET /api/v1/tasks/{task_id} until status 'composed'",
     "source_url": "https://raw.githubusercontent.com/Beatoven/public-api/main/docs/api-spec.md"
    },
+   "operations": [
+    "music-generation",
+    "sound-effects"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -116,9 +121,13 @@
     "how": "POST /v1/music returns the generated audio file directly",
     "source_url": "https://elevenlabs.io/docs/api-reference/music/compose"
    },
+   "operations": [
+    "music-generation"
+   ],
    "no_auth": false,
-   "has_free_tier": false,
-   "has_trial": true,
+   "has_free_tier": true,
+   "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -177,9 +186,14 @@
     "how": "POST /api/ai/prompt/songs returns a song object with the generated track",
     "source_url": "https://b2b-soundtracks-swagger-prd.loudly.com/swagger/b2b_swagger.yaml"
    },
+   "operations": [
+    "music-generation",
+    "stem-separation"
+   ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -235,9 +249,13 @@
     "how": "POST /tracks, then poll GET track by id or use a webhook",
     "source_url": "https://mubert.com/api/docs"
    },
+   "operations": [
+    "music-generation"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -271,9 +289,13 @@
     "source_url": "https://docs.channel.io/soundraw-faq/en/articles/SOUNDRAW-API-fbf580fd",
     "checked_at": "2026-09-24"
    },
+   "operations": [
+    "music-generation"
+   ],
    "no_auth": false,
    "has_free_tier": false,
-   "has_trial": false,
+   "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -338,9 +360,14 @@
     "how": "POST /v2beta/audio/stable-audio-2/text-to-audio returns audio directly; GET /v2beta/audio/results/{id} exists for async generations",
     "source_url": "https://api.stability.ai/v2alpha/openapi"
    },
+   "operations": [
+    "music-generation",
+    "sound-effects"
+   ],
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
+   "no_card": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
