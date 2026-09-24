@@ -34,6 +34,8 @@ Teksty (skill, llms.txt, README)
 
 Na koniec
 - [ ] Powtórzyć test produktu (`python scripts/interview_product_test.py`) i porównać z 2026-09-24 (bf)
+  - Porównanie mechaniczne zrobione: `research/agent-interviews/2026-09-24-product-test-retest/comparison.md` (szum w wynikach zniknął we wszystkich 3 zadaniach). Wywiady zablokowane: OpenRouter 402 (brak środków); po doładowaniu `--suffix=retest --missing`.
+- [ ] `call` (przykładowe wywołanie) ma tylko 31/330 wpisów, `unit_price` 25/330 — uzupełnić przynajmniej dla wpisów z `free_plan` (3b)
 
 ## P0c — oceny i opinie: wywiady z 7 agentami (2026-09-24)
 
