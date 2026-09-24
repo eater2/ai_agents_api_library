@@ -1,0 +1,542 @@
+=== Claude skill (SKILL.md) ===
+---
+name: ai-agents-api-library
+description: Find a third-party API or MCP server that gives you a capability you don't have (generate images, video, music or 3D, web search or scraping, geocoding, weather, send email or SMS, OCR, translation, payments, CAD/BIM, diagrams and more). Returns verified services with auth method, free tier, official MCP endpoint and docs link. Use when a task needs an external service, when the user asks which API or tool to use for something, or when choosing an MCP server to connect.
+---
+
+# AI Agents API Library
+
+A verified catalog of 300+ APIs and MCP servers that an agent can call after a one-time human setup (API key, OAuth or MCP connection). Every entry gives the docs URL, the auth method and header, the MCP endpoint, the free tier and a verification date.
+
+## When to use
+
+- The task needs a capability you don't have built in or connected, e.g. "make a 5-second video", "geocode these addresses" or "send this as an SMS".
+- The user asks which service, API or MCP server to use for something.
+- You are choosing which MCP server to suggest the user connect.
+
+Skip it when a connected tool already does the job.
+
+## How to look things up
+
+**If the `ai-agents-api-library` MCP tools are available**, use them:
+
+1. `search_apis` with `query` (what you need) and optional filters: `category`, `mcp` (`official` or `any`), `no_auth`, `free_tier`, `auth`.
+2. `get_api` with the chosen `id` for full details (auth header, notes, OpenAPI and llms.txt links).
+3. `get_reviews` with the `id` to read up to 100 user reviews (pros, cons; filter with `max_rating: 2` for complaints) before recommending a service.
+4. `list_categories` when you are unsure what exists.
+
+**Otherwise, fetch the static files** (plain HTTPS, no key needed):
+
+1. `https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/llms.txt` lists categories with counts and the services that need no key.
+2. `https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/<category>.json` holds all entries of one category. It is small, so fetch it rather than `catalog/all.json`.
+
+Category ids: `web-search`, `web-scraping-browser`, `knowledge-research`, `image-generation`, `video-generation`, `audio-speech`, `music-generation`, `3d-generation`, `architecture-cad-bim`, `diagrams-software-architecture`, `design-ui`, `presentations-documents`, `translation-language`, `code-execution-sandbox`, `developer-devops`, `cloud-hosting`, `databases-vector-memory`, `communication-email-chat`, `voice-agents-telephony`, `productivity-workspace`, `crm-support-marketing`, `social-media`, `maps-geo-weather`, `finance-payments`, `ecommerce`, `automation-integration`, `model-inference`.
+
+## Choosing a service
+
+Prefer, in this order:
+
+1. `no_auth: true`: you can call it right now without asking the user for anything.
+2. `mcp.type: "official"`: the user connects it once, then you call it as a tool.
+3. `has_free_tier: true`: the user can try it without paying; check `free_tier` for the limits.
+4. Everything else, by fit to the task.
+
+Skip entries with `stale: true` or with `link_check.docs` equal to `broken` unless nothing else fits, and tell the user why.
+
+## Presenting options and credentials
+
+- Offer two or three candidates with one line each: what it does, the free tier and whether an official MCP server exists. Let the user pick unless the choice is obvious.
+- For the chosen service, tell the user what to create (API key or OAuth app) and link `docs`. Suggest adding the key through their platform's secret or connector settings (MCP configuration, environment variable) rather than pasting it into the chat.
+- Never invent credentials, endpoints or prices. The catalog is a shortlist, not the source of truth: confirm limits and pricing in `docs` before relying on them.
+- If a call fails, re-read `docs`. The API may have changed since the `verified` date.
+
+
+=== MCP server: https://ai-agents-api-library.vercel.app/mcp (Streamable HTTP, no key) — tools/list ===
+[
+ {
+  "name": "list_categories",
+  "title": "List API categories",
+  "description": "List all categories in the catalog with the number of services in each.",
+  "inputSchema": {
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "type": "object",
+   "properties": {}
+  },
+  "execution": {
+   "taskSupport": "forbidden"
+  }
+ },
+ {
+  "name": "search_apis",
+  "title": "Search APIs and MCP servers",
+  "description": "Search a verified catalog of 300+ third-party APIs and MCP servers for AI agents, with auth method, free tier, MCP endpoint and docs link. Use when a task needs an external capability you don't have.",
+  "inputSchema": {
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "type": "object",
+   "properties": {
+    "query": {
+     "description": "What you need, e.g. 'text to video', 'geocoding', 'send sms'",
+     "type": "string"
+    },
+    "category": {
+     "description": "Category id from list_categories, e.g. 'video-generation'",
+     "type": "string"
+    },
+    "mcp": {
+     "description": "Only services with an official MCP server, or any MCP server",
+     "type": "string",
+     "enum": [
+      "official",
+      "any"
+     ]
+    },
+    "no_auth": {
+     "description": "Only services usable without any key",
+     "type": "boolean"
+    },
+    "free_tier": {
+     "description": "Only services with a free tier or free usage",
+     "type": "boolean"
+    },
+    "auth": {
+     "type": "string",
+     "enum": [
+      "api_key",
+      "oauth2",
+      "api_key+oauth2",
+      "none",
+      "cloud_iam"
+     ]
+    },
+    "limit": {
+     "description": "Max results, default 10",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 50
+    }
+   }
+  },
+  "execution": {
+   "taskSupport": "forbidden"
+  }
+ },
+ {
+  "name": "get_api",
+  "title": "Get API details",
+  "description": "Full entry for one service: docs, auth method and how the credential is sent, MCP endpoint, free tier, SDKs, OpenAPI and llms.txt links, notes, verification date, last link check and ratings (public review scores and usage counts, each with source url and fetch date).",
+  "inputSchema": {
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "description": "Service id from search_apis"
+    }
+   },
+   "required": [
+    "id"
+   ]
+  },
+  "execution": {
+   "taskSupport": "forbidden"
+  }
+ },
+ {
+  "name": "get_reviews",
+  "title": "Get user reviews",
+  "description": "Public user reviews of one service (up to 100, from SourceForge): rating, title, pros, cons, overall, reviewer role, company size, date and link to the original. Reviewer names are not included. Use to judge real-world quality before recommending a service.",
+  "inputSchema": {
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "description": "Service id from search_apis"
+    },
+    "min_rating": {
+     "description": "Only reviews rated at least this",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "max_rating": {
+     "description": "Only reviews rated at most this, e.g. 2 for complaints",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "limit": {
+     "description": "Max reviews, default 20",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 100
+    }
+   },
+   "required": [
+    "id"
+   ]
+  },
+  "execution": {
+   "taskSupport": "forbidden"
+  }
+ }
+]
+
+=== Task 1: Make a 5-second video clip of a sunset over the sea from a text prompt. The user has no budget.
+search_apis({"query": "generate video from text prompt", "free_tier": true}) returned:
+{
+ "source": "github",
+ "results": [
+  {
+   "id": "google-gemini-api",
+   "name": "Google Gemini API",
+   "category": "model-inference",
+   "what": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://gemini-api-docs-mcp.dev"
+   },
+   "free_tier": "free tier: rate-limited access to Flash/Pro models",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://ai.google.dev/api"
+  },
+  {
+   "id": "mux-video-api",
+   "name": "Mux Video API",
+   "category": "video-generation",
+   "what": "Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.mux.com"
+   },
+   "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://www.mux.com/docs"
+  },
+  {
+   "id": "akool-api",
+   "name": "Akool API",
+   "category": "video-generation",
+   "what": "Generate face-swap, talking avatar, and video-translation content programmatically via REST API.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free Basic plan with limited credits, no card required",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://docs.akool.com"
+  },
+  {
+   "id": "creatomate-api",
+   "name": "Creatomate API",
+   "category": "video-generation",
+   "what": "Programmatically generate and render videos/images from templates via REST API.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free trial, 50 API credits",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://creatomate.com/docs/api/rest-api/authentication"
+  },
+  {
+   "id": "voyage-ai-embeddings-rerank",
+   "name": "Voyage AI (embeddings/rerank)",
+   "category": "model-inference",
+   "what": "Generate text, code and multimodal embeddings and rerank documents for RAG and semantic search.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: 200M tokens on current models",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://docs.voyageai.com/reference/embeddings-api"
+  }
+ ]
+}
+
+=== Task 2: Geocode 200 street addresses in Poland and return latitude/longitude.
+search_apis({"query": "geocode addresses", "free_tier": true}) returned:
+{
+ "source": "github",
+ "results": [
+  {
+   "id": "google-maps-platform",
+   "name": "Google Maps Platform",
+   "category": "maps-geo-weather",
+   "what": "Geocode addresses, get directions/routes, places data, and static/dynamic maps via REST APIs or Google's remote MCP server.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://mapstools.googleapis.com/mcp"
+   },
+   "free_tier": "$200 free monthly usage credit across most Maps APIs",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://developers.google.com/maps/documentation",
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.7,
+     "reviews": 6,
+     "url": "https://sourceforge.net/software/product/Google-Maps/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ]
+  },
+  {
+   "id": "openstreetmap-nominatim",
+   "name": "OpenStreetMap Nominatim",
+   "category": "maps-geo-weather",
+   "what": "Geocode and reverse-geocode addresses from OpenStreetMap data via a free public REST API.",
+   "auth": "none",
+   "no_auth": true,
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free, no key; public demo server capped at 1 request/second, bulk use prohibited",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://nominatim.org/release-docs/latest/api/Overview/"
+  },
+  {
+   "id": "esri-arcgis-location-platform",
+   "name": "Esri ArcGIS Location Platform",
+   "category": "architecture-cad-bim",
+   "what": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
+   "auth": "api_key+oauth2",
+   "no_auth": false,
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier with monthly free credits, then usage-based pricing",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://developers.arcgis.com/documentation/"
+  },
+  {
+   "id": "ip2location-io",
+   "name": "IP2Location.io API",
+   "category": "maps-geo-weather",
+   "what": "Lets an agent geolocate IPv4/IPv6 addresses, get ASN/ISP/proxy data, and look up domain WHOIS records.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/ip2location/mcp-ip2location-io"
+   },
+   "free_tier": "Free plan: 50,000 IP geolocation queries/month, 500 domain WHOIS and 50 hosted-domain queries/month (attribution required); keyless: 1,000 queries/day.",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://www.ip2location.io/ip2location-documentation"
+  },
+  {
+   "id": "geoapify",
+   "name": "Geoapify",
+   "category": "maps-geo-weather",
+   "what": "Geocode, search places, and calculate routes/isochrones via REST APIs built on open geodata.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free tier: 3,000 credits/day (~90,000/month), no card required",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://apidocs.geoapify.com/"
+  }
+ ]
+}
+
+=== Task 3: Send an SMS reminder to a customer's phone number.
+search_apis({"query": "send SMS"}) returned:
+{
+ "source": "github",
+ "results": [
+  {
+   "id": "line-messaging-api",
+   "name": "LINE Messaging API",
+   "category": "communication-email-chat",
+   "what": "Lets an agent send and reply to messages, rich messages and broadcasts to users of a LINE Official Account and read user profiles.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/line/line-bot-mcp-server"
+   },
+   "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited and never counted. Free quotas vary by region",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://developers.line.biz/en/reference/messaging-api/"
+  },
+  {
+   "id": "twilio",
+   "name": "Twilio",
+   "category": "communication-email-chat",
+   "what": "Send/receive SMS, WhatsApp messages, and voice calls programmatically via REST API.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/twilio-labs/mcp"
+   },
+   "free_tier": "free trial credit, no permanent free tier (pay-as-you-go after)",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://www.twilio.com/docs/usage/api",
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "twilio-labs/mcp",
+     "stars": 111,
+     "forks": 41,
+     "pushed_at": "2026-02-14",
+     "archived": false,
+     "url": "https://github.com/twilio-labs/mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.8,
+     "reviews": 13,
+     "url": "https://sourceforge.net/software/product/Twilio/",
+     "fetched_at": "2026-09-24T16:58Z"
+    }
+   ]
+  },
+  {
+   "id": "vonage-api",
+   "name": "Vonage API",
+   "category": "communication-email-chat",
+   "what": "Send SMS, make voice calls, and build video apps via a unified communications REST API.",
+   "auth": "api_key+oauth2",
+   "no_auth": false,
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "trial/test credit on signup, then pay-as-you-go",
+   "has_free_tier": false,
+   "has_trial": true,
+   "docs": "https://developer.vonage.com/en/documentation"
+  },
+  {
+   "id": "whatsapp-business-cloud-api",
+   "name": "WhatsApp Business Cloud API",
+   "category": "communication-email-chat",
+   "what": "Send/receive WhatsApp messages, template messages, and media programmatically via Graph API.",
+   "auth": "oauth2",
+   "no_auth": false,
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/lharries/whatsapp-mcp"
+   },
+   "free_tier": "1,000 free service conversations/mo (Meta), then per-conversation pricing",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://developers.facebook.com/docs/whatsapp/cloud-api",
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "lharries/whatsapp-mcp",
+     "stars": 6310,
+     "forks": 1336,
+     "pushed_at": "2025-07-13",
+     "archived": false,
+     "url": "https://github.com/lharries/whatsapp-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
+  },
+  {
+   "id": "discord-api",
+   "name": "Discord API",
+   "category": "communication-email-chat",
+   "what": "Send messages, manage channels/roles, and build interactive bots via REST and Gateway API.",
+   "auth": "oauth2",
+   "no_auth": false,
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/SaseQ/discord-mcp"
+   },
+   "free_tier": "free, no key needed beyond creating a bot application",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://docs.discord.com/developers/intro",
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "SaseQ/discord-mcp",
+     "stars": 507,
+     "forks": 104,
+     "pushed_at": "2026-04-25",
+     "archived": false,
+     "url": "https://github.com/SaseQ/discord-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "smithery",
+     "uses": 82,
+     "url": "https://smithery.ai/servers/discord",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
+  }
+ ]
+}
+
+=== get_api({"id": "google-gemini-api"}) returned:
+{
+ "id": "google-gemini-api",
+ "name": "Google Gemini API",
+ "category": "model-inference",
+ "homepage": "https://ai.google.dev",
+ "docs": "https://ai.google.dev/api",
+ "auth": "api_key",
+ "auth_hint": "x-goog-api-key: <GEMINI_API_KEY> (or ?key= query param)",
+ "mcp": {
+  "type": "official",
+  "url": "https://gemini-api-docs-mcp.dev"
+ },
+ "free_tier": "free tier: rate-limited access to Flash/Pro models",
+ "sdk": [
+  "python",
+  "typescript",
+  "java",
+  "go"
+ ],
+ "openapi": null,
+ "llms_txt": "https://ai.google.dev/gemini-api/docs/llms.txt",
+ "desc_en": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
+ "notes": "Official MCP server only searches documentation; it does not run inference. Free-tier content may be used to improve Google products. Google is replacing standard API keys with authorization keys; unrestricted standard keys are rejected in 2026, so use a current key type. Google publishes a Discovery document, not an OpenAPI spec.",
+ "verified": "2026-09-24",
+ "no_auth": false,
+ "has_free_tier": true,
+ "has_trial": false,
+ "stale": false,
+ "link_check": {
+  "checked_at": "2026-09-24",
+  "docs": "ok",
+  "mcp": "reachable",
+  "llms_txt": "ok"
+ }
+}
