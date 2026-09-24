@@ -119,7 +119,7 @@ def sf_products():
         products.update(re.findall(r"<loc>(https://sourceforge\.net/software/product/[^/<]+/)</loc>", get(u)))
         time.sleep(0.3)
     cache.parent.mkdir(exist_ok=True)
-    cache.write_text("\n".join(sorted(products)), encoding="utf-8")
+    cache.write_text("\n".join(sorted(products)), encoding="utf-8", newline="\n")
     return sorted(products)
 
 
@@ -250,7 +250,7 @@ def main():
                     (reviews_dir / f"{e['id']}.json").write_text(json.dumps(
                         {"id": e["id"], "source": "sourceforge", "url": res["url"], "fetched_at": now,
                          "rating": res["rating"], "reviews_total": res["reviews"], "reviews": reviews},
-                        ensure_ascii=False, indent=1), encoding="utf-8")
+                        ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
                 print(f"  [{i}/{len(catalog)}] {e['id']}: {res['rating']} / {res['reviews']} reviews, {len(reviews)} texts", flush=True)
         print(f"sourceforge: {found} products", flush=True)
 
@@ -262,7 +262,7 @@ def main():
             ratings[eid] = kept + items
         else:
             ratings.pop(eid, None)
-    out_file.write_text(json.dumps(dict(sorted(ratings.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    out_file.write_text(json.dumps(dict(sorted(ratings.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
     print(f"wrote {out_file.relative_to(ROOT)}: {len(ratings)} entries with signals")
 
 

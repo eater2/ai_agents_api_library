@@ -50,7 +50,7 @@ def main():
     path = ROOT / "data" / "stats.json"
     history = json.loads(path.read_text("utf-8")) if path.exists() else []
     history.append(snap)
-    path.write_text(json.dumps(history, indent=1) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(history, indent=1) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps(snap))
 
 

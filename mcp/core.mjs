@@ -145,7 +145,7 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.2.0" },
+    { name: "ai-agents-api-library", version: "0.2.1" },
     {
       instructions:
         "Catalog of verified third-party APIs and MCP servers an agent can call after a one-time human setup " +
