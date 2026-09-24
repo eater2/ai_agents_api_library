@@ -1,0 +1,255 @@
+{
+ "bright-data": {
+  "free_tier": "Free tier: 5,000 requests/month via the MCP server (renews on the 1st, no card required); other products pay-as-you-go",
+  "sources": [
+   "https://github.com/brightdata/brightdata-mcp"
+  ]
+ },
+ "browser-use-cloud-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.browser-use.com/v3/mcp"
+  },
+  "sources": [
+   "https://docs.browser-use.com/cloud/guides/mcp-server.md"
+  ]
+ },
+ "browserbase-stagehand": {
+  "free_tier": "Free tier: 1 browser hour/month, 3 concurrent browsers, 15 min/session, no card required",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.browserbase.com/mcp"
+  },
+  "notes": "Billed by browser-hours/compute time; Stagehand SDK itself is open source but needs a browser backend such as Browserbase. The MCP GitHub repo was archived in July 2026; use the hosted endpoint.",
+  "sources": [
+   "https://www.browserbase.com/pricing",
+   "https://github.com/browserbase/mcp-server-browserbase"
+  ]
+ },
+ "hyperbrowser": {
+  "docs": "https://www.hyperbrowser.ai/docs",
+  "sources": [
+   "https://www.hyperbrowser.ai/docs"
+  ]
+ },
+ "oxylabs": {
+  "free_tier": "Trial: Web Scraper API free trial with up to 2,000 results one-time, no card required",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.oxylabs.io/mcp"
+  },
+  "notes": "Enterprise-oriented pricing overall, but self-serve API-user creation and free trial are available via the dashboard. Official MCP is hosted at mcp.oxylabs.io; its GitHub repo was archived on 2026-09-16.",
+  "sources": [
+   "https://oxylabs.io/products/scraper-api/web/pricing",
+   "https://github.com/oxylabs/oxylabs-mcp"
+  ]
+ },
+ "scrapegraphai-api": {
+  "free_tier": "Free: 500 API credits per month, no card required",
+  "auth_hint": "SGAI-APIKEY: <key> header",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.scrapegraphai.com/mcp"
+  },
+  "sources": [
+   "https://docs.scrapegraphai.com/knowledge-base/account/pricing.md",
+   "https://docs.scrapegraphai.com/api-reference/introduction.md",
+   "https://docs.scrapegraphai.com/services/mcp-server/introduction.md"
+  ]
+ },
+ "scraperapi": {
+  "free_tier": "Free: free plan with 1,000 API credits per month (max 5 concurrent connections); new accounts start with a 7-day trial of 5,000 one-time credits, no card required",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.scraperapi.com/mcp"
+  },
+  "notes": "Widely used alternative to ScrapingBee/Zyte; official hosted MCP server at mcp.scraperapi.com/mcp.",
+  "sources": [
+   "https://www.scraperapi.com/pricing/",
+   "https://docs.scraperapi.com/integrations/llm-integrations/mcp-server.md"
+  ]
+ },
+ "scrapingbee": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.scrapingbee.com/mcp"
+  },
+  "notes": "Postman collection provided in place of a published OpenAPI spec. Hosted MCP takes the API key as an api_key query parameter on the server URL.",
+  "sources": [
+   "https://www.scrapingbee.com/documentation/remote-mcp/"
+  ]
+ },
+ "spider-cloud": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.spider.cloud/mcp"
+  },
+  "sources": [
+   "https://spider.cloud/mcp/"
+  ]
+ },
+ "steel": {
+  "free_tier": "Trial: Launch plan is $0 + usage with $30 one-time usage credits valid 90 days (10 concurrent sessions, 60 requests/min); no Hobby plan",
+  "auth_hint": "steel-api-key header",
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/steel-dev/steel-mcp-server"
+  },
+  "notes": "Open-source self-hostable browser engine (steel-browser) also available; official MCP server at steel-dev/steel-mcp-server.",
+  "sources": [
+   "https://docs.steel.dev/overview/pricinglimits",
+   "https://docs.steel.dev/llms-full.txt",
+   "https://github.com/steel-dev/steel-mcp-server"
+  ]
+ },
+ "autodesk-platform-services-aps": {
+  "free_tier": "Free tier: limited usage of rated APIs (Automation, Model Derivative, Flow Graph Engine, Reality Capture) per month, renews monthly; Pay as You Go beyond that needs a card or PayPal",
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/autodesk-platform-services/aps-mcp-server-python"
+  },
+  "notes": "Successor to Autodesk Forge; requires an Autodesk account and app registration in the APS console. Autodesk publishes reference MCP servers (Node.js, Python, .NET) to run yourself; no hosted endpoint.",
+  "sources": [
+   "https://aps.autodesk.com/blog/aps-business-model-evolution",
+   "https://aps.autodesk.com/blog/building-custom-mcp-servers-autodesk-platform-services",
+   "https://github.com/autodesk-platform-services/aps-mcp-server-python"
+  ]
+ },
+ "bentley-itwin-platform-apis": {
+  "free_tier": "Free tier: Community plan with 100 credits/month, 10 GB cloud data, 100 GB reality data; non-commercial, non-production use only; no expiry",
+  "sources": [
+   "https://developer.bentley.com/pricing/"
+  ]
+ },
+ "esri-arcgis-location-platform": {
+  "mcp": {
+   "type": "official",
+   "url": "https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/"
+  },
+  "notes": "Free sign-up; usage beyond free monthly credits is billed per service call. MCP support for location services (geocoding, routing, elevation, static maps) is in beta.",
+  "sources": [
+   "https://community.esri.com/t5/developers-blog/new-mcp-support-beta-in-arcgis-location-platform/ba-p/1711674",
+   "https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/"
+  ]
+ },
+ "onshape-rest-api": {
+  "auth_hint": "API key pair (access/secret) via Basic auth (base64 access:secret) or optional HMAC request signature; OAuth2 Bearer token for published apps",
+  "mcp": {
+   "type": "official",
+   "url": "https://fs-mcp.labs.onshape.app/mcp"
+  },
+  "notes": "Free-tier API access is limited to public documents; private/commercial use needs a paid Onshape subscription. FeatureScript MCP server is in early access via Onshape Labs (App Store subscription).",
+  "sources": [
+   "https://onshape-public.github.io/docs/auth/apikeys/",
+   "https://www.onshape.com/en/blog/featurescript-mcp-server-enables-text-code-cad"
+  ]
+ },
+ "procore-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://app.procore.com/rest/v1.0/mcp"
+  },
+  "notes": "Requires joining the Procore Developer Program and OAuth app approval for production scopes; sandbox is free. Official AI Edge MCP (US02: us02.procore.com) authenticates with a Datagrid API key.",
+  "sources": [
+   "https://raw.githubusercontent.com/procore/documentation/main/mcp/procore_ai_edge_mcp_setup.md"
+  ]
+ },
+ "rhino-compute-mcneel": {
+  "free_tier": "Paid only: self-hosted, requires a Rhino license; core-hour billing at $0.10 per core per hour of Rhino uptime on Windows Server, no free allowance",
+  "sources": [
+   "https://developer.rhino3d.com/guides/compute/core-hour-billing/"
+  ]
+ },
+ "speckle-api": {
+  "mcp": {
+   "type": "community",
+   "url": "https://github.com/bimgeek/speckle-mcp"
+  },
+  "sources": [
+   "https://github.com/bimgeek/speckle-mcp"
+  ]
+ },
+ "zoo-text-to-cad-api-kittycad": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/KittyCAD/mcp"
+  },
+  "sources": [
+   "https://github.com/KittyCAD/mcp",
+   "https://pypi.org/project/zoo-mcp/"
+  ]
+ },
+ "amazon-selling-partner-api": {
+  "docs": "https://developer-docs.amazon/sp-api/",
+  "homepage": "https://developer-docs.amazon/sp-api/",
+  "mcp": {
+   "type": "official",
+   "url": "https://sellingpartner-ai.amazon.com/mcp"
+  },
+  "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review. Official MCP uses Seller Central OAuth consent.",
+  "sources": [
+   "https://github.com/amzn/selling-partner-agentic-toolkit",
+   "https://developer-docs.amazon/sp-api/"
+  ]
+ },
+ "bigcommerce-api": {
+  "docs": "https://docs.bigcommerce.com/developer/api-reference/rest/overview",
+  "homepage": "https://docs.bigcommerce.com",
+  "mcp": {
+   "type": "official",
+   "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview"
+  },
+  "notes": "Official Storefront MCP (B2C/B2B, per-store URL from the control panel) covers catalog, cart and checkout only, not the admin API; docs.bigcommerce.com/_mcp/server is a docs-search MCP.",
+  "sources": [
+   "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+   "https://docs.bigcommerce.com/developer/api-reference/mcp/storefront/b2c",
+   "https://docs.bigcommerce.com/_mcp/server"
+  ]
+ },
+ "ebay-apis": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/eBay/npm-public-api-mcp"
+  },
+  "notes": "Production access requires an eBay developer account and app keys; rate limits scale with account compliance tier. Official MCP (npx @ebay/npm-public-api-mcp) runs locally, read-only (GET) in production.",
+  "sources": [
+   "https://github.com/eBay/npm-public-api-mcp"
+  ]
+ },
+ "etsy-open-api-v3": {
+  "auth_hint": "OAuth2 Bearer token + x-api-key header (<keystring>:<shared_secret>)",
+  "free_tier": "Free: developer keystring at no cost; rate limits (QPS/QPD) are set per app and shown in the Developer Portal",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.api.etsycloud.com/mcp"
+  },
+  "notes": "Requires an approved Etsy developer app; OAuth2 user consent needed for shop-management scopes. Missing from candidate list despite being a major agent-callable marketplace API. Official Dev MCP covers the API spec only; it does not call the API.",
+  "sources": [
+   "https://developer.etsy.com/documentation/essentials/authentication",
+   "https://developer.etsy.com/documentation/essentials/rate-limits",
+   "https://developers.etsy.com/documentation/mcp_server/devmcpserver/"
+  ]
+ },
+ "shopify-admin-storefront-api": {
+  "docs": "https://shopify.dev/docs/api/admin-graphql",
+  "mcp": {
+   "type": "official",
+   "url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront"
+  },
+  "notes": "REST Admin API is legacy; new public apps must use GraphQL Admin. Dev MCP (npx @shopify/dev-mcp) serves docs/schemas only; per-store Storefront MCP at https://{shop}.myshopify.com/api/mcp needs no auth (catalog, cart, policies).",
+  "sources": [
+   "https://shopify.dev/docs/api/admin-rest",
+   "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront"
+  ]
+ },
+ "woocommerce-rest-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://developer.woocommerce.com/docs/features/mcp/"
+  },
+  "notes": "Requires your own WordPress+WooCommerce installation; there is no shared multi-tenant cloud endpoint. Official MCP (developer preview) at /wp-json/mcp/mcp-adapter-default-server, auth via Application Passwords.",
+  "sources": [
+   "https://developer.woocommerce.com/docs/features/mcp/"
+  ]
+ }
+}

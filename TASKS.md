@@ -8,11 +8,11 @@ Na podstawie wywiadów z agentami (`research/agent-interviews/2026-09-24/report.
 Wniosek: skill dobrze wyzwala `search_apis`, ale agenci porzucają narzędzie po 1–2 chybionych wynikach. Plan na noc 2026-09-24/25, właściciel w nawiasie.
 
 Wyszukiwanie (`mcp/core.mjs`)
-- [ ] Pusty wynik zamiast dopełniania listy: próg trafności, komunikat o luce w pokryciu („no catalogued text-to-video API with a free tier”) i podpowiedź (inna kategoria / bez filtra / web search) — 5/7 agentów (54)
-- [ ] Ranking po czynności: pole `operations` z wpisów, wynik `match: exact | adjacent` z krótkim powodem — blokada nr 1 dla 6/7 (54, po danych od bf)
-- [ ] Ranking uwzględnia wolumen i limity (`rate_limits`, zakaz pracy wsadowej, np. Nominatim) (54)
-- [ ] Test regresyjny z 3 zadań testu: wideo bez Voyage/Mux/Gemini; geokodowanie z Geoapify/Mapbox/HERE, bez IP2Location; SMS z Twilio/Vonage na górze, bez LINE/Discord/WhatsApp (54)
-- [ ] Opisy narzędzi MCP: warunek pominięcia (podłączone narzędzie lub własny model), „once a human has provisioned credentials”, „ranking is not proof of fit”, `get_reviews` opcjonalne (54)
+- [x] Pusty wynik zamiast dopełniania listy: próg trafności, komunikat o luce w pokryciu („no catalogued text-to-video API with a free tier”) i podpowiedź (inna kategoria / bez filtra / web search) — 5/7 agentów (54)
+- [x] Ranking po czynności: pole `operations` z wpisów, wynik `match: exact | adjacent` z krótkim powodem — blokada nr 1 dla 6/7 (54, po danych od bf; kod gotowy w 0.3.1, działa po dodaniu `operations`)
+- [x] Ranking uwzględnia wolumen i limity (`rate_limits`, zakaz pracy wsadowej, np. Nominatim) (54)
+- [x] Test regresyjny z 3 zadań testu: wideo bez Voyage/Mux/Gemini; geokodowanie z Geoapify/Mapbox/HERE, bez IP2Location; SMS z Twilio/Vonage na górze, bez LINE/Discord/WhatsApp (54; `tests/search.test.mjs`, pomijany do czasu `operations`)
+- [x] Opisy narzędzi MCP: warunek pominięcia (podłączone narzędzie lub własny model), „once a human has provisioned credentials”, „ranking is not proof of fit”, `get_reviews` opcjonalne (54)
 
 Dane (`data/catalog.json`)
 - [ ] `operations`: kontrolowany słownik czynności (np. `text-to-video`, `sms`, `street-geocoding`, `ip-geolocation`, `video-hosting`) dla wszystkich 323 wpisów + opis słownika w schemacie (bf)

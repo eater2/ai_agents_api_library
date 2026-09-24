@@ -1,0 +1,185 @@
+{
+ "context7-library-docs-for-agents": {
+  "free_tier": "Free: 1,000 API calls per month with a free API key (low limits without key); Pro $10/seat/month",
+  "sources": [
+   "https://context7.com/plans"
+  ]
+ },
+ "crossref-rest-api": {
+  "notes": "Base URL https://api.crossref.org (/works, /journals, /funders, /members). Rate limits are fixed per pool: public 5 req/s (concurrency 1), polite with mailto 10 req/s (concurrency 3); 429 when exceeded. Metadata Plus is a paid SLA tier (150 req/s).",
+  "sources": [
+   "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/"
+  ]
+ },
+ "gitingest": {
+  "free_tier": "No key needed: free public service; hosted API limited to 10 requests/minute per endpoint (the web UI also has rate limiting and CAPTCHA protection).",
+  "sources": [
+   "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py"
+  ]
+ },
+ "hacker-news-api": {
+  "mcp": {
+   "type": "community",
+   "url": "https://github.com/devrelopers/hackernews-mcp"
+  },
+  "sources": [
+   "https://github.com/pskill9/hn-server",
+   "https://github.com/devrelopers/hackernews-mcp"
+  ]
+ },
+ "nytimes": {
+  "free_tier": "Free: all public APIs are free; 500 requests/day and 5 requests/minute per API.",
+  "notes": "Returns metadata/abstracts and links, not full article text. Exceeding limits returns HTTP 429; wait ~12 s between calls. Non-commercial use only; terms forbid using the APIs to develop a software product or train an ML/AI system.",
+  "sources": [
+   "https://developer.nytimes.com/faq",
+   "https://developer.nytimes.com/terms"
+  ]
+ },
+ "wolfram-alpha-api": {
+  "free_tier": "Free: non-commercial developer AppID with up to 2,000 calls/month; paid for commercial use",
+  "sources": [
+   "https://products.wolframalpha.com/api"
+  ]
+ },
+ "adobe-firefly-services-api": {
+  "mcp": {
+   "type": "community",
+   "url": "https://github.com/Focus-GTS/firefly-services-mcp"
+  },
+  "sources": [
+   "https://github.com/Focus-GTS/firefly-services-mcp"
+  ]
+ },
+ "freepik-api": {
+  "docs": "https://docs.magnific.com",
+  "auth_hint": "x-magnific-api-key header (legacy x-freepik-api-key); base URL https://api.magnific.com/v1",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.magnific.com"
+  },
+  "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com. The official remote MCP uses OAuth sign-in, no API key.",
+  "sources": [
+   "https://docs.magnific.com/modelcontextprotocol",
+   "https://docs.magnific.com/authentication"
+  ]
+ },
+ "google-gemini-imagen-image-api": {
+  "free_tier": "Paid only: pricing page lists Free Tier 'Not available' for all Gemini image models (Nano Banana family); usage-billed",
+  "notes": "Also available via Vertex AI for enterprise/cloud_iam auth as an alternative. Google's experimental mcp-genmedia servers (not officially supported) use Vertex AI ADC auth, not Gemini API keys.",
+  "sources": [
+   "https://ai.google.dev/gemini-api/docs/pricing",
+   "https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia"
+  ]
+ },
+ "ideogram-api": {
+  "free_tier": "Paid only: no free API credits (web app has 10 slow credits/week); API is pay-per-image from prepaid credit (min one-time purchase $1, min auto top-up target $10)",
+  "notes": "API billing is separate from Ideogram web subscriptions; requires payment method for API access. The official MCP uses OAuth and draws from the Ideogram web subscription, not API credits.",
+  "sources": [
+   "https://developer.ideogram.ai/ideogram-api/api-setup",
+   "https://ideogram.ai/features/mcp/"
+  ]
+ },
+ "leonardo-ai-api": {
+  "free_tier": "Paid only: Pay-As-You-Go API credit (USD balance) via manual or auto top-ups; API access is separate from free/web app plans",
+  "notes": "API credit is bought separately from web app subscriptions. The official MCP (https://mcp.leonardo.ai/v1/mcp) authenticates with an 'API-Key' header, not OAuth.",
+  "sources": [
+   "https://docs.leonardo.ai/docs/getting-started",
+   "https://docs.leonardo.ai/docs/payg-guide",
+   "https://docs.leonardo.ai/docs/pricing-and-plans-faq",
+   "https://docs.leonardo.ai/docs/connect-to-leonardoai-mcp"
+  ]
+ },
+ "openai-images-api-gpt-image": {
+  "homepage": "https://developers.openai.com/api/docs/guides/image-generation",
+  "docs": "https://developers.openai.com/api/docs/guides/image-generation",
+  "notes": "Requires an OpenAI API account with billing enabled; part of the Images API / Responses API. Current models: gpt-image-2.5-sunburst and gpt-image-2.5-flare; API Organization Verification may be required.",
+  "sources": [
+   "https://developers.openai.com/api/docs/guides/image-generation"
+  ]
+ },
+ "recraft-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.recraft.ai/mcp"
+  },
+  "notes": "REST API, OpenAI-Python-library compatible for some endpoints (not all params supported). Official MCP: hosted at https://mcp.recraft.ai/mcp (OAuth 2.0, bills subscription credits) and a local server on GitHub (recraft-ai/mcp-recraft-server).",
+  "sources": [
+   "https://www.recraft.ai/docs/mcp-reference/remote-server"
+  ]
+ },
+ "remove-bg-api": {
+  "free_tier": "Free: first 50 API calls per month, then paid credits",
+  "sources": [
+   "https://www.remove.bg/api"
+  ]
+ },
+ "stability-ai-platform-api": {
+  "mcp": {
+   "type": "community",
+   "url": "https://github.com/tadasant/mcp-server-stability-ai"
+  },
+  "sources": [
+   "https://github.com/tadasant/mcp-server-stability-ai"
+  ]
+ },
+ "bland-ai": {
+  "auth_hint": "Authorization: Bearer <api_key> header (bare key without prefix still accepted)",
+  "sources": [
+   "https://docs.bland.ai/api-v1/post/calls"
+  ]
+ },
+ "deepgram-voice-agent-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://developers.deepgram.com/developer-tools/cli/mcp-server"
+  },
+  "notes": "Primarily an STT/TTS/voice-agent infra layer, often paired with a telephony provider like Twilio to reach phone calls. MCP server built into the dg CLI ('dg mcp', stdio or SSE); docs MCP at https://developers.deepgram.com/_mcp/server.",
+  "sources": [
+   "https://developers.deepgram.com/developer-tools/cli/mcp-server"
+  ]
+ },
+ "elevenlabs-agents-platform": {
+  "docs": "https://elevenlabs.io/docs/eleven-agents/overview",
+  "free_tier": "Free plan: 10k credits/month shared across ElevenLabs products; no commercial license (from Starter, $6/month)",
+  "sources": [
+   "https://elevenlabs.io/pricing",
+   "https://elevenlabs.io/docs/eleven-agents/overview"
+  ]
+ },
+ "livekit-cloud": {
+  "homepage": "https://livekit.com",
+  "sources": [
+   "https://livekit.com/"
+  ]
+ },
+ "retell-ai": {
+  "notes": "Official MCP at https://mcp.retellai.com (Streamable HTTP) authenticates with Authorization: Bearer <RETELL_API_KEY>.",
+  "sources": [
+   "https://docs.retellai.com/get-started/mcp-server"
+  ]
+ },
+ "synthflow-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.synthflow.ai/mcp"
+  },
+  "free_tier": "Paid only: pricing page lists Enterprise contracts from $30,000/year; no self-serve free trial shown",
+  "notes": "Go-to-market is enterprise sales. Official remote MCP (~60 tools) also has regional URLs: https://mcp.us.synthflow.ai/mcp and https://mcp.eu.synthflow.ai/mcp.",
+  "sources": [
+   "https://synthflow.ai/pricing",
+   "https://docs.synthflow.ai/mcp-server"
+  ]
+ },
+ "twilio-programmable-voice": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/twilio-labs/mcp"
+  },
+  "free_tier": "Trial: one-time free units (e.g. 75 voice minutes, 100 SMS, 100 WhatsApp, 3,000 emails), no card, expires after 30 days; then pay-as-you-go",
+  "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit). MCP: Twilio Labs' @twilio-alpha/mcp exposes all public APIs via OpenAPI (filter with --services).",
+  "sources": [
+   "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+   "https://github.com/twilio-labs/mcp"
+  ]
+ }
+}
