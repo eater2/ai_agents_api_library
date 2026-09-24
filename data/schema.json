@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/data/schema.json",
+  "title": "AI Agents Accessible APIs — catalog entry",
+  "type": "object",
+  "required": ["id", "name", "category", "docs", "auth", "mcp", "desc_en", "desc_pl"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9-]+$", "description": "Stable slug, used as HTML anchor."},
+    "name": {"type": "string"},
+    "category": {"type": "string", "description": "One of the ids in data/categories.json."},
+    "homepage": {"type": ["string", "null"], "format": "uri"},
+    "docs": {"type": "string", "format": "uri", "description": "Official API reference an agent should read."},
+    "auth": {"enum": ["api_key", "oauth2", "api_key+oauth2", "none", "cloud_iam"]},
+    "auth_hint": {"type": "string", "description": "How the credential is sent, e.g. 'Authorization: Bearer <key>'."},
+    "mcp": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {"enum": ["official", "community", "none"]},
+        "url": {"type": ["string", "null"], "description": "Remote MCP endpoint, or repository/docs of the server."}
+      }
+    },
+    "free_tier": {"type": "string"},
+    "sdk": {"type": "array", "items": {"type": "string"}},
+    "openapi": {"type": ["string", "null"], "format": "uri"},
+    "llms_txt": {"type": ["string", "null"], "format": "uri"},
+    "desc_en": {"type": "string"},
+    "desc_pl": {"type": "string"},
+    "notes": {"type": "string"},
+    "verified": {"type": "string", "format": "date", "description": "Date the entry was last checked against official docs."}
+  }
+}

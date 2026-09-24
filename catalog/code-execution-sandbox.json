@@ -1,0 +1,233 @@
+{
+  "category": {
+    "id": "code-execution-sandbox",
+    "name": "Code execution sandboxes",
+    "description": "Isolated cloud environments where an agent can run code, shells and whole dev environments safely."
+  },
+  "entries": [
+    {
+      "id": "cloudflare-sandbox-sdk",
+      "name": "Cloudflare Sandbox SDK",
+      "category": "code-execution-sandbox",
+      "homepage": "https://developers.cloudflare.com/sandbox/",
+      "docs": "https://developers.cloudflare.com/sandbox/api/",
+      "auth": "api_key",
+      "auth_hint": "Cloudflare API token to deploy the Worker; the sandbox itself is reached through your own deployed Worker route",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "requires Workers Paid plan ($5/mo) for Containers; no free tier for container-backed sandboxes",
+      "sdk": [
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Deploy a Cloudflare Worker embedding this SDK to run untrusted code in per-request container sandboxes.",
+      "notes": "Not a hosted API called directly with a key — you build and deploy your own Worker using the SDK on top of Cloudflare Containers/Durable Objects.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "codesandbox-sdk",
+      "name": "CodeSandbox SDK",
+      "category": "code-execution-sandbox",
+      "homepage": "https://codesandbox.io/sdk",
+      "docs": "https://codesandbox.io/docs/sdk",
+      "auth": "api_key",
+      "auth_hint": "CSB_API_KEY env var, passed to the CodeSandbox() SDK constructor",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "Free plan: 400 VM credits/mo (~40 Nano-VM hrs), up to 10 concurrent VMs",
+      "sdk": [
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Programmatically create, resume, and control cloud VM sandboxes to run and preview AI-written code.",
+      "notes": "Also powers Together AI's white-labeled 'Code Sandbox' product; unofficial community MCP wrappers exist but none vendor-maintained.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "daytona",
+      "name": "Daytona",
+      "category": "code-execution-sandbox",
+      "homepage": "https://www.daytona.io",
+      "docs": "https://www.daytona.io/docs",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <DAYTONA_API_KEY>",
+      "mcp": {
+        "type": "official",
+        "url": "https://www.daytona.io/docs/en/mcp/"
+      },
+      "free_tier": "$200 free compute credit + 5GB storage, no credit card required",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": "https://www.daytona.io/docs/llms-full.txt",
+      "desc_en": "Create elastic remote sandboxes via SDK/API to run AI-generated code with sub-second startup.",
+      "notes": "Billed per second; supports sandbox snapshots and preview URLs for web apps.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "e2b",
+      "name": "E2B",
+      "category": "code-execution-sandbox",
+      "homepage": "https://e2b.dev",
+      "docs": "https://e2b.dev/docs",
+      "auth": "api_key",
+      "auth_hint": "E2B_API_KEY env var / Authorization Bearer or X-API-Key header",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/e2b-dev/mcp-server"
+      },
+      "free_tier": "free Hobby tier with limited sandbox hours, then pay-as-you-go",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": "https://docs.e2b.dev/llms.txt",
+      "desc_en": "Spin up isolated Firecracker cloud sandboxes via SDK/REST to execute AI-generated code and return results.",
+      "notes": "Sandboxes auto-expire after a configurable timeout (default ~5 min); used by many agent frameworks (OpenHands, etc.).",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "judge0",
+      "name": "Judge0",
+      "category": "code-execution-sandbox",
+      "homepage": "https://judge0.com",
+      "docs": "https://ce.judge0.com/",
+      "auth": "api_key",
+      "auth_hint": "X-Auth-Token header (self-hosted, if enabled) or X-RapidAPI-Key (RapidAPI-hosted); can run with none if self-hosted unauthenticated",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "RapidAPI free Basic plan (rate-limited); self-host free & open-source (GPLv3)",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Submit source code and stdin via REST to compile/run it in 60+ languages and poll for the result.",
+      "notes": "Built for compile-run-compare judging (like competitive programming), not long-lived interactive agent sandboxes; self-hosting recommended for production agent use.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "modal",
+      "name": "Modal",
+      "category": "code-execution-sandbox",
+      "homepage": "https://modal.com",
+      "docs": "https://modal.com/docs/guide/sandboxes",
+      "auth": "api_key",
+      "auth_hint": "MODAL_TOKEN_ID + MODAL_TOKEN_SECRET (generated via `modal token new`)",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/milkymap/mcp4modal_sandbox"
+      },
+      "free_tier": "Starter plan: $0 base + $30/mo free credits",
+      "sdk": [
+        "python",
+        "javascript",
+        "go"
+      ],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Programmatically launch serverless sandboxes, optionally with GPUs, to execute untrusted or agent code.",
+      "notes": "Sandbox compute billed separately from regular function compute (~$0.14/vCPU-hr); Python SDK is most mature/complete.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "piston",
+      "name": "Piston",
+      "category": "code-execution-sandbox",
+      "homepage": "https://github.com/engineer-man/piston",
+      "docs": "https://piston.readthedocs.io/en/latest/api-v2/",
+      "auth": "none",
+      "auth_hint": "no key needed for the public instance (rate-limited)",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "free, no key, public instance rate-limited (~5 req/sec); self-host for unlimited/production use",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Call a free public REST API to compile and run code in 70+ languages inside isolated containers.",
+      "notes": "The public emkc.org instance is for low-volume/non-commercial use; widely used by Discord/Slack bots and agents; self-host via Docker for heavier agent workloads.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "riza",
+      "name": "Riza",
+      "category": "code-execution-sandbox",
+      "homepage": "https://riza.io",
+      "docs": "https://docs.riza.io/api-reference/command/execute-code",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <RIZA_API_KEY>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.riza.io/code-interpreter"
+      },
+      "free_tier": "free for side projects/low usage, then usage-based pricing",
+      "sdk": [
+        "python",
+        "typescript",
+        "go"
+      ],
+      "openapi": null,
+      "llms_txt": "https://docs.riza.io/llms.txt",
+      "desc_en": "Call a REST API to execute untrusted Python/JS/Ruby/PHP code in sandboxes that start in under 10ms.",
+      "notes": "Also supports saving reusable 'tools' (functions) via a Tools API for repeated agent calls.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "runloop",
+      "name": "Runloop",
+      "category": "code-execution-sandbox",
+      "homepage": "https://www.runloop.ai",
+      "docs": "https://docs.runloop.ai/docs/devboxes/overview",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <RUNLOOP_API_KEY> (auto-loaded from RUNLOOP_API_KEY env var)",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "$50 free credits on signup, then usage-based ($0.108/CPU-hr, $0.0252/GB-hr)",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": "https://docs.runloop.ai/llms.txt",
+      "desc_en": "Create, snapshot, suspend/resume, and run commands in Linux Devboxes via API/SDK for agent coding tasks.",
+      "notes": "Includes an 'MCP Hub' feature letting Devboxes connect outward to other MCP tool servers; no confirmed official vendor MCP server exposing Runloop itself.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "vercel-sandbox",
+      "name": "Vercel Sandbox",
+      "category": "code-execution-sandbox",
+      "homepage": "https://vercel.com/docs/vercel-sandbox",
+      "docs": "https://vercel.com/docs/sandbox",
+      "auth": "api_key+oauth2",
+      "auth_hint": "VERCEL_OIDC_TOKEN (recommended, auto on Vercel) or VERCEL_TOKEN Bearer + team/project IDs",
+      "mcp": {
+        "type": "official",
+        "url": "https://vercel.com/docs/mcp"
+      },
+      "free_tier": "usage included on Hobby plan, otherwise usage-based on Pro/Enterprise",
+      "sdk": [
+        "typescript",
+        "python"
+      ],
+      "openapi": "https://openapi.vercel.sh/",
+      "llms_txt": null,
+      "desc_en": "Boot ephemeral Firecracker microVMs via SDK/REST to run agent- or AI-generated code and shell commands.",
+      "notes": "Pricing = active CPU + provisioned memory + per Sandbox.create() call + data transfer; 32GB ephemeral NVMe per sandbox.",
+      "verified": "2026-09-24"
+    }
+  ]
+}

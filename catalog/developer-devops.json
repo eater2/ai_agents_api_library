@@ -1,0 +1,403 @@
+{
+  "category": {
+    "id": "developer-devops",
+    "name": "Developer platforms and DevOps",
+    "description": "Source control, deployment, cloud infrastructure, monitoring and incident management."
+  },
+  "entries": [
+    {
+      "id": "aws-apis",
+      "name": "AWS APIs",
+      "category": "developer-devops",
+      "homepage": "https://aws.amazon.com",
+      "docs": "https://docs.aws.amazon.com/general/latest/gr/aws-apis-references.html",
+      "auth": "cloud_iam",
+      "auth_hint": "AWS Signature Version 4 (SigV4) signed request using IAM access key/secret or STS temporary credentials",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/awslabs/mcp"
+      },
+      "free_tier": "new accounts get up to $200 in credits plus free usage of 90+ services for up to 6 months; some services also have a perpetual Always Free tier",
+      "sdk": [
+        "python",
+        "javascript",
+        "typescript",
+        "java",
+        "go",
+        "dotnet",
+        "ruby",
+        "php",
+        "cpp",
+        "rust",
+        "kotlin",
+        "swift"
+      ],
+      "openapi": null,
+      "llms_txt": "https://docs.aws.amazon.com/llms.txt",
+      "desc_en": "An agent can provision and control thousands of AWS resources (compute, storage, databases, ML) via SDKs/CLI/REST.",
+      "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own IAM scoping, rate limits, and regional availability; no single unified OpenAPI spec.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "azure-apis",
+      "name": "Azure APIs",
+      "category": "developer-devops",
+      "homepage": "https://learn.microsoft.com/rest/api/azure/",
+      "docs": "https://learn.microsoft.com/rest/api/azure/",
+      "auth": "cloud_iam",
+      "auth_hint": "Authorization: Bearer <access_token> (Microsoft Entra ID / Azure AD OAuth2)",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/microsoft/mcp"
+      },
+      "free_tier": "12 months of select free services plus $200 credit for 30 days for new accounts; many services also have a permanent always-free monthly amount",
+      "sdk": [
+        "dotnet",
+        "java",
+        "javascript",
+        "typescript",
+        "python",
+        "go",
+        "cpp",
+        "rust"
+      ],
+      "openapi": "https://github.com/Azure/azure-rest-api-specs",
+      "llms_txt": null,
+      "desc_en": "An agent can deploy and manage Azure resources (compute, storage, databases, AI) across resource-provider REST APIs.",
+      "notes": "Umbrella platform: hundreds of resource-provider APIs, each independently versioned (api-version query param required); the Azure MCP repo moved from Azure/azure-mcp (archived) to microsoft/mcp.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "circleci-api",
+      "name": "CircleCI API",
+      "category": "developer-devops",
+      "homepage": "https://circleci.com/docs/api/v2/",
+      "docs": "https://circleci.com/docs/api/v2/",
+      "auth": "api_key",
+      "auth_hint": "Circle-Token: <token>",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/CircleCI-Public/mcp-server-circleci"
+      },
+      "free_tier": "free plan: 30,000 credits/month (~6,000 build minutes on a small Docker resource class), credits expire monthly",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": "https://circleci.com/docs/llms.txt",
+      "desc_en": "An agent can trigger pipelines, rerun workflows, fetch logs/test results, and validate CI/CD configuration via REST.",
+      "notes": "CircleCI recommends the v3 API for new development; v2 remains supported. The CircleCI-Public/mcp-server-circleci npm package is deprecated in favor of CircleCI's newer hosted MCP server / CLI MCP mode, whose exact endpoint could not be confirmed from fetchable docs at research time.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "cloudflare-api",
+      "name": "Cloudflare API",
+      "category": "developer-devops",
+      "homepage": "https://developers.cloudflare.com/api/",
+      "docs": "https://developers.cloudflare.com/api/",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Bearer <API_Token>",
+      "mcp": {
+        "type": "official",
+        "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/"
+      },
+      "free_tier": "free with any Cloudflare account; API access itself is free, manages both free and paid Cloudflare products",
+      "sdk": [
+        "typescript",
+        "python",
+        "go"
+      ],
+      "openapi": "https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.yaml",
+      "llms_txt": "https://developers.cloudflare.com/llms.txt",
+      "desc_en": "An agent can manage DNS, Workers, zones, WAF/security rules, and caching for Cloudflare accounts programmatically.",
+      "notes": "Global rate limit ~1,200 requests/5 min per user; per-IP limit ~200 req/sec; GraphQL Analytics API has a separate cost-based limit. Legacy X-Auth-Key global key auth also exists but is discouraged.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "datadog-api",
+      "name": "Datadog API",
+      "category": "developer-devops",
+      "homepage": "https://docs.datadoghq.com/api/",
+      "docs": "https://docs.datadoghq.com/api/",
+      "auth": "api_key",
+      "auth_hint": "DD-API-KEY: <api_key> plus DD-APPLICATION-KEY: <app_key> for some endpoints",
+      "mcp": {
+        "type": "official",
+        "url": "https://docs.datadoghq.com/mcp_server/setup/"
+      },
+      "free_tier": "free Infrastructure Monitoring plan: 1-day metric retention, up to 5 hosts; other products (APM, Logs, Security) are paid",
+      "sdk": [
+        "java",
+        "python",
+        "ruby",
+        "go",
+        "typescript",
+        "rust"
+      ],
+      "openapi": null,
+      "llms_txt": "https://docs.datadoghq.com/llms.txt",
+      "desc_en": "An agent can query metrics, logs, traces, monitors, and dashboards, and manage Datadog configuration via REST.",
+      "notes": "Datadog MCP server endpoint is site-specific (app.datadoghq.com, datadoghq.eu, etc.); supports OAuth2, personal/service tokens, or DD-API-KEY/DD-APPLICATION-KEY headers.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "docker-hub-api",
+      "name": "Docker Hub API",
+      "category": "developer-devops",
+      "homepage": "https://docs.docker.com/docker-hub/api/latest/",
+      "docs": "https://hub.docker.com/reference/api/hub/latest/",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <token> (obtained via login or a Personal/Organization Access Token)",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/docker/hub-mcp"
+      },
+      "free_tier": "free personal accounts with rate-limited image pulls; paid Pro/Team/Business tiers raise pull limits",
+      "sdk": [],
+      "openapi": "https://hub.docker.com/reference/api/hub/latest.yaml",
+      "llms_txt": null,
+      "desc_en": "An agent can search, push, pull, tag, and manage container images and repositories on Docker Hub.",
+      "notes": "API is labeled v2-beta; rate limits apply to anonymous/free image pulls. Docker also has a broader official MCP Catalog/Toolkit (docs.docker.com/ai/mcp-catalog-and-toolkit/) with 300+ containerized MCP servers.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "fly-io-machines-api",
+      "name": "Fly.io Machines API",
+      "category": "developer-devops",
+      "homepage": "https://fly.io/docs/machines/api/",
+      "docs": "https://fly.io/docs/machines/api/",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <FLY_API_TOKEN>",
+      "mcp": {
+        "type": "official",
+        "url": "https://docs.fly.io/sprites/integrations/remote-mcp"
+      },
+      "free_tier": "no perpetual free tier; pay-as-you-go billing with trial credit for new accounts",
+      "sdk": [
+        "go"
+      ],
+      "openapi": "https://docs.fly.io/machines-api/openapi.json",
+      "llms_txt": null,
+      "desc_en": "An agent can create, start, stop, and destroy Fly.io Machines (lightweight VMs) programmatically via REST.",
+      "notes": "The official MCP server ships under Fly.io's Sprites product, adjacent to but distinct from the core Machines API.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "github-api",
+      "name": "GitHub API",
+      "category": "developer-devops",
+      "homepage": "https://docs.github.com/rest",
+      "docs": "https://docs.github.com/rest",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Bearer <token>",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/github/github-mcp-server"
+      },
+      "free_tier": "free with any GitHub account; 5,000 req/hr authenticated, 60/hr unauthenticated",
+      "sdk": [
+        "javascript",
+        "typescript",
+        "ruby"
+      ],
+      "openapi": "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json",
+      "llms_txt": "https://docs.github.com/llms.txt",
+      "desc_en": "An agent can manage repositories, issues, pull requests, releases, and code search via REST or GraphQL.",
+      "notes": "Rate limits scale with auth type (60/hr unauth, 5,000/hr PAT, higher for GitHub Apps); secondary abuse limits also apply; GraphQL uses a separate points-based limit.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "gitlab-api",
+      "name": "GitLab API",
+      "category": "developer-devops",
+      "homepage": "https://docs.gitlab.com/api/",
+      "docs": "https://docs.gitlab.com/api/",
+      "auth": "api_key+oauth2",
+      "auth_hint": "PRIVATE-TOKEN: <personal_access_token>",
+      "mcp": {
+        "type": "official",
+        "url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/"
+      },
+      "free_tier": "free tier: full REST API access on GitLab.com Free plan; some features gated to Premium/Ultimate",
+      "sdk": [],
+      "openapi": "https://gitlab.com/gitlab-org/gitlab/-/blob/master/doc/api/openapi/openapi_v3.yaml",
+      "llms_txt": "https://docs.gitlab.com/llms.txt",
+      "desc_en": "An agent can manage projects, issues, merge requests, CI/CD pipelines, and repository files via REST/GraphQL.",
+      "notes": "GitLab's official MCP server is in beta (GitLab 18.6+); no GitLab-maintained multi-language SDK, but popular community libraries (python-gitlab, node-gitlab) exist.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "google-cloud-apis",
+      "name": "Google Cloud APIs",
+      "category": "developer-devops",
+      "homepage": "https://cloud.google.com/apis",
+      "docs": "https://cloud.google.com/apis/docs/overview",
+      "auth": "cloud_iam",
+      "auth_hint": "Authorization: Bearer <OAuth2 access token> (service account or Application Default Credentials); API keys for select public APIs",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/googleapis/genai-toolbox"
+      },
+      "free_tier": "free trial credit for new customers plus an Always Free tier with perpetual no-cost limits on select products",
+      "sdk": [
+        "python",
+        "javascript",
+        "typescript",
+        "java",
+        "go",
+        "dotnet",
+        "ruby",
+        "php",
+        "cpp"
+      ],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "An agent can create and manage Google Cloud resources (compute, storage, data, AI/ML) via REST, gRPC, or client libraries.",
+      "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own scopes/quotas; many APIs require explicit per-project enabling. MCP Toolbox for Databases is Google's main official MCP offering (Cloud SQL, AlloyDB, BigQuery, Spanner).",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "netlify-api",
+      "name": "Netlify API",
+      "category": "developer-devops",
+      "homepage": "https://docs.netlify.com/api/get-started/",
+      "docs": "https://docs.netlify.com/api/get-started/",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN>",
+      "mcp": {
+        "type": "official",
+        "url": "https://netlify-mcp.netlify.app/mcp"
+      },
+      "free_tier": "free Starter plan; API usage subject to account plan limits",
+      "sdk": [
+        "go",
+        "javascript"
+      ],
+      "openapi": "https://open-api.netlify.com/",
+      "llms_txt": "https://docs.netlify.com/llms.txt",
+      "desc_en": "An agent can create/manage sites, trigger and monitor deploys, and configure DNS, domains, and env vars.",
+      "notes": "Rate limits: 500 req/min general, 3 deploys/min (100/day). Tokens are invalidated on password reset.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "pagerduty-api",
+      "name": "PagerDuty API",
+      "category": "developer-devops",
+      "homepage": "https://developer.pagerduty.com",
+      "docs": "https://developer.pagerduty.com",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Token token=<API_KEY> (or Authorization: Bearer <oauth_token>)",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/PagerDuty/pagerduty-mcp-server"
+      },
+      "free_tier": "free plan for up to 5 users: 100 monthly SMS/phone notifications, 1 on-call schedule, 1 escalation policy, API access",
+      "sdk": [],
+      "openapi": "https://github.com/PagerDuty/api-schema",
+      "llms_txt": null,
+      "desc_en": "An agent can create/manage incidents, on-call schedules, escalation policies, and services via REST.",
+      "notes": "The linked pagerduty-mcp-server GitHub repo is deprecated/read-only; PagerDuty has moved MCP development to a hosted Remote MCP Server with OAuth, but its exact endpoint URL could not be confirmed from fetchable docs at research time.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "postman-api",
+      "name": "Postman API",
+      "category": "developer-devops",
+      "homepage": "https://www.postman.com/postman/postman-public-workspace/",
+      "docs": "https://learning.postman.com/api-docs/api-reference/",
+      "auth": "api_key",
+      "auth_hint": "X-API-Key: <POSTMAN_API_KEY>",
+      "mcp": {
+        "type": "official",
+        "url": "https://learning.postman.com/_mcp/server"
+      },
+      "free_tier": "free plan available; rate limits ~300 req/min general, stricter for specific endpoints",
+      "sdk": [],
+      "openapi": "https://learning.postman.com/openapi.json",
+      "llms_txt": "https://learning.postman.com/llms.txt",
+      "desc_en": "An agent can manage Postman collections, workspaces, environments, mocks, monitors, and API specs via REST.",
+      "notes": "The given candidate homepage is a UI workspace, not docs; the official docs.postman.com/learning.postman.com site is the real reference. Postman's confirmed official MCP endpoint is oriented at querying Postman's own docs/learning content, distinct from a full account-management MCP.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "render-api",
+      "name": "Render API",
+      "category": "developer-devops",
+      "homepage": "https://render.com/docs/api",
+      "docs": "https://api-docs.render.com/reference/introduction",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <api-key>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.render.com"
+      },
+      "free_tier": "free static sites; free web services that spin down after inactivity",
+      "sdk": [],
+      "openapi": "https://api-docs.render.com/openapi.json",
+      "llms_txt": "https://api-docs.render.com/llms.txt",
+      "desc_en": "An agent can create and manage Render services, trigger deployments, and configure databases and env vars.",
+      "notes": "OpenAPI spec endpoint/tag names may change over time even though the API itself stays backward compatible. Render's official MCP server supports potentially destructive operations (env var changes, triggering deploys).",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "sentry-api",
+      "name": "Sentry API",
+      "category": "developer-devops",
+      "homepage": "https://docs.sentry.io/api/",
+      "docs": "https://docs.sentry.io/api/",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Bearer <auth_token>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.sentry.dev/mcp"
+      },
+      "free_tier": "free Developer plan: 1 user, 5,000 errors/mo, 5GB logs, 50 replays; includes MCP access",
+      "sdk": [],
+      "openapi": "https://raw.githubusercontent.com/getsentry/sentry-api-schema/main/openapi-derefed.json",
+      "llms_txt": "https://docs.sentry.io/llms.txt",
+      "desc_en": "An agent can query and triage error/performance issues and manage projects, releases, and org data.",
+      "notes": "API is v0 (public endpoints stable, beta endpoints may change); per-endpoint rate limits via X-Sentry-Rate-Limit-* headers; legacy Basic-auth API keys are deprecated in favor of Bearer auth tokens.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "supabase-management-api",
+      "name": "Supabase Management API",
+      "category": "developer-devops",
+      "homepage": "https://supabase.com/docs/reference/api",
+      "docs": "https://supabase.com/docs/reference/api",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Bearer <access_token>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.supabase.com/mcp"
+      },
+      "free_tier": "free plan available; rate limit 120 req/min per user/project (lower for heavier endpoints)",
+      "sdk": [],
+      "openapi": "https://api.supabase.com/api/v1-json",
+      "llms_txt": "https://supabase.com/llms.txt",
+      "desc_en": "An agent can programmatically create and manage Supabase projects, databases, API keys, and config.",
+      "notes": "Personal Access Tokens carry full account privileges - treat as highly sensitive. Client SDKs (javascript, python, dart, swift, kotlin) are for the data/auth/storage APIs, not the Management API.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "vercel-api",
+      "name": "Vercel API",
+      "category": "developer-devops",
+      "homepage": "https://vercel.com/docs/rest-api",
+      "docs": "https://vercel.com/docs/rest-api",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Bearer <access_token>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.vercel.com"
+      },
+      "free_tier": "free on Hobby plan; some resources/endpoints require Pro/paid plan",
+      "sdk": [
+        "typescript"
+      ],
+      "openapi": "https://openapi.vercel.sh/",
+      "llms_txt": "https://vercel.com/llms.txt",
+      "desc_en": "An agent can create deployments, manage projects/domains/env vars, and query analytics and logs.",
+      "notes": "Vercel MCP (Beta) is remote/OAuth-based; write actions like deployments or purchases require explicit OAuth consent.",
+      "verified": "2026-09-24"
+    }
+  ]
+}

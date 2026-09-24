@@ -1,0 +1,181 @@
+{
+  "category": {
+    "id": "crm-support-marketing",
+    "name": "CRM, support and marketing",
+    "description": "Contacts, deals, support tickets and email campaigns."
+  },
+  "entries": [
+    {
+      "id": "attio-api",
+      "name": "Attio API",
+      "category": "crm-support-marketing",
+      "homepage": "https://developers.attio.com",
+      "docs": "https://docs.attio.com/",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Bearer <api_key_or_oauth_token>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.attio.com/mcp"
+      },
+      "free_tier": "check pricing (free trial available; no permanent free tier confirmed)",
+      "sdk": [],
+      "openapi": "https://api.attio.com/openapi/api",
+      "llms_txt": "https://docs.attio.com/llms.txt",
+      "desc_en": "Search, create, and update records, lists, and notes in an Attio CRM workspace via REST API or official MCP.",
+      "notes": "Official MCP at mcp.attio.com/mcp uses OAuth login (no API key needed); read ops auto-approved, write ops require user confirmation in the MCP client.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "hubspot-api",
+      "name": "HubSpot API",
+      "category": "crm-support-marketing",
+      "homepage": "https://developers.hubspot.com",
+      "docs": "https://developers.hubspot.com/docs/api/overview",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Bearer <private-app-token> (or OAuth2 access token)",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.hubspot.com"
+      },
+      "free_tier": "free CRM account with limited-scope API access; many endpoints require a paid Hub tier (see APIs-by-tier docs)",
+      "sdk": [
+        "node",
+        "python",
+        "php",
+        "ruby"
+      ],
+      "openapi": "https://developers.hubspot.com/docs/reference/api/overview",
+      "llms_txt": "https://developers.hubspot.com/docs/llms.txt",
+      "desc_en": "Create/update CRM contacts, deals, companies, and engagements, or send marketing emails, via REST API or remote MCP.",
+      "notes": "Remote MCP server at mcp.hubspot.com requires account admin authorization first (OAuth2); some API endpoints gated by subscription tier.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "intercom-api",
+      "name": "Intercom API",
+      "category": "crm-support-marketing",
+      "homepage": "https://developers.intercom.com",
+      "docs": "https://developers.intercom.com/docs/references/rest-api/",
+      "auth": "oauth2",
+      "auth_hint": "Authorization: Bearer <access_token>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.intercom.com/mcp"
+      },
+      "free_tier": "free development workspace for building/testing; production use requires a paid Intercom plan",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Manage conversations, contacts, companies, and Help Center articles via REST API or Intercom's official remote MCP server.",
+      "notes": "Official MCP has region-specific endpoints: US at mcp.intercom.com/mcp, EU at mcp.eu.intercom.com/mcp; supports OAuth or bearer token auth.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "klaviyo-api",
+      "name": "Klaviyo API",
+      "category": "crm-support-marketing",
+      "homepage": "https://developers.klaviyo.com",
+      "docs": "https://developers.klaviyo.com/en/reference/api_overview",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Klaviyo-API-Key <private_api_key>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.klaviyo.com/mcp"
+      },
+      "free_tier": "free plan up to 250 contacts / 500 email sends per month",
+      "sdk": [],
+      "openapi": "https://developers.klaviyo.com/en/reference/api_overview",
+      "llms_txt": null,
+      "desc_en": "Manage email/SMS marketing profiles, lists, flows, and campaign analytics via Klaviyo's REST API or official MCP server.",
+      "notes": "Official remote MCP at mcp.klaviyo.com/mcp uses OAuth with dynamic client registration; a local MCP server option also exists. Private key scopes cannot be edited after creation.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "mailchimp-marketing-api",
+      "name": "Mailchimp Marketing API",
+      "category": "crm-support-marketing",
+      "homepage": "https://mailchimp.com/developer/",
+      "docs": "https://mailchimp.com/developer/marketing/api/root/",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Basic auth 'anystring:<api_key>' or Authorization: Bearer <token>; API key suffix encodes data center (e.g. -us6)",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "free plan up to 250 contacts / 500 emails per month (API accessible on free plan)",
+      "sdk": [],
+      "openapi": "https://api.mailchimp.com/schema/3.0/Swagger.json",
+      "llms_txt": null,
+      "desc_en": "Manage email marketing audiences, campaigns, and automation via Mailchimp's Marketing REST API.",
+      "notes": "No official MCP server found; no widely-adopted community MCP identified. API base URL includes account-specific data-center subdomain.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "pipedrive-api",
+      "name": "Pipedrive API",
+      "category": "crm-support-marketing",
+      "homepage": "https://developers.pipedrive.com",
+      "docs": "https://developers.pipedrive.com/docs/api/v1",
+      "auth": "api_key+oauth2",
+      "auth_hint": "api_token query param, or Authorization: Bearer <oauth_token>",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "no free tier; 14/30-day trial and free developer sandbox account for testing",
+      "sdk": [
+        "node",
+        "php"
+      ],
+      "openapi": "https://developers.pipedrive.com/docs/api/v1/openapi.yaml",
+      "llms_txt": null,
+      "desc_en": "Create and update deals, contacts (persons/organizations), and activities in a Pipedrive CRM pipeline via REST API.",
+      "notes": "No official or notably popular community MCP server found. Offers a free Sandbox account for development/testing separate from production pricing.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "salesforce-apis",
+      "name": "Salesforce APIs",
+      "category": "crm-support-marketing",
+      "homepage": "https://developer.salesforce.com",
+      "docs": "https://developer.salesforce.com/docs/apis",
+      "auth": "oauth2",
+      "auth_hint": "Authorization: Bearer <access_token> (OAuth2 web-server / JWT bearer flow)",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/salesforcecli/mcp"
+      },
+      "free_tier": "free Developer Edition org available via signup at developer.salesforce.com/signup",
+      "sdk": [
+        "node",
+        "java",
+        "python"
+      ],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Read and write Salesforce CRM records (leads, opportunities, cases) programmatically via REST, GraphQL, or Bulk API.",
+      "notes": "Official salesforcecli/mcp server is scoped to developer/DevOps tooling (metadata deploy, Apex, LWC) against an authorized org, not a general end-user CRM-data MCP; requires local Salesforce CLI org authorization. Core data access is via REST/GraphQL/Bulk APIs with OAuth2.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "zendesk-api",
+      "name": "Zendesk API",
+      "category": "crm-support-marketing",
+      "homepage": "https://developer.zendesk.com",
+      "docs": "https://developer.zendesk.com/api-reference/",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Bearer <oauth_token> (or Basic {email}/token:{api_token})",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/reminia/zendesk-mcp-server"
+      },
+      "free_tier": "free trial (14 days); no permanent free tier, paid Suite plans required for ongoing use",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Create, update, and search support tickets, users, and Help Center articles via Zendesk's REST API.",
+      "notes": "No official Zendesk-maintained MCP server found as of research date; several community MCP servers exist. API tokens can impersonate any account user, including admins.",
+      "verified": "2026-09-24"
+    }
+  ]
+}

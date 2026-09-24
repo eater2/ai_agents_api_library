@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Official MCP Registry",
+    "url": "https://registry.modelcontextprotocol.io",
+    "machine_readable_url": "https://registry.modelcontextprotocol.io/v0/servers",
+    "desc_en": "The official Model Context Protocol registry; agents can call its REST API (with OpenAPI spec) to search and list available MCP servers.",
+    "desc_pl": "Oficjalny rejestr Model Context Protocol; agenci mogą wywoływać jego API REST (ze specyfikacją OpenAPI), aby wyszukiwać i listować dostępne serwery MCP."
+  },
+  {
+    "name": "public-apis/public-apis",
+    "url": "https://github.com/public-apis/public-apis",
+    "machine_readable_url": "https://raw.githubusercontent.com/public-apis/public-apis/master/README.md",
+    "desc_en": "A community-curated GitHub list of 1,400+ free public APIs by category, fetchable as raw Markdown for programmatic parsing.",
+    "desc_pl": "Prowadzona przez społeczność lista ponad 1400 darmowych publicznych API na GitHubie, dostępna jako surowy plik Markdown do parsowania programistycznego."
+  },
+  {
+    "name": "APIs.guru OpenAPI Directory",
+    "url": "https://apis.guru",
+    "machine_readable_url": "https://api.apis.guru/v2/list.json",
+    "desc_en": "An open, unauthenticated directory of 2,500+ public OpenAPI specs; agents fetch list.json to discover APIs and their OpenAPI definitions.",
+    "desc_pl": "Otwarty, niewymagający uwierzytelniania katalog ponad 2500 publicznych specyfikacji OpenAPI; agenci pobierają list.json, aby odkryć API i ich definicje OpenAPI."
+  },
+  {
+    "name": "punkpeye/awesome-mcp-servers",
+    "url": "https://github.com/punkpeye/awesome-mcp-servers",
+    "machine_readable_url": "https://raw.githubusercontent.com/punkpeye/awesome-mcp-servers/main/README.md",
+    "desc_en": "A widely-starred curated GitHub list of MCP servers by category, fetchable as raw Markdown for automated discovery.",
+    "desc_pl": "Popularna, prowadzona przez społeczność lista serwerów MCP na GitHubie, dostępna jako surowy Markdown do automatycznego odkrywania."
+  },
+  {
+    "name": "Smithery",
+    "url": "https://smithery.ai",
+    "machine_readable_url": "https://api.smithery.ai/servers",
+    "desc_en": "An MCP server registry and hosting gateway (6,000+ servers) whose REST API lets agents search servers and obtain connection URLs.",
+    "desc_pl": "Rejestr i brama hostingowa serwerów MCP (ponad 6000 pozycji), której API REST pozwala agentom wyszukiwać serwery i uzyskiwać adresy połączeń."
+  },
+  {
+    "name": "Glama MCP Directory",
+    "url": "https://glama.ai/mcp/servers",
+    "machine_readable_url": "https://glama.ai/api/mcp/v1/servers",
+    "desc_en": "A large scanned and scored registry of 90,000+ open-source MCP servers, queryable via a bearer-authenticated REST API.",
+    "desc_pl": "Duży, skanowany i oceniany rejestr ponad 90000 otwartoźródłowych serwerów MCP, dostępny przez API REST z uwierzytelnianiem bearer."
+  },
+  {
+    "name": "mcp.so",
+    "url": "https://mcp.so",
+    "machine_readable_url": null,
+    "desc_en": "A community MCP server marketplace and browsable directory site, but it has no publicly documented JSON/REST API for programmatic access.",
+    "desc_pl": "Społecznościowy marketplace i przeglądalny katalog serwerów MCP, jednak nie posiada publicznie udokumentowanego API JSON/REST do dostępu programistycznego."
+  },
+  {
+    "name": "PulseMCP",
+    "url": "https://www.pulsemcp.com",
+    "machine_readable_url": "https://api.pulsemcp.com/v0.1/servers",
+    "desc_en": "A directory of 21,800+ MCP servers updated daily; its Sub-Registry REST API (API key required) lets agents list and search servers.",
+    "desc_pl": "Katalog ponad 21800 serwerów MCP aktualizowany codziennie; jego API REST typu Sub-Registry (wymaga klucza API) pozwala agentom listować i wyszukiwać serwery."
+  },
+  {
+    "name": "llms.txt convention / directory",
+    "url": "https://llmstxt.org",
+    "machine_readable_url": "https://directory.llmstxt.cloud",
+    "desc_en": "An open convention for a root-level llms.txt file giving agents a concise Markdown map of a site's key content; a community directory indexes published files, though it exposes no JSON API.",
+    "desc_pl": "Otwarta konwencja pliku llms.txt w katalogu głównym witryny, dająca agentom zwięzłą mapę w Markdown kluczowych treści strony; społecznościowy katalog indeksuje opublikowane pliki, choć nie udostępnia API JSON."
+  },
+  {
+    "name": "Postman API Network",
+    "url": "https://www.postman.com/explore",
+    "machine_readable_url": null,
+    "desc_en": "The largest network of public API collections shared on Postman, browsable on the web but with no documented public API for programmatic discovery.",
+    "desc_pl": "Największa sieć publicznych kolekcji API udostępnianych na Postman, przeglądalna w sieci, lecz bez udokumentowanego publicznego API do programistycznego odkrywania."
+  },
+  {
+    "name": "RapidAPI Hub (Nokia API Hub)",
+    "url": "https://rapidapi.com",
+    "machine_readable_url": null,
+    "desc_en": "A large third-party API marketplace with growing MCP support for agents, but with no public, unauthenticated catalog endpoint for bulk discovery.",
+    "desc_pl": "Duży marketplace API firm trzecich z rosnącym wsparciem dla MCP dla agentów, lecz bez publicznego, niewymagającego uwierzytelniania punktu końcowego do masowego odkrywania."
+  }
+]

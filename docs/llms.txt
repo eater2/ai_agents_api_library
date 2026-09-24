@@ -1,0 +1,57 @@
+# AI Agents Accessible APIs
+
+> Verified catalog of 301 third-party APIs and MCP servers that AI agents can call on a user's behalf after a one-time API key / OAuth / MCP setup. 26 categories. Last verified 2026-09-24. Each entry: docs URL, auth method + header hint, MCP server (official/community), free tier, SDKs, OpenAPI and llms.txt links.
+
+Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified.
+
+## Data
+
+- [Full catalog (JSON)](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/all.json): all entries in one array
+- [Full catalog (text)](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/llms-full.txt): one line per service
+- [JSON Schema](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/data/schema.json): entry schema
+- [Excluded services](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/data/excluded.json): reviewed and rejected, with reasons
+
+## Categories
+
+- [Web search](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/web-search.json): 14 services. Search engines and answer APIs that return fresh web results, snippets or full page content in agent-friendly formats.
+- [Web scraping and browser automation](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/web-scraping-browser.json): 18 services. Crawl, scrape and convert pages to Markdown/JSON, or drive a remote headless browser (clicks, forms, logins).
+- [Knowledge and research data](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/knowledge-research.json): 12 services. Encyclopedias, academic papers, news, computational knowledge and up-to-date library documentation.
+- [Image generation and editing](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/image-generation.json): 10 services. Text-to-image, image editing, inpainting, upscaling and background removal.
+- [Video generation and editing](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/video-generation.json): 15 services. Text/image-to-video models, talking avatars, programmatic video rendering and video hosting.
+- [Speech and audio](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/audio-speech.json): 13 services. Text-to-speech, speech-to-text, voice cloning, dubbing and audio intelligence.
+- [Music generation](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/music-generation.json): 6 services. Generate songs, instrumentals, loops and sound effects from prompts.
+- [3D generation and assets](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/3d-generation.json): 7 services. Text/image-to-3D mesh generation, texturing and 3D asset libraries.
+- [Architecture, CAD and BIM](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/architecture-cad-bim.json): 9 services. Building information models, CAD geometry, construction management and GIS platforms with programmatic access.
+- [Diagrams and software architecture](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/diagrams-software-architecture.json): 9 services. Render or edit diagrams (Mermaid, PlantUML, C4), whiteboards and architecture models.
+- [Design and UI](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/design-ui.json): 6 services. Read and write design files, generate branded graphics and publish websites.
+- [Documents, OCR and presentations](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/presentations-documents.json): 14 services. Parse PDFs and scans, convert file formats, generate slides and collect e-signatures.
+- [Translation and language](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/translation-language.json): 6 services. Machine translation, grammar and style checking.
+- [Code execution sandboxes](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/code-execution-sandbox.json): 10 services. Isolated cloud environments where an agent can run code, shells and whole dev environments safely.
+- [Developer platforms and DevOps](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/developer-devops.json): 17 services. Source control, deployment, cloud infrastructure, monitoring and incident management.
+- [Databases, vector stores and memory](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/databases-vector-memory.json): 18 services. Managed SQL/NoSQL databases, vector search and long-term memory layers for agents.
+- [Email, messaging and chat](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/communication-email-chat.json): 13 services. Send and receive email, SMS and chat messages; manage meetings.
+- [Voice agents and telephony](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/voice-agents-telephony.json): 8 services. Place and receive phone calls handled by AI voice agents, real-time audio/video rooms.
+- [Productivity and workspace](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/productivity-workspace.json): 16 services. Email, calendars, files, notes, tasks and project management.
+- [CRM, support and marketing](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/crm-support-marketing.json): 8 services. Contacts, deals, support tickets and email campaigns.
+- [Social media](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/social-media.json): 10 services. Read and publish posts, comments and videos on social platforms.
+- [Maps, geolocation and weather](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/maps-geo-weather.json): 11 services. Geocoding, routing, places, map tiles and weather forecasts.
+- [Finance, payments and market data](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/finance-payments.json): 13 services. Accept payments, move money, access bank data and query stock, FX and crypto prices.
+- [E-commerce](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/ecommerce.json): 7 services. Manage stores, products, orders and marketplace listings.
+- [Automation and integration platforms](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/automation-integration.json): 14 services. One connection that exposes thousands of third-party app actions to an agent, with managed auth.
+- [Model APIs and inference](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/model-inference.json): 17 services. LLM, embedding and multimodal model endpoints an agent can delegate sub-tasks to.
+
+## Optional
+
+- [README](https://github.com/eater2/ai_agents_api_library#readme)
+- [HTML version](https://eater2.github.io/ai_agents_api_library/)
+- [Official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers): The official Model Context Protocol registry; agents can call its REST API (with OpenAPI spec) to search and list available MCP servers.
+- [public-apis/public-apis](https://raw.githubusercontent.com/public-apis/public-apis/master/README.md): A community-curated GitHub list of 1,400+ free public APIs by category, fetchable as raw Markdown for programmatic parsing.
+- [APIs.guru OpenAPI Directory](https://api.apis.guru/v2/list.json): An open, unauthenticated directory of 2,500+ public OpenAPI specs; agents fetch list.json to discover APIs and their OpenAPI definitions.
+- [punkpeye/awesome-mcp-servers](https://raw.githubusercontent.com/punkpeye/awesome-mcp-servers/main/README.md): A widely-starred curated GitHub list of MCP servers by category, fetchable as raw Markdown for automated discovery.
+- [Smithery](https://api.smithery.ai/servers): An MCP server registry and hosting gateway (6,000+ servers) whose REST API lets agents search servers and obtain connection URLs.
+- [Glama MCP Directory](https://glama.ai/api/mcp/v1/servers): A large scanned and scored registry of 90,000+ open-source MCP servers, queryable via a bearer-authenticated REST API.
+- [mcp.so](https://mcp.so): A community MCP server marketplace and browsable directory site, but it has no publicly documented JSON/REST API for programmatic access.
+- [PulseMCP](https://api.pulsemcp.com/v0.1/servers): A directory of 21,800+ MCP servers updated daily; its Sub-Registry REST API (API key required) lets agents list and search servers.
+- [llms.txt convention / directory](https://directory.llmstxt.cloud): An open convention for a root-level llms.txt file giving agents a concise Markdown map of a site's key content; a community directory indexes published files, though it exposes no JSON API.
+- [Postman API Network](https://www.postman.com/explore): The largest network of public API collections shared on Postman, browsable on the web but with no documented public API for programmatic discovery.
+- [RapidAPI Hub (Nokia API Hub)](https://rapidapi.com): A large third-party API marketplace with growing MCP support for agents, but with no public, unauthenticated catalog endpoint for bulk discovery.
