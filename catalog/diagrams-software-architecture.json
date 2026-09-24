@@ -59,7 +59,17 @@
     "docs": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/IcePanel/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/icepanel-api.json"
   },
   {
    "id": "kroki",

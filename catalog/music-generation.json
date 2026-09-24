@@ -30,7 +30,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 3.8,
+     "reviews": 4,
+     "url": "https://sourceforge.net/software/product/Beatoven.ai/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/beatoven-ai-api.json"
   },
   {
    "id": "elevenlabs-music-api",
@@ -61,7 +71,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "elevenlabs/elevenlabs-mcp",
+     "stars": 1537,
+     "forks": 256,
+     "pushed_at": "2026-08-20",
+     "archived": true,
+     "url": "https://github.com/elevenlabs/elevenlabs-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "loudly-api",
@@ -88,7 +110,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 1.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Loudly/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/loudly-api.json"
   },
   {
    "id": "mubert-api",
@@ -142,7 +174,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 1.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Soundraw/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/soundraw-api.json"
   },
   {
    "id": "stable-audio-api-stability-ai",

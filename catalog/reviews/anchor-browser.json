@@ -1,0 +1,22 @@
+{
+ "id": "anchor-browser",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Anchor-Browser/",
+ "fetched_at": "2026-09-24T16:55Z",
+ "rating": 5.0,
+ "reviews_total": 1,
+ "reviews": [
+  {
+   "id": "67d19b6323e5d16fbdfd2212",
+   "date": "2025-03-12",
+   "rating": 5,
+   "title": "Great product, would recommend",
+   "pros": "Anchor Browser provides a powerful and scalable solution for AI-driven web automation. It allows AI agents to control real web browsers, enabling interaction with websites just like a human user. The infrastructure is designed for high availability, with isolated browser instances and built-in security features like VPN support and CAPTCHA solving. Unlike OpenAI’s CUA, it offers flexibility by allowing users to integrate different language models, including OpenAI, Claude, or local models. The ability to attach to real user sessions is a standout feature, making",
+   "cons": "Since it operates full browser instances, resource usage can be higher compared to headless API-based automation. Some advanced capabilities, like bypassing strict bot protections, may require tuning. While Anchor Browser is developer-friendly, non-technical users may find setup and customization challenging without proper guidance. The pricing model, while flexible, depends on both browser usage and AI steps, which could add up in high-volume deployments.",
+   "overall": "Anchor Browser is a top-tier solution for AI-driven web automation, providing flexibility, security, and scalability. It excels in handling complex workflows that require real browser interaction, making it a great choice for enterprise applications and large-scale automation projects. The ability to deploy and run AI agents on its scalable infrastructure ensures reliability and high performance, making it one of the best options for integrating AI with the web.",
+   "reviewer_role": "Developer",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Anchor-Browser/#review-67d19b6323e5d16fbdfd2212"
+  }
+ ]
+}

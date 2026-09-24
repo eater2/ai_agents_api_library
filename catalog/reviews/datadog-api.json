@@ -1,0 +1,94 @@
+{
+ "id": "datadog-api",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Datadog/",
+ "fetched_at": "2026-09-24T16:57Z",
+ "rating": 4.9,
+ "reviews_total": 7,
+ "reviews": [
+  {
+   "id": "666abad158c3bb4fb420b82d",
+   "date": "2024-06-13",
+   "rating": 5,
+   "title": "Very easy to use",
+   "pros": "I have all the essential info in my dashboard, or just 1 or 2 clicks away. Very easy to use and intuitive.",
+   "cons": "It could be less pricy. A bit too expensive for small teams.",
+   "overall": "Overall my experience is very good. Even if it is pricy, it helps me and my team a lot to be in control of our data.",
+   "reviewer_role": "Product Owner",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Datadog/#review-666abad158c3bb4fb420b82d"
+  },
+  {
+   "id": "638937ee521785e4c1839660",
+   "date": "2022-12-01",
+   "rating": 5,
+   "title": "Datadog review",
+   "pros": "It has easy to use configuration tools which allows you to quickly configure and customize the metrics and alerts you need to monitor your systems.\n\nIt also provides comprehensive analytics and insights into your infrastructure and applications, so you can make informed decisions about how to improve your performance.",
+   "cons": "There's not a lot of third-party integrations, which could limit its usefulness for some specific use cases.\n\nThe alerting options could be limited for specific types of configurations which could be an issue.",
+   "overall": "Overall its a great product, one feature I really like is the sensitive data scanner which is helpful when building compliance needy products.",
+   "reviewer_role": "Product",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Datadog/#review-638937ee521785e4c1839660"
+  },
+  {
+   "id": "610724982a1e7a5d6ef50098",
+   "date": "2021-08-01",
+   "rating": 5,
+   "title": "Amazing Solution",
+   "pros": "Datadog is just an overall awesome solution for monitoring our systems and endpoints. The analytics Datadog provides are second to none, and it integrates with everything. Huge fan of the dashboards they provide.",
+   "cons": "Bit of a learning curve, but that's to be expected with such a comprehensive solution.",
+   "overall": "Couldn't be happier with our decision to implement Datadog about a year ago. Has made our lives a lot easier.",
+   "reviewer_role": "COO",
+   "company_size": "26 - 99",
+   "url": "https://sourceforge.net/software/product/Datadog/#review-610724982a1e7a5d6ef50098"
+  },
+  {
+   "id": "60253d467e4252a7bf34afad",
+   "date": "2021-02-11",
+   "rating": 5,
+   "title": "Valuable Monitoring Solution.",
+   "pros": "-It comes with a lot of useful features like visualization, error finding, and network mapping.\n\n-It has a high-speed log searching system.\n\n-It allows integration with other apps to increase productivity.\n\n-You get regular updates so that the user experience remains excellent.",
+   "cons": "-It delays the monitoring if you operate in a complex database structure.\n\n-It is a bit pricy if we compare it with other alternatives.\n\n-The setup and configuration are a bit difficult for a beginner or inexperienced people.",
+   "overall": "Overall, Datadog is a great monitoring tool with a simple and easy-to-use user interface so you can save time and make the best out of it.",
+   "reviewer_role": "Back End Developer",
+   "company_size": "1,000 - 4,999",
+   "url": "https://sourceforge.net/software/product/Datadog/#review-60253d467e4252a7bf34afad"
+  },
+  {
+   "id": "60193d72d98984aa51d436d7",
+   "date": "2021-02-02",
+   "rating": 5,
+   "title": "All In One Solution for DevOps Teams.",
+   "pros": "-It has many features like fast and powerful search for queries, creating graphs based on logs, and many more.\n\n-You can put everything into one dashboard irrespective of their time zones.\n\n-It has a simple UI and can Integrate with other apps like slack very easily to maximize your performance.",
+   "cons": "-There is no role-based access control that is a security concern.\n\n-Navigating through User Interface consumes a lot of time.",
+   "overall": "Overall, I enjoyed it more than any other tool that I have used in the past because of its functionality, implementation, and integration. Everything is well monitored and allows you to work without any complications and delays.",
+   "reviewer_role": "Full Stack Developer",
+   "company_size": "500 - 999",
+   "url": "https://sourceforge.net/software/product/Datadog/#review-60193d72d98984aa51d436d7"
+  },
+  {
+   "id": "5f3cca7c356a6c45b72dff38",
+   "date": "2020-08-19",
+   "rating": 5,
+   "title": "Outstanding Monitoring platform",
+   "pros": "It's very easy to implement. It automatically generates powerful reports to analyze. Auto log capture. Reliable and real-time API, usage and database monitoring. The dashboard is easily customizable.",
+   "cons": "Overall it's an outstanding monitoring platform.",
+   "overall": "It's a great tool for monitoring. Overall I use Datadog to monitor databases and API in realtime. It automatically captures the logs from various sources for better analysis.",
+   "reviewer_role": "Data analyst",
+   "company_size": "26 - 99",
+   "url": "https://sourceforge.net/software/product/Datadog/#review-5f3cca7c356a6c45b72dff38"
+  },
+  {
+   "id": "5f3ba8b9f84a65378845e6ea",
+   "date": "2020-08-18",
+   "rating": 4,
+   "title": "A great analytics and logging tool",
+   "pros": "- The toolkit is quite powerful in a way that most people don't realize. It can really empower you as a data analyst and a web engineer in general.",
+   "cons": "- Datadog tools have a very steep learning curve. You will definitely need someone experienced to help you set things up.",
+   "overall": "Anyone developing web and cloud-based software can immensely benefit from good analytics and logging software. Datadog provides exactly that!",
+   "reviewer_role": "Marketer",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Datadog/#review-5f3ba8b9f84a65378845e6ea"
+  }
+ ]
+}

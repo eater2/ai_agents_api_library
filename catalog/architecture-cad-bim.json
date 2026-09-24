@@ -149,7 +149,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 2,
+     "url": "https://sourceforge.net/software/product/Procore/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/procore-api.json"
   },
   {
    "id": "rhino-compute-mcneel",

@@ -38,7 +38,27 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "Adyen/adyen-openapi",
+     "stars": 79,
+     "forks": 60,
+     "pushed_at": "2026-09-23",
+     "archived": false,
+     "url": "https://github.com/Adyen/adyen-openapi",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Adyen/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/adyen-api.json"
   },
   {
    "id": "alpaca-trading-api",
@@ -126,7 +146,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.4,
+     "reviews": 10,
+     "url": "https://sourceforge.net/software/product/Coinbase/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/coinbase-cdp-x402.json"
   },
   {
    "id": "coingecko-api",
@@ -154,7 +184,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/CoinGecko/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/coingecko-api.json"
   },
   {
    "id": "financial-modeling-prep",
@@ -181,7 +221,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 3.6,
+     "reviews": 13,
+     "url": "https://sourceforge.net/software/product/Financial-Modeling-Prep/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/financial-modeling-prep.json"
   },
   {
    "id": "open-exchange-rates",
@@ -242,7 +292,23 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 0,
+     "url": "https://smithery.ai/servers/paypal",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.3,
+     "reviews": 22,
+     "url": "https://sourceforge.net/software/product/PayPal/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/paypal-api.json"
   },
   {
    "id": "plaid-api",
@@ -276,7 +342,27 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "plaid/plaid-openapi",
+     "stars": 118,
+     "forks": 63,
+     "pushed_at": "2026-09-01",
+     "archived": false,
+     "url": "https://github.com/plaid/plaid-openapi",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.4,
+     "reviews": 5,
+     "url": "https://sourceforge.net/software/product/Plaid/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/plaid-api.json"
   },
   {
    "id": "polygon-io-massive",
@@ -343,7 +429,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "square/connect-api-specification",
+     "stars": 76,
+     "forks": 36,
+     "pushed_at": "2026-09-15",
+     "archived": false,
+     "url": "https://github.com/square/connect-api-specification",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "stripe-api",
@@ -380,7 +478,23 @@
     "docs": "ok",
     "mcp": "reachable",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 48,
+     "url": "https://smithery.ai/servers/stripe",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.1,
+     "reviews": 17,
+     "url": "https://sourceforge.net/software/product/Stripe/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/stripe-api.json"
   },
   {
    "id": "wise-api",

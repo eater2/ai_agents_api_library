@@ -67,7 +67,25 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "SaseQ/discord-mcp",
+     "stars": 507,
+     "forks": 104,
+     "pushed_at": "2026-04-25",
+     "archived": false,
+     "url": "https://github.com/SaseQ/discord-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "smithery",
+     "uses": 82,
+     "url": "https://smithery.ai/servers/discord",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "mailgun",
@@ -102,7 +120,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 1.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Mailgun/",
+     "fetched_at": "2026-09-24T16:58Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/mailgun.json"
   },
   {
    "id": "postmark",
@@ -172,7 +200,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Resend/",
+     "fetched_at": "2026-09-24T16:58Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/resend.json"
   },
   {
    "id": "sendgrid-twilio",
@@ -207,7 +245,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 3.9,
+     "reviews": 8,
+     "url": "https://sourceforge.net/software/product/SendGrid/",
+     "fetched_at": "2026-09-24T16:58Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/sendgrid-twilio.json"
   },
   {
    "id": "slack-api",
@@ -239,7 +287,23 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 12110,
+     "url": "https://smithery.ai/servers/slack",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.6,
+     "reviews": 250,
+     "url": "https://sourceforge.net/software/product/Slack/",
+     "fetched_at": "2026-09-24T16:58Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/slack-api.json"
   },
   {
    "id": "stream-getstream-chat-video-api",
@@ -304,7 +368,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "chigwell/telegram-mcp",
+     "stars": 1692,
+     "forks": 434,
+     "pushed_at": "2026-09-21",
+     "archived": false,
+     "url": "https://github.com/chigwell/telegram-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "twilio",
@@ -339,7 +415,27 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "twilio-labs/mcp",
+     "stars": 111,
+     "forks": 41,
+     "pushed_at": "2026-02-14",
+     "archived": false,
+     "url": "https://github.com/twilio-labs/mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.8,
+     "reviews": 13,
+     "url": "https://sourceforge.net/software/product/Twilio/",
+     "fetched_at": "2026-09-24T16:58Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/twilio.json"
   },
   {
    "id": "vonage-api",
@@ -401,7 +497,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "lharries/whatsapp-mcp",
+     "stars": 6310,
+     "forks": 1336,
+     "pushed_at": "2025-07-13",
+     "archived": false,
+     "url": "https://github.com/lharries/whatsapp-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "zoom-api",

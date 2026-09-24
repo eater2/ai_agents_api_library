@@ -105,7 +105,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "microsoft/azure-speech-mcp-server",
+     "stars": 1,
+     "forks": 1,
+     "pushed_at": "2025-11-24",
+     "archived": false,
+     "url": "https://github.com/microsoft/azure-speech-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "cartesia-api",
@@ -174,7 +186,19 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "deepgram/mcp",
+     "stars": 2,
+     "forks": 2,
+     "pushed_at": "2026-05-06",
+     "archived": false,
+     "url": "https://github.com/deepgram/mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "elevenlabs-api",
@@ -210,7 +234,27 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "elevenlabs/elevenlabs-mcp",
+     "stars": 1537,
+     "forks": 256,
+     "pushed_at": "2026-08-20",
+     "archived": true,
+     "url": "https://github.com/elevenlabs/elevenlabs-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.0,
+     "reviews": 4,
+     "url": "https://sourceforge.net/software/product/ElevenLabs/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/elevenlabs-api.json"
   },
   {
    "id": "google-cloud-text-to-speech-speech-to-text",
@@ -306,7 +350,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 7,
+     "url": "https://sourceforge.net/software/product/Murf-AI/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/murf-ai-api.json"
   },
   {
    "id": "openai-audio-api-tts-transcription",
@@ -341,7 +395,19 @@
     "docs": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "openai/openai-openapi",
+     "stars": 2524,
+     "forks": 526,
+     "pushed_at": "2026-09-23",
+     "archived": false,
+     "url": "https://github.com/openai/openai-openapi",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "resemble-ai-api",
@@ -369,7 +435,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 1.7,
+     "reviews": 3,
+     "url": "https://sourceforge.net/software/product/Resemble-AI/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/resemble-ai-api.json"
   },
   {
    "id": "rev-ai-api",

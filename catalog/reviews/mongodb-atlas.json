@@ -1,0 +1,22 @@
+{
+ "id": "mongodb-atlas",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/MongoDB-Atlas/",
+ "fetched_at": "2026-09-24T16:58Z",
+ "rating": 5.0,
+ "reviews_total": 1,
+ "reviews": [
+  {
+   "id": "69e27121582562ed8e06be24",
+   "date": "2026-04-17",
+   "rating": 5,
+   "title": "MongoDB Atlas Review",
+   "pros": "MongoDB Atlas significantly reduces operational overhead by handling provisioning, scaling, backups, and maintenance automatically. From a DevOps standpoint, this means less time managing infrastructure and more time focusing on reliability, pipelines, and delivery. The ability to deploy clusters in minutes across AWS, Azure, or GCP makes it highly flexible for multi cloud strategies and rapid environment setup",
+   "cons": "Despite being managed, it is not fully hands off. Production setups still require careful configuration of cluster sizing, networking, and security policies, especially for high traffic workloads. Misconfiguration can still lead to performance or cost issues",
+   "overall": "MongoDB Atlas is a strong choice for DevOps teams that want to offload database operations and focus on delivery, scalability, and reliability. It turns database management into a more automated, cloud native experience that fits well with modern infrastructure practices.",
+   "reviewer_role": "DevOps",
+   "company_size": "500 - 999",
+   "url": "https://sourceforge.net/software/product/MongoDB-Atlas/#review-69e27121582562ed8e06be24"
+  }
+ ]
+}

@@ -39,16 +39,23 @@ jobs:
         continue-on-error: true
         run: python scripts/check_links.py
 
+      - name: Fetch ratings (SourceForge, GitHub stars, Smithery uses)
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_ratings.py --reviews 0
+
       - name: Rebuild with fresh link status
         run: python scripts/build.py
 
-      - name: Commit link status
+      - name: Commit link status and ratings
         if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git diff --cached --quiet || git commit -m "Weekly link check $(date -u +%F)"
+          git diff --cached --quiet || git commit -m "Weekly link check and ratings $(date -u +%F)"
           git push
 
       - name: Fail on broken docs links

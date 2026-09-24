@@ -71,7 +71,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "ag2-mcp-servers/amazon-textract",
+     "stars": 0,
+     "forks": 0,
+     "pushed_at": "2025-07-15",
+     "archived": false,
+     "url": "https://github.com/ag2-mcp-servers/amazon-textract",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "azure-ai-document-intelligence",
@@ -139,7 +151,17 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/CloudConvert/",
+     "fetched_at": "2026-09-24T16:56Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/cloudconvert-api.json"
   },
   {
    "id": "docusign-esignature-api",
@@ -175,7 +197,19 @@
     "docs": "ok",
     "mcp": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "docusign/OpenAPI-Specifications",
+     "stars": 24,
+     "forks": 20,
+     "pushed_at": "2026-08-31",
+     "archived": false,
+     "url": "https://github.com/docusign/OpenAPI-Specifications",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "gamma-api",
@@ -341,7 +375,19 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "D-Diaa/mistral-ocr-mcp",
+     "stars": 0,
+     "forks": 0,
+     "pushed_at": "2025-08-04",
+     "archived": false,
+     "url": "https://github.com/D-Diaa/mistral-ocr-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "pdf-co-api",
@@ -431,7 +477,27 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "SlideSpeak/slidespeak-mcp",
+     "stars": 14,
+     "forks": 12,
+     "pushed_at": "2026-04-30",
+     "archived": false,
+     "url": "https://github.com/SlideSpeak/slidespeak-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 1.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/SlideSpeak/",
+     "fetched_at": "2026-09-24T16:57Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/slidespeak-api.json"
   },
   {
    "id": "unstructured-api",
@@ -462,7 +528,19 @@
     "docs": "ok",
     "mcp": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "Unstructured-IO/UNS-MCP",
+     "stars": 43,
+     "forks": 18,
+     "pushed_at": "2026-07-21",
+     "archived": false,
+     "url": "https://github.com/Unstructured-IO/UNS-MCP",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   }
  ]
 }

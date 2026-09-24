@@ -168,7 +168,17 @@
     "docs": "ok",
     "mcp": "reachable",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 1.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Retell-AI/",
+     "fetched_at": "2026-09-24T16:58Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/retell-ai.json"
   },
   {
    "id": "synthflow-api",
@@ -196,7 +206,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 1.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Synthflow/",
+     "fetched_at": "2026-09-24T16:58Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/synthflow-api.json"
   },
   {
    "id": "twilio-programmable-voice",
@@ -232,7 +252,29 @@
     "docs": "ok",
     "mcp": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "twilio/twilio-oai",
+     "stars": 169,
+     "forks": 106,
+     "pushed_at": "2026-09-09",
+     "archived": false,
+     "url": "https://github.com/twilio/twilio-oai",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "github",
+     "repo": "twilio-labs/mcp",
+     "stars": 111,
+     "forks": 41,
+     "pushed_at": "2026-02-14",
+     "archived": false,
+     "url": "https://github.com/twilio-labs/mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "vapi",

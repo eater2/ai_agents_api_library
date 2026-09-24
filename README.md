@@ -50,7 +50,7 @@ Recommended agent workflow: (1) pick the category file, (2) filter by `auth` and
 
 ### MCP server
 
-The catalog is also an MCP server with three tools: `search_apis` (filters: `query`, `category`, `mcp`, `no_auth`, `free_tier`, `auth`), `get_api` and `list_categories`. No key needed. Add it to your MCP client:
+The catalog is also an MCP server with four tools: `search_apis` (filters: `query`, `category`, `mcp`, `no_auth`, `free_tier`, `auth`), `get_api`, `get_reviews` (user reviews with pros and cons) and `list_categories`. No key needed. Add it to your MCP client:
 
 ```json
 {
@@ -92,6 +92,7 @@ The skill tells Claude when to reach for the catalog and how to pick a service. 
 - **MCP ◐** — community-maintained MCP server
 - **MCP —** — no MCP server known; use the REST API
 - **🆓** — free tier or free usage without payment
+- **★ (date)** — proof under the service name: SourceForge rating and review count, GitHub stars, Smithery uses — linked, with the date fetched
 
 ## Web search
 

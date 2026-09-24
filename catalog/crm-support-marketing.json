@@ -33,7 +33,15 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 277,
+     "url": "https://smithery.ai/servers/attio",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "hubspot-api",
@@ -68,7 +76,15 @@
     "mcp": "reachable",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 1166,
+     "url": "https://smithery.ai/servers/hubspot",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "intercom-api",
@@ -96,7 +112,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "reachable"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.7,
+     "reviews": 9,
+     "url": "https://sourceforge.net/software/product/Intercom/",
+     "fetched_at": "2026-09-24T17:00Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/intercom-api.json"
   },
   {
    "id": "klaviyo-api",
@@ -125,7 +151,23 @@
     "docs": "ok",
     "mcp": "reachable",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "smithery",
+     "uses": 2,
+     "url": "https://smithery.ai/servers/klaviyo",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.5,
+     "reviews": 8,
+     "url": "https://sourceforge.net/software/product/Klaviyo/",
+     "fetched_at": "2026-09-24T17:00Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/klaviyo-api.json"
   },
   {
    "id": "mailchimp-marketing-api",
@@ -184,7 +226,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.4,
+     "reviews": 50,
+     "url": "https://sourceforge.net/software/product/Pipedrive/",
+     "fetched_at": "2026-09-24T17:00Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/pipedrive-api.json"
   },
   {
    "id": "salesforce-apis",
@@ -216,7 +268,27 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "salesforcecli/mcp",
+     "stars": 479,
+     "forks": 111,
+     "pushed_at": "2026-09-23",
+     "archived": false,
+     "url": "https://github.com/salesforcecli/mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.7,
+     "reviews": 60,
+     "url": "https://sourceforge.net/software/product/Salesforce/",
+     "fetched_at": "2026-09-24T17:00Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/salesforce-apis.json"
   },
   {
    "id": "zendesk-api",
@@ -244,7 +316,27 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "reminia/zendesk-mcp-server",
+     "stars": 122,
+     "forks": 84,
+     "pushed_at": "2026-08-27",
+     "archived": false,
+     "url": "https://github.com/reminia/zendesk-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    },
+    {
+     "source": "sourceforge",
+     "rating": 4.3,
+     "reviews": 20,
+     "url": "https://sourceforge.net/software/product/Zendesk/",
+     "fetched_at": "2026-09-24T17:00Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/zendesk-api.json"
   }
  ]
 }

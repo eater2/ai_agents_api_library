@@ -36,7 +36,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "amzn/selling-partner-api-models",
+     "stars": 912,
+     "forks": 795,
+     "pushed_at": "2026-09-22",
+     "archived": false,
+     "url": "https://github.com/amzn/selling-partner-api-models",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "bigcommerce-api",
@@ -66,7 +78,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 5.0,
+     "reviews": 1,
+     "url": "https://sourceforge.net/software/product/Bigcommerce/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/bigcommerce-api.json"
   },
   {
    "id": "ebay-apis",
@@ -95,7 +117,17 @@
    "link_check": {
     "checked_at": "2026-09-24",
     "docs": "reachable"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 4.0,
+     "reviews": 10,
+     "url": "https://sourceforge.net/software/product/eBay/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/ebay-apis.json"
   },
   {
    "id": "etsy-open-api-v3",
@@ -150,7 +182,17 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "openapi": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "sourceforge",
+     "rating": 3.0,
+     "reviews": 3,
+     "url": "https://sourceforge.net/software/product/Printful/",
+     "fetched_at": "2026-09-24T17:01Z"
+    }
+   ],
+   "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/printful-api.json"
   },
   {
    "id": "shopify-admin-storefront-api",

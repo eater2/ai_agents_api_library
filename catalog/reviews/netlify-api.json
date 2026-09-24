@@ -1,0 +1,70 @@
+{
+ "id": "netlify-api",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Netlify/",
+ "fetched_at": "2026-09-24T16:57Z",
+ "rating": 4.0,
+ "reviews_total": 5,
+ "reviews": [
+  {
+   "id": "63910ea31111a1f8cbef16d2",
+   "date": "2022-12-07",
+   "rating": 1,
+   "title": "New Netlify pricing disaster",
+   "pros": "Netlify has a nice platform, and the CMS is a nice touch. They also USED to have good service pricing but now everyone is leaving because of how bad it is.",
+   "cons": "Netlify attracted a bunch of people to their platform through good competitive pricing and offerings. Now, not only is the pricing atrocious. They did it with no warning! No messages or emails before hand, nothing. And on top of that they tried to right it off as a \"minor change\". As if a 1000% increase to my billing is \"minor\" and no I'm not even exaggerating. And the best part? It's not even for a service they provide. They are trying to get people to pay for git contributors. so in essence the service that GitHub or Bitbucket or whoever you use for git is providing.",
+   "overall": "What a joke. So if i have a project with 5 devs instead of paying 20 a month for their hosting and pipeline services, they now want me to pay 120 a month. and the git contributors are priced at the 20 price as well! basically they waited a couple years until they had good reviews on platforms like this and then when for a big money grab and destroyed customer trust. What a terrible way to treat customers.",
+   "reviewer_role": "CEO",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Netlify/#review-63910ea31111a1f8cbef16d2"
+  },
+  {
+   "id": "6009dcfe59caa4336efaab64",
+   "date": "2021-01-21",
+   "rating": 4,
+   "title": "Netlify review",
+   "pros": "The pros of using Netlify are that you cannot find any other easy software to host you web app. You can directly host you Github repository. It has crash reposts and logging, so it makes development much more easy.",
+   "cons": "The only con is that the price is quite high apart from that you can use this for basic purposes in free tier.",
+   "overall": "Overall a great platform to start deploying your web app, because it is easy to implement and easy to use.",
+   "reviewer_role": "Full stack developer",
+   "company_size": "26 - 99",
+   "url": "https://sourceforge.net/software/product/Netlify/#review-6009dcfe59caa4336efaab64"
+  },
+  {
+   "id": "5fad4e1afc9412b41b8b9455",
+   "date": "2020-11-12",
+   "rating": 5,
+   "title": "Web Hosting redifined",
+   "pros": "Easy to use.\n\nIntegration with different version control sites makes it fast.\n\nFree to use.\n\nEasy deployment of websites.",
+   "cons": "The documentation can be slightly introduced as beginners find it a little difficult to understand.",
+   "overall": "Overall the performance is really great and very much easy to scale our web apps and simple. And I like the auto changes feature that automatically triggers as we change something on our GitHub.",
+   "reviewer_role": "Student",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Netlify/#review-5fad4e1afc9412b41b8b9455"
+  },
+  {
+   "id": "5f228e008213f0c8b54d9a7d",
+   "date": "2020-07-30",
+   "rating": 5,
+   "title": "The go to place for those starting portifolio or personal blogs!",
+   "pros": "- The biggest pro is that Netlify lets you host your first site for free. This is a blessing for those getting started with blogging since they do not have to pay any hosting fee.",
+   "cons": "- Netlify doesn't follow the traditional model like hosting with WordPress on your hosting site so it might be a little confusing at first.",
+   "overall": "If you are creating your first personal/portfolio blog and are comfortable with using GitHub etc, Netlify will allow you to host your site for free and make your life so much better. They even have tons of documentation and tutorials.",
+   "reviewer_role": "Engineer",
+   "company_size": "500 - 999",
+   "url": "https://sourceforge.net/software/product/Netlify/#review-5f228e008213f0c8b54d9a7d"
+  },
+  {
+   "id": "5ef752935295271e308fe595",
+   "date": "2020-06-27",
+   "rating": 5,
+   "title": "A very simplistic CMS tool",
+   "pros": "- Netlify makes it a walk in the park to setup a static site and integrate it with GitHub. It removes all the clutter that other CMS platforms have.",
+   "cons": "- Not as feature rich compared to something like Drupal or Joomla.",
+   "overall": "If you have a small site like a blog, you are better off not using something like WP or Drupal with all the clutter. Go for Netlify.",
+   "reviewer_role": "Marketer",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Netlify/#review-5ef752935295271e308fe595"
+  }
+ ]
+}

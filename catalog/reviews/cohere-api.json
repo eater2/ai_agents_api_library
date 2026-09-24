@@ -1,0 +1,22 @@
+{
+ "id": "cohere-api",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Cohere/",
+ "fetched_at": "2026-09-24T17:02Z",
+ "rating": 4.0,
+ "reviews_total": 1,
+ "reviews": [
+  {
+   "id": "64ec02f37bbba4343514a9b8",
+   "date": "2023-08-28",
+   "rating": 4,
+   "title": "Cohere review",
+   "pros": "The API and playground interface are good",
+   "cons": "Rate limiting on trial is a pain but given that it's free I can't complain.",
+   "overall": "I like Cohere. The embeddings seem good and at 1024 dimensions perform better than some other models.",
+   "reviewer_role": "Miner",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Cohere/#review-64ec02f37bbba4343514a9b8"
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "id": "resend",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Resend/",
+ "fetched_at": "2026-09-24T16:58Z",
+ "rating": 4.0,
+ "reviews_total": 1,
+ "reviews": [
+  {
+   "id": "68b9f8dc22b7cd6199252fc6",
+   "date": "2025-09-04",
+   "rating": 4,
+   "title": "Resend Powers Our Transactional Emails ",
+   "pros": "Having the ability to send transactional emails via API makes integrating Resend into an application significantly easier. We set up Resend to handle key transactional emails such as verifying accounts, sending forgot password emails and notifications about usage in our customer accounts. It was easy for our developers to integrate and the pricing scales nicely.",
+   "cons": "To be honest as long as you know that Resend is designed for transactional emails, and not marketing emails, there's no major negatives of the platform itself. I would have given it 5 stars, but the jump in pricing to have 7 day data retention is higher than I would have liked.",
+   "overall": "For transactional emails and an easy developer experience we have found Resend to meet all of our needs. The lower priced plans are great, but it would be good if there was higher data retention policies on the pro plan, or a middle pricing tier that didn't have such a large jump in monthly cost.",
+   "reviewer_role": "CEO",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Resend/#review-68b9f8dc22b7cd6199252fc6"
+  }
+ ]
+}

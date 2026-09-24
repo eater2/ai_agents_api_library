@@ -89,7 +89,19 @@
     "mcp": "ok",
     "openapi": "ok",
     "llms_txt": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "meshy-dev/meshy-mcp-server",
+     "stars": 48,
+     "forks": 11,
+     "pushed_at": "2026-09-22",
+     "archived": false,
+     "url": "https://github.com/meshy-dev/meshy-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "sketchfab-data-api",
@@ -117,7 +129,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "gregkop/sketchfab-mcp-server",
+     "stars": 40,
+     "forks": 10,
+     "pushed_at": "2025-03-09",
+     "archived": false,
+     "url": "https://github.com/gregkop/sketchfab-mcp-server",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   },
   {
    "id": "stability-ai-3d-stable-fast-3d-spar3d-api",
@@ -199,7 +223,19 @@
     "checked_at": "2026-09-24",
     "docs": "ok",
     "mcp": "ok"
-   }
+   },
+   "ratings": [
+    {
+     "source": "github",
+     "repo": "VAST-AI-Research/tripo-mcp",
+     "stars": 206,
+     "forks": 29,
+     "pushed_at": "2025-04-14",
+     "archived": false,
+     "url": "https://github.com/VAST-AI-Research/tripo-mcp",
+     "fetched_at": "2026-09-24T16:54Z"
+    }
+   ]
   }
  ]
 }

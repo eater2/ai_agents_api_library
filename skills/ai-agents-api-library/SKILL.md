@@ -21,7 +21,8 @@ Skip it when a connected tool already does the job.
 
 1. `search_apis` with `query` (what you need) and optional filters: `category`, `mcp` (`official` or `any`), `no_auth`, `free_tier`, `auth`.
 2. `get_api` with the chosen `id` for full details (auth header, notes, OpenAPI and llms.txt links).
-3. `list_categories` when you are unsure what exists.
+3. `get_reviews` with the `id` to read up to 100 user reviews (pros, cons; filter with `max_rating: 2` for complaints) before recommending a service.
+4. `list_categories` when you are unsure what exists.
 
 **Otherwise, fetch the static files** (plain HTTPS, no key needed):
 

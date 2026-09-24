@@ -1,0 +1,70 @@
+{
+ "id": "ayrshare",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Ayrshare/",
+ "fetched_at": "2026-09-24T17:00Z",
+ "rating": 3.4,
+ "reviews_total": 5,
+ "reviews": [
+  {
+   "id": "653b9d32d9511cb926d0f067",
+   "date": "2023-10-27",
+   "rating": 4,
+   "title": "Ayrshare review ",
+   "pros": "Ayrshare works seamlessly, making posting easy.  My team found the integration straight forward. API seamlessly integrates into existing systems, simplifying data access and manipulation. API includes top-notch customer support and team is always ready to assist with any issues.",
+   "cons": "Sometimes, while it gets the job done, the API lacks certain advanced features that could enhance its functionality and usefulness for complex projects.",
+   "overall": "Overall, Ayrshare has been a reliable and scalable solution for our data needs. Its comprehensive documentation and strong user community support have been instrumental.",
+   "reviewer_role": "Community manager",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Ayrshare/#review-653b9d32d9511cb926d0f067"
+  },
+  {
+   "id": "6526aabd76bdd8ae68612549",
+   "date": "2023-10-11",
+   "rating": 1,
+   "title": "Very bad: need to manually remove 10k+ posts across multiple networks",
+   "pros": "It has a lot of social networks. It was available on the market. It allows to post via an API. It works.",
+   "cons": "Extremely expensive, once you don't pay on time ONCE they remove all integration data and you won't be able to interact (e.g. delete) with your old posts. Also, the logic of API is very poor.",
+   "overall": "Crazy, very bad experience. Very poor API design. Very restrictive plans and incredibly high prices. I found a workaround -- bought a plugin for sharing posts from Wordpress for 60 EUR once and use it forever and without limitations.",
+   "reviewer_role": "Python developer",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Ayrshare/#review-6526aabd76bdd8ae68612549"
+  },
+  {
+   "id": "645a5fb60231330ba030f4a8",
+   "date": "2023-05-09",
+   "rating": 5,
+   "title": "Invaluable",
+   "pros": "It was such a headache working with all the social networks directly. With facebook/meta/instagram and twitter and some others we got disconnects and had way too many issues with their poorly documented and poorly supported APIs. Ayrshare handles all that now and our team is so much happier focusing on our client facing features.",
+   "cons": "Would be nice to have insta stories but I realize that it is a limitation of Insta.",
+   "overall": "Pretty great considering how much effort the team used to put in to maintain our direct connections. Would recommend Ayrshare to anyone who needs the social integration.",
+   "reviewer_role": "CTO",
+   "company_size": "26 - 99",
+   "url": "https://sourceforge.net/software/product/Ayrshare/#review-645a5fb60231330ba030f4a8"
+  },
+  {
+   "id": "6452826c6293bd6565726f3b",
+   "date": "2023-05-03",
+   "rating": 5,
+   "title": "Excellent social API",
+   "pros": "- Number of social networks - for us Instagram, TikTok, and Facebook\n\n- API is fairly easy. We tried integrating with the social networks directly and was really difficult.\n\n- Support. Love tech people on their support team when I had a Node question.",
+   "cons": "- I wish they had Snap integration and can post Instagram stories - they do have Reels. However, I was told that they only support the official social APIs and Snap and stories is not available.",
+   "overall": "The number of social networks available is awesome. Also we use the Node NPM package and integrating has be fairly easy. We usually post image and videos and it has been reliable except a time when video posting was down at Instagram - I think everyone who post to Instagram had this issue. Support was great during out dev phase.",
+   "reviewer_role": "Lead Engineering",
+   "company_size": "26 - 99",
+   "url": "https://sourceforge.net/software/product/Ayrshare/#review-6452826c6293bd6565726f3b"
+  },
+  {
+   "id": "64397d5d727d05b6cf3f6343",
+   "date": "2023-04-14",
+   "rating": 2,
+   "title": "Would NOT recommend ",
+   "pros": "- posting API works fine\n\n- multiple social media available\n\n- when they started in 2020 they were fine, but now I would not recommend it",
+   "cons": "- bad customer service\n\n- hiking prices \n\n- we felt disrespected",
+   "overall": "Astonishingly bad customer experience.\n\nThe API works fine, but their approach to customers, is below all standards. \n\nWe have been their early-stage customer, but one day they told us that some post violated FB terms and they are banning our account.\n\nNo explanation, no responses. They didn't tell which post was it or what was the violation.\n\nAfter a few weeks of complete silence, they finally told us that they can reactivate our account but only if we start paying over 6x higher price (!) compared to what we paid before. \n\nThat's not how you treat early customers who trusted you when you were starting out.\n\nThis behaviour was very disrespectful and I would personally never rely on their social posting API, because apparently they can ban you for no reason.",
+   "reviewer_role": "CTO",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Ayrshare/#review-64397d5d727d05b6cf3f6343"
+  }
+ ]
+}

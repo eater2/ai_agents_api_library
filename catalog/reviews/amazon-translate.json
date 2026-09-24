@@ -1,0 +1,22 @@
+{
+ "id": "amazon-translate",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Amazon-Translate/",
+ "fetched_at": "2026-09-24T16:57Z",
+ "rating": 5.0,
+ "reviews_total": 1,
+ "reviews": [
+  {
+   "id": "632a6121f30ecb55867b244b",
+   "date": "2022-09-21",
+   "rating": 5,
+   "title": "Translator",
+   "pros": "1. The accuracy is amazing for the English-Portuguese language pair. \n\n2. The price is also very reasonable.",
+   "cons": "1. The upload size limit to create TMs and Terminology is very low. \n\n2. There should be a way to create a glossary inside the translation box (window)",
+   "overall": "I compared (lots of times) Amazon Translate with Google Translate, DeepL, ModernMT and Systran, using the English-Portuguese language pair, and the Amazon Translate translation quality was better than its competitors.",
+   "reviewer_role": "TRANSLATOR",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Amazon-Translate/#review-632a6121f30ecb55867b244b"
+  }
+ ]
+}

@@ -2,7 +2,7 @@
 
 > Verified catalog of 301 third-party APIs and MCP servers that AI agents can call on a user's behalf after a one-time API key / OAuth / MCP setup. 26 categories. Last verified 2026-09-24. Each entry: docs URL, auth method + header hint, MCP server (official/community), free tier, SDKs, OpenAPI and llms.txt links.
 
-Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, plus derived booleans has_free_tier, has_trial, no_auth, stale and link_check{checked_at, docs, mcp}.
+Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, plus derived booleans has_free_tier, has_trial, no_auth, stale, link_check{checked_at, docs, mcp} and ratings[] (proof of use: SourceForge rating and review count, GitHub stars, Smithery uses; each with url and fetched_at) and reviews_url (up to 100 user reviews with pros/cons, reviewer names removed; also via the MCP tool get_reviews).
 
 ## Data
 
@@ -10,7 +10,7 @@ Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint,
 - [Full catalog (text)](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/llms-full.txt): one line per service
 - [JSON Schema](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/data/schema.json): entry schema
 - [Excluded services](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/data/excluded.json): reviewed and rejected, with reasons
-- [MCP server](https://github.com/eater2/ai_agents_api_library#mcp-server): `npx -y github:eater2/ai_agents_api_library` or remote https://ai-agents-api-library.vercel.app/mcp (Streamable HTTP) — tools search_apis, get_api, list_categories
+- [MCP server](https://github.com/eater2/ai_agents_api_library#mcp-server): `npx -y github:eater2/ai_agents_api_library` or remote https://ai-agents-api-library.vercel.app/mcp (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories
 
 ## Start free
 
