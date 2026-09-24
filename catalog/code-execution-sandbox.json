@@ -263,7 +263,7 @@
    "homepage": "https://e2b.dev",
    "docs": "https://e2b.dev/docs",
    "auth": "api_key",
-   "auth_hint": "E2B_API_KEY env var / Authorization Bearer or X-API-Key header",
+   "auth_hint": "E2B_API_KEY env var / X-API-Key: <key> header (Bearer works only together with an X-Team-ID header)",
    "mcp": {
     "type": "official",
     "url": "https://github.com/e2b-dev/mcp-server",

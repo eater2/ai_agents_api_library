@@ -589,7 +589,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
-   "notes": "Billed by browser-hours/compute time; Stagehand SDK itself is open source but needs a browser backend such as Browserbase. The MCP GitHub repo was archived in July 2026; use the hosted endpoint.",
+   "notes": "Billed by browser-hours; Stagehand SDK is open source but needs a browser backend such as Browserbase. Hosted MCP takes the key as ?browserbaseApiKey=; the mcp-server-browserbase repo is archived since 2026-07-20.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",

@@ -324,13 +324,14 @@
    "auth_hint": "Authorization: Token <personal-access-token>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/penpot/penpot/tree/develop/mcp",
+    "url": "https://design.penpot.app/mcp/stream",
     "maintainer": "vendor",
+    "remote_url": "https://design.penpot.app/mcp/stream",
     "repo": "https://github.com/penpot/penpot/tree/develop/mcp",
-    "source_url": "https://penpot.app/ai/mcp-server",
+    "source_url": "https://help.penpot.app/mcp/",
     "checked_at": "2026-09-24",
-    "domain_verified": null,
-    "kind": "official",
+    "domain_verified": true,
+    "kind": "vendor-hosted",
     "config": {
      "transport": "streamable-http",
      "url": "https://design.penpot.app/mcp/stream?userToken=$PENPOT_MCP_KEY",
@@ -346,7 +347,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Read, create, and modify Penpot design files, comments, and webhooks via a token-authenticated RPC/REST API, or via the official MCP server.",
-   "notes": "API is RPC-style (e.g. /api/rpc/command/get-profile) with auto-generated reference docs, not a conventional OpenAPI/Swagger file. Fully open source; can be self-hosted. MCP server runs locally (npx @penpot/mcp, http://localhost:4401/mcp); no hosted endpoint.",
+   "notes": "API is RPC-style (e.g. /api/rpc/command/get-profile), no OpenAPI file; open source, self-hostable. Remote MCP takes ?userToken=<MCP key> and needs the MCP plugin open in a Penpot browser tab; local: npx @penpot/mcp@stable.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",

@@ -16,7 +16,7 @@ const CASES = [
   ["scrape a website to markdown", "web-scraping-browser", 2],
   ["headless browser automation", "web-scraping-browser", 3],
   ["run python code in a sandbox", "code-execution-sandbox", 3],
-  ["send sms", "communication-email-chat", 2],
+  ["send sms", "sms-messaging", 2],
   ["send email", "communication-email-chat", 3],
   ["phone call voice agent", "voice-agents-telephony", 2],
   ["geocoding", "maps-geo-weather", 2], // Esri ArcGIS (architecture-cad-bim) is a valid geocoder too

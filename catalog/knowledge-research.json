@@ -1083,7 +1083,7 @@
    "openapi": "https://help.openalex.org/openapi.json",
    "llms_txt": "https://help.openalex.org/llms.txt",
    "desc_en": "Query an open catalog of scholarly works, authors, institutions, sources and topics, including citation data, via REST.",
-   "notes": "Base URL https://api.openalex.org. docs.openalex.org now redirects to help.openalex.org. Free daily budget resets at midnight UTC; above it, pay-as-you-go with prepaid $1 increments. Annual Member plans start at $5,000/yr. Data is CC0.",
+   "notes": "Base URL https://api.openalex.org. docs.openalex.org redirects to help.openalex.org. Free daily budget resets at midnight UTC; then pay-as-you-go in prepaid $1 increments. Member plans from $5,000/yr. Data is CC0. Listed MCP is a community multi-source papers server (arXiv, OpenAlex, PMC and more).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -1277,12 +1277,15 @@
      "paper_title_search",
      "paper_details",
      "paper_batch_details",
+     "paper_authors",
+     "paper_autocomplete",
+     "snippet_search",
      "paper_citations",
      "paper_references",
      "author_search",
      "author_details",
      "author_papers",
-     "snippet_search",
+     "author_batch_details",
      "get_paper_recommendations_single",
      "get_paper_recommendations_multi"
     ],
@@ -1591,9 +1594,15 @@
    "auth_hint": "appid=<AppID> query param or Authorization: Bearer <AppID>",
    "mcp": {
     "type": "official",
-    "url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/",
+    "url": "https://agenttools.wolfram.com/mcp",
     "maintainer": "vendor",
-    "source_url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/",
+    "remote_url": "https://agenttools.wolfram.com/mcp",
+    "tools": [
+     "WolframAlpha",
+     "WolframLanguageEvaluator",
+     "WolframContext"
+    ],
+    "source_url": "https://support.wolfram.com/75237",
     "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official",
@@ -1612,7 +1621,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Get computed answers, structured data and step-by-step results for math, science and factual queries.",
-   "notes": "LLM API endpoint https://www.wolframalpha.com/api/v1/llm-api is built for agents; output length set by maxchars (default 6800). Get an AppID via the Developer Portal. Other APIs: Full Results, Simple, Short Answers, Spoken Results. Commercial use requires a paid license. The official MCP is the Wolfram Cloud MCP, covering Wolfram technology broadly.",
+   "notes": "LLM API https://www.wolframalpha.com/api/v1/llm-api is built for agents (maxchars, default 6800); get an AppID in the Developer Portal; commercial use needs a paid license. Official MCP: free, no auth at agenttools.wolfram.com/mcp; paid services.wolfram.com/api/mcp (Bearer).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",

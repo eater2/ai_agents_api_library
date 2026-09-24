@@ -322,7 +322,7 @@
    "openapi": null,
    "llms_txt": "https://docs.gumloop.com/llms.txt",
    "desc_en": "Create AI agents, start chat sessions, and trigger no-code automations via REST API, SDKs, or the Gumloop MCP server.",
-   "notes": "Added: missing from the candidate list but a widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled.",
+   "notes": "Added: widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled. The MCP server authenticates via OAuth sign-in, not a pasted key.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "trial",
@@ -531,7 +531,7 @@
    "openapi": null,
    "llms_txt": "https://help.keboola.com/llms.txt",
    "desc_en": "Lets an agent load and query tables, create SQL and Python transformations, and trigger data pipeline jobs in a Keboola project.",
-   "notes": "Remote MCP URL is region-specific (https://mcp.<region>.keboola.com/mcp, e.g. mcp.eu-central-1.keboola.com); a local server is available from github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months. Developer docs: https://developers.keboola.com/.",
+   "notes": "Remote MCP URL is per stack: mcp.keboola.com is US Virginia (AWS) only; others e.g. mcp.eu-central-1.keboola.com; local server at github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -580,7 +580,7 @@
    "homepage": "https://www.make.com",
    "docs": "https://developers.make.com/api-documentation",
    "auth": "api_key",
-   "auth_hint": "Authorization: Token <api_token>",
+   "auth_hint": "Authorization: Token <api_token>; MCP: OAuth at https://mcp.make.com, or 'Authorization: Bearer <MCP_TOKEN>' on https://<zone>.make.com/mcp",
    "mcp": {
     "type": "official",
     "url": "https://mcp.make.com",
@@ -972,7 +972,7 @@
    "openapi": null,
    "llms_txt": "https://docs.useparagon.com/llms.txt",
    "desc_en": "Call thousands of pre-built Tools and Triggers across 130+ SaaS apps (Slack, Salesforce, Gmail) via API or MCP.",
-   "notes": "Paragon's embedded-iPaaS platform and ActionKit are sales-quoted after a free trial. The ActionKit MCP server is self-hosted (Docker) from github.com/useparagon/paragon-mcp; no hosted endpoint.",
+   "notes": "ActionKit has a self-serve free tier for experimentation; Paragon's broader embedded-iPaaS platform is contract/sales-only. ActionKit MCP is self-hosted only (repo useparagon/paragon-mcp, SSE transport); no vendor-hosted endpoint.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "http",

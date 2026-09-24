@@ -52,7 +52,7 @@
    "openapi": null,
    "llms_txt": "https://api-dashboard.search.brave.com/llms.txt",
    "desc_en": "Lets an agent query Brave's independent web/image/video/news search index and get cited, LLM-ready results.",
-   "notes": "Official MCP server (@brave/brave-search-mcp-server) is self-hosted only via npx/Docker/HTTP transport, no vendor-hosted remote endpoint found; Answers plan is separate ($4/1,000 req + token costs).",
+   "notes": "Official MCP server (@brave/brave-search-mcp-server) is self-hosted only (npx/Docker); STDIO is the default transport since v2.x, HTTP optional; no vendor-hosted endpoint. Answers plan is separate ($4/1,000 req + token costs).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -210,7 +210,7 @@
    "openapi": "https://exa.ai/docs/exa-spec.yaml",
    "llms_txt": "https://exa.ai/docs/llms.txt",
    "desc_en": "Lets an agent run neural or keyword web search, retrieve page contents, and find similar links via Exa's API.",
-   "notes": "Remote MCP endpoint requires no API key to start; self-hosted npm package (exa-mcp-server) also available.",
+   "notes": "Remote MCP works keyless (rate-limited); for your own plan send x-api-key or sign in via OAuth at https://mcp.exa.ai/mcp?login (agent_run requires auth). Self-hosted npm package (exa-mcp-server) also available.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -783,7 +783,7 @@
    "openapi": "https://docs.parallel.ai/public-openapi.json",
    "llms_txt": "https://docs.parallel.ai/llms.txt",
    "desc_en": "Lets an agent run Parallel's low-latency Search API for web research, content extraction, and entity discovery.",
-   "notes": "The remote MCP server is free and requires no account/API key; the main REST API requires an API key from the dashboard.",
+   "notes": "The remote MCP server works without an account/API key at lower rate limits; an Authorization: Bearer key raises them. The main REST API requires an API key from the dashboard.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -1343,7 +1343,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Lets an agent fetch fast, low-cost Google search results (web, images, news, maps, shopping) via Serper's REST API.",
-   "notes": "serper.dev's docs/playground is a JS-rendered, login-gated SPA so automated fetch could not fully re-verify all details beyond the public marketing page (2,500 free queries confirmed there). No official MCP server found; listed repo is the most-starred community one.",
+   "notes": "Docs/playground are login-gated. No subscriptions: prepaid credits from $1.00/1k down to $0.30/1k, valid 6 months. No official MCP server found; listed repo is the most-starred community one.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "trial",
@@ -1402,9 +1402,9 @@
    "auth_hint": "Authorization: Bearer tvly-<API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.tavily.com/mcp/",
+    "url": "https://mcp.tavily.com/mcp",
     "maintainer": "vendor",
-    "remote_url": "https://mcp.tavily.com/mcp/",
+    "remote_url": "https://mcp.tavily.com/mcp",
     "repo": "https://github.com/tavily-ai/tavily-mcp",
     "tools": [
      "tavily-search",
@@ -1438,7 +1438,7 @@
    "openapi": null,
    "llms_txt": "https://docs.tavily.com/llms.txt",
    "desc_en": "Lets an agent call Tavily's search API or MCP server to run web searches and get AI-ready summarized results.",
-   "notes": "Advanced search depth costs 2 credits vs 1 for basic/fast; remote MCP server supports both API key and OAuth authentication; repo: github.com/tavily-ai/tavily-mcp.",
+   "notes": "Advanced search depth costs 2 credits vs 1 for basic/fast; remote MCP: OAuth at https://mcp.tavily.com/mcp or API key via https://mcp.tavily.com/mcp/?tavilyApiKey=<key>; repo: github.com/tavily-ai/tavily-mcp.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",

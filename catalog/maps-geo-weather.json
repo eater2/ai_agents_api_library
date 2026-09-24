@@ -992,7 +992,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free, no key for non-commercial use (fair-use limits apply)",
+   "free_tier": "No key needed for non-commercial use: 10,000 calls/day, 300,000/month (also 600/min, 5,000/hour)",
    "sdk": [
     "python"
    ],
@@ -1267,8 +1267,9 @@
    "auth_hint": "none, but must send a valid User-Agent/Referer identifying the app",
    "mcp": {
     "type": "community",
-    "url": null,
+    "url": "https://openstreetmap.caseyjhand.com/mcp",
     "maintainer": "community",
+    "remote_url": "https://openstreetmap.caseyjhand.com/mcp",
     "repo": "https://github.com/cyanheads/openstreetmap-mcp-server",
     "tools": [
      "openstreetmap_search_places",
@@ -1281,7 +1282,7 @@
     "covers_full_api": false,
     "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
     "checked_at": "2026-09-24",
-    "domain_verified": null,
+    "domain_verified": false,
     "kind": "community",
     "config": {
      "transport": "streamable-http",
@@ -1293,12 +1294,12 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free, no key; public demo server capped at 1 request/second, bulk use prohibited",
+   "free_tier": "No key needed; public server max 1 request/second, bulk geocoding discouraged (small one-off jobs only, cached), no systematic or autocomplete queries",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Geocode and reverse-geocode addresses from OpenStreetMap data via a free public REST API.",
-   "notes": "Public demo instance is fair-use only (1 req/s, no bulk/systematic queries); self-host or use a commercial provider for production volume.",
+   "notes": "Public demo instance is fair-use only (1 req/s, bulk discouraged, no systematic queries); self-host or use a commercial provider for production volume. Listed MCP is a community server, also hosted by its author.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "no_key",
@@ -1514,8 +1515,9 @@
    "auth_hint": "none",
    "mcp": {
     "type": "community",
-    "url": null,
+    "url": "https://openstreetmap.caseyjhand.com/mcp",
     "maintainer": "community",
+    "remote_url": "https://openstreetmap.caseyjhand.com/mcp",
     "repo": "https://github.com/cyanheads/openstreetmap-mcp-server",
     "tools": [
      "openstreetmap_query_nearby",
@@ -1525,7 +1527,7 @@
     "covers_full_api": false,
     "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
     "checked_at": "2026-09-24",
-    "domain_verified": null,
+    "domain_verified": false,
     "kind": "community",
     "config": {
      "transport": "streamable-http",
@@ -1598,7 +1600,7 @@
    "homepage": "https://www.tomorrow.io/weather-api/",
    "docs": "https://docs.tomorrow.io",
    "auth": "api_key",
-   "auth_hint": "apikey query param",
+   "auth_hint": "apikey query param (REST); MCP takes 'X-Api-Key: <API_KEY>' header",
    "mcp": {
     "type": "official",
     "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp",

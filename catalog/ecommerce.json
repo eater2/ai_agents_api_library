@@ -135,7 +135,7 @@
      "create_checkout_url"
     ],
     "covers_full_api": false,
-    "source_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/storefront/b2c",
+    "source_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted",
@@ -157,7 +157,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Manage catalog, orders, customers, and carts on a BigCommerce store via REST/GraphQL APIs.",
-   "notes": "Official Storefront MCP (B2C/B2B, per-store URL from the control panel) covers catalog, cart and checkout only, not the admin API; docs.bigcommerce.com/_mcp/server is a docs-search MCP.",
+   "notes": "Official Storefront MCP (early access; per-storefront URL, POST /api/mcp) searches the catalog, edits carts and creates checkout links. Vendor MCP at https://docs.bigcommerce.com/_mcp/server only searches the docs.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "apiKey",
@@ -388,31 +388,21 @@
    "auth": "oauth2",
    "auth_hint": "Authorization: Bearer <ACCESS_TOKEN> obtained via OAuth 2.0 with the app's Client ID and Secret from DevCenter",
    "mcp": {
-    "type": "official",
-    "url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
-    "maintainer": "vendor",
-    "remote_url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
+    "type": "none",
+    "url": null,
+    "maintainer": "none",
     "source_url": "https://developers.mercadolibre.com.ar/en_us/mcp-server",
     "checked_at": "2026-09-24",
-    "domain_verified": false,
-    "kind": "official",
-    "config": {
-     "transport": "streamable-http",
-     "url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
-     "headers": null,
-     "oauth": true,
-     "env": [],
-     "docs_only": true,
-     "source_url": "https://developers.mercadolibre.com.ar/en_us/mcp-server",
-     "checked_at": "2026-09-24"
-    }
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
    },
    "free_tier": "Free API access for any Mercado Libre account that creates an app in DevCenter; only normal marketplace selling fees apply",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Lets an agent search items and categories and manage a seller's listings, orders, questions, shipments and promotions on the Mercado Libre marketplace.",
-   "notes": "In AR, MX, BR and CL the account holder's details must be validated before creating an app; redirect URI must be HTTPS; rate limited (HTTP 429). Official MCP (OAuth, streamable HTTP) only searches and reads developer documentation.",
+   "notes": "In AR, MX, BR and CL the account holder's details must be validated before creating an app; redirect URI must be HTTPS; rate limited (HTTP 429). Vendor MCP at https://mcp.mercadolibre.com/devsite/v1/mcp only searches the docs.",
    "verified": "2026-09-24",
    "operations": [
     "product-search",
@@ -563,17 +553,16 @@
     "url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront",
     "maintainer": "vendor",
     "remote_url": "https://{shop}.myshopify.com/api/mcp",
-    "repo": "https://www.npmjs.com/package/@shopify/dev-mcp",
     "tools": [
-     "search_catalog",
-     "lookup_catalog",
-     "get_product",
      "get_cart",
      "update_cart",
-     "search_shop_policies_and_faqs"
+     "search_shop_policies_and_faqs",
+     "search_catalog",
+     "lookup_catalog",
+     "get_product"
     ],
     "covers_full_api": false,
-    "source_url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront",
+    "source_url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront.md",
     "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official",
@@ -598,7 +587,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
-   "notes": "REST Admin API is legacy; new public apps must use GraphQL Admin. Dev MCP (npx @shopify/dev-mcp) serves docs/schemas only; per-store Storefront MCP at https://{shop}.myshopify.com/api/mcp needs no auth (catalog, cart, policies).",
+   "notes": "Official Storefront MCP per store (https://{shop}.myshopify.com/api/mcp, no auth) handles cart and policies, catalog tools at /api/ucp/mcp; Admin operations need an Admin API token. Dev MCP only searches docs.",
    "verified": "2026-09-24",
    "operations": [
     "store-management",

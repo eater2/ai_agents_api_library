@@ -42,7 +42,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Unified API to post, schedule, and analyze content across 14+ social networks (X, Instagram, LinkedIn, TikTok, etc.) with one API key.",
-   "notes": "Ayrshare holds most per-platform app approvals, so agents avoid applying for Meta/TikTok developer access (X now needs your own X app keys). Action MCP has 27 tools with API-key auth.",
+   "notes": "Ayrshare itself holds the underlying per-platform app approvals, so agents avoid individually applying for X/Meta/TikTok developer access. Hosted MCP action server at https://api.ayrshare.com/mcp (Streamable HTTP, 27 tools).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "trial",
