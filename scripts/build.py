@@ -497,6 +497,8 @@ def llms(cats, items, dirs):
          f"- [Full catalog (JSON)]({RAW}catalog/all.json): all entries in one array",
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
          f"- [JSON Schema]({RAW}data/schema.json): entry schema",
+         "- Uptime (`uptime` in JSON): our own daily probe of each `base_url` and hosted MCP endpoint from GitHub Actions (US), "
+         "30-day window; up = any HTTP status below 500 (MCP: POST initialize); `probes`, `up`, `median_ms` and the last result",
          f"- [Operations]({RAW}catalog/operations.json): vocabulary of the `operations` field (what an agent can do with a service, e.g. text-to-video, sms, street-geocoding); match your task to these ids",
          f"- [SHA256SUMS]({RAW}SHA256SUMS): checksums of llms.txt, llms-full.txt, schema and catalog/*.json (`sha256sum -c SHA256SUMS`)",
          f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` or remote {MCP_URL} (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories",
@@ -763,10 +765,27 @@ def write(path, text):
     p.write_text(text, encoding="utf-8", newline="\n")
 
 
+def uptime_summary(rec):
+    """Rolling availability from scripts/probe_uptime.py: probes, how many answered, median latency, last result."""
+    out = {"window_days": 30}  # method: see llms.txt and scripts/probe_uptime.py
+    for kind, name in (("api", "api"), ("mcp", "mcp_remote")):
+        h = (rec.get(kind) or {}).get("history") or []
+        if not h:
+            continue
+        ms = sorted(x["ms"] for x in h if x.get("ms") is not None)
+        last = h[-1]
+        out[name] = {"url": rec[kind]["url"], "probes": len(h), "up": sum(1 for x in h if x["up"]),
+                     "median_ms": ms[len(ms) // 2] if ms else None,
+                     "last": {"at": last["at"], "up": last["up"], "detail": last["detail"]}}
+    return out
+
+
 def main():
     global VERIFIED, RATINGS, USAGE
     cats, items, dirs = load()
     USAGE = load_usage({e.get("id") for e in items})
+    uptime_file = DATA / "uptime.json"
+    uptime = json.loads(uptime_file.read_text("utf-8")) if uptime_file.exists() else {}
     ratings_file = DATA / "ratings.json"
     RATINGS = json.loads(ratings_file.read_text("utf-8")) if ratings_file.exists() else {}
     VERIFIED = max((e.get("verified") or "" for e in items), default="") or date.today().isoformat()
@@ -813,6 +832,8 @@ def main():
             x["link_check"] = links[e["id"]]
         if RATINGS.get(e["id"]):
             x["ratings"] = RATINGS[e["id"]]
+        if uptime.get(e["id"]):
+            x["uptime"] = uptime_summary(uptime[e["id"]])
         if (ROOT / "catalog" / "reviews" / f"{e['id']}.json").exists():
             x["reviews_url"] = f"{RAW}catalog/reviews/{e['id']}.json"  # review texts: JSON and MCP only, not on the website
         en.append(x)
