@@ -74,6 +74,20 @@
     "no-code-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create records in a table",
+    "method": "POST",
+    "url": "https://api.airtable.com/v0/{baseId}/{tableIdOrName}",
+    "example": "curl -X POST \"https://api.airtable.com/v0/$AIRTABLE_BASE_ID/{tableIdOrName}\" -H \"Authorization: Bearer $AIRTABLE_TOKEN\" -H \"Content-Type: application/json\" -d '{\"records\":[{\"fields\":{\"Name\":\"Union Square\"}}]}'",
+    "response_fields": [
+     "records[].id",
+     "records[].createdTime",
+     "records[].fields"
+    ],
+    "async": null,
+    "source_url": "https://airtable.com/developers/web/api/create-records",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -221,6 +235,20 @@
     "task-management"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a task",
+    "method": "POST",
+    "url": "https://app.asana.com/api/1.0/tasks",
+    "example": "curl -X POST https://app.asana.com/api/1.0/tasks -H \"Authorization: Bearer $ASANA_TOKEN\" -H \"Content-Type: application/json\" -d '{\"data\":{\"name\":\"Buy catnip\",\"workspace\":\"$ASANA_WORKSPACE_GID\"}}'",
+    "response_fields": [
+     "data.gid",
+     "data.name",
+     "data.permalink_url"
+    ],
+    "async": null,
+    "source_url": "https://developers.asana.com/reference/createtask",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -356,6 +384,20 @@
     "docs-editing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a Jira issue",
+    "method": "POST",
+    "url": "https://{your-domain}.atlassian.net/rest/api/3/issue",
+    "example": "curl -X POST https://$JIRA_DOMAIN.atlassian.net/rest/api/3/issue -u \"$JIRA_EMAIL:$JIRA_API_TOKEN\" -H \"Accept: application/json\" -H \"Content-Type: application/json\" -d '{\"fields\":{\"project\":{\"id\":\"10000\"},\"issuetype\":{\"id\":\"10000\"},\"summary\":\"Main order flow broken\"}}'",
+    "response_fields": [
+     "id",
+     "key",
+     "self"
+    ],
+    "async": null,
+    "source_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-post",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -462,6 +504,21 @@
     "file-storage"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "upload a file",
+    "method": "POST",
+    "url": "https://upload.box.com/api/2.0/files/content",
+    "example": "curl -X POST https://upload.box.com/api/2.0/files/content -H \"Authorization: Bearer $BOX_ACCESS_TOKEN\" -H \"Content-Type: multipart/form-data\" -F attributes='{\"name\":\"Contract.pdf\", \"parent\":{\"id\":\"0\"}}' -F file=@Contract.pdf",
+    "response_fields": [
+     "entries[0].id",
+     "entries[0].name",
+     "entries[0].type",
+     "total_count"
+    ],
+    "async": null,
+    "source_url": "https://developer.box.com/reference/post-files-content/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -648,6 +705,21 @@
     "calendar"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "book a meeting (create an event invitee)",
+    "method": "POST",
+    "url": "https://api.calendly.com/invitees",
+    "example": "curl -X POST https://api.calendly.com/invitees -H \"Authorization: Bearer $CALENDLY_TOKEN\" -H \"Content-Type: application/json\" -d '{\"event_type\":\"https://api.calendly.com/event_types/{EVENT_TYPE_UUID}\",\"start_time\":\"2026-10-02T18:30:00Z\",\"invitee\":{\"name\":\"Jordan Lee\",\"email\":\"jordan@example.com\",\"timezone\":\"America/New_York\"}}'",
+    "response_fields": [
+     "event",
+     "status",
+     "cancel_url",
+     "reschedule_url"
+    ],
+    "async": null,
+    "source_url": "https://developer.calendly.com/docs/api-guides/schedule-events-with-ai-agents",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -757,6 +829,20 @@
     "docs-editing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a task in a list",
+    "method": "POST",
+    "url": "https://api.clickup.com/api/v2/list/{list_id}/task",
+    "example": "curl -X POST https://api.clickup.com/api/v2/list/$CLICKUP_LIST_ID/task -H \"Authorization: $CLICKUP_API_TOKEN\" -H 'Content-Type: application/json' -d '{\"name\":\"New Task Name\"}'",
+    "response_fields": [
+     "id",
+     "url",
+     "status.status"
+    ],
+    "async": null,
+    "source_url": "https://developer.clickup.com/reference/createtask",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -869,6 +955,19 @@
     "no-code-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "insert rows into a table",
+    "method": "POST",
+    "url": "https://docs.superhuman.com/apis/v1/docs/{docId}/tables/{tableIdOrName}/rows",
+    "example": "curl -s -X POST -H \"Authorization: Bearer $CODA_API_TOKEN\" -H 'Content-Type: application/json' -d '{\"rows\": [{\"cells\": [{\"column\": \"{column_id}\", \"value\": \"Feed Baker\"}]}]}' 'https://docs.superhuman.com/apis/v1/docs/{doc_id}/tables/{table_id}/rows'",
+    "response_fields": [
+     "requestId",
+     "addedRowIds"
+    ],
+    "async": "returns 202; the write is queued and applied within seconds (check GET /mutationStatus/{requestId})",
+    "source_url": "https://coda.io/apis/v1/openapi.json",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1090,6 +1189,21 @@
     "file-storage"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list Gmail messages",
+    "method": "GET",
+    "url": "https://gmail.googleapis.com/gmail/v1/users/{userId}/messages",
+    "example": "curl \"https://gmail.googleapis.com/gmail/v1/users/me/messages?q=is:unread&maxResults=10\" -H \"Authorization: Bearer $GOOGLE_ACCESS_TOKEN\"",
+    "response_fields": [
+     "messages[].id",
+     "messages[].threadId",
+     "nextPageToken",
+     "resultSizeEstimate"
+    ],
+    "async": null,
+    "source_url": "https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/list",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1183,6 +1297,20 @@
     "task-management"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create an issue",
+    "method": "POST",
+    "url": "https://api.linear.app/graphql",
+    "example": "curl -X POST https://api.linear.app/graphql -H \"Content-Type: application/json\" -H \"Authorization: $LINEAR_API_KEY\" --data '{\"query\": \"mutation { issueCreate(input: {title: \\\"New exception\\\", teamId: \\\"TEAM_ID\\\"}) { success issue { id title } } }\"}'",
+    "response_fields": [
+     "data.issueCreate.success",
+     "data.issueCreate.issue.id",
+     "data.issueCreate.issue.title",
+     "errors"
+    ],
+    "source_url": "https://linear.app/developers/graphql",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1413,6 +1541,21 @@
     "no-code-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "read items on a board (GraphQL)",
+    "method": "POST",
+    "url": "https://api.monday.com/v2",
+    "example": "curl -X POST https://api.monday.com/v2 -H \"Authorization: $MONDAY_API_TOKEN\" -H \"Content-Type: application/json\" -d '{\"query\":\"query { boards (ids: 1234567890) { items_page { cursor items { id name } } } }\"}'",
+    "response_fields": [
+     "data.boards[0].items_page.items[].id",
+     "data.boards[0].items_page.items[].name",
+     "data.boards[0].items_page.cursor",
+     "errors"
+    ],
+    "async": null,
+    "source_url": "https://developer.monday.com/api-reference/docs/getting-started",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1512,6 +1655,20 @@
     "no-code-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list records in a table (Data API v3)",
+    "method": "GET",
+    "url": "https://app.nocodb.com/api/v3/data/{baseId}/{tableId}/records",
+    "example": "curl \"https://app.nocodb.com/api/v3/data/$NOCODB_BASE_ID/$NOCODB_TABLE_ID/records\" -H \"xc-token: $NOCODB_API_TOKEN\"",
+    "response_fields": [
+     "records[].id",
+     "records[].fields",
+     "next"
+    ],
+    "async": null,
+    "source_url": "https://nocodb.com/apis/v3/swagger-v3.json",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,

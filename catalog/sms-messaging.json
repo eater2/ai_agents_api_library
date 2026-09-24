@@ -316,6 +316,24 @@
     "chat-messaging"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send a push message",
+    "method": "POST",
+    "url": "https://api.line.me/v2/bot/message/push",
+    "example": "curl -X POST https://api.line.me/v2/bot/message/push -H \"Content-Type: application/json\" -H \"Authorization: Bearer $LINE_CHANNEL_ACCESS_TOKEN\" -d '{\"to\":\"$LINE_USER_ID\",\"messages\":[{\"type\":\"text\",\"text\":\"Hello, world\"}]}'",
+    "response_fields": [
+     "sentMessages[].id",
+     "sentMessages[].quoteToken"
+    ],
+    "async": null,
+    "source_url": "https://developers.line.biz/en/reference/messaging-api/#send-push-message",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Japan Standard plan (JPY 15,000/mo incl. 30,000 messages): additional push messages up to JPY 3 each, counted per recipient; reply messages are free",
+    "source_url": "https://developers.line.biz/en/docs/messaging-api/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -409,6 +427,24 @@
    "async_jobs": null,
    "data_policy": null,
    "no_auth": false,
+   "call": {
+    "operation": "send an SMS",
+    "method": "POST",
+    "url": "https://api.plivo.com/v1/Account/{auth_id}/Message/",
+    "example": "curl -X POST https://api.plivo.com/v1/Account/$PLIVO_AUTH_ID/Message/ -u $PLIVO_AUTH_ID:$PLIVO_AUTH_TOKEN -H \"Content-Type: application/json\" -d '{\"src\": \"+14151234567\", \"dst\": \"+14157654321\", \"text\": \"Hello from Plivo!\"}'",
+    "response_fields": [
+     "message_uuid",
+     "api_id",
+     "message"
+    ],
+    "source_url": "https://www.plivo.com/docs/messaging/api/message/send-a-message",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "US outbound SMS: long code $0.0077, toll-free $0.0079 per message, plus carrier surcharge $0.0035-$0.0050",
+    "source_url": "https://www.plivo.com/sms/pricing/us/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -492,6 +528,24 @@
    "async_jobs": null,
    "data_policy": null,
    "no_auth": false,
+   "call": {
+    "operation": "send an SMS via the Conversation API",
+    "method": "POST",
+    "url": "https://{region}.conversation.api.sinch.com/v1/projects/{project_id}/messages:send",
+    "example": "curl -X POST \"https://us.conversation.api.sinch.com/v1/projects/$SINCH_PROJECT_ID/messages:send\" -u \"$SINCH_KEY_ID:$SINCH_KEY_SECRET\" -H \"Content-Type: application/json\" -d '{\"app_id\":\"{app_id}\",\"recipient\":{\"identified_by\":{\"channel_identities\":[{\"channel\":\"SMS\",\"identity\":\"+15550000000\"}]}},\"message\":{\"text_message\":{\"text\":\"Hi\"}}}'",
+    "response_fields": [
+     "message_id",
+     "accepted_time"
+    ],
+    "async": "delivery status arrives as a webhook callback to the app's callback URL",
+    "source_url": "https://developers.sinch.com/_spec/docs/conversation/api-reference/conversation.yaml",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "US SMS (10DLC or toll-free): $0.0078 per outbound message, plus carrier fees",
+    "source_url": "https://sinch.com/pricing/sms/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -692,6 +746,21 @@
    },
    "data_policy": null,
    "no_auth": false,
+   "call": {
+    "operation": "send an SMS",
+    "method": "POST",
+    "url": "https://api.telnyx.com/v2/messages",
+    "example": "curl -X POST https://api.telnyx.com/v2/messages -H \"Authorization: Bearer $TELNYX_API_KEY\" -H \"Content-Type: application/json\" -d '{\"from\":\"$TELNYX_NUMBER\",\"to\":\"+48600000000\",\"text\":\"Hi\"}'",
+    "response_fields": [
+     "data.id",
+     "data.to[].status",
+     "data.parts",
+     "data.cost"
+    ],
+    "async": "final delivery status arrives via webhook (or GET /v2/messages/{id})",
+    "source_url": "https://developers.telnyx.com/api-reference/messages/send-a-message",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -1020,6 +1089,25 @@
     "chat-messaging"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send a text message",
+    "method": "POST",
+    "url": "https://graph.facebook.com/v25.0/{phone-number-id}/messages",
+    "example": "curl https://graph.facebook.com/v25.0/$WA_PHONE_NUMBER_ID/messages -H \"Content-Type: application/json\" -H \"Authorization: Bearer $WHATSAPP_ACCESS_TOKEN\" -d '{\"messaging_product\":\"whatsapp\",\"recipient_type\":\"individual\",\"to\":\"+16505551234\",\"type\":\"text\",\"text\":{\"body\":\"Hello\"}}'",
+    "response_fields": [
+     "messaging_product",
+     "contacts[0].wa_id",
+     "messages[0].id"
+    ],
+    "async": "delivery and read status arrive later via webhooks",
+    "source_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/messages/text-messages",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Non-template messages inside an open customer service window are free; template messages are charged per delivered message at rates by category and recipient country (rate cards linked on page)",
+    "source_url": "https://developers.facebook.com/docs/whatsapp/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,

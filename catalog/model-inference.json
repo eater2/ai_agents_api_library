@@ -142,6 +142,26 @@
     "reranking"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "chat / text generation",
+    "method": "POST",
+    "url": "https://api.cohere.com/v2/chat",
+    "example": "curl -X POST https://api.cohere.com/v2/chat -H \"Authorization: Bearer $COHERE_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"command-a-plus-05-2026\",\"messages\":[{\"role\":\"user\",\"content\":\"Tell me about LLMs\"}]}'",
+    "response_fields": [
+     "message.content[0].text",
+     "finish_reason",
+     "usage.billed_units",
+     "id"
+    ],
+    "async": null,
+    "source_url": "https://docs.cohere.com/v2/reference/chat",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Command R: $0.15 input / $0.60 output per 1M tokens; Embed 4: $0.12 per 1M tokens; Rerank 4 Fast: $2 per 1K searches",
+    "source_url": "https://cohere.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -257,6 +277,27 @@
     "llm-observability"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list traces of a project",
+    "method": "GET",
+    "url": "https://www.comet.com/opik/api/v1/private/traces?project_name={name}",
+    "example": "curl \"https://www.comet.com/opik/api/v1/private/traces?project_name=Default%20Project&size=10\" -H \"authorization: $OPIK_API_KEY\" -H \"Comet-Workspace: $OPIK_WORKSPACE\"",
+    "response_fields": [
+     "content[].id",
+     "content[].name",
+     "content[].input",
+     "content[].output",
+     "total"
+    ],
+    "async": null,
+    "source_url": "https://www.comet.com/docs/opik/reference/rest-api/traces/get-traces-by-project.md",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Opik Cloud Pro: $19/mo incl. 100k spans, then $5 per extra 100k spans",
+    "source_url": "https://www.comet.com/site/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -568,6 +609,25 @@
     "model-hosting"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "chat completion",
+    "method": "POST",
+    "url": "https://api.fireworks.ai/inference/v1/chat/completions",
+    "example": "curl https://api.fireworks.ai/inference/v1/chat/completions -H \"Content-Type: application/json\" -H \"Authorization: Bearer $FIREWORKS_API_KEY\" -d '{\"model\":\"accounts/fireworks/models/glm-5p3-flash\",\"messages\":[{\"role\":\"user\",\"content\":\"Say hello in Spanish\"}]}'",
+    "response_fields": [
+     "choices[0].message.content",
+     "usage.prompt_tokens",
+     "usage.completion_tokens"
+    ],
+    "async": null,
+    "source_url": "https://docs.fireworks.ai/getting-started/quickstart",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Serverless per 1M tokens, e.g. GLM 5.3 Flash $0.15 input / $0.50 output; unlisted models over 16B params $0.90 per 1M tokens",
+    "source_url": "https://docs.fireworks.ai/serverless/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -672,6 +732,26 @@
     "document-parsing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "generate text",
+    "method": "POST",
+    "url": "https://generativelanguage.googleapis.com/v1beta/interactions",
+    "example": "curl -X POST https://generativelanguage.googleapis.com/v1beta/interactions -H \"x-goog-api-key: $GEMINI_API_KEY\" -H \"Content-Type: application/json\" -H \"Api-Revision: 2026-05-20\" -d '{\"model\": \"gemini-3.5-flash\", \"input\": \"Explain how AI works in a few words\"}'",
+    "response_fields": [
+     "id",
+     "status",
+     "steps[].content[0].text (step type model_output)",
+     "usage.total_tokens"
+    ],
+    "async": null,
+    "source_url": "https://ai.google.dev/gemini-api/docs/quickstart",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "gemini-3.5-flash paid tier: $1.50 per 1M input tokens, $9.00 per 1M output tokens (free tier available)",
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -767,6 +847,26 @@
     "speech-to-text"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "chat completion",
+    "method": "POST",
+    "url": "https://api.groq.com/openai/v1/chat/completions",
+    "example": "curl https://api.groq.com/openai/v1/chat/completions -H \"Content-Type: application/json\" -H \"Authorization: Bearer $GROQ_API_KEY\" -d '{\"model\":\"openai/gpt-oss-120b\",\"messages\":[{\"role\":\"user\",\"content\":\"Explain the importance of fast language models\"}]}'",
+    "response_fields": [
+     "choices[0].message.content",
+     "choices[0].finish_reason",
+     "usage.total_tokens",
+     "model"
+    ],
+    "async": null,
+    "source_url": "https://console.groq.com/docs/api-reference",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "openai/gpt-oss-120b: $0.15 per 1M input tokens, $0.60 per 1M output tokens (Llama 3.x models now listed as contact sales)",
+    "source_url": "https://console.groq.com/docs/models",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -864,6 +964,19 @@
     "image-understanding"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "chat completion on an open model",
+    "method": "POST",
+    "url": "https://router.huggingface.co/v1/chat/completions",
+    "example": "curl https://router.huggingface.co/v1/chat/completions -H \"Authorization: Bearer $HF_TOKEN\" -H 'Content-Type: application/json' -d '{\"model\":\"openai/gpt-oss-120b:fastest\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello!\"}],\"stream\":false}'",
+    "response_fields": [
+     "choices[0].message.content",
+     "usage"
+    ],
+    "async": null,
+    "source_url": "https://huggingface.co/docs/inference-providers/index",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -972,6 +1085,25 @@
     "document-parsing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a chat completion",
+    "method": "POST",
+    "url": "https://api.mistral.ai/v1/chat/completions",
+    "example": "curl https://api.mistral.ai/v1/chat/completions -H 'Content-Type: application/json' -H \"Authorization: Bearer $MISTRAL_API_KEY\" -d '{\"model\": \"mistral-large-latest\", \"messages\": [{\"role\": \"user\", \"content\": \"Who is the best French painter? Answer in one short sentence.\"}]}'",
+    "response_fields": [
+     "choices[0].message.content",
+     "choices[0].finish_reason",
+     "usage.total_tokens"
+    ],
+    "async": null,
+    "source_url": "https://docs.mistral.ai/api/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Mistral Large: $0.5 per 1M input tokens, $1.5 per 1M output tokens; Batch API 50% off",
+    "source_url": "https://mistral.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1227,6 +1359,26 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "send a chat completion to a routed model",
+    "method": "POST",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "example": "curl https://openrouter.ai/api/v1/chat/completions -H \"Content-Type: application/json\" -H \"Authorization: Bearer $OPENROUTER_API_KEY\" -d '{\"model\":\"~openai/gpt-sol-latest\",\"messages\":[{\"role\":\"user\",\"content\":\"What is the meaning of life?\"}]}'",
+    "response_fields": [
+     "id",
+     "model",
+     "choices[0].message.content",
+     "usage"
+    ],
+    "async": null,
+    "source_url": "https://openrouter.ai/docs/quickstart",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Tokens billed at the provider's list price per model (no markup); 5.5% fee on credit purchases (Standard), 8% (Business)",
+    "source_url": "https://openrouter.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1339,6 +1491,25 @@
     "source_url": "https://piapi.ai/docs/overview"
    },
    "no_auth": false,
+   "call": {
+    "operation": "generate an image from text (Flux)",
+    "method": "POST",
+    "url": "https://api.piapi.ai/api/v1/task",
+    "example": "curl -X POST https://api.piapi.ai/api/v1/task -H \"X-API-Key: $PIAPI_KEY\" -H \"Content-Type: application/json\" -d '{\"model\":\"Qubico/flux1-schnell\",\"task_type\":\"txt2img\",\"input\":{\"prompt\":\"a little cat\",\"width\":1024,\"height\":1024}}'",
+    "response_fields": [
+     "data.task_id",
+     "data.status",
+     "data.output.image_url"
+    ],
+    "async": "poll GET https://api.piapi.ai/api/v1/task/{task_id} until data.status is completed",
+    "source_url": "https://piapi.ai/docs/flux-api/text-to-image",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Flux: flux1-schnell $0.0015 per image, flux1-dev $0.015 per image, flux1-dev-advanced $0.02 per image",
+    "source_url": "https://piapi.ai/flux-api/llms.txt",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -1659,6 +1830,20 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "create a chat completion",
+    "method": "POST",
+    "url": "https://ai-gateway.vercel.sh/v1/chat/completions",
+    "example": "curl -X POST https://ai-gateway.vercel.sh/v1/chat/completions -H \"Authorization: Bearer $AI_GATEWAY_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\": \"anthropic/claude-opus-5\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}]}'",
+    "response_fields": [
+     "choices[0].message.content",
+     "choices[0].finish_reason",
+     "usage.total_tokens",
+     "model"
+    ],
+    "source_url": "https://vercel.com/docs/ai-gateway/sdks-and-apis/openai-chat-completions/chat-completions",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1753,6 +1938,26 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "embed texts",
+    "method": "POST",
+    "url": "https://api.voyageai.com/v1/embeddings",
+    "example": "curl -X POST https://api.voyageai.com/v1/embeddings -H \"Authorization: Bearer $VOYAGE_API_KEY\" -H \"content-type: application/json\" -d '{\"input\":[\"Sample text 1\",\"Sample text 2\"],\"model\":\"voyage-4\"}'",
+    "response_fields": [
+     "data[].embedding",
+     "data[].index",
+     "model",
+     "usage.total_tokens"
+    ],
+    "async": null,
+    "source_url": "https://docs.voyageai.com/reference/embeddings-api",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "voyage-4: $0.06 per 1M tokens (voyage-4-lite $0.02, voyage-4-large $0.12); first 200M tokens free",
+    "source_url": "https://docs.voyageai.com/docs/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,

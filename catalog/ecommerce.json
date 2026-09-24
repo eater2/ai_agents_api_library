@@ -67,6 +67,21 @@
     "store-management"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "search orders (Orders API v2026-01-01)",
+    "method": "GET",
+    "url": "https://sellingpartnerapi-na.amazon.com/orders/2026-01-01/orders?createdAfter={iso_datetime}&marketplaceIds={marketplaceId}",
+    "example": "curl \"https://sellingpartnerapi-na.amazon.com/orders/2026-01-01/orders?createdAfter=2026-09-01T00:00:00Z&marketplaceIds=ATVPDKIKX0DER\" -H \"x-amz-access-token: $LWA_ACCESS_TOKEN\" -H 'user-agent: MyTool/1.0 (Language=curl)'",
+    "response_fields": [
+     "orders[].orderId",
+     "orders[].createdTime",
+     "orders[].salesChannel",
+     "pagination.nextToken"
+    ],
+    "async": null,
+    "source_url": "https://developer-docs.amazon/sp-api/reference/searchorders.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,

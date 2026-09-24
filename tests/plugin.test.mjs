@@ -135,7 +135,10 @@ test("usage data: examples are safe and match the entry", async () => {
   for (const e of withCall) {
     const { example, url, method } = e.call;
     assert.match(example, /^curl /, `${e.id}: example is a curl command`);
-    assert.ok(example.includes(url.split("{")[0].split("?")[0].replace(/\/$/, "")) || example.includes(new URL(url).host), `${e.id}: example calls ${url}`);
+    // Per-tenant hosts are written as {placeholder}; otherwise the example must call the documented URL.
+    if (!url.startsWith("{")) {
+      assert.ok(example.includes(url.split("{")[0].split("?")[0].replace(/\/$/, "")) || example.includes(new URL(url).host), `${e.id}: example calls ${url}`);
+    }
     assert.match(method, /^(GET|POST|PUT|PATCH|DELETE)$/);
     // Secrets only as placeholders: no long opaque tokens in examples.
     assert.doesNotMatch(example, /\b(sk|pk|rk|xox[bp]|ghp|key)[-_][A-Za-z0-9]{16,}/, `${e.id}: example contains a real-looking key`);

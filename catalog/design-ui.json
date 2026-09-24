@@ -208,6 +208,22 @@
     "diagram-rendering"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "read a Figma file (document tree, components, styles)",
+    "method": "GET",
+    "url": "https://api.figma.com/v1/files/{file_key}",
+    "example": "curl https://api.figma.com/v1/files/$FIGMA_FILE_KEY -H \"X-Figma-Token: $FIGMA_TOKEN\"",
+    "response_fields": [
+     "name",
+     "lastModified",
+     "version",
+     "document",
+     "components"
+    ],
+    "async": null,
+    "source_url": "https://developers.figma.com/docs/rest-api/file-endpoints/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -375,6 +391,22 @@
     "design-file-access"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "get a design file by id",
+    "method": "POST",
+    "url": "https://design.penpot.app/api/main/methods/get-file",
+    "example": "curl -X POST https://design.penpot.app/api/main/methods/get-file -H \"Authorization: Token $PENPOT_ACCESS_TOKEN\" -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{\"id\": \"{file_id}\"}'",
+    "response_fields": [
+     "id",
+     "name",
+     "revn",
+     "projectId",
+     "data"
+    ],
+    "async": null,
+    "source_url": "https://design.penpot.app/api/_doc",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -483,6 +515,25 @@
     "serverless-deploy"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a chat that generates an app from a prompt (blocks until done)",
+    "method": "POST",
+    "url": "https://api.v0.dev/v2/chats",
+    "example": "curl -X POST \"https://api.v0.dev/v2/chats\" -H \"Authorization: Bearer $V0_API_KEY\" -H \"Content-Type: application/json\" -d '{\"message\":\"Create a project management dashboard with a kanban board\"}'",
+    "response_fields": [
+     "chat.id",
+     "chat.title",
+     "usage.creditsCost.total"
+    ],
+    "async": null,
+    "source_url": "https://v0.app/docs/api/v2/reference/chats/create-chat",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Per token, drawn from plan credits: v0 Mini $0.20/$1.20, v0 Pro $2/$10, v0 Max $5/$25, v0 Max Fast $10/$50 per 1M input/output tokens",
+    "source_url": "https://v0.app/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,

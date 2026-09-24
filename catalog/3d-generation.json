@@ -319,6 +319,21 @@
     "3d-asset-marketplace"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "search 3D models",
+    "method": "GET",
+    "url": "https://api.sketchfab.com/v3/search?type=models&q={keywords}",
+    "example": "curl \"https://api.sketchfab.com/v3/search?type=models&q=chair&downloadable=true\"",
+    "response_fields": [
+     "results[].uid",
+     "results[].name",
+     "results[].uri",
+     "next"
+    ],
+    "async": null,
+    "source_url": "https://docs.sketchfab.com/data-api/v3/swagger.json",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -472,6 +487,24 @@
     "image-to-3d"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "submit a text-to-3D job (Pro)",
+    "method": "POST",
+    "url": "https://hunyuan.intl.tencentcloudapi.com/",
+    "example": "curl -X POST https://hunyuan.intl.tencentcloudapi.com/ -H \"Authorization: $TC3_AUTHORIZATION\" -H \"Content-Type: application/json; charset=utf-8\" -H \"X-TC-Action: SubmitHunyuanTo3DProJob\" -H \"X-TC-Version: 2023-09-01\" -H \"X-TC-Timestamp: $TIMESTAMP\" -H \"X-TC-Region: $TC_REGION\" -d '{\"Prompt\":\"cat\"}'",
+    "response_fields": [
+     "Response.JobId",
+     "Response.RequestId"
+    ],
+    "async": "poll action QueryHunyuanTo3DProJob with {\"JobId\":...} until Status is DONE, then read ResultFile3Ds[].Url (https://www.tencentcloud.com/document/product/1284/75541). $TC3_AUTHORIZATION is a TC3-HMAC-SHA256 signature computed per request from SecretId/SecretKey",
+    "source_url": "https://www.tencentcloud.com/document/product/1284/75540",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Pro job 25 credits (LowPoly 30, +10 with PBR), Rapid 15 credits; postpaid $0.02 per credit, so a Pro job is $0.50",
+    "source_url": "https://www.tencentcloud.com/document/product/1284/75281",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,

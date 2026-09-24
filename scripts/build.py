@@ -313,7 +313,7 @@ def load_usage(ids):
         assert set(u) <= {"call", "unit_price", "mcp_config", "mcp_issue"}, f"data/usage.json {eid}: {set(u)}"
         c = u.get("call")
         if c:
-            assert c.get("method") and c.get("url", "").startswith("http") and c.get("example") and c.get("source_url"), f"usage {eid}: call"
+            assert c.get("method") and re.match(r"https?://|\{", c.get("url", "")) and c.get("example") and c.get("source_url"), f"usage {eid}: call"
         mc = u.get("mcp_config")
         if mc:
             assert mc.get("transport") in ("streamable-http", "sse", "stdio", None), f"usage {eid}: transport"

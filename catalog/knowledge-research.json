@@ -82,6 +82,21 @@
     "academic-search"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "search preprints by keyword",
+    "method": "GET",
+    "url": "http://export.arxiv.org/api/query?search_query={query}&start=0&max_results={n}",
+    "example": "curl 'http://export.arxiv.org/api/query?search_query=all:electron&start=0&max_results=10'",
+    "response_fields": [
+     "feed.entry[].id",
+     "feed.entry[].title",
+     "feed.entry[].summary",
+     "feed.entry[].link"
+    ],
+    "async": null,
+    "source_url": "https://info.arxiv.org/help/api/user-manual.html",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -196,6 +211,23 @@
     "government-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list bills of a Congress by type",
+    "method": "GET",
+    "url": "https://api.congress.gov/v3/bill/{congress}/{billType}?format=json&api_key={API_KEY}",
+    "example": "curl \"https://api.congress.gov/v3/bill/119/hr?format=json&limit=20&api_key=$CONGRESS_API_KEY\"",
+    "response_fields": [
+     "bills[].number",
+     "bills[].title",
+     "bills[].type",
+     "bills[].latestAction.text",
+     "bills[].url",
+     "pagination.count"
+    ],
+    "async": null,
+    "source_url": "https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -293,6 +325,25 @@
     "library-docs"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "fetch up-to-date documentation snippets for a library",
+    "method": "GET",
+    "url": "https://context7.com/api/v2/context?libraryId={libraryId}&query={query}",
+    "example": "curl -G \"https://context7.com/api/v2/context\" -H \"Authorization: Bearer $CONTEXT7_API_KEY\" --data-urlencode \"libraryId=/vercel/next.js\" --data-urlencode \"query=How do I use useState?\" --data-urlencode \"type=json\"",
+    "response_fields": [
+     "codeSnippets[].codeTitle",
+     "codeSnippets[].codeList[].code",
+     "infoSnippets[].content"
+    ],
+    "async": null,
+    "source_url": "https://context7.com/docs/api-reference/context/get-documentation-context",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Per API call: Free 1,000 calls/month; Pro $10/seat/month includes 5,000 calls per seat, then $10 per 1,000 calls ($0.01/call)",
+    "source_url": "https://context7.com/plans",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -404,6 +455,22 @@
     "academic-search"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "search scholarly works metadata",
+    "method": "GET",
+    "url": "https://api.crossref.org/works?query.bibliographic={query}&rows={n}&mailto={email}",
+    "example": "curl \"https://api.crossref.org/works?query.bibliographic=deep+learning&rows=5&mailto=$CONTACT_EMAIL\"",
+    "response_fields": [
+     "message.total-results",
+     "message.items[].DOI",
+     "message.items[].title",
+     "message.items[].author",
+     "message.items[].published"
+    ],
+    "async": null,
+    "source_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -509,6 +576,22 @@
     "news-search"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "search recent global news articles",
+    "method": "GET",
+    "url": "https://api.gdeltproject.org/api/v2/doc/doc?query={query}&mode=artlist&maxrecords={n}&format=json",
+    "example": "curl \"https://api.gdeltproject.org/api/v2/doc/doc?query=climate&mode=artlist&maxrecords=10&format=json\"",
+    "response_fields": [
+     "articles[].url",
+     "articles[].title",
+     "articles[].seendate",
+     "articles[].domain",
+     "articles[].language",
+     "articles[].sourcecountry"
+    ],
+    "source_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -619,6 +702,21 @@
     "repo-digest"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "turn a public GitHub repo into a text digest",
+    "method": "GET",
+    "url": "https://gitingest.com/api/{user}/{repository}",
+    "example": "curl https://gitingest.com/api/octocat/Hello-World",
+    "response_fields": [
+     "summary",
+     "tree",
+     "content",
+     "digest_url"
+    ],
+    "async": null,
+    "source_url": "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -704,6 +802,23 @@
     "social-data"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "get a story or comment by id",
+    "method": "GET",
+    "url": "https://hacker-news.firebaseio.com/v0/item/{id}.json",
+    "example": "curl https://hacker-news.firebaseio.com/v0/item/8863.json",
+    "response_fields": [
+     "by",
+     "title",
+     "url",
+     "score",
+     "time",
+     "kids"
+    ],
+    "async": null,
+    "source_url": "https://github.com/HackerNews/API",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -818,6 +933,23 @@
     "book-lookup"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "search books",
+    "method": "GET",
+    "url": "https://openlibrary.org/search.json?q={query}",
+    "example": "curl -H \"User-Agent: MyApp (me@example.org)\" \"https://openlibrary.org/search.json?q=the+lord+of+the+rings\"",
+    "response_fields": [
+     "num_found",
+     "docs[].title",
+     "docs[].author_name",
+     "docs[].key",
+     "docs[].first_publish_year",
+     "docs[].cover_i"
+    ],
+    "async": null,
+    "source_url": "https://openlibrary.org/dev/docs/api/search",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -917,6 +1049,21 @@
     "book-lookup"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "search articles",
+    "method": "GET",
+    "url": "https://api.nytimes.com/svc/search/v2/articlesearch.json?q={query}&api-key={API_KEY}",
+    "example": "curl \"https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=$NYT_API_KEY\"",
+    "response_fields": [
+     "response.docs[].web_url",
+     "response.docs[].headline.main",
+     "response.docs[].abstract",
+     "response.docs[].pub_date"
+    ],
+    "async": null,
+    "source_url": "https://github.com/nytimes/public_api_specs/blob/master/article_search/article_search_v2.json",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1005,6 +1152,28 @@
     "news-articles"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "search news articles",
+    "method": "GET",
+    "url": "https://newsapi.org/v2/everything?q={query}",
+    "example": "curl \"https://newsapi.org/v2/everything?q=bitcoin\" -H \"X-Api-Key: $NEWSAPI_KEY\"",
+    "response_fields": [
+     "status",
+     "totalResults",
+     "articles[].title",
+     "articles[].url",
+     "articles[].publishedAt",
+     "articles[].source.name"
+    ],
+    "async": null,
+    "source_url": "https://newsapi.org/docs/endpoints/everything",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Extra requests beyond plan: $0.0018 per request on Business ($449/mo incl. 250,000), $0.0009 on Advanced ($1,749/mo incl. 2M); free Developer plan has no overage",
+    "source_url": "https://newsapi.org/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1116,6 +1285,27 @@
     "academic-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "search scholarly works",
+    "method": "GET",
+    "url": "https://api.openalex.org/works?search={query}",
+    "example": "curl \"https://api.openalex.org/works?search=climate+change&per_page=10&api_key=$OPENALEX_API_KEY\"",
+    "response_fields": [
+     "meta.count",
+     "meta.cost_usd",
+     "results[].id",
+     "results[].display_name",
+     "results[].doi"
+    ],
+    "async": null,
+    "source_url": "https://help.openalex.org/api/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "search: $1 per 1,000 calls; list+filter: $0.10 per 1,000; single entity: free; content download: $10 per 1,000 (after $1/day free usage)",
+    "source_url": "https://help.openalex.org/access/example-costs",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1223,6 +1413,20 @@
     "academic-search"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "search PubMed for article IDs (ESearch)",
+    "method": "GET",
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term={query}&retmode=json",
+    "example": "curl \"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=cancer&retmax=20&retmode=json&api_key=$NCBI_API_KEY\"",
+    "response_fields": [
+     "esearchresult.count",
+     "esearchresult.idlist",
+     "esearchresult.querytranslation"
+    ],
+    "async": null,
+    "source_url": "https://www.nlm.nih.gov/dataguide/eutilities/utilities.html",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1339,6 +1543,21 @@
     "academic-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "search papers by relevance",
+    "method": "GET",
+    "url": "https://api.semanticscholar.org/graph/v1/paper/search?query={query}&fields={fields}",
+    "example": "curl -H \"x-api-key: $S2_API_KEY\" \"https://api.semanticscholar.org/graph/v1/paper/search?query=covid+vaccination&fields=title,year,url&limit=3\"",
+    "response_fields": [
+     "total",
+     "next",
+     "data[].paperId",
+     "data[].title"
+    ],
+    "async": null,
+    "source_url": "https://api.semanticscholar.org/graph/v1/swagger.json",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1442,6 +1661,20 @@
     "knowledge-graph-query"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "run a SPARQL query",
+    "method": "GET",
+    "url": "https://query.wikidata.org/sparql?query={sparql}",
+    "example": "curl -G https://query.wikidata.org/sparql --data-urlencode 'query=SELECT ?dob WHERE { wd:Q42 wdt:P569 ?dob . }' -H \"Accept: application/sparql-results+json\" -H \"User-Agent: MyAgent/1.0 ($CONTACT_EMAIL)\"",
+    "response_fields": [
+     "head.vars",
+     "results.bindings[].dob.value",
+     "results.bindings[].dob.type"
+    ],
+    "async": null,
+    "source_url": "https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1549,6 +1782,21 @@
     "encyclopedia-lookup"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "full-text search Wikipedia articles",
+    "method": "GET",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch={query}&format=json",
+    "example": "curl -A \"MyBot/0.1 (https://example.org/mybot; mybot@example.org)\" \"https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=Nelson%20Mandela&utf8=&format=json\"",
+    "response_fields": [
+     "query.searchinfo.totalhits",
+     "query.search[].title",
+     "query.search[].pageid",
+     "query.search[].snippet",
+     "continue.sroffset"
+    ],
+    "source_url": "https://www.mediawiki.org/wiki/API:Search",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1648,6 +1896,18 @@
     "computational-answer"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "get a computed answer for a natural-language query (LLM API)",
+    "method": "GET",
+    "url": "https://www.wolframalpha.com/api/v1/llm-api?input={query}&appid={APPID}",
+    "example": "curl -G https://www.wolframalpha.com/api/v1/llm-api --data-urlencode \"input=10 densest elemental metals\" --data-urlencode \"appid=$WOLFRAM_APPID\" --data-urlencode \"maxchars=1000\"",
+    "response_fields": [
+     "plain-text body: Query, Input interpretation, Result sections and a Wolfram|Alpha website link"
+    ],
+    "async": null,
+    "source_url": "https://products.wolframalpha.com/llm-api/documentation",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,

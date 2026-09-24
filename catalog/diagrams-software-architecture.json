@@ -142,6 +142,22 @@
     "diagram-rendering"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list model objects in a landscape",
+    "method": "GET",
+    "url": "https://api.icepanel.io/v1/landscapes/{landscapeId}/versions/latest/model/objects",
+    "example": "curl \"https://api.icepanel.io/v1/landscapes/$ICEPANEL_LANDSCAPE_ID/versions/latest/model/objects\" -H \"X-API-Key: $ICEPANEL_API_KEY\"",
+    "response_fields": [
+     "modelObjects[].id",
+     "modelObjects[].name",
+     "modelObjects[].type",
+     "modelObjects[].parentId",
+     "modelObjects[].status"
+    ],
+    "async": null,
+    "source_url": "https://developer.icepanel.io/developer-guide/getting-started/quickstart.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -231,6 +247,17 @@
     "diagram-rendering"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "render a diagram from text source",
+    "method": "POST",
+    "url": "https://kroki.io/{diagram_type}/{output_format}",
+    "example": "curl -X POST https://kroki.io/graphviz/svg -H \"Content-Type: text/plain\" --data-raw 'digraph G {Hello->World}'",
+    "response_fields": [
+     "response body: rendered image (SVG/PNG/PDF per output_format)"
+    ],
+    "source_url": "https://docs.kroki.io/kroki/setup/usage/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -519,6 +546,21 @@
     "whiteboard-editing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a sticky note on a board",
+    "method": "POST",
+    "url": "https://api.miro.com/v2/boards/{board_id}/sticky_notes",
+    "example": "curl -X POST https://api.miro.com/v2/boards/$MIRO_BOARD_ID/sticky_notes -H \"Authorization: Bearer $MIRO_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"data\":{\"content\":\"Hello\",\"shape\":\"square\"},\"position\":{\"x\":100,\"y\":100}}'",
+    "response_fields": [
+     "id",
+     "type",
+     "data.content",
+     "links.self"
+    ],
+    "async": null,
+    "source_url": "https://developers.miro.com/reference/create-sticky-note-item-1.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -608,6 +650,19 @@
     "diagram-rendering"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a visual from text",
+    "method": "POST",
+    "url": "https://api.napkin.ai/v1/visual",
+    "example": "curl -X POST https://api.napkin.ai/v1/visual -H \"Authorization: Bearer $NAPKIN_API_TOKEN\" -H \"Content-Type: application/json\" -d '{\"format\":\"svg\",\"content\":\"Napkin API\"}'",
+    "response_fields": [
+     "id",
+     "status"
+    ],
+    "async": "poll GET https://api.napkin.ai/v1/visual/{request-id}/status until status is completed, then download each generated_files URL with the same Authorization header (URLs expire after 30 min)",
+    "source_url": "https://api.napkin.ai/api/create-visual-request",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -682,6 +737,19 @@
     "diagram-rendering"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "render a diagram to PNG",
+    "method": "GET",
+    "url": "https://www.plantuml.com/plantuml/png/{ENCODED_SOURCE}",
+    "example": "curl -o diagram.png https://www.plantuml.com/plantuml/png/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000",
+    "response_fields": [
+     "body: PNG image bytes (use /svg/ for SVG, /txt/ for ASCII)",
+     "Content-Type"
+    ],
+    "async": null,
+    "source_url": "https://plantuml.com/server",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,

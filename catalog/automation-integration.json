@@ -57,6 +57,25 @@
     "app-connectors"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list flows in a project",
+    "method": "GET",
+    "url": "https://cloud.activepieces.com/api/v1/flows?projectId={projectId}&status=ENABLED",
+    "example": "curl -G https://cloud.activepieces.com/api/v1/flows -H \"Authorization: Bearer $ACTIVEPIECES_API_KEY\" --data-urlencode \"projectId={project_id}\" --data-urlencode \"status=ENABLED\"",
+    "response_fields": [
+     "data[].id",
+     "data[].status",
+     "next"
+    ],
+    "async": null,
+    "source_url": "https://www.activepieces.com/docs/endpoints/flows/list",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 credit per flow run (AI steps 2-20 credits); Plus $20/mo includes 10,000 credits, overage $0.007/credit",
+    "source_url": "https://www.activepieces.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -142,6 +161,27 @@
     "app-connectors"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "execute a tool",
+    "method": "POST",
+    "url": "https://api.arcade.dev/v1/tools/execute",
+    "example": "curl -X POST https://api.arcade.dev/v1/tools/execute -H \"Authorization: Bearer $ARCADE_API_KEY\" -H \"Content-Type: application/json\" -d '{\"tool_name\":\"Math.Sqrt\",\"input\":{\"a\":\"625\"},\"user_id\":\"$ARCADE_USER_ID\"}'",
+    "response_fields": [
+     "success",
+     "status",
+     "output.value",
+     "output.error",
+     "output.authorization"
+    ],
+    "async": null,
+    "source_url": "https://api.arcade.dev/v1/swagger",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Team plan ($25/mo): $0.01 per tool call and $0.10 per auth event beyond included quota; Free plan includes 2,000 of each per month",
+    "source_url": "https://www.arcade.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -238,6 +278,25 @@
     "app-connectors"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "execute a tool action for a user",
+    "method": "POST",
+    "url": "https://backend.composio.dev/api/v3.1/tools/execute/{tool_slug}",
+    "example": "curl -X POST https://backend.composio.dev/api/v3.1/tools/execute/$TOOL_SLUG -H \"x-api-key: $COMPOSIO_API_KEY\" -H \"Content-Type: application/json\" -d '{\"user_id\": \"user_123\", \"arguments\": {}}'",
+    "response_fields": [
+     "successful",
+     "data",
+     "error",
+     "log_id"
+    ],
+    "source_url": "https://docs.composio.dev/reference/api-reference/tools/postToolsExecuteByToolSlug",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Scale plan: $0.0003 per tool call beyond 100,000 included/month ($0.0005 for Composio-managed apps); Free plan stops at 100,000",
+    "source_url": "https://composio.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -350,6 +409,25 @@
     "app-connectors"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "start an agent session with a message",
+    "method": "POST",
+    "url": "https://api.gumloop.com/api/v1/agents/{agent_id}/sessions",
+    "example": "curl -X POST \"https://api.gumloop.com/api/v1/agents/$GUMLOOP_AGENT_ID/sessions\" -H \"Authorization: Bearer $GUMLOOP_API_KEY\" -H \"x-auth-key: $GUMLOOP_USER_ID\" -H \"Content-Type: application/json\" -d '{\"input\":\"Research Acme Corp and draft a brief.\"}'",
+    "response_fields": [
+     "session.id",
+     "session.state",
+     "session.messages"
+    ],
+    "async": "202 with state processing or queued; poll GET https://api.gumloop.com/api/v1/sessions/{session_id} until state is completed",
+    "source_url": "https://docs.gumloop.com/api-reference/sessions/create-session",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Credits at $0.005 each: agent runs bill model tokens and paid tool calls at list price (min 1 credit per tool call) plus an 8% orchestration fee; Pro $37/mo includes 20,000 credits",
+    "source_url": "https://www.gumloop.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -555,6 +633,20 @@
     "workflow-automation"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "preview rows of a Storage table",
+    "method": "GET",
+    "url": "https://connection.keboola.com/v2/storage/tables/{tableId}/data-preview",
+    "example": "curl \"https://connection.keboola.com/v2/storage/tables/in.c-main.mytable/data-preview?format=json&limit=100\" -H \"X-StorageApi-Token: $KEBOOLA_STORAGE_TOKEN\"",
+    "response_fields": [
+     "columns",
+     "rows[][].columnName",
+     "rows[][].value"
+    ],
+    "async": null,
+    "source_url": "https://connection.keboola.com/api/storage/doc.json",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -652,6 +744,19 @@
     "app-connectors"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "run a scenario",
+    "method": "POST",
+    "url": "https://{zone}.make.com/api/v2/scenarios/{scenarioId}/run",
+    "example": "curl -X POST https://eu1.make.com/api/v2/scenarios/$SCENARIO_ID/run -H \"Authorization: Token $MAKE_API_TOKEN\" -H \"Content-Type: application/json\" -d '{\"data\":{},\"responsive\":true}'",
+    "response_fields": [
+     "executionId",
+     "status"
+    ],
+    "async": "with responsive=false only executionId is returned; pass callbackUrl to receive a POST with executionId and statusUrl when the run finishes",
+    "source_url": "https://developers.make.com/api-documentation/api-reference/scenarios",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -734,6 +839,25 @@
     "app-connectors"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "call a connector tool (JSON-RPC tools/call)",
+    "method": "POST",
+    "url": "https://ah-api.merge.dev/api/v1/tool-packs/{tool_pack_id}/registered-users/{registered_user_id}/mcp/",
+    "example": "curl -X POST https://ah-api.merge.dev/api/v1/tool-packs/$TOOL_PACK_ID/registered-users/$REGISTERED_USER_ID/mcp/ -H \"Authorization: Bearer $MERGE_AH_API_KEY\" -H \"Content-Type: application/json\" -d '{\"jsonrpc\": \"2.0\", \"id\": 1, \"method\": \"tools/call\", \"params\": {\"name\": \"weather__get_forecast\", \"arguments\": {\"input\": {\"latitude\": 37.7749, \"longitude\": -122.4194}}}}'",
+    "response_fields": [
+     "result.content[0].text",
+     "result.isError",
+     "error"
+    ],
+    "async": null,
+    "source_url": "https://docs.merge.dev/merge-agent-handler/agent-handler/mcp/endpoint-post",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 tool call = 1 credit; Pro plan $1,000/month for 25,000 credits (~$0.04 per tool call); Free plan 2,000 credits/month",
+    "source_url": "https://docs.merge.dev/merge-agent-handler/administer/billing-and-usage",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -832,6 +956,21 @@
     "app-connectors"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list workflows",
+    "method": "GET",
+    "url": "https://{instance}/api/v1/workflows",
+    "example": "curl -X GET \"https://$N8N_HOST/api/v1/workflows?active=true&limit=100\" -H \"accept: application/json\" -H \"X-N8N-API-KEY: $N8N_API_KEY\"",
+    "response_fields": [
+     "data[].id",
+     "data[].name",
+     "data[].active",
+     "nextCursor"
+    ],
+    "async": null,
+    "source_url": "https://docs.n8n.io/connect/n8n-api/pagination.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -908,6 +1047,15 @@
     "app-connectors"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "proxy a GET request to a connected third-party API",
+    "method": "GET",
+    "url": "https://api.nango.dev/proxy/{anyPath}",
+    "example": "curl https://api.nango.dev/proxy/users -H \"Authorization: Bearer $NANGO_SECRET_KEY\" -H \"Connection-Id: $CONNECTION_ID\" -H \"Provider-Config-Key: $INTEGRATION_KEY\"",
+    "async": null,
+    "source_url": "https://nango.dev/docs/reference/api/proxy/get",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1075,6 +1223,18 @@
     "app-connectors"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "call an app API on an end user's behalf (Connect API proxy)",
+    "method": "GET",
+    "url": "https://api.pipedream.com/v1/connect/{project_id}/proxy/{url_safe_base64_target_url}?external_user_id={external_user_id}&account_id={account_id}",
+    "example": "curl \"https://api.pipedream.com/v1/connect/$PD_PROJECT_ID/proxy/aHR0cHM6Ly9zbGFjay5jb20vYXBpL3VzZXJzLnByb2ZpbGUuZ2V0?external_user_id=$EXTERNAL_USER_ID&account_id=$PD_ACCOUNT_ID\" -H \"Authorization: Bearer $PD_ACCESS_TOKEN\" -H 'x-pd-environment: production'",
+    "response_fields": [
+     "upstream app response body (e.g. Slack: ok, profile)"
+    ],
+    "async": null,
+    "source_url": "https://pipedream.com/apps/slack-v2.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1175,6 +1335,23 @@
     "app-connectors"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "execute a connector action via Actions RPC",
+    "method": "POST",
+    "url": "https://api.stackone.com/actions/rpc",
+    "example": "curl -X POST \"https://api.stackone.com/actions/rpc\" -u \"$STACKONE_API_KEY:\" -H \"x-account-id: $STACKONE_ACCOUNT_ID\" -H \"Content-Type: application/json\" -d '{\"action\":\"bamboohr_list_employees\",\"query\":{\"page_size\":25}}'",
+    "response_fields": [
+     "data"
+    ],
+    "async": null,
+    "source_url": "https://docs.stackone.com/embed/call-actions/rpc-http",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 credit per tool/API call; Starter (free) 1,000 credits/seat/month, extra credits $60 per 20,000 ($0.003/call); Team ($600/mo) $20 per 20,000",
+    "source_url": "https://www.stackone.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1265,6 +1442,21 @@
     "data-pipeline"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "run a saved tool",
+    "method": "POST",
+    "url": "https://api.superglue.cloud/v1/tools/{toolId}/run",
+    "example": "curl -X POST \"https://api.superglue.cloud/v1/tools/$SUPERGLUE_TOOL_ID/run\" -H \"Authorization: Bearer $SUPERGLUE_API_KEY\" -H \"Content-Type: application/json\" -d '{\"inputs\":{\"query\":\"latest AI news\"},\"options\":{\"async\":false}}'",
+    "response_fields": [
+     "runId",
+     "status",
+     "data",
+     "error"
+    ],
+    "async": null,
+    "source_url": "https://superglue.ai/openapi.yaml",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1356,6 +1548,11 @@
     "workflow-automation"
    ],
    "no_auth": false,
+   "unit_price": {
+    "summary": "Each successful MCP tool call uses 2 Zapier tasks (failed calls free); task price depends on the Zapier plan, e.g. Pro $19.99/mo annual for 750 tasks (~$0.053 per call)",
+    "source_url": "https://docs.zapier.com/mcp/overview/usage",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,

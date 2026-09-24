@@ -85,6 +85,26 @@
     "ci-cd"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "trigger a pipeline on a branch",
+    "method": "POST",
+    "url": "https://circleci.com/api/v2/project/{project-slug}/pipeline",
+    "example": "curl -X POST https://circleci.com/api/v2/project/gh/{org}/{repo}/pipeline -H \"Circle-Token: $CIRCLE_TOKEN\" -H \"Content-Type: application/json\" -d '{\"branch\":\"main\"}'",
+    "response_fields": [
+     "id",
+     "number",
+     "state",
+     "created_at"
+    ],
+    "async": "the pipeline runs in the background; poll GET https://circleci.com/api/v2/pipeline/{id}/workflow for workflow status",
+    "source_url": "https://circleci.com/docs/api/v2/index.html",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Compute billed in credits: Linux Medium = 10 credits per minute; extra credits $15 per 25,000 (about $0.006 per Linux Medium minute)",
+    "source_url": "https://circleci.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -224,6 +244,21 @@
     "incident-management"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "query metric timeseries",
+    "method": "GET",
+    "url": "https://api.datadoghq.com/api/v1/query?from={from}&to={to}&query={query}",
+    "example": "curl -G \"https://api.datadoghq.com/api/v1/query\" --data-urlencode \"from=$FROM_EPOCH\" --data-urlencode \"to=$TO_EPOCH\" --data-urlencode \"query=avg:system.cpu.user{*}\" -H \"Accept: application/json\" -H \"DD-API-KEY: $DD_API_KEY\" -H \"DD-APPLICATION-KEY: $DD_APP_KEY\"",
+    "response_fields": [
+     "status",
+     "series[].metric",
+     "series[].pointlist",
+     "series[].scope"
+    ],
+    "async": null,
+    "source_url": "https://docs.datadoghq.com/api/latest/metrics/query-timeseries-points/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -335,6 +370,21 @@
     "package-registry"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list tags of a repository",
+    "method": "GET",
+    "url": "https://hub.docker.com/v2/namespaces/{namespace}/repositories/{repository}/tags",
+    "example": "curl -H \"Authorization: Bearer $DOCKER_HUB_TOKEN\" https://hub.docker.com/v2/namespaces/library/repositories/nginx/tags",
+    "response_fields": [
+     "count",
+     "next",
+     "results[].name",
+     "results[].last_updated"
+    ],
+    "async": null,
+    "source_url": "https://docs.docker.com/reference/api/hub/latest/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -616,6 +666,21 @@
     "ci-cd"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create an issue",
+    "method": "POST",
+    "url": "https://gitlab.com/api/v4/projects/{id}/issues",
+    "example": "curl --request POST --header \"PRIVATE-TOKEN: $GITLAB_TOKEN\" --url \"https://gitlab.com/api/v4/projects/$PROJECT_ID/issues?title=Issues%20with%20auth&labels=bug\"",
+    "response_fields": [
+     "id",
+     "iid",
+     "web_url",
+     "state"
+    ],
+    "async": null,
+    "source_url": "https://docs.gitlab.com/api/issues/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -745,6 +810,24 @@
     "network-probing"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "run a ping test from probes in chosen countries",
+    "method": "POST",
+    "url": "https://api.globalping.io/v1/measurements",
+    "example": "curl -X POST https://api.globalping.io/v1/measurements -H \"Content-Type: application/json\" -d '{\"type\":\"ping\",\"target\":\"cdn.jsdelivr.net\",\"locations\":[{\"country\":\"DE\",\"limit\":2}]}'",
+    "response_fields": [
+     "id",
+     "probesCount"
+    ],
+    "async": "poll GET https://api.globalping.io/v1/measurements/{id} every 500 ms until status is not in-progress; read results[].result",
+    "source_url": "https://api.globalping.io/v1/spec.yaml",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 credit per probe test (ping from 5 locations = 5 credits); 250 free tests/hour anonymous, 500 with account; sponsors get 4,000 credits per $1",
+    "source_url": "https://globalping.io/credits",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -842,6 +925,21 @@
     "package-lookup"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "list all versions of an artifact",
+    "method": "GET",
+    "url": "https://search.maven.org/solrsearch/select?q={query}&rows=20&wt=json",
+    "example": "curl 'https://search.maven.org/solrsearch/select?q=g:com.google.inject+AND+a:guice&core=gav&rows=20&wt=json'",
+    "response_fields": [
+     "response.numFound",
+     "response.docs[].id",
+     "response.docs[].v",
+     "response.docs[].latestVersion"
+    ],
+    "async": null,
+    "source_url": "https://central.sonatype.org/search/rest-api-guide/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -932,6 +1030,21 @@
     "incident-management"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create an incident",
+    "method": "POST",
+    "url": "https://api.pagerduty.com/incidents",
+    "example": "curl -X POST https://api.pagerduty.com/incidents -H \"Authorization: Token token=$PAGERDUTY_API_KEY\" -H 'Accept: application/vnd.pagerduty+json;version=2' -H 'Content-Type: application/json' -H \"From: $PAGERDUTY_USER_EMAIL\" -d '{\"incident\": {\"type\": \"incident\", \"title\": \"The server is on fire.\", \"service\": {\"id\": \"{service_id}\", \"type\": \"service_reference\"}}}'",
+    "response_fields": [
+     "incident.id",
+     "incident.incident_number",
+     "incident.status",
+     "incident.html_url"
+    ],
+    "async": null,
+    "source_url": "https://raw.githubusercontent.com/PagerDuty/api-schema/main/reference/REST/openapiv3.json",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1060,6 +1173,21 @@
     "api-testing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list collections",
+    "method": "GET",
+    "url": "https://api.postman.com/collections",
+    "example": "curl \"https://api.postman.com/collections?workspace={workspace_id}\" -H \"x-api-key: $POSTMAN_API_KEY\"",
+    "response_fields": [
+     "collections[].id",
+     "collections[].uid",
+     "collections[].name",
+     "meta.total"
+    ],
+    "async": null,
+    "source_url": "https://learning.postman.com/api-docs/api-reference/collections/get-collections",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1168,6 +1296,21 @@
     "feature-flags"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a feature flag",
+    "method": "POST",
+    "url": "https://app.reflag.com/api/apps/{appId}/flags",
+    "example": "curl -X POST \"https://app.reflag.com/api/apps/$REFLAG_APP_ID/flags\" -H \"Authorization: Bearer $REFLAG_API_KEY\" -H \"Content-Type: application/json\" -d '{\"key\":\"new-checkout-flow\",\"name\":\"New checkout flow\"}'",
+    "response_fields": [
+     "flag.id",
+     "flag.key",
+     "flag.name",
+     "flagStateVersions"
+    ],
+    "async": null,
+    "source_url": "https://docs.reflag.com/api/reflag-rest-api/reflag-api-reference.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1262,6 +1405,22 @@
     "monitoring"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list a project's unresolved issues",
+    "method": "GET",
+    "url": "https://sentry.io/api/0/projects/{organization_id_or_slug}/{project_id_or_slug}/issues/",
+    "example": "curl https://sentry.io/api/0/projects/$SENTRY_ORG/$SENTRY_PROJECT/issues/ -H \"Authorization: Bearer $SENTRY_AUTH_TOKEN\"",
+    "response_fields": [
+     "[].id",
+     "[].shortId",
+     "[].title",
+     "[].status",
+     "[].count",
+     "[].lastSeen"
+    ],
+    "source_url": "https://docs.sentry.io/api/events/list-a-projects-issues/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1388,6 +1547,22 @@
     "sql-database"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a Supabase project",
+    "method": "POST",
+    "url": "https://api.supabase.com/v1/projects",
+    "example": "curl -X POST https://api.supabase.com/v1/projects -H \"Authorization: Bearer $SUPABASE_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"name\":\"my-project\",\"organization_slug\":\"{org_slug}\",\"db_pass\":\"{db_password}\"}'",
+    "response_fields": [
+     "id",
+     "ref",
+     "region",
+     "status",
+     "created_at"
+    ],
+    "async": "provisioning continues after 201; poll GET https://api.supabase.com/v1/projects/{ref} until status is ACTIVE_HEALTHY",
+    "source_url": "https://supabase.com/docs/reference/api/v1-create-a-project",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,

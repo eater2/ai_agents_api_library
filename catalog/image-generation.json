@@ -310,6 +310,20 @@
     "text-to-speech"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "generate a video from an image (Kling 2.1 Pro)",
+    "method": "POST",
+    "url": "https://api.magnific.com/v1/ai/image-to-video/kling-v2-1-pro",
+    "example": "curl -X POST https://api.magnific.com/v1/ai/image-to-video/kling-v2-1-pro -H \"x-magnific-api-key: $MAGNIFIC_API_KEY\" -H \"Content-Type: application/json\" -d '{\"image\": \"https://example.com/photo.jpg\", \"prompt\": \"slow camera pan\", \"duration\": \"5\"}'",
+    "response_fields": [
+     "data.task_id",
+     "data.status",
+     "data.generated[0]"
+    ],
+    "async": "poll GET https://api.magnific.com/v1/ai/image-to-video/kling-v2-1/{task-id} until data.status is COMPLETED (or pass webhook_url)",
+    "source_url": "https://docs.magnific.com/api-reference/image-to-video/kling-v2.1-pro/post-kling-v2-1-pro",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -946,6 +960,25 @@
     "background-removal"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "remove the background from an image",
+    "method": "POST",
+    "url": "https://api.remove.bg/v1.0/removebg",
+    "example": "curl -H \"X-Api-Key: $REMOVE_BG_API_KEY\" -F image_url=https://www.remove.bg/example.jpg -F size=auto -f https://api.remove.bg/v1.0/removebg -o no-bg.png",
+    "response_fields": [
+     "body (PNG/JPG/WebP image bytes)",
+     "X-Credits-Charged header",
+     "X-Type header"
+    ],
+    "async": null,
+    "source_url": "https://www.remove.bg/api",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 credit per full-resolution image (preview 0.25 credit); pay-as-you-go 10 credits for $9 down to 8,000 for $1,699; subscriptions from $9/mo for 40 credits",
+    "source_url": "https://www.remove.bg/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1037,6 +1070,26 @@
     "image-editing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "generate an image from text (Stable Image Core)",
+    "method": "POST",
+    "url": "https://api.stability.ai/v2beta/stable-image/generate/core",
+    "example": "curl -f -sS https://api.stability.ai/v2beta/stable-image/generate/core -H \"authorization: Bearer $STABILITY_API_KEY\" -H \"accept: image/*\" -F prompt=\"Lighthouse on a cliff overlooking the ocean\" -F output_format=webp -o ./lighthouse.webp",
+    "response_fields": [
+     "binary image body (accept: image/*)",
+     "image (base64, with accept: application/json)",
+     "finish_reason",
+     "seed"
+    ],
+    "async": null,
+    "source_url": "https://platform.stability.ai/docs/api-reference#tag/Generate/paths/~1v2beta~1stable-image~1generate~1core/post",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Stable Image Core: 3 credits per successful image; 1 credit = $0.01, so $0.03 per image; failed generations free",
+    "source_url": "https://platform.stability.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,

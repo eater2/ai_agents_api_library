@@ -67,6 +67,25 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "translate text",
+    "method": "POST",
+    "url": "https://translate.{region}.amazonaws.com/",
+    "example": "curl https://translate.us-east-1.amazonaws.com/ --aws-sigv4 \"aws:amz:us-east-1:translate\" --user \"$AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY\" -H \"Content-Type: application/x-amz-json-1.1\" -H \"X-Amz-Target: AWSShineFrontendService_20170701.TranslateText\" -d '{\"Text\":\"Hello world.\",\"SourceLanguageCode\":\"en\",\"TargetLanguageCode\":\"de\"}'",
+    "response_fields": [
+     "TranslatedText",
+     "SourceLanguageCode",
+     "TargetLanguageCode"
+    ],
+    "async": null,
+    "source_url": "https://docs.aws.amazon.com/translate/latest/APIReference/API_TranslateText.html",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Standard real-time text translation: $15.00 per million characters",
+    "source_url": "https://aws.amazon.com/translate/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -140,6 +159,25 @@
     "checked_at": "2026-09-24"
    },
    "no_auth": false,
+   "call": {
+    "operation": "translate text",
+    "method": "POST",
+    "url": "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from={from}&to={to}",
+    "example": "curl -X POST \"https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from=en&to=fr\" -H \"Ocp-Apim-Subscription-Key: $AZURE_TRANSLATOR_KEY\" -H \"Ocp-Apim-Subscription-Region: $AZURE_REGION\" -H \"Content-Type: application/json\" -d '[{\"text\":\"Hello, world\"}]'",
+    "response_fields": [
+     "[0].translations[].text",
+     "[0].translations[].to",
+     "[0].detectedLanguage.language"
+    ],
+    "async": null,
+    "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/quickstart/rest-api",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "S1 pay-as-you-go standard text translation: $10 per 1M characters (F0 free tier: 2M characters/month)",
+    "source_url": "https://prices.azure.com/api/retail/prices?$filter=productName%20eq%20'Translator%20Text'%20and%20armRegionName%20eq%20'eastus'",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -345,6 +383,23 @@
    },
    "base_url": "https://translation.googleapis.com",
    "no_auth": false,
+   "call": {
+    "operation": "translate text",
+    "method": "POST",
+    "url": "https://translation.googleapis.com/v3/projects/{PROJECT_ID}:translateText",
+    "example": "curl -X POST -H \"Authorization: Bearer $(gcloud auth print-access-token)\" -H \"x-goog-user-project: $PROJECT_ID\" -H \"Content-Type: application/json; charset=utf-8\" -d '{\"sourceLanguageCode\": \"en\", \"targetLanguageCode\": \"pl\", \"contents\": [\"Bring me some coffee!\"]}' https://translation.googleapis.com/v3/projects/$PROJECT_ID:translateText",
+    "response_fields": [
+     "translations[].translatedText"
+    ],
+    "async": null,
+    "source_url": "https://docs.cloud.google.com/translate/docs/basic/translating-text",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "NMT text translation: $20 per 1M characters after the first 500,000 characters/month (free, applied as $10 monthly credit)",
+    "source_url": "https://cloud.google.com/translate/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -423,6 +478,22 @@
     "source_url": "https://dev.languagetool.org/public-http-api"
    },
    "no_auth": false,
+   "call": {
+    "operation": "check text for grammar and spelling errors",
+    "method": "POST",
+    "url": "https://api.languagetool.org/v2/check",
+    "example": "curl -d \"text=This is an test.\" -d \"language=auto\" https://api.languagetool.org/v2/check",
+    "response_fields": [
+     "matches[].message",
+     "matches[].offset",
+     "matches[].length",
+     "matches[].replacements[].value",
+     "language.detectedLanguage.code"
+    ],
+    "async": null,
+    "source_url": "https://dev.languagetool.org/public-http-api",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,

@@ -68,6 +68,20 @@
     "bim-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "translate a model to SVF2 (Model Derivative job)",
+    "method": "POST",
+    "url": "https://developer.api.autodesk.com/modelderivative/v2/designdata/job",
+    "example": "curl -X POST https://developer.api.autodesk.com/modelderivative/v2/designdata/job -H \"Authorization: Bearer $APS_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"input\": {\"urn\": \"$BASE64_URN_OF_SOURCE_FILE\"}, \"output\": {\"formats\": [{\"type\": \"svf2\", \"views\": [\"2d\", \"3d\"]}]}}'",
+    "response_fields": [
+     "result",
+     "urn",
+     "acceptedJobs.output.formats"
+    ],
+    "async": "poll GET https://developer.api.autodesk.com/modelderivative/v2/designdata/{urn}/manifest until status is success/failed/timeout",
+    "source_url": "https://aps.autodesk.com/en/docs/model-derivative/v2/tutorials/prep-file4viewer/task3-translate-source-file/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -149,6 +163,26 @@
     "bim-data"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list the iModels of an iTwin",
+    "method": "GET",
+    "url": "https://api.bentley.com/imodels/?iTwinId={iTwinId}",
+    "example": "curl \"https://api.bentley.com/imodels/?iTwinId=$ITWIN_ID\" -H \"Authorization: Bearer $BENTLEY_ACCESS_TOKEN\" -H 'Accept: application/vnd.bentley.itwin-platform.v2+json'",
+    "response_fields": [
+     "iModels[].id",
+     "iModels[].displayName",
+     "iModels[].state",
+     "_links.next"
+    ],
+    "async": null,
+    "source_url": "https://developer.bentley.com/apis/imodels-v2/operations/get-itwin-imodels/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Usage billed in credits at $1.20 per credit (paid tiers); e.g. iModels 1 credit per 2 GB ingress/egress, Reporting 1 credit per 250,000 rows, Forms/Issues 1 credit per 50 queries",
+    "source_url": "https://developer.bentley.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -235,6 +269,19 @@
     "cad-modeling"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "get a document's metadata",
+    "method": "GET",
+    "url": "https://cad.onshape.com/api/v10/documents/{did}",
+    "example": "curl https://cad.onshape.com/api/v10/documents/$ONSHAPE_DOCUMENT_ID -H 'Accept: application/json;charset=UTF-8; qs=0.09' -u $ONSHAPE_ACCESS_KEY:$ONSHAPE_SECRET_KEY",
+    "response_fields": [
+     "id",
+     "name"
+    ],
+    "async": null,
+    "source_url": "https://onshape-public.github.io/docs/api-intro/quickstart/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -330,6 +377,19 @@
     "task-management"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list projects in a company",
+    "method": "GET",
+    "url": "https://api.procore.com/rest/v1.0/projects?company_id={company_id}",
+    "example": "curl -H \"Authorization: Bearer $PROCORE_ACCESS_TOKEN\" -H \"Procore-Company-Id: $PROCORE_COMPANY_ID\" \"https://api.procore.com/rest/v1.0/projects?company_id=$PROCORE_COMPANY_ID\"",
+    "response_fields": [
+     "[].id",
+     "[].name"
+    ],
+    "async": null,
+    "source_url": "https://github.com/procore/documentation/blob/main/tutorials/tutorial_mpz.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -479,6 +539,21 @@
     "cad-modeling"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "list projects in a workspace via GraphQL",
+    "method": "POST",
+    "url": "https://app.speckle.systems/graphql",
+    "example": "curl -X POST https://app.speckle.systems/graphql -H \"Authorization: Bearer $SPECKLE_TOKEN\" -H \"Content-Type: application/json\" -d '{\"query\":\"query($workspaceId: String!){ workspace(id: $workspaceId){ projects { totalCount items { id name createdAt } } } }\",\"variables\":{\"workspaceId\":\"{workspace_id}\"}}'",
+    "response_fields": [
+     "data.workspace.projects.totalCount",
+     "data.workspace.projects.items[].id",
+     "data.workspace.projects.items[].name",
+     "errors"
+    ],
+    "async": null,
+    "source_url": "https://docs.speckle.systems/developers/api/graphql",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,

@@ -71,6 +71,19 @@
     "email-inbox"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send an email from an inbox",
+    "method": "POST",
+    "url": "https://api.agentmail.to/v0/inboxes/{inbox_id}/messages/send",
+    "example": "curl -X POST https://api.agentmail.to/v0/inboxes/$INBOX_ID/messages/send -H \"Authorization: Bearer $AGENTMAIL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"to\":\"recipient@example.com\",\"subject\":\"Hello\",\"text\":\"Body\"}'",
+    "response_fields": [
+     "message_id",
+     "thread_id"
+    ],
+    "async": null,
+    "source_url": "https://docs.agentmail.to/api-reference/inboxes/messages/send.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -200,6 +213,21 @@
     "team-chat"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send a message to a channel",
+    "method": "POST",
+    "url": "https://discord.com/api/v10/channels/{channel.id}/messages",
+    "example": "curl -X POST https://discord.com/api/v10/channels/$CHANNEL_ID/messages -H \"Authorization: Bot $DISCORD_BOT_TOKEN\" -H \"Content-Type: application/json\" -d '{\"content\":\"Hello\"}'",
+    "response_fields": [
+     "id",
+     "channel_id",
+     "content",
+     "timestamp"
+    ],
+    "async": null,
+    "source_url": "https://docs.discord.com/developers/resources/message#create-message",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -314,6 +342,24 @@
     "email-send"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send an email",
+    "method": "POST",
+    "url": "https://api.mailgun.net/v3/{domain_name}/messages",
+    "example": "curl -X POST https://api.mailgun.net/v3/$MAILGUN_DOMAIN/messages -u \"api:$MAILGUN_API_KEY\" -F from=\"Sender <postmaster@$MAILGUN_DOMAIN>\" -F to=user@example.com -F subject=Hello -F text=Testing",
+    "response_fields": [
+     "id",
+     "message"
+    ],
+    "async": null,
+    "source_url": "https://documentation.mailgun.com/docs/mailgun/api-reference/send/mailgun/messages/post-v3--domain-name--messages",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Overage from $1.80 per 1,000 emails (Basic, $15/mo incl. 10,000) or from $1.30 per 1,000 (Foundation, $35/mo incl. 50,000)",
+    "source_url": "https://www.mailgun.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -415,6 +461,22 @@
     "push-notification"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "publish a push notification to a topic",
+    "method": "POST",
+    "url": "https://ntfy.sh/{topic}",
+    "example": "curl -H \"Title: Build finished\" -H \"Priority: high\" -d \"Backup successful\" https://ntfy.sh/$NTFY_TOPIC",
+    "response_fields": [
+     "id",
+     "time",
+     "event",
+     "topic",
+     "message"
+    ],
+    "async": null,
+    "source_url": "https://docs.ntfy.sh/publish/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -535,6 +597,25 @@
     "email-send"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send one email",
+    "method": "POST",
+    "url": "https://api.postmarkapp.com/email",
+    "example": "curl -X POST https://api.postmarkapp.com/email -H 'Accept: application/json' -H 'Content-Type: application/json' -H \"X-Postmark-Server-Token: $POSTMARK_SERVER_TOKEN\" -d '{\"From\":\"sender@example.com\",\"To\":\"receiver@example.com\",\"Subject\":\"Test\",\"TextBody\":\"Hello\",\"MessageStream\":\"outbound\"}'",
+    "response_fields": [
+     "MessageID",
+     "ErrorCode",
+     "SubmittedAt"
+    ],
+    "async": null,
+    "source_url": "https://postmarkapp.com/developer/user-guide/send-email-with-api",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "overage per 1,000 emails: $1.80 (Basic), $1.30 (Pro), $1.20 (Platform); plans from $15/mo for 10,000 emails",
+    "source_url": "https://postmarkapp.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1004,6 +1085,26 @@
     "chat-messaging"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "send a message to a channel (server-side)",
+    "method": "POST",
+    "url": "https://chat.stream-io-api.com/channels/{type}/{id}/message?api_key={API_KEY}",
+    "example": "curl -X POST \"https://chat.stream-io-api.com/channels/messaging/general/message?api_key=$STREAM_API_KEY\" -H 'Stream-Auth-Type: jwt' -H \"Authorization: $STREAM_SERVER_JWT\" -H 'Content-Type: application/json' -d '{\"message\": {\"text\": \"Hello World\", \"user\": {\"id\": \"user-1\"}}}'",
+    "response_fields": [
+     "message.id",
+     "message.text",
+     "message.created_at",
+     "duration"
+    ],
+    "async": null,
+    "source_url": "https://github.com/GetStream/protocol/blob/main/openapi/chat-openapi.json",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Chat overage: $0.09 per MAU above plan limit, $0.99 per extra concurrent connection, $5.00 per 1M stored messages",
+    "source_url": "https://getstream.io/chat/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1077,6 +1178,21 @@
     "calendar"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a scheduled meeting",
+    "method": "POST",
+    "url": "https://api.zoom.us/v2/users/{userId}/meetings",
+    "example": "curl -X POST https://api.zoom.us/v2/users/me/meetings -H \"Authorization: Bearer $ZOOM_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"topic\":\"Planning\",\"type\":2,\"start_time\":\"2026-10-01T15:00:00Z\",\"duration\":30}'",
+    "response_fields": [
+     "id",
+     "join_url",
+     "start_url",
+     "password"
+    ],
+    "async": null,
+    "source_url": "https://developers.zoom.us/api-hub/meetings/methods/endpoints.json",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
