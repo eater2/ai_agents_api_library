@@ -15,8 +15,19 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "vendor",
+    "repo": "https://github.com/autodesk-platform-services/aps-mcp-server-nodejs",
+    "tools": [
+     "list_buckets",
+     "list_objects",
+     "list_hubs",
+     "list_projects"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://aps.autodesk.com/blog/building-custom-mcp-servers-autodesk-platform-services",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "free trial credits, then pay-as-you-go",
    "sdk": [
@@ -28,6 +39,29 @@
    "desc_en": "Upload, translate, view and automate CAD/BIM files (Model Derivative, Data Management, Design Automation) via REST APIs.",
    "notes": "Successor to Autodesk Forge; requires an Autodesk account and app registration in the APS console.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "limited monthly usage of rated APIs (Automation, Model Derivative, Flow Graph Engine, Reality Capture)",
+    "period": "month",
+    "source_url": "https://aps.autodesk.com/blog/aps-business-model-evolution",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "oauth2",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <ACCESS_TOKEN> (token from https://developer.api.autodesk.com/authentication/v2/token)",
+    "source_url": "https://github.com/autodesk-platform-services/aps-mcp-server-python",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://developer.api.autodesk.com",
+   "oauth_scopes": {
+    "scopes": [
+     "data:read",
+     "bucket:read"
+    ],
+    "source_url": "https://github.com/autodesk-platform-services/aps-mcp-server-python",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -47,6 +81,9 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "none",
+    "source_url": "https://www.bentley.com/en/infrastructure-ai/mcp-servers/",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "none"
    },
@@ -59,6 +96,34 @@
    "desc_en": "Create, manage and query digital twins, iModels and reality/reporting data for infrastructure projects via REST APIs.",
    "notes": "Built on iTwin.js; free developer account, but production data volumes/usage are billed.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Community tier: 100 credits/month, 10 GB cloud data, 100 GB reality data; non-commercial, non-production",
+    "period": "month",
+    "source_url": "https://developer.bentley.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "oauth2",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <ACCESS_TOKEN> (token from https://ims.bentley.com/connect/token)",
+    "source_url": "https://developer.bentley.com/apis/overview/authorization/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.bentley.com",
+   "rate_limits": {
+    "summary": "Community: 500 requests/min and 5,000 calls/hour; Standard/Premium: 5,000 requests/min",
+    "source_url": "https://developer.bentley.com/apis/overview/rate-limits/",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "itwin-platform",
+     "offline_access"
+    ],
+    "source_url": "https://developer.bentley.com/apis/overview/authorization/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -94,6 +159,23 @@
    "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
    "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": true,
+    "quota": "e.g. 2M basemap tiles, 20K geocodes, 20K routes, 500 place searches",
+    "period": "month",
+    "source_url": "https://location.arcgis.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "token",
+    "format": "?token=<API_KEY> or header X-Esri-Authorization: Bearer <API_KEY>",
+    "source_url": "https://developers.arcgis.com/rest/geocode/find-address-candidates/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://geocode-api.arcgis.com/arcgis/rest/services",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -113,8 +195,13 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://fs-mcp.labs.onshape.app/mcp",
+    "covers_full_api": false,
+    "source_url": "https://www.onshape.com/en/blog/featurescript-mcp-server-enables-text-code-cad",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free tier (public documents only); private documents need a paid plan",
    "sdk": [],
@@ -123,6 +210,35 @@
    "desc_en": "Create, read and modify Onshape CAD documents, parts, assemblies and drawings programmatically via REST API.",
    "notes": "Free-tier API access is limited to public documents; private/commercial use needs a paid Onshape subscription.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "2,500 API calls per user (Free plan; public documents only, non-commercial)",
+    "period": "year",
+    "source_url": "https://onshape-public.github.io/docs/auth/limits/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(<ACCESS_KEY>:<SECRET_KEY>) or HMAC: Authorization: On <AccessKey>:HmacSHA256:<Signature>",
+    "source_url": "https://onshape-public.github.io/docs/auth/apikeys/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://cad.onshape.com/api",
+   "rate_limits": {
+    "summary": "Annual call caps: Free/Standard 2,500 per user, Professional 5,000 per user, Enterprise 10,000 per full user; 429 on burst; public App Store OAuth apps exempt",
+    "source_url": "https://onshape-public.github.io/docs/auth/limits/",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "OAuth2Read",
+     "OAuth2Write"
+    ],
+    "source_url": "https://onshape-public.github.io/docs/auth/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -142,8 +258,20 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://app.procore.com/rest/v1.0/mcp",
+    "tools": [
+     "procore_read",
+     "procore_write",
+     "converse",
+     "health",
+     "whoami"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://raw.githubusercontent.com/procore/documentation/main/mcp/procore_ai_edge_mcp_setup.md",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free developer sandbox; production requires customer's paid Procore plan",
    "sdk": [],
@@ -152,6 +280,25 @@
    "desc_en": "Read and write construction project data - RFIs, submittals, drawings, budgets, schedules - via REST API.",
    "notes": "Requires joining the Procore Developer Program and OAuth app approval for production scopes; sandbox is free.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Developer Sandbox auto-created per registered app (seed data, separate OAuth credentials)",
+    "source_url": "https://raw.githubusercontent.com/procore/documentation/main/platform_concepts/development_environments.md",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "oauth2",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <ACCESS_TOKEN> (token from https://login.procore.com/oauth/token)",
+    "source_url": "https://raw.githubusercontent.com/procore/documentation/main/oauth/oauth_client_credentials.md",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.procore.com/rest/v1.0",
+   "rate_limits": {
+    "summary": "Hourly limit (60-min window) plus spike limit (10-s window); see X-Rate-Limit-* headers; failed calls count",
+    "source_url": "https://raw.githubusercontent.com/procore/documentation/main/plan_your_app/rate_limiting.md",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -191,6 +338,20 @@
    "desc_en": "Run Rhino/Grasshopper geometry operations headlessly via a stateless REST API you deploy yourself.",
    "notes": "Not a hosted SaaS signup - must self-host on Windows/Linux (IIS, Azure, AWS); requires a Rhino license.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "requires_card": true,
+    "source_url": "https://developer.rhino3d.com/guides/compute/core-hour-billing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "RhinoComputeKey",
+    "format": "RhinoComputeKey: <API_KEY>",
+    "source_url": "https://developer.rhino3d.com/guides/compute/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -210,8 +371,13 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/bimgeek/speckle-mcp",
+    "covers_full_api": false,
+    "source_url": "https://github.com/bimgeek/speckle-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "community"
    },
    "free_tier": "free Explore plan (1 project, 3 users), unlimited API calls",
    "sdk": [
@@ -224,6 +390,28 @@
    "desc_en": "Send, receive and query 3D/BIM model data across CAD tools (Revit, Rhino, Grasshopper, Tekla) via GraphQL API and SDKs.",
    "notes": "Open-source data platform; free tier has unlimited API calls but limits project/user counts.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "Explore plan: 1 project, up to 3 users, 100 versions, unlimited API calls",
+    "source_url": "https://www.speckle.systems/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN>",
+    "source_url": "https://docs.speckle.systems/developers/authentication/pats.md",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://app.speckle.systems/api/graphql",
+   "oauth_scopes": {
+    "scopes": [
+     "streams:read"
+    ],
+    "source_url": "https://docs.speckle.systems/developers/authentication/pats.md",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -254,6 +442,18 @@
    "desc_en": "Manage Trimble Connect projects, files, BIM models, issues/topics and metadata via REST APIs (Core, Model, Organizer).",
    "notes": "Requires a Trimble Identity developer account and a registered application.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "oauth2",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <TRIMBLE_IDENTITY_TOKEN>",
+    "source_url": "https://developer.trimble.com/docs/connect",
+    "checked_at": "2026-09-24"
+   },
+   "rate_limits": {
+    "summary": "Not published; HTTP 429 Too Many Requests should be retried. Regional base URLs must be discovered via the /regions endpoint",
+    "source_url": "https://developer.trimble.com/docs/connect/reference",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -273,8 +473,25 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "vendor",
+    "repo": "https://github.com/KittyCAD/mcp",
+    "tools": [
+     "zoo_execute_kcl",
+     "mock_execute_kcl",
+     "exec_kcl_project",
+     "get_modeling_sessions",
+     "start_modeling_session",
+     "stop_modeling_session",
+     "snapshot",
+     "import_cad_file",
+     "parse_unit",
+     "normalize_ext"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/KittyCAD/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "start free trial credits, then usage-based pay-as-you-go",
    "sdk": [
@@ -288,6 +505,19 @@
    "desc_en": "Generate 3D CAD models from text prompts and run modeling/file-conversion operations via REST API.",
    "notes": "ML endpoints handle text-to-CAD generation; base API URL is api.zoo.dev, OpenAPI schema served from there.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "quota": "Start free, then pay-as-you-go; some plans include monthly API usage",
+    "source_url": "https://zoo.dev/api-pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <ZOO_API_TOKEN>",
+    "source_url": "https://zoo.dev/docs/api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.zoo.dev",
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,

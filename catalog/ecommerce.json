@@ -15,8 +15,14 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://sellingpartner-ai.amazon.com/mcp",
+    "repo": "https://github.com/amzn/selling-partner-agentic-toolkit",
+    "covers_full_api": false,
+    "source_url": "https://github.com/amzn/selling-partner-agentic-toolkit",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free API access; requires an existing Amazon Seller/Vendor Central account",
    "sdk": [
@@ -30,6 +36,27 @@
    "desc_en": "Manage listings, orders, inventory, and reports for an Amazon seller/vendor account via REST API.",
    "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "free API access (planned annual and usage fees cancelled)",
+    "source_url": "https://developer.amazonservices.com/cancellation-of-sp-api-fees",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "oauth2",
+    "in": "header",
+    "name": "x-amz-access-token",
+    "format": "x-amz-access-token: <LWA_ACCESS_TOKEN> (token from https://api.amazon.com/auth/o2/token)",
+    "source_url": "https://developer-docs.amazon/sp-api/docs/connecting-to-the-selling-partner-api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://sellingpartnerapi-na.amazon.com",
+   "rate_limits": {
+    "summary": "Token bucket per operation (rate per second + burst); standard and dynamic usage plans; 429 when empty",
+    "source_url": "https://developer-docs.amazon/sp-api/docs/usage-plans-and-rate-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -62,6 +89,19 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.bigcommerce.com/_mcp/server",
+    "maintainer": "vendor",
+    "tools": [
+     "search_products",
+     "get_product_details",
+     "related_products",
+     "add_item_to_cart",
+     "update_cart_item",
+     "remove_item_from_cart",
+     "create_checkout_url"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/storefront/b2c",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -74,6 +114,31 @@
    "desc_en": "Manage catalog, orders, customers, and carts on a BigCommerce store via REST/GraphQL APIs.",
    "notes": "Official MCP server is for documentation search/dev assistance, not direct storefront execution - use API tokens for that.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-Auth-Token",
+    "format": "X-Auth-Token: <ACCESS_TOKEN>",
+    "source_url": "https://docs.bigcommerce.com/docs/start/authentication/api-accounts",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.bigcommerce.com/stores/{store_hash}/v3",
+   "rate_limits": {
+    "summary": "Pro: 60k/hour (450/30 s); Standard and Plus: 20k/hour (150/30 s); Enterprise per plan",
+    "source_url": "https://docs.bigcommerce.com/docs/start/best-practices/api-rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "store_v2_products",
+     "store_v2_orders",
+     "store_v2_customers",
+     "store_v2_information",
+     "store_v2_products_read_only"
+    ],
+    "source_url": "https://docs.bigcommerce.com/docs/start/authentication/api-accounts",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

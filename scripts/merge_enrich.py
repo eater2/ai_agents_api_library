@@ -14,6 +14,42 @@ DATA = ROOT / "data"
 FIELDS = ("free_plan", "auth_scheme", "base_url", "rate_limits", "oauth_scopes", "async_jobs", "data_policy")
 MCP_FIELDS = ("maintainer", "remote_url", "repo", "tools", "covers_full_api", "source_url", "checked_at")
 URL = re.compile(r"^https?://\S+$")
+PATCHABLE = ("docs", "homepage", "auth", "auth_hint", "mcp", "free_tier", "openapi", "llms_txt", "notes", "desc_en")
+AUTH = {"api_key", "oauth2", "api_key+oauth2", "none", "cloud_iam"}
+MCP_TYPES = {"official", "community", "none"}
+
+
+def apply_fixes(by_id, today):
+    """Apply data/enrich/fix_*.json: confirmed corrections of existing fields (see FIX_SPEC.md)."""
+    patched, rejected = 0, []
+    for f in sorted((DATA / "enrich").glob("fix_*.json")):
+        for eid, patch in json.loads(f.read_text("utf-8")).items():
+            e = by_id.get(eid)
+            if not e:
+                rejected.append(f"{eid}: unknown id")
+                continue
+            changed = False
+            for field, value in patch.items():
+                if field not in PATCHABLE:
+                    continue
+                if field == "auth" and value not in AUTH:
+                    rejected.append(f"{eid}: auth {value!r}")
+                    continue
+                if field == "mcp":
+                    if not isinstance(value, dict) or value.get("type") not in MCP_TYPES:
+                        rejected.append(f"{eid}: mcp {value!r}")
+                        continue
+                    value = {**e.get("mcp", {}), "type": value["type"], "url": value.get("url")}
+                if field in ("docs", "homepage", "openapi", "llms_txt") and value is not None and not URL.match(str(value)):
+                    rejected.append(f"{eid}: {field} {value!r}")
+                    continue
+                if e.get(field) != value:
+                    e[field] = value
+                    changed = True
+            if changed:
+                e["verified"] = today
+                patched += 1
+    return patched, rejected
 
 
 def clean(v):
@@ -62,6 +98,9 @@ def main():
             for c in rec.get("corrections") or []:
                 corrections.append(f"- `{eid}`: {c}")
             merged += 1
+    from datetime import date
+    patched, rejected = apply_fixes(by_id, date.today().isoformat())
+    print(f"fixes: {patched} entries patched, rejected: {rejected}")
     (DATA / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     (DATA / "enrich" / "corrections.md").write_text(
         "# Corrections reported by research agents\n\nApply to data/catalog.json after checking the source.\n\n"

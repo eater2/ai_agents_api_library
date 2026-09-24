@@ -1,0 +1,1648 @@
+{
+  "attio-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Free plan: up to 3 seats, 50,000 records, API and webhook access included",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://attio.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <access_token>",
+      "source_url": "https://docs.attio.com/rest-api/guides/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.attio.com/v2",
+    "rate_limits": {
+      "summary": "100 read requests/second and 25 write requests/second",
+      "source_url": "https://docs.attio.com/rest-api/guides/rate-limiting",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "record_permission:read-write",
+        "object_configuration:read"
+      ],
+      "source_url": "https://docs.attio.com/rest-api/endpoint-reference/records/create-a-record",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.attio.com/mcp",
+      "repo": null,
+      "tools": [
+        "list-objects",
+        "search-records",
+        "list-records",
+        "get-records-by-ids",
+        "create-record",
+        "upsert-record",
+        "update-record",
+        "merge-records",
+        "list-attribute-definitions",
+        "list-lists",
+        "create-list",
+        "list-records-in-list",
+        "add-record-to-list",
+        "update-list-entry-by-id",
+        "create-comment",
+        "list-comments",
+        "create-note",
+        "semantic-search-notes",
+        "get-note-body",
+        "list-tasks",
+        "create-task",
+        "update-task",
+        "search-meetings",
+        "get-call-recording",
+        "semantic-search-emails",
+        "get-email-content",
+        "list-workspace-members",
+        "whoami",
+        "run-basic-report",
+        "query-particle-sql"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://docs.attio.com/mcp/overview",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: pricing page shows a lasting Free plan (up to 3 seats, 50,000 records, API and webhook access, no credit card); 14-day trial is for the Pro plan"
+    ]
+  },
+  "hubspot-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Free tools: up to 2 users, 1,000 contacts",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.hubspot.com/pricing/crm",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <private_app_access_token_or_oauth_token>",
+      "source_url": "https://developers.hubspot.com/docs/api-reference/crm-contacts-v3/guide",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.hubapi.com",
+    "rate_limits": {
+      "summary": "Private apps: Free & Starter 100 req/10s per app, 250,000/day per account; Professional 190/10s, 625,000/day; Enterprise 190/10s, 1,000,000/day",
+      "source_url": "https://developers.hubspot.com/docs/developer-tooling/platform/usage-guidelines",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "crm.objects.contacts.read",
+        "crm.objects.contacts.write"
+      ],
+      "source_url": "https://developers.hubspot.com/docs/api-reference/crm-contacts-v3/guide",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.hubspot.com",
+      "repo": null,
+      "tools": [
+        "get_user_details",
+        "get_organization_details",
+        "discover_hubspot_schema",
+        "search_crm_objects",
+        "get_crm_objects",
+        "manage_crm_objects",
+        "manage_segment",
+        "query_crm_data",
+        "search_properties",
+        "get_properties",
+        "manage_custom_properties",
+        "manage_custom_pipelines",
+        "search_owners",
+        "read_campaign_data",
+        "manage_campaign_objects",
+        "search_conversations",
+        "get_marketing_email_analytics",
+        "manage_marketing_email",
+        "manage_landing_page",
+        "manage_website_page",
+        "manage_blog_post"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "intercom-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Free development workspace (dev only, US region, max 20 users/leads, no outbound email)",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <access_token>",
+      "source_url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.intercom.io",
+    "rate_limits": {
+      "summary": "10,000 API calls/min per app and 25,000/min per workspace, enforced in 10-second windows",
+      "source_url": "https://developers.intercom.com/docs/references/rest-api/errors/rate-limiting",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.intercom.com/mcp",
+      "repo": null,
+      "tools": [
+        "search",
+        "fetch",
+        "search_conversations",
+        "get_conversation",
+        "search_contacts",
+        "get_contact",
+        "list_companies",
+        "get_company",
+        "list_articles",
+        "search_articles",
+        "get_article",
+        "create_article",
+        "update_article",
+        "add_internal_note"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.intercom.com/docs/guides/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth: private apps use a workspace access token (Authorization: Bearer) without OAuth; OAuth is only required for public apps, so api_key+oauth2 fits better than oauth2"
+    ]
+  },
+  "klaviyo-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Up to 250 active profiles, 500 email sends/month, $5 of mobile messages/month",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.klaviyo.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: Klaviyo-API-Key <private_api_key> (plus revision: <YYYY-MM-DD> header)",
+      "source_url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://a.klaviyo.com/api",
+    "rate_limits": {
+      "summary": "Per-account per-endpoint tiers: XS 1/s,15/m; S 3/s,60/m; M 10/s,150/m; L 75/s,700/m; XL 350/s,3500/m",
+      "source_url": "https://developers.klaviyo.com/en/docs/rate_limits_and_error_handling",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "profiles:read",
+        "profiles:write",
+        "lists:read",
+        "lists:write",
+        "campaigns:read",
+        "campaigns:write",
+        "events:write"
+      ],
+      "source_url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": {
+      "value": true,
+      "how": "bulk import/catalog and campaign send operations create jobs; poll the corresponding get_*_job endpoint",
+      "source_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server_available_tools"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.klaviyo.com/mcp",
+      "repo": "uvx klaviyo-mcp-server@latest",
+      "tools": [
+        "get_account_details",
+        "get_campaigns",
+        "create_campaign",
+        "send_campaign",
+        "get_catalog_items",
+        "get_events",
+        "create_event",
+        "get_metrics",
+        "query_metric_aggregates",
+        "get_profiles",
+        "create_or_update_profile",
+        "subscribe_profile_to_marketing",
+        "bulk_import_profiles",
+        "get_flows",
+        "create_flow",
+        "get_lists",
+        "create_list",
+        "get_segments",
+        "create_segment"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server_available_tools",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "mailchimp-marketing-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "250 contacts; max 500 email sends/month or 250/day",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://mailchimp.com/pricing/marketing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "basic",
+      "format": "Basic auth anystring:<API_KEY> (or Authorization: Bearer <OAUTH_TOKEN>)",
+      "source_url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://<dc>.api.mailchimp.com/3.0",
+    "rate_limits": {
+      "summary": "10 simultaneous connections per user; 120-second timeout per call",
+      "source_url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "batch operations endpoint processes requests asynchronously; poll the batch status",
+      "source_url": "https://mailchimp.com/developer/marketing/docs/fundamentals/"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/damientilman/mailchimp-mcp-server",
+      "tools": [
+        "list_campaigns",
+        "get_campaign_report",
+        "add_member",
+        "create_campaign",
+        "send_campaign"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/damientilman/mailchimp-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: no official Marketing API MCP; community servers exist (e.g. github.com/damientilman/mailchimp-mcp-server, 227 tools). Mailchimp's official MCP (https://mandrillapp.com/mcp) covers only Transactional/Mandrill"
+    ]
+  },
+  "pipedrive-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "Developer Sandbox account (5 seats) for building apps; deleted if inactive (no app in 45 days)",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://pipedrive.readme.io/docs/developer-sandbox-account",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-token",
+      "scheme": null,
+      "format": "x-api-token: <API_TOKEN> (or Authorization: Bearer <OAUTH_TOKEN>)",
+      "source_url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://{company}.pipedrive.com/api/v1",
+    "rate_limits": {
+      "summary": "Daily token budget 30,000 x plan multiplier x seats; burst per 2s (API token) Lite 20, Growth 40, Premium 100, Ultimate 120; search 10/2s",
+      "source_url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "base",
+        "deals:full",
+        "contacts:full",
+        "activities:full",
+        "leads:full",
+        "search:read",
+        "users:read"
+      ],
+      "source_url": "https://pipedrive.readme.io/docs/marketplace-scopes-and-permissions-explanations",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.pipedrive.ai/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://support.pipedrive.com/en/article/mcp-claude",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Pipedrive now has an official hosted MCP server at https://mcp.pipedrive.ai/mcp (OAuth, all plans)",
+      "auth_hint: docs now specify the API token in the x-api-token header, not the api_token query param"
+    ]
+  },
+  "salesforce-apis": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Developer Edition org: 15,000 API calls per 24 hours",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <access_token>",
+      "source_url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": {
+      "summary": "Developer Edition 15,000 calls/24h; Enterprise/Professional 100,000 + per-license calls/24h; 5 concurrent long-running (>=20s) requests on Developer/Trial orgs",
+      "source_url": "https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.salesforce.com/platform/mcp/v1/platform/sobject-all",
+      "repo": "https://github.com/salesforcecli/mcp",
+      "tools": [
+        "soql_query",
+        "find",
+        "run_soql_query",
+        "deploy_metadata",
+        "retrieve_metadata",
+        "run_apex_test",
+        "assign_permission_set",
+        "list_all_orgs"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/sobject-all.html",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: besides the local DX server (github.com/salesforcecli/mcp, npx -y @salesforce/mcp), Salesforce now offers hosted MCP servers with OAuth 2.0 + PKCE, e.g. https://api.salesforce.com/platform/mcp/v1/platform/sobject-all (full SObject CRUD/query/search)"
+    ]
+  },
+  "zendesk-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "14-day trial of Customer Service Suite Professional",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://www.zendesk.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <oauth_access_token>",
+      "source_url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://{subdomain}.zendesk.com/api/v2",
+    "rate_limits": {
+      "summary": "Support API requests/min: Team 200, Professional 400, Enterprise 700, High Volume add-on 2,500 (Essential legacy 10)",
+      "source_url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "read",
+        "write",
+        "tickets:read"
+      ],
+      "source_url": "https://developer.zendesk.com/api-reference/ticketing/oauth/oauth_tokens/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/reminia/zendesk-mcp-server",
+      "tools": [
+        "get_tickets",
+        "get_ticket",
+        "get_ticket_comments",
+        "create_ticket_comment",
+        "create_ticket",
+        "update_ticket",
+        "get_ticket_attachment"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/reminia/zendesk-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: Zendesk docs now mark API token auth ({email}/token:{api_token} Basic) as deprecated; OAuth Bearer is recommended"
+    ]
+  },
+  "adyen-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.adyen.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-API-key",
+      "scheme": null,
+      "format": "x-API-key: <API_KEY>",
+      "source_url": "https://docs.adyen.com/development-resources/api-authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://checkout-test.adyen.com/v71",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/Adyen/adyen-mcp",
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://docs.adyen.com/development-resources/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Adyen publishes an official local MCP server (alpha, npx @adyen/mcp, github.com/Adyen/adyen-mcp) covering Checkout and Management APIs; entry says none"
+    ]
+  },
+  "alpaca-trading-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Paper trading free for all users; Basic market data (IEX) 200 API calls/min",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://alpaca.markets/data",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "APCA-API-KEY-ID",
+      "scheme": null,
+      "format": "APCA-API-KEY-ID: <KEY_ID> + APCA-API-SECRET-KEY: <SECRET_KEY>",
+      "source_url": "https://docs.alpaca.markets/docs/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://paper-api.alpaca.markets",
+    "rate_limits": {
+      "summary": "Free Basic market data plan: 200 API calls/min, websocket limited to 30 symbols",
+      "source_url": "https://alpaca.markets/data",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/alpacahq/alpaca-mcp-server",
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://github.com/alpacahq/alpaca-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official vendor server exists (github.com/alpacahq/alpaca-mcp-server, uvx alpaca-mcp-server, generated from Trading + Market Data OpenAPI); entry says community with null url"
+    ]
+  },
+  "alpha-vantage": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "25 API requests",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://www.alphavantage.co/support/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "apikey",
+      "scheme": null,
+      "format": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=<API_KEY>",
+      "source_url": "https://www.alphavantage.co/documentation/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://www.alphavantage.co/query",
+    "rate_limits": {
+      "summary": "Free tier: 25 requests/day",
+      "source_url": "https://www.alphavantage.co/support/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.alphavantage.co/mcp",
+      "repo": "https://github.com/alphavantage/alpha_vantage_mcp",
+      "tools": [
+        "TIME_SERIES_INTRADAY",
+        "TIME_SERIES_DAILY",
+        "GLOBAL_QUOTE",
+        "SYMBOL_SEARCH",
+        "COMPANY_OVERVIEW",
+        "NEWS_SENTIMENT",
+        "CURRENCY_EXCHANGE_RATE"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/alphavantage/alpha_vantage_mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official vendor server (remote https://mcp.alphavantage.co/mcp with OAuth, repo github.com/alphavantage/alpha_vantage_mcp); entry says community with null url"
+    ]
+  },
+  "coinbase-cdp-x402": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "1,000 onchain transactions via CDP x402 Facilitator, then $0.001/tx",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://docs.cdp.coinbase.com/x402/seller/facilitator",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <JWT signed with CDP Secret API Key> (+ X-Wallet-Auth: <wallet JWT> for wallet writes)",
+      "source_url": "https://docs.cdp.coinbase.com/api-reference/v2/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.cdp.coinbase.com/platform",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/coinbase/payments-mcp",
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://docs.cdp.coinbase.com/agentic-wallet/mcp/quickstart.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Coinbase publishes an official local MCP server (Payments MCP, npx @coinbase/payments-mcp, github.com/coinbase/payments-mcp) for wallet + x402 payments; entry says none",
+      "free_tier: CDP x402 Facilitator is free for the first 1,000 onchain transactions/month, then $0.001 per transaction"
+    ]
+  },
+  "coingecko-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "10,000 calls (Demo plan, attribution required)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.coingecko.com/en/api/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-cg-demo-api-key",
+      "scheme": null,
+      "format": "x-cg-demo-api-key: <API_KEY> (Pro: x-cg-pro-api-key on pro-api.coingecko.com)",
+      "source_url": "https://docs.coingecko.com/v3.0.1/reference/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.coingecko.com/api/v3",
+    "rate_limits": {
+      "summary": "Demo plan: 100 calls/min; keyless access is IP-rate-limited and shared",
+      "source_url": "https://docs.coingecko.com/docs/common-errors-rate-limit",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.api.coingecko.com/mcp",
+      "repo": "https://github.com/coingecko/coingecko-typescript/tree/main/packages/mcp-server",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.coingecko.com/reference/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: Demo plan rate limit is 100 calls/min (pricing page and rate-limit docs), not 30 calls/min; attribution required"
+    ]
+  },
+  "coinmarketcap-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "15,000 credits (Basic plan)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://coinmarketcap.com/api/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-CMC_PRO_API_KEY",
+      "scheme": null,
+      "format": "X-CMC_PRO_API_KEY: <API_KEY>",
+      "source_url": "https://coinmarketcap.com/api/documentation/guides/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://pro-api.coinmarketcap.com",
+    "rate_limits": {
+      "summary": "Basic (free) plan: 50 requests/min, 15,000 credits/month",
+      "source_url": "https://coinmarketcap.com/api/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.coinmarketcap.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://coinmarketcap.com/api/documentation/ai-agent-hub/mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "dexpaprika": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": "No key needed; free API key gives 100K credits/month at 30 requests/min",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://dexpaprika.com/api/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "No auth required; optional key as full header value: Authorization: api_YOUR_KEY",
+      "source_url": "https://docs.dexpaprika.com/api-reference/introduction",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.dexpaprika.com",
+    "rate_limits": {
+      "summary": "Free key: 100K credits/month, 30 requests/min; 1 request = 1 credit (batch = 1 credit per item)",
+      "source_url": "https://dexpaprika.com/api/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.dexpaprika.com/streamable-http",
+      "repo": "https://github.com/coinpaprika/dexpaprika-mcp",
+      "tools": [
+        "getCapabilities",
+        "getNetworks",
+        "getStats",
+        "search",
+        "getNetworkDexes",
+        "getNetworkPools",
+        "getDexPools",
+        "getNetworkPoolsFilter",
+        "getPoolDetails",
+        "getPoolOHLCV",
+        "getPoolTransactions",
+        "getTokenDetails",
+        "getTokenPools",
+        "getTokenMultiPrices",
+        "getTopTokens",
+        "filterNetworkTokens"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/coinpaprika/dexpaprika-mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "financial-modeling-prep": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "250 calls/day, end-of-day data, 500MB trailing-30-day bandwidth (Basic plan)",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://site.financialmodelingprep.com/pricing-plans",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "apikey",
+      "scheme": null,
+      "format": "https://financialmodelingprep.com/stable/search-symbol?query=AAPL&apikey=<API_KEY> (or header apikey: <API_KEY>)",
+      "source_url": "https://site.financialmodelingprep.com/developer/docs",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://financialmodelingprep.com/stable",
+    "rate_limits": {
+      "summary": "Free Basic plan: 250 calls/day; 500MB bandwidth per trailing 30 days",
+      "source_url": "https://site.financialmodelingprep.com/pricing-plans",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://financialmodelingprep.com/mcp?apikey=<API_KEY>",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://site.financialmodelingprep.com/developer/docs/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: FMP runs an official hosted MCP server at https://financialmodelingprep.com/mcp?apikey=<KEY> wrapping all REST endpoints; entry says community with null url"
+    ]
+  },
+  "mercado-pago-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Test credentials usable immediately after creating an application (sandbox); production billed per transaction",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.mercadopago.com.ar/developers/en/docs/your-integrations/credentials",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <ACCESS_TOKEN>",
+      "source_url": "https://www.mercadopago.com.ar/developers/en/reference",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.mercadopago.com",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.mercadopago.com/mcp",
+      "repo": "https://github.com/mercadolibre/mercadopago-mcp-server",
+      "tools": [
+        "search-documentation",
+        "quality_checklist",
+        "quality_evaluation",
+        "save_webhook",
+        "notifications_history_diagnostics",
+        "create_test_user",
+        "add_money_test_user",
+        "get_credentials",
+        "create_application",
+        "application_list"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://www.mercadopago.com.br/developers/en/docs/mcp-server/tools.md",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "open-exchange-rates": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "1,000 requests/month, hourly updates, USD base only",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://openexchangerates.org/signup",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "app_id",
+      "scheme": null,
+      "format": "?app_id=<APP_ID> (or header Authorization: Token <APP_ID>)",
+      "source_url": "https://docs.openexchangerates.org/reference/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://openexchangerates.org/api",
+    "rate_limits": {
+      "summary": "Free plan capped at 1,000 requests/month",
+      "source_url": "https://openexchangerates.org/signup",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    }
+  },
+  "paypal-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Sandbox test environment with virtual accounts; live usage billed per transaction",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developer.paypal.com/tools/sandbox/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "POST /v1/oauth2/token (client_credentials, client_id:secret) then Authorization: Bearer <ACCESS_TOKEN>",
+      "source_url": "https://developer.paypal.com/api/rest/authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api-m.paypal.com",
+    "rate_limits": {
+      "summary": "No published limits; abusive traffic gets HTTP 429 RATE_LIMIT_REACHED; cache OAuth tokens, prefer webhooks over polling",
+      "source_url": "https://developer.paypal.com/api/rest/reference/rate-limiting/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.paypal.com/http",
+      "repo": "https://github.com/paypal/agent-toolkit",
+      "tools": [
+        "create_product",
+        "list_product",
+        "show_product_details",
+        "list_disputes",
+        "get_dispute",
+        "accept_dispute_claim",
+        "create_invoice",
+        "list_invoices",
+        "get_invoice",
+        "send_invoice",
+        "send_invoice_reminder",
+        "cancel_sent_invoice",
+        "generate_invoice_qr_code",
+        "create_order",
+        "create_refund",
+        "get_order",
+        "get_refund",
+        "pay_order",
+        "get_merchant_insights",
+        "list_transaction",
+        "create_shipment_tracking",
+        "get_shipment_tracking",
+        "update_shipment_tracking",
+        "cancel_subscription",
+        "create_subscription",
+        "create_subscription_plan",
+        "list_subscription_plans",
+        "show_subscription_details",
+        "show_subscription_plan_details",
+        "update_subscription"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.paypal.ai/developer/tools/ai/mcp-quickstart",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp.url: remote endpoints are https://mcp.paypal.com/http (Streamable HTTP) or /sse; sandbox at https://mcp.sandbox.paypal.com; remote uses PayPal login (OAuth)"
+    ]
+  },
+  "plaid-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "Free Sandbox; Trial plan (new US/Canada teams since 2026-04-15): 10 Production Items, unlimited calls on them",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://plaid.com/docs/account/billing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "PLAID-CLIENT-ID",
+      "scheme": null,
+      "format": "PLAID-CLIENT-ID: <CLIENT_ID> and PLAID-SECRET: <SECRET> (or client_id/secret in JSON body)",
+      "source_url": "https://plaid.com/docs/api/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://production.plaid.com",
+    "rate_limits": {
+      "summary": "Per-Item and per-client limits per endpoint, e.g. /accounts/get 15/min per Item, 15,000/min per client; HTTP 429 RATE_LIMIT_EXCEEDED",
+      "source_url": "https://plaid.com/docs/errors/rate-limit-exceeded/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.dashboard.plaid.com/mcp/",
+      "repo": "https://github.com/plaid/ai-coding-toolkit",
+      "tools": [
+        "plaid_debug_item",
+        "plaid_get_link_analytics",
+        "plaid_get_tools_introduction",
+        "plaid_get_usages",
+        "plaid_list_teams"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://plaid.com/docs/resources/mcp/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Plaid has an official remote Dashboard MCP server (https://api.dashboard.plaid.com/mcp/, OAuth client_credentials, scope mcp:dashboard) and a local Sandbox MCP in github.com/plaid/ai-coding-toolkit",
+      "free_tier: Development environment no longer exists; free Sandbox plus a Trial plan (10 Production Items) for new US/Canada teams replaced Limited Production"
+    ]
+  },
+  "polygon-io-massive": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Stocks Basic: 5 API calls/min, end-of-day data, 2 years history",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://massive.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "apiKey",
+      "scheme": null,
+      "format": "?apiKey=<API_KEY> (or Authorization: Bearer <API_KEY>)",
+      "source_url": "https://massive.com/docs/rest/quickstart",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.massive.com",
+    "rate_limits": {
+      "summary": "Free Basic plan: 5 API calls/minute",
+      "source_url": "https://massive.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/massive-com/mcp_massive",
+      "tools": [
+        "search_endpoints",
+        "call_api",
+        "query_data"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/massive-com/mcp_massive",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp.url: official MCP server is https://github.com/massive-com/mcp_massive (local, MASSIVE_API_KEY), not the docs homepage; no hosted endpoint"
+    ]
+  },
+  "square-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Unlimited free Sandbox API calls; production billed per transaction",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developer.squareup.com/docs/devtools/sandbox/overview",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <ACCESS_TOKEN> plus Square-Version: <YYYY-MM-DD>",
+      "source_url": "https://developer.squareup.com/docs/build-basics/access-tokens",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://connect.squareup.com/v2",
+    "rate_limits": {
+      "summary": "No published numbers; bursts may get HTTP 429 RATE_LIMITED; use backoff and batch endpoints",
+      "source_url": "https://developer.squareup.com/docs/build-basics/general-considerations/handling-errors",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.squareup.com/mcp",
+      "repo": "https://github.com/square/square-mcp-server",
+      "tools": [
+        "get_service_info",
+        "get_type_info",
+        "make_api_request"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://developer.squareup.com/docs/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Square publishes an official MCP server (remote https://mcp.squareup.com/mcp with OAuth; local npx square-mcp-server, repo github.com/square/square-mcp-server); type should be official",
+      "auth: personal access tokens (unscoped, own account) are supported alongside OAuth, so api_key+oauth2 fits better than oauth2"
+    ]
+  },
+  "stripe-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "No setup or monthly fees; pay per transaction; free sandbox (test mode)",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://stripe.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "basic",
+      "format": "curl -u <SECRET_KEY>: (key as username) or Authorization: Bearer <SECRET_KEY>",
+      "source_url": "https://docs.stripe.com/api/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.stripe.com/v1",
+    "rate_limits": {
+      "summary": "Global 100 req/s live, 25 req/s sandbox; 25 req/s per endpoint; reads capped at avg 500 per transaction (min 10,000/month)",
+      "source_url": "https://docs.stripe.com/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.stripe.com",
+      "repo": null,
+      "tools": [
+        "stripe_api_search",
+        "stripe_api_details",
+        "stripe_api_read",
+        "stripe_api_write",
+        "get_stripe_account_info",
+        "stripe_analytics",
+        "get_balance_summary",
+        "search_stripe_documentation",
+        "stripe_implementation_planner",
+        "send_stripe_feedback"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://docs.stripe.com/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: from 2026-10-31 Stripe MCP accepts only OAuth or Agent-tagged API keys; plain secret/restricted keys get 401"
+    ]
+  },
+  "wise-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Personal API token created from a Wise business account; limited endpoints",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.wise.com/guides/developer/auth-and-security/personal-api-token",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_TOKEN>",
+      "source_url": "https://docs.wise.com/guides/developer/auth-and-security/personal-api-token",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.wise.com",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/2060-io/mcp-wise",
+      "tools": [
+        "list_profiles",
+        "get_balances",
+        "get_exchange_rate",
+        "list_transfers",
+        "get_transfer_status",
+        "list_recipients",
+        "send_money",
+        "create_invoice",
+        "get_balance_currencies"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/2060-io/mcp-wise",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: community MCP servers exist (e.g. github.com/2060-io/mcp-wise); type should be community",
+      "auth: personal API tokens are for Wise business accounts and limited to quotes, recipients, transfers, batch groups and transfer events; funding and balance statements only for US/CA/AU/NZ/SG/MY accounts"
+    ]
+  },
+  "cloudflare-sandbox-sdk": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developers.cloudflare.com/containers/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <CLOUDFLARE_API_TOKEN> (Cloudflare API, used to deploy the Worker; sandbox reached via your own Worker)",
+      "source_url": "https://developers.cloudflare.com/fundamentals/api/how-to/make-api-calls/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.cloudflare.com/client/v4",
+    "rate_limits": {
+      "summary": "Worker subrequests per request: 50 on Free, 1,000 on Paid (HTTP transport); RPC transport avoids extra subrequests",
+      "source_url": "https://developers.cloudflare.com/sandbox/platform/limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://containers.mcp.cloudflare.com/mcp",
+      "repo": "https://github.com/cloudflare/mcp-server-cloudflare/tree/main/apps/sandbox-container",
+      "tools": [
+        "container_initialize",
+        "container_ping",
+        "container_file_write",
+        "container_files_list",
+        "container_file_read",
+        "container_file_delete",
+        "container_exec"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Cloudflare hosts an official Container sandbox MCP server at https://containers.mcp.cloudflare.com/mcp (Cloudflare OAuth); a generic container sandbox, not a wrapper of the Sandbox SDK API"
+    ]
+  },
+  "codesandbox-sdk": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <CSB_API_KEY> (SDK: new CodeSandbox(process.env.CSB_API_KEY))",
+      "source_url": "https://github.com/codesandbox/codesandbox-sdk/blob/main/src/utils/api.ts",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.codesandbox.io",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    }
+  },
+  "daytona": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "$200 free compute; first 5 GiB storage free",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://www.daytona.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <DAYTONA_API_KEY>",
+      "source_url": "https://www.daytona.io/docs/en/api-keys/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://app.daytona.io/api",
+    "rate_limits": {
+      "summary": "Tier 1: 10,000 general requests/min, 300 sandbox creations/min, 10,000 lifecycle ops/min; higher tiers up to 50,000/600/50,000",
+      "source_url": "https://www.daytona.io/docs/en/limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/daytonaio/daytona",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://www.daytona.io/docs/en/mcp/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official MCP server is local only, started with the Daytona CLI (`daytona mcp start`); no hosted remote endpoint"
+    ]
+  },
+  "e2b": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "One-time $100 in usage credits; up to 1 hour per sandbox session, 20 concurrent sandboxes",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://e2b.dev/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-Key",
+      "scheme": null,
+      "format": "X-API-Key: <E2B_API_KEY>",
+      "source_url": "https://github.com/e2b-dev/E2B/blob/main/spec/openapi.yml",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.e2b.app",
+    "rate_limits": {
+      "summary": "Hobby: 1 sandbox creation/sec, 20 concurrent sandboxes, max 1 hour continuous runtime",
+      "source_url": "https://docs.e2b.dev/sandbox/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/e2b-dev/mcp-server",
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://github.com/e2b-dev/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: Hobby plan gives a one-time $100 usage credit (no card), up to 1 h per sandbox and 20 concurrent sandboxes, not a recurring allowance of sandbox hours",
+      "mcp: e2b-dev/mcp-server is archived and deprecated (read-only since 2026-04-16)"
+    ]
+  },
+  "judge0": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://judge0.com/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-Auth-Token",
+      "scheme": null,
+      "format": "X-Auth-Token: <AUTH_TOKEN> (optional; header name configurable by the instance admin)",
+      "source_url": "https://ce.judge0.com/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://ce.judge0.com",
+    "rate_limits": {
+      "summary": "Cloud plans: Pro 2,000, Ultra 5,000, Mega 10,000 submissions/day; extra submissions EUR 0.001 each",
+      "source_url": "https://judge0.com/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /submissions returns a token; poll GET /submissions/{token} (wait=true for sync where enabled)",
+      "source_url": "https://ce.judge0.com/"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: judge0.com lists only paid cloud plans (Pro EUR 27/mo for 2,000 submissions/day and up); a free RapidAPI Basic plan could not be confirmed. Free option is self-hosting"
+    ]
+  },
+  "modal": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "$30/month free compute on Starter ($0 base)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://modal.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "MODAL_TOKEN_ID=ak-... and MODAL_TOKEN_SECRET=as-... env vars (or `modal token set`), used by the SDK",
+      "source_url": "https://modal.com/docs/reference/modal.config",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": {
+      "summary": "Starter: 100 containers + 10 GPU concurrency",
+      "source_url": "https://modal.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/milkymap/mcp4modal_sandbox",
+      "tools": [
+        "launch_sandbox",
+        "terminate_sandbox",
+        "list_sandboxes",
+        "execute_command",
+        "push_file_to_sandbox",
+        "pull_file_from_sandbox",
+        "list_directory_contents",
+        "make_directory",
+        "remove_path",
+        "read_file_content_from_sandbox",
+        "write_file_content_to_sandbox"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/milkymap/mcp4modal_sandbox",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "piston": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://github.com/engineer-man/piston",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": null,
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": null,
+      "source_url": "https://github.com/engineer-man/piston",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://emkc.org/api/v2/piston",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth/free_tier: public Piston API is no longer freely available (since 2026-02-15); an authorization token must be requested from EngineerMan on Discord and is granted only for non-commercial educational projects. Self-hosting remains free"
+    ]
+  },
+  "riza": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100,000 requests/month (Hobby, free forever), 30 s execution limit",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://riza.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <RIZA_API_KEY>",
+      "source_url": "https://docs.riza.io/api-reference/command/execute-code",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.riza.io",
+    "rate_limits": {
+      "summary": "Hobby: 100,000 requests/month, 30 s max execution, 128 MB memory per invocation",
+      "source_url": "https://riza.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.riza.io/code-interpreter",
+      "repo": "https://github.com/riza-io/riza-mcp",
+      "tools": [
+        "create_tool",
+        "fetch_tool",
+        "execute_tool",
+        "edit_tool",
+        "list_tools",
+        "execute_code"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.riza.io/getting-started/mcp-servers",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: Hobby plan is free forever with 100,000 requests/month and 30 s execution limit, no credit card"
+    ]
+  },
+  "runloop": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "$50 in credits; trial limits 3 running devboxes, 5 blueprints, 10 snapshots",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://www.runloop.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <RUNLOOP_API_KEY>",
+      "source_url": "https://github.com/runloopai/api-client-ts",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.runloop.ai",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/runloopai/api-client-ts/tree/main/packages/mcp-server",
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://github.com/runloopai/api-client-ts/tree/main/packages/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Runloop publishes official local MCP servers: @runloop/api-client-mcp (Stainless-generated from the API) and `rli mcp start` in runloopai/rl-cli"
+    ]
+  },
+  "vercel-sandbox": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Hobby: 5 h Active CPU, 420 GB-h memory, 5,000 creations, 20 GB data transfer; paused when exceeded",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://vercel.com/docs/sandbox/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <VERCEL_TOKEN or VERCEL_OIDC_TOKEN> (+ teamId/projectId)",
+      "source_url": "https://vercel.com/docs/rest-api/sandboxes/delete-a-sandbox",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.vercel.com",
+    "rate_limits": {
+      "summary": "Hobby: 10 concurrent sandboxes, 45 min max session, 20-40 vCPUs/min allocation, 1,000 control-plane req/min; Pro: 10,000 concurrent, 24 h",
+      "source_url": "https://vercel.com/docs/sandbox/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.vercel.com",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp/tools",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Vercel MCP (https://mcp.vercel.com, OAuth) tools reference lists no Sandbox tools; it covers docs, projects, deployments, logs and analytics"
+    ]
+  }
+}

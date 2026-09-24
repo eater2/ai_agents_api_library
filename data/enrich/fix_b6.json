@@ -1,0 +1,226 @@
+{
+  "attio-api": {
+    "free_tier": "Free tier: up to 3 seats, 50,000 records, API access included; no card required; 14-day trial of Pro plan",
+    "sources": [
+      "https://attio.com/pricing"
+    ]
+  },
+  "intercom-api": {
+    "auth": "api_key+oauth2",
+    "auth_hint": "Authorization: Bearer <access_token> (workspace access token for private apps; OAuth for public apps)",
+    "sources": [
+      "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication"
+    ]
+  },
+  "mailchimp-marketing-api": {
+    "mcp": {
+      "type": "community",
+      "url": "https://github.com/damientilman/mailchimp-mcp-server"
+    },
+    "notes": "No official Marketing API MCP; community servers exist (e.g. damientilman/mailchimp-mcp-server). Mailchimp's official MCP (mandrillapp.com/mcp) covers only Transactional. API base URL includes account-specific data-center subdomain.",
+    "sources": [
+      "https://github.com/damientilman/mailchimp-mcp-server",
+      "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp/"
+    ]
+  },
+  "pipedrive-api": {
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.pipedrive.ai/mcp"
+    },
+    "auth_hint": "x-api-token: <api_token> header, or Authorization: Bearer <oauth_token>",
+    "notes": "Official hosted MCP at mcp.pipedrive.ai/mcp uses Pipedrive account sign-in (OAuth). Offers a free Sandbox account for development/testing separate from production pricing.",
+    "sources": [
+      "https://support.pipedrive.com/en/article/mcp-claude",
+      "https://pipedrive.readme.io/docs/core-api-concepts-authentication"
+    ]
+  },
+  "salesforce-apis": {
+    "mcp": {
+      "type": "official",
+      "url": "https://api.salesforce.com/platform/mcp/v1/platform/sobject-all"
+    },
+    "notes": "Salesforce-hosted MCP servers (GA 2026, e.g. sobject-all: CRUD, query, search) need the MCP Service enabled and an External Client App for OAuth. The local salesforcecli/mcp server covers DX/DevOps tooling (metadata deploy, Apex, LWC).",
+    "sources": [
+      "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/sobject-all.html",
+      "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available"
+    ]
+  },
+  "zendesk-api": {
+    "auth_hint": "Authorization: Bearer <oauth_token> (Basic {email}/token:{api_token} still works but is deprecated)",
+    "sources": [
+      "https://developer.zendesk.com/api-reference/introduction/security-and-auth/"
+    ]
+  },
+  "adyen-api": {
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/Adyen/adyen-mcp"
+    },
+    "notes": "Requires an approved Adyen merchant account before API keys are issued; no self-serve free signup like Stripe. Official local MCP server (alpha) covers Checkout and Management APIs.",
+    "sources": [
+      "https://docs.adyen.com/development-resources/mcp-server"
+    ]
+  },
+  "alpaca-trading-api": {
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/alpacahq/alpaca-mcp-server"
+    },
+    "sources": [
+      "https://github.com/alpacahq/alpaca-mcp-server"
+    ]
+  },
+  "alpha-vantage": {
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.alphavantage.co/mcp"
+    },
+    "sources": [
+      "https://github.com/alphavantage/alpha_vantage_mcp"
+    ]
+  },
+  "coinbase-cdp-x402": {
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/coinbase/payments-mcp"
+    },
+    "free_tier": "Free tier: CDP x402 Facilitator free for 1,000 onchain transactions/month, then $0.001/tx; payment verification always free",
+    "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API - useful for agent-to-agent micropayments. Official local Payments MCP (npx @coinbase/payments-mcp) combines a wallet, onramp and x402 payments.",
+    "sources": [
+      "https://github.com/coinbase/payments-mcp",
+      "https://docs.cdp.coinbase.com/x402/seller/facilitator"
+    ]
+  },
+  "coingecko-api": {
+    "free_tier": "Free tier: Demo API plan 10,000 calls/month, 100 calls/min, attribution required; keyless free MCP with shared rate limits",
+    "sources": [
+      "https://www.coingecko.com/en/api/pricing"
+    ]
+  },
+  "financial-modeling-prep": {
+    "mcp": {
+      "type": "official",
+      "url": "https://financialmodelingprep.com/mcp"
+    },
+    "notes": "Many endpoints (full financial statements, etc.) require a paid plan. Official hosted MCP takes the key as ?apikey=<API_KEY>.",
+    "sources": [
+      "https://site.financialmodelingprep.com/developer/docs/mcp-server"
+    ]
+  },
+  "paypal-api": {
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.paypal.com/http"
+    },
+    "notes": "Remote MCP transports: /http (Streamable HTTP) or /sse; separate sandbox MCP endpoint at https://mcp.sandbox.paypal.com for testing.",
+    "sources": [
+      "https://docs.paypal.ai/developer/tools/ai/mcp-quickstart"
+    ]
+  },
+  "plaid-api": {
+    "mcp": {
+      "type": "official",
+      "url": "https://api.dashboard.plaid.com/mcp/"
+    },
+    "free_tier": "Free: Sandbox always free; Trial plan for new US/Canada teams (since 2026-04-15) gives 10 Production Items; then pay-as-you-go",
+    "notes": "Dashboard MCP (OAuth client_credentials, scope mcp:dashboard) needs Production access; a local Sandbox MCP is in plaid/ai-coding-toolkit. Production requires a Plaid approval/compliance review.",
+    "sources": [
+      "https://plaid.com/docs/resources/mcp/",
+      "https://plaid.com/docs/account/billing/"
+    ]
+  },
+  "polygon-io-massive": {
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/massive-com/mcp_massive"
+    },
+    "sources": [
+      "https://github.com/massive-com/mcp_massive"
+    ]
+  },
+  "square-api": {
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.squareup.com/mcp"
+    },
+    "auth": "api_key+oauth2",
+    "sources": [
+      "https://developer.squareup.com/docs/mcp",
+      "https://developer.squareup.com/docs/build-basics/access-tokens"
+    ]
+  },
+  "stripe-api": {
+    "auth_hint": "Authorization: Bearer <secret_key>; from 2026-10-31 MCP accepts only OAuth or Agent-tagged API keys (others get 401)",
+    "sources": [
+      "https://docs.stripe.com/mcp"
+    ]
+  },
+  "wise-api": {
+    "mcp": {
+      "type": "community",
+      "url": "https://github.com/2060-io/mcp-wise"
+    },
+    "auth_hint": "Authorization: Bearer <API token> (personal, Wise business accounts) or OAuth2 (Wise Platform partners)",
+    "notes": "Personal tokens cover only quotes, recipients, transfers, batch groups and transfer events; funding and balance statements only for US/CA/AU/NZ/SG/MY accounts. Full access needs a partnership agreement.",
+    "sources": [
+      "https://docs.wise.com/guides/developer/auth-and-security/personal-api-token",
+      "https://github.com/2060-io/mcp-wise"
+    ]
+  },
+  "cloudflare-sandbox-sdk": {
+    "mcp": {
+      "type": "official",
+      "url": "https://containers.mcp.cloudflare.com/mcp"
+    },
+    "notes": "Not a hosted API called directly with a key - you deploy your own Worker using the SDK on Cloudflare Containers/Durable Objects. The official Container MCP is a generic sandbox, not a Sandbox SDK wrapper.",
+    "sources": [
+      "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/"
+    ]
+  },
+  "daytona": {
+    "notes": "Billed per second; supports sandbox snapshots and preview URLs for web apps. Official MCP server runs locally via the Daytona CLI (daytona mcp start); no hosted endpoint.",
+    "sources": [
+      "https://www.daytona.io/docs/en/mcp/"
+    ]
+  },
+  "e2b": {
+    "free_tier": "Trial: one-time $100 usage credit on signup (Hobby, no card); up to 1 h per sandbox, 20 concurrent; then pay-as-you-go",
+    "notes": "Sandboxes auto-expire after a configurable timeout (default ~5 min); used by many agent frameworks (OpenHands, etc.). The e2b-dev/mcp-server repo was archived and deprecated on 2026-04-16.",
+    "sources": [
+      "https://e2b.dev/pricing",
+      "https://github.com/e2b-dev/mcp-server"
+    ]
+  },
+  "judge0": {
+    "free_tier": "Paid only on Judge0 Cloud (Pro EUR 27/mo for 2,000 submissions/day and up); self-host free & open-source (GPLv3)",
+    "sources": [
+      "https://judge0.com/"
+    ]
+  },
+  "piston": {
+    "auth": "api_key",
+    "auth_hint": "authorization token for the public emkc.org instance, granted by EngineerMan (Discord) only for non-commercial educational projects; none when self-hosted",
+    "free_tier": "Free: self-host (open source); public emkc.org API no longer open since 2026-02-15, token only for non-commercial educational projects",
+    "notes": "Public emkc.org instance closed to open use on 2026-02-15; self-host via Docker for agent workloads. Widely used by Discord/Slack bots.",
+    "sources": [
+      "https://github.com/engineer-man/piston"
+    ]
+  },
+  "riza": {
+    "free_tier": "Free tier: Hobby plan free forever, 100,000 requests/month, 30 s execution limit; then usage-based pricing",
+    "sources": [
+      "https://riza.io/pricing"
+    ]
+  },
+  "runloop": {
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/runloopai/api-client-ts/tree/main/packages/mcp-server"
+    },
+    "notes": "Official local MCP server @runloop/api-client-mcp (npx, RUNLOOP_API_KEY) exposes the Runloop API; the 'MCP Hub' feature lets Devboxes connect outward to other MCP servers.",
+    "sources": [
+      "https://github.com/runloopai/api-client-ts/tree/main/packages/mcp-server"
+    ]
+  }
+}

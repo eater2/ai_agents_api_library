@@ -33,6 +33,29 @@
    "desc_en": "Send messages to Claude models for text and vision generation, tool use, batch jobs and document analysis.",
    "notes": "docs.anthropic.com and docs.claude.com redirect to platform.claude.com. Rate limits depend on usage tier. The API's MCP connector lets Claude call remote MCP servers; there is no MCP server that wraps the API itself.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <ANTHROPIC_API_KEY> + anthropic-version: 2023-06-01 (x-api-key still supported as legacy fallback)",
+    "source_url": "https://platform.claude.com/docs/en/api/overview",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.anthropic.com",
+   "rate_limits": {
+    "summary": "Per usage tier and model (RPM, ITPM, OTPM); Start tier e.g. 1,000 RPM for Opus/Sonnet/Haiku; 429 on exceed",
+    "source_url": "https://platform.claude.com/docs/en/api/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "Message Batches API: POST /v1/messages/batches, poll GET /v1/messages/batches/{id}, then fetch results",
+    "source_url": "https://platform.claude.com/docs/en/build-with-claude/batch-processing"
+   },
+   "data_policy": {
+    "summary": "Retained data never used for training without express permission; prompts/outputs not retained by default except 30-day rule for Covered Models; ZDR available",
+    "source_url": "https://platform.claude.com/docs/en/manage-claude/api-and-data-retention",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -53,6 +76,14 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.cohere.com/_mcp/server",
+    "maintainer": "vendor",
+    "remote_url": "https://docs.cohere.com/_mcp/server",
+    "tools": [
+     "searchDocs"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.cohere.com/llms.txt",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -68,6 +99,26 @@
    "desc_en": "Call chat, embed, rerank and classify endpoints for text generation, semantic search and RAG.",
    "notes": "Official MCP server only searches documentation. Trial keys are not for production use. v2 API is current; v1 is legacy.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "1,000 API calls (trial/evaluation key)",
+    "period": "month",
+    "source_url": "https://docs.cohere.com/docs/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <COHERE_API_KEY>",
+    "source_url": "https://docs.cohere.com/v2/reference/chat",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.cohere.com/v2",
+   "rate_limits": {
+    "summary": "Trial: Chat 20 req/min, Rerank 10/min, Embed 2,000 inputs/min; Production: Chat 500/min, Rerank 1,000/min",
+    "source_url": "https://docs.cohere.com/docs/rate-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -99,6 +150,18 @@
    "mcp": {
     "type": "official",
     "url": "https://www.comet.com/opik/api/v1/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://www.comet.com/opik/api/v1/mcp",
+    "tools": [
+     "read",
+     "list",
+     "write",
+     "schema",
+     "read_skill"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://www.comet.com/docs/opik/mcp-server/tools",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -112,6 +175,27 @@
    "desc_en": "Lets an agent log and read LLM traces and spans, score them with evaluations and manage datasets and prompts in Opik.",
    "notes": "REST base https://www.comet.com/opik/api/v1/private/. Remote MCP needs OAuth browser sign-in; local: uvx opik mcp configure.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "25k spans, 60-day data retention, up to 10 team members",
+    "period": "month",
+    "source_url": "https://www.comet.com/site/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "authorization",
+    "format": "authorization: <OPIK_API_KEY> (no Bearer prefix) + Comet-Workspace: <WORKSPACE>",
+    "source_url": "https://www.comet.com/docs/opik/reference/rest-api/overview",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://www.comet.com/opik/api/v1/private",
+   "data_policy": {
+    "summary": "Free cloud plan keeps data 60 days",
+    "source_url": "https://www.comet.com/site/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -137,6 +221,24 @@
    "desc_en": "Send chat and reasoning requests to DeepSeek models via an OpenAI- and Anthropic-compatible REST API.",
    "notes": "No native SDK: use the OpenAI SDK (base_url https://api.deepseek.com) or the Anthropic SDK (https://api.deepseek.com/anthropic). Off-peak hours (UTC) are discounted.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <DEEPSEEK_API_KEY>",
+    "source_url": "https://api-docs.deepseek.com/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.deepseek.com",
+   "rate_limits": {
+    "summary": "Account-level concurrency: deepseek-flash 2,500, deepseek-v4-pro 500 concurrent requests; 429 when exceeded",
+    "source_url": "https://api-docs.deepseek.com/quick_start/rate_limit",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -167,6 +269,24 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.fal.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.fal.ai/mcp",
+    "tools": [
+     "search_models",
+     "get_model_schema",
+     "get_pricing",
+     "recommend_model",
+     "run_model",
+     "submit_job",
+     "check_job",
+     "get_job_result",
+     "cancel_job",
+     "upload_file",
+     "search_docs"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://fal.ai/docs/documentation/setting-up/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
@@ -180,6 +300,35 @@
    "desc_en": "Generate images, video, audio and 3D with 1,000+ hosted models via queued REST or real-time WebSocket.",
    "notes": "The auth header prefix is 'Key', not 'Bearer'. The MCP server accepts an API key or OAuth. Long jobs use the queue API (submit, status, result).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://fal.ai/docs/documentation/model-apis/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Key <FAL_KEY>",
+    "source_url": "https://fal.ai/docs/documentation/model-apis/inference/queue",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://queue.fal.run",
+   "rate_limits": {
+    "summary": "New accounts: 2 concurrent requests; limit rises with credit purchases (40+ via sales); excess requests wait in queue",
+    "source_url": "https://fal.ai/docs/documentation/model-apis/concurrency-limits",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST https://queue.fal.run/{model} returns request_id, status_url, response_url; poll status or use webhooks",
+    "source_url": "https://fal.ai/docs/documentation/model-apis/inference/queue"
+   },
+   "data_policy": {
+    "summary": "Request payloads stored 30 days by default (opt out with X-Fal-Store-IO: 0); generated media served as public CDN URLs",
+    "source_url": "https://fal.ai/docs/documentation/model-apis/media-expiration",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -201,6 +350,16 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.fireworks.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://docs.fireworks.ai/mcp",
+    "tools": [
+     "search_fireworks_ai_docs",
+     "query_docs_filesystem_fireworks_ai_docs",
+     "submit_feedback"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.fireworks.ai/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -213,6 +372,36 @@
    "desc_en": "Run serverless or dedicated inference and fine-tuning for open models via OpenAI-compatible APIs.",
    "notes": "Official MCP server only searches documentation. The Responses API can call external MCP servers as tools.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "quota": "$1 in free credits",
+    "period": "one_time",
+    "source_url": "https://fireworks.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <FIREWORKS_API_KEY>",
+    "source_url": "https://docs.fireworks.ai/api-reference/post-chatcompletions",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.fireworks.ai/inference/v1",
+   "rate_limits": {
+    "summary": "Adaptive serverless limits per account and model (TPM ceilings by model size); upper bound grows with spending tier; 429/503",
+    "source_url": "https://docs.fireworks.ai/serverless/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "Batch API: create batch job, it waits in pending state, poll job status",
+    "source_url": "https://docs.fireworks.ai/guides/batch-inference"
+   },
+   "data_policy": {
+    "summary": "Does not log or store prompt or generation data for open models without explicit opt-in (zero data retention)",
+    "source_url": "https://docs.fireworks.ai/guides/security_compliance/data_security",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -235,6 +424,15 @@
    "mcp": {
     "type": "official",
     "url": "https://gemini-api-docs-mcp.dev",
+    "maintainer": "vendor",
+    "remote_url": "https://gemini-api-docs-mcp.dev",
+    "tools": [
+     "gemini_search_docs",
+     "gemini_get_doc"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
@@ -250,6 +448,36 @@
    "desc_en": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
    "notes": "Official MCP server only searches documentation; it does not run inference. Free-tier content may be used to improve Google products. Google is replacing standard API keys with authorization keys; unrestricted standard keys are rejected in 2026, so use a current key type. Google publishes a Discovery document, not an OpenAPI spec.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "free input and output tokens on supported models, rate-limited per project",
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-goog-api-key",
+    "format": "x-goog-api-key: <GEMINI_API_KEY>",
+    "source_url": "https://ai.google.dev/gemini-api/docs/api-key",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://generativelanguage.googleapis.com/v1beta",
+   "rate_limits": {
+    "summary": "Per project (not per key): RPM, TPM, RPD by model and tier (Free, Tier 1-3); view active limits in AI Studio",
+    "source_url": "https://ai.google.dev/gemini-api/docs/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "Batch API at 50% cost: create batch job, poll job state until JOB_STATE_SUCCEEDED",
+    "source_url": "https://ai.google.dev/gemini-api/docs/batch-api"
+   },
+   "data_policy": {
+    "summary": "Free tier content used to improve Google products; paid tier content not used",
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -284,6 +512,36 @@
    "desc_en": "Run fast LLM chat, tool use and speech-to-text on hosted open models via an OpenAI-compatible API.",
    "notes": "Free-tier limits vary by model (e.g. 30 RPM / 1K RPD); see console.groq.com/settings/limits. Not to be confused with xAI Grok.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "per-model limits, e.g. openai/gpt-oss-120b 30 RPM, 1K RPD, 8K TPM, 200K TPD",
+    "period": "day",
+    "source_url": "https://console.groq.com/docs/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <GROQ_API_KEY>",
+    "source_url": "https://console.groq.com/docs/api-reference",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.groq.com/openai/v1",
+   "rate_limits": {
+    "summary": "Per model RPM/RPD/TPM/TPD; Free plan e.g. gpt-oss-120b 30 RPM, 1K RPD; Developer plan higher",
+    "source_url": "https://console.groq.com/docs/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "Batch API (Developer plan): POST /openai/v1/batches, poll GET /openai/v1/batches/{batch_id}",
+    "source_url": "https://console.groq.com/docs/batch"
+   },
+   "data_policy": {
+    "summary": "Inference data not retained by default; retained up to 30 days only for batch/fine-tuning features or reliability needs",
+    "source_url": "https://console.groq.com/docs/your-data",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -304,6 +562,17 @@
    "mcp": {
     "type": "official",
     "url": "https://huggingface.co/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://huggingface.co/mcp",
+    "tools": [
+     "hf_whoami",
+     "hub_repo_search",
+     "hub_repo_details",
+     "hf_fs"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://huggingface.co/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -317,6 +586,26 @@
    "desc_en": "Call hundreds of open-weight chat, vision, image, video and audio models across many providers with one HF token.",
    "notes": "The OpenAI-compatible endpoint (router.huggingface.co/v1) handles chat only; use InferenceClient for other tasks. The token needs the 'Make calls to Inference Providers' scope. Pick a provider with a model suffix such as :fastest or :cheapest.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "$0.10 in credits for free users (PRO $2.00)",
+    "period": "month",
+    "source_url": "https://huggingface.co/docs/inference-providers/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <HF_TOKEN>",
+    "source_url": "https://huggingface.co/docs/inference-providers/index",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://router.huggingface.co/v1",
+   "data_policy": {
+    "summary": "HF does not store request/response bodies or use data for training; debug logs kept up to 30 days without user data",
+    "source_url": "https://huggingface.co/docs/inference-providers/security",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -338,6 +627,11 @@
    "mcp": {
     "type": "official",
     "url": "https://api.mistral.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://api.mistral.ai/mcp",
+    "covers_full_api": false,
+    "source_url": "https://docs.mistral.ai/resources/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -351,6 +645,32 @@
    "desc_en": "Run chat completions, embeddings, OCR and document processing with Mistral models via REST.",
    "notes": "Official MCP (same API key) currently exposes only Studio Skills management tools, not chat inference; call the REST API for inference.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "included monthly usage within Free mode limits",
+    "period": "month",
+    "source_url": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <MISTRAL_API_KEY>",
+    "source_url": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.mistral.ai/v1",
+   "rate_limits": {
+    "summary": "Per-model tokens-per-minute and other limits shown per organization in Admin Panel > API > Limits; Free mode has lower limits",
+    "source_url": "https://docs.mistral.ai/admin/billing-usage/usage-limits",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Zero data retention available on paid plans for supported stateless API calls; training opt-out handled separately",
+    "source_url": "https://docs.mistral.ai/admin/monitor-comply/zero-data-retention",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

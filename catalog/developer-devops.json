@@ -15,8 +15,28 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/CircleCI-Public/mcp-server-circleci",
-    "domain_verified": null,
-    "kind": "official"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.circleci.com/v1/mcp",
+    "repo": "https://github.com/CircleCI-Public/mcp-server-circleci",
+    "tools": [
+     "list_runs",
+     "get_run",
+     "list_workflows",
+     "get_workflow",
+     "rerun_workflow",
+     "cancel_workflow",
+     "list_jobs",
+     "get_job",
+     "get_job_logs",
+     "list_artifacts",
+     "list_job_tests",
+     "download_usage_data"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan: 30,000 credits/month (~6,000 build minutes on a small Docker resource class), credits expire monthly",
    "sdk": [],
@@ -25,6 +45,23 @@
    "desc_en": "An agent can trigger pipelines, rerun workflows, fetch logs/test results, and validate CI/CD configuration via REST.",
    "notes": "Use the v3 API for new work (v2 still supported). The mcp-server-circleci npm package is deprecated in favor of CircleCI's hosted MCP / CLI MCP mode (endpoint not confirmed).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "30,000 credits (up to 6,000 build minutes on small Docker), up to 5 active users",
+    "period": "month",
+    "source_url": "https://circleci.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Circle-Token",
+    "format": "Circle-Token: <CIRCLE_TOKEN>",
+    "source_url": "https://circleci.com/docs/api/v2/index.html",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://circleci.com/api/v2",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -66,6 +103,25 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.datadoghq.com/mcp_server/setup/",
+    "maintainer": "vendor",
+    "tools": [
+     "search_datadog_logs",
+     "analyze_datadog_logs",
+     "search_datadog_metrics",
+     "get_datadog_metric",
+     "search_datadog_monitors",
+     "search_datadog_incidents",
+     "get_datadog_incident",
+     "search_datadog_dashboards",
+     "search_datadog_spans",
+     "get_datadog_trace",
+     "search_datadog_hosts",
+     "search_datadog_events",
+     "create_datadog_notebook"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.datadoghq.com/bits_ai/mcp_server/tools/",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -83,6 +139,26 @@
    "desc_en": "An agent can query metrics, logs, traces, monitors, and dashboards, and manage Datadog configuration via REST.",
    "notes": "Datadog MCP server endpoint is site-specific (app.datadoghq.com, datadoghq.eu, etc.); supports OAuth2, personal/service tokens, or DD-API-KEY/DD-APPLICATION-KEY headers.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Infrastructure free plan: up to 5 hosts, 1-day metric retention",
+    "source_url": "https://www.datadoghq.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "DD-API-KEY",
+    "format": "DD-API-KEY: <api_key> and DD-APPLICATION-KEY: <app_key>",
+    "source_url": "https://docs.datadoghq.com/api/latest/authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.datadoghq.com",
+   "rate_limits": {
+    "summary": "Per-endpoint limits (429 when exceeded); metric data-point submission is not rate limited",
+    "source_url": "https://docs.datadoghq.com/api/latest/rate-limits/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -114,6 +190,24 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/docker/hub-mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/docker/hub-mcp",
+    "tools": [
+     "search",
+     "get_namespaces",
+     "list_repositories_by_namespace",
+     "get_repository_info",
+     "check_repository",
+     "create_repository",
+     "update_repository_info",
+     "list_repository_tags",
+     "read_repository_tag",
+     "check_repository_tag",
+     "docker_hardened_images"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/docker/hub-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -124,6 +218,25 @@
    "desc_en": "An agent can search, push, pull, tag, and manage container images and repositories on Docker Hub.",
    "notes": "API is v2-beta; free/anonymous pulls are rate-limited. Docker's MCP Catalog/Toolkit offers 300+ containerized MCP servers.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Personal (free) account: 200 image pulls per 6 hours (unauthenticated 100 per IP)",
+    "source_url": "https://docs.docker.com/docker-hub/usage/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "POST /v2/auth/token with username + PAT, then Authorization: Bearer <token>",
+    "source_url": "https://docs.docker.com/reference/api/hub/latest/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://hub.docker.com",
+   "rate_limits": {
+    "summary": "Abuse limit of thousands of requests/min per IP; X-RateLimit-* headers, 429 with Retry-After; pulls 200/6h free, 100/6h anonymous",
+    "source_url": "https://docs.docker.com/docker-hub/usage/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -157,7 +270,23 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/github/github-mcp-server",
-    "domain_verified": null,
+    "maintainer": "vendor",
+    "remote_url": "https://api.githubcopilot.com/mcp/",
+    "repo": "https://github.com/github/github-mcp-server",
+    "tools": [
+     "get_file_contents",
+     "issue_read",
+     "issue_write",
+     "create_pull_request",
+     "merge_pull_request",
+     "search_issues",
+     "actions_list",
+     "actions_get",
+     "list_code_scanning_alerts"
+    ],
+    "source_url": "https://github.com/github/github-mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
     "kind": "official"
    },
    "free_tier": "free with any GitHub account; 5,000 req/hr authenticated, 60/hr unauthenticated",
@@ -171,6 +300,38 @@
    "desc_en": "An agent can manage repositories, issues, pull requests, releases, and code search via REST or GraphQL.",
    "notes": "Rate limits scale with auth type (60/hr unauth, 5,000/hr PAT, higher for GitHub Apps); secondary abuse limits also apply; GraphQL uses a separate points-based limit.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "5,000 requests/hour authenticated; 60/hour unauthenticated",
+    "source_url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <token> (plus X-GitHub-Api-Version header)",
+    "source_url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.github.com",
+   "rate_limits": {
+    "summary": "5,000 req/hour per user token (15,000 on Enterprise Cloud); 60/hour unauthenticated; secondary limits e.g. 100 concurrent, 900 points/min",
+    "source_url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "repo",
+     "read:org",
+     "workflow",
+     "gist",
+     "user",
+     "notifications"
+    ],
+    "source_url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -219,6 +380,29 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+    "maintainer": "vendor",
+    "remote_url": "https://gitlab.com/api/v4/mcp",
+    "tools": [
+     "get_project",
+     "create_issue",
+     "get_issue",
+     "list_merge_requests",
+     "get_merge_request",
+     "get_merge_request_diffs",
+     "save_merge_request",
+     "list_pipelines",
+     "get_pipeline",
+     "get_job",
+     "get_repository_file",
+     "list_commits",
+     "search",
+     "semantic_search",
+     "list_work_items",
+     "save_work_item"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server_tools/",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -229,6 +413,26 @@
    "desc_en": "An agent can manage projects, issues, merge requests, CI/CD pipelines, and repository files via REST/GraphQL.",
    "notes": "GitLab's official MCP server is in beta (GitLab 18.6+); no GitLab-maintained multi-language SDK, but popular community libraries (python-gitlab, node-gitlab) exist.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "GitLab.com Free: 100 authenticated API requests/min burst, 5,000/hour; unauthenticated 60/hour",
+    "source_url": "https://docs.gitlab.com/user/gitlab_com/rate_limits/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "PRIVATE-TOKEN",
+    "format": "PRIVATE-TOKEN: <personal_access_token> (OAuth: Authorization: Bearer <token>)",
+    "source_url": "https://docs.gitlab.com/api/rest/authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://gitlab.com/api/v4",
+   "rate_limits": {
+    "summary": "GitLab.com Free: 100 req/min burst and 5,000 req/hour per user; unauthenticated 60/hour",
+    "source_url": "https://docs.gitlab.com/user/gitlab_com/rate_limits/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -261,6 +465,25 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.globalping.dev/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.globalping.dev/mcp",
+    "repo": "https://github.com/jsdelivr/globalping-mcp-server",
+    "tools": [
+     "ping",
+     "traceroute",
+     "dns",
+     "mtr",
+     "http",
+     "locations",
+     "limits",
+     "getMeasurement",
+     "compareLocations",
+     "help",
+     "authStatus"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/jsdelivr/globalping-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
@@ -274,6 +497,30 @@
    "desc_en": "Lets an agent run ping, traceroute, MTR, DNS and HTTP tests from thousands of probes worldwide to check reachability, latency and routing of a host.",
    "notes": "Async: POST /v1/measurements, then poll GET /v1/measurements/{id}. Remote MCP (Streamable HTTP) takes OAuth or a Bearer token.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "quota": "250 tests/hour anonymous (50 probes/measurement); 500 tests/hour with free account token",
+    "source_url": "https://github.com/jsdelivr/globalping",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "No auth required; optional Authorization: Bearer <GLOBALPING_TOKEN> for higher limits",
+    "source_url": "https://github.com/jsdelivr/globalping-mcp-server",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.globalping.io/v1",
+   "rate_limits": {
+    "summary": "250 tests/hour anonymous, 500 tests/hour registered; 2 GET requests/s per measurement",
+    "source_url": "https://github.com/jsdelivr/globalping",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST /v1/measurements returns an id; poll GET /v1/measurements/{id}",
+    "source_url": "https://github.com/jsdelivr/globalping"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -289,6 +536,22 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/arvindand/maven-tools-mcp",
+    "maintainer": "community",
+    "repo": "https://github.com/arvindand/maven-tools-mcp",
+    "tools": [
+     "get_latest_version",
+     "check_version_exists",
+     "check_multiple_dependencies",
+     "compare_dependency_versions",
+     "analyze_dependency_age",
+     "analyze_release_patterns",
+     "analyze_project_health",
+     "analyze_pom_dependencies",
+     "recommend_pom_upgrades"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/arvindand/maven-tools-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -299,6 +562,19 @@
    "desc_en": "Lets an agent search Maven Central for Java/JVM artifacts by groupId, artifactId, class name or SHA-1 and look up the latest versions before adding a dependency.",
    "notes": "Solr-style queries (g:, a:, v:, fc:); core=gav lists all versions. Sonatype may throttle heavy automated use.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://central.sonatype.org/search/rest-api-guide/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "No auth: GET https://search.maven.org/solrsearch/select?q=<query>&rows=20&wt=json",
+    "source_url": "https://central.sonatype.org/search/rest-api-guide/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://search.maven.org/solrsearch/select",
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -314,8 +590,28 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/PagerDuty/pagerduty-mcp-server",
-    "domain_verified": null,
-    "kind": "official"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.pagerduty.com/mcp",
+    "repo": "https://github.com/PagerDuty/pagerduty-mcp-server",
+    "tools": [
+     "browse_incidents",
+     "manage_incidents",
+     "browse_services",
+     "manage_services",
+     "browse_schedules",
+     "manage_schedules",
+     "browse_teams",
+     "browse_escalation_policies",
+     "browse_users",
+     "browse_change_events",
+     "browse_event_orchestrations",
+     "browse_status_pages"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan for up to 5 users: 100 monthly SMS/phone notifications, 1 on-call schedule, 1 escalation policy, API access",
    "sdk": [],
@@ -324,6 +620,22 @@
    "desc_en": "An agent can create/manage incidents, on-call schedules, escalation policies, and services via REST.",
    "notes": "The pagerduty-mcp-server repo is deprecated; PagerDuty moved to a hosted Remote MCP server with OAuth (endpoint not confirmed).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Free plan: up to 5 users, 100 SMS/phone notifications, 1 on-call schedule, 1 escalation policy",
+    "period": "month",
+    "source_url": "https://www.pagerduty.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Token token=<API_KEY> (OAuth: Authorization: Bearer <token>)",
+    "source_url": "https://raw.githubusercontent.com/PagerDuty/api-schema/main/reference/REST/openapiv3.json",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.pagerduty.com",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -375,6 +687,12 @@
    "mcp": {
     "type": "official",
     "url": "https://learning.postman.com/_mcp/server",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.postman.com/mcp",
+    "repo": "https://github.com/postmanlabs/postman-mcp-server",
+    "covers_full_api": true,
+    "source_url": "https://learning.postman.com/docs/developer/postman-api/postman-mcp-server/overview/",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -385,6 +703,27 @@
    "desc_en": "An agent can manage Postman collections, workspaces, environments, mocks, monitors, and API specs via REST.",
    "notes": "Reference docs are at learning.postman.com. The official MCP endpoint mainly queries Postman's own docs, not full account management.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "10,000 Postman API calls, 1 user",
+    "period": "month",
+    "source_url": "https://www.postman.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-API-Key",
+    "format": "X-API-Key: <POSTMAN_API_KEY>",
+    "source_url": "https://learning.postman.com/docs/developer/postman-api/authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.getpostman.com",
+   "rate_limits": {
+    "summary": "300 requests/min per API key; monthly call quota by plan (10,000 on Free)",
+    "source_url": "https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -423,6 +762,10 @@
    "mcp": {
     "type": "official",
     "url": "https://app.reflag.com/api/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://app.reflag.com/api/mcp",
+    "source_url": "https://docs.reflag.com/api/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -436,6 +779,21 @@
    "desc_en": "Lets an agent create feature flags, change their targeting for users and companies, and evaluate flags at runtime.",
    "notes": "Formerly Bucket. Management API key is per app with scopes; the Runtime API uses a separate secret key. Remote MCP over HTTP (mcp-remote for clients without OAuth).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "1,000 monthly tracked users, unlimited seats, 3 environments; no overage",
+    "period": "month",
+    "source_url": "https://reflag.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <REFLAG_API_KEY>",
+    "source_url": "https://docs.reflag.com/api/reflag-rest-api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://app.reflag.com/api",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -451,6 +809,16 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.sentry.dev/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.sentry.dev/mcp",
+    "repo": "https://github.com/getsentry/sentry-mcp",
+    "tools": [
+     "search_events",
+     "search_issues"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://mcp.sentry.dev/",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
@@ -461,6 +829,26 @@
    "desc_en": "An agent can query and triage error/performance issues and manage projects, releases, and org data.",
    "notes": "API is v0 (public endpoints stable, beta endpoints may change); per-endpoint rate limits via X-Sentry-Rate-Limit-* headers; legacy Basic-auth API keys are deprecated in favor of Bearer auth tokens.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Developer plan: 1 user, 5,000 errors, 5GB logs, 50 replays, 5M spans",
+    "period": "month",
+    "source_url": "https://sentry.io/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <auth_token>",
+    "source_url": "https://docs.sentry.io/api/auth/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://sentry.io/api/0",
+   "rate_limits": {
+    "summary": "Per caller+endpoint request-rate and concurrency limits (values not published)",
+    "source_url": "https://docs.sentry.io/api/ratelimits/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -491,6 +879,33 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.supabase.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.supabase.com/mcp",
+    "repo": "https://github.com/supabase/mcp",
+    "tools": [
+     "list_tables",
+     "list_extensions",
+     "list_migrations",
+     "apply_migration",
+     "execute_sql",
+     "query_logs",
+     "get_advisors",
+     "get_project_url",
+     "get_publishable_keys",
+     "generate_typescript_types",
+     "list_edge_functions",
+     "deploy_edge_function",
+     "list_projects",
+     "create_project",
+     "pause_project",
+     "restore_project",
+     "search_docs",
+     "create_branch",
+     "merge_branch"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://supabase.com/docs/guides/getting-started/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -501,6 +916,26 @@
    "desc_en": "An agent can programmatically create and manage Supabase projects, databases, API keys, and config.",
    "notes": "Personal Access Tokens carry full account privileges - treat as highly sensitive. Client SDKs (javascript, python, dart, swift, kotlin) are for the data/auth/storage APIs, not the Management API.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "2 active projects, 500 MB database, 50,000 MAUs, 5 GB egress; paused after 1 week inactivity",
+    "period": "month",
+    "source_url": "https://supabase.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <access_token>",
+    "source_url": "https://supabase.com/docs/reference/api/introduction",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.supabase.com/v1",
+   "rate_limits": {
+    "summary": "120 req/min per user per project/org; analytics 30/min; database context 10/min",
+    "source_url": "https://supabase.com/docs/reference/api/introduction",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

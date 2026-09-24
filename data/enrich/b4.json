@@ -1,0 +1,1477 @@
+{
+  "beatoven-ai-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://github.com/Beatoven/public-api",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_TOKEN>",
+      "source_url": "https://raw.githubusercontent.com/Beatoven/public-api/main/docs/api-spec.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://public-api.beatoven.ai",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /api/v1/tracks/compose returns task_id; poll GET /api/v1/tasks/{task_id} until status 'composed'",
+      "source_url": "https://raw.githubusercontent.com/Beatoven/public-api/main/docs/api-spec.md"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: official API spec (github.com/Beatoven/public-api) documents 'Authorization: Bearer <API_TOKEN>' at https://public-api.beatoven.ai"
+    ]
+  },
+  "elevenlabs-music-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "10k credits (music included, no commercial use on free plan)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://elevenlabs.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "xi-api-key",
+      "scheme": null,
+      "format": "xi-api-key: <ELEVENLABS_API_KEY>",
+      "source_url": "https://elevenlabs.io/docs/api-reference/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.elevenlabs.io",
+    "rate_limits": {
+      "summary": "Concurrency-based: Free plan 2 concurrent requests (TTS figures; higher on paid plans)",
+      "source_url": "https://elevenlabs.io/docs/help-center/technical/how-many-text-to-speech-requests-can-i-make-and-can-i-increase-it",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "POST /v1/music returns the generated audio file directly",
+      "source_url": "https://elevenlabs.io/docs/api-reference/music/compose"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.elevenlabs.io/v1/mcp",
+      "repo": "https://github.com/elevenlabs/elevenlabs-mcp",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://github.com/elevenlabs/elevenlabs-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: local elevenlabs-mcp repo is marked deprecated; vendor now hosts a remote OAuth MCP server at https://api.elevenlabs.io/v1/mcp",
+      "free_tier: pricing page states Free plan = 10k credits/month incl. Music; music commercial use requires Starter+"
+    ]
+  },
+  "loudly-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.loudly.com/music-api",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "API-KEY",
+      "scheme": null,
+      "format": "API-KEY: <API_KEY>",
+      "source_url": "https://b2b-soundtracks-swagger-prd.loudly.com/swagger/b2b_swagger.yaml",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://soundtracks.loudly.com",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "POST /api/ai/prompt/songs returns a song object with the generated track",
+      "source_url": "https://b2b-soundtracks-swagger-prd.loudly.com/swagger/b2b_swagger.yaml"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: official OpenAPI spec defines header 'API-KEY: <API_KEY>' (server https://soundtracks.loudly.com)"
+    ]
+  },
+  "mubert-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://mubert.com/api",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "access-token",
+      "scheme": null,
+      "format": "customer-id: <CUSTOMER_ID>; access-token: <ACCESS_TOKEN>",
+      "source_url": "https://mubert.com/api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://music-api.mubert.com/api/v3/public",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /tracks, then poll GET track by id or use a webhook",
+      "source_url": "https://mubert.com/api/docs"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    }
+  },
+  "soundraw-api": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "2-week free trial",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://docs.channel.io/soundraw-faq/en/articles/SOUNDRAW-API-fbf580fd",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": null,
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: vendor FAQ offers a free 2-week trial with no commitment; Starter $29.99/mo requires a 6-month minimum commitment"
+    ]
+  },
+  "stable-audio-api-stability-ai": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "25 free credits for new accounts (Stable Audio costs 20 credits/generation)",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://kb.stability.ai/knowledge-base/where-can-i-find-my-api-key",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "authorization",
+      "scheme": null,
+      "format": "Authorization: Bearer <STABILITY_API_KEY>",
+      "source_url": "https://api.stability.ai/v2alpha/openapi",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.stability.ai",
+    "rate_limits": {
+      "summary": "150 requests per 10 seconds; exceeding gives 429 and a 60-second timeout",
+      "source_url": "https://api.stability.ai/v2alpha/openapi",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": false,
+      "how": "POST /v2beta/audio/stable-audio-2/text-to-audio returns audio directly; GET /v2beta/audio/results/{id} exists for async generations",
+      "source_url": "https://api.stability.ai/v2alpha/openapi"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    }
+  },
+  "airtable-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "1,000 API calls per workspace",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://support.airtable.com/articles/7735693959-managing-api-call-limits-in-airtable",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN or OAuth token>",
+      "source_url": "https://airtable.com/developers/web/api/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.airtable.com/v0",
+    "rate_limits": {
+      "summary": "5 requests/sec per base; 50 requests/sec per user across PATs; 429 then wait 30s",
+      "source_url": "https://airtable.com/developers/web/api/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "data.records:read",
+        "data.records:write"
+      ],
+      "source_url": "https://airtable.com/developers/web/api/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.airtable.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://airtable.com/developers/agents/mcp/getting-started",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Airtable now runs an official remote MCP server at https://mcp.airtable.com/mcp (OAuth or PAT); entry lists only a community server",
+      "free_tier: Free plan is capped at 1,000 API calls per workspace per month (plus 5 req/sec per base)"
+    ]
+  },
+  "asana-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developers.asana.com/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN or OAuth token>",
+      "source_url": "https://developers.asana.com/docs/personal-access-token.md",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://app.asana.com/api/1.0",
+    "rate_limits": {
+      "summary": "150 requests/min per token on free domains; 1,500/min on paid domains",
+      "source_url": "https://developers.asana.com/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "tasks:read",
+        "tasks:write",
+        "projects:read",
+        "projects:write",
+        "stories:write",
+        "users:read",
+        "workspaces:read"
+      ],
+      "source_url": "https://developers.asana.com/docs/oauth-scopes.md",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.asana.com/v2/mcp",
+      "repo": null,
+      "tools": [
+        "search_objects",
+        "get_task",
+        "get_tasks",
+        "get_my_tasks",
+        "search_tasks",
+        "get_project",
+        "get_projects",
+        "create_tasks",
+        "update_tasks",
+        "delete_task",
+        "add_comment",
+        "create_project",
+        "create_project_status_update"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.asana.com/docs/mcp-tools-reference.md",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Asana publishes an official remote MCP server at https://mcp.asana.com/v2/mcp (OAuth); entry says none"
+    ]
+  },
+  "atlassian-jira-confluence": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Jira Free: up to 10 users, 2 GB storage",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.atlassian.com/software/jira/guides/more/jira-editions",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <OAUTH_TOKEN> (or Authorization: Basic base64(email:api_token))",
+      "source_url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://your-domain.atlassian.net/rest/api/2",
+    "rate_limits": {
+      "summary": "Points-based: 65,000 points/hour global pool for apps (API-token traffic not affected); 429 with Retry-After",
+      "source_url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "read:jira-work",
+        "write:jira-work",
+        "read:jira-user"
+      ],
+      "source_url": "https://developer.atlassian.com/cloud/jira/platform/scopes-for-oauth-2-3LO-and-forge-apps/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.atlassian.com/v2/mcp",
+      "repo": null,
+      "tools": [
+        "getJiraIssue",
+        "searchJiraIssuesUsingJql",
+        "createJiraIssue",
+        "editJiraIssue",
+        "transitionJiraIssue",
+        "getConfluenceContent",
+        "searchConfluence",
+        "createConfluenceContent",
+        "updateConfluenceContent",
+        "atlassianUserInfo",
+        "getAccessibleAtlassianResources"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://support.atlassian.com/atlassian-ai-gateway/docs/supported-tools/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: current documented remote endpoint is https://mcp.atlassian.com/v2/mcp (OAuth 2.1 or API token), not /v1/mcp/authv2"
+    ]
+  },
+  "box-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Free developer plan: 10 GB storage, full API access, 1,000 AI units/month",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://developer.box.com/guides/getting-started/free-developer-plan",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <ACCESS_TOKEN>",
+      "source_url": "https://developer.box.com/guides/authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.box.com/2.0",
+    "rate_limits": {
+      "summary": "1,000 API requests/min per user; uploads 240/min; search 6/sec per user",
+      "source_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "root_readonly",
+        "root_readwrite",
+        "ai.readwrite"
+      ],
+      "source_url": "https://developer.box.com/guides/api-calls/permissions-and-errors/scopes/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.box.com",
+      "repo": null,
+      "tools": [
+        "who_am_i",
+        "search_files_keyword",
+        "search_folders_by_name",
+        "get_file_content",
+        "get_file_details",
+        "list_folder_content_by_folder_id",
+        "upload_file",
+        "create_folder",
+        "move_file",
+        "ai_qa_single_file",
+        "ai_extract_structured"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developer.box.com/guides/box-mcp/tools",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Box hosts an official remote MCP server at https://mcp.box.com (OAuth); entry says none",
+      "free_tier: Box offers a free developer plan (10 GB, full API access, no payment) - 'check pricing / paid account' is outdated"
+    ]
+  },
+  "cal-com-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY> (keys prefixed cal_ / cal_live_)",
+      "source_url": "https://cal.com/docs/api-reference/v2/introduction",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.cal.com/v2",
+    "rate_limits": {
+      "summary": "120 requests/min per API key; can be raised to ~200/min, 800/min possibly at extra cost",
+      "source_url": "https://cal.com/docs/api-reference/v2/introduction",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.cal.com/mcp",
+      "repo": "https://github.com/calcom/companion/tree/main/apps/mcp-server",
+      "tools": [
+        "get_me",
+        "get_event_types",
+        "create_event_type",
+        "get_bookings",
+        "get_booking",
+        "create_booking",
+        "reschedule_booking",
+        "cancel_booking",
+        "get_schedules",
+        "get_availability",
+        "get_busy_times"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://cal.com/docs/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Cal.com publishes an official MCP server (hosted https://mcp.cal.com/mcp with OAuth 2.1; local stdio with API key), entry says none",
+      "free_tier: pricing page does not list API access under the Free plan features; free-plan API availability not confirmed on vendor docs"
+    ]
+  },
+  "calendly-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developer.calendly.com/frequently-asked-questions",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN or OAuth token>",
+      "source_url": "https://developer.calendly.com/openapi/calendly-api.yaml",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.calendly.com",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.calendly.com",
+      "repo": null,
+      "tools": [
+        "users-get_current_user",
+        "event_types-create_event_type",
+        "meetings-list_events",
+        "meetings-create_invitee",
+        "routing_forms-list_routing_forms",
+        "organizations-list_organization_memberships"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://developer.calendly.com/supported-tools",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Calendly hosts an official remote MCP server at https://mcp.calendly.com; entry says none",
+      "free_tier: developer FAQ states API GET/POST works on any plan incl. Free (except 3 Enterprise endpoints); webhooks need a paid Standard/Teams/Enterprise plan"
+    ]
+  },
+  "clickup-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Free Forever plan: API at 100 requests/min per token",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developer.clickup.com/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: pk_<PERSONAL_TOKEN> (OAuth: Authorization: Bearer <ACCESS_TOKEN>)",
+      "source_url": "https://developer.clickup.com/docs/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.clickup.com/api/v2",
+    "rate_limits": {
+      "summary": "100 requests/min per token on Free Forever, Unlimited, Business; 1,000 on Business Plus; 10,000 on Enterprise",
+      "source_url": "https://developer.clickup.com/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.clickup.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: remote endpoint is https://mcp.clickup.com/mcp (OAuth only, no API keys); Free Forever limited to 50 MCP calls per 24h without the AI add-on"
+    ]
+  },
+  "coda-api-superhuman-docs": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.superhuman.com/developers/apis/v1",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_TOKEN>",
+      "source_url": "https://docs.superhuman.com/developers/apis/v1",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://coda.io/apis/v1",
+    "rate_limits": {
+      "summary": "Reads 100 req/6s; writes 10 req/6s; doc content writes 5 req/10s; list docs 4 req/6s",
+      "source_url": "https://docs.superhuman.com/developers/apis/v1",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Writes return HTTP 202 with requestId; check GET /mutationStatus/{requestId}",
+      "source_url": "https://docs.superhuman.com/developers/apis/v1"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://docs.superhuman.com/apis/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.superhuman.com/.well-known/oauth-protected-resource/apis/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: entry's MCP url points at the REST API docs; the Superhuman Docs MCP endpoint is https://docs.superhuman.com/apis/mcp (OAuth via id.superhuman.com, scope mcp:all)"
+    ]
+  },
+  "dropbox-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Dropbox Basic: 2 GB storage",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.dropbox.com/basic",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <OAUTH2_ACCESS_TOKEN>",
+      "source_url": "https://docs.dropboxapi.com/dropbox-api/docs/auth-types",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.dropboxapi.com/2",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.dropbox.com/mcp",
+      "repo": null,
+      "tools": [
+        "ListFolder",
+        "GetFileContent",
+        "CreateFile",
+        "Copy",
+        "Move",
+        "Delete",
+        "Search",
+        "CreateFolder",
+        "CreateSharedLink",
+        "GetFileMetadata",
+        "WhoAmI"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://help.dropbox.com/integrations/connect-dropbox-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Dropbox hosts an official remote MCP server (beta) at https://mcp.dropbox.com/mcp with Dropbox OAuth; entry says none"
+    ]
+  },
+  "linear-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Free plan incl. API and webhook access, 250 issues",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://linear.app/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: <API_KEY> (OAuth: Authorization: Bearer <ACCESS_TOKEN>)",
+      "source_url": "https://linear.app/developers/graphql",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.linear.app/graphql",
+    "rate_limits": {
+      "summary": "API key: 2,500 requests/hour and 3,000,000 complexity points/hour per user; OAuth: 5,000 req/hour",
+      "source_url": "https://linear.app/developers/rate-limiting",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "read",
+        "write",
+        "issues:create",
+        "comments:create"
+      ],
+      "source_url": "https://linear.app/developers/oauth-2-0-authentication",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.linear.app/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://linear.app/docs/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: Linear personal API keys are sent as 'Authorization: <API_KEY>' without Bearer; Bearer is for OAuth tokens"
+    ]
+  },
+  "google-workspace-apis-gmail-calendar-drive": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Gmail API: free up to 80,000,000 quota units/day per project",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://developers.google.com/workspace/gmail/api/reference/quota",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <OAUTH2_ACCESS_TOKEN>",
+      "source_url": "https://developers.google.com/workspace/gmail/api/auth/scopes",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": {
+      "summary": "Gmail: 1,200,000 quota units/min per project, 6,000/min per user; messages.send costs 100 units",
+      "source_url": "https://developers.google.com/workspace/gmail/api/reference/quota",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly",
+        "https://www.googleapis.com/auth/gmail.send",
+        "https://www.googleapis.com/auth/gmail.modify",
+        "https://www.googleapis.com/auth/gmail.compose"
+      ],
+      "source_url": "https://developers.google.com/workspace/gmail/api/auth/scopes",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://gmailmcp.googleapis.com/mcp/v1",
+      "repo": null,
+      "tools": [
+        "create_draft",
+        "search_threads",
+        "search_files",
+        "read_file_content",
+        "list_events",
+        "send_message"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Google runs official remote MCP servers (Developer Preview, OAuth) per product: gmailmcp/drivemcp/calendarmcp/docsmcp/sheetsmcp/chatmcp.googleapis.com/mcp/v1; entry says none",
+      "free_tier: Gmail quota page says exceeding quota limits is planned to incur charges to the Cloud billing account later in 2026"
+    ]
+  },
+  "microsoft-graph-outlook-teams-onedrive": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <ACCESS_TOKEN>",
+      "source_url": "https://learn.microsoft.com/en-us/graph/auth/auth-concepts",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://graph.microsoft.com/v1.0",
+    "rate_limits": {
+      "summary": "Global 130,000 requests/10s per app across tenants; service-specific limits apply; 429 with Retry-After",
+      "source_url": "https://learn.microsoft.com/en-us/graph/throttling-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "User.Read"
+      ],
+      "source_url": "https://learn.microsoft.com/en-us/graph/auth/auth-concepts",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.svc.cloud.microsoft/enterprise",
+      "repo": null,
+      "tools": [
+        "microsoft_graph_suggest_queries",
+        "microsoft_graph_get",
+        "microsoft_graph_list_properties"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://learn.microsoft.com/en-us/graph/mcp-server/overview",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Microsoft MCP Server for Enterprise (preview, read-only Entra directory queries via Graph) at https://mcp.svc.cloud.microsoft/enterprise; entry says none"
+    ]
+  },
+  "monday-com-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Free plan: 1,000 API calls/day; 1M complexity points/min",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://developer.monday.com/api-reference/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: <PERSONAL_API_TOKEN>",
+      "source_url": "https://developer.monday.com/api-reference/docs/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.monday.com/v2",
+    "rate_limits": {
+      "summary": "Complexity 10M points/min per personal token (1M on trial/free); Free plan 1,000 calls/day reset midnight UTC",
+      "source_url": "https://developer.monday.com/api-reference/docs/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.monday.com/mcp",
+      "repo": "https://github.com/mondaycom/mcp",
+      "tools": [
+        "create_item",
+        "delete_item",
+        "get_board_items_by_name",
+        "create_update",
+        "change_item_column_values",
+        "create_board",
+        "get_board_schema",
+        "list_users_and_teams",
+        "all_monday_api",
+        "get_graphql_schema"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: official hosted MCP URL is https://mcp.monday.com/mcp (OAuth 2.0 or personal token; repo github.com/mondaycom/mcp); entry has url null"
+    ]
+  },
+  "nocodb-cloud": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "1,000 API calls, 1,000 records, 1 GB storage, 3 editors",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://nocodb.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "xc-token",
+      "scheme": null,
+      "format": "xc-token: <API_TOKEN>",
+      "source_url": "https://nocodb.com/docs/product-docs/developer-resources/rest-apis/accessing-apis",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://app.nocodb.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://nocodb.com/docs/apis-and-mcp/mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "notion-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developers.notion.com/reference/request-limits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <TOKEN>; Notion-Version: 2026-03-11",
+      "source_url": "https://developers.notion.com/reference/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.notion.com/v1",
+    "rate_limits": {
+      "summary": "180 requests/min per connection (600/min on Business/Enterprise) plus per-workspace limits; 429 with Retry-After",
+      "source_url": "https://developers.notion.com/reference/request-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.notion.com/mcp",
+      "repo": "https://github.com/makenotion/notion-mcp-server",
+      "tools": [
+        "notion-search",
+        "notion-fetch",
+        "notion-create-pages",
+        "notion-update-page",
+        "notion-move-pages",
+        "notion-duplicate-page",
+        "notion-create-database",
+        "notion-update-data-source",
+        "notion-query-data-sources",
+        "notion-create-comment",
+        "notion-get-comments",
+        "notion-get-users",
+        "notion-create-file-upload"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.notion.com/guides/mcp/mcp-supported-tools.md",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "todoist-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_TOKEN or OAuth token>",
+      "source_url": "https://developer.todoist.com/api/v1/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.todoist.com/api/v1",
+    "rate_limits": {
+      "summary": "Per user: 1,000 partial sync requests and 100 full sync requests per 15 minutes; up to 100 commands per request",
+      "source_url": "https://developer.todoist.com/api/v1/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "data:read",
+        "data:read_write",
+        "task:add",
+        "data:delete",
+        "project:delete"
+      ],
+      "source_url": "https://developer.todoist.com/api/v1/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://ai.todoist.net/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://developer.todoist.com/api/v1/",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "trello-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "key",
+      "scheme": null,
+      "format": "?key=<API_KEY>&token=<API_TOKEN> (or Authorization: OAuth oauth_consumer_key=\"<API_KEY>\", oauth_token=\"<API_TOKEN>\")",
+      "source_url": "https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.trello.com/1",
+    "rate_limits": {
+      "summary": "300 requests/10s per API key; 100 requests/10s per token; /1/members 100 requests/900s",
+      "source_url": "https://developer.atlassian.com/cloud/trello/guides/rest-api/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "read",
+        "write",
+        "account"
+      ],
+      "source_url": "https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.trello.com/v1",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://support.atlassian.com/trello/docs/connect-trello-to-ai-assistants-with-trello-mcp/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: Trello docs describe key+token via query params or 'Authorization: OAuth oauth_consumer_key=..., oauth_token=...' header (OAuth 1.0), not Bearer",
+      "mcp: official Trello MCP server at https://mcp.trello.com/v1 (OAuth 2.0, all Trello plans); entry says none"
+    ]
+  },
+  "ayrshare": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "28-day free trial of the Launch plan",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://www.ayrshare.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY> (+ Profile-Key: <PROFILE_KEY> for multi-user plans)",
+      "source_url": "https://www.ayrshare.com/docs/apis/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.ayrshare.com/api",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.ayrshare.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://www.ayrshare.com/docs/additional/mcp-action-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: entry's MCP url is the homepage; the Action MCP endpoint is https://api.ayrshare.com/mcp (27 tools, API-key Bearer auth); a docs-only MCP is at https://www.ayrshare.com/docs/mcp",
+      "free_tier: pricing page offers a 28-day free trial on the Launch plan ($299/mo) with no credit card; Premium starts at $149/mo",
+      "auth_hint: since 2026-03-31 X/Twitter operations via Ayrshare require your own X OAuth 1.0a credentials in extra headers"
+    ]
+  },
+  "bluesky-at-protocol": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://raw.githubusercontent.com/bluesky-social/bsky-docs/main/docs/advanced-guides/api-directory.mdx",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <ACCESS_TOKEN> (public reads at https://public.api.bsky.app need no auth)",
+      "source_url": "https://raw.githubusercontent.com/bluesky-social/bsky-docs/main/docs/advanced-guides/api-directory.mdx",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://public.api.bsky.app/xrpc",
+    "rate_limits": {
+      "summary": "PDS: 3,000 requests/5 min per IP; writes 5,000 points/hour and 35,000/day per account (create=3 pts)",
+      "source_url": "https://raw.githubusercontent.com/bluesky-social/bsky-docs/main/docs/advanced-guides/rate-limits.md",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/brianellin/bsky-mcp-server",
+      "tools": [
+        "get-timeline-posts",
+        "get-profile",
+        "get-post-thread",
+        "search-posts",
+        "search-people",
+        "create-post",
+        "like-post",
+        "follow-user"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/brianellin/bsky-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "docs: https://docs.bsky.app now 301-redirects to https://bsky.network/docs"
+    ]
+  },
+  "linkedin-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <ACCESS_TOKEN>; X-Restli-Protocol-Version: 2.0.0",
+      "source_url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.linkedin.com/v2",
+    "rate_limits": {
+      "summary": "Daily per-app and per-member limits (reset midnight UTC), shown in Developer Portal; Share on LinkedIn: 150/member, 100,000/app per day",
+      "source_url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "w_member_social"
+      ],
+      "source_url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    }
+  },
+  "mastodon-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <ACCESS_TOKEN>",
+      "source_url": "https://docs.joinmastodon.org/client/token/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://mastodon.example/api/v1",
+    "rate_limits": {
+      "summary": "Default 300 requests per 5 minutes per account and per IP; media uploads 30 per 30 minutes",
+      "source_url": "https://docs.joinmastodon.org/api/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "read",
+        "write",
+        "push",
+        "profile"
+      ],
+      "source_url": "https://docs.joinmastodon.org/client/token/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    }
+  },
+  "meta-graph-api-facebook-instagram": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "?access_token=<ACCESS_TOKEN> or token in request header",
+      "source_url": "https://developers.facebook.com/docs/graph-api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://graph.facebook.com/v{version}",
+    "rate_limits": {
+      "summary": "Platform limit: calls per hour = 200 x number of daily active users; BUC limits for Marketing/Pages APIs",
+      "source_url": "https://developers.facebook.com/docs/graph-api/overview/rate-limiting",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.facebook.com/ads",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Meta hosts an official Ads MCP server at https://mcp.facebook.com/ads (ads, catalogs, reporting; open beta) plus a developer-tools MCP; none covers organic Pages/Instagram posting"
+    ]
+  },
+  "pinterest-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <ACCESS_TOKEN>",
+      "source_url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.pinterest.com/v5",
+    "rate_limits": {
+      "summary": "Trial access: 1,000 requests/day; Standard access: 100 requests/sec per user per app, plus per-category per-minute limits",
+      "source_url": "https://developers.pinterest.com/docs/reference/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "boards:read",
+        "pins:read",
+        "pins:write",
+        "boards:write"
+      ],
+      "source_url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    }
+  },
+  "reddit-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: bearer <TOKEN> (requests to https://oauth.reddit.com)",
+      "source_url": "https://github.com/reddit-archive/reddit/wiki/OAuth2",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://oauth.reddit.com",
+    "rate_limits": null,
+    "oauth_scopes": {
+      "scopes": [
+        "identity",
+        "read",
+        "submit",
+        "history",
+        "vote"
+      ],
+      "source_url": "https://github.com/reddit-archive/reddit/wiki/OAuth2",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    }
+  },
+  "tiktok-api": {
+    "free_plan": null,
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <ACCESS_TOKEN>",
+      "source_url": "https://developers.tiktok.com/doc/content-posting-api-get-started",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://open.tiktokapis.com/v2",
+    "rate_limits": {
+      "summary": "Default 600 requests/min (sliding window) for /v2/user/info/, /v2/video/query/, /v2/video/list/",
+      "source_url": "https://developers.tiktok.com/doc/tiktok-api-v2-rate-limit",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "video.publish"
+      ],
+      "source_url": "https://developers.tiktok.com/doc/content-posting-api-get-started",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": {
+      "value": true,
+      "how": "Content Posting returns publish_id; poll the publish status fetch endpoint",
+      "source_url": "https://developers.tiktok.com/doc/content-posting-api-get-started"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: posts from unaudited clients are restricted to private visibility until the app passes TikTok's audit"
+    ]
+  },
+  "x-twitter-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.x.com/x-api/getting-started/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <APP_BEARER_TOKEN or OAuth 2.0 user token> (OAuth 1.0a also supported)",
+      "source_url": "https://docs.x.com/x-api/introduction",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.x.com/2",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.x.com/mcp",
+      "repo": "https://github.com/xdevplatform/xmcp",
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://docs.x.com/tools/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: X API is now pay-per-usage with prepaid credits (e.g. $0.005 per Post read), no subscriptions and no free tier; Basic $200/mo tier info is outdated",
+      "mcp: X hosts an official MCP server at https://api.x.com/mcp (OAuth 2.0 PKCE or app Bearer) and publishes xdevplatform/xmcp; entry says none"
+    ]
+  },
+  "youtube-data-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "10,000 units/day for most endpoints + 100 search.list and 100 videos.insert calls/day",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://developers.google.com/youtube/v3/determine_quota_cost",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "key",
+      "scheme": null,
+      "format": "?key=<API_KEY> for public data; Authorization: Bearer <OAUTH2_TOKEN> for writes/private data",
+      "source_url": "https://developers.google.com/youtube/v3/docs",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://www.googleapis.com/youtube/v3",
+    "rate_limits": {
+      "summary": "Default quota: 100 search.list calls, 100 videos.insert calls and 10,000 units/day for other endpoints; resets midnight PT",
+      "source_url": "https://developers.google.com/youtube/v3/determine_quota_cost",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "https://www.googleapis.com/auth/youtube.readonly",
+        "https://www.googleapis.com/auth/youtube.upload",
+        "https://www.googleapis.com/auth/youtube.force-ssl"
+      ],
+      "source_url": "https://developers.google.com/youtube/v3/guides/auth/installed-apps",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: quota model changed - search.list and videos.insert now have their own default caps of 100 calls/day each, plus 10,000 units/day for all other endpoints"
+    ]
+  }
+}

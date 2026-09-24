@@ -15,8 +15,28 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.canva.com/mcp",
+    "tools": [
+     "search-designs",
+     "get-design",
+     "get-design-content",
+     "generate-design",
+     "create-design-from-candidate",
+     "export-design",
+     "upload-asset-from-url",
+     "autofill-design",
+     "resize-design",
+     "start-editing-transaction",
+     "perform-editing-operations",
+     "commit-editing-transaction",
+     "comment-on-design",
+     "create-folder"
+    ],
+    "source_url": "https://www.canva.dev/docs/apps/mcp/tools/",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "check pricing (free to build/test; public apps require Canva review before production use)",
    "sdk": [],
@@ -25,6 +45,36 @@
    "desc_en": "Programmatically create, autofill, and export Canva designs, and manage assets and comments via a REST API.",
    "notes": "Auth is OAuth2 only (no raw API key/static token option). Apps using preview/beta scopes cannot pass Canva's required review for production/public use. A general apps llms.txt exists at canva.dev/docs/apps/llms.txt but no Connect-specific one was found.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "oauth2",
+    "format": "Authorization: Bearer <access_token>",
+    "source_url": "https://www.canva.dev/docs/connect/authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.canva.com/rest/v1",
+   "rate_limits": {
+    "summary": "Per endpoint; e.g. create export job 20 req/min per user, 750 exports/5 min per app",
+    "source_url": "https://www.canva.dev/docs/connect/api-reference/exports/create-design-export-job/",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "design:meta:read",
+     "design:content:read",
+     "design:content:write",
+     "asset:read",
+     "asset:write",
+     "folder:read",
+     "comment:write"
+    ],
+    "source_url": "https://www.canva.dev/docs/connect/authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST /v1/exports returns a job id; poll GET /v1/exports/{exportId} until success/failed",
+    "source_url": "https://www.canva.dev/docs/connect/api-reference/exports/create-design-export-job/"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -45,6 +95,27 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.figma.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.figma.com/mcp",
+    "tools": [
+     "get_design_context",
+     "get_metadata",
+     "get_screenshot",
+     "get_variable_defs",
+     "get_code_connect_map",
+     "search_design_system",
+     "get_figjam",
+     "download_assets",
+     "create_new_file",
+     "generate_figma_design",
+     "generate_diagram",
+     "use_figma",
+     "upload_assets",
+     "whoami"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -55,6 +126,38 @@
    "desc_en": "Read and write Figma file/comment/component data via REST, and feed live design context to coding agents via the official Dev Mode MCP server.",
    "notes": "REST API rate limits vary by seat/plan (e.g. Tier 1 ~10-20 req/min), returns 429 with Retry-After. Remote MCP (mcp.figma.com/mcp) works on all plans and is free during beta, will move to usage-based pricing; local desktop MCP variant requires a paid Dev/Full seat.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Starter plan: Tier 1 endpoints 10 req/min for Dev/Full seats; View/Collab seats up to 20 Tier 1 calls/month",
+    "source_url": "https://developers.figma.com/docs/rest-api/rate-limits/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-Figma-Token",
+    "format": "X-Figma-Token: <personal_access_token> (OAuth apps: Authorization: Bearer <token>)",
+    "source_url": "https://developers.figma.com/docs/rest-api/personal-access-tokens/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.figma.com/v1",
+   "rate_limits": {
+    "summary": "Tiered per seat and plan: Tier 1 10-20 req/min, Tier 2 25-100 req/min, Tier 3 50-150 req/min for Dev/Full seats; View/Collab much lower",
+    "source_url": "https://developers.figma.com/docs/rest-api/rate-limits/",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "file_content:read",
+     "file_metadata:read",
+     "file_comments:read",
+     "file_comments:write",
+     "file_variables:read",
+     "current_user:read"
+    ],
+    "source_url": "https://developers.figma.com/docs/rest-api/scopes/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -101,6 +204,18 @@
    "desc_en": "Automate publishing of Framer sites programmatically (get project info, publish previews, promote to production) via a Node SDK.",
    "notes": "Framer's genuine server-side surface is narrow: the Server API (npm package framer-api) only covers publish/deploy automation, not general design editing. The in-editor Plugin API, Code Components, and Fetch are for the visual editor/site runtime, not agent-callable server-side. No MCP server confirmed; 'External Agents' docs reference coding-agent workflows (Claude Code/Cursor) rather than a formal MCP endpoint.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Server API free of charge during beta",
+    "source_url": "https://www.framer.com/developers/server-api-faq",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "format": "connect(projectUrl, <FRAMER_API_KEY>) via the framer-api npm SDK (WebSocket, no REST header)",
+    "source_url": "https://www.framer.com/developers/server-api-quick-start",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -130,6 +245,10 @@
    "mcp": {
     "type": "official",
     "url": "https://penpot.app/ai/mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/penpot/penpot/tree/develop/mcp",
+    "source_url": "https://penpot.app/ai/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -140,6 +259,28 @@
    "desc_en": "Read, create, and modify Penpot design files, comments, and webhooks via a token-authenticated RPC/REST API, or via the official MCP server.",
    "notes": "API is RPC-style (e.g. /api/rpc/command/get-profile) with auto-generated reference docs, not a conventional OpenAPI/Swagger file. Fully open source; can be self-hosted. MCP server repo: github.com/penpot/penpot/tree/develop/mcp.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "Professional plan $0: up to 10GB storage, up to 8 team members",
+    "period": "month",
+    "source_url": "https://penpot.app/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Token <access_token>",
+    "source_url": "https://design.penpot.app/api/_doc",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://design.penpot.app/api/main/methods",
+   "rate_limits": {
+    "summary": "Per-user rate limit (all tokens of a user share it); values not published",
+    "source_url": "https://design.penpot.app/api/_doc",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -170,8 +311,25 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://v0.app/api/mcp",
+    "tools": [
+     "chats.create",
+     "chats.createAsync",
+     "chats.getUrl",
+     "chats.getPreview",
+     "chats.getFiles",
+     "chats.deploy",
+     "messages.send",
+     "messages.sendAsync",
+     "messages.resolveAsync",
+     "messages.get"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://v0.app/docs/api/v2/guides/mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "check pricing (usage-based; credits included on v0 Premium/Team plans, no separate free API key tier confirmed)",
    "sdk": [
@@ -182,6 +340,31 @@
    "desc_en": "Generate full UI/frontend code from natural-language prompts, iterate via chat, and deploy the result directly to Vercel via REST API.",
    "notes": "Different product from Vercel's core platform API; API access is tied to v0 plan credits rather than a standalone free signup. No MCP server confirmed for v0 specifically.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "$5 of included credits (Free plan, 7 messages/day); API use on Free not confirmed",
+    "period": "month",
+    "source_url": "https://v0.app/docs/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <V0_API_KEY>",
+    "source_url": "https://v0.app/docs/api/platform/reference/chats/create",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.v0.dev/v1",
+   "rate_limits": {
+    "summary": "10,000 API requests/day, 1,000 chat messages/day, 100 deployments/day",
+    "source_url": "https://v0.app/docs/api/platform/overview",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "responseMode=async returns a placeholder message; poll the chat/message by id (or use experimental SSE stream)",
+    "source_url": "https://v0.app/docs/api/platform/reference/chats/create"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -201,6 +384,11 @@
    "mcp": {
     "type": "official",
     "url": "https://developers.webflow.com/_mcp/server",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.webflow.com/mcp",
+    "repo": "https://github.com/webflow/mcp-server",
+    "source_url": "https://developers.webflow.com/mcp/reference/getting-started",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -211,6 +399,33 @@
    "desc_en": "Create/update CMS collections, items, and pages, and publish Webflow sites programmatically via REST API or the official MCP server.",
    "notes": "Three token types: Site tokens (single site), Workspace tokens (multi-site read-only), OAuth tokens (multi-site apps). Official SDKs exist but specific languages weren't confirmed in docs excerpt; rate limits documented separately under 'Rate Limiting'.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <site_token|workspace_token|oauth_token>",
+    "source_url": "https://developers.webflow.com/data/reference/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.webflow.com/v2",
+   "rate_limits": {
+    "summary": "60 req/min on Starter/Basic site plans, 120 req/min on CMS/eCommerce/Business; 429 with Retry-After",
+    "source_url": "https://developers.webflow.com/data/reference/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "sites:read",
+     "sites:write",
+     "cms:read",
+     "cms:write",
+     "pages:read",
+     "pages:write",
+     "assets:read",
+     "forms:read"
+    ],
+    "source_url": "https://developers.webflow.com/data/reference/scopes",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,

@@ -56,6 +56,24 @@
    "desc_en": "Generate 3D meshes from text or images (sketch/regular/detail quality tiers) via an async REST job API.",
    "notes": "Async task-based API: submit generation, then poll or use webhooks to retrieve the finished asset.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://hyper3d.ai/pricing?lang=en",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <RODIN_API_KEY>",
+    "source_url": "https://docs.hyper3d.ai/en/get-started/quick-start",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.hyper3d.com/api/v2",
+   "async_jobs": {
+    "value": true,
+    "how": "POST /rodin returns uuid + jobs.subscription_key; poll POST /status, then POST /download with task_uuid",
+    "source_url": "https://docs.hyper3d.ai/en/get-started/quick-start"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -75,6 +93,37 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/meshy-dev/meshy-mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/meshy-dev/meshy-mcp-server",
+    "tools": [
+     "meshy_text_to_3d",
+     "meshy_text_to_3d_refine",
+     "meshy_image_to_3d",
+     "meshy_multi_image_to_3d",
+     "meshy_creative_lab",
+     "meshy_remesh",
+     "meshy_retexture",
+     "meshy_rig",
+     "meshy_animate",
+     "meshy_convert",
+     "meshy_resize",
+     "meshy_uv_unwrap",
+     "meshy_text_to_image",
+     "meshy_image_to_image",
+     "meshy_get_task_status",
+     "meshy_list_tasks",
+     "meshy_cancel_task",
+     "meshy_download_model",
+     "meshy_list_models",
+     "meshy_send_to_slicer",
+     "meshy_analyze_printability",
+     "meshy_repair_printability",
+     "meshy_process_multicolor",
+     "meshy_check_balance"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/meshy-dev/meshy-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -85,6 +134,34 @@
    "desc_en": "Generate, retexture, rig, and animate 3D models from text or images via REST API or official MCP server.",
    "notes": "Free web accounts get only a limited built-in Playground key; creating/managing your own API keys requires a paid subscription.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://docs.meshy.ai/en/api/quick-start",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <MESHY_API_KEY>",
+    "source_url": "https://docs.meshy.ai/en/api/quick-start",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.meshy.ai/openapi/v1",
+   "rate_limits": {
+    "summary": "20 requests/s on Pro-Ultra (Enterprise 100); concurrent queue tasks 10 (Pro) to 100 (Ultra); 429 when exceeded",
+    "source_url": "https://docs.meshy.ai/en/api/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST returns task id; poll GET task until SUCCEEDED, or use SSE streaming or webhooks",
+    "source_url": "https://docs.meshy.ai/en/api/quick-start"
+   },
+   "data_policy": {
+    "summary": "Generated files retained for 3 days on non-Enterprise plans",
+    "source_url": "https://docs.meshy.ai/en/api/quick-start",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -119,6 +196,16 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/gregkop/sketchfab-mcp-server",
+    "maintainer": "community",
+    "repo": "https://github.com/gregkop/sketchfab-mcp-server",
+    "tools": [
+     "sketchfab-search",
+     "sketchfab-model-details",
+     "sketchfab-download"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/gregkop/sketchfab-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -129,6 +216,25 @@
    "desc_en": "Search, download, and upload 3D models on Sketchfab programmatically via the REST Data API v3.",
    "notes": "This is an asset hosting/marketplace API, not a generative AI model; downloading models generally requires an authenticated Sketchfab account (and often the uploader's permission/license). Use v3 endpoints; v2 is deprecated.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "source_url": "https://docs.sketchfab.com/data-api/v3/swagger.json",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Token <API_TOKEN>  (OAuth2: Authorization: Bearer <ACCESS_TOKEN>)",
+    "source_url": "https://docs.sketchfab.com/data-api/v3/swagger.json",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.sketchfab.com/v3",
+   "rate_limits": {
+    "summary": "Calls can be throttled to limit abuse; throttled clients get 429 Too Many Requests (no numeric limit published)",
+    "source_url": "https://docs.sketchfab.com/data-api/v3/swagger.json",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -171,6 +277,25 @@
    "desc_en": "Convert a single 2D image into a textured 3D mesh (GLB) via the v2beta/3d REST endpoints.",
    "notes": "Endpoints such as POST https://api.stability.ai/v2beta/3d/stable-fast-3d; part of Stability's broader multi-modal Platform API.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "authorization",
+    "format": "authorization: Bearer sk-<API_KEY>",
+    "source_url": "https://api.stability.ai/v2alpha/openapi",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.stability.ai",
+   "rate_limits": {
+    "summary": "150 requests per 10 seconds; exceeding returns 429 and a 60-second timeout",
+    "source_url": "https://api.stability.ai/v2alpha/openapi",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "POST /v2beta/3d/stable-fast-3d and /v2beta/3d/stable-point-aware-3d return the GLB binary directly",
+    "source_url": "https://api.stability.ai/v2alpha/openapi"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -200,6 +325,30 @@
    "desc_en": "Generate textured 3D meshes (GLB, PBR) from text, images, or sketches via Tencent Cloud's Hunyuan 3D API.",
    "notes": "3d.hunyuan.tencent.com is the consumer web app; programmatic access requires a Tencent Cloud account and the Tencent Cloud API console, not the consumer site directly. An open-source self-hostable model (Hunyuan3D-2.1) is also available on GitHub for those who don't want the managed cloud API.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "quota": "200 credits per user (one-time free resource package on first activation, valid 1 year)",
+    "period": "one_time",
+    "source_url": "https://www.tencentcloud.com/document/product/1284/75281",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "cloud_iam",
+    "format": "Tencent Cloud API 3.0 signature (TC3-HMAC-SHA256) with SecretId/SecretKey; X-TC-Action: SubmitHunyuanTo3DProJob",
+    "source_url": "https://www.tencentcloud.com/document/product/1284/75540",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://hunyuan.intl.tencentcloudapi.com",
+   "rate_limits": {
+    "summary": "SubmitHunyuanTo3DProJob: max 20 requests/s; 3 concurrent tasks by default",
+    "source_url": "https://www.tencentcloud.com/document/product/1284/75540",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "SubmitHunyuanTo3DProJob returns JobId (valid 24h); poll QueryHunyuanTo3DProJob",
+    "source_url": "https://www.tencentcloud.com/document/product/1284/75540"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -219,6 +368,11 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/VAST-AI-Research/tripo-mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/VAST-AI-Research/tripo-mcp",
+    "covers_full_api": false,
+    "source_url": "https://github.com/VAST-AI-Research/tripo-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -229,6 +383,24 @@
    "desc_en": "Generate textured 3D meshes from text or images via REST API, with an official MCP server for agents.",
    "notes": "Maintained by VAST AI Research (Tripo's developer). Exact free-credit amounts vary by promotion; verify in console.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <api_key>",
+    "source_url": "https://developers.tripo3d.ai/en/docs/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://openapi.tripo3d.ai/v3",
+   "rate_limits": {
+    "summary": "Per-key rate limits (X-RateLimit-* headers, 429); default 10 concurrent tasks per category (image gen 1, P-series 5)",
+    "source_url": "https://developers.tripo3d.ai/en/docs/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "poll GET /v3/tasks/{task_id} or receive webhooks",
+    "source_url": "https://developers.tripo3d.ai/en/docs/webhooks"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

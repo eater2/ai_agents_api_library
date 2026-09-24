@@ -13,10 +13,28 @@
    "auth": "api_key",
    "auth_hint": "apiKey query param",
    "mcp": {
-    "type": "community",
-    "url": null,
-    "domain_verified": null,
-    "kind": "community"
+    "type": "official",
+    "url": "https://api.geoapify.com/v1/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://api.geoapify.com/v1/mcp?apiKey=<API_KEY>",
+    "tools": [
+     "geocode_address",
+     "geocode_structured_address",
+     "reverse_geocode_coordinates",
+     "search_places",
+     "list_place_categories",
+     "calculate_route",
+     "calculate_route_matrix",
+     "combine_geometries",
+     "evaluate_spatial_relation",
+     "measure_geometry",
+     "transform_geometry"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://apidocs.geoapify.com/docs/mcp/",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 3,000 credits/day (~90,000/month), no card required",
    "sdk": [
@@ -27,6 +45,33 @@
    "desc_en": "Geocode, search places, and calculate routes/isochrones via REST APIs built on open geodata.",
    "notes": "",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "3,000 credits/day, up to 5 requests/s, commercial use allowed",
+    "period": "day",
+    "source_url": "https://www.geoapify.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "apiKey",
+    "format": "https://api.geoapify.com/v1/geocode/search?text=...&apiKey=<API_KEY>",
+    "source_url": "https://apidocs.geoapify.com/docs/geocoding/forward-geocoding/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.geoapify.com",
+   "rate_limits": {
+    "summary": "Free plan: up to 5 requests/s, 3,000 credits/day",
+    "source_url": "https://www.geoapify.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "Batch Geocoding: POST /v1/batch/geocode/search returns job id; poll GET until 200 (202 while pending)",
+    "source_url": "https://apidocs.geoapify.com/docs/geocoding/batch/"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -47,10 +92,22 @@
    "mcp": {
     "type": "official",
     "url": "https://mapstools.googleapis.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mapstools.googleapis.com/mcp",
+    "tools": [
+     "search_places",
+     "lookup_weather",
+     "compute_routes",
+     "resolve_names",
+     "resolve_maps_urls"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://developers.google.com/maps/ai/grounding-lite",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
-   "free_tier": "$200 free monthly usage credit across most Maps APIs",
+   "free_tier": "Free tier: free calls per SKU per month (10K Essentials, 5K Pro, 1K Enterprise), replacing the former $200 monthly credit",
    "sdk": [
     "python",
     "javascript",
@@ -63,6 +120,26 @@
    "desc_en": "Geocode addresses, get directions/routes, places data, and static/dynamic maps via REST APIs or Google's remote MCP server.",
    "notes": "Google also has a separate Code Assist MCP (mapscodeassist.googleapis.com/mcp) for docs grounding, distinct from this Maps Grounding Lite data MCP.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Free calls per SKU monthly: 10K Essentials, 5K Pro, 1K Enterprise",
+    "period": "month",
+    "source_url": "https://mapsplatform.google.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "key",
+    "format": "https://maps.googleapis.com/maps/api/geocode/json?address=...&key=<API_KEY> (newer APIs also accept X-Goog-Api-Key header)",
+    "source_url": "https://developers.google.com/maps/documentation/geocoding/requests-geocoding",
+    "checked_at": "2026-09-24"
+   },
+   "rate_limits": {
+    "summary": "Maps Grounding Lite MCP: 300 queries/min per project for search_places, lookup_weather, compute_routes",
+    "source_url": "https://developers.google.com/maps/ai/grounding-lite",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -93,6 +170,19 @@
    "mcp": {
     "type": "community",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/limingchina/heremaps-mcp-server",
+    "tools": [
+     "maps_geocode",
+     "maps_reverse_geocode",
+     "maps_search_places",
+     "maps_directions",
+     "maps_get_traffic_incidents",
+     "maps_display"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/limingchina/heremaps-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -109,6 +199,14 @@
    "desc_en": "Geocode, route, and search places worldwide via REST APIs and SDKs.",
    "notes": "Free-tier limits and pricing vary by plan/signup date; confirm current allowance on the dashboard.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "apiKey",
+    "format": "https://geocode.search.hereapi.com/v1/geocode?q=...&apiKey=<API_KEY>",
+    "source_url": "https://docs.here.com/geocoding-and-search/docs/code-geocode-address",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -127,9 +225,18 @@
    "auth_hint": "Query parameter ?key=<API_KEY> (optional: keyless lookups allowed at a lower quota)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/ip2location/mcp-ip2location-io",
-    "domain_verified": null,
-    "kind": "official"
+    "url": "https://mcp.ip2location.io/",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.ip2location.io/",
+    "repo": "https://github.com/ip2location/mcp-ip2location-io",
+    "tools": [
+     "get_geolocation"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/ip2location/mcp-ip2location-io",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "Free plan: 50,000 IP geolocation queries/month, 500 domain WHOIS and 50 hosted-domain queries/month (attribution required); keyless: 1,000 queries/day.",
    "sdk": [
@@ -144,8 +251,29 @@
    "openapi": null,
    "llms_txt": "https://www.ip2location.io/llms.txt",
    "desc_en": "Lets an agent geolocate IPv4/IPv6 addresses, get ASN/ISP/proxy data, and look up domain WHOIS records.",
-   "notes": "Official MCP server is local (stdio via uv, env IP2LOCATION_API_KEY). Free plan returns basic fields; proxy/usage-type details need paid plans. Endpoint: GET https://api.ip2location.io/?key=...&ip=...",
+   "notes": "Official MCP server is hosted (X-API-Key header) or local (stdio via uv, env IP2LOCATION_API_KEY). Free plan returns basic fields; proxy/usage-type details need paid plans. Endpoint: GET https://api.ip2location.io/?key=...&ip=...",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "50,000 IP geolocation queries/month, 500 domain WHOIS, 50 hosted-domain queries; attribution required",
+    "period": "month",
+    "source_url": "https://www.ip2location.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "key",
+    "format": "https://api.ip2location.io/?key=<API_KEY>&ip=8.8.8.8 (or Authorization: Bearer <API_KEY>)",
+    "source_url": "https://www.ip2location.io/ip2location-documentation",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.ip2location.io",
+   "rate_limits": {
+    "summary": "Keyless 1,000 queries/day; free key 50,000/month; resets 00:00 UTC",
+    "source_url": "https://www.ip2location.io/ip2location-documentation",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -161,6 +289,19 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/iplocate/mcp-server-iplocate",
+    "maintainer": "vendor",
+    "repo": "https://github.com/iplocate/mcp-server-iplocate",
+    "tools": [
+     "lookup_ip_address_details",
+     "lookup_ip_address_location",
+     "lookup_ip_address_privacy",
+     "lookup_ip_address_network",
+     "lookup_ip_address_company",
+     "lookup_ip_address_abuse_contacts"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/iplocate/mcp-server-iplocate/blob/main/README.md",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -178,6 +319,28 @@
    "desc_en": "Lets an agent geolocate an IP address and get its ASN, ISP, company, abuse contacts and VPN/proxy/Tor/hosting flags.",
    "notes": "Official MCP server is local (stdio, reads IPLOCATE_API_KEY). Endpoint: GET https://iplocate.io/api/lookup/{ip}; batch lookup available. Docs link an OpenAPI schema (not directly fetchable).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "1,000 requests/day, all data types",
+    "period": "day",
+    "source_url": "https://www.iplocate.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-API-Key",
+    "format": "X-API-Key: <API_KEY> (or ?apikey=<API_KEY>)",
+    "source_url": "https://www.iplocate.io/docs/getting-started/authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://iplocate.io/api",
+   "rate_limits": {
+    "summary": "No key: 50/day per IP; free key: 1,000/day; max 100 requests/s per IP; 429 on excess",
+    "source_url": "https://www.iplocate.io/docs/getting-started/quota-rate-limits/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -192,9 +355,26 @@
    "auth_hint": "access_token query param or Bearer token",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/mapbox/mcp-server",
-    "domain_verified": null,
-    "kind": "official"
+    "url": "https://mcp.mapbox.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.mapbox.com/mcp",
+    "repo": "https://github.com/mapbox/mcp-server",
+    "tools": [
+     "directions_tool",
+     "search_and_geocode_tool",
+     "isochrone_tool",
+     "matrix_tool",
+     "optimization_tool",
+     "map_matching_tool",
+     "static_map_image_tool",
+     "place_details_tool",
+     "distance_tool"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/mapbox/mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: monthly free quotas per API (e.g. 50,000 map loads/month)",
    "sdk": [
@@ -207,6 +387,27 @@
    "desc_en": "Geocode, route, and render maps/POI search via REST APIs, SDKs, or an official MCP server.",
    "notes": "A separate official Mapbox Docs MCP server also exists for documentation Q&A.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "e.g. 50,000 GL JS map loads, 100,000 Geocoding and 100,000 Directions requests per month",
+    "period": "month",
+    "source_url": "https://www.mapbox.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "access_token",
+    "format": "https://api.mapbox.com/...?access_token=<ACCESS_TOKEN>",
+    "source_url": "https://docs.mapbox.com/api/overview/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.mapbox.com",
+   "rate_limits": {
+    "summary": "Per-token per-API: e.g. Geocoding 600/min, Directions 300/min, Static Images 1,250/min; 429 on excess",
+    "source_url": "https://docs.mapbox.com/api/overview/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -245,6 +446,15 @@
    "mcp": {
     "type": "community",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/LeandroBerlin/Weather-MCP-Server",
+    "tools": [
+     "get-alerts",
+     "get-forecast"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/LeandroBerlin/Weather-MCP-Server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -255,6 +465,24 @@
    "desc_en": "Fetch official US government weather forecasts, alerts, and observations via a free public REST API.",
    "notes": "US-only coverage; no API key needed, just a valid User-Agent identifying your app. Missing from candidate list despite being a very commonly used free weather API.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://www.weather.gov/documentation/services-web-api",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "No key; send User-Agent: (myweatherapp.com, contact@myweatherapp.com)",
+    "source_url": "https://www.weather.gov/documentation/services-web-api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.weather.gov",
+   "rate_limits": {
+    "summary": "Undisclosed generous limit; on excess retry after ~5 s",
+    "source_url": "https://www.weather.gov/documentation/services-web-api",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -275,6 +503,23 @@
    "mcp": {
     "type": "community",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/cmer81/open-meteo-mcp",
+    "tools": [
+     "weather_forecast",
+     "weather_archive",
+     "air_quality",
+     "marine_weather",
+     "elevation",
+     "geocoding",
+     "flood_forecast",
+     "seasonal_forecast",
+     "climate_projection",
+     "ensemble_forecast"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/cmer81/open-meteo-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -287,6 +532,31 @@
    "desc_en": "Fetch weather forecasts, historical weather, and climate data worldwide via a free open REST API, no key required.",
    "notes": "Commercial use requires an API key and the 'customer-api.open-meteo.com' host.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "quota": "Non-commercial: 600/min, 5,000/hour, 10,000/day, 300,000/month",
+    "period": "day",
+    "source_url": "https://open-meteo.com/en/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "No key for free non-commercial use; commercial: customer-api.open-meteo.com with &apikey=<API_KEY>",
+    "source_url": "https://open-meteo.com/en/docs",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.open-meteo.com/v1",
+   "rate_limits": {
+    "summary": "Free: 600 calls/min, 5,000/hour, 10,000/day, 300,000/month; paid plans unlimited rate",
+    "source_url": "https://open-meteo.com/en/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Free API logs IP addresses for maintenance/abuse prevention only, not linked to identities; server logs deleted after 90 days",
+    "source_url": "https://open-meteo.com/en/terms",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -306,6 +576,11 @@
    "mcp": {
     "type": "community",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/vemonet/openroute-mcp",
+    "covers_full_api": false,
+    "source_url": "https://github.com/vemonet/openroute-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -317,8 +592,28 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Calculate routes, isochrones, distance matrices, and geocoding over OpenStreetMap data via a free REST API.",
-   "notes": "Rate limits vary per endpoint (directions vs isochrones vs matrix); self-hosting also possible.",
+   "notes": "Rate limits vary per endpoint (directions vs isochrones vs matrix); self-hosting also possible. api.openrouteservice.org is deprecated for api.heigit.org (10% quota since 2026-08-27, shut off 2026-09-28); keys at account.heigit.org.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "period": "day",
+    "source_url": "https://openrouteservice.org/faq/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: <API_KEY>",
+    "source_url": "https://ask.openrouteservice.org/t/reducing-the-quota-of-deprecated-api-api-openrouteservice-org/8013",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.heigit.org/openrouteservice",
+   "rate_limits": {
+    "summary": "Per-endpoint daily quotas reset every 24 h; legacy api.openrouteservice.org limited to 10% of quota from 2026-08-27",
+    "source_url": "https://ask.openrouteservice.org/t/reducing-the-quota-of-deprecated-api-api-openrouteservice-org/8013",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -338,6 +633,19 @@
    "mcp": {
     "type": "community",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/cyanheads/openstreetmap-mcp-server",
+    "tools": [
+     "openstreetmap_search_places",
+     "openstreetmap_reverse_geocode",
+     "openstreetmap_lookup_objects",
+     "openstreetmap_query_nearby",
+     "openstreetmap_query_bbox",
+     "openstreetmap_query_raw"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -348,6 +656,25 @@
    "desc_en": "Geocode and reverse-geocode addresses from OpenStreetMap data via a free public REST API.",
    "notes": "Public demo instance is fair-use only (1 req/s, no bulk/systematic queries); self-host or use a commercial provider for production volume.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "quota": "Max 1 request/s on the public server; no bulk or autocomplete use",
+    "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "No key; send a valid User-Agent or HTTP Referer identifying the application",
+    "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://nominatim.openstreetmap.org",
+   "rate_limits": {
+    "summary": "Absolute max 1 request/s; results must be cached; no autocomplete, no systematic/grid queries",
+    "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -365,18 +692,51 @@
    "auth": "api_key",
    "auth_hint": "appid query param",
    "mcp": {
-    "type": "community",
-    "url": "https://github.com/robertn702/mcp-openweathermap",
-    "domain_verified": null,
-    "kind": "community"
+    "type": "official",
+    "url": "https://mcp.openweathermap.org/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.openweathermap.org/mcp",
+    "tools": [
+     "list_products",
+     "get_product",
+     "sign_up",
+     "account_status",
+     "get_topup_link",
+     "fetch_data"
+    ],
+    "source_url": "https://mcp.openweathermap.org/",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
-   "free_tier": "free tier: 1,000 calls/day (60 calls/min) on current weather/forecast",
+   "free_tier": "Free tier: 60 calls/min, 1,000,000 calls/month on current weather/forecast",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Fetch current weather, forecasts, and historical/air-quality data for any location via a REST API.",
-   "notes": "One Call API 3.0 has a separate 1,000 calls/day free allotment but requires adding billing details.",
+   "notes": "One Call API 3.0 is marked deprecated; One Call 4.0 gives the first 1,000 calls/day free, then pay per call.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "60 calls/min, 1,000,000 calls/month (Current, 5-day/3h forecast, Air Pollution, Geocoding, Maps)",
+    "period": "month",
+    "source_url": "https://openweathermap.org/price",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "appid",
+    "format": "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=<API_KEY>",
+    "source_url": "https://openweathermap.org/current",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.openweathermap.org",
+   "rate_limits": {
+    "summary": "Free: 60 calls/min, 1,000,000/month; One Call API: first 1,000 calls/day free, then 0.0012 GBP/call",
+    "source_url": "https://openweathermap.org/price",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -409,6 +769,16 @@
    "mcp": {
     "type": "community",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/cyanheads/openstreetmap-mcp-server",
+    "tools": [
+     "openstreetmap_query_nearby",
+     "openstreetmap_query_bbox",
+     "openstreetmap_query_raw"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -419,6 +789,26 @@
    "desc_en": "Run custom queries (Overpass QL) over OpenStreetMap data - POIs, roads, boundaries - via a public read-only API.",
    "notes": "No official SLA; heavy queries can be throttled or time out on public servers.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "quota": "overpass-api.de: under 10,000 queries and under 1 GB download per day",
+    "period": "day",
+    "source_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "No key; POST Overpass QL to /api/interpreter with an identifying User-Agent",
+    "source_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://overpass-api.de/api/interpreter",
+   "rate_limits": {
+    "summary": "Main instance: <10,000 queries/day and <1 GB/day, no parallel scripts; on 429 wait 30 s",
+    "source_url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -437,9 +827,27 @@
    "auth_hint": "apikey query param",
    "mcp": {
     "type": "official",
-    "url": "https://www.pulsemcp.com/servers/tomorrow-io",
-    "domain_verified": false,
-    "kind": "official"
+    "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp",
+    "tools": [
+     "get_realtime_weather",
+     "get_forecast_timeline",
+     "get_historical_weather",
+     "get_climate_normals",
+     "get_weather_events",
+     "get_route_weather_events",
+     "get_weather_summary",
+     "ask_weather_question",
+     "query_feed_data",
+     "get_feed_last_updated",
+     "get_feed_count"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.tomorrow.io/reference/mcp.md",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 500 requests/day, 3 req/sec, 1 monitored location/alert",
    "sdk": [],
@@ -448,6 +856,26 @@
    "desc_en": "Get hyperlocal weather forecasts, historical data, and alerts for any coordinates via REST API or an official MCP server.",
    "notes": "No self-serve tier between Free and Enterprise - scaling past free requires a sales call.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Free plan: 5-day forecast, 24 h history, 1 monitored location, 1 alert",
+    "source_url": "https://www.tomorrow.io/weather-api/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "apikey",
+    "format": "?apikey=<API_KEY> (or header apikey: <API_KEY>)",
+    "source_url": "https://docs.tomorrow.io/reference/api-authentication.md",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.tomorrow.io/v4",
+   "rate_limits": {
+    "summary": "Per-plan hourly and daily caps per API key; 429 when exceeded",
+    "source_url": "https://docs.tomorrow.io/reference/rate-limiting",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

@@ -15,6 +15,26 @@
    "mcp": {
     "type": "official",
     "url": "https://api.bland.ai/v1/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://api.bland.ai/v1/mcp",
+    "tools": [
+     "create_call",
+     "wait_for_call",
+     "stop_call",
+     "get_call_log",
+     "list_voices",
+     "validate_pathway",
+     "get_pathway_schema",
+     "get_pathway_context",
+     "query_analytics",
+     "search_bland_docs",
+     "get_bland_doc",
+     "bland_api_get",
+     "call_bland_api"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://docs.bland.ai/integrations/mcp/overview",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -25,6 +45,31 @@
    "desc_en": "Programmatically create AI phone agents and place/manage automated outbound and inbound calls.",
    "notes": "MCP server rate-limited to 120 req/min/org; distinguishes read-only vs destructive operations.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "2 credits + an inbound number; 100 calls/day, 10 concurrent calls",
+    "source_url": "https://www.bland.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <BLAND_API_KEY> (bare key without prefix also accepted)",
+    "source_url": "https://docs.bland.ai/api-v1/post/calls",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.bland.ai/v1",
+   "rate_limits": {
+    "summary": "Start plan: 100 calls/day, 100 calls/hour, 10 concurrent calls; MCP server 120 req/min per org",
+    "source_url": "https://www.bland.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "POST /v1/calls returns call_id; poll call status/logs or pass webhook to receive the call object when it ends",
+    "source_url": "https://docs.bland.ai/platform/agent-quickstart"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -46,8 +91,12 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "vendor",
+    "repo": "https://cli.deepgram.com",
+    "source_url": "https://developers.deepgram.com/developer-tools/cli/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "$200 free credit on signup",
    "sdk": [
@@ -61,6 +110,37 @@
    "desc_en": "Run a full-duplex speech-to-speech voice agent pipeline (STT+LLM+TTS) over a WebSocket API.",
    "notes": "Primarily an STT/TTS/voice-agent infra layer, often paired with a telephony provider like Twilio to reach phone calls.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "$200 credit",
+    "period": "one_time",
+    "source_url": "https://deepgram.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Token <DEEPGRAM_API_KEY>",
+    "source_url": "https://developers.deepgram.com/reference/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "rate_limits": {
+    "summary": "Pay As You Go: up to 45 concurrent Voice Agent WSS connections (60 on Growth); STT 150 WSS / 50 REST; TTS 45",
+    "source_url": "https://deepgram.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "real-time WebSocket session",
+    "source_url": "https://developers.deepgram.com/docs/voice-agent"
+   },
+   "data_policy": {
+    "summary": "Model Improvement Program may keep data for training; opt out per request with mip_opt_out=true (data kept only for processing)",
+    "source_url": "https://developers.deepgram.com/docs/the-deepgram-model-improvement-partnership-program",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -80,6 +160,11 @@
    "mcp": {
     "type": "official",
     "url": "https://api.elevenlabs.io/v1/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://api.elevenlabs.io/v1/mcp",
+    "covers_full_api": false,
+    "source_url": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -96,6 +181,27 @@
    "desc_en": "Build and deploy conversational AI voice agents with telephony (SIP/Twilio) integration via API and SDKs.",
    "notes": "Official hosted MCP server uses OAuth (sign in with ElevenLabs account) rather than a raw API key; core REST API uses api-key auth.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "10k credits",
+    "period": "month",
+    "source_url": "https://elevenlabs.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "xi-api-key",
+    "format": "xi-api-key: <ELEVENLABS_API_KEY>",
+    "source_url": "https://elevenlabs.io/docs/api-reference/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.elevenlabs.io/v1",
+   "data_policy": {
+    "summary": "Zero Retention Mode available per agent and for Enterprise API use",
+    "source_url": "https://elevenlabs.io/docs/llms.txt",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -118,6 +224,9 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "none",
+    "source_url": "https://docs.livekit.io/reference/developer-tools/docs-mcp.md",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "none"
    },
@@ -136,6 +245,26 @@
    "desc_en": "Build and deploy real-time voice AI agents with SIP telephony support using LiveKit's server SDKs and APIs.",
    "notes": "Self-hosted open-source option also exists; Cloud is the managed offering with usage-based billing beyond the free tier.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "1,000 agent session min, 5,000 WebRTC participant min, 50GB transfer, $2.50 inference credits",
+    "period": "month",
+    "source_url": "https://livekit.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <JWT signed with API key + secret>",
+    "source_url": "https://docs.livekit.io/reference/other/roomservice-api.md",
+    "checked_at": "2026-09-24"
+   },
+   "rate_limits": {
+    "summary": "Build plan: up to 100 concurrent users and agents",
+    "source_url": "https://livekit.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

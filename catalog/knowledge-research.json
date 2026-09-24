@@ -15,6 +15,25 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/blazickjp/arxiv-mcp-server",
+    "maintainer": "community",
+    "repo": "https://github.com/blazickjp/arxiv-mcp-server",
+    "tools": [
+     "search_papers",
+     "get_abstract",
+     "download_paper",
+     "list_papers",
+     "read_paper",
+     "get_paper_outline",
+     "read_paper_section",
+     "search_paper_text",
+     "get_paper_latex",
+     "citation_graph",
+     "export_citations",
+     "semantic_search"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/blazickjp/arxiv-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -25,6 +44,29 @@
    "desc_en": "Search arXiv preprints by keyword, author, category or ID and retrieve metadata, abstracts and PDF links.",
    "notes": "Endpoint: http://export.arxiv.org/api/query, returns Atom XML. Terms of Use allow no more than one request every three seconds over a single connection. For bulk harvesting use OAI-PMH or bulk data instead.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://info.arxiv.org/help/api/tou.html",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "no auth",
+    "source_url": "https://info.arxiv.org/help/api/user-manual.html",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "http://export.arxiv.org/api/query",
+   "rate_limits": {
+    "summary": "No more than 1 request every 3 seconds, single connection at a time, across all your machines; max_results slices of 2000, 30000 total",
+    "source_url": "https://info.arxiv.org/help/api/tou.html",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous Atom XML responses",
+    "source_url": "https://info.arxiv.org/help/api/user-manual.html"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -63,7 +105,25 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/cyanheads/congressgov-mcp-server",
-    "domain_verified": null,
+    "maintainer": "community",
+    "remote_url": "https://congressgov.caseyjhand.com/mcp",
+    "repo": "https://github.com/cyanheads/congressgov-mcp-server",
+    "tools": [
+     "congressgov_bill_lookup",
+     "congressgov_enacted_laws",
+     "congressgov_member_lookup",
+     "congressgov_committee_lookup",
+     "congressgov_roll_votes",
+     "congressgov_senate_nominations",
+     "congressgov_bill_summaries",
+     "congressgov_crs_reports",
+     "congressgov_committee_reports",
+     "congressgov_daily_record",
+     "congressgov_search_bills"
+    ],
+    "source_url": "https://github.com/cyanheads/congressgov-mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
     "kind": "community"
    },
    "free_tier": "Free: government API, key issued instantly by email; 5,000 requests/hour.",
@@ -73,6 +133,27 @@
    "desc_en": "Lets an agent look up U.S. bills, amendments, votes, members, committees, nominations and Congressional Record data from the Library of Congress.",
    "notes": "Official Library of Congress API (v3); usage guide and endpoint docs in github.com/LibraryOfCongress/api.congress.gov. Paginated JSON/XML, max 250 results per page.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "5,000 requests per hour",
+    "source_url": "https://github.com/LibraryOfCongress/api.congress.gov",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "api_key",
+    "format": "?api_key=<API_KEY> (or header X-Api-Key: <API_KEY>)",
+    "source_url": "https://api.data.gov/docs/developer-manual/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.congress.gov/v3",
+   "rate_limits": {
+    "summary": "5,000 requests per hour",
+    "source_url": "https://github.com/LibraryOfCongress/api.congress.gov",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -88,6 +169,16 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.context7.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.context7.com/mcp",
+    "repo": "https://github.com/upstash/context7",
+    "tools": [
+     "resolve-library-id",
+     "query-docs"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/upstash/context7",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -100,6 +191,26 @@
    "desc_en": "Fetch up-to-date, version-specific library documentation and code examples into a coding agent's context via MCP or REST.",
    "notes": "Maintained by Upstash; repo https://github.com/upstash/context7. Local server @upstash/context7-mcp, also a ctx7 CLI and @upstash/context7-sdk. REST base URL: https://context7.com/api/. Exceeding the limit returns 429 with Retry-After/RateLimit-* headers. Paid plans cover teams and private repos.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "1,000 API calls",
+    "period": "month",
+    "source_url": "https://context7.com/plans",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <CONTEXT7_API_KEY>",
+    "source_url": "https://context7.com/docs/api-guide",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://context7.com/api/",
+   "rate_limits": {
+    "summary": "Low limits without key; plan-based limits with key; 429 with Retry-After and RateLimit-* headers when exceeded",
+    "source_url": "https://context7.com/docs/api-guide",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -129,6 +240,16 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/afrise/academic-search-mcp-server",
+    "maintainer": "community",
+    "repo": "https://github.com/afrise/academic-search-mcp-server",
+    "tools": [
+     "search_papers",
+     "fetch_paper_details",
+     "search_by_topic"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/afrise/academic-search-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -139,6 +260,24 @@
    "desc_en": "Look up and search scholarly metadata such as DOIs, references, authors, funders and licenses across Crossref-registered works.",
    "notes": "Base URL https://api.crossref.org (/works, /journals, /funders, /members). Rate limits are adaptive, reported in X-Rate-Limit-Limit/X-Rate-Limit-Interval headers. Identify yourself with mailto for better service. Metadata Plus is a paid SLA tier.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "no auth; add mailto=<email> for polite pool (Metadata Plus: Crossref-Plus-API-Token: Bearer <key>)",
+    "source_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.crossref.org",
+   "rate_limits": {
+    "summary": "Public pool 5 req/s, concurrency 1; polite pool (mailto) 10 req/s, concurrency 3; Metadata Plus 150 req/s",
+    "source_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -172,7 +311,23 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/cyanheads/gdelt-mcp-server",
-    "domain_verified": null,
+    "maintainer": "community",
+    "remote_url": "https://gdelt.caseyjhand.com/mcp",
+    "repo": "https://github.com/cyanheads/gdelt-mcp-server",
+    "tools": [
+     "gdelt_search_articles",
+     "gdelt_get_coverage_timeline",
+     "gdelt_get_tone_distribution",
+     "gdelt_get_coverage_breakdown",
+     "gdelt_search_tv",
+     "gdelt_get_tv_clips",
+     "gdelt_get_tv_context",
+     "gdelt_get_tv_trending",
+     "gdelt_list_tv_stations"
+    ],
+    "source_url": "https://github.com/cyanheads/gdelt-mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
     "kind": "community"
    },
    "free_tier": "free, no key",
@@ -182,6 +337,24 @@
    "desc_en": "Full-text search global news in about 65 languages and analyze coverage volume, tone and geography in near real time.",
    "notes": "DOC 2.0 API: https://api.gdeltproject.org/api/v2/doc/doc. Covers a rolling window of about 3 months, max 250 records per query. GEO 2.0 and TV APIs also exist. Full historical Events/GKG data available via Google BigQuery (needs a billed Google Cloud account).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "no auth",
+    "source_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.gdeltproject.org/api/v2/doc/doc",
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous; 75 results default, up to 250 per query, rolling 3-month window",
+    "source_url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -214,6 +387,14 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/narumiruna/gitingest-mcp",
+    "maintainer": "community",
+    "repo": "https://github.com/narumiruna/gitingest-mcp",
+    "tools": [
+     "ingest_git"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/narumiruna/gitingest-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -226,6 +407,24 @@
    "desc_en": "Lets an agent turn any public Git repository into a single text digest (summary, directory tree and file contents) sized for an LLM prompt.",
    "notes": "GET /api/{user}/{repo} or POST /api/ingest (include/exclude patterns); digest returned as a download URL. For heavy use the vendor recommends the open-source CLI (pip install gitingest).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "no auth; optional GitHub PAT in 'token' parameter for private repos",
+    "source_url": "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://gitingest.com/api",
+   "rate_limits": {
+    "summary": "10 requests/minute on POST /api/ingest and GET /api/{user}/{repository} (per server limiter)",
+    "source_url": "https://github.com/coderamp-labs/gitingest/blob/main/src/server/routers/ingest.py",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -241,6 +440,14 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/pskill9/hn-server",
+    "maintainer": "community",
+    "repo": "https://github.com/pskill9/hn-server",
+    "tools": [
+     "get_stories"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/pskill9/hn-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -251,6 +458,29 @@
    "desc_en": "Read Hacker News stories, comments, jobs, polls, user profiles and front-page rankings as real-time JSON.",
    "notes": "Base URL https://hacker-news.firebaseio.com/v0/. Read-only, no documented rate limit. No full-text search; use the separate Algolia HN Search API for that.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://github.com/HackerNews/API",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "no auth",
+    "source_url": "https://github.com/HackerNews/API",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://hacker-news.firebaseio.com/v0/",
+   "rate_limits": {
+    "summary": "There is currently no rate limit",
+    "source_url": "https://github.com/HackerNews/API",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous JSON; real-time change events available via Firebase client libraries",
+    "source_url": "https://github.com/HackerNews/API"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -293,6 +523,20 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/8enSmith/mcp-open-library",
+    "maintainer": "community",
+    "repo": "https://github.com/8enSmith/mcp-open-library",
+    "tools": [
+     "search_books",
+     "get_book_by_title",
+     "get_authors_by_name",
+     "get_author_info",
+     "get_author_photo",
+     "get_book_cover",
+     "get_book_by_id"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/8enSmith/mcp-open-library",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -303,6 +547,24 @@
    "desc_en": "Lets an agent search books, authors and subjects, fetch work/edition data by ISBN or OLID, search inside book texts and get cover images.",
    "notes": "Bulk scraping discouraged; use the monthly data dumps for large jobs. Reading-log/list write endpoints need an Open Library login.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://openlibrary.org/developers/api",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "User-Agent: MyLibraryApp (contact@example.org)",
+    "source_url": "https://openlibrary.org/developers/api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://openlibrary.org",
+   "rate_limits": {
+    "summary": "1 request/second unidentified; 3 requests/second with User-Agent naming app and contact; no bulk download via API",
+    "source_url": "https://openlibrary.org/developers/api",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -318,6 +580,18 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/jeffmm/nytimes-mcp",
+    "maintainer": "community",
+    "repo": "https://github.com/jeffmm/nytimes-mcp",
+    "tools": [
+     "search_articles",
+     "get_latest_news",
+     "get_most_popular",
+     "get_archive",
+     "get_bestseller_list"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/jeffmm/nytimes-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -328,6 +602,33 @@
    "desc_en": "Lets an agent search NYT articles back to 1851, read top stories, most-popular lists, the Times Wire feed and bestseller lists.",
    "notes": "Returns metadata/abstracts and links, not full article text. Exceeding limits returns HTTP 429; wait ~12 s between calls. Non-commercial use terms.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "500 requests per API",
+    "period": "day",
+    "source_url": "https://developer.nytimes.com/faq",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "api-key",
+    "format": "?api-key=<API_KEY>",
+    "source_url": "https://api.nytimes.com/svc/topstories/v2/home.json",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.nytimes.com/svc",
+   "rate_limits": {
+    "summary": "Two limits per API: 500 requests/day and 5 requests/minute; sleep 12 s between calls",
+    "source_url": "https://developer.nytimes.com/faq",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Non-commercial use only; terms forbid using the APIs or content to develop a software product or train an ML/AI system",
+    "source_url": "https://developer.nytimes.com/terms",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -343,6 +644,15 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/matteoantoci/mcp-newsapi",
+    "maintainer": "community",
+    "repo": "https://github.com/matteoantoci/mcp-newsapi",
+    "tools": [
+     "search_articles",
+     "get_top_headlines"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/matteoantoci/mcp-newsapi",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -353,6 +663,28 @@
    "desc_en": "Search and retrieve current and historical news articles and top headlines from thousands of sources worldwide.",
    "notes": "Free plan is barred from staging/production, including internal use; CORS allowed from localhost only. Production use needs the Business plan ($449/mo, 250k req/mo). Endpoints: /v2/everything, /v2/top-headlines.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "100 requests",
+    "period": "day",
+    "source_url": "https://newsapi.org/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-Api-Key",
+    "format": "X-Api-Key: <API_KEY> (or ?apiKey=<API_KEY>, or Authorization: Bearer <API_KEY>)",
+    "source_url": "https://newsapi.org/docs/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://newsapi.org/v2",
+   "rate_limits": {
+    "summary": "Developer plan 100 requests/day, 24h article delay, dev/test only; Business $449/mo with 250,000 requests/month",
+    "source_url": "https://newsapi.org/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -385,6 +717,18 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/benedict2310/Scientific-Papers-MCP",
+    "maintainer": "community",
+    "repo": "https://github.com/benedict2310/Scientific-Papers-MCP",
+    "tools": [
+     "list_categories",
+     "fetch_latest",
+     "fetch_top_cited",
+     "search_papers",
+     "fetch_content"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/benedict2310/Scientific-Papers-MCP",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -395,6 +739,33 @@
    "desc_en": "Query an open catalog of scholarly works, authors, institutions, sources and topics, including citation data, via REST.",
    "notes": "Base URL https://api.openalex.org. docs.openalex.org now redirects to help.openalex.org. Free daily budget resets at midnight UTC; above it, pay-as-you-go with prepaid $1 increments. Annual Member plans start at $5,000/yr. Data is CC0.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "$1 of API usage (10x with free API key)",
+    "period": "day",
+    "source_url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "api_key",
+    "format": "?api_key=<API_KEY> (optional)",
+    "source_url": "https://help.openalex.org/api/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.openalex.org",
+   "rate_limits": {
+    "summary": "Cost-based daily budget ($1/day free, resets midnight UTC); each response reports cost_usd; prepaid top-ups in $1 increments",
+    "source_url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Data released under CC0",
+    "source_url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -429,6 +800,18 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/openags/paper-search-mcp",
+    "maintainer": "community",
+    "repo": "https://github.com/openags/paper-search-mcp",
+    "tools": [
+     "search_papers",
+     "search_pubmed",
+     "search_pmc",
+     "search_europe_pmc",
+     "download_with_fallback"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/openags/paper-search-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -439,6 +822,24 @@
    "desc_en": "Search, fetch, summarize and cross-link biomedical literature records from PubMed, PMC and other Entrez databases.",
    "notes": "Base URL https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ (esearch, efetch, esummary, elink). Free API key from NCBI account settings. Run heavy jobs off-peak.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "no auth; optional ?api_key=<NCBI_API_KEY> raises limit",
+    "source_url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+   "rate_limits": {
+    "summary": "3 requests/second per IP without key; 10 requests/second with free API key (one key per NCBI account)",
+    "source_url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -471,6 +872,26 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+    "maintainer": "community",
+    "repo": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+    "tools": [
+     "paper_relevance_search",
+     "paper_bulk_search",
+     "paper_title_search",
+     "paper_details",
+     "paper_batch_details",
+     "paper_citations",
+     "paper_references",
+     "author_search",
+     "author_details",
+     "author_papers",
+     "snippet_search",
+     "get_paper_recommendations_single",
+     "get_paper_recommendations_multi"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -481,6 +902,26 @@
    "desc_en": "Search papers, authors and citation graphs, and get paper recommendations from Semantic Scholar's academic corpus.",
    "notes": "Without a key, all users share a pool of 1000 req/s that can be throttled under load. A key starts at 1 req/s dedicated; requested via web form, arrives by email (not instant). Three APIs: Academic Graph, Recommendations, Datasets.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://www.semanticscholar.org/product/api",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-api-key",
+    "format": "x-api-key: <API_KEY> (optional)",
+    "source_url": "https://www.semanticscholar.org/product/api/tutorial",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.semanticscholar.org/graph/v1",
+   "rate_limits": {
+    "summary": "Unauthenticated: 1000 req/s shared among all users, may be throttled; with key: 1 req/s on all endpoints to start",
+    "source_url": "https://www.semanticscholar.org/product/api",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -514,6 +955,20 @@
    "mcp": {
     "type": "official",
     "url": "https://wd-mcp.wmcloud.org/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://wd-mcp.wmcloud.org/mcp",
+    "repo": "https://github.com/wmde/WikidataMCP",
+    "tools": [
+     "search_items",
+     "search_properties",
+     "get_statements",
+     "get_statement_values",
+     "get_instance_and_subclass_hierarchy",
+     "execute_sparql"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/wmde/WikidataMCP",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
@@ -524,6 +979,24 @@
    "desc_en": "Query the Wikidata knowledge graph of entities, facts and relations via SPARQL, the REST API or MCP.",
    "notes": "Official MCP comes from Wikimedia Deutschland (github.com/wmde/WikidataMCP). SPARQL endpoint: https://query.wikidata.org/sparql, query timeout ~60s. REST API at /w/rest.php/wikibase/v1. Wikimedia rate limits and User-Agent policy apply. Added because it's a widely-used structured-knowledge source missing from the candidate list.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://www.wikidata.org/wiki/Wikidata:Data_access",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "no auth for reads; send a descriptive User-Agent with contact info",
+    "source_url": "https://www.wikidata.org/wiki/Wikidata:Data_access",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://query.wikidata.org/sparql",
+   "rate_limits": {
+    "summary": "Wikimedia limits: 10 req/min IP-only, 200 req/min with proper User-Agent; back off on 429 and honor Retry-After",
+    "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -544,6 +1017,22 @@
    "mcp": {
     "type": "community",
     "url": "https://github.com/Rudra-ravi/wikipedia-mcp",
+    "maintainer": "community",
+    "repo": "https://github.com/Rudra-ravi/wikipedia-mcp",
+    "tools": [
+     "search_wikipedia",
+     "get_article",
+     "get_summary",
+     "get_sections",
+     "get_links",
+     "get_coordinates",
+     "get_related_topics",
+     "summarize_article_for_query",
+     "extract_key_facts"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/Rudra-ravi/wikipedia-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community"
    },
@@ -554,6 +1043,29 @@
    "desc_en": "Search, read and summarize Wikipedia and other Wikimedia content and metadata via REST and Action APIs.",
    "notes": "The old API Portal at api.wikimedia.org now 301-redirects to mediawiki.org/wiki/Wikimedia_APIs. Documented limits: 10 req/min for requests identified only by IP, 200 req/min for unauthenticated requests with a proper User-Agent, 2000 req/min for established editors. Main endpoints are the per-wiki MediaWiki Action API (/w/api.php) and REST APIs.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "User-Agent: MyBot/0.1 (https://example.org/mybot; mybot@example.org)",
+    "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://en.wikipedia.org/w/api.php",
+   "rate_limits": {
+    "summary": "10 req/min IP-only; 200 req/min with User-Agent (unauthenticated or new users); 2000 req/min established editors; max 3 concurrent",
+    "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits",
+    "checked_at": "2026-09-24"
+   },
+   "data_policy": {
+    "summary": "Text available under CC BY-SA; additional terms may apply",
+    "source_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -586,6 +1098,9 @@
    "mcp": {
     "type": "official",
     "url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/",
+    "maintainer": "vendor",
+    "source_url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
@@ -596,6 +1111,27 @@
    "desc_en": "Get computed answers, structured data and step-by-step results for math, science and factual queries.",
    "notes": "LLM API endpoint https://www.wolframalpha.com/api/v1/llm-api is built for agents; output length set by maxchars (default 6800). Get an AppID via the Developer Portal. Other APIs: Full Results, Simple, Short Answers, Spoken Results. Commercial use requires a paid license. The official MCP is the Wolfram Cloud MCP, covering Wolfram technology broadly.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "2,000 non-commercial API calls",
+    "period": "month",
+    "source_url": "https://products.wolframalpha.com/api",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "appid",
+    "format": "?appid=<APPID> (or Authorization: Bearer <APPID>)",
+    "source_url": "https://products.wolframalpha.com/llm-api/documentation",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://www.wolframalpha.com/api/v1/llm-api",
+   "async_jobs": {
+    "value": false,
+    "how": "synchronous text response; maxchars default 6800",
+    "source_url": "https://products.wolframalpha.com/llm-api/documentation"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

@@ -15,6 +15,10 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.agentset.ai/production/mcp-server",
+    "maintainer": "vendor",
+    "covers_full_api": false,
+    "source_url": "https://docs.agentset.ai/production/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -28,6 +32,23 @@
    "desc_en": "Lets an agent ingest documents into managed RAG namespaces and run semantic search or cited question answering over them.",
    "notes": "MCP server is local (stdio, npx @agentset/mcp) and needs AGENTSET_API_KEY plus a namespace ID. Open-source, self-hostable.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "1,000 pages; 10,000 retrievals per month",
+    "period": "month",
+    "source_url": "https://agentset.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY>",
+    "source_url": "https://docs.agentset.ai/api-reference/introduction",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.agentset.ai",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -43,10 +64,29 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/chroma-core/chroma-mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/chroma-core/chroma-mcp",
+    "tools": [
+     "chroma_list_collections",
+     "chroma_create_collection",
+     "chroma_peek_collection",
+     "chroma_get_collection_info",
+     "chroma_get_collection_count",
+     "chroma_modify_collection",
+     "chroma_delete_collection",
+     "chroma_add_documents",
+     "chroma_query_documents",
+     "chroma_get_documents",
+     "chroma_update_documents",
+     "chroma_delete_documents"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/chroma-core/chroma-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
-   "free_tier": "freemium: ~1M embeddings plus free credits, no card for signup",
+   "free_tier": "Trial: Starter plan $0/month base with $5 one-time free credits on signup, then usage-based pricing",
    "sdk": [
     "python",
     "javascript"
@@ -56,9 +96,25 @@
    "desc_en": "Create databases and store/query vector embeddings for retrieval via REST/SDK or MCP server.",
    "notes": "",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "quota": "Starter plan $0/month base with $5 in free credits, then usage-based",
+    "period": "one_time",
+    "source_url": "https://www.trychroma.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-chroma-token",
+    "format": "x-chroma-token: <API_KEY>",
+    "source_url": "https://docs.trychroma.com/cloud/getting-started",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.trychroma.com",
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -88,7 +144,25 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/ClickHouse/mcp-clickhouse",
-    "domain_verified": null,
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.clickhouse.cloud/mcp",
+    "repo": "https://github.com/ClickHouse/mcp-clickhouse",
+    "tools": [
+     "get_organizations",
+     "list_databases",
+     "list_tables",
+     "run_select_query",
+     "get_services_list",
+     "get_service_details",
+     "get_service_backup_configuration",
+     "list_service_backups",
+     "list_clickpipes",
+     "get_organization_cost"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://clickhouse.com/docs/products/cloud/features/ai-ml/mcp/remote-mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
     "kind": "official"
    },
    "free_tier": "no permanent free tier; 30-day trial with $300 credits",
@@ -103,6 +177,29 @@
    "desc_en": "Run SQL analytics queries and manage Cloud services/backups via REST API or official MCP server.",
    "notes": "Cloud-hosted remote MCP adds service management, billing, and ClickPipe visibility.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "$300 in credits over 30 days",
+    "period": "one_time",
+    "source_url": "https://clickhouse.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(<KEY_ID>:<KEY_SECRET>)",
+    "source_url": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.clickhouse.cloud/v1",
+   "rate_limits": {
+    "summary": "Cloud API: 10 requests per 10-second window per API key; up to 100 keys per organization",
+    "source_url": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -135,6 +232,24 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/get-convex/convex-backend",
+    "maintainer": "vendor",
+    "tools": [
+     "status",
+     "tables",
+     "data",
+     "runOneoffQuery",
+     "functionSpec",
+     "run",
+     "logs",
+     "insights",
+     "envList",
+     "envGet",
+     "envSet",
+     "envRemove"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://docs.convex.dev/ai/convex-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -149,6 +264,22 @@
    "desc_en": "Introspect tables/functions, call functions, and read/write data in a reactive database via MCP or client SDKs.",
    "notes": "Vector search available even on the free tier.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "1M function calls, 0.5 GB database storage, 1 GB data egress, 1 GB file storage",
+    "period": "month",
+    "source_url": "https://www.convex.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Convex <DEPLOY_KEY> (admin); Authorization: Bearer <user JWT> for user-level calls",
+    "source_url": "https://docs.convex.dev/http-api/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://<deployment>.convex.cloud/api",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -181,10 +312,24 @@
    "mcp": {
     "type": "official",
     "url": "https://bigquery.googleapis.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://bigquery.googleapis.com/mcp",
+    "tools": [
+     "list_dataset_ids",
+     "get_dataset_info",
+     "list_table_ids",
+     "get_table_info",
+     "execute_sql",
+     "execute_sql_readonly",
+     "run_bq_command"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
-   "free_tier": "free tier: 1TB queries/mo, 10GB storage/mo",
+   "free_tier": "Free tier: 1 TiB of querying and 10 GiB of storage per month",
    "sdk": [
     "python",
     "javascript",
@@ -196,6 +341,36 @@
    "desc_en": "Run SQL queries and inspect datasets/tables in BigQuery via REST API or the fully-managed remote MCP server.",
    "notes": "Remote MCP server is hosted by Google, no local install needed.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": true,
+    "quota": "1 TiB of querying and 10 GiB of storage",
+    "period": "month",
+    "source_url": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "cloud_iam",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <OAuth2 access token>",
+    "source_url": "https://docs.cloud.google.com/docs/authentication/rest",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://bigquery.googleapis.com",
+   "rate_limits": {
+    "summary": "100 API requests per second per user per method; tabledata.list 1,000 req/s per project; on-demand query usage 200 TiB/day per project",
+    "source_url": "https://docs.cloud.google.com/bigquery/quotas",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "https://www.googleapis.com/auth/bigquery"
+    ],
+    "source_url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -224,10 +399,23 @@
    "mcp": {
     "type": "official",
     "url": "https://api.letta.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://api.letta.com/mcp",
+    "tools": [
+     "list_agents",
+     "list_models",
+     "create_agent",
+     "send_agent_message",
+     "get_run",
+     "get_reply"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.letta.com/platform/hosted-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
-   "free_tier": "free personal tier with rotating free models; usage-based billing beyond that",
+   "free_tier": "Free: $0/month plan with up to 3 stateful agents and limited Letta Auto usage (bring your own API keys); API plan $20/month + usage",
    "sdk": [
     "python",
     "typescript"
@@ -237,6 +425,23 @@
    "desc_en": "Create and run stateful agents with persistent memory blocks via REST API or hosted MCP server.",
    "notes": "",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Free plan $0/month: up to 3 stateful agents, limited Letta Auto usage, bring your own API keys",
+    "period": "month",
+    "source_url": "https://docs.letta.com/letta-code/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <LETTA_API_KEY>",
+    "source_url": "https://docs.letta.com/api-reference/overview",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.letta.com",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -257,6 +462,24 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.mem0.ai/mcp/",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.mem0.ai/mcp",
+    "tools": [
+     "add_memory",
+     "search_memories",
+     "get_memories",
+     "get_memory",
+     "update_memory",
+     "delete_memory",
+     "delete_all_memories",
+     "delete_entities",
+     "list_entities",
+     "list_events",
+     "get_event_status"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://docs.mem0.ai/platform/mem0-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -270,6 +493,27 @@
    "desc_en": "Add, search, update, and delete long-term agent memories via REST API or hosted MCP server.",
    "notes": "Graph memory feature is gated to the Pro plan.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Hobby: 10,000 add requests and 1,000 retrieval requests per month",
+    "period": "month",
+    "source_url": "https://mem0.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Token <MEM0_API_KEY>",
+    "source_url": "https://docs.mem0.ai/api-reference",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.mem0.ai",
+   "async_jobs": {
+    "value": true,
+    "how": "POST /v3/memories/add/ returns event_id with status PENDING; check event status (MCP tool get_event_status) or use webhooks",
+    "source_url": "https://docs.mem0.ai/api-reference/memory/add-memories"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -286,10 +530,40 @@
    "homepage": "https://www.mongodb.com/atlas",
    "docs": "https://www.mongodb.com/docs/atlas/api/atlas-admin-api-ref/",
    "auth": "api_key+oauth2",
-   "auth_hint": "HTTP Digest auth with Atlas public/private API key, or OAuth2 service account",
+   "auth_hint": "OAuth2 service account (client credentials) -> Authorization: Bearer <access token, 1h>; legacy: HTTP Digest with Atlas public/private API key",
    "mcp": {
     "type": "official",
     "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "tools": [
+     "find",
+     "aggregate",
+     "count",
+     "insert-many",
+     "update-many",
+     "delete-many",
+     "create-collection",
+     "list-collections",
+     "list-databases",
+     "collection-schema",
+     "create-index",
+     "explain",
+     "export",
+     "atlas-list-clusters",
+     "atlas-create-free-cluster",
+     "atlas-connect-cluster",
+     "atlas-create-project",
+     "atlas-list-projects",
+     "atlas-create-db-user",
+     "atlas-create-access-list",
+     "atlas-list-alerts",
+     "atlas-get-performance-advisor",
+     "search-knowledge"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -307,6 +581,22 @@
    "desc_en": "Create/manage Atlas clusters and query MongoDB data via Admin API, drivers, or official MCP server.",
    "notes": "MongoDB also offers a managed MCP server hosted by Atlas itself.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "M0 Free cluster: 512 MB storage, shared RAM/vCPU, up to 100 ops/sec; free forever",
+    "source_url": "https://www.mongodb.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "oauth2",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <service-account access token> (OAuth2 client credentials, 1h tokens); legacy API keys use HTTP Digest",
+    "source_url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://cloud.mongodb.com/api/atlas/v2",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -341,22 +631,86 @@
    "id": "neon-postgres",
    "name": "Neon Postgres",
    "homepage": "https://neon.com",
-   "docs": "https://api-docs.neon.tech/reference/getting-started-with-neon-api",
+   "docs": "https://neon.com/docs/reference/api",
    "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
     "url": "https://github.com/neondatabase/mcp-server-neon",
-    "domain_verified": null,
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.neon.tech/mcp",
+    "repo": "https://github.com/neondatabase/mcp-server-neon",
+    "tools": [
+     "list_projects",
+     "describe_project",
+     "create_project",
+     "delete_project",
+     "list_organizations",
+     "list_branches",
+     "create_branch",
+     "reset_from_parent",
+     "delete_branch",
+     "describe_branch",
+     "restore_snapshot",
+     "list_postgres_endpoints",
+     "list_snapshots",
+     "get_connection_string",
+     "run_sql",
+     "run_sql_transaction",
+     "get_database_tables",
+     "describe_table_schema",
+     "compare_database_schema",
+     "prepare_database_migration",
+     "complete_database_migration",
+     "inspect_database",
+     "list_slow_queries",
+     "explain_sql_statement",
+     "prepare_query_tuning",
+     "complete_query_tuning",
+     "provision_neon_auth",
+     "provision_neon_data_api",
+     "query_logs",
+     "list_functions",
+     "list_storage_buckets",
+     "search",
+     "fetch"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://neon.com/docs/ai/neon-mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
     "kind": "official"
    },
-   "free_tier": "free tier: 1 project, 0.5GB storage",
+   "free_tier": "Free tier: 100 projects; 0.5 GB storage, 100 CU-hours and 5 GB egress per project per month, no card required",
    "sdk": [],
    "openapi": "https://neon.com/api_spec/release/v2.json",
    "llms_txt": "https://api-docs.neon.tech/llms.txt",
    "desc_en": "Provision and manage serverless Postgres projects/branches and run SQL via REST API or MCP server.",
    "notes": "OAuth recommended for local IDEs, static API key for headless agents.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "100 projects; 0.5 GB storage, 100 CU-hours and 5 GB egress per project per month",
+    "period": "month",
+    "source_url": "https://neon.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <NEON_API_KEY>",
+    "source_url": "https://neon.com/docs/reference/api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://console.neon.tech/api/v2",
+   "async_jobs": {
+    "value": true,
+    "how": "long-running tasks return operation IDs; poll GET /projects/{project_id}/operations/{operation_id}",
+    "source_url": "https://neon.com/docs/reference/api"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -391,6 +745,22 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/pinecone-io/pinecone-mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/pinecone-io/pinecone-mcp",
+    "tools": [
+     "search-docs",
+     "list-indexes",
+     "describe-index",
+     "describe-index-stats",
+     "create-index-for-model",
+     "upsert-records",
+     "search-records",
+     "cascading-search",
+     "rerank-documents"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/pinecone-io/pinecone-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -407,6 +777,27 @@
    "desc_en": "Upsert, query, and rerank vector embeddings in managed indexes via REST/SDK or MCP server.",
    "notes": "Two official MCP servers: Developer/Assistant remote MCP and a local variant.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Starter: up to 2 GB storage, 1M read units, 2M write units, 5 indexes; Assistant 1 GB storage",
+    "period": "month",
+    "source_url": "https://www.pinecone.io/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Api-Key",
+    "format": "Api-Key: <PINECONE_API_KEY> (plus X-Pinecone-Api-Version: 2025-10)",
+    "source_url": "https://docs.pinecone.io/reference/api/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.pinecone.io",
+   "rate_limits": {
+    "summary": "Starter: 1M read units and 2M write units per month per org; 100 query and 100 upsert requests/s per namespace; 429 when exceeded",
+    "source_url": "https://docs.pinecone.io/reference/api/database-limits/rate-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -439,10 +830,15 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.pscale.dev/mcp/planetscale",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.pscale.dev/mcp/planetscale",
+    "covers_full_api": false,
+    "source_url": "https://planetscale.com/docs/connect/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official"
    },
-   "free_tier": "free tier available (Hobby plan)",
+   "free_tier": "Paid only: no free or Hobby plan; cheapest is Postgres PS-5 single node at $5/month",
    "sdk": [
     "javascript"
    ],
@@ -451,8 +847,27 @@
    "desc_en": "Manage MySQL databases, branches, and schema, and view Insights via hosted MCP server or API.",
    "notes": "MCP server launched Jan 2026; configurable read-only vs full-access permissions.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://planetscale.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: <SERVICE_TOKEN_ID>:<SERVICE_TOKEN>",
+    "source_url": "https://planetscale.com/docs/api/reference/service-tokens",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.planetscale.com/v1",
+   "rate_limits": {
+    "summary": "600 requests per minute (subject to change)",
+    "source_url": "https://planetscale.com/docs/api/reference/getting-started-with-planetscale-api",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "has_trial": false,
    "stale": false,
    "link_check": {
@@ -480,10 +895,19 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/qdrant/mcp-server-qdrant",
+    "maintainer": "vendor",
+    "repo": "https://github.com/qdrant/mcp-server-qdrant",
+    "tools": [
+     "qdrant-store",
+     "qdrant-find"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/qdrant/mcp-server-qdrant",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
-   "free_tier": "free tier: 1GB disk / 1 node cluster, no card; suspends after 1 week idle",
+   "free_tier": "Free tier: single-node cluster with 0.5 vCPU, 1 GB RAM, 4 GB disk, no card; suspends after 1 week idle",
    "sdk": [
     "python",
     "javascript",
@@ -495,6 +919,21 @@
    "desc_en": "Create clusters and store/search vector embeddings via REST/gRPC API, SDKs, or official MCP server.",
    "notes": "Free clusters delete after 4 weeks of inactivity if not reactivated.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Free forever single-node cluster: 0.5 vCPU, 1 GB RAM, 4 GB disk",
+    "source_url": "https://qdrant.tech/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "api-key",
+    "format": "api-key: <QDRANT_API_KEY> (or Authorization: Bearer <QDRANT_API_KEY>)",
+    "source_url": "https://qdrant.tech/documentation/cloud/authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://<cluster>.<region>.<provider>.cloud.qdrant.io:6333",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -526,8 +965,14 @@
    "auth_hint": "Key-pair auth, OAuth, or PAT; cloud_iam variants for Snowpark",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/Snowflake-Labs/mcp",
-    "domain_verified": null,
+    "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://<account_url>/api/v2/databases/{database}/schemas/{schema}/mcp-servers/{name}",
+    "repo": "https://github.com/Snowflake-Labs/mcp",
+    "covers_full_api": false,
+    "source_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
     "kind": "official"
    },
    "free_tier": "trial credits (no permanent free tier); check pricing",
@@ -540,8 +985,26 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Run SQL, Cortex Analyst, and Cortex Search over warehoused data via REST API or managed MCP server.",
-   "notes": "Snowflake-managed MCP server reached GA Nov 2025.",
+   "notes": "Snowflake-managed MCP server reached GA Nov 2025; hosted per account at https://<account_url>/api/v2/databases/{db}/schemas/{schema}/mcp-servers/{name}. Snowflake-Labs/mcp is a separate self-hosted server.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "30-day trial with a free usage balance (ends at 30 days or when balance is used up); AI features disabled until a card is added",
+    "period": "one_time",
+    "source_url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <OAuth token | key-pair JWT | PAT> with optional X-Snowflake-Authorization-Token-Type header",
+    "source_url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://<account_identifier>.snowflakecomputing.com/api/v2",
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -578,10 +1041,48 @@
    "homepage": "https://supabase.com",
    "docs": "https://supabase.com/docs/guides/api",
    "auth": "api_key+oauth2",
-   "auth_hint": "apikey header + Authorization: Bearer <service_role or PAT>",
+   "auth_hint": "apikey: <publishable or secret key> (not Authorization: Bearer; new keys are not JWTs); Management API: Authorization: Bearer <PAT or OAuth token>",
    "mcp": {
     "type": "official",
-    "url": "https://supabase.com/docs/guides/getting-started/mcp",
+    "url": "https://mcp.supabase.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.supabase.com/mcp",
+    "repo": "https://github.com/supabase-community/supabase-mcp",
+    "tools": [
+     "list_organizations",
+     "get_organization",
+     "list_projects",
+     "get_project",
+     "create_project",
+     "pause_project",
+     "restore_project",
+     "get_cost",
+     "confirm_cost",
+     "list_tables",
+     "list_extensions",
+     "list_migrations",
+     "apply_migration",
+     "execute_sql",
+     "get_advisors",
+     "get_project_url",
+     "get_publishable_keys",
+     "generate_typescript_types",
+     "list_edge_functions",
+     "get_edge_function",
+     "deploy_edge_function",
+     "search_docs",
+     "list_storage_buckets",
+     "get_storage_config",
+     "create_branch",
+     "list_branches",
+     "delete_branch",
+     "merge_branch",
+     "reset_branch",
+     "rebase_branch"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://supabase.com/docs/guides/getting-started/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -597,6 +1098,27 @@
    "desc_en": "Manage Postgres tables, auth, storage, and edge functions via REST/GraphQL APIs or client SDKs.",
    "notes": "Official MCP server can also create/manage whole projects, not just query data.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "2 active projects, 500 MB database, 5 GB egress, 1 GB file storage, 50,000 MAU; paused after 1 week of inactivity",
+    "period": "month",
+    "source_url": "https://supabase.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "apikey",
+    "format": "apikey: <publishable or secret key>",
+    "source_url": "https://supabase.com/docs/guides/api/api-keys",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.supabase.com/v1",
+   "rate_limits": {
+    "summary": "Management API: 120 requests/min per user per scope; some analytics and database endpoints 30 or 10/min; Free plan data API requests unlimited",
+    "source_url": "https://supabase.com/docs/reference/api/introduction",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -625,6 +1147,20 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/pingcap/pytidb",
+    "maintainer": "vendor",
+    "repo": "https://github.com/pingcap/pytidb",
+    "tools": [
+     "show_databases",
+     "switch_database",
+     "show_tables",
+     "db_query",
+     "db_execute",
+     "db_create_user",
+     "db_remove_user"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/pingcap/pytidb/blob/main/pytidb/ext/mcp/server.py",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -638,6 +1174,22 @@
    "desc_en": "Lets an agent create and manage serverless MySQL-compatible TiDB clusters and run SQL, full-text and vector search queries against them.",
    "notes": "Cloud API is in public preview (v1beta1 for Starter/Essential/Dedicated). Official MCP server is local (uvx --from pytidb[mcp] tidb-mcp-server, stdio or SSE) and needs the cluster connection credentials. A 6th instance requires a card and spending limit.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "25 GiB row storage, 25 GiB column storage and 250M Request Units per organization",
+    "period": "month",
+    "source_url": "https://www.pingcap.com/tidb-cloud-pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "format": "HTTP Digest auth: API public key as username, private key as password",
+    "source_url": "https://docs.pingcap.com/api/tidb-cloud-api-overview/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -653,6 +1205,19 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN",
+    "tools": [
+     "call_endpoint",
+     "execute_query",
+     "text_to_sql",
+     "list_endpoints",
+     "list_datasources",
+     "list_service_datasources"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://www.tinybird.co/docs/forward/analytics-agents/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -666,6 +1231,29 @@
    "desc_en": "Lets an agent ingest events into real-time ClickHouse-based data sources, run SQL queries and call published analytics API endpoints.",
    "notes": "Remote MCP over Streamable HTTP, token passed as query parameter (add &host=... for non-default regions); use mcp-remote for older clients. API host depends on workspace region.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "10 GB storage, 1,000 API requests per day, 0.25 vCPU",
+    "period": "day",
+    "source_url": "https://www.tinybird.co/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <TINYBIRD_TOKEN> (or ?token=<TINYBIRD_TOKEN>)",
+    "source_url": "https://www.tinybird.co/docs/api-reference",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.tinybird.co",
+   "rate_limits": {
+    "summary": "Limits depend on plan (Free: 1,000 API requests/day); 429 Too many requests when exceeded",
+    "source_url": "https://www.tinybird.co/docs/api-reference",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -679,12 +1267,18 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
-    "type": "community",
-    "url": null,
-    "domain_verified": null,
-    "kind": "community"
+    "type": "official",
+    "url": "https://mcp.turso.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.turso.ai/mcp",
+    "repo": "https://github.com/tursodatabase/turso-mcp",
+    "covers_full_api": true,
+    "source_url": "https://docs.turso.tech/integrations/mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
+    "kind": "official"
    },
-   "free_tier": "free tier: 100 databases, 500M row reads/mo, no card required",
+   "free_tier": "Free tier: 100 databases, 5 GB storage, 500M rows read and 10M rows written per month, no card required",
    "sdk": [
     "javascript",
     "python",
@@ -694,8 +1288,26 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Create and query edge SQLite (libSQL) databases programmatically via HTTP/SDK client libraries.",
-   "notes": "No confirmed official MCP server found at verification time.",
+   "notes": "Official hosted MCP server (OAuth 2.1) manages databases and groups and runs SQL; repo github.com/tursodatabase/turso-mcp.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "100 databases, 5 GB storage, 500M rows read and 10M rows written per month",
+    "period": "month",
+    "source_url": "https://turso.tech/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <TURSO_API_TOKEN>",
+    "source_url": "https://docs.turso.tech/api-reference/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.turso.tech/v1",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -715,10 +1327,15 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.upstash.com/mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/upstash/mcp-server",
+    "covers_full_api": false,
+    "source_url": "https://github.com/upstash/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
-   "free_tier": "free tier: Redis 256MB/500K cmds/mo; Vector 10K vectors",
+   "free_tier": "Free tier: Redis 256MB/500K cmds per month; Vector 10K queries+updates per day (max 200M vectors x dimensions, 1,536 dims)",
    "sdk": [
     "javascript",
     "python",
@@ -729,6 +1346,23 @@
    "desc_en": "Call serverless Redis, Vector, and QStash over HTTP REST API from edge/serverless runtimes.",
    "notes": "Remote MCP endpoint supports OAuth or API key.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "Redis: 256 MB data, 500K commands/month; Vector: 1 free index, 10K queries+updates/day",
+    "period": "month",
+    "source_url": "https://upstash.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <UPSTASH_REDIS_REST_TOKEN> (or ?_token=<TOKEN>)",
+    "source_url": "https://upstash.com/docs/redis/features/restapi",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -749,10 +1383,21 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/weaviate/mcp-server-weaviate",
-    "domain_verified": null,
+    "maintainer": "vendor",
+    "remote_url": "https://<cluster-host>/v1/mcp",
+    "tools": [
+     "weaviate-collections-get-config",
+     "weaviate-tenants-list",
+     "weaviate-query-hybrid",
+     "weaviate-objects-upsert"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.weaviate.io/weaviate/configuration/mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
     "kind": "official"
    },
-   "free_tier": "free 14-day Sandbox, ~50K objects, no card required (expires, not for persistence)",
+   "free_tier": "Free: always-free plan, 1 cluster, 100,000 objects, 1 GB memory, 10 GB disk, 1 collection, no card required",
    "sdk": [
     "python",
     "javascript",
@@ -762,8 +1407,25 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Store and semantically search vector objects in a managed cluster via REST/GraphQL or MCP server.",
-   "notes": "MCP endpoint built into the database at /v1/mcp, disabled by default.",
+   "notes": "MCP endpoint built into the database at /v1/mcp: always on in Weaviate Cloud, disabled by default when self-hosted (writes need MCP_SERVER_WRITE_ACCESS_ENABLED).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "Always free: 1 cluster, 100,000 objects, 1 GB memory, 10 GB disk, 1 collection; embeddings 2,000 req/day",
+    "source_url": "https://weaviate.io/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <WEAVIATE_API_KEY>",
+    "source_url": "https://docs.weaviate.io/cloud/manage-clusters/connect",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://<cluster-host>/v1",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -792,14 +1454,30 @@
    "homepage": "https://www.getzep.com",
    "docs": "https://help.getzep.com/memory-mcp-server",
    "auth": "api_key",
-   "auth_hint": "Authorization: Bearer <api_key>",
+   "auth_hint": "Authorization: Api-Key <api_key> (REST API); MCP server uses OAuth 2.1 via the org's IdP",
    "mcp": {
     "type": "official",
     "url": "https://help.getzep.com/memory-mcp-server",
+    "maintainer": "vendor",
+    "remote_url": "https://api.getzep.com/mcp",
+    "tools": [
+     "search_graph",
+     "get_user_summary",
+     "get_subgraph",
+     "get_node_neighbors",
+     "list_episodes",
+     "list_graphs",
+     "search_graph_in",
+     "add_memory",
+     "add_memory_to_graph"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://help.getzep.com/memory-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
-   "free_tier": "check pricing",
+   "free_tier": "Free tier: 10,000 credits per month, no rollover; variable rate limits",
    "sdk": [
     "python",
     "javascript"
@@ -809,8 +1487,29 @@
    "desc_en": "Store and retrieve temporal knowledge-graph agent memory via REST API or a single MCP endpoint.",
    "notes": "One MCP URL serves both Zep managed cloud and BYOC deployments.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "10,000 credits per month, no rollover; variable rate limits",
+    "period": "month",
+    "source_url": "https://www.getzep.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Api-Key <ZEP_API_KEY>",
+    "source_url": "https://help.getzep.com/sdk-reference/user/get",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.getzep.com/api/v2",
+   "rate_limits": {
+    "summary": "Free plan: variable rate limits depending on service-wide load",
+    "source_url": "https://www.getzep.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
    "has_trial": false,
    "stale": false,
    "link_check": {
@@ -829,10 +1528,33 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/zilliztech/zilliz-mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/zilliztech/zilliz-mcp-server",
+    "tools": [
+     "list_projects",
+     "list_clusters",
+     "create_free_cluster",
+     "describe_cluster",
+     "suspend_cluster",
+     "resume_cluster",
+     "query_cluster_metrics",
+     "list_databases",
+     "list_collections",
+     "create_collection",
+     "describe_collection",
+     "insert_entities",
+     "delete_entities",
+     "search",
+     "query",
+     "hybrid_search"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/zilliztech/zilliz-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
-   "free_tier": "free tier: serverless cluster, 5GB storage + $100 credits, no card",
+   "free_tier": "Free tier: serverless cluster, 5GB storage, 2.5M vCUs per month, up to 5 collections, no card; plus up to $200 one-time trial credits ($100 on signup + $100 on adding a card)",
    "sdk": [
     "python",
     "javascript",
@@ -844,6 +1566,24 @@
    "desc_en": "Manage Milvus clusters and perform vector search/ingestion via REST API, SDKs, or MCP server.",
    "notes": "MCP server can even provision a new free-tier cluster on request.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "5 GB storage, 2.5M vCUs per month, up to 5 collections; separately $200 free credits for evaluation",
+    "period": "month",
+    "source_url": "https://zilliz.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "in": "header",
+    "name": "Authorization",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY or user:password>",
+    "source_url": "https://docs.zilliz.com/reference/restful",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.cloud.zilliz.com/v2",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

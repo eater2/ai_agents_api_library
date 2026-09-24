@@ -15,6 +15,9 @@
    "mcp": {
     "type": "official",
     "url": "https://www.activepieces.com/docs/mcp/overview",
+    "maintainer": "vendor",
+    "source_url": "https://www.activepieces.com/docs/mcp/overview",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -25,6 +28,22 @@
    "desc_en": "Build, run and manage no-code flows across 400+ apps via REST API or the built-in MCP server.",
    "notes": "MCP server URL is per-instance (https://your-instance.com/mcp); OAuth-based client auth, and connection secrets/API keys are never exposed through MCP tools.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "100 credits per day, unlimited flows; free plan lists MCPs and API access",
+    "period": "day",
+    "source_url": "https://www.activepieces.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY>",
+    "source_url": "https://www.activepieces.com/docs/endpoints/overview",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://cloud.activepieces.com/api/v1",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -46,8 +65,12 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.arcade.dev/en/resources/integrations",
-    "domain_verified": null,
-    "kind": "official"
+    "maintainer": "vendor",
+    "remote_url": "https://api.arcade.dev/mcp/{gateway-slug}",
+    "source_url": "https://docs.arcade.dev/en/guides/mcp-gateways",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 2,000 auth events + 2,000 tool calls/mo, no credit card required",
    "sdk": [
@@ -59,6 +82,23 @@
    "desc_en": "Execute authorized tool calls (GitHub, Slack, Google, etc.) with managed OAuth via API, SDK, or 200+ MCP servers.",
    "notes": "First use of an OAuth-gated tool requires the human to approve a browser consent screen; token is then reused automatically. Team plan adds $0.10/auth event and $0.01/tool call beyond free quota.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "2,000 auth events + 2,000 tool calls",
+    "period": "month",
+    "source_url": "https://www.arcade.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Bearer <ARCADE_API_KEY>",
+    "source_url": "https://api.arcade.dev/v1/swagger",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.arcade.dev",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -80,8 +120,21 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.composio.dev/docs/composio-connect",
-    "domain_verified": null,
-    "kind": "official"
+    "maintainer": "vendor",
+    "remote_url": "https://connect.composio.dev/mcp",
+    "tools": [
+     "COMPOSIO_SEARCH_TOOLS",
+     "COMPOSIO_GET_TOOL_SCHEMAS",
+     "COMPOSIO_MULTI_EXECUTE_TOOL",
+     "COMPOSIO_MANAGE_CONNECTIONS",
+     "COMPOSIO_WAIT_FOR_CONNECTIONS",
+     "COMPOSIO_REMOTE_WORKBENCH",
+     "COMPOSIO_REMOTE_BASH_TOOL"
+    ],
+    "source_url": "https://docs.composio.dev/docs/composio-connect",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 100,000 tool calls + 50,000 trigger events/mo, no credit card required",
    "sdk": [
@@ -93,6 +146,28 @@
    "desc_en": "Discover, authorize and execute actions across 1,500+ SaaS toolkits through a unified API, SDK, or MCP session.",
    "notes": "Free plan hard-caps usage with no overage billing; Scale plan ($29/mo) adds per-call overage pricing ($0.0003/tool call).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "100,000 tool calls + 50,000 trigger events, 3 team members",
+    "period": "month",
+    "source_url": "https://composio.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-api-key",
+    "format": "x-api-key: <COMPOSIO_API_KEY> (org-level: x-org-api-key)",
+    "source_url": "https://docs.composio.dev/reference",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://backend.composio.dev/api/v3.1",
+   "rate_limits": {
+    "summary": "2,000 req/min on Free, up to 10,000 req/min on higher plans",
+    "source_url": "https://composio.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -114,6 +189,24 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.gumloop.com/gumloop/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.gumloop.com/gumloop/mcp",
+    "tools": [
+     "list_agents",
+     "create_agent",
+     "start_agent",
+     "get_agent_status",
+     "send_session_message",
+     "list_skills",
+     "create_skill",
+     "list_mcp_servers",
+     "call_mcp_tool",
+     "search_documentation",
+     "get_audit_logs",
+     "export_data"
+    ],
+    "source_url": "https://docs.gumloop.com/mcp-server/overview",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -127,6 +220,27 @@
    "desc_en": "Create AI agents, start chat sessions, and trigger no-code automations via REST API, SDKs, or the Gumloop MCP server.",
    "notes": "Added: missing from the candidate list but a widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": true,
+    "quota": "14-day Pro trial (20,000 credits), one-time, converts to paid unless cancelled",
+    "period": "one_time",
+    "source_url": "https://docs.gumloop.com/core-concepts/credits",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <GUMLOOP_API_KEY> (or ?api_key= query parameter)",
+    "source_url": "https://docs.gumloop.com/api-reference/getting-started",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.gumloop.com/api/v1",
+   "async_jobs": {
+    "value": true,
+    "how": "Runs start asynchronously; webhook triggers return {success:true} immediately, results via run history/tools",
+    "source_url": "https://docs.gumloop.com/api-reference/getting-started"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -148,8 +262,12 @@
    "mcp": {
     "type": "none",
     "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "maintainer": "vendor",
+    "remote_url": "https://ifttt.com/mcp",
+    "source_url": "https://ifttt.com/mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "no free-plan access; Webhooks/API require Pro plan ($2.99+/mo)",
    "sdk": [],
@@ -158,6 +276,19 @@
    "desc_en": "Fire a webhook event to trigger pre-configured Applets that act in connected consumer apps (Pro plan required).",
    "notes": "Weaker fit than other entries: an agent can only fire events for Applets a human already built in the IFTTT UI (no dynamic/generic action catalog like Zapier), free plan excludes Webhooks entirely, and the Platform/Connect API is aimed at building new IFTTT services, not calling existing consumer integrations.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "quota": "Free plan (2 Applets) exists but Webhooks require Pro ($2.99/mo); Make a web request needs Pro+",
+    "source_url": "https://ifttt.com/plans",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "format": "Webhooks key in URL path: https://maker.ifttt.com/trigger/{event}/with/key/{key}; Connect API: IFTTT-Service-Key header",
+    "source_url": "https://ifttt.com/docs/connect_api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://maker.ifttt.com",
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -188,6 +319,29 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.keboola.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.keboola.com/mcp",
+    "repo": "https://github.com/keboola/mcp-server",
+    "tools": [
+     "get_buckets",
+     "get_tables",
+     "query_data",
+     "get_components",
+     "get_configs",
+     "create_config",
+     "create_sql_transformation",
+     "get_jobs",
+     "run_job",
+     "create_flow",
+     "get_flows",
+     "deploy_data_app",
+     "search",
+     "docs_query",
+     "get_project_info"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://help.keboola.com/ai/mcp-server/",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -201,6 +355,22 @@
    "desc_en": "Lets an agent load and query tables, create SQL and Python transformations, and trigger data pipeline jobs in a Keboola project.",
    "notes": "Remote MCP URL is region-specific (https://mcp.<region>.keboola.com/mcp, e.g. mcp.eu-central-1.keboola.com); a local server is available from github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months. Developer docs: https://developers.keboola.com/.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "1 project; 120 compute minutes in first month, then 60 minutes/month",
+    "period": "month",
+    "source_url": "https://www.keboola.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-StorageApi-Token",
+    "format": "X-StorageApi-Token: <STORAGE_API_TOKEN>",
+    "source_url": "https://help.keboola.com/storage/api/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -216,6 +386,10 @@
    "mcp": {
     "type": "official",
     "url": "https://www.make.com/en/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.make.com",
+    "source_url": "https://developers.make.com/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -226,6 +400,45 @@
    "desc_en": "Trigger and manage Make automation scenarios, or call MCP tools, via REST API and a native MCP server/client.",
    "notes": "MCP Server and MCP Client are included free on all Make plans; you pay only for operations consumed when scenarios run. Most REST API endpoints are reserved for paid subscriptions.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Free plan: up to 1,000 credits/month, 2 active scenarios; Make API access only on Core and higher",
+    "period": "month",
+    "source_url": "https://www.make.com/en/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: Token <api_token>",
+    "source_url": "https://developers.make.com/api-documentation/getting-started/making-your-first-api-request",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://{zone}.make.com/api/v2",
+   "rate_limits": {
+    "summary": "Core 60 req/min, Pro 120, Teams 240, Enterprise 1,000",
+    "source_url": "https://developers.make.com/api-documentation/getting-started/rate-limiting",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "scenarios:read",
+     "scenarios:write",
+     "connections:read",
+     "datastores:read",
+     "datastores:write",
+     "hooks:read",
+     "teams:read"
+    ],
+    "source_url": "https://developers.make.com/api-documentation/authentication/api-scopes-overview",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "MCP scenario-run tools return after 25-40 s; longer runs continue (up to 40 min) and results are fetched by executionId",
+    "source_url": "https://developers.make.com/mcp-server"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -247,6 +460,10 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
+    "maintainer": "vendor",
+    "remote_url": "https://ah-api.merge.dev/api/v1/tool-packs/{TOOL_PACK_ID}/registered-users/{REGISTERED_USER_ID}/mcp",
+    "source_url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -260,6 +477,21 @@
    "desc_en": "Give an agent governed, audited tool access to Salesforce, Slack, Jira and 100+ enterprise apps via API or MCP.",
    "notes": "Separate product from Merge's classic Unified API (HRIS/ATS/CRM sync); Agent Handler is the AI-agent-facing tool-calling layer. Paid tier starts around $650/mo for 10 linked accounts, then per-account pricing.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "2,000 credits, unlimited registered users and tool packs (prototyping/testing)",
+    "period": "month",
+    "source_url": "https://www.merge.dev/pricing/agent-handler",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_KEY>",
+    "source_url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://ah-api.merge.dev/api/v1",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -281,8 +513,29 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger",
-    "domain_verified": true,
-    "kind": "vendor-hosted"
+    "maintainer": "vendor",
+    "remote_url": "https://<instance>/mcp-server/http",
+    "tools": [
+     "search_workflows",
+     "get_workflow_details",
+     "execute_workflow",
+     "test_workflow",
+     "publish_workflow",
+     "get_workflow_execution",
+     "search_workflow_executions",
+     "list_credentials",
+     "search_nodes",
+     "create_workflow_from_code",
+     "update_workflow",
+     "validate_workflow",
+     "archive_workflow",
+     "search_data_tables"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.n8n.io/connect/connect-to-n8n-mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free, self-hosted (open source, unlimited); n8n Cloud offers a paid-plan trial",
    "sdk": [],
@@ -291,6 +544,22 @@
    "desc_en": "Create, run and monitor n8n workflows via REST API, and expose or consume tools through MCP trigger/client nodes.",
    "notes": "REST API manages workflows/executions/credentials/users, not per-node business logic. MCP support is a first-party node (MCP Server Trigger / MCP Client Tool) inside a running n8n instance, not a single hosted vendor endpoint. Non-Enterprise API keys have full account access; scoped keys need Enterprise plan.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "Self-hosted Community Edition is free; Cloud trial (1,000 executions) has no API access",
+    "source_url": "https://n8n.io/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-N8N-API-KEY",
+    "format": "X-N8N-API-KEY: <api_key>",
+    "source_url": "https://docs.n8n.io/connect/n8n-api/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://<instance>/api/v1",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -322,8 +591,17 @@
    "mcp": {
     "type": "none",
     "url": null,
+    "maintainer": "vendor",
+    "tools": [
+     "nango_tool_search",
+     "nango_execute",
+     "nango_proxy",
+     "nango_create_connection"
+    ],
+    "source_url": "https://nango.dev/docs/implementation-guides/use-cases/tool-calling/implement-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "free tier: 10 connections, 10 compute hours, 10GB data transfer/mo",
    "sdk": [
@@ -334,6 +612,21 @@
    "desc_en": "Authorize end users to 400+ third-party APIs/MCP servers and proxy authenticated calls to them from your app or agent.",
    "notes": "Nango is primarily an auth/proxy broker (open source, self-hostable) rather than itself an MCP server; its 'MCP Auth' feature lets your app authorize users to OTHER vendors' MCP servers (Notion, HubSpot, etc.) and call them via Nango's proxy. Free self-hosting is not offered outside the Enterprise (BYOC) plan.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "10 connections, 10 compute hours, 10GB data transfer; hard-capped",
+    "period": "month",
+    "source_url": "https://nango.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <NANGO_API_KEY>",
+    "source_url": "https://nango.dev/docs/reference/api/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.nango.dev",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -354,6 +647,10 @@
    "mcp": {
     "type": "official",
     "url": "https://www.useparagon.com/mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/useparagon/paragon-mcp",
+    "source_url": "https://docs.useparagon.com/actionkit/getting-started",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -364,6 +661,14 @@
    "desc_en": "Call thousands of pre-built Tools and Triggers across 130+ SaaS apps (Slack, Salesforce, Gmail) via API or MCP.",
    "notes": "ActionKit specifically has a self-serve free tier for experimentation; Paragon's broader embedded-iPaaS platform is contract/sales-only with no public self-serve tier. ActionKit MCP uses SSE transport and is listed on the Anthropic MCP registry.",
    "verified": "2026-09-24",
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <Paragon User Token (JWT signed with project signing key)>",
+    "source_url": "https://docs.useparagon.com/actionkit/openapi.json",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://actionkit.useparagon.com",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -385,8 +690,12 @@
    "mcp": {
     "type": "official",
     "url": "https://pipedream.com/docs/connect/mcp/developers",
-    "domain_verified": true,
-    "kind": "vendor-hosted"
+    "maintainer": "vendor",
+    "remote_url": "https://remote.mcp.pipedream.net/v3",
+    "source_url": "https://pipedream.com/docs/connect/mcp/developers",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "check pricing (pipedream.com/pricing) for current Connect free-tier request/credit limits",
    "sdk": [
@@ -397,6 +706,25 @@
    "desc_en": "Call 2,700+ app APIs and run managed-auth actions on end users' behalf via REST API or Pipedream MCP servers.",
    "notes": "Requires a Pipedream project plus client ID/secret/project ID to call the MCP server; managed auth handles end-user OAuth for connected apps.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Free plan: daily credit limit; Connect free in development environment with limited connected accounts",
+    "period": "day",
+    "source_url": "https://pipedream.com/docs/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "oauth2",
+    "format": "Authorization: Bearer <access_token> (client credentials via POST https://api.pipedream.com/v1/oauth/token)",
+    "source_url": "https://pipedream.com/docs/rest-api/auth",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.pipedream.com/v1",
+   "rate_limits": {
+    "summary": "Connect API: create token 100/min per external user; accounts 2,000/5 min and components 3,000/5 min per project",
+    "source_url": "https://pipedream.com/docs/connect/api-reference/rate-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -418,8 +746,12 @@
    "mcp": {
     "type": "official",
     "url": "https://docs.stackone.com/connect/ai-platforms/overview",
-    "domain_verified": null,
-    "kind": "official"
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.stackone.com/mcp",
+    "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 1,000 action-call credits/seat/mo (Starter), no credit card required",
    "sdk": [
@@ -431,6 +763,30 @@
    "desc_en": "Call 500+ SaaS integrations (HRIS, ATS, CRM, documents) through one unified API or MCP gateway covering 27,000+ actions.",
    "notes": "Beyond the free 1,000 credits/seat, Starter bills $0.003/extra call; Core and Enterprise tiers are quote-based (contact sales).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "Starter: 1,000 credits per seat (1 tool/API call = 1 credit)",
+    "period": "month",
+    "source_url": "https://www.stackone.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(<API_KEY>:) plus x-account-id: <ACCOUNT_ID>",
+    "source_url": "https://docs.stackone.com/llms-full.txt",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.stackone.com",
+   "oauth_scopes": {
+    "scopes": [
+     "mcp",
+     "offline_access"
+    ],
+    "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -452,6 +808,9 @@
    "mcp": {
     "type": "official",
     "url": "https://superglue.ai/docs",
+    "maintainer": "vendor",
+    "source_url": "https://superglue.ai/docs/mcp/using-the-mcp/",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -462,6 +821,21 @@
    "desc_en": "Connect and orchestrate enterprise systems (ERP, CRM, databases) through a self-serve API and per-integration MCP servers.",
    "notes": "Added: open-source, self-serve integration/migration agent for enterprise systems (NetSuite, SAP, Sage Intacct, Dynamics) with per-app MCP servers; some exact API details (auth header, SDK) could not be independently confirmed in this pass and should be double-checked in the live docs before use.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "3,000 executions and 5M tokens per month; open-source self-hosted version has no usage limits",
+    "period": "month",
+    "source_url": "https://superglue.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <SUPERGLUE_API_KEY>",
+    "source_url": "https://superglue.ai/docs/api/overview/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.superglue.cloud/v1",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -482,6 +856,20 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.zapier.com/api/v1/connect",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.zapier.com/api/v1/connect",
+    "tools": [
+     "discover_zapier_actions",
+     "enable_zapier_action",
+     "disable_zapier_action",
+     "execute_zapier_read_action",
+     "execute_zapier_write_action",
+     "list_zapier_connections",
+     "manage_zapier_connections",
+     "get_configuration_url"
+    ],
+    "source_url": "https://docs.zapier.com/mcp/overview/how-tools-work",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -492,6 +880,22 @@
    "desc_en": "Call 9,000+ apps and 40,000+ pre-built actions (Slack, Gmail, Sheets, etc.) through one MCP endpoint.",
    "notes": "\"AI Actions\"/Natural Language Actions is deprecated; Zapier now steers agents to Zapier MCP. Tool calls consume the same 'tasks' quota as regular Zaps.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "100 tasks/month; each successful MCP tool call uses 2 tasks",
+    "period": "month",
+    "source_url": "https://zapier.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <CONNECTION_TOKEN> (or OAuth inside the MCP client)",
+    "source_url": "https://docs.zapier.com/mcp/overview/how-connections-work",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://mcp.zapier.com/api/v1/connect",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

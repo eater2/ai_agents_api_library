@@ -41,7 +41,7 @@ def badges():
         ("Remote MCP endpoint", sh + "remote_MCP-no_key-000000?logo=vercel&logoColor=white", GH + "#mcp-server"),
     ]
 STALE_DAYS = 90
-MAX_CATEGORY_BYTES = 30 * 1024
+MAX_CATEGORY_BYTES = 60 * 1024  # ~15k tokens; grew from 30 KB when per-field sources were added
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"

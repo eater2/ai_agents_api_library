@@ -1,0 +1,297 @@
+# Corrections reported by research agents
+
+Apply to data/catalog.json after checking the source.
+
+- `aws-apis`: free_tier: aws.amazon.com/free now says 30+ services always free (not 90+), plus up to $200 credits ($100 at signup, up to $100 more earned) over 6 months
+- `fly-io-machines-api`: mcp: https://docs.fly.io/sprites/integrations/remote-mcp (https://sprites.dev/mcp) controls Sprites, not Machines; the Machines-relevant official MCP is the local flyctl server ('fly mcp server'), docs https://fly.io/docs/mcp/flyctl-server/
+- `fly-io-machines-api`: free_tier: free trial is 2 machine-hours or 7 days, whichever first, no card needed to start (adding a card ends the trial); not trial credit
+- `google-cloud-apis`: mcp: Google Cloud now runs official remote MCP servers per product (e.g. compute.googleapis.com/mcp, run.googleapis.com/mcp, bigquery.googleapis.com/mcp, container.googleapis.com/mcp); list at https://docs.cloud.google.com/mcp/supported-products
+- `netlify-api`: free_tier: the free plan is now called 'Free' ($0 forever) with a 300 credit limit, not 'Starter'
+- `chroma-cloud`: free_tier: pricing page shows Starter plan at $0/month + usage with $5 in free credits (one-off), not ~1M embeddings; payment is by credit card for Starter
+- `google-bigquery`: free_tier: Google states 1 TiB of querying and 10 GiB of storage per month (binary units)
+- `letta`: free_tier: pricing now says Free $0/month with up to 3 stateful agents and limited Letta Auto usage (bring your own keys); API plan is $20/month + usage
+- `mongodb-atlas`: auth_hint: MongoDB now recommends service accounts (OAuth2 client credentials, Bearer access token); HTTP Digest API keys are legacy
+- `neon-postgres`: free_tier: Free plan now allows 100 projects with 0.5 GB storage and 100 CU-hours per project per month, no card (not 1 project)
+- `neon-postgres`: docs: api-docs.neon.tech shows a notice that the API reference moved to https://neon.com/docs/reference/api
+- `planetscale`: free_tier: pricing page lists no free/Hobby plan; cheapest is Postgres PS-5 single node at $5/month
+- `qdrant-cloud`: free_tier: pricing page lists the free cluster as 0.5 vCPU / 1 GB RAM / 4 GB disk (not 1 GB disk)
+- `snowflake`: mcp: the GA Snowflake-managed MCP server is hosted per account at https://<account_url>/api/v2/databases/{db}/schemas/{schema}/mcp-servers/{name} (tools: Cortex Agent, Cortex Analyst, Cortex Search, SQL execution, UDF/procedures); Snowflake-Labs/mcp is the separate self-hosted server
+- `supabase`: auth_hint: new publishable/secret keys go on the apikey header, not Authorization: Bearer (they are not JWTs); Management API uses a PAT or OAuth token
+- `supabase`: mcp: hosted remote endpoint is https://mcp.supabase.com/mcp (OAuth or PAT)
+- `turso`: mcp: Turso now runs an official hosted MCP server at https://mcp.turso.ai/mcp (OAuth 2.1; manage orgs/databases/groups and run SQL), repo github.com/tursodatabase/turso-mcp; docs https://docs.turso.tech/integrations/mcp
+- `turso`: free_tier: free plan also includes 5 GB storage and 10M rows written per month
+- `upstash-redis-vector`: free_tier: Upstash Vector free tier is 10K queries/updates per day (max 200M vectors x dimensions, 1,536 dims), not 10K vectors (source https://upstash.com/pricing/vector)
+- `upstash-redis-vector`: mcp: data-level Upstash Redis MCP is github.com/upstash/redis-mcp (tools redis_run_commands, redis_search_docs; docs https://upstash.com/docs/redis/integrations/mcp)
+- `weaviate-cloud`: free_tier: pricing page now shows an always-free plan (1 cluster, 100,000 objects, 1 GB memory, 10 GB disk, no card), not a 14-day expiring Sandbox
+- `weaviate-cloud`: notes: the built-in /v1/mcp endpoint is always active on Weaviate Cloud (disabled by default only on self-hosted; writes need MCP_SERVER_WRITE_ACCESS_ENABLED)
+- `zep`: free_tier: Free plan gives 10,000 credits per month (no rollover), not 'check pricing'
+- `zep`: auth_hint: REST API uses 'Authorization: Api-Key <key>', not Bearer; the MCP server (https://api.getzep.com/mcp) uses OAuth 2.1 via the org's IdP
+- `zilliz-cloud-milvus`: free_tier: pricing page shows $200 free credits (not $100); free plan is 5 GB storage, 2.5M vCUs/month, up to 5 collections, no card
+- `exa`: docs: https://docs.exa.ai/... now redirects (307) to https://exa.ai/docs/...
+- `jina-ai-search-reader`: mcp: official Jina AI remote MCP server exists at https://mcp.jina.ai/v1 (repo github.com/jina-ai/MCP); entry says none
+- `jina-ai-search-reader`: free_tier: without key Reader is 20 RPM and Search (s.jina.ai) is blocked; free key gives Reader 500 RPM / Search 100 RPM plus 10M free tokens
+- `kagi-search-api`: auth_hint: current v1 Search API docs use Authorization: Bearer <api-key>, not 'Bot <token>' (legacy v0 format)
+- `mojeek-search-api`: auth_hint: key is passed as the api_key query parameter (https://api.mojeek.com/search?q=...&api_key=KEY), documented in the public quickstart
+- `perplexity-sonar-search-api`: free_tier: pricing page also lists a faster Search variant at $1 per 1,000 requests (standard $5/1,000)
+- `searchapi-io`: mcp: official hosted MCP server exists at https://www.searchapi.io/mcp (OAuth or X-MCP-Token header, 80+ tools); entry says none
+- `serpapi`: free_tier: pricing page says a credit card is required to access the free plan (250 searches/month)
+- `serpapi`: mcp: hosted remote endpoint https://mcp.serpapi.com (Authorization: Bearer key, or /<API_KEY>/mcp path) in addition to the GitHub repo
+- `you-com-api`: free_tier: new accounts get $100 one-time free credit; main remote MCP also has keyless ?profile=free mode (100 queries/day)
+- `aws-textract`: free_tier: AnalyzeDocument (forms/tables/layout/queries) free tier is 100 pages/month, not 1,000 (1,000 applies only to DetectDocumentText and signatures-only); AnalyzeExpense/AnalyzeID get 100 pages/month, not 150
+- `azure-ai-document-intelligence`: free_tier: F0 analyzes only the first 2 pages per document (4 MB max) and is limited to 1 TPS
+- `cloudconvert-api`: free_tier: pricing page lists 10 conversion credits/day on the free plan including all API features, no card; not '25 minutes/day for the web tool only'
+- `docusign-esignature-api`: mcp.url: points to a docs page; developer-account MCP endpoint is https://mcp-d.docusign.com/mcp (production via Claude connectors directory), OAuth
+- `gamma-api`: free_tier: API keys need Pro/Ultra/Teams/Business, but the Gamma MCP server/connectors are available on all plans including Free (generations consume credits)
+- `google-document-ai`: free_tier: pricing page shows only Enterprise Document OCR with first 1,000 pages free; Form Parser/custom extractor are $30/1,000 pages with no free band (not '1,000 pages/month per processor type, then $0.65-$10')
+- `google-slides-docs-api`: mcp.url: endpoint is https://slidesmcp.googleapis.com/mcp/v1 (Workspace Developer Preview Program), not /mcp
+- `llamaparse-llamacloud`: free_tier: pricing page lists a Free plan with 10K credits/month (1,000 credits = $1.25)
+- `mistral-ocr-api`: free_tier: Mistral pricing page now lists a Free plan with $10/month in API credits; entry says paid only
+- `pdf-co-api`: mcp: official PDF.co MCP server exists (github.com/pdfdotco/pdfco-mcp, uvx pdfco-mcp); entry says none
+- `reducto-api`: free_tier: pricing page says a credit card is required to access the free credits
+- `slidespeak-api`: free_tier: API page offers a free trial with no credit card required; API plans from $49/month (1,000 credits)
+- `unstructured-api`: free_tier: pricing page gives 10,000 free pages to start, no card; then $0.015/page
+- `unstructured-api`: mcp: UNS-MCP repo is marked not actively maintained; vendor recommends the hosted Transform MCP at https://mcp.transform.unstructured.io (OAuth)
+- `bright-data`: free_tier: the 5,000 requests/month free quota is stated for the MCP server (renews monthly), not the general API
+- `browser-use-cloud-api`: mcp: vendor hosts an official MCP server at https://api.browser-use.com/v3/mcp (header x-browser-use-api-key); entry says none
+- `browserbase-stagehand`: free_tier: pricing page now lists 3 concurrent browsers (not single concurrency) and 1 browser hour, 15 min/session
+- `browserbase-stagehand`: mcp: GitHub repo browserbase/mcp-server-browserbase is archived; hosted endpoint is https://mcp.browserbase.com/mcp
+- `hyperbrowser`: docs: https://docs.hyperbrowser.ai redirects to https://hyperbrowser.ai/docs
+- `oxylabs`: mcp: official Oxylabs MCP exists (hosted https://mcp.oxylabs.io/mcp, repo oxylabs/oxylabs-mcp, repo archived 2026-09-16); entry says none
+- `oxylabs`: free_tier: Web Scraper API free trial gives up to 2,000 results, no credit card required
+- `scrapegraphai-api`: free_tier: free plan is 500 API credits per month (recurring), not one-time; no card required
+- `scrapegraphai-api`: auth_hint: header name is SGAI-APIKEY (published in API reference)
+- `scrapegraphai-api`: mcp: official hosted MCP at https://mcp.scrapegraphai.com/mcp; entry says none
+- `scraperapi`: free_tier: docs state an ongoing free tier of 1,000 API credits/month (5 concurrent) after the 7-day 5,000-credit trial
+- `scraperapi`: mcp: official hosted MCP at https://mcp.scraperapi.com/mcp; entry says none
+- `scrapingbee`: mcp: official hosted MCP at https://mcp.scrapingbee.com/mcp (api_key query param on URL); entry says none
+- `spider-cloud`: mcp: hosted MCP endpoint is https://mcp.spider.cloud/mcp (https://spider.cloud/mcp/ is the docs page)
+- `steel`: free_tier: no Hobby plan any more; Launch plan is $0 + usage with $30 one-time credits valid 90 days (10 concurrent sessions, 60 req/min)
+- `steel`: auth_hint: docs show header name steel-api-key (lowercase)
+- `steel`: mcp: official steel-dev/steel-mcp-server exists; entry says none
+- `autodesk-platform-services-aps`: free_tier: APS has a lasting monthly Free tier (limited monthly usage of rated APIs), not one-off trial credits; Pay as You Go needs a card or PayPal
+- `autodesk-platform-services-aps`: mcp: Autodesk's official GitHub org publishes reference MCP servers (aps-mcp-server-nodejs, aps-mcp-server-python, aps-aecdm-mcp-dotnet); no hosted endpoint; entry says none
+- `bentley-itwin-platform-apis`: free_tier: lasting free Community tier (100 credits/month, non-commercial, non-production use), not just a trial
+- `esri-arcgis-location-platform`: free_tier: a credit card is required to access services even within the free monthly allowances
+- `esri-arcgis-location-platform`: mcp: search results mention Esri MCP support for Location Platform in beta (June 2026, docs https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/) but the page could not be read to confirm
+- `onshape-rest-api`: auth_hint: API keys can also be sent with plain Basic auth (base64 access:secret); HMAC signing is optional
+- `onshape-rest-api`: mcp: Onshape Labs offers an official FeatureScript MCP server (https://fs-mcp.labs.onshape.app/mcp, early access via App Store); entry says none
+- `procore-api`: mcp: official hosted Procore AI Edge MCP exists (US01 https://app.procore.com/rest/v1.0/mcp, US02 https://us02.procore.com/rest/v1.0/mcp); auth is a Datagrid API key (Authorization: Bearer dg_live_...); entry says none
+- `rhino-compute-mcneel`: free_tier: core-hour billing is $0.10 per core per hour of Rhino uptime (Windows Server only), no free allowance; McNeel's MCP (github.com/mcneel/rhinoai) targets Rhino desktop, not Compute
+- `speckle-api`: mcp: a community MCP server exists (github.com/bimgeek/speckle-mcp); entry says none
+- `zoo-text-to-cad-api-kittycad`: mcp: official Zoo MCP server exists (PyPI zoo-mcp, github.com/KittyCAD/mcp; no separate fee, hosted calls billed as API usage); entry says none
+- `amazon-selling-partner-api`: mcp: official Amazon Selling Partner Connector MCP at https://sellingpartner-ai.amazon.com/mcp (OAuth via Seller Central consent; toolkit github.com/amzn/selling-partner-agentic-toolkit); entry says none
+- `amazon-selling-partner-api`: docs: developer-docs.amazon.com/sp-api now redirects to https://developer-docs.amazon/sp-api/
+- `bigcommerce-api`: mcp: https://docs.bigcommerce.com/_mcp/server is a docs-search MCP (single tool searchDocs), not an API server; the vendor's Storefront MCP (B2C/B2B) uses a per-store URL from the control panel and covers shopping/cart/checkout only, not the admin API
+- `bigcommerce-api`: docs: developer.bigcommerce.com now redirects to docs.bigcommerce.com
+- `csm-common-sense-machines-api`: homepage/docs: csm.ai, www.csm.ai, docs.csm.ai and api.csm.ai do not resolve in DNS on 2026-09-24; service may be discontinued - re-verify or remove
+- `csm-common-sense-machines-api`: mcp: github.com/CommonSenseMachines org and blender-mcp repo return 404 on GitHub; lobehub listing is an aggregator, not a vendor source
+- `hyper3d-rodin-api`: free_tier: pricing page says full API access is only on the Business plan ($120/mo, $96/mo annual); direct credits $1.5 each; the '10 starter credits' claim was not confirmed
+- `hyper3d-rodin-api`: docs: developer.hyper3d.ai now redirects (301) to https://docs.hyper3d.ai/
+- `hyper3d-rodin-api`: auth_hint: exact header is 'Authorization: Bearer <RODIN_API_KEY>'
+- `sketchfab-data-api`: auth_hint: API token goes in 'Authorization: Token <API_TOKEN>' (OAuth2: 'Authorization: Bearer <token>'), not an X-API-Key header
+- `sketchfab-data-api`: free_tier: GET /v3/search and GET /v3/models need no auth; GET /v3/models/{uid}/download requires a token
+- `tencent-hunyuan3d-api`: free_tier: billing page says 200 free credits per user on first activation (valid 1 year); postpaid $0.02 per credit, Professional generation costs 25 credits (~$0.50), Express 15 - not '~$0.02/generation'
+- `tripo-api`: mcp: tripo-mcp is alpha and only works through the Tripo Blender add-on (generate and import into Blender); it is not a standalone API wrapper
+- `tripo-api`: free_tier: pricing page states pay-as-you-go at 1 credit = $0.01 but does not mention signup credits
+- `eraser-api-diagramgpt`: mcp: Eraser now has an official remote MCP server at https://app.eraser.io/api/mcp (OAuth or 'Authorization: Bearer <API_KEY>'), plus local npm @eraserlabs/eraser-mcp; docs say it is free within free-tier limits
+- `icepanel-api`: mcp: official remote MCP server at https://mcp.icepanel.io/mcp (OAuth; reads model objects, connections, diagrams, ADRs; writes objects, connections, ADRs). MCP docs say paid plans only, while the pricing table lists MCP on Free; the old local repo github.com/IcePanel/mcp-server is deprecated
+- `icepanel-api`: auth_hint: header is 'X-API-Key: <key>'
+- `lucid-lucidchart-rest-api`: mcp: Lucid has an official MCP server (available since 2025-11-18; admins enable it) at https://mcp.lucid.app/mcp (OAuth; endpoint answers 401 with OAuth resource metadata) for search, summarize, share and create diagrams; a separate docs-only MCP is at https://lucid-developer-docs.readme.io/mcp
+- `lucid-lucidchart-rest-api`: docs: developer docs now served at https://lucid.readme.io (llms.txt at https://lucid.readme.io/llms.txt)
+- `mermaid-chart-api`: llms_txt: https://mermaid.ai/llms.txt returns HTTP 401 on 2026-09-24
+- `miro-rest-api`: mcp: MCP tool calls are capped per day by plan (Free 100, Starter 500, Business 2,000, Enterprise 10,000)
+- `plantuml-server-api`: mcp: official github.com/plantuml/plantuml-mcp exists but is an MVP exposing only 'plantuml_version' (no rendering yet)
+- `structurizr`: status: structurizr.com announces cloud service end of life with a migration guide (docs.structurizr.com/cloud) to playground, local or self-hosted server; the cloud workspace API should be treated as deprecated
+- `structurizr`: mcp: official Structurizr MCP server (free, open source; docker structurizr/mcp); hosted instance https://mcp.structurizr.com/mcp exposes DSL validate/parse/inspect and Mermaid/PlantUML export without auth
+- `structurizr`: sdk: github.com/structurizr/java is archived; code moved to github.com/structurizr/structurizr
+- `anthropic-claude-api`: auth_hint: API overview now lists 'Authorization: Bearer <key>' as the primary auth header; x-api-key is a legacy fallback that is still supported
+- `deepseek-api`: llms_txt: https://api-docs.deepseek.com/llms.txt returns an HTML docs page (text/html), not an llms.txt file
+- `deepseek-api`: notes: off-peak discount is 50%; peak hours are 01:00-04:00 and 06:00-10:00 UTC Mon-Fri; fees are deducted from a topped-up or granted balance
+- `fal-ai`: free_tier: docs describe a prepaid credit model (credits bought in advance); no free tier is stated
+- `hugging-face-inference-providers`: free_tier: free users get $0.10/month in Inference Providers credits (PRO $2.00/month)
+- `beatoven-ai-api`: auth_hint: official API spec (github.com/Beatoven/public-api) documents 'Authorization: Bearer <API_TOKEN>' at https://public-api.beatoven.ai
+- `elevenlabs-music-api`: mcp: local elevenlabs-mcp repo is marked deprecated; vendor now hosts a remote OAuth MCP server at https://api.elevenlabs.io/v1/mcp
+- `elevenlabs-music-api`: free_tier: pricing page states Free plan = 10k credits/month incl. Music; music commercial use requires Starter+
+- `loudly-api`: auth_hint: official OpenAPI spec defines header 'API-KEY: <API_KEY>' (server https://soundtracks.loudly.com)
+- `soundraw-api`: free_tier: vendor FAQ offers a free 2-week trial with no commitment; Starter $29.99/mo requires a 6-month minimum commitment
+- `airtable-api`: mcp: Airtable now runs an official remote MCP server at https://mcp.airtable.com/mcp (OAuth or PAT); entry lists only a community server
+- `airtable-api`: free_tier: Free plan is capped at 1,000 API calls per workspace per month (plus 5 req/sec per base)
+- `asana-api`: mcp: Asana publishes an official remote MCP server at https://mcp.asana.com/v2/mcp (OAuth); entry says none
+- `atlassian-jira-confluence`: mcp: current documented remote endpoint is https://mcp.atlassian.com/v2/mcp (OAuth 2.1 or API token), not /v1/mcp/authv2
+- `box-api`: mcp: Box hosts an official remote MCP server at https://mcp.box.com (OAuth); entry says none
+- `box-api`: free_tier: Box offers a free developer plan (10 GB, full API access, no payment) - 'check pricing / paid account' is outdated
+- `cal-com-api`: mcp: Cal.com publishes an official MCP server (hosted https://mcp.cal.com/mcp with OAuth 2.1; local stdio with API key), entry says none
+- `cal-com-api`: free_tier: pricing page does not list API access under the Free plan features; free-plan API availability not confirmed on vendor docs
+- `calendly-api`: mcp: Calendly hosts an official remote MCP server at https://mcp.calendly.com; entry says none
+- `calendly-api`: free_tier: developer FAQ states API GET/POST works on any plan incl. Free (except 3 Enterprise endpoints); webhooks need a paid Standard/Teams/Enterprise plan
+- `clickup-api`: mcp: remote endpoint is https://mcp.clickup.com/mcp (OAuth only, no API keys); Free Forever limited to 50 MCP calls per 24h without the AI add-on
+- `coda-api-superhuman-docs`: mcp: entry's MCP url points at the REST API docs; the Superhuman Docs MCP endpoint is https://docs.superhuman.com/apis/mcp (OAuth via id.superhuman.com, scope mcp:all)
+- `dropbox-api`: mcp: Dropbox hosts an official remote MCP server (beta) at https://mcp.dropbox.com/mcp with Dropbox OAuth; entry says none
+- `linear-api`: auth_hint: Linear personal API keys are sent as 'Authorization: <API_KEY>' without Bearer; Bearer is for OAuth tokens
+- `google-workspace-apis-gmail-calendar-drive`: mcp: Google runs official remote MCP servers (Developer Preview, OAuth) per product: gmailmcp/drivemcp/calendarmcp/docsmcp/sheetsmcp/chatmcp.googleapis.com/mcp/v1; entry says none
+- `google-workspace-apis-gmail-calendar-drive`: free_tier: Gmail quota page says exceeding quota limits is planned to incur charges to the Cloud billing account later in 2026
+- `microsoft-graph-outlook-teams-onedrive`: mcp: Microsoft MCP Server for Enterprise (preview, read-only Entra directory queries via Graph) at https://mcp.svc.cloud.microsoft/enterprise; entry says none
+- `monday-com-api`: mcp: official hosted MCP URL is https://mcp.monday.com/mcp (OAuth 2.0 or personal token; repo github.com/mondaycom/mcp); entry has url null
+- `trello-api`: auth_hint: Trello docs describe key+token via query params or 'Authorization: OAuth oauth_consumer_key=..., oauth_token=...' header (OAuth 1.0), not Bearer
+- `trello-api`: mcp: official Trello MCP server at https://mcp.trello.com/v1 (OAuth 2.0, all Trello plans); entry says none
+- `ayrshare`: mcp: entry's MCP url is the homepage; the Action MCP endpoint is https://api.ayrshare.com/mcp (27 tools, API-key Bearer auth); a docs-only MCP is at https://www.ayrshare.com/docs/mcp
+- `ayrshare`: free_tier: pricing page offers a 28-day free trial on the Launch plan ($299/mo) with no credit card; Premium starts at $149/mo
+- `ayrshare`: auth_hint: since 2026-03-31 X/Twitter operations via Ayrshare require your own X OAuth 1.0a credentials in extra headers
+- `bluesky-at-protocol`: docs: https://docs.bsky.app now 301-redirects to https://bsky.network/docs
+- `meta-graph-api-facebook-instagram`: mcp: Meta hosts an official Ads MCP server at https://mcp.facebook.com/ads (ads, catalogs, reporting; open beta) plus a developer-tools MCP; none covers organic Pages/Instagram posting
+- `tiktok-api`: free_tier: posts from unaudited clients are restricted to private visibility until the app passes TikTok's audit
+- `x-twitter-api`: free_tier: X API is now pay-per-usage with prepaid credits (e.g. $0.005 per Post read), no subscriptions and no free tier; Basic $200/mo tier info is outdated
+- `x-twitter-api`: mcp: X hosts an official MCP server at https://api.x.com/mcp (OAuth 2.0 PKCE or app Bearer) and publishes xdevplatform/xmcp; entry says none
+- `youtube-data-api`: free_tier: quota model changed - search.list and videos.insert now have their own default caps of 100 calls/day each, plus 10,000 units/day for all other endpoints
+- `context7-library-docs-for-agents`: free_tier: plans page states Free plan = 1,000 API calls per month; Pro is $10/seat/month
+- `crossref-rest-api`: notes: rate limits are now fixed per pool (public 5 req/s conc. 1, polite 10 req/s conc. 3), not only adaptive headers
+- `gitingest`: free_tier: the hosted API has a published limit of 10 requests/minute per endpoint (limiter in the official server source)
+- `hacker-news-api`: mcp: listed community server pskill9/hn-server scrapes news.ycombinator.com HTML rather than using the official Firebase API
+- `nytimes`: free_tier: FAQ states 500 requests/day and 5 requests/minute per API with no Archive API exception
+- `nytimes`: notes: Terms of Use also forbid using the APIs to develop a software product or train an ML/AI system
+- `wolfram-alpha-api`: free_tier: API product page confirms 2,000 non-commercial calls/month (no longer just 'reported')
+- `adobe-firefly-services-api`: mcp: community MCP server exists (github.com/Focus-GTS/firefly-services-mcp) covering Firefly, Photoshop and Lightroom APIs
+- `freepik-api`: mcp: vendor now runs an official remote MCP at https://mcp.magnific.com (OAuth sign-in, no API key)
+- `freepik-api`: auth_hint: docs now use x-magnific-api-key header and base https://api.magnific.com; docs.freepik.com 301-redirects to docs.magnific.com
+- `freepik-api`: free_tier: '~5 EUR free API credits' not found on vendor docs; pricing page says API generations deduct credits on paid plans
+- `google-gemini-imagen-image-api`: free_tier: pricing page lists Free Tier 'Not available' for all Gemini image models (Nano Banana family); image generation is paid only
+- `google-gemini-imagen-image-api`: mcp: Google's GoogleCloudPlatform org has an experimental, 'not officially supported' MCP (mcp-genmedia / mcp-nanobanana-go) using Vertex AI ADC auth, not Gemini API keys
+- `ideogram-api`: free_tier: API setup page states minimum one-time credit purchase $1 and minimum auto top-up target $10, not a $40 minimum top-up
+- `ideogram-api`: notes: official MCP uses OAuth and bills the Ideogram web subscription, not API credits
+- `leonardo-ai-api`: free_tier: vendor docs describe Pay-As-You-Go top-ups only; no '$5 free API credits' found in API pricing FAQ
+- `leonardo-ai-api`: notes: MCP server authenticates with an 'API-Key' header, not OAuth
+- `openai-images-api-gpt-image`: docs: guide now lives at developers.openai.com/api/docs/guides/image-generation; current models are gpt-image-2.5-sunburst and gpt-image-2.5-flare; org verification may be required
+- `recraft-api`: mcp: vendor now hosts a remote MCP at https://mcp.recraft.ai/mcp (OAuth 2.0, bills subscription credits), besides the GitHub repo
+- `remove-bg-api`: free_tier: API page says 'first 50 API calls per month are on us'; the 'preview/small resolution only' restriction is not stated there
+- `stability-ai-platform-api`: mcp: community MCP server exists (github.com/tadasant/mcp-server-stability-ai, not affiliated with Stability AI)
+- `stability-ai-platform-api`: free_tier: platform billing page says 25 free credits, but platform docs text still says new users get 200 free credits; vendor pages disagree
+- `bland-ai`: auth_hint: docs now say 'Authorization: Bearer <api_key>' (bare key still accepted; x-api-key is not read)
+- `deepgram-voice-agent-api`: mcp: vendor ships an MCP server built into the dg CLI ('dg mcp', stdio or SSE) giving access to Deepgram APIs; also a docs MCP at https://developers.deepgram.com/_mcp/server
+- `elevenlabs-agents-platform`: free_tier: pricing page lists no commercial license on Free (Commercial License starts at Starter, $6/month)
+- `elevenlabs-agents-platform`: docs: Agents docs moved to elevenlabs.io/docs/eleven-agents/overview
+- `livekit-cloud`: homepage: livekit.io now redirects to livekit.com
+- `attio-api`: free_tier: pricing page shows a lasting Free plan (up to 3 seats, 50,000 records, API and webhook access, no credit card); 14-day trial is for the Pro plan
+- `intercom-api`: auth: private apps use a workspace access token (Authorization: Bearer) without OAuth; OAuth is only required for public apps, so api_key+oauth2 fits better than oauth2
+- `mailchimp-marketing-api`: mcp: no official Marketing API MCP; community servers exist (e.g. github.com/damientilman/mailchimp-mcp-server, 227 tools). Mailchimp's official MCP (https://mandrillapp.com/mcp) covers only Transactional/Mandrill
+- `pipedrive-api`: mcp: Pipedrive now has an official hosted MCP server at https://mcp.pipedrive.ai/mcp (OAuth, all plans)
+- `pipedrive-api`: auth_hint: docs now specify the API token in the x-api-token header, not the api_token query param
+- `salesforce-apis`: mcp: besides the local DX server (github.com/salesforcecli/mcp, npx -y @salesforce/mcp), Salesforce now offers hosted MCP servers with OAuth 2.0 + PKCE, e.g. https://api.salesforce.com/platform/mcp/v1/platform/sobject-all (full SObject CRUD/query/search)
+- `zendesk-api`: auth_hint: Zendesk docs now mark API token auth ({email}/token:{api_token} Basic) as deprecated; OAuth Bearer is recommended
+- `adyen-api`: mcp: Adyen publishes an official local MCP server (alpha, npx @adyen/mcp, github.com/Adyen/adyen-mcp) covering Checkout and Management APIs; entry says none
+- `alpaca-trading-api`: mcp: official vendor server exists (github.com/alpacahq/alpaca-mcp-server, uvx alpaca-mcp-server, generated from Trading + Market Data OpenAPI); entry says community with null url
+- `alpha-vantage`: mcp: official vendor server (remote https://mcp.alphavantage.co/mcp with OAuth, repo github.com/alphavantage/alpha_vantage_mcp); entry says community with null url
+- `coinbase-cdp-x402`: mcp: Coinbase publishes an official local MCP server (Payments MCP, npx @coinbase/payments-mcp, github.com/coinbase/payments-mcp) for wallet + x402 payments; entry says none
+- `coinbase-cdp-x402`: free_tier: CDP x402 Facilitator is free for the first 1,000 onchain transactions/month, then $0.001 per transaction
+- `coingecko-api`: free_tier: Demo plan rate limit is 100 calls/min (pricing page and rate-limit docs), not 30 calls/min; attribution required
+- `financial-modeling-prep`: mcp: FMP runs an official hosted MCP server at https://financialmodelingprep.com/mcp?apikey=<KEY> wrapping all REST endpoints; entry says community with null url
+- `paypal-api`: mcp.url: remote endpoints are https://mcp.paypal.com/http (Streamable HTTP) or /sse; sandbox at https://mcp.sandbox.paypal.com; remote uses PayPal login (OAuth)
+- `plaid-api`: mcp: Plaid has an official remote Dashboard MCP server (https://api.dashboard.plaid.com/mcp/, OAuth client_credentials, scope mcp:dashboard) and a local Sandbox MCP in github.com/plaid/ai-coding-toolkit
+- `plaid-api`: free_tier: Development environment no longer exists; free Sandbox plus a Trial plan (10 Production Items) for new US/Canada teams replaced Limited Production
+- `polygon-io-massive`: mcp.url: official MCP server is https://github.com/massive-com/mcp_massive (local, MASSIVE_API_KEY), not the docs homepage; no hosted endpoint
+- `square-api`: mcp: Square publishes an official MCP server (remote https://mcp.squareup.com/mcp with OAuth; local npx square-mcp-server, repo github.com/square/square-mcp-server); type should be official
+- `square-api`: auth: personal access tokens (unscoped, own account) are supported alongside OAuth, so api_key+oauth2 fits better than oauth2
+- `stripe-api`: auth_hint: from 2026-10-31 Stripe MCP accepts only OAuth or Agent-tagged API keys; plain secret/restricted keys get 401
+- `wise-api`: mcp: community MCP servers exist (e.g. github.com/2060-io/mcp-wise); type should be community
+- `wise-api`: auth: personal API tokens are for Wise business accounts and limited to quotes, recipients, transfers, batch groups and transfer events; funding and balance statements only for US/CA/AU/NZ/SG/MY accounts
+- `cloudflare-sandbox-sdk`: mcp: Cloudflare hosts an official Container sandbox MCP server at https://containers.mcp.cloudflare.com/mcp (Cloudflare OAuth); a generic container sandbox, not a wrapper of the Sandbox SDK API
+- `daytona`: mcp: official MCP server is local only, started with the Daytona CLI (`daytona mcp start`); no hosted remote endpoint
+- `e2b`: free_tier: Hobby plan gives a one-time $100 usage credit (no card), up to 1 h per sandbox and 20 concurrent sandboxes, not a recurring allowance of sandbox hours
+- `e2b`: mcp: e2b-dev/mcp-server is archived and deprecated (read-only since 2026-04-16)
+- `judge0`: free_tier: judge0.com lists only paid cloud plans (Pro EUR 27/mo for 2,000 submissions/day and up); a free RapidAPI Basic plan could not be confirmed. Free option is self-hosting
+- `piston`: auth/free_tier: public Piston API is no longer freely available (since 2026-02-15); an authorization token must be requested from EngineerMan on Discord and is granted only for non-commercial educational projects. Self-hosting remains free
+- `riza`: free_tier: Hobby plan is free forever with 100,000 requests/month and 30 s execution limit, no credit card
+- `runloop`: mcp: Runloop publishes official local MCP servers: @runloop/api-client-mcp (Stainless-generated from the API) and `rli mcp start` in runloopai/rl-cli
+- `vercel-sandbox`: mcp: Vercel MCP (https://mcp.vercel.com, OAuth) tools reference lists no Sandbox tools; it covers docs, projects, deployments, logs and analytics
+- `akool-api`: free_tier: pricing page shows API access only from the Pro Max plan; the free Basic plan is web-app only (watermarked output)
+- `akool-api`: auth_hint: Client ID/Secret token flow is documented as legacy; x-api-key header is recommended
+- `amazon-polly-amazon-transcribe-aws`: mcp: generic AWS API MCP Server (awslabs, runs any AWS CLI command incl. polly/transcribe) is vendor-maintained
+- `amazon-polly-amazon-transcribe-aws`: free_tier: Polly neural 1M chars/mo and generative 100K chars/mo only for first 12 months; new AWS accounts since 2025-07-15 get up to $200 Free Tier credits
+- `assemblyai-api`: mcp: vendor MCP is a docs-search server at https://assemblyai.com/docs/mcp (search/fetch documentation), not an API server; catalog URL mcp.assemblyai.com/docs is outdated
+- `assemblyai-api`: free_tier: $50 credits are one-time for new accounts (do not expire), not a recurring free tier
+- `azure-ai-speech`: mcp: github.com/microsoft/azure-speech-mcp-server contains only a README; speech tools ship in the Azure MCP Server (microsoft/mcp) as 'speech stt recognize' and 'speech tts synthesize'
+- `azure-ai-speech`: free_tier: batch transcription is not supported on F0
+- `cartesia-api`: free_tier: free plan has no commercial-use license and no voice cloning
+- `creatomate-api`: mcp: vendor hosts a remote MCP server at https://api.creatomate.com/mcp (OAuth or Bearer API key), not none
+- `creatomate-api`: free_tier: free plan output is clamped to max 480 px per dimension
+- `deepgram-api`: mcp: Deepgram CLI (pip install deepctl) runs a local MCP server via 'dg mcp' (stdio or SSE) proxying developer API tools; docs MCP at https://developers.deepgram.com/_mcp/server
+- `deepgram-api`: free_tier: $200 credit is a one-time signup credit (trial), not a recurring free tier
+- `google-veo-gemini-api-vertex-ai`: mcp: GoogleCloudPlatform publishes an experimental Genmedia MCP server (mcp-veo-go, Vertex AI via ADC) with veo_t2v/veo_i2v tools
+- `heygen-api`: mcp: remote MCP is OAuth-only and bills the user's web subscription credits, not API credits
+- `klap-api`: free_tier: API pricing is usage-based, billed monthly per operation (Generate Short $0.32, Video Input $0.44, Export $0.48); no free API credits stated
+- `kling-ai-api`: auth_hint: current API uses a console-issued API Key sent as Authorization: Bearer <API_KEY>; the AccessKey/SecretKey JWT (HS256, 30 min) is only for legacy-design endpoints
+- `kling-ai-api`: docs: docs moved to https://kling.ai/document-api/ (API domain https://api-singapore.klingai.com)
+- `kling-ai-api`: free_tier: a Trial Resource Package for integration testing is offered
+- `luma-ai-dream-machine-api`: free_tier: pricing now lists Ray 3.2 at $0.15 (540p) to $1.20 (1080p) per 5s T2V/I2V clip; API output has no watermark
+- `pixverse-api`: auth_hint: key is sent in the API-KEY request header, with a unique Ai-trace-id (UUID) header per request
+- `pixverse-api`: free_tier: pricing page states $1 = 5 videos (v6, 720p, 5s, no audio)
+- `runway-api`: mcp: besides the generation MCP (mcp.runwayml.com), there is a Runway Dev MCP at https://dev.runwayml.com/mcp (OAuth only) for tasks, model routers and docs
+- `shotstack-api`: free_tier: a free 'stage' sandbox environment also exists (https://api.shotstack.io/edit/stage), output is watermarked
+- `synthesia-api`: mcp: vendor hosts a public-beta MCP server at https://mcp.synthesia.io/mcp (drafts, generate video, status, video search), not none
+- `synthesia-api`: auth_hint: API key goes in the Authorization header without a Bearer prefix (securityScheme apiKey, name Authorization)
+- `synthesia-api`: free_tier: API access requires Creator plan or above
+- `tavus-api`: free_tier: free Basic developer plan includes 25 minutes of conversational video and 5 minutes of AI video generation
+- `tavus-api`: mcp: hosted MCP uses OAuth via PAL Maker; API key must not be placed in client config
+- `agentmail`: free_tier: pricing page also caps the free plan at 100 emails/day
+- `agentmail`: mcp.url: hosted endpoint is https://mcp.agentmail.to/mcp (repo github.com/agentmail-to/agentmail-mcp), not the docs homepage
+- `discord-api`: auth: bots authenticate with a static bot token (Authorization: Bot <token>); OAuth2 is only needed for user tokens/adding the bot to servers
+- `mailgun`: mcp: official local MCP server exists (github.com/mailgun/mailgun-mcp-server, npm @mailgun/mcp-server, 50+ tools, stdio only)
+- `postmark`: mcp: official local MCP server exists (github.com/ActiveCampaign/postmark-mcp, npx @activecampaign/postmark-mcp, 24 tools)
+- `sendgrid-twilio`: free_tier: pricing page states a 60-day free trial, 100 emails/day, no credit card required
+- `stream-getstream-chat-video-api`: free_tier: Build plan is 1,000 MAU / 100 concurrent connections, no card; Maker account gives $100/month credit for teams <5 people and <$10k monthly revenue
+- `stream-getstream-chat-video-api`: auth: server-side auth is API key + JWT signed with the API secret, not OAuth2
+- `telegram-bot-api`: mcp: listed chigwell/telegram-mcp uses a user account via Telethon/MTProto, not the Bot API
+- `twilio`: free_tier: trial now gives product free units (100 SMS, 100 WhatsApp, 3,000 emails, 75 voice min), no card, expires after 30 days
+- `twilio`: mcp: Twilio also hosts a read-only docs/API-spec search MCP at https://mcp.twilio.com/docs (tools twilio__search, twilio__retrieve); the executing server is npm @twilio-alpha/mcp (alpha)
+- `vonage-api`: auth: not OAuth2; Vonage uses API key/secret (Basic auth or query params) or application JWTs
+- `vonage-api`: mcp: Vonage-Community publishes a local MCP server (npm @vonage/vonage-mcp-server-api-bindings) for SMS, WhatsApp, RCS, voice and account tools
+- `whatsapp-business-cloud-api`: free_tier: Meta moved to per-message pricing on 2025-07-01; there is no 1,000 free conversations/month allowance. Service (non-template) messages in the customer service window are free
+- `whatsapp-business-cloud-api`: mcp.url: lharries/whatsapp-mcp connects to a personal WhatsApp account via WhatsApp Web (whatsmeow), not the Business Cloud API
+- `zoom-api`: mcp: Zoom now hosts official remote MCP servers (Zoom MCP, Zoom Chat MCP, Revenue Accelerator MCP) over streamable HTTP at the mcp.zoom.us gateway, OAuth 2.0; docs at developers.zoom.us/docs/mcp
+- `geoapify`: mcp: Geoapify runs an official remote MCP server at https://api.geoapify.com/v1/mcp?apiKey=... (11 tools)
+- `google-maps-platform`: free_tier: the $200 monthly credit was replaced by free monthly calls per SKU (10K Essentials, 5K Pro, 1K Enterprise)
+- `ip2location-io`: mcp: besides the local server there is a hosted endpoint https://mcp.ip2location.io/ (X-API-Key header)
+- `mapbox`: mcp.url: official hosted endpoint https://mcp.mapbox.com/mcp is also available
+- `openrouteservice`: docs/base_url: api.openrouteservice.org is deprecated in favour of api.heigit.org (10% quota since 2026-08-27, shut off 2026-09-28); plans moved to account.heigit.org
+- `openweathermap-api`: free_tier: free plan is 60 calls/min and 1,000,000 calls/month, not 1,000 calls/day
+- `openweathermap-api`: notes: One Call API 3.0 is marked deprecated; One Call 4.0 gives first 1,000 calls/day free, then pay per call
+- `openweathermap-api`: mcp: OpenWeather runs an official remote MCP at https://mcp.openweathermap.org/mcp (Bearer data key, 6 tools)
+- `tomorrow-io-api`: mcp.url: points to an aggregator (pulsemcp); official endpoint is https://api.tomorrow.io/v4/tomorrow-weather/mcp (X-Api-Key header), docs https://docs.tomorrow.io/reference/mcp
+- `canva-connect-api`: mcp: Canva has an official remote MCP server at https://mcp.canva.com/mcp (OAuth), 33 tools; entry says none
+- `framer`: free_tier: Server API FAQ says the API is free during beta (future per-use pricing with a monthly free allowance)
+- `framer`: mcp: Framer's agent integration (npx @framer/agent setup) states no separate MCP server is required; no MCP endpoint found
+- `penpot-api`: mcp: https://penpot.app/ai/mcp-server is a marketing page, not an endpoint; the server is local (http://localhost:4401/mcp) from github.com/penpot/penpot/tree/develop/mcp
+- `v0-platform-api-vercel`: mcp: v0 has an official remote MCP server at https://v0.app/api/mcp (OAuth); entry says none
+- `webflow-data-api`: mcp: url https://developers.webflow.com/_mcp/server is the docs-search MCP; the Webflow site MCP is https://mcp.webflow.com/mcp (OAuth), local package webflow-mcp-server
+- `circleci-api`: mcp: url points to github.com/CircleCI-Public/mcp-server-circleci, which is now deprecated; CircleCI's hosted MCP is https://mcp.circleci.com/v1/mcp (OAuth2 or personal API token)
+- `datadog-api`: mcp: url is the setup docs page, not an endpoint; the remote MCP endpoint is site-specific (selected per Datadog site), auth OAuth or API+app key headers
+- `datadog-api`: base_url: site-specific (api.datadoghq.com for US1, api.datadoghq.eu, api.us3/us5/ap1/ap2/uk1.datadoghq.com)
+- `docker-hub-api`: mcp: github.com/docker/hub-mcp is a local (stdio/http self-run) server, not a hosted remote URL
+- `github-api`: mcp: url is the repo; hosted remote endpoint is https://api.githubcopilot.com/mcp/
+- `gitlab-api`: mcp: remote endpoint is https://<gitlab-host>/api/v4/mcp (OAuth 2.0 with dynamic client registration, beta, all tiers incl. Free)
+- `maven-central-search`: mcp: community url is a GitHub repo (stdio/docker), not a remote endpoint; Sonatype also runs its own Guide MCP at https://mcp.guide.sonatype.com/mcp (bearer token, dependency intelligence, not the search API)
+- `pagerduty-api`: mcp: url is the GitHub repo, which was archived on 2026-09-04; PagerDuty-hosted MCP is https://mcp.pagerduty.com/mcp (EU: https://mcp.eu.pagerduty.com/mcp)
+- `postman-api`: mcp: url https://learning.postman.com/_mcp/server is the docs MCP; the Postman API MCP is https://mcp.postman.com/mcp (full), /minimal (default) or /code; EU https://mcp.eu.postman.com; npm @postman/postman-mcp-server
+- `postman-api`: free_tier: pricing page lists 10,000 Postman API calls/month on Free
+- `activepieces`: auth: endpoints docs say API key management is only available in the Platform and Enterprise editions, while the pricing page lists API access on Free
+- `activepieces`: mcp: url is a docs page; the MCP server is served per instance at https://<your-instance>/mcp with OAuth
+- `arcade-dev`: mcp: url is the integrations docs page; the endpoint is a per-gateway URL https://api.arcade.dev/mcp/<gateway-slug> (Arcade auth/OIDC, or Authorization: Bearer <api_key> + Arcade-User-ID headers)
+- `composio`: auth_hint: API reference uses the x-api-key header (x-org-api-key for org keys), not Authorization: Bearer
+- `composio`: mcp: url is a docs page; the hosted MCP endpoint is https://connect.composio.dev/mcp (OAuth)
+- `ifttt-api`: mcp: IFTTT runs an official remote MCP server at https://ifttt.com/mcp (OAuth, scope 'mcp'); entry says none
+- `keboola`: docs: keboola.docs.apiary.io is superseded; Storage API docs now at https://help.keboola.com/storage/api/ and reference at https://api.keboola.com/?service=storage
+- `keboola`: base_url: stack-specific (connection.keboola.com on AWS US); MCP URL is also stack-specific (mcp.keboola.com is US Virginia AWS)
+- `make-api-mcp`: mcp: url https://www.make.com/en/mcp is a marketing page; OAuth endpoint is https://mcp.make.com (token variant https://<zone>/mcp with Authorization: Bearer <MCP_TOKEN>); scenario-run tools on all plans, management tools paid only
+- `make-api-mcp`: free_tier: pricing page says Make API access requires Core plan or higher (not available on Free)
+- `merge-agent-handler`: free_tier: paid plans are Pro ($1,000/mo, 25,000+ credits) and Enterprise, not Starter/Business
+- `n8n-api`: mcp: url points to the MCP Server Trigger node; n8n also has a built-in instance-level MCP server at https://<instance>/mcp-server/http (OAuth or Bearer access token)
+- `n8n-api`: free_tier: docs state the n8n API is not available during the Cloud free trial
+- `n8n-api`: docs: https://docs.n8n.io/api/ now redirects to https://docs.n8n.io/connect/n8n-api
+- `nango`: mcp: Nango hosts an MCP server (Streamable HTTP) per agent session: POST a session to get mcp_url + session_token (Bearer); entry says none
+- `paragon-actionkit`: mcp: https://www.useparagon.com/mcp is a marketing page; the ActionKit MCP is self-hosted from github.com/useparagon/paragon-mcp (no hosted endpoint)
+- `paragon-actionkit`: free_tier: pricing page only shows 'Start free trial'; no lasting free tier or self-serve free quota confirmed
+- `pipedream-connect`: mcp: remote endpoint is https://remote.mcp.pipedream.net/v3 with Authorization Bearer + x-pd-project-id, x-pd-environment, x-pd-external-user-id, x-pd-app-slug headers (entry url is the docs page)
+- `stackone`: auth_hint: API uses HTTP Basic with the API key as username (Authorization: Basic ...) and an x-account-id header, not Bearer
+- `stackone`: mcp: url is a docs page; hosted MCP is https://mcp.stackone.com/mcp (OAuth) or https://api.stackone.com/mcp?token=<session_token>
+- `superglue`: auth_hint: API overview confirms Authorization: Bearer <API_KEY> (the 'not independently confirmed' note can be dropped)
+- `superglue`: mcp: default MCP server is served at /mcp on the superglue host (OAuth or creator API key); custom servers get named endpoints
+- `zapier-mcp-ai-actions`: free_tier: each successful MCP call uses two tasks, so the Free plan's 100 tasks cover about 50 calls

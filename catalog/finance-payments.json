@@ -13,10 +13,15 @@
    "auth": "api_key",
    "auth_hint": "X-API-Key header (or client-key for client-side)",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/Adyen/adyen-mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/Adyen/adyen-mcp",
+    "covers_full_api": false,
+    "source_url": "https://docs.adyen.com/development-resources/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
    "free_tier": "paid only; requires a signed merchant contract, pay per-transaction",
    "sdk": [
@@ -30,8 +35,22 @@
    "openapi": "https://github.com/Adyen/adyen-openapi",
    "llms_txt": null,
    "desc_en": "Process payments, payouts, and manage disputes/balances across global payment methods via REST API.",
-   "notes": "Requires an approved Adyen merchant account before API keys are issued; no self-serve free signup like Stripe.",
+   "notes": "Requires an approved Adyen merchant account before API keys are issued; no self-serve free signup like Stripe. Official local MCP server (alpha) covers Checkout and Management APIs.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "none",
+    "source_url": "https://www.adyen.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-API-key",
+    "format": "x-API-key: <API_KEY>",
+    "source_url": "https://docs.adyen.com/development-resources/api-authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://checkout-test.adyen.com/v71",
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": false,
@@ -70,10 +89,15 @@
    "auth": "api_key",
    "auth_hint": "APCA-API-KEY-ID + APCA-API-SECRET-KEY headers",
    "mcp": {
-    "type": "community",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/alpacahq/alpaca-mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/alpacahq/alpaca-mcp-server",
+    "covers_full_api": true,
+    "source_url": "https://github.com/alpacahq/alpaca-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "official"
    },
    "free_tier": "free paper trading (unlimited); free basic (IEX) market data feed",
    "sdk": [
@@ -85,6 +109,26 @@
    "desc_en": "Place stock/options/crypto trades and stream market data via REST/WebSocket API, with free paper trading.",
    "notes": "Commission-free live trading requires a funded brokerage account (US persons/entities eligibility rules apply).",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Paper trading free for all users; Basic market data (IEX) 200 API calls/min",
+    "source_url": "https://alpaca.markets/data",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "APCA-API-KEY-ID",
+    "format": "APCA-API-KEY-ID: <KEY_ID> + APCA-API-SECRET-KEY: <SECRET_KEY>",
+    "source_url": "https://docs.alpaca.markets/docs/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://paper-api.alpaca.markets",
+   "rate_limits": {
+    "summary": "Free Basic market data plan: 200 API calls/min, websocket limited to 30 symbols",
+    "source_url": "https://alpaca.markets/data",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -103,10 +147,25 @@
    "auth": "api_key",
    "auth_hint": "apikey query param",
    "mcp": {
-    "type": "community",
-    "url": null,
-    "domain_verified": null,
-    "kind": "community"
+    "type": "official",
+    "url": "https://mcp.alphavantage.co/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.alphavantage.co/mcp",
+    "repo": "https://github.com/alphavantage/alpha_vantage_mcp",
+    "tools": [
+     "TIME_SERIES_INTRADAY",
+     "TIME_SERIES_DAILY",
+     "GLOBAL_QUOTE",
+     "SYMBOL_SEARCH",
+     "COMPANY_OVERVIEW",
+     "NEWS_SENTIMENT",
+     "CURRENCY_EXCHANGE_RATE"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/alphavantage/alpha_vantage_mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 25 requests/day",
    "sdk": [],
@@ -115,6 +174,28 @@
    "desc_en": "Fetch stock, forex, crypto prices and technical/fundamental indicators via a free REST API.",
    "notes": "Free tier is limited to 25 requests/day; paid Premium plans needed for real-time/higher volume.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "25 API requests",
+    "period": "day",
+    "source_url": "https://www.alphavantage.co/support/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "apikey",
+    "format": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=<API_KEY>",
+    "source_url": "https://www.alphavantage.co/documentation/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://www.alphavantage.co/query",
+   "rate_limits": {
+    "summary": "Free tier: 25 requests/day",
+    "source_url": "https://www.alphavantage.co/support/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -132,12 +213,17 @@
    "auth": "api_key",
    "auth_hint": "CDP API Key ID/Secret, JWT-signed bearer requests",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/coinbase/payments-mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/coinbase/payments-mcp",
+    "covers_full_api": false,
+    "source_url": "https://docs.cdp.coinbase.com/agentic-wallet/mcp/quickstart.md",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "official"
    },
-   "free_tier": "free CDP API access (usage-based fees on some onchain services); x402 is pay-per-request, not a subscription",
+   "free_tier": "Free tier: CDP x402 Facilitator free for 1,000 onchain transactions/month, then $0.001/tx; payment verification always free",
    "sdk": [
     "python",
     "typescript"
@@ -145,8 +231,23 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Create wallets, send crypto, and pay per-API-call with stablecoins over HTTP (x402) via the Coinbase Developer Platform SDK.",
-   "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API - useful for agent-to-agent micropayments. No official MCP server confirmed.",
+   "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API - useful for agent-to-agent micropayments. Official local Payments MCP (npx @coinbase/payments-mcp) combines a wallet, onramp and x402 payments.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "1,000 onchain transactions via CDP x402 Facilitator, then $0.001/tx",
+    "period": "month",
+    "source_url": "https://docs.cdp.coinbase.com/x402/seller/facilitator",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <JWT signed with CDP Secret API Key> (+ X-Wallet-Auth: <wallet JWT> for wallet writes)",
+    "source_url": "https://docs.cdp.coinbase.com/api-reference/v2/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.cdp.coinbase.com/platform",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -176,16 +277,43 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.api.coingecko.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.api.coingecko.com/mcp",
+    "repo": "https://github.com/coingecko/coingecko-typescript/tree/main/packages/mcp-server",
+    "source_url": "https://docs.coingecko.com/reference/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
-   "free_tier": "free Demo API plan (~10k calls/month, 30 calls/min); keyless free MCP with shared rate limits",
+   "free_tier": "Free tier: Demo API plan 10,000 calls/month, 100 calls/min, attribution required; keyless free MCP with shared rate limits",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Fetch live and historical crypto prices, market data, and NFT data via REST API or the official CoinGecko MCP server.",
    "notes": "Free MCP endpoint (mcp.api.coingecko.com) requires no key at all, just shared rate limits; a Pro-key MCP endpoint also exists.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "10,000 calls (Demo plan, attribution required)",
+    "period": "month",
+    "source_url": "https://www.coingecko.com/en/api/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "x-cg-demo-api-key",
+    "format": "x-cg-demo-api-key: <API_KEY> (Pro: x-cg-pro-api-key on pro-api.coingecko.com)",
+    "source_url": "https://docs.coingecko.com/v3.0.1/reference/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.coingecko.com/api/v3",
+   "rate_limits": {
+    "summary": "Demo plan: 100 calls/min; keyless access is IP-rate-limited and shared",
+    "source_url": "https://docs.coingecko.com/docs/common-errors-rate-limit",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -216,6 +344,11 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.coinmarketcap.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.coinmarketcap.com/mcp",
+    "covers_full_api": false,
+    "source_url": "https://coinmarketcap.com/api/documentation/ai-agent-hub/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -229,6 +362,28 @@
    "desc_en": "Lets an agent fetch live and historical cryptocurrency prices, market caps, listings, exchange and DEX data, and indices like Fear & Greed.",
    "notes": "Basic plan covers core endpoints only (many historical endpoints are paid). Remote MCP over streamable HTTP; also x402 pay-per-request endpoints.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "15,000 credits (Basic plan)",
+    "period": "month",
+    "source_url": "https://coinmarketcap.com/api/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-CMC_PRO_API_KEY",
+    "format": "X-CMC_PRO_API_KEY: <API_KEY>",
+    "source_url": "https://coinmarketcap.com/api/documentation/guides/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://pro-api.coinmarketcap.com",
+   "rate_limits": {
+    "summary": "Basic (free) plan: 50 requests/min, 15,000 credits/month",
+    "source_url": "https://coinmarketcap.com/api/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -244,6 +399,30 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.dexpaprika.com/streamable-http",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.dexpaprika.com/streamable-http",
+    "repo": "https://github.com/coinpaprika/dexpaprika-mcp",
+    "tools": [
+     "getCapabilities",
+     "getNetworks",
+     "getStats",
+     "search",
+     "getNetworkDexes",
+     "getNetworkPools",
+     "getDexPools",
+     "getNetworkPoolsFilter",
+     "getPoolDetails",
+     "getPoolOHLCV",
+     "getPoolTransactions",
+     "getTokenDetails",
+     "getTokenPools",
+     "getTokenMultiPrices",
+     "getTopTokens",
+     "filterNetworkTokens"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/coinpaprika/dexpaprika-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -259,6 +438,26 @@
    "desc_en": "Lets an agent query on-chain DEX data across 36 blockchains: liquidity pools, swaps, token prices, OHLCV history and live price streams.",
    "notes": "Keyless hosted MCP (also SSE at https://mcp.dexpaprika.com/sse). Batch endpoints cost 1 credit per item; HTTP 402 when the monthly allowance runs out.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "quota": "No key needed; free API key gives 100K credits/month at 30 requests/min",
+    "period": "month",
+    "source_url": "https://dexpaprika.com/api/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "none",
+    "format": "No auth required; optional key as full header value: Authorization: api_YOUR_KEY",
+    "source_url": "https://docs.dexpaprika.com/api-reference/introduction",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.dexpaprika.com",
+   "rate_limits": {
+    "summary": "Free key: 100K credits/month, 30 requests/min; 1 request = 1 credit (batch = 1 credit per item)",
+    "source_url": "https://dexpaprika.com/api/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": true,
    "has_free_tier": true,
    "has_trial": false,
@@ -272,18 +471,44 @@
    "auth": "api_key",
    "auth_hint": "apikey query param",
    "mcp": {
-    "type": "community",
-    "url": null,
-    "domain_verified": null,
-    "kind": "community"
+    "type": "official",
+    "url": "https://financialmodelingprep.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://financialmodelingprep.com/mcp?apikey=<API_KEY>",
+    "covers_full_api": true,
+    "source_url": "https://site.financialmodelingprep.com/developer/docs/mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 250 requests/day (limited endpoints)",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Fetch company financials, stock prices, and fundamental data via a REST API.",
-   "notes": "Many endpoints (full financial statements, etc.) require a paid plan.",
+   "notes": "Many endpoints (full financial statements, etc.) require a paid plan. Official hosted MCP takes the key as ?apikey=<API_KEY>.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "250 calls/day, end-of-day data, 500MB trailing-30-day bandwidth (Basic plan)",
+    "period": "day",
+    "source_url": "https://site.financialmodelingprep.com/pricing-plans",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "apikey",
+    "format": "https://financialmodelingprep.com/stable/search-symbol?query=AAPL&apikey=<API_KEY> (or header apikey: <API_KEY>)",
+    "source_url": "https://site.financialmodelingprep.com/developer/docs",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://financialmodelingprep.com/stable",
+   "rate_limits": {
+    "summary": "Free Basic plan: 250 calls/day; 500MB bandwidth per trailing 30 days",
+    "source_url": "https://site.financialmodelingprep.com/pricing-plans",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -313,6 +538,24 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.mercadopago.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.mercadopago.com/mcp",
+    "repo": "https://github.com/mercadolibre/mercadopago-mcp-server",
+    "tools": [
+     "search-documentation",
+     "quality_checklist",
+     "quality_evaluation",
+     "save_webhook",
+     "notifications_history_diagnostics",
+     "create_test_user",
+     "add_money_test_user",
+     "get_credentials",
+     "create_application",
+     "application_list"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://www.mercadopago.com.br/developers/en/docs/mcp-server/tools.md",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -331,6 +574,20 @@
    "desc_en": "Lets an agent create checkout preferences, payments, refunds and subscriptions and look up transactions in Latin America's Mercado Pago.",
    "notes": "Available in Latin American countries (AR, BR, MX, CL, CO, PE, UY); live payments need a verified Mercado Pago account. Remote MCP uses OAuth and focuses on docs search, app/credential management, webhooks, test users and integration quality.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Test credentials usable immediately after creating an application (sandbox); production billed per transaction",
+    "source_url": "https://www.mercadopago.com.ar/developers/en/docs/your-integrations/credentials",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <ACCESS_TOKEN>",
+    "source_url": "https://www.mercadopago.com.ar/developers/en/reference",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.mercadopago.com",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -356,6 +613,27 @@
    "desc_en": "Fetch current and historical foreign-exchange rates for 200+ currencies via a REST API.",
    "notes": "Free plan is restricted to USD as the base currency; multi-base conversion requires a paid plan.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "1,000 requests/month, hourly updates, USD base only",
+    "period": "month",
+    "source_url": "https://openexchangerates.org/signup",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "app_id",
+    "format": "?app_id=<APP_ID> (or header Authorization: Token <APP_ID>)",
+    "source_url": "https://docs.openexchangerates.org/reference/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://openexchangerates.org/api",
+   "rate_limits": {
+    "summary": "Free plan capped at 1,000 requests/month",
+    "source_url": "https://openexchangerates.org/signup",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -374,7 +652,45 @@
    "auth_hint": "OAuth2 client-credentials Bearer token; MCP also supports an access-token env var",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.paypal.com",
+    "url": "https://mcp.paypal.com/http",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.paypal.com/http",
+    "repo": "https://github.com/paypal/agent-toolkit",
+    "tools": [
+     "create_product",
+     "list_product",
+     "show_product_details",
+     "list_disputes",
+     "get_dispute",
+     "accept_dispute_claim",
+     "create_invoice",
+     "list_invoices",
+     "get_invoice",
+     "send_invoice",
+     "send_invoice_reminder",
+     "cancel_sent_invoice",
+     "generate_invoice_qr_code",
+     "create_order",
+     "create_refund",
+     "get_order",
+     "get_refund",
+     "pay_order",
+     "get_merchant_insights",
+     "list_transaction",
+     "create_shipment_tracking",
+     "get_shipment_tracking",
+     "update_shipment_tracking",
+     "cancel_subscription",
+     "create_subscription",
+     "create_subscription_plan",
+     "list_subscription_plans",
+     "show_subscription_details",
+     "show_subscription_plan_details",
+     "update_subscription"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.paypal.ai/developer/tools/ai/mcp-quickstart",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -389,8 +705,27 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Process payments, payouts, invoices, and subscriptions via REST API or PayPal's official MCP server.",
-   "notes": "Separate sandbox MCP endpoint at https://mcp.sandbox.paypal.com for testing.",
+   "notes": "Remote MCP transports: /http (Streamable HTTP) or /sse; separate sandbox MCP endpoint at https://mcp.sandbox.paypal.com for testing.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Sandbox test environment with virtual accounts; live usage billed per transaction",
+    "source_url": "https://developer.paypal.com/tools/sandbox/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "oauth2",
+    "scheme": "bearer",
+    "format": "POST /v1/oauth2/token (client_credentials, client_id:secret) then Authorization: Bearer <ACCESS_TOKEN>",
+    "source_url": "https://developer.paypal.com/api/rest/authentication/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api-m.paypal.com",
+   "rate_limits": {
+    "summary": "No published limits; abusive traffic gets HTTP 429 RATE_LIMIT_REACHED; cache OAuth tokens, prefer webhooks over polling",
+    "source_url": "https://developer.paypal.com/api/rest/reference/rate-limiting/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -425,12 +760,25 @@
    "auth": "api_key",
    "auth_hint": "PLAID-CLIENT-ID + PLAID-SECRET headers",
    "mcp": {
-    "type": "none",
-    "url": null,
-    "domain_verified": null,
-    "kind": "none"
+    "type": "official",
+    "url": "https://api.dashboard.plaid.com/mcp/",
+    "maintainer": "vendor",
+    "remote_url": "https://api.dashboard.plaid.com/mcp/",
+    "repo": "https://github.com/plaid/ai-coding-toolkit",
+    "tools": [
+     "plaid_debug_item",
+     "plaid_get_link_analytics",
+     "plaid_get_tools_introduction",
+     "plaid_get_usages",
+     "plaid_list_teams"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://plaid.com/docs/resources/mcp/",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
-   "free_tier": "free Sandbox/Development access; Production requires approval and has per-item pricing",
+   "free_tier": "Free: Sandbox always free; Trial plan for new US/Canada teams (since 2026-04-15) gives 10 Production Items; then pay-as-you-go",
    "sdk": [
     "python",
     "node",
@@ -441,8 +789,29 @@
    "openapi": "https://github.com/plaid/plaid-openapi",
    "llms_txt": null,
    "desc_en": "Link bank accounts and fetch balances, transactions, and identity data via REST API/SDKs.",
-   "notes": "Sandbox is free and unlimited for development; moving to Production requires a Plaid approval/compliance review.",
+   "notes": "Dashboard MCP (OAuth client_credentials, scope mcp:dashboard) needs Production access; a local Sandbox MCP is in plaid/ai-coding-toolkit. Production requires a Plaid approval/compliance review.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "trial",
+    "quota": "Free Sandbox; Trial plan (new US/Canada teams since 2026-04-15): 10 Production Items, unlimited calls on them",
+    "period": "one_time",
+    "source_url": "https://plaid.com/docs/account/billing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "PLAID-CLIENT-ID",
+    "format": "PLAID-CLIENT-ID: <CLIENT_ID> and PLAID-SECRET: <SECRET> (or client_id/secret in JSON body)",
+    "source_url": "https://plaid.com/docs/api/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://production.plaid.com",
+   "rate_limits": {
+    "summary": "Per-Item and per-client limits per endpoint, e.g. /accounts/get 15/min per Item, 15,000/min per client; HTTP 429 RATE_LIMIT_EXCEEDED",
+    "source_url": "https://plaid.com/docs/errors/rate-limit-exceeded/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -482,7 +851,17 @@
    "auth_hint": "Authorization: Bearer <api_key> or apiKey query param",
    "mcp": {
     "type": "official",
-    "url": "https://massive.com/docs",
+    "url": "https://github.com/massive-com/mcp_massive",
+    "maintainer": "vendor",
+    "repo": "https://github.com/massive-com/mcp_massive",
+    "tools": [
+     "search_endpoints",
+     "call_api",
+     "query_data"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/massive-com/mcp_massive",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official"
    },
@@ -497,6 +876,26 @@
    "desc_en": "Query real-time and historical stocks, options, forex, and crypto market data via REST/WebSocket API.",
    "notes": "Polygon.io rebranded to 'Massive' in 2026; the old polygon.io domain now redirects there. Massive also offers an MCP server for AI tools.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Stocks Basic: 5 API calls/min, end-of-day data, 2 years history",
+    "source_url": "https://massive.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "apiKey",
+    "format": "?apiKey=<API_KEY> (or Authorization: Bearer <API_KEY>)",
+    "source_url": "https://massive.com/docs/rest/quickstart",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.massive.com",
+   "rate_limits": {
+    "summary": "Free Basic plan: 5 API calls/minute",
+    "source_url": "https://massive.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -512,13 +911,24 @@
    "name": "Square API",
    "homepage": "https://squareup.com/us/en/developers",
    "docs": "https://developer.squareup.com/reference/square",
-   "auth": "oauth2",
+   "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <access_token> (personal token or OAuth2)",
    "mcp": {
-    "type": "community",
-    "url": null,
-    "domain_verified": null,
-    "kind": "community"
+    "type": "official",
+    "url": "https://mcp.squareup.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.squareup.com/mcp",
+    "repo": "https://github.com/square/square-mcp-server",
+    "tools": [
+     "get_service_info",
+     "get_type_info",
+     "make_api_request"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://developer.squareup.com/docs/mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free to integrate; pay per-transaction processing fees; free Sandbox for testing",
    "sdk": [
@@ -534,6 +944,25 @@
    "desc_en": "Process in-person/online payments, manage orders, invoices, and catalog via REST API and SDKs.",
    "notes": "Requires a Square merchant account; Sandbox environment is free for development/testing. Missing from candidate list despite being a major agent-callable payments API.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Unlimited free Sandbox API calls; production billed per transaction",
+    "source_url": "https://developer.squareup.com/docs/devtools/sandbox/overview",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <ACCESS_TOKEN> plus Square-Version: <YYYY-MM-DD>",
+    "source_url": "https://developer.squareup.com/docs/build-basics/access-tokens",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://connect.squareup.com/v2",
+   "rate_limits": {
+    "summary": "No published numbers; bursts may get HTTP 429 RATE_LIMITED; use backoff and batch endpoints",
+    "source_url": "https://developer.squareup.com/docs/build-basics/general-considerations/handling-errors",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -562,10 +991,26 @@
    "homepage": "https://docs.stripe.com/api",
    "docs": "https://docs.stripe.com/api",
    "auth": "api_key+oauth2",
-   "auth_hint": "Authorization: Bearer <secret_key> (or OAuth/Agent key for MCP)",
+   "auth_hint": "Authorization: Bearer <secret_key>; from 2026-10-31 MCP accepts only OAuth or Agent-tagged API keys (others get 401)",
    "mcp": {
     "type": "official",
     "url": "https://mcp.stripe.com",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.stripe.com",
+    "tools": [
+     "stripe_api_search",
+     "stripe_api_details",
+     "stripe_api_read",
+     "stripe_api_write",
+     "get_stripe_account_info",
+     "stripe_analytics",
+     "get_balance_summary",
+     "search_stripe_documentation",
+     "stripe_implementation_planner",
+     "send_stripe_feedback"
+    ],
+    "source_url": "https://docs.stripe.com/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted"
    },
@@ -584,6 +1029,25 @@
    "desc_en": "Create payments, subscriptions, invoices, and refunds programmatically via REST API or the official Stripe MCP server.",
    "notes": "From Oct 31, 2026, Stripe MCP requires an 'Agent' API key or OAuth - full-access/restricted keys without the Agent tag stop working.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "No setup or monthly fees; pay per transaction; free sandbox (test mode)",
+    "source_url": "https://stripe.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "curl -u <SECRET_KEY>: (key as username) or Authorization: Bearer <SECRET_KEY>",
+    "source_url": "https://docs.stripe.com/api/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.stripe.com/v1",
+   "rate_limits": {
+    "summary": "Global 100 req/s live, 25 req/s sandbox; 25 req/s per endpoint; reads capped at avg 500 per transaction (min 10,000/month)",
+    "source_url": "https://docs.stripe.com/rate-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -617,20 +1081,50 @@
    "homepage": "https://docs.wise.com",
    "docs": "https://docs.wise.com/api-docs",
    "auth": "api_key+oauth2",
-   "auth_hint": "Authorization: Bearer <API token> (personal) or OAuth2 (Wise Platform partners)",
+   "auth_hint": "Authorization: Bearer <API token> (personal, Wise business accounts) or OAuth2 (Wise Platform partners)",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "community",
+    "url": "https://github.com/2060-io/mcp-wise",
+    "maintainer": "community",
+    "repo": "https://github.com/2060-io/mcp-wise",
+    "tools": [
+     "list_profiles",
+     "get_balances",
+     "get_exchange_rate",
+     "list_transfers",
+     "get_transfer_status",
+     "list_recipients",
+     "send_money",
+     "create_invoice",
+     "get_balance_currencies"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/2060-io/mcp-wise",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "community"
    },
    "free_tier": "free API access; normal Wise transfer fees apply per transaction; sandbox available",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Send international transfers, check exchange rates, and manage multi-currency balances via REST API.",
-   "notes": "Full Wise Platform (send-money-as-a-partner) access requires a partnership agreement; a personal token covers your own account only.",
+   "notes": "Personal tokens cover only quotes, recipients, transfers, batch groups and transfer events; funding and balance statements only for US/CA/AU/NZ/SG/MY accounts. Full access needs a partnership agreement.",
    "verified": "2026-09-24",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Personal API token created from a Wise business account; limited endpoints",
+    "source_url": "https://docs.wise.com/guides/developer/auth-and-security/personal-api-token",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <API_TOKEN>",
+    "source_url": "https://docs.wise.com/guides/developer/auth-and-security/personal-api-token",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.wise.com",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

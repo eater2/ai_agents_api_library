@@ -1,0 +1,1598 @@
+{
+  "canva-connect-api": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <access_token>",
+      "source_url": "https://www.canva.dev/docs/connect/authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.canva.com/rest/v1",
+    "rate_limits": {
+      "summary": "Per endpoint; e.g. create export job 20 req/min per user, 750 exports/5 min per app",
+      "source_url": "https://www.canva.dev/docs/connect/api-reference/exports/create-design-export-job/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "design:meta:read",
+        "design:content:read",
+        "design:content:write",
+        "asset:read",
+        "asset:write",
+        "folder:read",
+        "comment:write"
+      ],
+      "source_url": "https://www.canva.dev/docs/connect/authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": {
+      "value": true,
+      "how": "POST /v1/exports returns a job id; poll GET /v1/exports/{exportId} until success/failed",
+      "source_url": "https://www.canva.dev/docs/connect/api-reference/exports/create-design-export-job/"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.canva.com/mcp",
+      "repo": null,
+      "tools": [
+        "search-designs",
+        "get-design",
+        "get-design-content",
+        "generate-design",
+        "create-design-from-candidate",
+        "export-design",
+        "upload-asset-from-url",
+        "autofill-design",
+        "resize-design",
+        "start-editing-transaction",
+        "perform-editing-operations",
+        "commit-editing-transaction",
+        "comment-on-design",
+        "create-folder"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://www.canva.dev/docs/apps/mcp/tools/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Canva has an official remote MCP server at https://mcp.canva.com/mcp (OAuth), 33 tools; entry says none"
+    ]
+  },
+  "figma-rest-api-dev-mode-mcp": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Starter plan: Tier 1 endpoints 10 req/min for Dev/Full seats; View/Collab seats up to 20 Tier 1 calls/month",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://developers.figma.com/docs/rest-api/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-Figma-Token",
+      "scheme": null,
+      "format": "X-Figma-Token: <personal_access_token> (OAuth apps: Authorization: Bearer <token>)",
+      "source_url": "https://developers.figma.com/docs/rest-api/personal-access-tokens/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.figma.com/v1",
+    "rate_limits": {
+      "summary": "Tiered per seat and plan: Tier 1 10-20 req/min, Tier 2 25-100 req/min, Tier 3 50-150 req/min for Dev/Full seats; View/Collab much lower",
+      "source_url": "https://developers.figma.com/docs/rest-api/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "file_content:read",
+        "file_metadata:read",
+        "file_comments:read",
+        "file_comments:write",
+        "file_variables:read",
+        "current_user:read"
+      ],
+      "source_url": "https://developers.figma.com/docs/rest-api/scopes/",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.figma.com/mcp",
+      "repo": null,
+      "tools": [
+        "get_design_context",
+        "get_metadata",
+        "get_screenshot",
+        "get_variable_defs",
+        "get_code_connect_map",
+        "search_design_system",
+        "get_figjam",
+        "download_assets",
+        "create_new_file",
+        "generate_figma_design",
+        "generate_diagram",
+        "use_figma",
+        "upload_assets",
+        "whoami"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "framer": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Server API free of charge during beta",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.framer.com/developers/server-api-faq",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "connect(projectUrl, <FRAMER_API_KEY>) via the framer-api npm SDK (WebSocket, no REST header)",
+      "source_url": "https://www.framer.com/developers/server-api-quick-start",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "none",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: Server API FAQ says the API is free during beta (future per-use pricing with a monthly free allowance)",
+      "mcp: Framer's agent integration (npx @framer/agent setup) states no separate MCP server is required; no MCP endpoint found"
+    ]
+  },
+  "penpot-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Professional plan $0: up to 10GB storage, up to 8 team members",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://penpot.app/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: Token <access_token>",
+      "source_url": "https://design.penpot.app/api/_doc",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://design.penpot.app/api/main/methods",
+    "rate_limits": {
+      "summary": "Per-user rate limit (all tokens of a user share it); values not published",
+      "source_url": "https://design.penpot.app/api/_doc",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/penpot/penpot/tree/develop/mcp",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://penpot.app/ai/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: https://penpot.app/ai/mcp-server is a marketing page, not an endpoint; the server is local (http://localhost:4401/mcp) from github.com/penpot/penpot/tree/develop/mcp"
+    ]
+  },
+  "v0-platform-api-vercel": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "$5 of included credits (Free plan, 7 messages/day); API use on Free not confirmed",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://v0.app/docs/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <V0_API_KEY>",
+      "source_url": "https://v0.app/docs/api/platform/reference/chats/create",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.v0.dev/v1",
+    "rate_limits": {
+      "summary": "10,000 API requests/day, 1,000 chat messages/day, 100 deployments/day",
+      "source_url": "https://v0.app/docs/api/platform/overview",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "responseMode=async returns a placeholder message; poll the chat/message by id (or use experimental SSE stream)",
+      "source_url": "https://v0.app/docs/api/platform/reference/chats/create"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://v0.app/api/mcp",
+      "repo": null,
+      "tools": [
+        "chats.create",
+        "chats.createAsync",
+        "chats.getUrl",
+        "chats.getPreview",
+        "chats.getFiles",
+        "chats.deploy",
+        "messages.send",
+        "messages.sendAsync",
+        "messages.resolveAsync",
+        "messages.get"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://v0.app/docs/api/v2/guides/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: v0 has an official remote MCP server at https://v0.app/api/mcp (OAuth); entry says none"
+    ]
+  },
+  "webflow-data-api": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <site_token|workspace_token|oauth_token>",
+      "source_url": "https://developers.webflow.com/data/reference/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.webflow.com/v2",
+    "rate_limits": {
+      "summary": "60 req/min on Starter/Basic site plans, 120 req/min on CMS/eCommerce/Business; 429 with Retry-After",
+      "source_url": "https://developers.webflow.com/data/reference/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "sites:read",
+        "sites:write",
+        "cms:read",
+        "cms:write",
+        "pages:read",
+        "pages:write",
+        "assets:read",
+        "forms:read"
+      ],
+      "source_url": "https://developers.webflow.com/data/reference/scopes",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.webflow.com/mcp",
+      "repo": "https://github.com/webflow/mcp-server",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://developers.webflow.com/mcp/reference/getting-started",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: url https://developers.webflow.com/_mcp/server is the docs-search MCP; the Webflow site MCP is https://mcp.webflow.com/mcp (OAuth), local package webflow-mcp-server"
+    ]
+  },
+  "circleci-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "30,000 credits (up to 6,000 build minutes on small Docker), up to 5 active users",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://circleci.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Circle-Token",
+      "scheme": null,
+      "format": "Circle-Token: <CIRCLE_TOKEN>",
+      "source_url": "https://circleci.com/docs/api/v2/index.html",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://circleci.com/api/v2",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.circleci.com/v1/mcp",
+      "repo": "https://github.com/CircleCI-Public/mcp-server-circleci",
+      "tools": [
+        "list_runs",
+        "get_run",
+        "list_workflows",
+        "get_workflow",
+        "rerun_workflow",
+        "cancel_workflow",
+        "list_jobs",
+        "get_job",
+        "get_job_logs",
+        "list_artifacts",
+        "list_job_tests",
+        "download_usage_data"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: url points to github.com/CircleCI-Public/mcp-server-circleci, which is now deprecated; CircleCI's hosted MCP is https://mcp.circleci.com/v1/mcp (OAuth2 or personal API token)"
+    ]
+  },
+  "datadog-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Infrastructure free plan: up to 5 hosts, 1-day metric retention",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://www.datadoghq.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "DD-API-KEY",
+      "scheme": null,
+      "format": "DD-API-KEY: <api_key> and DD-APPLICATION-KEY: <app_key>",
+      "source_url": "https://docs.datadoghq.com/api/latest/authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.datadoghq.com",
+    "rate_limits": {
+      "summary": "Per-endpoint limits (429 when exceeded); metric data-point submission is not rate limited",
+      "source_url": "https://docs.datadoghq.com/api/latest/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": null,
+      "tools": [
+        "search_datadog_logs",
+        "analyze_datadog_logs",
+        "search_datadog_metrics",
+        "get_datadog_metric",
+        "search_datadog_monitors",
+        "search_datadog_incidents",
+        "get_datadog_incident",
+        "search_datadog_dashboards",
+        "search_datadog_spans",
+        "get_datadog_trace",
+        "search_datadog_hosts",
+        "search_datadog_events",
+        "create_datadog_notebook"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.datadoghq.com/bits_ai/mcp_server/tools/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: url is the setup docs page, not an endpoint; the remote MCP endpoint is site-specific (selected per Datadog site), auth OAuth or API+app key headers",
+      "base_url: site-specific (api.datadoghq.com for US1, api.datadoghq.eu, api.us3/us5/ap1/ap2/uk1.datadoghq.com)"
+    ]
+  },
+  "docker-hub-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Personal (free) account: 200 image pulls per 6 hours (unauthenticated 100 per IP)",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.docker.com/docker-hub/usage/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "POST /v2/auth/token with username + PAT, then Authorization: Bearer <token>",
+      "source_url": "https://docs.docker.com/reference/api/hub/latest/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://hub.docker.com",
+    "rate_limits": {
+      "summary": "Abuse limit of thousands of requests/min per IP; X-RateLimit-* headers, 429 with Retry-After; pulls 200/6h free, 100/6h anonymous",
+      "source_url": "https://docs.docker.com/docker-hub/usage/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/docker/hub-mcp",
+      "tools": [
+        "search",
+        "get_namespaces",
+        "list_repositories_by_namespace",
+        "get_repository_info",
+        "check_repository",
+        "create_repository",
+        "update_repository_info",
+        "list_repository_tags",
+        "read_repository_tag",
+        "check_repository_tag",
+        "docker_hardened_images"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/docker/hub-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: github.com/docker/hub-mcp is a local (stdio/http self-run) server, not a hosted remote URL"
+    ]
+  },
+  "github-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "5,000 requests/hour authenticated; 60/hour unauthenticated",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <token> (plus X-GitHub-Api-Version header)",
+      "source_url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.github.com",
+    "rate_limits": {
+      "summary": "5,000 req/hour per user token (15,000 on Enterprise Cloud); 60/hour unauthenticated; secondary limits e.g. 100 concurrent, 900 points/min",
+      "source_url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "repo",
+        "read:org",
+        "workflow",
+        "gist",
+        "user",
+        "notifications"
+      ],
+      "source_url": "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.githubcopilot.com/mcp/",
+      "repo": "https://github.com/github/github-mcp-server",
+      "tools": [
+        "get_file_contents",
+        "issue_read",
+        "issue_write",
+        "create_pull_request",
+        "merge_pull_request",
+        "search_issues",
+        "actions_list",
+        "actions_get",
+        "list_code_scanning_alerts"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://github.com/github/github-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: url is the repo; hosted remote endpoint is https://api.githubcopilot.com/mcp/"
+    ]
+  },
+  "gitlab-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "GitLab.com Free: 100 authenticated API requests/min burst, 5,000/hour; unauthenticated 60/hour",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://docs.gitlab.com/user/gitlab_com/rate_limits/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "PRIVATE-TOKEN",
+      "scheme": null,
+      "format": "PRIVATE-TOKEN: <personal_access_token> (OAuth: Authorization: Bearer <token>)",
+      "source_url": "https://docs.gitlab.com/api/rest/authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://gitlab.com/api/v4",
+    "rate_limits": {
+      "summary": "GitLab.com Free: 100 req/min burst and 5,000 req/hour per user; unauthenticated 60/hour",
+      "source_url": "https://docs.gitlab.com/user/gitlab_com/rate_limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://gitlab.com/api/v4/mcp",
+      "repo": null,
+      "tools": [
+        "get_project",
+        "create_issue",
+        "get_issue",
+        "list_merge_requests",
+        "get_merge_request",
+        "get_merge_request_diffs",
+        "save_merge_request",
+        "list_pipelines",
+        "get_pipeline",
+        "get_job",
+        "get_repository_file",
+        "list_commits",
+        "search",
+        "semantic_search",
+        "list_work_items",
+        "save_work_item"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server_tools/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: remote endpoint is https://<gitlab-host>/api/v4/mcp (OAuth 2.0 with dynamic client registration, beta, all tiers incl. Free)"
+    ]
+  },
+  "globalping": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": "250 tests/hour anonymous (50 probes/measurement); 500 tests/hour with free account token",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://github.com/jsdelivr/globalping",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "No auth required; optional Authorization: Bearer <GLOBALPING_TOKEN> for higher limits",
+      "source_url": "https://github.com/jsdelivr/globalping-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.globalping.io/v1",
+    "rate_limits": {
+      "summary": "250 tests/hour anonymous, 500 tests/hour registered; 2 GET requests/s per measurement",
+      "source_url": "https://github.com/jsdelivr/globalping",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "POST /v1/measurements returns an id; poll GET /v1/measurements/{id}",
+      "source_url": "https://github.com/jsdelivr/globalping"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.globalping.dev/mcp",
+      "repo": "https://github.com/jsdelivr/globalping-mcp-server",
+      "tools": [
+        "ping",
+        "traceroute",
+        "dns",
+        "mtr",
+        "http",
+        "locations",
+        "limits",
+        "getMeasurement",
+        "compareLocations",
+        "help",
+        "authStatus"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/jsdelivr/globalping-mcp-server",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "maven-central-search": {
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": "https://central.sonatype.org/search/rest-api-guide/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "No auth: GET https://search.maven.org/solrsearch/select?q=<query>&rows=20&wt=json",
+      "source_url": "https://central.sonatype.org/search/rest-api-guide/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://search.maven.org/solrsearch/select",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "community",
+      "remote_url": null,
+      "repo": "https://github.com/arvindand/maven-tools-mcp",
+      "tools": [
+        "get_latest_version",
+        "check_version_exists",
+        "check_multiple_dependencies",
+        "compare_dependency_versions",
+        "analyze_dependency_age",
+        "analyze_release_patterns",
+        "analyze_project_health",
+        "analyze_pom_dependencies",
+        "recommend_pom_upgrades"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/arvindand/maven-tools-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: community url is a GitHub repo (stdio/docker), not a remote endpoint; Sonatype also runs its own Guide MCP at https://mcp.guide.sonatype.com/mcp (bearer token, dependency intelligence, not the search API)"
+    ]
+  },
+  "pagerduty-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Free plan: up to 5 users, 100 SMS/phone notifications, 1 on-call schedule, 1 escalation policy",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.pagerduty.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: Token token=<API_KEY> (OAuth: Authorization: Bearer <token>)",
+      "source_url": "https://raw.githubusercontent.com/PagerDuty/api-schema/main/reference/REST/openapiv3.json",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.pagerduty.com",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.pagerduty.com/mcp",
+      "repo": "https://github.com/PagerDuty/pagerduty-mcp-server",
+      "tools": [
+        "browse_incidents",
+        "manage_incidents",
+        "browse_services",
+        "manage_services",
+        "browse_schedules",
+        "manage_schedules",
+        "browse_teams",
+        "browse_escalation_policies",
+        "browse_users",
+        "browse_change_events",
+        "browse_event_orchestrations",
+        "browse_status_pages"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: url is the GitHub repo, which was archived on 2026-09-04; PagerDuty-hosted MCP is https://mcp.pagerduty.com/mcp (EU: https://mcp.eu.pagerduty.com/mcp)"
+    ]
+  },
+  "postman-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "10,000 Postman API calls, 1 user",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.postman.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-Key",
+      "scheme": null,
+      "format": "X-API-Key: <POSTMAN_API_KEY>",
+      "source_url": "https://learning.postman.com/docs/developer/postman-api/authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.getpostman.com",
+    "rate_limits": {
+      "summary": "300 requests/min per API key; monthly call quota by plan (10,000 on Free)",
+      "source_url": "https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.postman.com/mcp",
+      "repo": "https://github.com/postmanlabs/postman-mcp-server",
+      "tools": null,
+      "covers_full_api": true,
+      "source_url": "https://learning.postman.com/docs/developer/postman-api/postman-mcp-server/overview/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: url https://learning.postman.com/_mcp/server is the docs MCP; the Postman API MCP is https://mcp.postman.com/mcp (full), /minimal (default) or /code; EU https://mcp.eu.postman.com; npm @postman/postman-mcp-server",
+      "free_tier: pricing page lists 10,000 Postman API calls/month on Free"
+    ]
+  },
+  "reflag": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "1,000 monthly tracked users, unlimited seats, 3 environments; no overage",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://reflag.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <REFLAG_API_KEY>",
+      "source_url": "https://docs.reflag.com/api/reflag-rest-api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://app.reflag.com/api",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://app.reflag.com/api/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.reflag.com/api/mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "sentry-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Developer plan: 1 user, 5,000 errors, 5GB logs, 50 replays, 5M spans",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://sentry.io/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <auth_token>",
+      "source_url": "https://docs.sentry.io/api/auth/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://sentry.io/api/0",
+    "rate_limits": {
+      "summary": "Per caller+endpoint request-rate and concurrency limits (values not published)",
+      "source_url": "https://docs.sentry.io/api/ratelimits/",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.sentry.dev/mcp",
+      "repo": "https://github.com/getsentry/sentry-mcp",
+      "tools": [
+        "search_events",
+        "search_issues"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://mcp.sentry.dev/",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "supabase-management-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "2 active projects, 500 MB database, 50,000 MAUs, 5 GB egress; paused after 1 week inactivity",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://supabase.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <access_token>",
+      "source_url": "https://supabase.com/docs/reference/api/introduction",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.supabase.com/v1",
+    "rate_limits": {
+      "summary": "120 req/min per user per project/org; analytics 30/min; database context 10/min",
+      "source_url": "https://supabase.com/docs/reference/api/introduction",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.supabase.com/mcp",
+      "repo": "https://github.com/supabase/mcp",
+      "tools": [
+        "list_tables",
+        "list_extensions",
+        "list_migrations",
+        "apply_migration",
+        "execute_sql",
+        "query_logs",
+        "get_advisors",
+        "get_project_url",
+        "get_publishable_keys",
+        "generate_typescript_types",
+        "list_edge_functions",
+        "deploy_edge_function",
+        "list_projects",
+        "create_project",
+        "pause_project",
+        "restore_project",
+        "search_docs",
+        "create_branch",
+        "merge_branch"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://supabase.com/docs/guides/getting-started/mcp",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "activepieces": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100 credits per day, unlimited flows; free plan lists MCPs and API access",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://www.activepieces.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY>",
+      "source_url": "https://www.activepieces.com/docs/endpoints/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://cloud.activepieces.com/api/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://www.activepieces.com/docs/mcp/overview",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth: endpoints docs say API key management is only available in the Platform and Enterprise editions, while the pricing page lists API access on Free",
+      "mcp: url is a docs page; the MCP server is served per instance at https://<your-instance>/mcp with OAuth"
+    ]
+  },
+  "arcade-dev": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "2,000 auth events + 2,000 tool calls",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.arcade.dev/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: Bearer <ARCADE_API_KEY>",
+      "source_url": "https://api.arcade.dev/v1/swagger",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.arcade.dev",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://api.arcade.dev/mcp/{gateway-slug}",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.arcade.dev/en/guides/mcp-gateways",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: url is the integrations docs page; the endpoint is a per-gateway URL https://api.arcade.dev/mcp/<gateway-slug> (Arcade auth/OIDC, or Authorization: Bearer <api_key> + Arcade-User-ID headers)"
+    ]
+  },
+  "composio": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100,000 tool calls + 50,000 trigger events, 3 team members",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://composio.dev/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "scheme": null,
+      "format": "x-api-key: <COMPOSIO_API_KEY> (org-level: x-org-api-key)",
+      "source_url": "https://docs.composio.dev/reference",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://backend.composio.dev/api/v3.1",
+    "rate_limits": {
+      "summary": "2,000 req/min on Free, up to 10,000 req/min on higher plans",
+      "source_url": "https://composio.dev/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://connect.composio.dev/mcp",
+      "repo": null,
+      "tools": [
+        "COMPOSIO_SEARCH_TOOLS",
+        "COMPOSIO_GET_TOOL_SCHEMAS",
+        "COMPOSIO_MULTI_EXECUTE_TOOL",
+        "COMPOSIO_MANAGE_CONNECTIONS",
+        "COMPOSIO_WAIT_FOR_CONNECTIONS",
+        "COMPOSIO_REMOTE_WORKBENCH",
+        "COMPOSIO_REMOTE_BASH_TOOL"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://docs.composio.dev/docs/composio-connect",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: API reference uses the x-api-key header (x-org-api-key for org keys), not Authorization: Bearer",
+      "mcp: url is a docs page; the hosted MCP endpoint is https://connect.composio.dev/mcp (OAuth)"
+    ]
+  },
+  "gumloop": {
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": true,
+      "quota": "14-day Pro trial (20,000 credits), one-time, converts to paid unless cancelled",
+      "period": "one_time",
+      "watermark": null,
+      "source_url": "https://docs.gumloop.com/core-concepts/credits",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <GUMLOOP_API_KEY> (or ?api_key= query parameter)",
+      "source_url": "https://docs.gumloop.com/api-reference/getting-started",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.gumloop.com/api/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": {
+      "value": true,
+      "how": "Runs start asynchronously; webhook triggers return {success:true} immediately, results via run history/tools",
+      "source_url": "https://docs.gumloop.com/api-reference/getting-started"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.gumloop.com/gumloop/mcp",
+      "repo": null,
+      "tools": [
+        "list_agents",
+        "create_agent",
+        "start_agent",
+        "get_agent_status",
+        "send_session_message",
+        "list_skills",
+        "create_skill",
+        "list_mcp_servers",
+        "call_mcp_tool",
+        "search_documentation",
+        "get_audit_logs",
+        "export_data"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://docs.gumloop.com/mcp-server/overview",
+      "checked_at": "2026-09-24"
+    }
+  },
+  "ifttt-api": {
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": "Free plan (2 Applets) exists but Webhooks require Pro ($2.99/mo); Make a web request needs Pro+",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://ifttt.com/plans",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Webhooks key in URL path: https://maker.ifttt.com/trigger/{event}/with/key/{key}; Connect API: IFTTT-Service-Key header",
+      "source_url": "https://ifttt.com/docs/connect_api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://maker.ifttt.com",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://ifttt.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://ifttt.com/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: IFTTT runs an official remote MCP server at https://ifttt.com/mcp (OAuth, scope 'mcp'); entry says none"
+    ]
+  },
+  "keboola": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "1 project; 120 compute minutes in first month, then 60 minutes/month",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.keboola.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-StorageApi-Token",
+      "scheme": null,
+      "format": "X-StorageApi-Token: <STORAGE_API_TOKEN>",
+      "source_url": "https://help.keboola.com/storage/api/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": null,
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.keboola.com/mcp",
+      "repo": "https://github.com/keboola/mcp-server",
+      "tools": [
+        "get_buckets",
+        "get_tables",
+        "query_data",
+        "get_components",
+        "get_configs",
+        "create_config",
+        "create_sql_transformation",
+        "get_jobs",
+        "run_job",
+        "create_flow",
+        "get_flows",
+        "deploy_data_app",
+        "search",
+        "docs_query",
+        "get_project_info"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://help.keboola.com/ai/mcp-server/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "docs: keboola.docs.apiary.io is superseded; Storage API docs now at https://help.keboola.com/storage/api/ and reference at https://api.keboola.com/?service=storage",
+      "base_url: stack-specific (connection.keboola.com on AWS US); MCP URL is also stack-specific (mcp.keboola.com is US Virginia AWS)"
+    ]
+  },
+  "make-api-mcp": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Free plan: up to 1,000 credits/month, 2 active scenarios; Make API access only on Core and higher",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.make.com/en/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: Token <api_token>",
+      "source_url": "https://developers.make.com/api-documentation/getting-started/making-your-first-api-request",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://{zone}.make.com/api/v2",
+    "rate_limits": {
+      "summary": "Core 60 req/min, Pro 120, Teams 240, Enterprise 1,000",
+      "source_url": "https://developers.make.com/api-documentation/getting-started/rate-limiting",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "scenarios:read",
+        "scenarios:write",
+        "connections:read",
+        "datastores:read",
+        "datastores:write",
+        "hooks:read",
+        "teams:read"
+      ],
+      "source_url": "https://developers.make.com/api-documentation/authentication/api-scopes-overview",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": {
+      "value": true,
+      "how": "MCP scenario-run tools return after 25-40 s; longer runs continue (up to 40 min) and results are fetched by executionId",
+      "source_url": "https://developers.make.com/mcp-server"
+    },
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.make.com",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://developers.make.com/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: url https://www.make.com/en/mcp is a marketing page; OAuth endpoint is https://mcp.make.com (token variant https://<zone>/mcp with Authorization: Bearer <MCP_TOKEN>); scenario-run tools on all plans, management tools paid only",
+      "free_tier: pricing page says Make API access requires Core plan or higher (not available on Free)"
+    ]
+  },
+  "merge-agent-handler": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "2,000 credits, unlimited registered users and tool packs (prototyping/testing)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.merge.dev/pricing/agent-handler",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY>",
+      "source_url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://ah-api.merge.dev/api/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://ah-api.merge.dev/api/v1/tool-packs/{TOOL_PACK_ID}/registered-users/{REGISTERED_USER_ID}/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: paid plans are Pro ($1,000/mo, 25,000+ credits) and Enterprise, not Starter/Business"
+    ]
+  },
+  "n8n-api": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Self-hosted Community Edition is free; Cloud trial (1,000 executions) has no API access",
+      "period": null,
+      "watermark": null,
+      "source_url": "https://n8n.io/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-N8N-API-KEY",
+      "scheme": null,
+      "format": "X-N8N-API-KEY: <api_key>",
+      "source_url": "https://docs.n8n.io/connect/n8n-api/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://<instance>/api/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://<instance>/mcp-server/http",
+      "repo": null,
+      "tools": [
+        "search_workflows",
+        "get_workflow_details",
+        "execute_workflow",
+        "test_workflow",
+        "publish_workflow",
+        "get_workflow_execution",
+        "search_workflow_executions",
+        "list_credentials",
+        "search_nodes",
+        "create_workflow_from_code",
+        "update_workflow",
+        "validate_workflow",
+        "archive_workflow",
+        "search_data_tables"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.n8n.io/connect/connect-to-n8n-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: url points to the MCP Server Trigger node; n8n also has a built-in instance-level MCP server at https://<instance>/mcp-server/http (OAuth or Bearer access token)",
+      "free_tier: docs state the n8n API is not available during the Cloud free trial",
+      "docs: https://docs.n8n.io/api/ now redirects to https://docs.n8n.io/connect/n8n-api"
+    ]
+  },
+  "nango": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "10 connections, 10 compute hours, 10GB data transfer; hard-capped",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://nango.dev/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <NANGO_API_KEY>",
+      "source_url": "https://nango.dev/docs/reference/api/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.nango.dev",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": null,
+      "tools": [
+        "nango_tool_search",
+        "nango_execute",
+        "nango_proxy",
+        "nango_create_connection"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://nango.dev/docs/implementation-guides/use-cases/tool-calling/implement-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: Nango hosts an MCP server (Streamable HTTP) per agent session: POST a session to get mcp_url + session_token (Bearer); entry says none"
+    ]
+  },
+  "paragon-actionkit": {
+    "free_plan": {
+      "kind": null,
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "watermark": null,
+      "source_url": null,
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <Paragon User Token (JWT signed with project signing key)>",
+      "source_url": "https://docs.useparagon.com/actionkit/openapi.json",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://actionkit.useparagon.com",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/useparagon/paragon-mcp",
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.useparagon.com/actionkit/getting-started",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: https://www.useparagon.com/mcp is a marketing page; the ActionKit MCP is self-hosted from github.com/useparagon/paragon-mcp (no hosted endpoint)",
+      "free_tier: pricing page only shows 'Start free trial'; no lasting free tier or self-serve free quota confirmed"
+    ]
+  },
+  "pipedream-connect": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "Free plan: daily credit limit; Connect free in development environment with limited connected accounts",
+      "period": "day",
+      "watermark": null,
+      "source_url": "https://pipedream.com/docs/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "Authorization: Bearer <access_token> (client credentials via POST https://api.pipedream.com/v1/oauth/token)",
+      "source_url": "https://pipedream.com/docs/rest-api/auth",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.pipedream.com/v1",
+    "rate_limits": {
+      "summary": "Connect API: create token 100/min per external user; accounts 2,000/5 min and components 3,000/5 min per project",
+      "source_url": "https://pipedream.com/docs/connect/api-reference/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://remote.mcp.pipedream.net/v3",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://pipedream.com/docs/connect/mcp/developers",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "mcp: remote endpoint is https://remote.mcp.pipedream.net/v3 with Authorization Bearer + x-pd-project-id, x-pd-environment, x-pd-external-user-id, x-pd-app-slug headers (entry url is the docs page)"
+    ]
+  },
+  "stackone": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Starter: 1,000 credits per seat (1 tool/API call = 1 credit)",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://www.stackone.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(<API_KEY>:) plus x-account-id: <ACCOUNT_ID>",
+      "source_url": "https://docs.stackone.com/llms-full.txt",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.stackone.com",
+    "rate_limits": null,
+    "oauth_scopes": {
+      "scopes": [
+        "mcp",
+        "offline_access"
+      ],
+      "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.stackone.com/mcp",
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: API uses HTTP Basic with the API key as username (Authorization: Basic ...) and an x-account-id header, not Bearer",
+      "mcp: url is a docs page; hosted MCP is https://mcp.stackone.com/mcp (OAuth) or https://api.stackone.com/mcp?token=<session_token>"
+    ]
+  },
+  "superglue": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": null,
+      "quota": "3,000 executions and 5M tokens per month; open-source self-hosted version has no usage limits",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://superglue.ai/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <SUPERGLUE_API_KEY>",
+      "source_url": "https://superglue.ai/docs/api/overview/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.superglue.cloud/v1",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": null,
+      "tools": null,
+      "covers_full_api": null,
+      "source_url": "https://superglue.ai/docs/mcp/using-the-mcp/",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "auth_hint: API overview confirms Authorization: Bearer <API_KEY> (the 'not independently confirmed' note can be dropped)",
+      "mcp: default MCP server is served at /mcp on the superglue host (OAuth or creator API key); custom servers get named endpoints"
+    ]
+  },
+  "zapier-mcp-ai-actions": {
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100 tasks/month; each successful MCP tool call uses 2 tasks",
+      "period": "month",
+      "watermark": null,
+      "source_url": "https://zapier.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <CONNECTION_TOKEN> (or OAuth inside the MCP client)",
+      "source_url": "https://docs.zapier.com/mcp/overview/how-connections-work",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://mcp.zapier.com/api/v1/connect",
+    "rate_limits": null,
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null,
+    "mcp": {
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.zapier.com/api/v1/connect",
+      "repo": null,
+      "tools": [
+        "discover_zapier_actions",
+        "enable_zapier_action",
+        "disable_zapier_action",
+        "execute_zapier_read_action",
+        "execute_zapier_write_action",
+        "list_zapier_connections",
+        "manage_zapier_connections",
+        "get_configuration_url"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://docs.zapier.com/mcp/overview/how-tools-work",
+      "checked_at": "2026-09-24"
+    },
+    "corrections": [
+      "free_tier: each successful MCP call uses two tasks, so the Free plan's 100 tasks cover about 50 calls"
+    ]
+  }
+}
