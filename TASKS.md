@@ -18,7 +18,9 @@ Na podstawie wywiadów z agentami (`research/agent-interviews/2026-09-24/report.
 - [ ] Publikacja paczki npm (wymaga tokenu npm)
 - [x] Oficjalny rejestr MCP: `io.github.eater2/ai-agents-api-library` 0.1.0 (`server.json`, `mcp-publisher`, 2026-09-24)
 - [x] Smithery: https://smithery.ai/servers/eater2/ai-agents-api-library (namespace `eater2`, zdalny URL, 2026-09-24)
-- [ ] Glama, PulseMCP
+- [x] Glama: `glama.json` z właścicielem `eater2` w repo
+- [ ] **(ręcznie)** Glama: dodać serwer na https://glama.ai/mcp/servers (przycisk „Add server”, logowanie GitHubem) — API wymaga konta
+- [ ] PulseMCP: indeksuje oficjalny rejestr MCP automatycznie; strona blokuje automatyczne sprawdzenie (403), więc sprawdzić ręcznie https://www.pulsemcp.com/servers
 - [x] Zdalny endpoint MCP (Streamable HTTP, Vercel): https://ai-agents-api-library.vercel.app/mcp
 - [x] Osobne strony HTML per kategoria pod zapytania agentów (np. „video generation API free tier MCP”), w sitemap
 
@@ -30,7 +32,7 @@ Na podstawie wywiadów z agentami (`research/agent-interviews/2026-09-24/report.
 - [x] Automatyczne testy instalacji (`tests/`, `npm test`, CI): spójność wersji w package.json / plugin.json / marketplace.json / server.json, frontmatter SKILL.md, skill wymienia tylko istniejące narzędzia i wszystkie kategorie, ZIP skilla aktualny, `claude plugin validate --strict`, `npm pack` + instalacja + MCP po stdio, endpoint HTTP lokalnie (i wdrożony z `MCP_URL`), pełna instalacja pluginu w Claude Code w tymczasowym `CLAUDE_CONFIG_DIR` (2026-09-24)
 - [x] `claude plugin details` pokazywał „MCP servers (0)”: CLI liczy tylko serwery z `.mcp.json` w katalogu pluginu, a nie `mcpServers` w `plugin.json` (ani wpisane, ani jako ścieżka). Konfiguracja przeniesiona do `.mcp.json`, test pilnuje tego w `tests/plugin.test.mjs` (2026-09-24)
 - [x] Wersja 0.2.0 (nowe narzędzie `get_reviews`) we wszystkich manifestach i w `mcp/core.mjs`; test „one version everywhere” sprawdza też wersję serwera (2026-09-24)
-- [ ] Tag gita `v0.2.0` przy wypchnięciu; przy każdej zmianie narzędzi podbijać wersję, żeby `/plugin update` ją zauważył
+- [x] Tagi wersji (`v0.2.0` … `v0.2.3`); przy każdej zmianie narzędzi podbijać wersję, żeby `/plugin update` ją zauważył
 - [x] `vercel.json` includeFiles: `catalog/**`, więc `get_reviews` na Vercelu ma lokalną kopię opinii, gdy GitHub nie odpowiada (2026-09-24)
 - [ ] Weryfikacja per pole: `source_url` + `checked_at` dla `auth`, `free_tier`, `mcp`
 - [ ] Rozróżnienie MCP `official` / `vendor-hosted` / `community` + weryfikacja domeny
@@ -39,11 +41,11 @@ Na podstawie wywiadów z agentami (`research/agent-interviews/2026-09-24/report.
 
 Cel: przy każdym narzędziu pokazywać ocenę i liczbę opinii (i sygnały użycia) z kilku źródeł, z linkiem i datą pobrania — na stronie, w `llms.txt` / `llms-full.txt`, w JSON i w odpowiedziach serwera MCP.
 
-- [ ] Wybrać źródła (poniżej) i sprawdzić ich regulamin / API przed pobieraniem
-- [ ] `scripts/fetch_ratings.py` → `data/ratings.json` (`source`, `rating`, `reviews`, `url`, `fetched_at` per usługa)
-- [ ] Pole `ratings` w JSON dla agentów + kolumna na stronie + znacznik w `llms-full.txt` (np. `G2 4.6★/1,234`)
-- [ ] Cotygodniowe odświeżanie w GitHub Action (razem z testem linków)
-- [ ] Na stronie: źródło i data przy każdej ocenie (bez nich to nie jest dowód)
+- [x] Źródła: SourceForge (robots.txt pozwala), GitHub API, Smithery API. G2, Capterra, GetApp, Product Hunt blokują automaty (403/Cloudflare) — pominięte; Glama wymaga klucza
+- [x] `scripts/fetch_ratings.py` → `data/ratings.json` (148 usług) + do 100 opinii na usługę w `catalog/reviews/<id>.json` (80 usług, bez nazwisk; tylko JSON i MCP `get_reviews`, nie na stronie)
+- [x] Pole `ratings` + `reviews_url` w JSON, dowód pod nazwą na stronie i kolumna na stronach kategorii, `proof:` w `llms-full.txt`
+- [x] Cotygodniowe odświeżanie w GitHub Action (razem z testem linków)
+- [x] Na stronie: źródło i znacznik czasu UTC przy każdej ocenie + linia „fetched: …” nad tabelami
 
 Kandydaci na źródła:
 
@@ -70,9 +72,10 @@ Propozycja startu: GitHub + npm/PyPI + Smithery/Glama (legalne API, mierzą uży
 ## P4 — format i bezpieczeństwo
 - [x] Pliki kategorii < 30 KB (kontrola w build)
 - [x] Sumy kontrolne `SHA256SUMS` (w katalogu głównym i `docs/`, generowane przez build, link w `llms.txt`)
-- [ ] Podpisane wydania
+- [x] Podpisane wydania: `.github/workflows/release.yml` przy tagu `v*` publikuje wydanie (katalog, llms, ZIP skilla, paczka npm, sumy) z podpisem Sigstore (SLSA provenance); weryfikacja: `gh attestation verify <plik> --repo eater2/ai_agents_api_library`. Pierwsze: v0.2.3. ZIP skilla jest bajtowo identyczny na każdym systemie (bez kompresji, stałe pola nagłówka)
 - [x] Przegląd `auth_hint` pod kątem trybu rozkazującego: żaden nie wydaje poleceń; tryb rozkazujący tylko w nieszkodliwych `notes`
 
 ## P5 — pomiar
-- [ ] Statystyki ruchu (GitHub Traffic API, pobrania npm, wywołania MCP)
+- [x] Statystyki: `scripts/stats.py` co tydzień → `data/stats.json` (gwiazdki, pobrania wydań, użycia Smithery, npm); wywołania MCP logowane w Vercel (`{"evt":"mcp"}`, bez treści zapytań)
+- [ ] GitHub Traffic (wyświetlenia, klony) wymaga tokenu z uprawnieniem Administration: read — dodać sekret i użyć go w kroku statystyk
 - [ ] Powtórzyć wywiady po wdrożeniu P1–P2 (`python scripts/interview_agents.py`)
