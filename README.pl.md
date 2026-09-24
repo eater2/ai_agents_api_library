@@ -6,7 +6,7 @@
 
 <em>Wyselekcjonowana, czytelna maszynowo encyklopedia zewnętrznych API i serwerów MCP, z których agenci AI mogą korzystać w imieniu użytkownika.</em>
 
-> Ten artykuł dotyczy usług, które agent AI może obsługiwać programowo. Produkty AI używane przez ludzi przez interfejs WWW opisuje sekcja <a href="#usługi-wykluczone">Usługi wykluczone</a>.
+> Ten artykuł dotyczy usług, które agent AI może obsługiwać programowo, a nie produktów AI używanych przez ludzi przez interfejs WWW.
 
 <table align="right" width="300">
 <tr><th colspan="2" align="center">AI Agents Accessible APIs</th></tr>
@@ -27,11 +27,10 @@
 1. [Kryteria włączenia](#kryteria-włączenia)
 2. [Legenda](#legenda)
 3. [Wyszukiwanie w sieci](#wyszukiwanie-w-sieci) (14) · [Scraping i automatyzacja przeglądarki](#scraping-i-automatyzacja-przeglądarki) (18) · [Wiedza i dane naukowe](#wiedza-i-dane-naukowe) (16) · [Generowanie i edycja obrazów](#generowanie-i-edycja-obrazów) (10) · [Generowanie i edycja wideo](#generowanie-i-edycja-wideo) (15) · [Mowa i audio](#mowa-i-audio) (13) · [Generowanie muzyki](#generowanie-muzyki) (6) · [Generowanie 3D i modele](#generowanie-3d-i-modele) (7) · [Architektura, CAD i BIM](#architektura-cad-i-bim) (9) · [Diagramy i architektura oprogramowania](#diagramy-i-architektura-oprogramowania) (9) · [Projektowanie i UI](#projektowanie-i-ui) (6) · [Dokumenty, OCR i prezentacje](#dokumenty-ocr-i-prezentacje) (14) · [Tłumaczenie i język](#tłumaczenie-i-język) (6) · [Piaskownice do uruchamiania kodu](#piaskownice-do-uruchamiania-kodu) (10) · [Platformy deweloperskie i DevOps](#platformy-deweloperskie-i-devops) (12) · [Chmura i hosting](#chmura-i-hosting) (9) · [Bazy danych, bazy wektorowe i pamięć](#bazy-danych-bazy-wektorowe-i-pamięć) (21) · [E-mail, komunikatory i czat](#e-mail-komunikatory-i-czat) (15) · [Agenci głosowi i telefonia](#agenci-głosowi-i-telefonia) (8) · [Produktywność i praca zespołowa](#produktywność-i-praca-zespołowa) (17) · [CRM, obsługa klienta i marketing](#crm-obsługa-klienta-i-marketing) (8) · [Media społecznościowe](#media-społecznościowe) (10) · [Mapy, geolokalizacja i pogoda](#mapy-geolokalizacja-i-pogoda) (13) · [Finanse, płatności i dane rynkowe](#finanse-płatności-i-dane-rynkowe) (16) · [E-commerce](#e-commerce) (8) · [Platformy automatyzacji i integracji](#platformy-automatyzacji-i-integracji) (15) · [API modeli i inferencja](#api-modeli-i-inferencja) (18)
-4. [Usługi wykluczone](#usługi-wykluczone)
-5. [Powiązane katalogi i rejestry](#powiązane-katalogi-i-rejestry)
-6. [Współtworzenie](#współtworzenie)
-7. [Zobacz też](#zobacz-też)
-8. [Przypisy](#przypisy)
+4. [Powiązane katalogi i rejestry](#powiązane-katalogi-i-rejestry)
+5. [Współtworzenie](#współtworzenie)
+6. [Zobacz też](#zobacz-też)
+7. [Przypisy](#przypisy)
 
 ## Kryteria włączenia
 
@@ -559,23 +558,6 @@
 | [Vercel AI Gateway](https://vercel.com/ai-gateway) | Wysyłaj zapytania czatu, obrazów, embeddingów i rerankingu do ponad 100 modeli przez jedną bramkę z failoverem i kontrolą wydatków. | klucz API / OAuth | [✅](https://mcp.vercel.com) | 🆓 free tier: monthly credits on subset of models | [dokumentacja](https://vercel.com/docs/ai-gateway/sdks-and-apis) |
 | [Voyage AI (embeddings/rerank)](https://www.voyageai.com) | Generuj embeddingi tekstu, kodu i multimodalne oraz reranking dokumentów na potrzeby RAG i wyszukiwania semantycznego. | klucz API | — | 🆓 free tier: 200M tokens on current models | [dokumentacja](https://docs.voyageai.com/reference/embeddings-api) |
 | [xAI Grok API](https://docs.x.ai) | Generuj tekst, obrazy, wideo i mowę modelami Grok z wbudowanym wyszukiwaniem w sieci i narzędziami do kodu. | klucz API | [✅](https://docs.x.ai/api/mcp) | paid only (prepaid credits) | [dokumentacja](https://docs.x.ai/developers/rest-api-reference/inference) |
-
-## Usługi wykluczone
-
-Usługi, które sprawdzono i **odrzucono**, ponieważ agent nie może ich dziś obsługiwać programowo:
-
-| Usługa | powód |
-|---|---|
-| Midjourney | Brak oficjalnego API; regulamin zabrania automatycznego dostępu. Istnieją tylko nieoficjalne nakładki. |
-| Clipdrop API | API przekierowuje teraz do API obrazów Jasper, dostępnego tylko po demo z działem sprzedaży / w planie Business. |
-| OpenAI Sora API | OpenAI wyłącza Sora Videos API i modele sora-2 (koniec działania 2026-09-24). |
-| Suno | Brak samoobsługowego API; nakładki firm trzecich scrapują aplikację webową wbrew regulaminowi. |
-| Udio | Brak API i dokumentacji dla deweloperów. |
-| Planner 5D | Wyłącznie aplikacja dla użytkowników końcowych; brak publicznego API. |
-| Google Custom Search JSON API | Zamknięte dla nowych klientów; obecni muszą przejść na inne rozwiązanie do 2027-01-01 (Google proponuje Vertex AI Search). |
-| Bing Web Search API | Wycofane. Następca (Grounding with Bing Search) działa tylko w Azure AI Foundry Agent Service i nie zwraca surowych wyników. |
-| DuckDuckGo | Brak API wyników wyszukiwania, tylko ograniczone Instant Answer API; serwery MCP społeczności scrapują HTML. |
-| Yahoo Finance (yfinance) | Nieoficjalna biblioteka scrapująca, a nie autoryzowane API: endpointy mogą się zmienić lub zostać zablokowane bez ostrzeżenia. |
 
 ## Powiązane katalogi i rejestry
 

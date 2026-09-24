@@ -2,7 +2,7 @@
 
     python scripts/build.py
 
-Inputs : data/catalog.json, data/excluded.json, data/categories.json, data/directories.json
+Inputs : data/catalog.json, data/categories.json, data/directories.json
 Outputs: README.md, README.pl.md, llms.txt, llms-full.txt, catalog/*.json,
          docs/index.html, docs/pl/index.html, docs/catalog.json, docs/llms.txt,
          docs/robots.txt, docs/sitemap.xml
@@ -58,7 +58,7 @@ T = {
         "lang_name": "English", "other": "pl", "other_label": "Polski",
         "readme": "README.md", "other_readme": "README.pl.md",
         "tagline": "A curated, machine-readable encyclopedia of third-party APIs and MCP servers that AI agents can call on a user's behalf.",
-        "hatnote": "This article is about services an AI agent can operate programmatically. For AI products used by humans through a web UI, see the <a href=\"#excluded\">Excluded services</a> section.",
+        "hatnote": "This article is about services an AI agent can operate programmatically, not AI products used by humans through a web UI.",
         "lead": (
             "**{title}** is an open, bilingual (English/Polish) catalog of **{n} verified services** in **{c} categories** "
             "that an autonomous AI agent — such as Claude, ChatGPT, Gemini or a custom LLM agent — can use "
@@ -93,8 +93,6 @@ T = {
                    ("MCP —", "no MCP server known; use the REST API"), ("🆓", "free tier or free usage without payment"),
                    ("★ (date)", "proof under the service name: SourceForge rating and review count, GitHub stars, Smithery uses — linked, with the date fetched")],
         "cols": ["Service", "What an agent can do", "Auth", "MCP", "Free tier", "Docs"],
-        "h_excluded": "Excluded services",
-        "excluded_intro": "Services that were reviewed and **rejected** because an agent cannot operate them programmatically today:",
         "h_directories": "Related directories and registries",
         "directories_intro": "Other machine-readable sources agents can use to discover tools:",
         "h_contrib": "Contributing",
@@ -113,7 +111,7 @@ T = {
         "lang_name": "Polski", "other": "en", "other_label": "English",
         "readme": "README.pl.md", "other_readme": "README.md",
         "tagline": "Wyselekcjonowana, czytelna maszynowo encyklopedia zewnętrznych API i serwerów MCP, z których agenci AI mogą korzystać w imieniu użytkownika.",
-        "hatnote": "Ten artykuł dotyczy usług, które agent AI może obsługiwać programowo. Produkty AI używane przez ludzi przez interfejs WWW opisuje sekcja <a href=\"#excluded\">Usługi wykluczone</a>.",
+        "hatnote": "Ten artykuł dotyczy usług, które agent AI może obsługiwać programowo, a nie produktów AI używanych przez ludzi przez interfejs WWW.",
         "lead": (
             "**{title}** (pol. *API dostępne dla agentów AI*) to otwarty, dwujęzyczny (angielski/polski) katalog **{n} zweryfikowanych usług** "
             "w **{c} kategoriach**, z których autonomiczny agent AI — np. Claude, ChatGPT, Gemini lub własny agent LLM — może korzystać "
@@ -148,8 +146,6 @@ T = {
                    ("MCP —", "brak znanego serwera MCP; należy użyć REST API"), ("🆓", "darmowy limit lub użycie bez opłat"),
                    ("★ (data)", "dowód pod nazwą usługi: ocena i liczba opinii z SourceForge, gwiazdki GitHub, użycia w Smithery — z linkiem i datą pobrania")],
         "cols": ["Usługa", "Co agent może zrobić", "Autoryzacja", "MCP", "Darmowy limit", "Dokumentacja"],
-        "h_excluded": "Usługi wykluczone",
-        "excluded_intro": "Usługi, które sprawdzono i **odrzucono**, ponieważ agent nie może ich dziś obsługiwać programowo:",
         "h_directories": "Powiązane katalogi i rejestry",
         "directories_intro": "Inne czytelne maszynowo źródła, w których agenci mogą wyszukiwać narzędzia:",
         "h_contrib": "Współtworzenie",
@@ -182,11 +178,10 @@ def gh_slug(s):
 def load():
     cats = json.loads((DATA / "categories.json").read_text("utf-8"))
     items = json.loads((DATA / "catalog.json").read_text("utf-8"))
-    excluded = json.loads((DATA / "excluded.json").read_text("utf-8"))
     dirs = json.loads((DATA / "directories.json").read_text("utf-8"))
     order = {c["id"]: i for i, c in enumerate(cats)}
     items.sort(key=lambda e: (order[e["category"]], e["name"].lower()))
-    return cats, items, excluded, dirs
+    return cats, items, dirs
 
 
 def is_free(e):
@@ -273,7 +268,7 @@ def stats(cats, items):
 
 # ---------------------------------------------------------------- Markdown
 
-def readme(lang, cats, items, excluded, dirs):
+def readme(lang, cats, items, dirs):
     t = T[lang]
     st = stats(cats, items)
     by = {c["id"]: [e for e in items if e["category"] == c["id"]] for c in cats}
@@ -283,7 +278,7 @@ def readme(lang, cats, items, excluded, dirs):
     o.append(f"# {TITLE}\n")
     o.append(" ".join(f'<a href="{u}"><img alt="{a}" src="{i}"></a>' for a, i, u in badges()) + "\n")
     o.append(f"<em>{t['tagline']}</em>\n")
-    o.append("> " + t["hatnote"].replace("#excluded", "#" + gh_slug(t["h_excluded"])) + "\n")
+    o.append("> " + t["hatnote"] + "\n")
     o.append('<table align="right" width="300">')
     o.append(f'<tr><th colspan="2" align="center">{TITLE}</th></tr>')
     for k, v in t["infobox"]:
@@ -295,7 +290,7 @@ def readme(lang, cats, items, excluded, dirs):
     toc = ([t["h_agents"]] if lang == "en" else []) + [t["h_criteria"], t["h_legend"]]
     lines = [f"{i}. [{h}](#{gh_slug(h)})" for i, h in enumerate(toc, 1)]
     lines.append(f"{len(lines)+1}. " + " · ".join(f"[{c[lang]}](#{gh_slug(c[lang])}) ({len(by[c['id']])})" for c in cats))
-    for h in (t["h_excluded"], t["h_directories"], t["h_contrib"], t["h_see"], t["h_sources"]):
+    for h in (t["h_directories"], t["h_contrib"], t["h_see"], t["h_sources"]):
         lines.append(f"{len(lines)+1}. [{h}](#{gh_slug(h)})")
     o.append("\n".join(lines) + "\n")
 
@@ -345,12 +340,6 @@ def readme(lang, cats, items, excluded, dirs):
                      f"{mcp_mark(e)} | {free} | [{t['docs']}]({e['docs']}) |")
         o.append("")
 
-    o.append(f"## {t['h_excluded']}\n\n{t['excluded_intro']}\n")
-    o.append(f"| {t['cols'][0]} | {t['reason']} |\n|---|---|")
-    for e in excluded:
-        o.append(f"| {md_cell(e['name'])} | {md_cell(e['reason_' + lang])} |")
-    o.append("")
-
     o.append(f"## {t['h_directories']}\n\n{t['directories_intro']}\n")
     for d in dirs:
         mr = f" — machine-readable: <{d['machine_readable_url']}>" if d.get("machine_readable_url") else ""
@@ -385,7 +374,6 @@ def llms(cats, items, dirs):
          f"- [Full catalog (JSON)]({RAW}catalog/all.json): all entries in one array",
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
          f"- [JSON Schema]({RAW}data/schema.json): entry schema",
-         f"- [Excluded services]({RAW}data/excluded.json): reviewed and rejected, with reasons",
          f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` or remote {MCP_URL} (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories",
          "", "## Start free", "",
          f"{sum(map(is_free, items))} of {len(items)} services have a lasting free tier or free usage (JSON field `has_free_tier`; "
@@ -489,7 +477,7 @@ def md_inline(s):
     return re.sub(r"`(.+?)`", r"<code>\1</code>", s)
 
 
-def page(lang, cats, items, excluded, dirs):
+def page(lang, cats, items, dirs):
     t = T[lang]
     st = stats(cats, items)
     e_ = html.escape
@@ -544,7 +532,7 @@ def page(lang, cats, items, excluded, dirs):
     for c in cats:
         o.append(f'<li><a href="#{c["id"]}">{e_(c[lang])}</a> ({len(by[c["id"]])})</li>')
     o.append("</ol></li>")
-    for h, a in ((t["h_excluded"], "excluded"), (t["h_directories"], "directories"), (t["h_contrib"], "contributing"), (t["h_sources"], "references")):
+    for h, a in ((t["h_directories"], "directories"), (t["h_contrib"], "contributing"), (t["h_sources"], "references")):
         o.append(f'<li><a href="#{a}">{e_(h)}</a></li>')
     o.append("</ol></nav>")
 
@@ -580,12 +568,6 @@ def page(lang, cats, items, excluded, dirs):
                      f'<td>{e_(t["auth"].get(e["auth"], e["auth"]))}</td><td class="c">{mcp_mark(e, "html")}</td>'
                      f'<td>{"🆓 " if free else ""}{e_(e.get("free_tier") or "")}</td><td><a href="{e_(e["docs"])}">{t["docs"]}</a></td></tr>')
         o.append("</tbody></table></div></section>")
-
-    o.append(f'<h2 id="excluded">{e_(t["h_excluded"])}</h2><p>{md_inline(t["excluded_intro"])}</p>')
-    o.append(f'<div class="tw"><table class="wikitable"><thead><tr><th>{t["cols"][0]}</th><th>{t["reason"]}</th></tr></thead><tbody>')
-    for x in excluded:
-        o.append(f"<tr><td>{e_(x['name'])}</td><td>{e_(x['reason_' + lang])}</td></tr>")
-    o.append("</tbody></table></div>")
 
     o.append(f'<h2 id="directories">{e_(t["h_directories"])}</h2><p>{e_(t["directories_intro"])}</p><ul>')
     for d in dirs:
@@ -655,7 +637,7 @@ def write(path, text):
 
 def main():
     global VERIFIED, RATINGS
-    cats, items, excluded, dirs = load()
+    cats, items, dirs = load()
     ratings_file = DATA / "ratings.json"
     RATINGS = json.loads(ratings_file.read_text("utf-8")) if ratings_file.exists() else {}
     VERIFIED = max((e.get("verified") or "" for e in items), default="") or date.today().isoformat()
@@ -666,9 +648,9 @@ def main():
         ids.add(e["id"])
         assert e["category"] in {c["id"] for c in cats}, e["name"]
     for lang in ("en", "pl"):
-        write(T[lang]["readme"], readme(lang, cats, items, excluded, dirs))
-    write("docs/index.html", page("en", cats, items, excluded, dirs))
-    write("docs/pl/index.html", page("pl", cats, items, excluded, dirs))
+        write(T[lang]["readme"], readme(lang, cats, items, dirs))
+    write("docs/index.html", page("en", cats, items, dirs))
+    write("docs/pl/index.html", page("pl", cats, items, dirs))
     lt, lf = llms(cats, items, dirs), llms_full(cats, items)
     for base in ("", "docs/"):
         write(base + "llms.txt", lt)
@@ -719,7 +701,7 @@ def main():
           + "".join(f"<url><loc>{u}</loc><lastmod>{VERIFIED}</lastmod></url>\n" for u in
                     [PAGES, PAGES + "catalog.json", PAGES + "llms.txt"] + [f"{PAGES}c/{c['id']}/" for c in cats])
           + "</urlset>\n")
-    print(f"{len(items)} entries, {len(excluded)} excluded, {len(cats)} categories -> built")
+    print(f"{len(items)} entries, {len(cats)} categories -> built")
 
 
 VERIFIED = ""
