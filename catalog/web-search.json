@@ -1,0 +1,322 @@
+{
+  "category": {
+    "id": "web-search",
+    "name": "Web search",
+    "description": "Search engines and answer APIs that return fresh web results, snippets or full page content in agent-friendly formats."
+  },
+  "entries": [
+    {
+      "id": "brave-search-api",
+      "name": "Brave Search API",
+      "category": "web-search",
+      "homepage": "https://brave.com/search/api/",
+      "docs": "https://api-dashboard.search.brave.com/app/documentation/web-search/get-started",
+      "auth": "api_key",
+      "auth_hint": "X-Subscription-Token: <API_KEY>",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/brave/brave-search-mcp-server"
+      },
+      "free_tier": "$5 free monthly credits (~1,000 queries on Search plan); credit card required at signup as anti-fraud measure",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": "https://api-dashboard.search.brave.com/llms.txt",
+      "desc_en": "Lets an agent query Brave's independent web/image/video/news search index and get cited, LLM-ready results.",
+      "notes": "Official MCP server (@brave/brave-search-mcp-server) is self-hosted only via npx/Docker/HTTP transport, no vendor-hosted remote endpoint found; Answers plan is separate ($4/1,000 req + token costs).",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "exa",
+      "name": "Exa",
+      "category": "web-search",
+      "homepage": "https://exa.ai",
+      "docs": "https://docs.exa.ai/reference/getting-started",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <EXA_API_KEY> (or x-api-key header)",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.exa.ai/mcp"
+      },
+      "free_tier": "free tier: $10 free credits/month (~1,400 searches), no payment method required",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": "https://exa.ai/docs/exa-spec.yaml",
+      "llms_txt": "https://exa.ai/docs/llms.txt",
+      "desc_en": "Lets an agent run neural or keyword web search, retrieve page contents, and find similar links via Exa's API.",
+      "notes": "Remote MCP endpoint requires no API key to start; self-hosted npm package (exa-mcp-server) also available.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "jina-ai-search-reader",
+      "name": "Jina AI Search / Reader",
+      "category": "web-search",
+      "homepage": "https://jina.ai",
+      "docs": "https://docs.jina.ai",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <JINA_API_KEY> (works without a key too, but at a lower rate limit)",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "no key needed: 100 RPM (s.jina.ai search) / 500 RPM (r.jina.ai reader); free API key raises limits to 1,000/5,000 RPM with token-based billing",
+      "sdk": [],
+      "openapi": "https://api.jina.ai/openapi.json",
+      "llms_txt": "https://jina.ai/models/llms.txt",
+      "desc_en": "Search the web or convert any URL into clean LLM-ready markdown via simple HTTP GET requests.",
+      "notes": "Usable without an API key at reduced rate limits; interactive docs/playground at https://api.jina.ai/scalar. No official MCP server found.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "kagi-search-api",
+      "name": "Kagi Search API",
+      "category": "web-search",
+      "homepage": "https://kagi.com",
+      "docs": "https://help.kagi.com/kagi/api/overview.html",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bot <token>",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/kagisearch/kagimcp"
+      },
+      "free_tier": "no free tier: pay-per-use, $12 per 1,000 search requests, invoiced monthly or at $100 usage, whichever first",
+      "sdk": [
+        "python",
+        "typescript",
+        "go",
+        "rust"
+      ],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Run programmatic, ad-free premium web/news/image/video searches and extract page markdown via a paid REST API.",
+      "notes": "Requires a funded/billed Kagi account; on Family/Team plans only the account owner can access the API portal. Official hosted MCP endpoint also available at https://mcp.kagi.com/mcp using just an API key.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "linkup",
+      "name": "Linkup",
+      "category": "web-search",
+      "homepage": "https://www.linkup.so",
+      "docs": "https://docs.linkup.so/pages/documentation/endpoints/search/reference",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <LINKUP_API_KEY>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.linkup.so/mcp"
+      },
+      "free_tier": "$20 free credits/month for new accounts signing up with a professional email",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": "https://docs.linkup.so/llms.txt",
+      "desc_en": "Lets an agent search, fetch pages, or run deep multi-source research via Linkup's Search/Fetch/Research API endpoints.",
+      "notes": "Also supports the x402 protocol: pay-per-request in USDC on Base with no account required; Extract endpoint is in closed beta; MCP endpoint also supports ?apiKey= query param auth.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "mojeek-search-api",
+      "name": "Mojeek Search API",
+      "category": "web-search",
+      "homepage": "https://www.mojeek.com/services/search/web-search-api/",
+      "docs": "https://www.mojeek.com/support/api/search/",
+      "auth": "api_key",
+      "auth_hint": "check docs (exact query-param name obtained after contacting Mojeek for a plan)",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "limited-query free trial available on request; paid plans from £2 CPM (Startup, 5 req/s, 100k/day cap)",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Query Mojeek's independent web index for titles, URLs and snippets in JSON or XML, with country/language boosting.",
+      "notes": "Sign-up is not instant self-serve, requires contacting Mojeek via their contact form to get a key/plan (Startup/Business/Enterprise). Independent (non-Google/Bing-derived) index.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "parallel-web-systems-search-api",
+      "name": "Parallel Web Systems Search API",
+      "category": "web-search",
+      "homepage": "https://parallel.ai",
+      "docs": "https://docs.parallel.ai",
+      "auth": "api_key",
+      "auth_hint": "x-api-key: <PARALLEL_API_KEY>",
+      "mcp": {
+        "type": "official",
+        "url": "https://search.parallel.ai/mcp"
+      },
+      "free_tier": "free: 5,000 requests/month across APIs, plus up to $80 signup credit and $5/month free credits",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": "https://docs.parallel.ai/public-openapi.json",
+      "llms_txt": "https://docs.parallel.ai/llms.txt",
+      "desc_en": "Lets an agent run Parallel's low-latency Search API for web research, content extraction, and entity discovery.",
+      "notes": "The remote MCP server is free and requires no account/API key; the main REST API requires an API key from the dashboard.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "perplexity-sonar-search-api",
+      "name": "Perplexity Sonar / Search API",
+      "category": "web-search",
+      "homepage": "https://docs.perplexity.ai",
+      "docs": "https://docs.perplexity.ai/api-reference/search-post",
+      "auth": "api_key+oauth2",
+      "auth_hint": "Authorization: Bearer <PERPLEXITY_API_KEY> (remote MCP also supports OAuth sign-in)",
+      "mcp": {
+        "type": "official",
+        "url": "https://api.perplexity.ai/mcp"
+      },
+      "free_tier": "no confirmed free tier; pay-as-you-go, Search API billed at $5 per 1,000 requests",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": "https://docs.perplexity.ai/llms.txt",
+      "desc_en": "Lets an agent call Perplexity's Search API or MCP tools (search/ask/research/reason) for real-time grounded web answers.",
+      "notes": "Sonar Chat Completions endpoint is being migrated to the new Agent API with a migration deadline around 2026-09-27; platform now exposes four APIs: Search, Router, Agent, Embeddings.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "searchapi-io",
+      "name": "SearchApi.io",
+      "category": "web-search",
+      "homepage": "https://www.searchapi.io",
+      "docs": "https://www.searchapi.io/docs/google",
+      "auth": "api_key",
+      "auth_hint": "api_key=<KEY> as query param, or Authorization: Bearer <KEY>",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "100 free requests, no credit card required; then paid plans from $40/mo (10,000 searches)",
+      "sdk": [],
+      "openapi": "https://www.searchapi.io/openapi/google.yaml",
+      "llms_txt": null,
+      "desc_en": "Fetch structured JSON results from Google, Bing, YouTube, Amazon, TikTok and 50+ other search engines via one REST API.",
+      "notes": "Separate OpenAPI spec per engine (e.g. /openapi/google.yaml); no official MCP server found.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "searxng-self-hosted-json-api",
+      "name": "SearXNG (self-hosted JSON API)",
+      "category": "web-search",
+      "homepage": "https://docs.searxng.org",
+      "docs": "https://docs.searxng.org/dev/search_api.html",
+      "auth": "none",
+      "auth_hint": "none by default; self-hosted instance owner controls access (can add auth/proxy in front)",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/ihor-sokoliuk/mcp-searxng"
+      },
+      "free_tier": "free, no key (self-hosted; you run and pay for the instance yourself)",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Query a self-hosted SearXNG metasearch instance's JSON API to aggregate results from many search engines at once.",
+      "notes": "Not a vendor with a signup/API key, it's open-source software you self-host (or point at a trusted public instance from searx.space). JSON/CSV/RSS output formats must be explicitly enabled by the instance admin in settings.yml (search.formats); most public instances disable JSON and return 403. Included because it gives agents a genuine no-signup programmatic search interface once deployed.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "serpapi",
+      "name": "SerpApi",
+      "category": "web-search",
+      "homepage": "https://serpapi.com",
+      "docs": "https://serpapi.com/search-api",
+      "auth": "api_key",
+      "auth_hint": "api_key query parameter (also usable as header depending on client library)",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/serpapi/serpapi-mcp"
+      },
+      "free_tier": "free plan: 250 searches/month, 50 requests/hour throughput",
+      "sdk": [
+        "python",
+        "ruby",
+        "javascript",
+        "go",
+        "php",
+        "java",
+        "rust",
+        "dotnet",
+        "swift"
+      ],
+      "openapi": null,
+      "llms_txt": "https://serpapi.com/llms.txt",
+      "desc_en": "Lets an agent scrape structured JSON results from Google and 20+ other search engines via SerpApi's REST API.",
+      "notes": "Cached searches are free and don't count toward the monthly search quota.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "serper",
+      "name": "Serper",
+      "category": "web-search",
+      "homepage": "https://serper.dev",
+      "docs": "https://serper.dev",
+      "auth": "api_key",
+      "auth_hint": "X-API-KEY header (per widely published examples; could not independently re-confirm via automated fetch, see notes)",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/marcopesani/mcp-server-serper"
+      },
+      "free_tier": "free tier: 2,500 queries, no credit card required",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Lets an agent fetch fast, low-cost Google search results (web, images, news, maps, shopping) via Serper's REST API.",
+      "notes": "serper.dev's docs/playground is a JS-rendered, login-gated SPA so automated fetch could not fully re-verify all details beyond the public marketing page (2,500 free queries confirmed there). No official MCP server found; listed repo is the most-starred community one.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "tavily",
+      "name": "Tavily",
+      "category": "web-search",
+      "homepage": "https://tavily.com",
+      "docs": "https://docs.tavily.com/documentation/api-reference/endpoint/search",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer tvly-<API_KEY>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.tavily.com/mcp/"
+      },
+      "free_tier": "free tier: 1,000 API credits/month, no credit card required",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": "https://docs.tavily.com/llms.txt",
+      "desc_en": "Lets an agent call Tavily's search API or MCP server to run web searches and get AI-ready summarized results.",
+      "notes": "Advanced search depth costs 2 credits vs 1 for basic/fast; remote MCP server supports both API key and OAuth authentication; repo: github.com/tavily-ai/tavily-mcp.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "you-com-api",
+      "name": "You.com API",
+      "category": "web-search",
+      "homepage": "https://you.com/api",
+      "docs": "https://you.com/docs/api-reference/search",
+      "auth": "api_key",
+      "auth_hint": "X-API-Key header (or YDC_API_KEY env var)",
+      "mcp": {
+        "type": "official",
+        "url": "https://api.you.com/mcp"
+      },
+      "free_tier": "free credits on signup via you.com/platform; free search profile also available through the keyless Docs MCP server",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": "https://you.com/docs/openapi.json",
+      "llms_txt": "https://you.com/docs/llms.txt",
+      "desc_en": "Lets an agent call You.com's Search/Answer/Research API or MCP server for LLM-ready web search and grounded answers.",
+      "notes": "Current endpoint is POST https://ydc-index.io/v1/search (recommended); legacy GET still works but won't get new features; also offers a separate keyless Docs MCP server at you.com/docs/_mcp/server for searching You.com's own docs.",
+      "verified": "2026-09-24"
+    }
+  ]
+}

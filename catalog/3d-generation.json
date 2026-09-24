@@ -1,0 +1,149 @@
+{
+  "category": {
+    "id": "3d-generation",
+    "name": "3D generation and assets",
+    "description": "Text/image-to-3D mesh generation, texturing and 3D asset libraries."
+  },
+  "entries": [
+    {
+      "id": "csm-common-sense-machines-api",
+      "name": "CSM (Common Sense Machines) API",
+      "category": "3d-generation",
+      "homepage": "https://www.csm.ai",
+      "docs": "https://docs.csm.ai/quick-start",
+      "auth": "api_key",
+      "auth_hint": "API key created from Cube webapp user profile, sent as bearer/header token",
+      "mcp": {
+        "type": "community",
+        "url": "https://lobehub.com/mcp/commonsensemachines-blender-mcp"
+      },
+      "free_tier": "limited free tier (watermarked outputs); full API access is bundled with mid-tier ($19.99+/mo) or higher Cube subscriptions",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Create 3D assets and multi-part kits from images via async REST sessions (image-to-3D, retopology).",
+      "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. A Blender/MCP integration exists but its official vendor-maintained status could not be fully confirmed.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "hyper3d-rodin-api",
+      "name": "Hyper3D Rodin API",
+      "category": "3d-generation",
+      "homepage": "https://hyper3d.ai",
+      "docs": "https://developer.hyper3d.ai/api-specification/overview_reset_v",
+      "auth": "api_key",
+      "auth_hint": "API key from API dashboard, sent via Authorization header (exact header name in docs)",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "10 starter credits on signup (spent only on downloads, not generation); paid credits $1.5 each",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Generate 3D meshes from text or images (sketch/regular/detail quality tiers) via an async REST job API.",
+      "notes": "Async task-based API: submit generation, then poll or use webhooks to retrieve the finished asset.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "meshy-api",
+      "name": "Meshy API",
+      "category": "3d-generation",
+      "homepage": "https://www.meshy.ai",
+      "docs": "https://docs.meshy.ai/en/api/quick-start",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <msy-...>",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/meshy-dev/meshy-mcp-server"
+      },
+      "free_tier": "free web plan: 100 credits/mo; API key creation requires a paid plan (Pro $20/mo+)",
+      "sdk": [],
+      "openapi": "https://docs.meshy.ai/openapi.yaml",
+      "llms_txt": "https://docs.meshy.ai/llms.txt",
+      "desc_en": "Generate, retexture, rig, and animate 3D models from text or images via REST API or official MCP server.",
+      "notes": "Free web accounts get only a limited built-in Playground key; creating/managing your own API keys requires a paid subscription.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "sketchfab-data-api",
+      "name": "Sketchfab Data API",
+      "category": "3d-generation",
+      "homepage": "https://sketchfab.com/developers",
+      "docs": "https://sketchfab.com/developers/data-api/v3",
+      "auth": "api_key+oauth2",
+      "auth_hint": "X-API-Key header (personal token) or OAuth2 login; legacy v2 token-in-header also exists but is deprecated",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/gregkop/sketchfab-mcp-server"
+      },
+      "free_tier": "free, no key needed for public search; private API token is free with any Sketchfab account",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Search, download, and upload 3D models on Sketchfab programmatically via the REST Data API v3.",
+      "notes": "This is an asset hosting/marketplace API, not a generative AI model; downloading models generally requires an authenticated Sketchfab account (and often the uploader's permission/license). Use v3 endpoints; v2 is deprecated.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "stability-ai-3d-stable-fast-3d-spar3d-api",
+      "name": "Stability AI 3D (Stable Fast 3D / SPAR3D) API",
+      "category": "3d-generation",
+      "homepage": "https://platform.stability.ai",
+      "docs": "https://platform.stability.ai/docs/api-reference#tag/3D",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <key>",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "25 free credits on signup, then pay-as-you-go (Stable Fast 3D costs 10 credits ~ $0.10/generation)",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Convert a single 2D image into a textured 3D mesh (GLB) via the v2beta/3d REST endpoints.",
+      "notes": "Endpoints such as POST https://api.stability.ai/v2beta/3d/stable-fast-3d; part of Stability's broader multi-modal Platform API.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "tencent-hunyuan3d-api",
+      "name": "Tencent Hunyuan3D API",
+      "category": "3d-generation",
+      "homepage": "https://3d.hunyuan.tencent.com",
+      "docs": "https://www.tencentcloud.com/document/product/1284/75539",
+      "auth": "cloud_iam",
+      "auth_hint": "Tencent Cloud SecretId/SecretKey, TC3-HMAC-SHA256 signed requests via the Tencent Cloud API/SDK",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "pay-as-you-go from ~$0.02/generation; some enterprise sign-ups get bundled free credits",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Generate textured 3D meshes (GLB, PBR) from text, images, or sketches via Tencent Cloud's Hunyuan 3D API.",
+      "notes": "3d.hunyuan.tencent.com is the consumer web app; programmatic access requires a Tencent Cloud account and the Tencent Cloud API console, not the consumer site directly. An open-source self-hostable model (Hunyuan3D-2.1) is also available on GitHub for those who don't want the managed cloud API.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "tripo-api",
+      "name": "Tripo API",
+      "category": "3d-generation",
+      "homepage": "https://www.tripo3d.ai",
+      "docs": "https://developers.tripo3d.ai/en/docs/authentication",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <tsk-...>",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/VAST-AI-Research/tripo-mcp"
+      },
+      "free_tier": "free/trial credits on signup (amounts and promos change, e.g. ~300 credits/2 weeks); pay-as-you-go at $0.01/credit",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Generate textured 3D meshes from text or images via REST API, with an official MCP server for agents.",
+      "notes": "Maintained by VAST AI Research (Tripo's developer). Exact free-credit amounts vary by promotion; verify in console.",
+      "verified": "2026-09-24"
+    }
+  ]
+}

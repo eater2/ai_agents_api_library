@@ -1,0 +1,201 @@
+{
+  "category": {
+    "id": "voice-agents-telephony",
+    "name": "Voice agents and telephony",
+    "description": "Place and receive phone calls handled by AI voice agents, real-time audio/video rooms."
+  },
+  "entries": [
+    {
+      "id": "bland-ai",
+      "name": "Bland AI",
+      "category": "voice-agents-telephony",
+      "homepage": "https://www.bland.ai",
+      "docs": "https://docs.bland.ai/api-v1/",
+      "auth": "api_key",
+      "auth_hint": "authorization: <api_key> header",
+      "mcp": {
+        "type": "official",
+        "url": "https://api.bland.ai/v1/mcp"
+      },
+      "free_tier": "free credits + inbound number on signup (Start plan), no credit card required",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": "https://docs.bland.ai/llms.txt",
+      "desc_en": "Programmatically create AI phone agents and place/manage automated outbound and inbound calls.",
+      "notes": "MCP server rate-limited to 120 req/min/org; distinguishes read-only vs destructive operations.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "deepgram-voice-agent-api",
+      "name": "Deepgram Voice Agent API",
+      "category": "voice-agents-telephony",
+      "homepage": "https://deepgram.com",
+      "docs": "https://developers.deepgram.com/docs/voice-agent",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Token <api_key>",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "$200 free credit on signup",
+      "sdk": [
+        "python",
+        "javascript",
+        "go",
+        "csharp"
+      ],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Run a full-duplex speech-to-speech voice agent pipeline (STT+LLM+TTS) over a WebSocket API.",
+      "notes": "Primarily an STT/TTS/voice-agent infra layer, often paired with a telephony provider like Twilio to reach phone calls.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "elevenlabs-agents-platform",
+      "name": "ElevenLabs Agents Platform",
+      "category": "voice-agents-telephony",
+      "homepage": "https://elevenlabs.io/agents",
+      "docs": "https://elevenlabs.io/docs/agents-platform/overview",
+      "auth": "api_key",
+      "auth_hint": "xi-api-key: <api_key>",
+      "mcp": {
+        "type": "official",
+        "url": "https://api.elevenlabs.io/v1/mcp"
+      },
+      "free_tier": "free plan: 10k credits/month shared across ElevenLabs products",
+      "sdk": [
+        "python",
+        "javascript",
+        "react",
+        "swift",
+        "kotlin"
+      ],
+      "openapi": "https://api.elevenlabs.io/openapi.json",
+      "llms_txt": "https://elevenlabs.io/docs/llms.txt",
+      "desc_en": "Build and deploy conversational AI voice agents with telephony (SIP/Twilio) integration via API and SDKs.",
+      "notes": "Official hosted MCP server uses OAuth (sign in with ElevenLabs account) rather than a raw API key; core REST API uses api-key auth.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "livekit-cloud",
+      "name": "LiveKit Cloud",
+      "category": "voice-agents-telephony",
+      "homepage": "https://livekit.io",
+      "docs": "https://docs.livekit.io/reference/",
+      "auth": "api_key",
+      "auth_hint": "API key + secret sign a JWT access token sent as Authorization: Bearer <token>",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "free Build plan: 1,000 agent session minutes/mo, 5,000 WebRTC participant minutes/mo, 50GB data transfer",
+      "sdk": [
+        "python",
+        "typescript",
+        "go",
+        "rust",
+        "swift",
+        "kotlin",
+        "ruby"
+      ],
+      "openapi": null,
+      "llms_txt": "https://docs.livekit.io/llms.txt",
+      "desc_en": "Build and deploy real-time voice AI agents with SIP telephony support using LiveKit's server SDKs and APIs.",
+      "notes": "Self-hosted open-source option also exists; Cloud is the managed offering with usage-based billing beyond the free tier.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "retell-ai",
+      "name": "Retell AI",
+      "category": "voice-agents-telephony",
+      "homepage": "https://www.retellai.com",
+      "docs": "https://docs.retellai.com/api-references/overview",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <api_key>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.retellai.com"
+      },
+      "free_tier": "$10 free credit on signup, then pay-as-you-go ($0.07-$0.31/min for voice)",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": "https://docs.retellai.com/llms.txt",
+      "desc_en": "Build, deploy, and manage AI voice agents that handle phone and web calls via REST API and SDKs.",
+      "notes": "",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "synthflow-api",
+      "name": "Synthflow API",
+      "category": "voice-agents-telephony",
+      "homepage": "https://synthflow.ai",
+      "docs": "https://docs.synthflow.ai/getting-started-with-your-api",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <api_key>",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "self-serve free trial to build/test agents (pay only for actual calls); enterprise plans from ~$30k/yr for scale",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": "https://docs.synthflow.ai/llms-full.txt",
+      "desc_en": "Create and manage AI phone voice agents and trigger/manage outbound calls programmatically via REST API.",
+      "notes": "Go-to-market leans enterprise-sales for scaled deployments; a self-serve trial with API access exists for building/testing.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "twilio-programmable-voice",
+      "name": "Twilio Programmable Voice",
+      "category": "voice-agents-telephony",
+      "homepage": "https://www.twilio.com/en-us/voice",
+      "docs": "https://www.twilio.com/docs/voice",
+      "auth": "api_key",
+      "auth_hint": "Basic Auth (Account SID + Auth Token) or API Key/Secret",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/twilio-labs/mcp"
+      },
+      "free_tier": "trial account with free trial credit (~$15), then pay-as-you-go",
+      "sdk": [
+        "python",
+        "javascript",
+        "java",
+        "csharp",
+        "php",
+        "ruby"
+      ],
+      "openapi": "https://github.com/twilio/twilio-oai",
+      "llms_txt": null,
+      "desc_en": "Programmatically make, receive, and control phone calls (IVR, recording, conferencing) via REST API.",
+      "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "vapi",
+      "name": "Vapi",
+      "category": "voice-agents-telephony",
+      "homepage": "https://vapi.ai",
+      "docs": "https://docs.vapi.ai/api-reference",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <api_key>",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.vapi.ai/mcp"
+      },
+      "free_tier": "$5 free credit on signup, then pay-as-you-go (~$0.05/min platform fee + provider costs)",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": "https://api.vapi.ai/api",
+      "llms_txt": "https://docs.vapi.ai/llms.txt",
+      "desc_en": "Create, configure, and run AI voice assistants that make and receive phone calls via REST API.",
+      "notes": "Also has an official MCP server (streamable-HTTP and SSE endpoints) exposing assistants/calls/phone numbers as tools.",
+      "verified": "2026-09-24"
+    }
+  ]
+}

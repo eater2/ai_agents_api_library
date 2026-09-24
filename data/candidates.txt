@@ -1,0 +1,291 @@
+# category | name | homepage   (candidates to verify; verified data goes to data/catalog.json)
+image-generation | OpenAI Images API (gpt-image) | https://platform.openai.com/docs/guides/image-generation
+image-generation | Google Gemini / Imagen image API | https://ai.google.dev/gemini-api/docs/image-generation
+image-generation | Black Forest Labs FLUX API | https://bfl.ai
+image-generation | Stability AI Platform API | https://platform.stability.ai
+image-generation | Ideogram API | https://ideogram.ai
+image-generation | Leonardo.Ai API | https://leonardo.ai
+image-generation | Recraft API | https://www.recraft.ai
+image-generation | Freepik API | https://www.freepik.com/api
+image-generation | Adobe Firefly Services API | https://developer.adobe.com/firefly-services/
+image-generation | Clipdrop API | https://clipdrop.co/apis
+image-generation | remove.bg API | https://www.remove.bg/api
+image-generation | Midjourney | https://www.midjourney.com
+video-generation | Runway API | https://runwayml.com
+video-generation | Luma AI Dream Machine API | https://lumalabs.ai
+video-generation | Kling AI API | https://klingai.com
+video-generation | Google Veo (Gemini API / Vertex AI) | https://ai.google.dev/gemini-api/docs/video
+video-generation | OpenAI Sora API | https://platform.openai.com/docs/guides/video-generation
+video-generation | MiniMax Hailuo API | https://www.minimax.io
+video-generation | PixVerse API | https://pixverse.ai
+video-generation | HeyGen API | https://www.heygen.com
+video-generation | Synthesia API | https://www.synthesia.io
+video-generation | D-ID API | https://www.d-id.com
+video-generation | Tavus API | https://www.tavus.io
+video-generation | Akool API | https://akool.com
+video-generation | Creatomate API | https://creatomate.com
+video-generation | Shotstack API | https://shotstack.io
+video-generation | Mux Video API | https://www.mux.com
+video-generation | Klap API | https://klap.app
+audio-speech | ElevenLabs API | https://elevenlabs.io
+audio-speech | OpenAI Audio API (TTS / transcription) | https://platform.openai.com/docs/guides/audio
+audio-speech | Deepgram API | https://deepgram.com
+audio-speech | AssemblyAI API | https://www.assemblyai.com
+audio-speech | Cartesia API | https://cartesia.ai
+audio-speech | Speechmatics API | https://www.speechmatics.com
+audio-speech | Google Cloud Text-to-Speech / Speech-to-Text | https://cloud.google.com/text-to-speech
+audio-speech | Azure AI Speech | https://azure.microsoft.com/products/ai-services/ai-speech
+audio-speech | Rev AI API | https://www.rev.ai
+audio-speech | Resemble AI API | https://www.resemble.ai
+audio-speech | Hume AI API | https://www.hume.ai
+music-generation | ElevenLabs Music API | https://elevenlabs.io/music
+music-generation | Stable Audio API (Stability AI) | https://platform.stability.ai
+music-generation | Mubert API | https://mubert.com/api
+music-generation | Loudly API | https://www.loudly.com
+music-generation | Beatoven.ai API | https://www.beatoven.ai
+music-generation | Suno | https://suno.com
+music-generation | Udio | https://www.udio.com
+3d-generation | Meshy API | https://www.meshy.ai
+3d-generation | Tripo API | https://www.tripo3d.ai
+3d-generation | Hyper3D Rodin API | https://hyper3d.ai
+3d-generation | Stability AI 3D (Stable Fast 3D / SPAR3D) API | https://platform.stability.ai
+3d-generation | CSM (Common Sense Machines) API | https://www.csm.ai
+3d-generation | Sketchfab Data API | https://sketchfab.com/developers
+3d-generation | Tencent Hunyuan3D API | https://3d.hunyuan.tencent.com
+architecture-cad-bim | Autodesk Platform Services (APS) | https://aps.autodesk.com
+architecture-cad-bim | Speckle API | https://speckle.systems
+architecture-cad-bim | Onshape REST API | https://onshape-public.github.io/docs/
+architecture-cad-bim | Bentley iTwin Platform APIs | https://developer.bentley.com
+architecture-cad-bim | Trimble Connect API | https://developer.trimble.com
+architecture-cad-bim | Rhino.Compute (McNeel) | https://www.rhino3d.com/compute
+architecture-cad-bim | Zoo Text-to-CAD API (KittyCAD) | https://zoo.dev
+architecture-cad-bim | Procore API | https://developers.procore.com
+architecture-cad-bim | Esri ArcGIS Location Platform | https://location.arcgis.com
+architecture-cad-bim | Planner 5D | https://planner5d.com
+diagrams-software-architecture | Mermaid Chart API | https://www.mermaidchart.com
+diagrams-software-architecture | Lucid (Lucidchart) REST API | https://developer.lucid.co
+diagrams-software-architecture | Miro REST API | https://developers.miro.com
+diagrams-software-architecture | Eraser API (DiagramGPT) | https://www.eraser.io
+diagrams-software-architecture | Kroki | https://kroki.io
+diagrams-software-architecture | Structurizr | https://structurizr.com
+diagrams-software-architecture | IcePanel API | https://icepanel.io
+diagrams-software-architecture | Napkin AI API | https://www.napkin.ai
+design-ui | Figma REST API / Dev Mode MCP | https://www.figma.com/developers
+design-ui | Canva Connect API | https://www.canva.dev
+design-ui | Webflow Data API | https://developers.webflow.com
+design-ui | Framer | https://www.framer.com
+design-ui | Penpot API | https://penpot.app
+presentations-documents | Gamma API | https://gamma.app
+presentations-documents | Google Slides / Docs API | https://developers.google.com/slides
+presentations-documents | SlideSpeak API | https://slidespeak.co
+presentations-documents | Mistral OCR API | https://mistral.ai
+presentations-documents | LlamaParse (LlamaCloud) | https://www.llamaindex.ai/llamaparse
+presentations-documents | Unstructured API | https://unstructured.io
+presentations-documents | Reducto API | https://reducto.ai
+presentations-documents | Google Document AI | https://cloud.google.com/document-ai
+presentations-documents | Azure AI Document Intelligence | https://azure.microsoft.com/products/ai-services/ai-document-intelligence
+presentations-documents | AWS Textract | https://aws.amazon.com/textract/
+presentations-documents | Adobe PDF Services API | https://developer.adobe.com/document-services/
+presentations-documents | CloudConvert API | https://cloudconvert.com/api/v2
+presentations-documents | PDF.co API | https://pdf.co
+presentations-documents | DocuSign eSignature API | https://developers.docusign.com
+web-search | Tavily | https://tavily.com
+web-search | Exa | https://exa.ai
+web-search | Brave Search API | https://brave.com/search/api/
+web-search | Perplexity Sonar / Search API | https://docs.perplexity.ai
+web-search | SerpApi | https://serpapi.com
+web-search | Serper | https://serper.dev
+web-search | Linkup | https://www.linkup.so
+web-search | Parallel Web Systems Search API | https://parallel.ai
+web-search | You.com API | https://you.com/api
+web-search | Jina AI Search / Reader | https://jina.ai
+web-search | Kagi Search API | https://help.kagi.com/kagi/api/overview.html
+web-search | SearchApi.io | https://www.searchapi.io
+web-search | Google Custom Search JSON API | https://developers.google.com/custom-search/v1/overview
+web-search | Bing Web Search API | https://www.microsoft.com/bing/apis
+web-search | Mojeek Search API | https://www.mojeek.com/services/search/web-search-api/
+web-search | DuckDuckGo | https://duckduckgo.com
+web-search | SearXNG (self-hosted JSON API) | https://docs.searxng.org
+web-scraping-browser | Firecrawl | https://www.firecrawl.dev
+web-scraping-browser | Browserbase (+ Stagehand) | https://www.browserbase.com
+web-scraping-browser | Bright Data | https://brightdata.com
+web-scraping-browser | Apify | https://apify.com
+web-scraping-browser | Browser Use Cloud API | https://browser-use.com
+web-scraping-browser | Hyperbrowser | https://www.hyperbrowser.ai
+web-scraping-browser | Steel | https://steel.dev
+web-scraping-browser | Anchor Browser | https://anchorbrowser.io
+web-scraping-browser | ScrapingBee | https://www.scrapingbee.com
+web-scraping-browser | Scrapfly | https://scrapfly.io
+web-scraping-browser | Zyte API | https://www.zyte.com
+web-scraping-browser | Diffbot | https://www.diffbot.com
+web-scraping-browser | Browse AI API | https://www.browse.ai
+web-scraping-browser | ScrapeGraphAI API | https://scrapegraphai.com
+web-scraping-browser | Spider.cloud | https://spider.cloud
+code-execution-sandbox | E2B | https://e2b.dev
+code-execution-sandbox | Daytona | https://www.daytona.io
+code-execution-sandbox | Modal | https://modal.com
+code-execution-sandbox | Riza | https://riza.io
+code-execution-sandbox | Vercel Sandbox | https://vercel.com/docs/vercel-sandbox
+code-execution-sandbox | Cloudflare Sandbox SDK | https://developers.cloudflare.com/sandbox/
+code-execution-sandbox | CodeSandbox SDK | https://codesandbox.io/sdk
+code-execution-sandbox | Judge0 | https://judge0.com
+code-execution-sandbox | Runloop | https://www.runloop.ai
+knowledge-research | Wikipedia / Wikimedia API | https://api.wikimedia.org
+knowledge-research | arXiv API | https://info.arxiv.org/help/api/
+knowledge-research | PubMed E-utilities (NCBI) | https://www.ncbi.nlm.nih.gov/books/NBK25501/
+knowledge-research | Semantic Scholar API | https://www.semanticscholar.org/product/api
+knowledge-research | OpenAlex API | https://openalex.org
+knowledge-research | Crossref REST API | https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+knowledge-research | Hacker News API | https://github.com/HackerNews/API
+knowledge-research | Wolfram|Alpha API | https://products.wolframalpha.com/api
+knowledge-research | NewsAPI | https://newsapi.org
+knowledge-research | GDELT API | https://www.gdeltproject.org
+knowledge-research | Context7 (library docs for agents) | https://context7.com
+communication-email-chat | Resend | https://resend.com
+communication-email-chat | Twilio | https://www.twilio.com
+communication-email-chat | SendGrid (Twilio) | https://sendgrid.com
+communication-email-chat | Postmark | https://postmarkapp.com
+communication-email-chat | Mailgun | https://www.mailgun.com
+communication-email-chat | AgentMail | https://www.agentmail.to
+communication-email-chat | Slack API | https://api.slack.com
+communication-email-chat | Discord API | https://discord.com/developers/docs
+communication-email-chat | Telegram Bot API | https://core.telegram.org/bots/api
+communication-email-chat | WhatsApp Business Cloud API | https://developers.facebook.com/docs/whatsapp/cloud-api
+communication-email-chat | Vonage API | https://developer.vonage.com
+communication-email-chat | Stream (GetStream) Chat & Video API | https://getstream.io
+communication-email-chat | Zoom API | https://developers.zoom.us
+voice-agents-telephony | Vapi | https://vapi.ai
+voice-agents-telephony | Retell AI | https://www.retellai.com
+voice-agents-telephony | Bland AI | https://www.bland.ai
+voice-agents-telephony | Synthflow API | https://synthflow.ai
+voice-agents-telephony | ElevenLabs Agents Platform | https://elevenlabs.io/agents
+voice-agents-telephony | LiveKit Cloud | https://livekit.io
+productivity-workspace | Google Workspace APIs (Gmail, Calendar, Drive) | https://developers.google.com/workspace
+productivity-workspace | Microsoft Graph (Outlook, Teams, OneDrive) | https://learn.microsoft.com/graph/
+productivity-workspace | Notion API | https://developers.notion.com
+productivity-workspace | Linear API | https://linear.app/developers
+productivity-workspace | Atlassian (Jira, Confluence) | https://developer.atlassian.com
+productivity-workspace | Asana API | https://developers.asana.com
+productivity-workspace | ClickUp API | https://developer.clickup.com
+productivity-workspace | monday.com API | https://developer.monday.com
+productivity-workspace | Trello API | https://developer.atlassian.com/cloud/trello/
+productivity-workspace | Todoist API | https://developer.todoist.com
+productivity-workspace | Airtable API | https://airtable.com/developers
+productivity-workspace | Cal.com API | https://cal.com/docs/api-reference
+productivity-workspace | Calendly API | https://developer.calendly.com
+productivity-workspace | Dropbox API | https://www.dropbox.com/developers
+productivity-workspace | Box API | https://developer.box.com
+crm-support-marketing | HubSpot API | https://developers.hubspot.com
+crm-support-marketing | Salesforce APIs | https://developer.salesforce.com
+crm-support-marketing | Zendesk API | https://developer.zendesk.com
+crm-support-marketing | Intercom API | https://developers.intercom.com
+crm-support-marketing | Pipedrive API | https://developers.pipedrive.com
+crm-support-marketing | Mailchimp Marketing API | https://mailchimp.com/developer/
+crm-support-marketing | Attio API | https://developers.attio.com
+social-media | X (Twitter) API | https://developer.x.com
+social-media | Reddit API | https://www.reddit.com/dev/api
+social-media | YouTube Data API | https://developers.google.com/youtube/v3
+social-media | Bluesky / AT Protocol | https://docs.bsky.app
+social-media | Mastodon API | https://docs.joinmastodon.org/api/
+social-media | Meta Graph API (Facebook, Instagram) | https://developers.facebook.com/docs/graph-api
+social-media | LinkedIn API | https://learn.microsoft.com/linkedin/
+social-media | TikTok API | https://developers.tiktok.com
+social-media | Pinterest API | https://developers.pinterest.com
+social-media | Ayrshare | https://www.ayrshare.com
+developer-devops | GitHub API | https://docs.github.com/rest
+developer-devops | GitLab API | https://docs.gitlab.com/api/
+developer-devops | Vercel API | https://vercel.com/docs/rest-api
+developer-devops | Cloudflare API | https://developers.cloudflare.com/api/
+developer-devops | Netlify API | https://docs.netlify.com/api/get-started/
+developer-devops | Sentry API | https://docs.sentry.io/api/
+developer-devops | Supabase Management API | https://supabase.com/docs/reference/api
+developer-devops | Postman API | https://www.postman.com/postman/postman-public-workspace/
+developer-devops | Docker Hub API | https://docs.docker.com/docker-hub/api/latest/
+developer-devops | AWS APIs | https://aws.amazon.com
+developer-devops | Google Cloud APIs | https://cloud.google.com/apis
+developer-devops | Azure APIs | https://learn.microsoft.com/rest/api/azure/
+developer-devops | Render API | https://render.com/docs/api
+developer-devops | Fly.io Machines API | https://fly.io/docs/machines/api/
+developer-devops | Datadog API | https://docs.datadoghq.com/api/
+developer-devops | PagerDuty API | https://developer.pagerduty.com
+databases-vector-memory | Supabase | https://supabase.com
+databases-vector-memory | Neon Postgres | https://neon.com
+databases-vector-memory | MongoDB Atlas | https://www.mongodb.com/atlas
+databases-vector-memory | Upstash (Redis, Vector) | https://upstash.com
+databases-vector-memory | Turso | https://turso.tech
+databases-vector-memory | PlanetScale | https://planetscale.com
+databases-vector-memory | Pinecone | https://www.pinecone.io
+databases-vector-memory | Weaviate Cloud | https://weaviate.io
+databases-vector-memory | Qdrant Cloud | https://qdrant.tech
+databases-vector-memory | Chroma Cloud | https://www.trychroma.com
+databases-vector-memory | Zilliz Cloud (Milvus) | https://zilliz.com
+databases-vector-memory | Mem0 | https://mem0.ai
+databases-vector-memory | Zep | https://www.getzep.com
+databases-vector-memory | Letta | https://www.letta.com
+databases-vector-memory | Snowflake | https://www.snowflake.com
+databases-vector-memory | Google BigQuery | https://cloud.google.com/bigquery
+databases-vector-memory | ClickHouse Cloud | https://clickhouse.com
+databases-vector-memory | Convex | https://www.convex.dev
+translation-language | DeepL API | https://www.deepl.com/pro-api
+translation-language | Google Cloud Translation | https://cloud.google.com/translate
+translation-language | Azure AI Translator | https://azure.microsoft.com/products/ai-services/ai-translator
+translation-language | LanguageTool API | https://languagetool.org/http-api/
+translation-language | ModernMT API | https://www.modernmt.com
+maps-geo-weather | Google Maps Platform | https://developers.google.com/maps
+maps-geo-weather | Mapbox | https://www.mapbox.com
+maps-geo-weather | OpenStreetMap Nominatim | https://nominatim.org
+maps-geo-weather | Overpass API (OSM) | https://wiki.openstreetmap.org/wiki/Overpass_API
+maps-geo-weather | HERE Location Services | https://developer.here.com
+maps-geo-weather | OpenRouteService | https://openrouteservice.org
+maps-geo-weather | OpenWeatherMap API | https://openweathermap.org/api
+maps-geo-weather | Open-Meteo | https://open-meteo.com
+maps-geo-weather | Tomorrow.io API | https://www.tomorrow.io/weather-api/
+maps-geo-weather | Geoapify | https://www.geoapify.com
+finance-payments | Stripe API | https://docs.stripe.com/api
+finance-payments | PayPal API | https://developer.paypal.com
+finance-payments | Adyen API | https://docs.adyen.com
+finance-payments | Plaid API | https://plaid.com/docs/
+finance-payments | Wise API | https://docs.wise.com
+finance-payments | Alpha Vantage | https://www.alphavantage.co
+finance-payments | Polygon.io / Massive | https://polygon.io
+finance-payments | Financial Modeling Prep | https://site.financialmodelingprep.com
+finance-payments | Alpaca Trading API | https://alpaca.markets
+finance-payments | CoinGecko API | https://www.coingecko.com/en/api
+finance-payments | Open Exchange Rates | https://openexchangerates.org
+finance-payments | Coinbase (CDP / x402) | https://docs.cdp.coinbase.com
+finance-payments | Yahoo Finance (yfinance) | https://pypi.org/project/yfinance/
+ecommerce | Shopify Admin / Storefront API | https://shopify.dev
+ecommerce | WooCommerce REST API | https://woocommerce.github.io/woocommerce-rest-api-docs/
+ecommerce | Amazon Selling Partner API | https://developer-docs.amazon.com/sp-api/
+ecommerce | eBay APIs | https://developer.ebay.com
+ecommerce | Printful API | https://developers.printful.com
+ecommerce | BigCommerce API | https://developer.bigcommerce.com
+automation-integration | Zapier MCP / AI Actions | https://zapier.com/mcp
+automation-integration | Make API / MCP | https://www.make.com
+automation-integration | n8n API | https://n8n.io
+automation-integration | Pipedream Connect | https://pipedream.com/connect
+automation-integration | Composio | https://composio.dev
+automation-integration | Arcade.dev | https://www.arcade.dev
+automation-integration | StackOne | https://www.stackone.com
+automation-integration | Merge (Agent Handler) | https://www.merge.dev
+automation-integration | Nango | https://www.nango.dev
+automation-integration | Activepieces | https://www.activepieces.com
+automation-integration | IFTTT API | https://ifttt.com/developers
+automation-integration | Paragon ActionKit | https://www.useparagon.com
+model-inference | OpenAI API | https://platform.openai.com
+model-inference | Anthropic Claude API | https://docs.anthropic.com
+model-inference | Google Gemini API | https://ai.google.dev
+model-inference | Mistral AI API | https://docs.mistral.ai
+model-inference | xAI Grok API | https://docs.x.ai
+model-inference | DeepSeek API | https://api-docs.deepseek.com
+model-inference | Cohere API | https://docs.cohere.com
+model-inference | Groq API | https://console.groq.com
+model-inference | Together AI | https://www.together.ai
+model-inference | Fireworks AI | https://fireworks.ai
+model-inference | Replicate | https://replicate.com
+model-inference | fal.ai | https://fal.ai
+model-inference | OpenRouter | https://openrouter.ai
+model-inference | Hugging Face Inference Providers | https://huggingface.co/docs/inference-providers
+model-inference | Vercel AI Gateway | https://vercel.com/ai-gateway
+model-inference | PiAPI | https://piapi.ai
+model-inference | Voyage AI (embeddings/rerank) | https://www.voyageai.com

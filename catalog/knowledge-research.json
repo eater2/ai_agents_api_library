@@ -1,0 +1,251 @@
+{
+  "category": {
+    "id": "knowledge-research",
+    "name": "Knowledge and research data",
+    "description": "Encyclopedias, academic papers, news, computational knowledge and up-to-date library documentation."
+  },
+  "entries": [
+    {
+      "id": "arxiv-api",
+      "name": "arXiv API",
+      "category": "knowledge-research",
+      "homepage": "https://info.arxiv.org/help/api/",
+      "docs": "https://info.arxiv.org/help/api/user-manual.html",
+      "auth": "none",
+      "auth_hint": "no auth",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/blazickjp/arxiv-mcp-server"
+      },
+      "free_tier": "free, no key",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Search arXiv preprints by keyword, author, category or ID and retrieve metadata, abstracts and PDF links.",
+      "notes": "Endpoint: http://export.arxiv.org/api/query, returns Atom XML. Terms of Use allow no more than one request every three seconds over a single connection. For bulk harvesting use OAI-PMH or bulk data instead.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "context7-library-docs-for-agents",
+      "name": "Context7 (library docs for agents)",
+      "category": "knowledge-research",
+      "homepage": "https://context7.com",
+      "docs": "https://context7.com/docs/api-guide",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <ctx7sk_... key> (optional; works at low limits without key)",
+      "mcp": {
+        "type": "official",
+        "url": "https://mcp.context7.com/mcp"
+      },
+      "free_tier": "free; low limits without key, free API key from context7.com/dashboard raises limits",
+      "sdk": [
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": "https://context7.com/docs/llms.txt",
+      "desc_en": "Fetch up-to-date, version-specific library documentation and code examples into a coding agent's context via MCP or REST.",
+      "notes": "Maintained by Upstash; repo https://github.com/upstash/context7. Local server @upstash/context7-mcp, also a ctx7 CLI and @upstash/context7-sdk. REST base URL: https://context7.com/api/. Exceeding the limit returns 429 with Retry-After/RateLimit-* headers. Paid plans cover teams and private repos.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "crossref-rest-api",
+      "name": "Crossref REST API",
+      "category": "knowledge-research",
+      "homepage": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+      "docs": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+      "auth": "none",
+      "auth_hint": "no key; add mailto=<email> param or User-Agent contact for the 'polite pool'",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/afrise/academic-search-mcp-server"
+      },
+      "free_tier": "free, no key",
+      "sdk": [],
+      "openapi": "https://api.crossref.org/swagger-docs",
+      "llms_txt": null,
+      "desc_en": "Look up and search scholarly metadata such as DOIs, references, authors, funders and licenses across Crossref-registered works.",
+      "notes": "Base URL https://api.crossref.org (/works, /journals, /funders, /members). Rate limits are adaptive, reported in X-Rate-Limit-Limit/X-Rate-Limit-Interval headers. Identify yourself with mailto for better service. Metadata Plus is a paid SLA tier.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "gdelt-api",
+      "name": "GDELT API",
+      "category": "knowledge-research",
+      "homepage": "https://www.gdeltproject.org",
+      "docs": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+      "auth": "none",
+      "auth_hint": "no auth",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/cyanheads/gdelt-mcp-server"
+      },
+      "free_tier": "free, no key",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Full-text search global news in about 65 languages and analyze coverage volume, tone and geography in near real time.",
+      "notes": "DOC 2.0 API: https://api.gdeltproject.org/api/v2/doc/doc. Covers a rolling window of about 3 months, max 250 records per query. GEO 2.0 and TV APIs also exist. Full historical Events/GKG data available via Google BigQuery (needs a billed Google Cloud account).",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "hacker-news-api",
+      "name": "Hacker News API",
+      "category": "knowledge-research",
+      "homepage": "https://github.com/HackerNews/API",
+      "docs": "https://github.com/HackerNews/API",
+      "auth": "none",
+      "auth_hint": "no auth",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/pskill9/hn-server"
+      },
+      "free_tier": "free, no key",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Read Hacker News stories, comments, jobs, polls, user profiles and front-page rankings as real-time JSON.",
+      "notes": "Base URL https://hacker-news.firebaseio.com/v0/. Read-only, no documented rate limit. No full-text search; use the separate Algolia HN Search API for that.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "newsapi",
+      "name": "NewsAPI",
+      "category": "knowledge-research",
+      "homepage": "https://newsapi.org",
+      "docs": "https://newsapi.org/docs",
+      "auth": "api_key",
+      "auth_hint": "X-Api-Key: <key> header or apiKey=<key> query param",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/matteoantoci/mcp-newsapi"
+      },
+      "free_tier": "free Developer plan: 100 req/day, dev/test only, 24h article delay",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Search and retrieve current and historical news articles and top headlines from thousands of sources worldwide.",
+      "notes": "Free plan is barred from staging/production, including internal use; CORS allowed from localhost only. Production use needs the Business plan ($449/mo, 250k req/mo). Endpoints: /v2/everything, /v2/top-headlines.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "openalex-api",
+      "name": "OpenAlex API",
+      "category": "knowledge-research",
+      "homepage": "https://openalex.org",
+      "docs": "https://help.openalex.org/api/",
+      "auth": "api_key",
+      "auth_hint": "api_key=<key> query param (optional; basic use works without key)",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/benedict2310/Scientific-Papers-MCP"
+      },
+      "free_tier": "free: $1 of API usage/day without payment method; free key raises daily budget 10x",
+      "sdk": [],
+      "openapi": "https://help.openalex.org/openapi.json",
+      "llms_txt": "https://help.openalex.org/llms.txt",
+      "desc_en": "Query an open catalog of scholarly works, authors, institutions, sources and topics, including citation data, via REST.",
+      "notes": "Base URL https://api.openalex.org. docs.openalex.org now redirects to help.openalex.org. Free daily budget resets at midnight UTC; above it, pay-as-you-go with prepaid $1 increments. Annual Member plans start at $5,000/yr. Data is CC0.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "pubmed-e-utilities-ncbi",
+      "name": "PubMed E-utilities (NCBI)",
+      "category": "knowledge-research",
+      "homepage": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+      "docs": "https://www.ncbi.nlm.nih.gov/books/NBK25501/",
+      "auth": "none",
+      "auth_hint": "optional api_key=<NCBI key> query param; tool and email params recommended",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/openags/paper-search-mcp"
+      },
+      "free_tier": "free; 3 req/s without key, 10 req/s with free NCBI API key",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Search, fetch, summarize and cross-link biomedical literature records from PubMed, PMC and other Entrez databases.",
+      "notes": "Base URL https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ (esearch, efetch, esummary, elink). Free API key from NCBI account settings. Run heavy jobs off-peak.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "semantic-scholar-api",
+      "name": "Semantic Scholar API",
+      "category": "knowledge-research",
+      "homepage": "https://www.semanticscholar.org/product/api",
+      "docs": "https://api.semanticscholar.org/api-docs/",
+      "auth": "api_key",
+      "auth_hint": "x-api-key: <key> (optional; unauthenticated access allowed)",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server"
+      },
+      "free_tier": "free; no key (shared, throttled pool) or free API key on request",
+      "sdk": [],
+      "openapi": "https://api.semanticscholar.org/graph/v1/swagger.json",
+      "llms_txt": null,
+      "desc_en": "Search papers, authors and citation graphs, and get paper recommendations from Semantic Scholar's academic corpus.",
+      "notes": "Without a key, all users share a pool of 1000 req/s that can be throttled under load. A key starts at 1 req/s dedicated; requested via web form, arrives by email (not instant). Three APIs: Academic Graph, Recommendations, Datasets.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "category": "knowledge-research",
+      "homepage": "https://www.wikidata.org",
+      "docs": "https://www.wikidata.org/wiki/Wikidata:Data_access",
+      "auth": "none",
+      "auth_hint": "no auth for reads (descriptive User-Agent required); OAuth2 Bearer only for edits",
+      "mcp": {
+        "type": "official",
+        "url": "https://wd-mcp.wmcloud.org/mcp"
+      },
+      "free_tier": "free, no key",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Query the Wikidata knowledge graph of entities, facts and relations via SPARQL, the REST API or MCP.",
+      "notes": "Official MCP comes from Wikimedia Deutschland (github.com/wmde/WikidataMCP). SPARQL endpoint: https://query.wikidata.org/sparql, query timeout ~60s. REST API at /w/rest.php/wikibase/v1. Wikimedia rate limits and User-Agent policy apply. Added because it's a widely-used structured-knowledge source missing from the candidate list.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "wikipedia-wikimedia-api",
+      "name": "Wikipedia / Wikimedia API",
+      "category": "knowledge-research",
+      "homepage": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
+      "docs": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
+      "auth": "none",
+      "auth_hint": "Reads need no key but require a descriptive User-Agent header with contact info. Optional OAuth2 via Authorization: Bearer <access token> raises rate limits.",
+      "mcp": {
+        "type": "community",
+        "url": "https://github.com/Rudra-ravi/wikipedia-mcp"
+      },
+      "free_tier": "free, no key (rate-limited)",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Search, read and summarize Wikipedia and other Wikimedia content and metadata via REST and Action APIs.",
+      "notes": "The old API Portal at api.wikimedia.org now 301-redirects to mediawiki.org/wiki/Wikimedia_APIs. Documented limits: 10 req/min for requests identified only by IP, 200 req/min for unauthenticated requests with a proper User-Agent, 2000 req/min for established editors. Main endpoints are the per-wiki MediaWiki Action API (/w/api.php) and REST APIs.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "wolfram-alpha-api",
+      "name": "Wolfram|Alpha API",
+      "category": "knowledge-research",
+      "homepage": "https://products.wolframalpha.com/api",
+      "docs": "https://products.wolframalpha.com/llm-api/documentation",
+      "auth": "api_key",
+      "auth_hint": "appid=<AppID> query param or Authorization: Bearer <AppID>",
+      "mcp": {
+        "type": "official",
+        "url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/"
+      },
+      "free_tier": "free non-commercial developer AppID (reported up to 2,000 calls/month); paid for commercial use",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Get computed answers, structured data and step-by-step results for math, science and factual queries.",
+      "notes": "LLM API endpoint https://www.wolframalpha.com/api/v1/llm-api is built for agents; output length set by maxchars (default 6800). Get an AppID via the Developer Portal. Other APIs: Full Results, Simple, Short Answers, Spoken Results. Commercial use requires a paid license. The official MCP is the Wolfram Cloud MCP, covering Wolfram technology broadly.",
+      "verified": "2026-09-24"
+    }
+  ]
+}

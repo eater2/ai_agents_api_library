@@ -1,0 +1,134 @@
+{
+  "category": {
+    "id": "music-generation",
+    "name": "Music generation",
+    "description": "Generate songs, instrumentals, loops and sound effects from prompts."
+  },
+  "entries": [
+    {
+      "id": "beatoven-ai-api",
+      "name": "Beatoven.ai API",
+      "category": "music-generation",
+      "homepage": "https://www.beatoven.ai",
+      "docs": "https://www.beatoven.ai/api",
+      "auth": "api_key",
+      "auth_hint": "API key generated via dashboard (exact header name not published)",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "check pricing",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Generate royalty-cleared background music and sound effects from text prompts via REST API (Maestro).",
+      "notes": "Public marketing pages don't disclose exact auth header or free-credit amount; requires dashboard signup to see full docs.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "elevenlabs-music-api",
+      "name": "ElevenLabs Music API",
+      "category": "music-generation",
+      "homepage": "https://elevenlabs.io/music",
+      "docs": "https://elevenlabs.io/docs/api-reference/music/compose",
+      "auth": "api_key",
+      "auth_hint": "xi-api-key: <API_KEY>",
+      "mcp": {
+        "type": "official",
+        "url": "https://github.com/elevenlabs/elevenlabs-mcp"
+      },
+      "free_tier": "shares ElevenLabs account credit pool (limited free credits on sign-up); check pricing for per-track cost",
+      "sdk": [
+        "python",
+        "typescript"
+      ],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Generate original music tracks from text prompts or detailed composition plans via REST API, with commercial licensing.",
+      "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "loudly-api",
+      "name": "Loudly API",
+      "category": "music-generation",
+      "homepage": "https://www.loudly.com",
+      "docs": "https://www.loudly.com/developers",
+      "auth": "api_key",
+      "auth_hint": "API key issued on account creation (exact header name not published)",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "free track allowance on signup, then volume-based pay-as-you-go pricing",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Generate, remix, stem-split, and master music tracks programmatically via REST API.",
+      "notes": "Vendor lists an MCP server as 'in development' (not yet released) as of this check.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "mubert-api",
+      "name": "Mubert API",
+      "category": "music-generation",
+      "homepage": "https://mubert.com/api",
+      "docs": "https://mubert.com/api",
+      "auth": "api_key",
+      "auth_hint": "customer-id + access-token headers (credentials emailed after checkout)",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "paid only; plans start at $49/mo (100 generations/mo), no free tier",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Generate streaming or file-based background music from text/image prompts via REST/WebRTC API, 15s-25min tracks.",
+      "notes": "No self-serve free trial; must purchase a plan before receiving API credentials.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "soundraw-api",
+      "name": "Soundraw API",
+      "category": "music-generation",
+      "homepage": "https://soundraw.io",
+      "docs": "https://docs.channel.io/soundraw-faq/en/articles/SOUNDRAW-API-fbf580fd",
+      "auth": "api_key",
+      "auth_hint": "check docs (exact header not publicly disclosed on marketing pages)",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "paid only; Starter plan $29.99/mo for 100 songs/mo, no free tier confirmed",
+      "sdk": [],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Generate royalty-free background music tracks by mood, genre, and duration via REST API for embedding in apps.",
+      "notes": "Full technical API reference is gated behind sales/docs portal; only an FAQ page and pricing were publicly confirmed.",
+      "verified": "2026-09-24"
+    },
+    {
+      "id": "stable-audio-api-stability-ai",
+      "name": "Stable Audio API (Stability AI)",
+      "category": "music-generation",
+      "homepage": "https://platform.stability.ai",
+      "docs": "https://platform.stability.ai/docs/api-reference",
+      "auth": "api_key",
+      "auth_hint": "Authorization: Bearer <STABILITY_API_KEY>",
+      "mcp": {
+        "type": "none",
+        "url": null
+      },
+      "free_tier": "shares Stability AI platform credits; 25 free credits on signup, then pay-as-you-go",
+      "sdk": [
+        "python"
+      ],
+      "openapi": null,
+      "llms_txt": null,
+      "desc_en": "Generate music and sound effects from text prompts via REST API (Stable Audio 2.0 models), up to 3 minutes.",
+      "notes": "Audio endpoint lives under the same platform.stability.ai API and credit system as Stability's image API; exact endpoint path not independently re-verified this pass.",
+      "verified": "2026-09-24"
+    }
+  ]
+}
