@@ -35,7 +35,18 @@
     "source_url": "https://github.com/blazickjp/arxiv-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "arxiv-mcp-server"
+     ],
+     "env": [],
+     "source_url": "https://github.com/blazickjp/arxiv-mcp-server",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key",
    "sdk": [],
@@ -128,7 +139,16 @@
     "source_url": "https://github.com/cyanheads/congressgov-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://congressgov.caseyjhand.com/mcp",
+     "headers": null,
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://github.com/cyanheads/congressgov-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free: government API, key issued instantly by email; 5,000 requests/hour.",
    "sdk": [],
@@ -188,7 +208,18 @@
     "source_url": "https://github.com/upstash/context7",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.context7.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $CONTEXT7_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://context7.com/docs/resources/all-clients",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free; low limits without key, free API key from context7.com/dashboard raises limits",
    "sdk": [
@@ -263,7 +294,22 @@
     "source_url": "https://github.com/afrise/academic-search-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uv",
+     "args": [
+      "run",
+      "/path/to/academic-search-mcp-server/server.py"
+     ],
+     "env": [
+      "SEMANTIC_SCHOLAR_API_KEY",
+      "CROSSREF_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/afrise/academic-search-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key",
    "sdk": [],
@@ -344,7 +390,17 @@
     "source_url": "https://github.com/cyanheads/gdelt-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://gdelt.caseyjhand.com/mcp",
+     "headers": null,
+     "oauth": false,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/cyanheads/gdelt-mcp-server#public-hosted-instance",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key",
    "sdk": [],
@@ -416,7 +472,18 @@
     "source_url": "https://github.com/narumiruna/gitingest-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "gitingestmcp@latest"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/narumiruna/gitingest-mcp#pypi-installation",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "No key; free public service with no published quota (the web UI has rate limiting and CAPTCHA protection).",
    "sdk": [
@@ -473,7 +540,18 @@
     "source_url": "https://github.com/pskill9/hn-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "node",
+     "args": [
+      "/path/to/hn-server/build/index.js"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/pskill9/hn-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key",
    "sdk": [],
@@ -566,7 +644,19 @@
     "source_url": "https://github.com/8enSmith/mcp-open-library",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "mcp-open-library"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/8enSmith/mcp-open-library",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "No key; free and open: 1 request/second anonymous, 3 requests/second with an identifying User-Agent.",
    "sdk": [],
@@ -625,7 +715,22 @@
     "source_url": "https://github.com/jeffmm/nytimes-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "--from",
+      "git+https://github.com/jeffmm/nytimes-mcp.git",
+      "nytimes-mcp"
+     ],
+     "env": [
+      "NYT_API_KEY"
+     ],
+     "source_url": "https://github.com/jeffmm/nytimes-mcp",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free: all public APIs are free; most APIs 500 requests/day and 5 requests/minute (Archive API higher).",
    "sdk": [],
@@ -692,7 +797,20 @@
     "source_url": "https://github.com/matteoantoci/mcp-newsapi",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "node",
+     "args": [
+      "/path/to/mcp-newsapi/build/index.js"
+     ],
+     "env": [
+      "NEWSAPI_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/matteoantoci/mcp-newsapi",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free Developer plan: 100 req/day, dev/test only, 24h article delay",
    "sdk": [],
@@ -773,7 +891,19 @@
     "source_url": "https://github.com/benedict2310/Scientific-Papers-MCP",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@futurelab-studio/latest-science-mcp@latest"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/benedict2310/Scientific-Papers-MCP",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free: $1 of API usage/day without payment method; free key raises daily budget 10x",
    "sdk": [],
@@ -860,7 +990,22 @@
     "source_url": "https://github.com/openags/paper-search-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uv",
+     "args": [
+      "tool",
+      "run",
+      "paper-search-mcp"
+     ],
+     "env": [
+      "PAPER_SEARCH_MCP_UNPAYWALL_EMAIL"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/openags/paper-search-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free; 3 req/s without key, 10 req/s with free NCBI API key",
    "sdk": [],
@@ -944,7 +1089,20 @@
     "source_url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "semantic-scholar-fastmcp"
+     ],
+     "env": [
+      "SEMANTIC_SCHOLAR_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server#mcp-client-configuration",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free; no key (shared, throttled pool) or free API key on request",
    "sdk": [],
@@ -1025,7 +1183,17 @@
     "source_url": "https://github.com/wmde/WikidataMCP",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://wd-mcp.wmcloud.org/mcp",
+     "headers": null,
+     "oauth": false,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/wmde/WikidataMCP",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key",
    "sdk": [],
@@ -1093,7 +1261,16 @@
     "source_url": "https://github.com/Rudra-ravi/wikipedia-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "wikipedia-mcp",
+     "args": [],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/Rudra-ravi/wikipedia-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key (rate-limited)",
    "sdk": [],
@@ -1165,7 +1342,16 @@
     "source_url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://agenttools.wolfram.com/mcp",
+     "headers": null,
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://support.wolfram.com/75237",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free non-commercial developer AppID (reported up to 2,000 calls/month); paid for commercial use",
    "sdk": [],

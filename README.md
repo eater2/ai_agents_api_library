@@ -16,11 +16,11 @@
 <tr><td><b>Official MCP servers</b></td><td>192</td></tr>
 <tr><td><b>Languages</b></td><td>English, Polish</td></tr>
 <tr><td><b>Format</b></td><td>JSON, Markdown, HTML, llms.txt</td></tr>
-<tr><td><b>Last verified</b></td><td>2026-09-24</td></tr>
+<tr><td><b>Last checked</b></td><td>2026-09-24</td></tr>
 <tr><td><b>License</b></td><td>CC BY 4.0 (data), MIT (code)</td></tr>
 </table>
 
-**AI Agents Accessible APIs** is an open, bilingual (English/Polish) catalog of **330 verified services** in **27 categories** that an autonomous AI agent — such as Claude, ChatGPT, Gemini or a custom LLM agent — can use **without a human in the loop**, after a one-time human step: registering an account and handing the agent an **API key**, an **OAuth token**, or a connection to an **MCP (Model Context Protocol) server**. Every entry records the documentation URL, the authentication method, the availability of an official or community MCP server, and the free tier. The list is not a directory of products with “AI” in their name; the criterion is agent operability, not branding.
+**AI Agents Accessible APIs** is an open, bilingual (English/Polish) catalog of **330 services** (each with a last-checked date) in **27 categories** that an autonomous AI agent — such as Claude, ChatGPT, Gemini or a custom LLM agent — can use **without a human in the loop**, after a one-time human step: registering an account and handing the agent an **API key**, an **OAuth token**, or a connection to an **MCP (Model Context Protocol) server**. Every entry records the documentation URL, the authentication method, the availability of an official or community MCP server, and the free tier. The list is not a directory of products with “AI” in their name; the criterion is agent operability, not branding.
 
 ## Contents
 
@@ -82,7 +82,7 @@ The skill tells Claude when to reach for the catalog and how to pick a service. 
 
 - The service exposes a **public, self-serve** programmatic interface (REST, GraphQL, SDK) **or** an MCP server.
 - A human needs to act **at most once** — sign up and create a key or approve OAuth. After that the agent works unattended.
-- The interface is **documented** and **currently active** (verified on the date shown in the infobox).
+- The interface is **documented** and **currently active** (links last checked on the date shown in the infobox).
 - Consumer-only apps, waitlists, sales-gated enterprise products, agent frameworks and IDEs are **excluded** — they are agents or tools for building agents, not services an agent calls.
 
 ## Legend

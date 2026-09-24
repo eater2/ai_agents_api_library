@@ -31,7 +31,21 @@
     "source_url": "https://github.com/brave/brave-search-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@brave/brave-search-mcp-server"
+     ],
+     "env": [
+      "BRAVE_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/brave/brave-search-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "$5 free monthly credits (~1,000 queries on Search plan); credit card required at signup as anti-fraud measure",
    "sdk": [],
@@ -80,6 +94,26 @@
     "answer-engine"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "run a web search",
+    "method": "GET",
+    "url": "https://api.search.brave.com/res/v1/web/search?q={query}",
+    "example": "curl \"https://api.search.brave.com/res/v1/web/search?q=machine+learning+tutorials\" -H \"X-Subscription-Token: $BRAVE_API_KEY\"",
+    "response_fields": [
+     "web.results[].title",
+     "web.results[].url",
+     "web.results[].description",
+     "query.more_results_available"
+    ],
+    "async": null,
+    "source_url": "https://api-dashboard.search.brave.com/app/documentation/web-search/get-started",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Search plan: $5 per 1,000 requests ($0.005 per query); $5 free monthly credits",
+    "source_url": "https://brave.com/search/api/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -140,7 +174,19 @@
     "source_url": "https://exa.ai/docs/reference/exa-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.exa.ai/mcp",
+     "headers": {
+      "x-api-key": "$EXA_API_KEY"
+     },
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://exa.ai/docs/reference/exa-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: $10 free credits/month (~1,400 searches), no payment method required",
    "sdk": [
@@ -184,6 +230,27 @@
     "web-scraping"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "search the web",
+    "method": "POST",
+    "url": "https://api.exa.ai/search",
+    "example": "curl -X POST https://api.exa.ai/search -H \"x-api-key: $EXA_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"Latest developments in LLM capabilities\",\"numResults\":10}'",
+    "response_fields": [
+     "requestId",
+     "results[].title",
+     "results[].url",
+     "results[].id",
+     "costDollars.total"
+    ],
+    "async": null,
+    "source_url": "https://exa.ai/docs/reference/search",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Search: $7 per 1,000 requests (up to 10 results; $0.007 per search), +$1 per 1,000 extra results; deep search $12-$15 per 1,000; contents $1 per 1,000 pages per content type",
+    "source_url": "https://exa.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -237,7 +304,21 @@
     "source_url": "https://github.com/jina-ai/MCP",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.jina.ai/v1",
+     "headers": {
+      "Authorization": "Bearer $JINA_API_KEY"
+     },
+     "oauth": false,
+     "env": [
+      "JINA_API_KEY"
+     ],
+     "source_url": "https://github.com/jina-ai/MCP",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "No key needed for Reader only: 20 RPM (Search is blocked without a key); free API key gives Reader 500 RPM / Search 100 RPM plus 10M free tokens one-time on signup",
    "sdk": [],
@@ -311,7 +392,18 @@
     "source_url": "https://github.com/kagisearch/kagimcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.kagi.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $KAGI_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://github.com/kagisearch/kagimcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "no free tier: pay-per-use, $12 per 1,000 search requests, invoiced monthly or at $100 usage, whichever first",
    "sdk": [
@@ -389,7 +481,18 @@
     "source_url": "https://docs.linkup.so/pages/integrations/mcp/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.linkup.so/mcp",
+     "headers": {
+      "Authorization": "Bearer $LINKUP_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.linkup.so/pages/integrations/mcp/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "$20 free credits/month for new accounts signing up with a professional email",
    "sdk": [
@@ -457,7 +560,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "limited-query free trial available on request; paid plans from £2 CPM (Startup, 5 req/s, 100k/day cap)",
    "sdk": [],
@@ -530,7 +634,18 @@
     "source_url": "https://docs.parallel.ai/integrations/mcp/search-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://search.parallel.ai/mcp",
+     "headers": {
+      "Authorization": "Bearer $PARALLEL_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.parallel.ai/integrations/mcp/search-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free: 5,000 requests/month across APIs, plus up to $80 signup credit and $5/month free credits",
    "sdk": [
@@ -607,7 +722,18 @@
     "source_url": "https://docs.perplexity.ai/guides/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.perplexity.ai/mcp",
+     "headers": {
+      "Authorization": "Bearer $PERPLEXITY_API_KEY"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.perplexity.ai/guides/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Paid only: no confirmed free tier; pay-as-you-go, Search API billed at $5 per 1,000 requests ($1 per 1,000 for the fast search variant)",
    "sdk": [
@@ -637,6 +763,27 @@
     "web-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "run a web search",
+    "method": "POST",
+    "url": "https://api.perplexity.ai/search",
+    "example": "curl -X POST https://api.perplexity.ai/search -H \"Authorization: Bearer $PERPLEXITY_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"latest AI developments\",\"max_results\":3}'",
+    "response_fields": [
+     "results[].title",
+     "results[].url",
+     "results[].snippet",
+     "results[].date",
+     "id"
+    ],
+    "async": null,
+    "source_url": "https://docs.perplexity.ai/api-reference/search-post",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Search API: $5 per 1,000 requests ($0.005 per request); fast search $1 per 1,000",
+    "source_url": "https://docs.perplexity.ai/guides/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": false,
    "no_card": false,
@@ -664,7 +811,19 @@
     "source_url": "https://www.searchapi.io/integrations/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://www.searchapi.io/mcp",
+     "headers": {
+      "X-MCP-Token": "$SEARCHAPI_MCP_TOKEN"
+     },
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://www.searchapi.io/integrations/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "100 free requests, no credit card required; then paid plans from $40/mo (10,000 searches)",
    "sdk": [],
@@ -737,7 +896,21 @@
     "source_url": "https://github.com/ihor-sokoliuk/mcp-searxng",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "mcp-searxng"
+     ],
+     "env": [
+      "SEARXNG_URL"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/ihor-sokoliuk/mcp-searxng#quick-start",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key (self-hosted; you run and pay for the instance yourself)",
    "sdk": [],
@@ -811,7 +984,18 @@
     "source_url": "https://github.com/serpapi/serpapi-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.serpapi.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $SERPAPI_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://github.com/serpapi/serpapi-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan: 250 searches/month, 50 requests/hour throughput",
    "sdk": [
@@ -910,7 +1094,21 @@
     "source_url": "https://github.com/marcopesani/mcp-server-serper",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "serper-search-scrape-mcp-server"
+     ],
+     "env": [
+      "SERPER_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/marcopesani/mcp-server-serper",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 2,500 queries, no credit card required",
    "sdk": [],
@@ -940,6 +1138,11 @@
     "places-search"
    ],
    "no_auth": false,
+   "unit_price": {
+    "summary": "Prepaid credits, 1 credit per query: $1.00/1k (50k pack, $50) down to $0.30/1k (12.5M pack); 2,500 free queries",
+    "source_url": "https://serper.dev",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -985,7 +1188,19 @@
     "source_url": "https://github.com/tavily-ai/tavily-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.tavily.com/mcp/",
+     "headers": {
+      "Authorization": "Bearer $TAVILY_API_KEY"
+     },
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://docs.tavily.com/documentation/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 1,000 API credits/month, no credit card required",
    "sdk": [
@@ -1024,6 +1239,28 @@
     "web-crawling"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "search the web",
+    "method": "POST",
+    "url": "https://api.tavily.com/search",
+    "example": "curl -X POST https://api.tavily.com/search -H \"Authorization: Bearer $TAVILY_API_KEY\" -H \"Content-Type: application/json\" -d '{\"query\":\"Who is Leo Messi?\"}'",
+    "response_fields": [
+     "results[].title",
+     "results[].url",
+     "results[].content",
+     "results[].score",
+     "answer",
+     "usage"
+    ],
+    "async": null,
+    "source_url": "https://docs.tavily.com/documentation/api-reference/endpoint/search",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Search: 1 credit (basic/fast/ultra-fast) or 2 credits (advanced); pay-as-you-go $0.008 per credit",
+    "source_url": "https://www.tavily.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -1068,7 +1305,18 @@
     "source_url": "https://you.com/docs/build-with-agents/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.you.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $YDC_API_KEY"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://you.com/docs/build-with-agents/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free tier: $100 one-time credit on signup (no card); main remote MCP also has a keyless ?profile=free mode with 100 search queries/day",
    "sdk": [

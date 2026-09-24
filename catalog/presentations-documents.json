@@ -16,7 +16,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free tier: 500 document transactions/month, no credit card required",
    "sdk": [
@@ -86,7 +87,18 @@
     "source_url": "https://github.com/ag2-mcp-servers/amazon-textract",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "python",
+     "args": [
+      "mcp_server/main.py",
+      "stdio"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/ag2-mcp-servers/amazon-textract",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free tier: for the first 3 months, 1,000 pages/month DetectDocumentText (and AnalyzeDocument signatures-only), 100 pages/month AnalyzeDocument forms/tables/layout/queries, 100 pages/month AnalyzeExpense/AnalyzeID",
    "sdk": [
@@ -165,7 +177,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "Free tier: F0 pricing tier, 500 pages/month; analyzes only the first 2 pages per document, 4 MB max file, 1 TPS",
    "sdk": [
@@ -238,7 +251,17 @@
     "source_url": "https://cloudconvert.com/docs/raw/integrations/mcp-server.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.cloudconvert.com",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://cloudconvert.com/docs/raw/integrations/mcp-server.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free: 10 conversion credits/day including all API features, no credit card required; paid credit packages beyond that; free Sandbox API for unlimited test jobs without consuming credits",
    "sdk": [
@@ -331,7 +354,17 @@
     "source_url": "https://www.docusign.com/blog/developers/claude-docusign-mcp-connector-guide",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp-d.docusign.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://developers.docusign.com/platform/mcp-server/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free developer/demo sandbox account (account-d.docusign.com) with unlimited test envelopes; production use requires a paid DocuSign plan",
    "sdk": [
@@ -430,7 +463,16 @@
     "source_url": "https://developers.gamma.app/mcp/mcp-tools-reference.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.gamma.app/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://developers.gamma.app/mcp/gamma-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Paid only for API keys (Pro, Ultra, Teams or Business plan); the Gamma MCP server/connectors work on all plans including Free, with generations consuming credits",
    "sdk": [],
@@ -498,7 +540,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "Free tier: first 1,000 pages/month free for Enterprise Document OCR only (then $1.50/1,000); Form Parser and custom extractor $30/1,000 pages with no free band",
    "sdk": [
@@ -581,7 +624,16 @@
     "source_url": "https://developers.google.com/workspace/slides/api/guides/configure-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://slidesmcp.googleapis.com/mcp/v1",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://developers.google.com/workspace/slides/api/guides/configure-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key (standard Google API usage quotas apply; requires GCP project + OAuth consent)",
    "sdk": [
@@ -660,7 +712,18 @@
     "source_url": "https://developers.llamaindex.ai/llamaparse/for-agents/mcp/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.llamaindex.ai/mcp",
+     "headers": {
+      "Authorization": "Bearer $LLAMA_CLOUD_API_KEY"
+     },
+     "oauth": true,
+     "source_url": "https://developers.llamaindex.ai/llamaparse/for-agents/mcp/",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free tier: Free plan with 10K credits/month; beyond that credit-based at $1.25/1,000 credits (1-45+ credits/page depending on tier); 48h parse cache is free to re-query",
    "sdk": [
@@ -737,7 +800,22 @@
     "source_url": "https://github.com/D-Diaa/mistral-ocr-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "--from",
+      "/path/to/mistral-ocr-mcp",
+      "mistral-ocr-mcp"
+     ],
+     "env": [
+      "MISTRAL_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/D-Diaa/mistral-ocr-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free tier: Free plan includes $10/month in API credits; then $4/1,000 pages (OCR), $5/1,000 pages (Document AI); 50% off via Batch API",
    "sdk": [
@@ -858,7 +936,20 @@
     "source_url": "https://github.com/pdfdotco/pdfco-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "pdfco-mcp"
+     ],
+     "env": [
+      "X_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/pdfdotco/pdfco-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "trial credits: 10,000 credits for 1 month, no credit card required",
    "sdk": [],
@@ -931,7 +1022,18 @@
     "source_url": "https://docs.reducto.ai/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.reducto.ai/mcp",
+     "headers": {
+      "Authorization": "Bearer $REDUCTO_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.reducto.ai/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "15,000 free credits (~$150 value) for new Standard accounts; extra credits via Startup Program for qualifying early-stage teams",
    "sdk": [
@@ -1007,7 +1109,19 @@
     "source_url": "https://github.com/SlideSpeak/slidespeak-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.slidespeak.co/mcp",
+     "headers": {
+      "Authorization": "Bearer $SLIDESPEAK_API_KEY"
+     },
+     "oauth": false,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/SlideSpeak/slidespeak-mcp#remote-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Trial: free API trial, no credit card required; then API plans from $49/month (1,000 credits)",
    "sdk": [],
@@ -1093,7 +1207,17 @@
     "source_url": "https://docs.unstructured.io/transform/get-started/claude-code",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.transform.unstructured.io",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://docs.unstructured.io/transform/get-started/claude-code",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free: 10,000 free pages one-time to start, no credit card; then Pay-As-You-Go at $0.015/page",
    "sdk": [

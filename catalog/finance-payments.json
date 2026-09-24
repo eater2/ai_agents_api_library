@@ -21,7 +21,22 @@
     "source_url": "https://docs.adyen.com/development-resources/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@adyen/mcp",
+      "--env=TEST"
+     ],
+     "env": [
+      "ADYEN_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/Adyen/adyen-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "paid only; requires a signed merchant contract, pay per-transaction",
    "sdk": [
@@ -101,7 +116,21 @@
     "source_url": "https://github.com/alpacahq/alpaca-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "alpaca-mcp-server"
+     ],
+     "env": [
+      "ALPACA_API_KEY",
+      "ALPACA_SECRET_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/alpacahq/alpaca-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free paper trading (unlimited); free basic (IEX) market data feed",
    "sdk": [
@@ -175,7 +204,16 @@
     "source_url": "https://github.com/alphavantage/alpha_vantage_mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.alphavantage.co/mcp",
+     "headers": null,
+     "oauth": true,
+     "source_url": "https://github.com/alphavantage/alpha_vantage_mcp",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 25 requests/day",
    "sdk": [],
@@ -237,7 +275,18 @@
     "source_url": "https://docs.cdp.coinbase.com/agentic-wallet/mcp/quickstart.md",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "node",
+     "args": [
+      "/Users/your-home-dir/.payments-mcp/bundle.js"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/coinbase/payments-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free tier: CDP x402 Facilitator free for 1,000 onchain transactions/month, then $0.001/tx; payment verification always free",
    "sdk": [
@@ -304,7 +353,16 @@
     "source_url": "https://docs.coingecko.com/reference/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.api.coingecko.com/mcp",
+     "headers": null,
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.coingecko.com/reference/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free tier: Demo API plan 10,000 calls/month, 100 calls/min, attribution required; keyless free MCP with shared rate limits",
    "sdk": [],
@@ -375,7 +433,18 @@
     "source_url": "https://coinmarketcap.com/api/documentation/ai-agent-hub/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.coinmarketcap.com/mcp",
+     "headers": {
+      "X-CMC-MCP-API-KEY": "$CMC_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://coinmarketcap.com/api/documentation/ai-agent-hub/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free Basic plan: 15,000 credits/month, 50 requests/min, 1 API key, commercial use allowed; plus a keyless public API with lower rate limits",
    "sdk": [
@@ -453,7 +522,17 @@
     "source_url": "https://github.com/coinpaprika/dexpaprika-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.dexpaprika.com/streamable-http",
+     "headers": null,
+     "oauth": false,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/coinpaprika/dexpaprika-mcp#hosted-server-no-installation",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "No key; 30,000 credits per rolling 30 days per IP at 15 requests/min. Free registered key: 100,000 credits/30 days at 30 requests/min, no card",
    "sdk": [
@@ -512,7 +591,19 @@
     "source_url": "https://site.financialmodelingprep.com/developer/docs/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://financialmodelingprep.com/mcp?apikey=$FMP_API_KEY",
+     "headers": null,
+     "oauth": false,
+     "env": [
+      "FMP_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://site.financialmodelingprep.com/developer/docs/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 250 requests/day (limited endpoints)",
    "sdk": [],
@@ -594,7 +685,17 @@
     "source_url": "https://www.mercadopago.com.br/developers/en/docs/mcp-server/tools.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.mercadopago.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $MERCADOPAGO_ACCESS_TOKEN"
+     },
+     "docs_only": false,
+     "source_url": "https://github.com/mercadolibre/mercadopago-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free to integrate: no API or monthly fees, only per-transaction commissions; free test credentials and test users for sandbox payments",
    "sdk": [
@@ -645,7 +746,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free tier: 1,000 requests/month, USD base only, hourly updates",
    "sdk": [],
@@ -737,7 +839,18 @@
     "source_url": "https://docs.paypal.ai/developer/tools/ai/mcp-quickstart",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "sse",
+     "url": "https://mcp.paypal.com/sse",
+     "headers": {
+      "Authorization": "Bearer $PAYPAL_ACCESS_TOKEN"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.paypal.ai/developer/tools/ai/mcp-quickstart",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free to integrate; pay per-transaction fees only; sandbox for testing",
    "sdk": [
@@ -826,7 +939,18 @@
     "source_url": "https://plaid.com/docs/resources/mcp/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.dashboard.plaid.com/mcp/",
+     "headers": {
+      "Authorization": "Bearer $PLAID_DASHBOARD_TOKEN"
+     },
+     "oauth": false,
+     "source_url": "https://plaid.com/docs/resources/mcp/",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free: Sandbox always free; Trial plan for new US/Canada teams (since 2026-04-15) gives 10 Production Items; then pay-as-you-go",
    "sdk": [
@@ -917,7 +1041,18 @@
     "source_url": "https://github.com/massive-com/mcp_massive",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "mcp_massive",
+     "args": [],
+     "env": [
+      "MASSIVE_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/massive-com/mcp_massive",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier available (delayed data, limited calls/min); paid plans for real-time",
    "sdk": [
@@ -988,7 +1123,16 @@
     "source_url": "https://developer.squareup.com/docs/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.squareup.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://developer.squareup.com/docs/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free to integrate; pay per-transaction processing fees; free Sandbox for testing",
    "sdk": [
@@ -1078,7 +1222,19 @@
     "source_url": "https://docs.stripe.com/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.stripe.com",
+     "headers": {
+      "Authorization": "Bearer $STRIPE_AGENT_API_KEY"
+     },
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://docs.stripe.com/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free to integrate; pay per-transaction fees only, no monthly fee",
    "sdk": [
@@ -1119,6 +1275,27 @@
     "invoicing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create a PaymentIntent",
+    "method": "POST",
+    "url": "https://api.stripe.com/v1/payment_intents",
+    "example": "curl https://api.stripe.com/v1/payment_intents -u \"$STRIPE_SECRET_KEY:\" -d amount=2000 -d currency=usd -d \"automatic_payment_methods[enabled]=true\"",
+    "response_fields": [
+     "id",
+     "status",
+     "client_secret",
+     "amount",
+     "currency"
+    ],
+    "async": null,
+    "source_url": "https://docs.stripe.com/api/payment_intents/create",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Poland account, standard EEA cards: 1.5% + 1.00 zł per successful card transaction (rates vary by country)",
+    "source_url": "https://stripe.com/en-pl/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1173,7 +1350,29 @@
     "source_url": "https://github.com/2060-io/mcp-wise",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "docker",
+     "args": [
+      "run",
+      "-i",
+      "--rm",
+      "--init",
+      "-e",
+      "WISE_API_TOKEN",
+      "-e",
+      "WISE_IS_SANDBOX",
+      "io2060/mcp-wise:latest"
+     ],
+     "env": [
+      "WISE_API_TOKEN",
+      "WISE_IS_SANDBOX"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/2060-io/mcp-wise",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free API access; normal Wise transfer fees apply per transaction; sandbox available",
    "sdk": [],

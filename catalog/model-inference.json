@@ -16,7 +16,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "paid only",
    "sdk": [
@@ -91,7 +92,17 @@
     "source_url": "https://docs.cohere.com/llms.txt",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://docs.cohere.com/_mcp/server",
+     "headers": null,
+     "oauth": false,
+     "env": [],
+     "docs_only": true,
+     "source_url": "https://docs.cohere.com/llms.txt",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free trial key: 1,000 calls/mo, rate-limited",
    "sdk": [
@@ -175,7 +186,16 @@
     "source_url": "https://www.comet.com/docs/opik/mcp-server/tools",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://www.comet.com/opik/api/v1/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://www.comet.com/docs/opik/mcp-server/advanced-setup",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free cloud plan: 25k spans/month, 60-day data retention, up to 10 team members",
    "sdk": [
@@ -228,7 +248,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "paid only",
    "sdk": [],
@@ -308,7 +329,18 @@
     "source_url": "https://fal.ai/docs/documentation/setting-up/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.fal.ai/mcp",
+     "headers": {
+      "Authorization": "Bearer $FAL_KEY"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://fal.ai/docs/documentation/setting-up/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "check pricing",
    "sdk": [
@@ -356,6 +388,25 @@
     "text-to-3d"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "generate an image from a text prompt via the queue (FLUX.1 schnell)",
+    "method": "POST",
+    "url": "https://queue.fal.run/{model_id}",
+    "example": "curl -X POST https://queue.fal.run/fal-ai/flux/schnell -H \"Authorization: Key $FAL_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\": \"a sunset over mountains\"}'",
+    "response_fields": [
+     "request_id",
+     "status_url",
+     "response_url"
+    ],
+    "async": "poll GET https://queue.fal.run/{model_id}/requests/{request_id}/status until COMPLETED, then GET .../requests/{request_id} (images[0].url)",
+    "source_url": "https://fal.ai/docs/documentation/model-apis/inference/queue",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "FLUX.1 [schnell]: $0.003 per megapixel (rounded up); price varies per model",
+    "source_url": "https://fal.ai/models/fal-ai/flux/schnell",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": false,
    "no_card": false,
@@ -388,7 +439,16 @@
     "source_url": "https://docs.fireworks.ai/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://docs.fireworks.ai/mcp",
+     "headers": null,
+     "oauth": false,
+     "docs_only": true,
+     "source_url": "https://docs.fireworks.ai/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "trial credits: $1 on signup",
    "sdk": [
@@ -466,7 +526,16 @@
     "source_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://gemini-api-docs-mcp.dev",
+     "headers": null,
+     "oauth": false,
+     "docs_only": true,
+     "source_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: rate-limited access to Flash/Pro models",
    "sdk": [
@@ -540,7 +609,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free tier: rate-limited per model, no card",
    "sdk": [
@@ -619,7 +689,18 @@
     "source_url": "https://huggingface.co/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://huggingface.co/mcp",
+     "headers": {
+      "Authorization": "Bearer $HF_TOKEN"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://github.com/huggingface/hf-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: monthly credits (more with PRO)",
    "sdk": [
@@ -686,7 +767,18 @@
     "source_url": "https://docs.mistral.ai/resources/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.mistral.ai/mcp",
+     "headers": {
+      "Authorization": "Bearer $MISTRAL_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.mistral.ai/resources/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: Studio free mode, rate-limited",
    "sdk": [
@@ -764,7 +856,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "paid only",
    "sdk": [
@@ -820,7 +913,16 @@
     "type": "official",
     "url": "https://mcp.openrouter.ai/mcp",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.openrouter.ai/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://openrouter.ai/docs/guides/overview/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free models: 50 req/day (1,000/day after $10 purchase)",
    "sdk": [
@@ -870,7 +972,20 @@
     "type": "community",
     "url": "https://github.com/apinetwork/piapi-mcp-server",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "node",
+     "args": [
+      "/path/to/piapi-mcp-server/dist/index.js"
+     ],
+     "env": [
+      "PIAPI_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/apinetwork/piapi-mcp-server#connecting-to-claude-desktop",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "trial credits: $0.50 on signup",
    "sdk": [],
@@ -919,7 +1034,16 @@
     "type": "official",
     "url": "https://mcp.replicate.com",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "sse",
+     "url": "https://mcp.replicate.com/sse",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://mcp.replicate.com",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "paid only",
    "sdk": [
@@ -941,6 +1065,27 @@
     "model-hosting"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "run an official model and wait for the output (FLUX schnell text-to-image)",
+    "method": "POST",
+    "url": "https://api.replicate.com/v1/models/{owner}/{name}/predictions",
+    "example": "curl -s -X POST https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions -H \"Authorization: Bearer $REPLICATE_API_TOKEN\" -H 'Content-Type: application/json' -H 'Prefer: wait' -d '{\"input\": {\"prompt\": \"a sunset over mountains\"}}'",
+    "response_fields": [
+     "id",
+     "status",
+     "output",
+     "error",
+     "urls.get"
+    ],
+    "async": "if status is not succeeded after the 60 s wait, poll GET https://api.replicate.com/v1/predictions/{id}",
+    "source_url": "https://replicate.com/docs/reference/http",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "black-forest-labs/flux-schnell: $3.00 per 1,000 output images ($0.003/image); other models billed per output or per second of compute",
+    "source_url": "https://replicate.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": false,
    "no_card": false,
@@ -964,7 +1109,17 @@
     "type": "official",
     "url": "https://docs.together.ai/mcp",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://docs.together.ai/mcp",
+     "headers": null,
+     "oauth": false,
+     "env": [],
+     "docs_only": true,
+     "source_url": "https://docs.together.ai/docs/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "check pricing",
    "sdk": [
@@ -1004,7 +1159,16 @@
     "type": "official",
     "url": "https://mcp.vercel.com",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.vercel.com",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: monthly credits on subset of models",
    "sdk": [
@@ -1045,7 +1209,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free tier: 200M tokens on current models",
    "sdk": [
@@ -1082,7 +1247,16 @@
     "type": "official",
     "url": "https://docs.x.ai/api/mcp",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://docs.x.ai/api/mcp",
+     "headers": null,
+     "oauth": false,
+     "docs_only": true,
+     "source_url": "https://docs.x.ai/developers/docs-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "paid only (prepaid credits)",
    "sdk": [

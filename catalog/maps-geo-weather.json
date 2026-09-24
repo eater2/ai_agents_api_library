@@ -16,7 +16,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free tier with monthly free credits, then usage-based pricing",
    "sdk": [
@@ -91,7 +92,18 @@
     "source_url": "https://apidocs.geoapify.com/docs/mcp/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.geoapify.com/v1/mcp",
+     "headers": {
+      "x-api-key": "$GEOAPIFY_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://apidocs.geoapify.com/docs/mcp/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 3,000 credits/day (~90,000/month), no card required",
    "sdk": [
@@ -136,6 +148,25 @@
     "reverse-geocoding"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "forward geocode a street address",
+    "method": "GET",
+    "url": "https://api.geoapify.com/v1/geocode/search?text={address}&format=json&apiKey={API_KEY}",
+    "example": "curl \"https://api.geoapify.com/v1/geocode/search?text=38%20Upper%20Montagu%20Street%2C%20Westminster%20W1H%201LJ%2C%20United%20Kingdom&format=json&apiKey=$GEOAPIFY_API_KEY\"",
+    "response_fields": [
+     "results[0].lat",
+     "results[0].lon",
+     "results[0].formatted"
+    ],
+    "async": null,
+    "source_url": "https://apidocs.geoapify.com/docs/geocoding/forward-geocoding/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "1 geocode request = 1 credit; free plan 3,000 credits/day (= 3,000 geocode requests/day, up to 5 req/s); paid plans are daily-credit subscriptions, e.g. API 10: 10,000 credits/day for $59/month",
+    "source_url": "https://www.geoapify.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -169,7 +200,18 @@
     "source_url": "https://developers.google.com/maps/ai/grounding-lite",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mapstools.googleapis.com/mcp",
+     "headers": {
+      "X-Goog-Api-Key": "$GOOGLE_MAPS_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://developers.google.com/maps/ai/grounding-lite",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free tier: free calls per SKU per month (10K Essentials, 5K Pro, 1K Enterprise), replacing the former $200 monthly credit",
    "sdk": [
@@ -212,6 +254,27 @@
     "weather-forecast"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "forward geocode a street address (Geocoding API)",
+    "method": "GET",
+    "url": "https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={API_KEY}",
+    "example": "curl \"https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=$GOOGLE_MAPS_API_KEY\"",
+    "response_fields": [
+     "status",
+     "results[0].geometry.location.lat",
+     "results[0].geometry.location.lng",
+     "results[0].formatted_address",
+     "results[0].place_id"
+    ],
+    "async": null,
+    "source_url": "https://developers.google.com/maps/documentation/geocoding/requests-geocoding",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Geocoding (Essentials SKU): first 10,000 requests/month free, then $5.00 per 1,000 requests ($0.005 each) for 10,001-100,000; volume discounts above",
+    "source_url": "https://developers.google.com/maps/billing-and-pricing/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -256,7 +319,21 @@
     "source_url": "https://github.com/limingchina/heremaps-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "/<local-checkout-directory>/src/node"
+     ],
+     "env": [
+      "HERE_MAPS_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/limingchina/heremaps-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: roughly 30,000 transactions/month on the Base/Freemium plan",
    "sdk": [
@@ -316,7 +393,26 @@
     "source_url": "https://github.com/ip2location/mcp-ip2location-io",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "stdio",
+     "url": "https://mcp.ip2location.io/",
+     "command": "npx",
+     "args": [
+      "-y",
+      "mcp-remote@latest",
+      "https://mcp.ip2location.io/",
+      "--header",
+      "X-API-Key:$IP2LOCATION_API_KEY"
+     ],
+     "headers": {
+      "X-API-Key": "$IP2LOCATION_API_KEY"
+     },
+     "oauth": false,
+     "source_url": "https://github.com/ip2location/mcp-ip2location-io",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free plan: 50,000 IP geolocation queries/month, 500 domain WHOIS and 50 hosted-domain queries/month (attribution required); keyless: 1,000 queries/day.",
    "sdk": [
@@ -387,7 +483,21 @@
     "source_url": "https://github.com/iplocate/mcp-server-iplocate/blob/main/README.md",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@iplocate/mcp-server"
+     ],
+     "env": [
+      "IPLOCATE_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/iplocate/mcp-server-iplocate",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free plan: 1,000 requests/day forever, all data types (geolocation, VPN/proxy/Tor, ASN, company, abuse contacts), no credit card.",
    "sdk": [
@@ -452,7 +562,8 @@
     "source_url": null,
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "Free: 5,000 requests/day, 2 requests/s, 60 requests/min, no card; commercial use requires a link back to LocationIQ",
    "sdk": [],
@@ -528,7 +639,18 @@
     "source_url": "https://github.com/mapbox/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.mapbox.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $MAPBOX_ACCESS_TOKEN"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://github.com/mapbox/mcp-server/blob/main/docs/hosted-mcp-guide.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: monthly free quotas per API (e.g. 50,000 map loads/month)",
    "sdk": [
@@ -569,6 +691,25 @@
     "places-search"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "forward geocode a street address (Geocoding API v6)",
+    "method": "GET",
+    "url": "https://api.mapbox.com/search/geocode/v6/forward?q={address}&access_token={ACCESS_TOKEN}",
+    "example": "curl \"https://api.mapbox.com/search/geocode/v6/forward?q=1600%20Pennsylvania%20Avenue%20NW%2C%20Washington%20DC&access_token=$MAPBOX_ACCESS_TOKEN\"",
+    "response_fields": [
+     "features[0].geometry.coordinates",
+     "features[0].properties.full_address",
+     "features[0].properties.coordinates.accuracy"
+    ],
+    "async": null,
+    "source_url": "https://docs.mapbox.com/api/search/geocoding/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Geocoding API (temporary): first 100,000 requests/month free, then $0.75 per 1,000 requests for 100,001-500,000",
+    "source_url": "https://www.mapbox.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -617,7 +758,18 @@
     "source_url": "https://github.com/LeandroBerlin/Weather-MCP-Server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "node",
+     "args": [
+      "/PATH/TO/Weather-MCP-Server/build/index.js"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/LeandroBerlin/Weather-MCP-Server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key, no rate-limit tier (fair-use)",
    "sdk": [],
@@ -686,7 +838,21 @@
     "source_url": "https://github.com/cmer81/open-meteo-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "-p",
+      "open-meteo-mcp-server",
+      "open-meteo-mcp-server"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/cmer81/open-meteo-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key for non-commercial use (fair-use limits apply)",
    "sdk": [
@@ -728,6 +894,28 @@
     "street-geocoding"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "get an hourly temperature forecast for a location",
+    "method": "GET",
+    "url": "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&hourly=temperature_2m",
+    "example": "curl \"https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m\"",
+    "response_fields": [
+     "hourly.time",
+     "hourly.temperature_2m",
+     "hourly_units.temperature_2m",
+     "latitude",
+     "longitude",
+     "timezone"
+    ],
+    "async": null,
+    "source_url": "https://open-meteo.com/en/docs",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Free, no key, for non-commercial use (300,000 calls/month); commercial plans are fixed monthly with no per-call price",
+    "source_url": "https://open-meteo.com/en/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -759,7 +947,8 @@
     "source_url": "https://github.com/OpenCageData/opencage-geocoding-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null
    },
    "free_tier": "Free: 2,500 requests/day, 1 request/s, no card (for testing; production needs a paid plan from €45/month)",
    "sdk": [
@@ -830,7 +1019,20 @@
     "source_url": "https://github.com/vemonet/openroute-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "openroute-mcp"
+     ],
+     "env": [
+      "OPENROUTESERVICE_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/vemonet/openroute-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: ~2,000 requests/day (varies by endpoint), signup required",
    "sdk": [
@@ -900,7 +1102,16 @@
     "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://openstreetmap.caseyjhand.com/mcp",
+     "headers": null,
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server#readme",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key; public demo server capped at 1 request/second, bulk use prohibited",
    "sdk": [],
@@ -933,6 +1144,26 @@
     "reverse-geocoding"
    ],
    "no_auth": true,
+   "call": {
+    "operation": "forward geocode a street address",
+    "method": "GET",
+    "url": "https://nominatim.openstreetmap.org/search?q={address}&format=jsonv2",
+    "example": "curl -A \"my-app/1.0 (contact@example.com)\" \"https://nominatim.openstreetmap.org/search?q=135+pilkington+avenue,+birmingham&format=jsonv2\"",
+    "response_fields": [
+     "[0].lat",
+     "[0].lon",
+     "[0].display_name",
+     "[0].place_id"
+    ],
+    "async": null,
+    "source_url": "https://nominatim.org/release-docs/latest/api/Search/",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Free (donated infrastructure), no key; public server limited to max 1 request/second with an identifying User-Agent or Referer; no monthly quota published",
+    "source_url": "https://operations.osmfoundation.org/policies/nominatim/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -965,7 +1196,19 @@
     "source_url": "https://mcp.openweathermap.org/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.openweathermap.org/mcp",
+     "headers": {
+      "Authorization": "Bearer $OPENWEATHER_MCP_DATA_KEY"
+     },
+     "oauth": false,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://mcp.openweathermap.org/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free tier: 60 calls/min, 1,000,000 calls/month on current weather/forecast",
    "sdk": [],
@@ -1000,6 +1243,27 @@
     "air-quality"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "get current weather for a location",
+    "method": "GET",
+    "url": "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_KEY}",
+    "example": "curl \"https://api.openweathermap.org/data/2.5/weather?lat=52.23&lon=21.01&units=metric&appid=$OPENWEATHER_API_KEY\"",
+    "response_fields": [
+     "main.temp",
+     "weather[0].description",
+     "main.humidity",
+     "wind.speed",
+     "name"
+    ],
+    "async": null,
+    "source_url": "https://openweathermap.org/current",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Current Weather: free up to 1,000,000 calls/month (60/min); One Call API: first 1,000 calls/day free, then 0.0012 GBP per call",
+    "source_url": "https://openweathermap.org/price",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -1043,7 +1307,17 @@
     "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://openstreetmap.caseyjhand.com/mcp",
+     "headers": null,
+     "oauth": false,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server#public-hosted-instance",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key; public instances are fair-use/rate-limited",
    "sdk": [],
@@ -1114,7 +1388,21 @@
     "source_url": "https://docs.tomorrow.io/reference/mcp.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp",
+     "headers": {
+      "X-Api-Key": "$TOMORROW_API_KEY"
+     },
+     "oauth": false,
+     "env": [
+      "TOMORROW_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://docs.tomorrow.io/reference/mcp.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 500 requests/day, 3 req/sec, 1 monitored location/alert",
    "sdk": [],

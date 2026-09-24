@@ -36,7 +36,12 @@
     "source_url": "https://www.canva.dev/docs/apps/mcp/tools/",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.canva.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "check pricing (free to build/test; public apps require Canva review before production use)",
    "sdk": [],
@@ -122,7 +127,16 @@
     "source_url": "https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.figma.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "source_url": "https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free: personal access tokens work on free plan, rate-limited per seat/plan tier; MCP free during beta",
    "sdk": [],
@@ -204,7 +218,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "check pricing (no separate API fee found; scoped to a Framer project/site plan)",
    "sdk": [
@@ -265,7 +280,16 @@
     "source_url": "https://penpot.app/ai/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://design.penpot.app/mcp/stream?userToken=$PENPOT_MCP_KEY",
+     "headers": null,
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://help.penpot.app/mcp/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: free cloud account (design.penpot.app) plus free, open-source self-hosting",
    "sdk": [],
@@ -348,7 +372,12 @@
     "source_url": "https://v0.app/docs/api/v2/guides/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://v0.app/api/mcp",
+     "derived": true
+    }
    },
    "free_tier": "check pricing (usage-based; credits included on v0 Premium/Team plans, no separate free API key tier confirmed)",
    "sdk": [
@@ -414,7 +443,16 @@
     "source_url": "https://developers.webflow.com/mcp/reference/getting-started",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.webflow.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://developers.webflow.com/mcp/installing/claude-code",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "check pricing (API access itself is free with a token; some CMS/publish actions require the site to be on a paid Webflow plan)",
    "sdk": [],

@@ -128,3 +128,28 @@ test("claude plugin validate --strict", { skip: !hasClaude && "claude CLI not in
     assert.equal(r.status, 0, `${target}:\n${r.stdout}${r.stderr}`);
   }
 });
+
+test("usage data: examples are safe and match the entry", async () => {
+  const all = await json("catalog/all.json");
+  const withCall = all.filter((e) => e.call);
+  for (const e of withCall) {
+    const { example, url, method } = e.call;
+    assert.match(example, /^curl /, `${e.id}: example is a curl command`);
+    assert.ok(example.includes(url.split("{")[0].split("?")[0].replace(/\/$/, "")) || example.includes(new URL(url).host), `${e.id}: example calls ${url}`);
+    assert.match(method, /^(GET|POST|PUT|PATCH|DELETE)$/);
+    // Secrets only as placeholders: no long opaque tokens in examples.
+    assert.doesNotMatch(example, /\b(sk|pk|rk|xox[bp]|ghp|key)[-_][A-Za-z0-9]{16,}/, `${e.id}: example contains a real-looking key`);
+  }
+  for (const e of all.filter((x) => x.mcp.config && !x.mcp.config.derived)) {
+    const c = e.mcp.config;
+    assert.ok(c.source_url?.startsWith("http"), `${e.id}: mcp.config.source_url`);
+    // Header values are placeholders ($ENV_VAR, {id}) or plain settings, never a real-looking secret.
+    for (const v of Object.values(c.headers || {})) assert.doesNotMatch(v.replace(/\$[A-Z_]+/g, ""), /[A-Za-z0-9_-]{24,}/, `${e.id}: header ${v}`);
+  }
+});
+
+test("wording: the catalog is not presented as 'verified'", async () => {
+  for (const f of [SKILL_DIR + "SKILL.md", "server.json", ".claude-plugin/plugin.json", ".claude-plugin/marketplace.json", "llms.txt"]) {
+    assert.doesNotMatch(await read(f), /verified (catalog|services|APIs)|Verified catalog/i, f);
+  }
+});

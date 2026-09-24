@@ -16,7 +16,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "check pricing",
    "sdk": [],
@@ -83,7 +84,16 @@
     "source_url": "https://github.com/elevenlabs/elevenlabs-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.elevenlabs.io/v1/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://github.com/elevenlabs/elevenlabs-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "shares ElevenLabs account credit pool (limited free credits on sign-up); check pricing for per-track cost",
    "sdk": [
@@ -158,7 +168,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free track allowance on signup, then volume-based pay-as-you-go pricing",
    "sdk": [],
@@ -221,7 +232,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "paid only; plans start at $49/mo (100 generations/mo), no free tier",
    "sdk": [],
@@ -273,7 +285,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "paid only; Starter plan $29.99/mo for 100 songs/mo, no free tier confirmed",
    "sdk": [],
@@ -323,7 +336,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "shares Stability AI platform credits; 25 free credits on signup, then pay-as-you-go",
    "sdk": [

@@ -26,7 +26,8 @@
     "source_url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null
    },
    "free_tier": "free tier: Polly 5M chars/mo standard, Transcribe 60 min/mo (12 months)",
    "sdk": [
@@ -96,7 +97,16 @@
     "source_url": "https://www.assemblyai.com/docs/coding-agent-prompts",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://assemblyai.com/docs/mcp",
+     "headers": null,
+     "oauth": false,
+     "docs_only": true,
+     "source_url": "https://www.assemblyai.com/docs/coding-agent-prompts",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: $50 credit, no card required",
    "sdk": [
@@ -176,7 +186,25 @@
     "source_url": "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/tools/ai-services-speech",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@azure/mcp@latest",
+      "server",
+      "start"
+     ],
+     "env": [
+      "AZURE_TENANT_ID",
+      "AZURE_CLIENT_ID",
+      "AZURE_CLIENT_SECRET"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/microsoft/mcp/blob/main/servers/Azure.Mcp.Server/README.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier (F0): 5 audio hrs/mo STT, 0.5M chars/mo neural TTS",
    "sdk": [
@@ -272,7 +300,17 @@
     "source_url": "https://docs.cartesia.ai/tools/ai/mcp.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.cartesia.ai/mcp",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://docs.cartesia.ai/tools/ai/mcp.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 20,000 credits/mo",
    "sdk": [
@@ -342,7 +380,17 @@
     "source_url": "https://developers.deepgram.com/developer-tools/cli/mcp-server.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://developers.deepgram.com/_mcp/server",
+     "headers": null,
+     "oauth": false,
+     "env": [],
+     "docs_only": true,
+     "source_url": "https://developers.deepgram.com/developer-tools/cli/mcp-server.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: $200 credit, no card required",
    "sdk": [
@@ -390,6 +438,26 @@
     "voice-agent"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "transcribe a pre-recorded audio file from a URL",
+    "method": "POST",
+    "url": "https://api.deepgram.com/v1/listen",
+    "example": "curl -X POST 'https://api.deepgram.com/v1/listen?model=nova-3' -H \"Authorization: Token $DEEPGRAM_API_KEY\" -H 'Content-Type: application/json' -d '{\"url\": \"https://dpgr.am/spacewalk.wav\"}'",
+    "response_fields": [
+     "results.channels[0].alternatives[0].transcript",
+     "results.channels[0].alternatives[0].confidence",
+     "metadata.request_id",
+     "metadata.duration"
+    ],
+    "async": null,
+    "source_url": "https://developers.deepgram.com/reference/speech-to-text/listen-pre-recorded",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Nova-3 monolingual pre-recorded transcription: $0.0043 per audio minute (pay-as-you-go)",
+    "source_url": "https://deepgram.com/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": true,
@@ -425,7 +493,9 @@
     "type": "official",
     "url": "https://github.com/elevenlabs/elevenlabs-mcp",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null,
+    "issue": "repo archived 2026-08-20; replaced by hosted OAuth server https://api.elevenlabs.io/v1/mcp"
    },
    "free_tier": "free plan: limited monthly credits",
    "sdk": [
@@ -446,6 +516,25 @@
     "speech-to-text"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "convert text to speech",
+    "method": "POST",
+    "url": "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
+    "example": "curl -X POST https://api.elevenlabs.io/v1/text-to-speech/$VOICE_ID -H \"xi-api-key: $ELEVENLABS_API_KEY\" -H \"Content-Type: application/json\" -d '{\"text\":\"Hello\",\"model_id\":\"eleven_multilingual_v2\"}' --output out.mp3",
+    "response_fields": [
+     "body: binary audio (default mp3_44100_128)",
+     "header character-cost",
+     "header request-id"
+    ],
+    "async": null,
+    "source_url": "https://elevenlabs.io/docs/api-reference/text-to-speech/convert",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "TTS API pay-as-you-go: $0.10 per 1,000 characters (Multilingual v2 / v3), $0.05 per 1,000 (Flash / Turbo)",
+    "source_url": "https://elevenlabs.io/pricing/api",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": false,
@@ -489,7 +578,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free tier: TTS 4M chars/mo standard, STT 60 min/mo",
    "sdk": [
@@ -532,7 +622,17 @@
     "type": "official",
     "url": "https://dev.hume.ai/_mcp/server",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://dev.hume.ai/_mcp/server",
+     "headers": null,
+     "oauth": false,
+     "env": [],
+     "docs_only": true,
+     "source_url": "https://dev.hume.ai/docs/integrations/mcp.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan: 10,000 TTS chars/mo + 5 EVI min/mo",
    "sdk": [
@@ -570,7 +670,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "check pricing",
    "sdk": [
@@ -616,7 +717,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "paid only (pay-per-use)",
    "sdk": [
@@ -670,7 +772,16 @@
     "type": "official",
     "url": "https://docs.resemble.ai/_mcp/server",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://docs.resemble.ai/_mcp/server",
+     "headers": null,
+     "oauth": false,
+     "docs_only": true,
+     "source_url": "https://docs.resemble.ai/_mcp/server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "pay-as-you-go Flex plan ($0/mo base)",
    "sdk": [],
@@ -715,7 +826,16 @@
     "type": "official",
     "url": "https://docs.rev.ai/",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://docs.rev.ai/mcp",
+     "headers": null,
+     "oauth": false,
+     "docs_only": true,
+     "source_url": "https://docs.rev.ai/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "trial credits (about 5 hours of ASR)",
    "sdk": [
@@ -753,7 +873,24 @@
     "type": "community",
     "url": "https://glama.ai/mcp/servers/ArchieMcM234/speechmatics_claude_code_mcp",
     "domain_verified": false,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uv",
+     "args": [
+      "--directory",
+      "/path/to/speechmatics_claude_code_mcp",
+      "run",
+      "python",
+      "server.py"
+     ],
+     "env": [
+      "SPEECHMATICS_API_KEY"
+     ],
+     "source_url": "https://github.com/ArchieMcM234/speechmatics_claude_code_mcp",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 480 min/mo batch transcription",
    "sdk": [

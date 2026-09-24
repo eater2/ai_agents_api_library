@@ -20,7 +20,20 @@
     "source_url": "https://docs.anchorbrowser.io/advanced/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "url": "https://api.anchorbrowser.io/mcp",
+     "headers": {
+      "anchor-api-key": "$ANCHOR_API_KEY"
+     },
+     "oauth": false,
+     "env": [
+      "ANCHOR_API_KEY"
+     ],
+     "source_url": "https://docs.anchorbrowser.io/advanced/mcp",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "$5 free credits/mo, no card required",
    "sdk": [],
@@ -102,7 +115,18 @@
     "source_url": "https://docs.apify.com/platform/integrations/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.apify.com",
+     "headers": {
+      "Authorization": "Bearer $APIFY_TOKEN"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.apify.com/platform/integrations/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan: $5/mo platform usage credit, no card required",
    "sdk": [
@@ -195,7 +219,16 @@
     "source_url": "https://github.com/brightdata/brightdata-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.brightdata.com/mcp?token=$BRIGHTDATA_API_TOKEN",
+     "headers": null,
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://github.com/brightdata/brightdata-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: up to 5,000 requests/mo",
    "sdk": [
@@ -276,7 +309,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free forever plan: 50 credits/mo, no card required",
    "sdk": [
@@ -350,7 +384,12 @@
     "source_url": "https://docs.browser-use.com/cloud/guides/mcp-server.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.browser-use.com/v3/mcp",
+     "derived": true
+    }
    },
    "free_tier": "$15 one-time signup credit for new accounts (Google/GitHub/Microsoft); paid usage afterward",
    "sdk": [
@@ -428,7 +467,16 @@
     "source_url": "https://github.com/browserbase/mcp-server-browserbase",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.browserbase.com/mcp?browserbaseApiKey=$BROWSERBASE_API_KEY",
+     "headers": null,
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.browserbase.com/integrations/mcp/setup",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: limited browser hours, single concurrency, no card required",
    "sdk": [
@@ -508,7 +556,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free plan: 10,000 credits/mo, no card required (5 req/min limit)",
    "sdk": [],
@@ -583,7 +632,18 @@
     "source_url": "https://github.com/firecrawl/firecrawl-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.firecrawl.dev/v2/mcp",
+     "headers": {
+      "Authorization": "Bearer $FIRECRAWL_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.firecrawl.dev/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: 1,000 credits/mo, no card required",
    "sdk": [
@@ -629,6 +689,27 @@
     "browser-automation"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "scrape a page to markdown",
+    "method": "POST",
+    "url": "https://api.firecrawl.dev/v2/scrape",
+    "example": "curl -X POST https://api.firecrawl.dev/v2/scrape -H \"Authorization: Bearer $FIRECRAWL_API_KEY\" -H \"Content-Type: application/json\" -d '{\"url\":\"https://example.com\"}'",
+    "response_fields": [
+     "success",
+     "data.markdown",
+     "data.metadata.title",
+     "data.metadata.statusCode",
+     "data.links"
+    ],
+    "async": null,
+    "source_url": "https://docs.firecrawl.dev/api-reference/endpoint/scrape",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Scrape: 1 credit per page; Hobby plan 5,000 credits/month for $16/mo billed yearly ($19 monthly); free plan 1,000 credits",
+    "source_url": "https://www.firecrawl.dev/pricing",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -678,7 +759,21 @@
     "source_url": "https://github.com/hyperbrowserai/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "hyperbrowser-mcp"
+     ],
+     "env": [
+      "HYPERBROWSER_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/hyperbrowserai/mcp#running-on-cursor",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan: starter credits, 1 concurrent browser, no card required",
    "sdk": [
@@ -757,7 +852,12 @@
     "source_url": "https://github.com/oxylabs/oxylabs-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.oxylabs.io/mcp",
+     "derived": true
+    }
    },
    "free_tier": "free trial available (check pricing)",
    "sdk": [
@@ -846,7 +946,18 @@
     "source_url": "https://github.com/microsoft/playwright-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "@playwright/mcp@latest"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/microsoft/playwright-mcp#getting-started",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, open source, no key",
    "sdk": [],
@@ -932,7 +1043,12 @@
     "source_url": "https://docs.scrapegraphai.com/services/mcp-server/introduction.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.scrapegraphai.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "free plan: 500 one-time API credits",
    "sdk": [
@@ -1003,7 +1119,12 @@
     "source_url": "https://docs.scraperapi.com/integrations/llm-integrations/mcp-server.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.scraperapi.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "5,000 free API credits (trial), no long-term free plan",
    "sdk": [],
@@ -1080,7 +1201,18 @@
     "source_url": "https://scrapfly.io/docs/mcp/tools",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.scrapfly.io/mcp",
+     "headers": {
+      "Authorization": "Bearer $SCRAPFLY_API_KEY"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://scrapfly.io/docs/mcp/authentication",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "1,000 free credits/mo, no card required, no time limit",
    "sdk": [
@@ -1166,7 +1298,12 @@
     "source_url": "https://www.scrapingbee.com/documentation/remote-mcp/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.scrapingbee.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "1,000 free API credits, no card required",
    "sdk": [
@@ -1252,7 +1389,18 @@
     "source_url": "https://spider.cloud/mcp/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.spider.cloud/mcp",
+     "headers": {
+      "Authorization": "Bearer $SPIDER_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://spider.cloud/mcp/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "keyless trial: 25 free runs/day, no account required",
    "sdk": [
@@ -1333,7 +1481,8 @@
     "source_url": "https://github.com/steel-dev/steel-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null
    },
    "free_tier": "Hobby tier: 100 browser-hours/mo, 500 requests/day, no card required",
    "sdk": [
@@ -1398,7 +1547,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "$5 free credit for the first month",
    "sdk": [

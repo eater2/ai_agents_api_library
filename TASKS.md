@@ -21,13 +21,13 @@ Dane (`data/catalog.json`)
 - [ ] Brakujący dostawcy wskazani przez agentów: SMS — Plivo, Sinch, Telnyx, AWS SNS (End User Messaging), Bird; geokodowanie — OpenCage, LocationIQ (bf)
 
 Wywołanie i MCP (`get_api`)
-- [ ] Minimalny przykład żądania + ścieżka endpointu + metoda + kluczowe pola odpowiedzi dla ok. 30 najczęściej wybieranych usług — 7/7 agentów (3b)
-- [ ] Gotowy snippet konfiguracji MCP per wpis (transport, `url` lub `command`, zmienne środowiskowe), oznaczenie `docs-only`, gdy serwer tylko przeszukuje dokumentację (3b)
-- [ ] Cena za jednostkę operacji (np. 1 geokod = 1 kredyt, SMS do PL), gdzie dostawca ją publikuje (3b)
+- [x] Minimalny przykład żądania + ścieżka endpointu + metoda + kluczowe pola odpowiedzi dla ok. 30 najczęściej wybieranych usług — 7/7 agentów (3b): pole `call` dla 31 usług w `data/usage.json` (curl, metoda, URL, pola odpowiedzi, `source_url`)
+- [x] Gotowy snippet konfiguracji MCP per wpis (transport, `url` lub `command`, zmienne środowiskowe), oznaczenie `docs-only`, gdy serwer tylko przeszukuje dokumentację (3b): `mcp.config` dla 251 wpisów (223 z researchu, 28 wyprowadzonych z URL, `derived: true`), 14 serwerów `docs_only`, `mcp.issue` dla zarchiwizowanych
+- [x] Cena za jednostkę operacji (np. 1 geokod = 1 kredyt, SMS do PL), gdzie dostawca ją publikuje (3b): `unit_price` dla 25 usług (np. SMS do PL: Twilio $0.0457, Vonage $0.04843)
 
 Teksty (skill, llms.txt, README)
-- [ ] Skill: najpierw dopasowanie do czynności i wolumenu, dopiero potem `no_auth` / free tier; trial ≠ free tier; sprawdzić, czy `mcp` to endpoint czy repozytorium; `get_reviews` opcjonalne; wyzwalacz „naprawczy” (403, limit, nieobsługiwany format); pominąć zadania, które model robi sam (tłumaczenie, diagramy) (3b)
-- [ ] „verified” → „last checked” wszędzie, gdzie sprawdzamy tylko linki; osobno data sprawdzenia linku i danych (3b)
+- [x] Skill: najpierw dopasowanie do czynności i wolumenu, dopiero potem `no_auth` / free tier; trial ≠ free tier; sprawdzić, czy `mcp` to endpoint czy repozytorium; `get_reviews` opcjonalne; wyzwalacz „naprawczy” (403, limit, nieobsługiwany format); pominąć zadania, które model robi sam (tłumaczenie, diagramy) (3b)
+- [x] „verified” → „last checked” wszędzie, gdzie sprawdzamy tylko linki; osobno data sprawdzenia linku i danych (3b): etykiety w README/llms/stronach/manifestach/skillu; pole `verified` zostaje, dane mają własne `checked_at`, linki `link_check.checked_at`. Opisy narzędzi w `mcp/core.mjs` — 54
 
 Na koniec
 - [ ] Powtórzyć test produktu (`python scripts/interview_product_test.py`) i porównać z 2026-09-24 (bf)

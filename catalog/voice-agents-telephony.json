@@ -36,7 +36,18 @@
     "source_url": "https://docs.bland.ai/integrations/mcp/overview",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.bland.ai/v1/mcp",
+     "headers": {
+      "Authorization": "Bearer $BLAND_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.bland.ai/integrations/mcp/overview",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free credits + inbound number on signup (Start plan), no credit card required",
    "sdk": [],
@@ -101,7 +112,8 @@
     "source_url": "https://developers.deepgram.com/developer-tools/cli/mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null
    },
    "free_tier": "$200 free credit on signup",
    "sdk": [
@@ -177,7 +189,16 @@
     "source_url": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.elevenlabs.io/v1/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan: 10k credits/month shared across ElevenLabs products",
    "sdk": [
@@ -244,7 +265,8 @@
     "source_url": "https://docs.livekit.io/reference/developer-tools/docs-mcp.md",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free Build plan: 1,000 agent session minutes/mo, 5,000 WebRTC participant minutes/mo, 50GB data transfer",
    "sdk": [
@@ -307,7 +329,18 @@
     "type": "official",
     "url": "https://mcp.retellai.com",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.retellai.com",
+     "headers": {
+      "Authorization": "Bearer $RETELL_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.retellai.com/get-started/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "$10 free credit on signup, then pay-as-you-go ($0.07-$0.31/min for voice)",
    "sdk": [
@@ -356,7 +389,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "self-serve free trial to build/test agents (pay only for actual calls); enterprise plans from ~$30k/yr for scale",
    "sdk": [],
@@ -401,7 +435,20 @@
     "type": "community",
     "url": "https://github.com/twilio-labs/mcp",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@twilio-alpha/mcp",
+      "$TWILIO_ACCOUNT_SID/$TWILIO_API_KEY:$TWILIO_API_SECRET"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/twilio-labs/mcp#quick-start",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "trial account with free trial credit (~$15), then pay-as-you-go",
    "sdk": [
@@ -465,7 +512,21 @@
     "type": "official",
     "url": "https://mcp.vapi.ai/mcp",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.vapi.ai/mcp",
+     "headers": {
+      "Authorization": "Bearer $VAPI_API_KEY"
+     },
+     "oauth": false,
+     "env": [
+      "VAPI_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://docs.vapi.ai/sdk/mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "$5 free credit on signup, then pay-as-you-go (~$0.05/min platform fee + provider costs)",
    "sdk": [

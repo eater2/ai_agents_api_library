@@ -21,7 +21,18 @@
     "source_url": "https://www.ayrshare.com/docs/additional/mcp-action-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.ayrshare.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $AYRSHARE_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://www.ayrshare.com/docs/additional/mcp-action-connect",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "trial credits; no permanent free tier — paid plans required for production use",
    "sdk": [
@@ -100,7 +111,8 @@
     "source_url": "https://github.com/brianellin/bsky-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": null
    },
    "free_tier": "free, no key needed for public reads; free account required for posting",
    "sdk": [
@@ -155,7 +167,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "check pricing — most scopes require LinkedIn Partner Program approval",
    "sdk": [],
@@ -207,7 +220,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free, no central key; register an app per instance, no cost",
    "sdk": [],
@@ -278,7 +292,12 @@
     "source_url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.facebook.com/ads",
+     "derived": true
+    }
    },
    "free_tier": "free, but most non-trivial read/write permissions require Meta App Review and business verification",
    "sdk": [
@@ -328,7 +347,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free tier: standard rate limits; higher limits/trial access require app review",
    "sdk": [],
@@ -394,7 +414,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free for non-commercial/personal use under Reddit Data API terms; commercial or high-volume use requires a paid Data API license",
    "sdk": [
@@ -458,7 +479,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free; requires app review for production access, sandbox mode available for testing",
    "sdk": [],
@@ -532,7 +554,12 @@
     "source_url": "https://docs.x.com/tools/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.x.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "very limited free tier: write-only, ~500 posts/month, no meaningful read access; paid tiers (Basic $200/mo+) needed for real usage",
    "sdk": [
@@ -582,7 +609,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free tier: 10,000 quota units/day (extendable on request)",
    "sdk": [

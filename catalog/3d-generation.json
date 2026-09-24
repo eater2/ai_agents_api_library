@@ -16,7 +16,9 @@
     "type": "community",
     "url": "https://lobehub.com/mcp/commonsensemachines-blender-mcp",
     "domain_verified": false,
-    "kind": "community"
+    "kind": "community",
+    "config": null,
+    "issue": "source repo github.com/CommonSenseMachines/blender-mcp returns 404; entry links only a lobehub listing (403)"
    },
    "free_tier": "limited free tier (watermarked outputs); full API access is bundled with mid-tier ($19.99+/mo) or higher Cube subscriptions",
    "sdk": [],
@@ -51,7 +53,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "10 starter credits on signup (spent only on downloads, not generation); paid credits $1.5 each",
    "sdk": [],
@@ -134,7 +137,21 @@
     "source_url": "https://github.com/meshy-dev/meshy-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@meshy-ai/meshy-mcp-server"
+     ],
+     "env": [
+      "MESHY_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/meshy-dev/meshy-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free web plan: 100 credits/mo; API key creation requires a paid plan (Pro $20/mo+)",
    "sdk": [],
@@ -224,7 +241,22 @@
     "source_url": "https://github.com/gregkop/sketchfab-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "node",
+     "args": [
+      "/path/to/sketchfab-mcp-server/build/index.js",
+      "--api-key",
+      "$SKETCHFAB_API_KEY"
+     ],
+     "env": [
+      "SKETCHFAB_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/gregkop/sketchfab-mcp-server#using-with-claude-desktop",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free, no key needed for public search; private API token is free with any Sketchfab account",
    "sdk": [],
@@ -289,7 +321,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "25 free credits on signup, then pay-as-you-go (Stable Fast 3D costs 10 credits ~ $0.10/generation)",
    "sdk": [],
@@ -341,7 +374,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "pay-as-you-go from ~$0.02/generation; some enterprise sign-ups get bundled free credits",
    "sdk": [],
@@ -404,7 +438,18 @@
     "source_url": "https://github.com/VAST-AI-Research/tripo-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "tripo-mcp"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/VAST-AI-Research/tripo-mcp#installation",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free/trial credits on signup (amounts and promos change, e.g. ~300 credits/2 weeks); pay-as-you-go at $0.01/credit",
    "sdk": [],

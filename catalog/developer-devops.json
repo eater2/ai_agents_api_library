@@ -36,7 +36,16 @@
     "source_url": "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.circleci.com/v1/mcp",
+     "headers": null,
+     "oauth": true,
+     "source_url": "https://circleci.com/changelog/hosted-mcp-server-now-available/",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan: 30,000 credits/month (~6,000 build minutes on a small Docker resource class), credits expire monthly",
    "sdk": [],
@@ -127,7 +136,18 @@
     "source_url": "https://docs.datadoghq.com/bits_ai/mcp_server/tools/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.{dd_site}/v1/mcp",
+     "headers": {
+      "Authorization": "Bearer $DD_ACCESS_TOKEN"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.datadoghq.com/mcp_server/setup/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free Infrastructure Monitoring plan: 1-day metric retention, up to 5 hosts; other products (APM, Logs, Security) are paid",
    "sdk": [
@@ -218,7 +238,22 @@
     "source_url": "https://github.com/docker/hub-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "node",
+     "args": [
+      "/PATH/TO/hub-mcp/dist/index.js",
+      "--transport=stdio",
+      "--username=$DOCKER_HUB_USERNAME"
+     ],
+     "env": [
+      "HUB_PAT_TOKEN"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/docker/hub-mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free personal accounts with rate-limited image pulls; paid Pro/Team/Business tiers raise pull limits",
    "sdk": [],
@@ -300,7 +335,19 @@
     "source_url": "https://github.com/github/github-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.githubcopilot.com/mcp/",
+     "headers": {
+      "Authorization": "Bearer $GITHUB_PAT"
+     },
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/github/github-mcp-server#install-in-vs-code",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free with any GitHub account; 5,000 req/hr authenticated, 60/hr unauthenticated",
    "sdk": [
@@ -350,6 +397,21 @@
     "ci-cd"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "create an issue in a repository",
+    "method": "POST",
+    "url": "https://api.github.com/repos/{owner}/{repo}/issues",
+    "example": "curl -L -X POST https://api.github.com/repos/OWNER/REPO/issues -H 'Accept: application/vnd.github+json' -H \"Authorization: Bearer $GITHUB_TOKEN\" -H 'X-GitHub-Api-Version: 2026-03-10' -d '{\"title\": \"Found a bug\", \"body\": \"Steps to reproduce...\"}'",
+    "response_fields": [
+     "number",
+     "html_url",
+     "id",
+     "state"
+    ],
+    "async": null,
+    "source_url": "https://docs.github.com/en/rest/issues/issues#create-an-issue",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": true,
    "has_trial": false,
    "no_card": true,
@@ -422,7 +484,16 @@
     "source_url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server_tools/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://gitlab.com/api/v4/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free tier: full REST API access on GitLab.com Free plan; some features gated to Premium/Ultimate",
    "sdk": [],
@@ -508,7 +579,19 @@
     "source_url": "https://github.com/jsdelivr/globalping-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.globalping.dev/mcp",
+     "headers": {
+      "Authorization": "Bearer $GLOBALPING_API_TOKEN"
+     },
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/jsdelivr/globalping-mcp-server#authentication",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "No key; 250 tests/hour anonymously (up to 50 probes per measurement), 500 tests/hour with a free account token (up to 500 probes); extra tests use credits.",
    "sdk": [
@@ -580,7 +663,21 @@
     "source_url": "https://github.com/arvindand/maven-tools-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "docker",
+     "args": [
+      "run",
+      "-i",
+      "--rm",
+      "arvindand/maven-tools-mcp:latest"
+     ],
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://github.com/arvindand/maven-tools-mcp#quick-start",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "No key; free public API with no published quota (fair use).",
    "sdk": [],
@@ -642,7 +739,18 @@
     "source_url": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.pagerduty.com/mcp",
+     "headers": {
+      "Authorization": "Token token=$PAGERDUTY_API_KEY"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://support.pagerduty.com/main/docs/pagerduty-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan for up to 5 users: 100 monthly SMS/phone notifications, 1 on-call schedule, 1 escalation policy, API access",
    "sdk": [],
@@ -729,7 +837,18 @@
     "source_url": "https://learning.postman.com/docs/developer/postman-api/postman-mcp-server/overview/",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.postman.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $POSTMAN_API_KEY"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://github.com/postmanlabs/postman-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan available; rate limits ~300 req/min general, stricter for specific endpoints",
    "sdk": [],
@@ -806,7 +925,16 @@
     "source_url": "https://docs.reflag.com/api/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://app.reflag.com/api/mcp",
+     "headers": null,
+     "oauth": true,
+     "source_url": "https://docs.reflag.com/api/mcp",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free Starter plan: 1,000 monthly tracked users, unlimited seats, 3 environments; no overage (upgrade required)",
    "sdk": [
@@ -863,7 +991,16 @@
     "source_url": "https://mcp.sentry.dev/",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.sentry.dev/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://mcp.sentry.dev/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free Developer plan: 1 user, 5,000 errors/mo, 5GB logs, 50 replays; includes MCP access",
    "sdk": [],
@@ -955,7 +1092,16 @@
     "source_url": "https://supabase.com/docs/guides/getting-started/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.supabase.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://supabase.com/docs/guides/getting-started/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan available; rate limit 120 req/min per user/project (lower for heavier endpoints)",
    "sdk": [],

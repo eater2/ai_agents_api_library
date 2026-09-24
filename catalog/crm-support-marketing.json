@@ -52,7 +52,16 @@
     "source_url": "https://docs.attio.com/mcp/overview",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.attio.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.attio.com/mcp/overview",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "Free tier: up to 3 seats, 50,000 records, API access included; no card required; 14-day trial of Pro plan",
    "sdk": [],
@@ -152,7 +161,16 @@
     "source_url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.hubspot.com",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free CRM account with limited-scope API access; many endpoints require a paid Hub tier (see APIs-by-tier docs)",
    "sdk": [
@@ -251,7 +269,18 @@
     "source_url": "https://developers.intercom.com/docs/guides/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.intercom.com/mcp",
+     "headers": {
+      "Authorization": "Bearer $INTERCOM_ACCESS_TOKEN"
+     },
+     "oauth": true,
+     "source_url": "https://developers.intercom.com/docs/guides/mcp",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free development workspace for building/testing; production use requires a paid Intercom plan",
    "sdk": [],
@@ -342,7 +371,16 @@
     "source_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server_available_tools",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.klaviyo.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan up to 250 contacts / 500 email sends per month",
    "sdk": [],
@@ -445,7 +483,20 @@
     "source_url": "https://github.com/damientilman/mailchimp-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "mailchimp-mcp"
+     ],
+     "env": [
+      "MAILCHIMP_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/damientilman/mailchimp-mcp-server",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free plan up to 250 contacts / 500 emails per month (API accessible on free plan)",
    "sdk": [],
@@ -510,7 +561,16 @@
     "source_url": "https://support.pipedrive.com/en/article/mcp-claude",
     "checked_at": "2026-09-24",
     "domain_verified": false,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.pipedrive.ai/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://support.pipedrive.com/en/article/mcp-claude",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "no free tier; 14/30-day trial and free developer sandbox account for testing",
    "sdk": [
@@ -606,7 +666,17 @@
     "source_url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/sobject-all.html",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.salesforce.com/platform/mcp/v1/platform/sobject-all",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://api.salesforce.com/.well-known/oauth-protected-resource/platform/mcp/v1/platform/sobject-all",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free Developer Edition org available via signup at developer.salesforce.com/signup",
    "sdk": [
@@ -697,7 +767,24 @@
     "source_url": "https://github.com/reminia/zendesk-mcp-server",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "uv",
+     "args": [
+      "--directory",
+      "/path/to/zendesk-mcp-server",
+      "run",
+      "zendesk"
+     ],
+     "env": [
+      "ZENDESK_SUBDOMAIN",
+      "ZENDESK_CLIENT_ID"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/reminia/zendesk-mcp-server#setup",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "free trial (14 days); no permanent free tier, paid Suite plans required for ongoing use",
    "sdk": [],

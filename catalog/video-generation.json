@@ -16,7 +16,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free Basic plan with limited credits, no card required",
    "sdk": [],
@@ -79,7 +80,12 @@
     "source_url": "https://creatomate.com/llms/template-access.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.creatomate.com/mcp",
+     "derived": true
+    }
    },
    "free_tier": "free trial, 50 API credits",
    "sdk": [],
@@ -147,7 +153,16 @@
     "source_url": "https://docs.d-id.com/docs/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://docs.d-id.com/mcp",
+     "headers": null,
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://docs.d-id.com/docs/mcp",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "14-day trial with 3 minutes of video credits, then paid only (~$5.90/min API)",
    "sdk": [],
@@ -211,7 +226,8 @@
     "source_url": "https://github.com/GoogleCloudPlatform/genmedia-creative-studio/blob/main/experiments/mcp-genmedia/mcp-genmedia-go/README.md",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": null
    },
    "free_tier": "no free tier for video; Veo generation requires a paid Gemini API / Vertex AI billing account",
    "sdk": [
@@ -302,7 +318,17 @@
     "source_url": "https://developers.heygen.com/mcp/overview.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.heygen.com/mcp/v1/",
+     "headers": null,
+     "oauth": true,
+     "env": [],
+     "docs_only": false,
+     "source_url": "https://developers.heygen.com/mcp/overview.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "no free API credits since Feb 2026; pay-as-you-go from $5, $0.50-$0.99/credit. Free plan (3 videos/mo) exists but is for the web app, not standalone API.",
    "sdk": [
@@ -373,7 +399,8 @@
     "type": "none",
     "url": null,
     "domain_verified": null,
-    "kind": "none"
+    "kind": "none",
+    "config": null
    },
    "free_tier": "check pricing (no free API tier found; consumer plans from $14/mo, API is usage-based)",
    "sdk": [],
@@ -437,7 +464,22 @@
     "source_url": "https://github.com/199-mcp/mcp-kling",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community"
+    "kind": "community",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "mcp-kling@latest"
+     ],
+     "env": [
+      "KLING_ACCESS_KEY",
+      "KLING_SECRET_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/199-mcp/mcp-kling",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "paid only; prepaid credit packages from $0.14/unit, e.g. 5,000 units/$700, 180-day validity",
    "sdk": [],
@@ -477,6 +519,24 @@
     "video-editing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "generate a video from a text prompt (Kling 2.6)",
+    "method": "POST",
+    "url": "https://api-singapore.klingai.com/text-to-video/kling-2.6",
+    "example": "curl -X POST https://api-singapore.klingai.com/text-to-video/kling-2.6 -H \"Authorization: Bearer $KLING_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\":\"A girl sat on the train, looking out the window\",\"settings\":{\"resolution\":\"720p\",\"duration\":5}}'",
+    "response_fields": [
+     "data.id",
+     "data.status"
+    ],
+    "async": "poll GET https://api-singapore.klingai.com/tasks?task_ids={id} until data[0].status is succeeded; video at data[0].outputs[0].url (kept 30 days)",
+    "source_url": "https://kling.ai/document-api/api/video/2-6/text-to-video.md",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Kling 2.6 720p (no audio): 0.3 units/s ($0.042/s), 5 s video = 1.5 units ($0.21); 1 unit = $0.14",
+    "source_url": "https://kling.ai/document-api/pricing/base/video.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": true,
    "no_card": false,
@@ -515,7 +575,27 @@
     "source_url": "https://github.com/lumalabs/luma-api-mcp",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "uv",
+     "args": [
+      "run",
+      "--with",
+      "mcp[cli]",
+      "--with",
+      "aiohttp",
+      "mcp",
+      "run",
+      "{repo_dir}/server.py"
+     ],
+     "env": [
+      "LUMA_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/lumalabs/luma-api-mcp/blob/main/setup.sh",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "paid only; pay-as-you-go, ~$0.60-$1.05 per 5s clip (Ray 2), $5,000/mo cap on default Build tier",
    "sdk": [
@@ -555,6 +635,21 @@
     "image-to-video"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "generate a video from a text prompt (Dream Machine API, Ray 2)",
+    "method": "POST",
+    "url": "https://api.lumalabs.ai/dream-machine/v1/generations/video",
+    "example": "curl -X POST https://api.lumalabs.ai/dream-machine/v1/generations/video -H \"Authorization: Bearer $LUMA_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\":\"A serene lake surrounded by mountains at sunset\",\"aspect_ratio\":\"16:9\",\"model\":\"ray-2\"}'",
+    "response_fields": [
+     "id",
+     "state",
+     "assets.video",
+     "failure_reason"
+    ],
+    "async": "poll GET https://api.lumalabs.ai/dream-machine/v1/generations/{id} until state is completed or failed (or pass callback_url)",
+    "source_url": "https://docs.lumalabs.ai/reference/creategeneration.md",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": false,
    "no_card": false,
@@ -604,7 +699,22 @@
     "source_url": "https://platform.minimax.io/docs/guides/mcp-guide.md",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "minimax-mcp"
+     ],
+     "env": [
+      "MINIMAX_API_KEY",
+      "MINIMAX_API_HOST",
+      "MINIMAX_MCP_BASE_PATH"
+     ],
+     "docs_only": false,
+     "source_url": "https://platform.minimax.io/docs/guides/mcp-guide.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "new accounts get 50 signup credits (~1 short clip); 5s video costs ~45-70 credits, 1000 credits=$1",
    "sdk": [
@@ -679,7 +789,20 @@
     "source_url": "https://docs.platform.pixverse.ai/pixverse-mcp-972890m0.md",
     "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "official"
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "uvx",
+     "args": [
+      "pixverse-mcp"
+     ],
+     "env": [
+      "PIXVERSE_API_KEY"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/PixVerseAI/PixVerse-MCP",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "paid only; prepaid credits from $10, ~$0.28-$0.45 per 5s clip",
    "sdk": [],
@@ -750,7 +873,16 @@
     "source_url": "https://docs.dev.runwayml.com/llms-small.txt",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.runwayml.com/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://mcp.runwayml.com/",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "no free tier; $10 minimum credit top-up, $0.01/credit",
    "sdk": [
@@ -791,6 +923,27 @@
     "image-editing"
    ],
    "no_auth": false,
+   "call": {
+    "operation": "generate a video from an image and a prompt (Gen-4.5)",
+    "method": "POST",
+    "url": "https://api.dev.runwayml.com/v1/image_to_video",
+    "example": "curl -X POST https://api.dev.runwayml.com/v1/image_to_video -H \"Authorization: Bearer $RUNWAYML_API_SECRET\" -H \"X-Runway-Version: 2024-11-06\" -H \"Content-Type: application/json\" -d '{\"promptImage\":\"https://example.com/image.jpg\",\"promptText\":\"A timelapse on a sunny day\",\"model\":\"gen4.5\",\"ratio\":\"1280:720\",\"duration\":5}'",
+    "response_fields": [
+     "id",
+     "status",
+     "output[0]",
+     "failure",
+     "failureCode"
+    ],
+    "async": "poll GET https://api.dev.runwayml.com/v1/tasks/{id} until status is SUCCEEDED or FAILED; video URLs in output",
+    "source_url": "https://docs.dev.runwayml.com/llms-small.txt",
+    "checked_at": "2026-09-24"
+   },
+   "unit_price": {
+    "summary": "Gen-4.5 video: 12 credits per second ($0.12/s, $0.60 per 5 s clip); 1 credit = $0.01",
+    "source_url": "https://docs.dev.runwayml.com/guides/pricing/",
+    "checked_at": "2026-09-24"
+   },
    "has_free_tier": false,
    "has_trial": false,
    "no_card": false,
@@ -829,7 +982,18 @@
     "source_url": "https://shotstack.io/docs/guide/agents/mcp-server.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.shotstack.io/",
+     "headers": {
+      "x-api-key": "$SHOTSTACK_API_KEY"
+     },
+     "oauth": true,
+     "source_url": "https://shotstack.io/docs/guide/agents/mcp-server.md",
+     "docs_only": false,
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "10 free credits (valid 30 days), then pay-as-you-go or subscription",
    "sdk": [],
@@ -890,7 +1054,12 @@
     "source_url": "https://docs.synthesia.io/reference/synthesia-mcp.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.synthesia.io/mcp",
+     "derived": true
+    }
    },
    "free_tier": "check pricing (no permanent free API tier; paid plans include API minutes)",
    "sdk": [],
@@ -974,7 +1143,16 @@
     "source_url": "https://docs.tavus.io/sections/agent-tools/mcp-tools-reference.md",
     "checked_at": "2026-09-24",
     "domain_verified": true,
-    "kind": "vendor-hosted"
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.tavus.io/mcp",
+     "headers": null,
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://docs.tavus.io/sections/agent-tools/mcp-server.md",
+     "checked_at": "2026-09-24"
+    }
    },
    "free_tier": "check pricing",
    "sdk": [

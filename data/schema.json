@@ -107,6 +107,24 @@
             "null"
           ]
         },
+        "config": {
+          "type": ["object", "null"],
+          "description": "Agent-facing JSON only (source: data/usage.json, else derived from remote_url with derived: true). How to connect the server.",
+          "properties": {
+            "transport": {"enum": ["streamable-http", "sse", "stdio"]},
+            "url": {"type": "string"},
+            "headers": {"type": ["object", "null"], "description": "Header name -> value with $ENV_VAR placeholders"},
+            "oauth": {"type": "boolean"},
+            "command": {"type": "string"},
+            "args": {"type": "array", "items": {"type": "string"}},
+            "env": {"type": "array", "items": {"type": "string"}, "description": "Environment variable names the server needs"},
+            "docs_only": {"type": "boolean", "description": "The server only searches documentation and cannot call the API"},
+            "derived": {"type": "boolean"},
+            "source_url": {"type": "string", "format": "uri"},
+            "checked_at": {"type": "string", "format": "date"}
+          }
+        },
+        "issue": {"type": "string", "description": "Agent-facing JSON only: why the listed server cannot be used (archived, dead link)"},
         "source_url": {
           "type": "string",
           "format": "uri",
@@ -169,7 +187,32 @@
     "verified": {
       "type": "string",
       "format": "date",
-      "description": "Date the entry was last checked against official docs."
+      "description": "Date the entry was last checked (links and researched fields). Shown to agents as last checked; it is not a test that the service performs a given task."
+    },
+    "call": {
+      "type": "object",
+      "description": "Agent-facing JSON only (source: data/usage.json). Minimal working request for the service's most common operation.",
+      "properties": {
+        "operation": {"type": "string"},
+        "method": {"type": "string", "enum": ["GET", "POST", "PUT", "PATCH", "DELETE"]},
+        "url": {"type": "string", "description": "Full URL with {placeholders}"},
+        "example": {"type": "string", "description": "One curl command; secrets as $ENV_VAR placeholders"},
+        "response_fields": {"type": "array", "items": {"type": "string"}},
+        "async": {"type": ["string", "null"], "description": "How to get the result when it is not in the response"},
+        "source_url": {"type": "string", "format": "uri"},
+        "checked_at": {"type": "string", "format": "date"}
+      },
+      "required": ["method", "url", "example", "source_url"]
+    },
+    "unit_price": {
+      "type": "object",
+      "description": "Agent-facing JSON only (source: data/usage.json). Price of one operation as the vendor publishes it.",
+      "properties": {
+        "summary": {"type": "string"},
+        "source_url": {"type": "string", "format": "uri"},
+        "checked_at": {"type": "string", "format": "date"}
+      },
+      "required": ["summary", "source_url"]
     },
     "free_plan": {
       "type": "object",

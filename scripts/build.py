@@ -61,7 +61,7 @@ T = {
         "tagline": "A curated, machine-readable encyclopedia of third-party APIs and MCP servers that AI agents can call on a user's behalf.",
         "hatnote": "This article is about services an AI agent can operate programmatically, not AI products used by humans through a web UI.",
         "lead": (
-            "**{title}** is an open, bilingual (English/Polish) catalog of **{n} verified services** in **{c} categories** "
+            "**{title}** is an open, bilingual (English/Polish) catalog of **{n} services** (each with a last-checked date) in **{c} categories** "
             "that an autonomous AI agent — such as Claude, ChatGPT, Gemini or a custom LLM agent — can use "
             "**without a human in the loop**, after a one-time human step: registering an account and handing the agent "
             "an **API key**, an **OAuth token**, or a connection to an **MCP (Model Context Protocol) server**. "
@@ -69,7 +69,7 @@ T = {
             "and the free tier. The list is not a directory of products with “AI” in their name; the criterion is agent operability, not branding."
         ),
         "infobox": [("Type", "API & MCP catalog"), ("Entries", "{n}"), ("Categories", "{c}"), ("Official MCP servers", "{mcp}"),
-                    ("Languages", "English, Polish"), ("Format", "JSON, Markdown, HTML, llms.txt"), ("Last verified", "{date}"), ("License", "CC BY 4.0 (data), MIT (code)")],
+                    ("Languages", "English, Polish"), ("Format", "JSON, Markdown, HTML, llms.txt"), ("Last checked", "{date}"), ("License", "CC BY 4.0 (data), MIT (code)")],
         "contents": "Contents",
         "h_agents": "Machine-readable access (for AI agents)",
         "agents_intro": "AI agents should not parse this page. Fetch one of these stable files instead:",
@@ -86,7 +86,7 @@ T = {
         "criteria": [
             "The service exposes a **public, self-serve** programmatic interface (REST, GraphQL, SDK) **or** an MCP server.",
             "A human needs to act **at most once** — sign up and create a key or approve OAuth. After that the agent works unattended.",
-            "The interface is **documented** and **currently active** (verified on the date shown in the infobox).",
+            "The interface is **documented** and **currently active** (links last checked on the date shown in the infobox).",
             "Consumer-only apps, waitlists, sales-gated enterprise products, agent frameworks and IDEs are **excluded** — they are agents or tools for building agents, not services an agent calls.",
         ],
         "h_legend": "Legend",
@@ -114,7 +114,7 @@ T = {
         "tagline": "Wyselekcjonowana, czytelna maszynowo encyklopedia zewnętrznych API i serwerów MCP, z których agenci AI mogą korzystać w imieniu użytkownika.",
         "hatnote": "Ten artykuł dotyczy usług, które agent AI może obsługiwać programowo, a nie produktów AI używanych przez ludzi przez interfejs WWW.",
         "lead": (
-            "**{title}** (pol. *API dostępne dla agentów AI*) to otwarty, dwujęzyczny (angielski/polski) katalog **{n} zweryfikowanych usług** "
+            "**{title}** (pol. *API dostępne dla agentów AI*) to otwarty, dwujęzyczny (angielski/polski) katalog **{n} usług** (każda z datą ostatniego sprawdzenia) "
             "w **{c} kategoriach**, z których autonomiczny agent AI — np. Claude, ChatGPT, Gemini lub własny agent LLM — może korzystać "
             "**bez udziału człowieka**, po jednorazowym kroku wykonanym przez człowieka: rejestracji konta i przekazaniu agentowi "
             "**klucza API**, **tokenu OAuth** lub połączenia z **serwerem MCP (Model Context Protocol)**. "
@@ -122,7 +122,7 @@ T = {
             "oraz darmowy limit. Nie jest to spis produktów z „AI” w nazwie — kryterium jest możliwość obsługi przez agenta, a nie marketing."
         ),
         "infobox": [("Typ", "katalog API i MCP"), ("Wpisy", "{n}"), ("Kategorie", "{c}"), ("Oficjalne serwery MCP", "{mcp}"),
-                    ("Języki", "angielski, polski"), ("Format", "JSON, Markdown, HTML, llms.txt"), ("Ostatnia weryfikacja", "{date}"), ("Licencja", "CC BY 4.0 (dane), MIT (kod)")],
+                    ("Języki", "angielski, polski"), ("Format", "JSON, Markdown, HTML, llms.txt"), ("Ostatnie sprawdzenie", "{date}"), ("Licencja", "CC BY 4.0 (dane), MIT (kod)")],
         "contents": "Spis treści",
         "h_agents": "Dostęp maszynowy (dla agentów AI)",
         "agents_intro": "Agenci AI nie powinni parsować tej strony. Zamiast tego należy pobrać jeden ze stałych plików:",
@@ -139,7 +139,7 @@ T = {
         "criteria": [
             "Usługa udostępnia **publiczny, samoobsługowy** interfejs programowy (REST, GraphQL, SDK) **lub** serwer MCP.",
             "Człowiek musi działać **najwyżej raz** — założyć konto i wygenerować klucz lub zatwierdzić OAuth. Potem agent działa samodzielnie.",
-            "Interfejs jest **udokumentowany** i **aktywny** (zweryfikowano w dniu podanym w infoboksie).",
+            "Interfejs jest **udokumentowany** i **aktywny** (linki sprawdzono w dniu podanym w infoboksie).",
             "Aplikacje wyłącznie konsumenckie, listy oczekujących, produkty dostępne tylko przez dział sprzedaży, frameworki agentów i IDE są **wykluczone** — to agenci lub narzędzia do ich budowy, a nie usługi wywoływane przez agenta.",
         ],
         "h_legend": "Legenda",
@@ -293,6 +293,34 @@ def mcp_details(e):
     return m
 
 
+def mcp_config(e, m, usage):
+    """Connection snippet for the MCP server: researched (data/usage.json) or derived from a hosted endpoint."""
+    if "mcp_config" in usage:
+        return usage["mcp_config"]
+    remote = m.get("remote_url") or (m.get("url") if m.get("domain_verified") is not None else None)
+    if not remote:
+        return None
+    return {"transport": "sse" if re.search(r"/sse/?$", remote) else "streamable-http", "url": remote,
+            "derived": True}  # from the endpoint URL only: auth (OAuth or header) not researched yet
+
+
+def load_usage(ids):
+    """data/usage.json: per-entry `call`, `unit_price`, `mcp_config`, `mcp_issue` (see data/schema.json)."""
+    f = DATA / "usage.json"
+    usage = json.loads(f.read_text("utf-8")) if f.exists() else {}
+    for eid, u in usage.items():
+        assert eid in ids, f"data/usage.json: unknown id {eid}"
+        assert set(u) <= {"call", "unit_price", "mcp_config", "mcp_issue"}, f"data/usage.json {eid}: {set(u)}"
+        c = u.get("call")
+        if c:
+            assert c.get("method") and c.get("url", "").startswith("http") and c.get("example") and c.get("source_url"), f"usage {eid}: call"
+        mc = u.get("mcp_config")
+        if mc:
+            assert mc.get("transport") in ("streamable-http", "sse", "stdio", None), f"usage {eid}: transport"
+            assert mc.get("url") or mc.get("command"), f"usage {eid}: url or command"
+    return usage
+
+
 def details_items(e):
     """(label, text, source_url) for the researched structured fields."""
     out = []
@@ -317,6 +345,13 @@ def details_items(e):
     sc = (e.get("oauth_scopes") or {}).get("scopes")
     if sc:
         out.append(("OAuth scopes", ", ".join(sc[:8]), e["oauth_scopes"].get("source_url")))
+    u = USAGE.get(e.get("id"), {})
+    if u.get("call"):
+        out.append(("Example call", f"{u['call'].get('operation', '')}: {u['call']['method']} {u['call']['url']}".lstrip(": "), u["call"].get("source_url")))
+    if u.get("unit_price"):
+        out.append(("Unit price", u["unit_price"]["summary"], u["unit_price"].get("source_url")))
+    if (u.get("mcp_config") or {}).get("docs_only"):
+        out.append(("MCP", "docs-only: the server searches documentation, it cannot call the API", u["mcp_config"].get("source_url")))
     tools = (e.get("mcp") or {}).get("tools")
     if tools:
         out.append(("MCP tools", f"{len(tools)}: " + ", ".join(tools[:6]) + (" …" if len(tools) > 6 else ""), (e.get("mcp") or {}).get("source_url")))
@@ -445,8 +480,8 @@ def readme(lang, cats, items, dirs):
 def llms(cats, items, dirs):
     st = stats(cats, items)
     o = [f"# {TITLE}", "",
-         f"> Verified catalog of {st['n']} third-party APIs and MCP servers that AI agents can call on a user's behalf "
-         f"after a one-time API key / OAuth / MCP setup. {st['c']} categories. Last verified {VERIFIED}. "
+         f"> Catalog of {st['n']} third-party APIs and MCP servers that AI agents can call on a user's behalf "
+         f"after a one-time API key / OAuth / MCP setup. {st['c']} categories. Last checked {VERIFIED}; each entry has its own `verified` (last-checked) date and a `link_check`; confirm pricing and task fit in `docs`. "
          "Each entry: docs URL, auth method + header hint, MCP server (official/community), free tier, SDKs, OpenAPI and llms.txt links.",
          "", "Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, "
          "plus derived booleans has_free_tier, has_trial, no_auth, stale, link_check{checked_at, docs, mcp} and "
@@ -455,7 +490,9 @@ def llms(cats, items, dirs):
          "Researched on vendor pages, each with source_url and checked_at: free_plan{kind, requires_card, quota, period, watermark}, "
          "auth_scheme (OpenAPI securityScheme: type, in, name, scheme, format), base_url, rate_limits, oauth_scopes, async_jobs, data_policy, "
          "mcp{maintainer, remote_url, repo, tools, covers_full_api} plus derived mcp.kind (vendor-hosted/official/community/none) "
-         "and mcp.domain_verified.",
+         "and mcp.domain_verified, mcp.config (connection snippet: transport, url or command/args, headers, env, oauth, docs_only; "
+         "derived: true when built from the endpoint URL alone), mcp.issue. "
+         "For popular services also call{operation, method, url, example (curl), response_fields, async} and unit_price{summary}, each with source_url and checked_at.",
          "", "## Data", "",
          f"- [Full catalog (JSON)]({RAW}catalog/all.json): all entries in one array",
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
@@ -486,7 +523,7 @@ def llms(cats, items, dirs):
 
 
 def llms_full(cats, items):
-    o = [f"# {TITLE} — full list ({len(items)} services, verified {VERIFIED})",
+    o = [f"# {TITLE} — full list ({len(items)} services, last checked {VERIFIED})",
          "# format: [tags] name | what it does | auth (hint) | mcp | free tier | docs",
          "# tags: [FREE] lasting free tier or free usage, [TRIAL] one-off free trial credits, "
          "[NO-KEY] callable without any credential, [MCP] official MCP server",
@@ -681,7 +718,7 @@ def category_page(c, rows, cats):
     title = f"{c['en']} APIs and MCP servers for AI agents"
     n_mcp = sum(1 for e in rows if (e.get("mcp") or {}).get("type") == "official")
     n_free = sum(1 for e in rows if is_free(e))
-    desc = (f"{len(rows)} verified {c['en'].lower()} APIs an AI agent can call: auth method and header, "
+    desc = (f"{len(rows)} {c['en'].lower()} APIs an AI agent can call: auth method and header, "
             f"official MCP server ({n_mcp}), free tier ({n_free}), docs links. Machine-readable JSON included.")
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": title, "description": desc, "url": url,
           "numberOfItems": len(rows),
@@ -698,7 +735,7 @@ def category_page(c, rows, cats):
          f'<a href="../../llms.txt">llms.txt</a><a href="{GH}">GitHub</a></nav></div></header><main>',
          f"<h1>{e_(title)}</h1>", f'<div class="sub">{e_(c["desc_en"])}</div>',
          f"<p>{e_(desc)} Agents: fetch <a href=\"{RAW}catalog/{c['id']}.json\"><code>catalog/{c['id']}.json</code></a> "
-         f"instead of parsing this page. Last verified {VERIFIED}.</p>",
+         f"instead of parsing this page. Last checked {VERIFIED}.</p>",
          ratings_note("en"),
          '<div class="tw"><table class="wikitable"><thead><tr><th>Service</th><th>What an agent can do</th><th>Auth</th>'
          '<th>MCP server</th><th>Free tier</th><th>Details (with sources)</th><th>Notes</th><th>Proof (ratings, usage)</th></tr></thead><tbody>']
@@ -727,8 +764,9 @@ def write(path, text):
 
 
 def main():
-    global VERIFIED, RATINGS
+    global VERIFIED, RATINGS, USAGE
     cats, items, dirs = load()
+    USAGE = load_usage({e.get("id") for e in items})
     ratings_file = DATA / "ratings.json"
     RATINGS = json.loads(ratings_file.read_text("utf-8")) if ratings_file.exists() else {}
     VERIFIED = max((e.get("verified") or "" for e in items), default="") or date.today().isoformat()
@@ -759,6 +797,13 @@ def main():
         # Derived fields agents asked for in the discovery interviews.
         x["no_auth"] = e["auth"] == "none"
         x["mcp"] = mcp_details(e)
+        u = USAGE.get(e["id"], {})
+        x["mcp"]["config"] = mcp_config(e, x["mcp"], u) if x["mcp"]["kind"] != "none" else None
+        if u.get("mcp_issue"):
+            x["mcp"]["issue"] = u["mcp_issue"]
+        for k in ("call", "unit_price"):
+            if u.get(k):
+                x[k] = u[k]
         x["has_free_tier"] = is_free(e)
         x["has_trial"] = is_trial(e)
         # Usable for free without a payment card: no key at all, or a free/trial plan confirmed card-free.
@@ -817,5 +862,6 @@ def checksums():
 
 
 VERIFIED = ""
+USAGE = {}
 if __name__ == "__main__":
     main()
