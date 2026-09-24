@@ -513,6 +513,29 @@
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/monday-com-api.json"
   },
   {
+   "id": "nocodb-cloud",
+   "name": "NocoDB Cloud API",
+   "homepage": "https://nocodb.com",
+   "docs": "https://nocodb.com/docs/apis-and-mcp",
+   "auth": "api_key+oauth2",
+   "auth_hint": "REST: 'xc-token: <API_TOKEN>' header; MCP: 'x-api-key: <MCP_TOKEN>' header or OAuth sign-in",
+   "mcp": {
+    "type": "official",
+    "url": "https://app.nocodb.com/mcp"
+   },
+   "free_tier": "Free plan: 1,000 records, 1 GB storage, 1,000 API calls/month, 3 editors, 100 automation runs; no credit card",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": "https://nocodb.com/llms.txt",
+   "desc_en": "Lets an agent read, create and update records, tables and views in NocoDB spreadsheet-style databases.",
+   "notes": "Free plan API quota is very small (1,000 calls/month). v3 Data API reference at https://data-apis-v3.nocodb.com/ and Meta API at https://meta-apis-v3.nocodb.com/. Remote MCP over Streamable HTTP; tools follow the token owner's base role and plan-gated features.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
    "id": "notion-api",
    "name": "Notion API",
    "homepage": "https://developers.notion.com",

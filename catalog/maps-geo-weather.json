@@ -113,6 +113,67 @@
    }
   },
   {
+   "id": "ip2location-io",
+   "name": "IP2Location.io API",
+   "homepage": "https://www.ip2location.io/",
+   "docs": "https://www.ip2location.io/ip2location-documentation",
+   "auth": "api_key",
+   "auth_hint": "Query parameter ?key=<API_KEY> (optional: keyless lookups allowed at a lower quota)",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/ip2location/mcp-ip2location-io"
+   },
+   "free_tier": "Free plan: 50,000 IP geolocation queries/month, 500 domain WHOIS and 50 hosted-domain queries/month (attribution required); keyless: 1,000 queries/day.",
+   "sdk": [
+    "python",
+    "javascript",
+    "php",
+    "java",
+    "csharp",
+    "go",
+    "ruby"
+   ],
+   "openapi": null,
+   "llms_txt": "https://www.ip2location.io/llms.txt",
+   "desc_en": "Lets an agent geolocate IPv4/IPv6 addresses, get ASN/ISP/proxy data, and look up domain WHOIS records.",
+   "notes": "Official MCP server is local (stdio via uv, env IP2LOCATION_API_KEY). Free plan returns basic fields; proxy/usage-type details need paid plans. Endpoint: GET https://api.ip2location.io/?key=...&ip=...",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
+   "id": "iplocate",
+   "name": "IPLocate IP Intelligence API",
+   "homepage": "https://www.iplocate.io/",
+   "docs": "https://www.iplocate.io/docs",
+   "auth": "api_key",
+   "auth_hint": "Header X-API-Key: <API_KEY> or query parameter ?apikey=<API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/iplocate/mcp-server-iplocate"
+   },
+   "free_tier": "Free plan: 1,000 requests/day forever, all data types (geolocation, VPN/proxy/Tor, ASN, company, abuse contacts), no credit card.",
+   "sdk": [
+    "python",
+    "javascript",
+    "java",
+    "php",
+    "go",
+    "ruby"
+   ],
+   "openapi": null,
+   "llms_txt": "https://www.iplocate.io/llms.txt",
+   "desc_en": "Lets an agent geolocate an IP address and get its ASN, ISP, company, abuse contacts and VPN/proxy/Tor/hosting flags.",
+   "notes": "Official MCP server is local (stdio, reads IPLOCATE_API_KEY). Endpoint: GET https://iplocate.io/api/lookup/{ip}; batch lookup available. Docs link an OpenAPI schema (not directly fetchable).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
    "id": "mapbox",
    "name": "Mapbox",
    "homepage": "https://www.mapbox.com",

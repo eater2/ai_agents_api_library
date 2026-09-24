@@ -52,6 +52,29 @@
    ]
   },
   {
+   "id": "congress-gov",
+   "name": "Congress.gov API",
+   "homepage": "https://www.congress.gov/",
+   "docs": "https://api.congress.gov/",
+   "auth": "api_key",
+   "auth_hint": "api.data.gov key: query parameter ?api_key=<API_KEY> or header X-Api-Key: <API_KEY>",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/cyanheads/congressgov-mcp-server"
+   },
+   "free_tier": "Free: government API, key issued instantly by email; 5,000 requests/hour.",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Lets an agent look up U.S. bills, amendments, votes, members, committees, nominations and Congressional Record data from the Library of Congress.",
+   "notes": "Official Library of Congress API (v3); usage guide and endpoint docs in github.com/LibraryOfCongress/api.congress.gov. Paginated JSON/XML, max 250 results per page.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
    "id": "context7-library-docs-for-agents",
    "name": "Context7 (library docs for agents)",
    "homepage": "https://context7.com",
@@ -172,6 +195,31 @@
    ]
   },
   {
+   "id": "gitingest",
+   "name": "Gitingest API",
+   "homepage": "https://gitingest.com",
+   "docs": "https://gitingest.com/llms.txt",
+   "auth": "none",
+   "auth_hint": "No key for public repos: GET https://gitingest.com/api/<owner>/<repo>; optional GitHub token for private repos via the 'token' parameter",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/narumiruna/gitingest-mcp"
+   },
+   "free_tier": "No key; free public service with no published quota (the web UI has rate limiting and CAPTCHA protection).",
+   "sdk": [
+    "python"
+   ],
+   "openapi": "https://gitingest.com/openapi.json",
+   "llms_txt": "https://gitingest.com/llms.txt",
+   "desc_en": "Lets an agent turn any public Git repository into a single text digest (summary, directory tree and file contents) sized for an LLM prompt.",
+   "notes": "GET /api/{user}/{repo} or POST /api/ingest (include/exclude patterns); digest returned as a download URL. For heavy use the vendor recommends the open-source CLI (pip install gitingest).",
+   "verified": "2026-09-24",
+   "no_auth": true,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
    "id": "hacker-news-api",
    "name": "Hacker News API",
    "homepage": "https://github.com/HackerNews/API",
@@ -220,6 +268,52 @@
      "fetched_at": "2026-09-24T16:54Z"
     }
    ]
+  },
+  {
+   "id": "open-library",
+   "name": "Internet Archive Open Library API",
+   "homepage": "https://openlibrary.org/",
+   "docs": "https://openlibrary.org/developers/api",
+   "auth": "none",
+   "auth_hint": "No key; send a User-Agent header with app name and contact email, e.g. 'User-Agent: MyApp (me@example.org)'",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/8enSmith/mcp-open-library"
+   },
+   "free_tier": "No key; free and open: 1 request/second anonymous, 3 requests/second with an identifying User-Agent.",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Lets an agent search books, authors and subjects, fetch work/edition data by ISBN or OLID, search inside book texts and get cover images.",
+   "notes": "Bulk scraping discouraged; use the monthly data dumps for large jobs. Reading-log/list write endpoints need an Open Library login.",
+   "verified": "2026-09-24",
+   "no_auth": true,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
+   "id": "nytimes",
+   "name": "New York Times APIs",
+   "homepage": "https://developer.nytimes.com/",
+   "docs": "https://developer.nytimes.com/apis",
+   "auth": "api_key",
+   "auth_hint": "Query parameter ?api-key=<API_KEY> (create an app at developer.nytimes.com and enable the APIs you need)",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/jeffmm/nytimes-mcp"
+   },
+   "free_tier": "Free: all public APIs are free; most APIs 500 requests/day and 5 requests/minute (Archive API higher).",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Lets an agent search NYT articles back to 1851, read top stories, most-popular lists, the Times Wire feed and bestseller lists.",
+   "notes": "Returns metadata/abstracts and links, not full article text. Exceeding limits returns HTTP 429; wait ~12 s between calls. Non-commercial use terms.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
   },
   {
    "id": "newsapi",

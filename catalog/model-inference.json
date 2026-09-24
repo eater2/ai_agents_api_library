@@ -86,6 +86,32 @@
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/cohere-api.json"
   },
   {
+   "id": "comet-opik",
+   "name": "Comet Opik Cloud API",
+   "homepage": "https://www.comet.com/site/products/opik/",
+   "docs": "https://www.comet.com/docs/opik/reference/rest-api/overview",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Headers 'authorization: <OPIK_API_KEY>' (no Bearer prefix) and 'Comet-Workspace: <WORKSPACE>'; remote MCP uses browser sign-in",
+   "mcp": {
+    "type": "official",
+    "url": "https://www.comet.com/opik/api/v1/mcp"
+   },
+   "free_tier": "Free cloud plan: 25k spans/month, 60-day data retention, up to 10 team members",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://www.comet.com/docs/opik/llms.txt",
+   "desc_en": "Lets an agent log and read LLM traces and spans, score them with evaluations and manage datasets and prompts in Opik.",
+   "notes": "REST base https://www.comet.com/opik/api/v1/private/. Remote MCP needs OAuth browser sign-in; local: uvx opik mcp configure.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
    "id": "deepseek-api",
    "name": "DeepSeek API",
    "homepage": "https://api-docs.deepseek.com",

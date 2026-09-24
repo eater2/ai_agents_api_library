@@ -197,6 +197,60 @@
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/coingecko-api.json"
   },
   {
+   "id": "coinmarketcap-api",
+   "name": "CoinMarketCap API",
+   "homepage": "https://coinmarketcap.com/api/",
+   "docs": "https://coinmarketcap.com/api/documentation/v1/",
+   "auth": "api_key",
+   "auth_hint": "Header X-CMC_PRO_API_KEY: <API_KEY> (keyless public API under https://pro-api.coinmarketcap.com/public-api/... needs no key; MCP uses header X-CMC-MCP-API-KEY)",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.coinmarketcap.com/mcp"
+   },
+   "free_tier": "Free Basic plan: 15,000 credits/month, 50 requests/min, 1 API key, commercial use allowed; plus a keyless public API with lower rate limits",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://coinmarketcap.com/api/documentation/llms.txt",
+   "desc_en": "Lets an agent fetch live and historical cryptocurrency prices, market caps, listings, exchange and DEX data, and indices like Fear & Greed.",
+   "notes": "Basic plan covers core endpoints only (many historical endpoints are paid). Remote MCP over streamable HTTP; also x402 pay-per-request endpoints.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
+   "id": "dexpaprika",
+   "name": "DexPaprika DEX API",
+   "homepage": "https://dexpaprika.com/",
+   "docs": "https://docs.dexpaprika.com/api-reference/introduction",
+   "auth": "none",
+   "auth_hint": "No key needed on https://api.dexpaprika.com; optional free key sent as the whole header value: Authorization: <API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.dexpaprika.com/streamable-http"
+   },
+   "free_tier": "No key; 30,000 credits per rolling 30 days per IP at 15 requests/min. Free registered key: 100,000 credits/30 days at 30 requests/min, no card",
+   "sdk": [
+    "javascript",
+    "python",
+    "go",
+    "php"
+   ],
+   "openapi": "https://mcp.dexpaprika.com/openapi",
+   "llms_txt": "https://docs.dexpaprika.com/llms.txt",
+   "desc_en": "Lets an agent query on-chain DEX data across 36 blockchains: liquidity pools, swaps, token prices, OHLCV history and live price streams.",
+   "notes": "Keyless hosted MCP (also SSE at https://mcp.dexpaprika.com/sse). Batch endpoints cost 1 credit per item; HTTP 402 when the monthly allowance runs out.",
+   "verified": "2026-09-24",
+   "no_auth": true,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
    "id": "financial-modeling-prep",
    "name": "Financial Modeling Prep",
    "homepage": "https://site.financialmodelingprep.com",
@@ -232,6 +286,37 @@
     }
    ],
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/financial-modeling-prep.json"
+  },
+  {
+   "id": "mercado-pago-api",
+   "name": "Mercado Pago API",
+   "homepage": "https://www.mercadopago.com/developers",
+   "docs": "https://www.mercadopago.com/developers/en/reference",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <ACCESS_TOKEN> (test or production access token from Your integrations; OAuth for acting on behalf of sellers)",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.mercadopago.com/mcp"
+   },
+   "free_tier": "Free to integrate: no API or monthly fees, only per-transaction commissions; free test credentials and test users for sandbox payments",
+   "sdk": [
+    "javascript",
+    "python",
+    "java",
+    "php",
+    "ruby",
+    "dotnet",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Lets an agent create checkout preferences, payments, refunds and subscriptions and look up transactions in Latin America's Mercado Pago.",
+   "notes": "Available in Latin American countries (AR, BR, MX, CL, CO, PE, UY); live payments need a verified Mercado Pago account. Remote MCP uses OAuth and focuses on docs search, app/credential management, webhooks, test users and integration quality.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
   },
   {
    "id": "open-exchange-rates",

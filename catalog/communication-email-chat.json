@@ -88,6 +88,36 @@
    ]
   },
   {
+   "id": "line-messaging-api",
+   "name": "LINE Messaging API",
+   "homepage": "https://developers.line.biz/en/services/messaging-api/",
+   "docs": "https://developers.line.biz/en/reference/messaging-api/",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <CHANNEL_ACCESS_TOKEN> (issued for the Messaging API channel in LINE Developers Console)",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/line/line-bot-mcp-server"
+   },
+   "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited and never counted. Free quotas vary by region",
+   "sdk": [
+    "java",
+    "php",
+    "go",
+    "ruby",
+    "python",
+    "javascript"
+   ],
+   "openapi": "https://raw.githubusercontent.com/line/line-openapi/main/messaging-api.yml",
+   "llms_txt": "https://developers.line.biz/llms.txt",
+   "desc_en": "Lets an agent send and reply to messages, rich messages and broadcasts to users of a LINE Official Account and read user profiles.",
+   "notes": "Requires a LINE Official Account and a Messaging API channel. MCP server is local (stdio, npx @line/line-bot-mcp-server) with channel token and user ID env vars.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
    "id": "mailgun",
    "name": "Mailgun",
    "homepage": "https://www.mailgun.com",
@@ -131,6 +161,29 @@
     }
    ],
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/mailgun.json"
+  },
+  {
+   "id": "ntfy",
+   "name": "ntfy.sh Push Notifications API",
+   "homepage": "https://ntfy.sh",
+   "docs": "https://docs.ntfy.sh/publish/",
+   "auth": "none",
+   "auth_hint": "No key for public topics: POST the message body to https://ntfy.sh/<topic>. Optional access token for reserved topics: 'Authorization: Bearer tk_<TOKEN>'",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/gitmotion/ntfy-me-mcp"
+   },
+   "free_tier": "No key; anonymous publishing to public topics, rate-limited per visitor IP (burst of 60 requests, then 1 request every 5 s, roughly 17,280/day); paid plans from $6/month add reserved topics, higher limits, email and phone-call notifications.",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Lets an agent send push notifications to a user's phone or desktop by publishing a plain HTTP POST to an ntfy topic, and read messages back from it.",
+   "notes": "Public topic names act as passwords; anyone who knows the name can read or post, so use a hard-to-guess name or a reserved topic. Attachments up to 15 MB. Server is open source and self-hostable with the same API.",
+   "verified": "2026-09-24",
+   "no_auth": true,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
   },
   {
    "id": "postmark",
