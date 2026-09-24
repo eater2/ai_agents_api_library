@@ -1,0 +1,87 @@
+# Corrections found while researching data/usage.json (2026-09-24)
+
+For the owner of data/catalog.json. One line per finding: id: field: what is wrong, source.
+
+- telegram-bot-api: mcp: listed server (chigwell/telegram-mcp) needs user-account credentials from my.telegram.org (TELEGRAM_API_ID/API_HASH/SESSION_STRING), not the bot token in auth_hint. https://github.com/chigwell/telegram-mcp
+- tavily: mcp.url/remote_url: `https://mcp.tavily.com/mcp/` (trailing slash) is for API-key use; OAuth setup uses `https://mcp.tavily.com/mcp`. https://github.com/tavily-ai/tavily-mcp
+- exa: notes: remote MCP also takes `x-api-key` header or OAuth via `?login`; some features (Exa Agent) need auth. https://exa.ai/docs/reference/exa-mcp
+- sendgrid-twilio: pricing link: old sendgrid pricing URLs redirect-loop; working page https://www.twilio.com/en-us/products/email-api/pricing
+- openstreetmap-nominatim: free_tier: "bulk use prohibited" is too strong; policy discourages bulk, allows smaller one-off bulk under extra rules, forbids systematic queries. https://operations.osmfoundation.org/policies/nominatim/
+- openstreetmap-nominatim: mcp: url null, but repo README lists public hosted server https://openstreetmap.caseyjhand.com/mcp. https://github.com/cyanheads/openstreetmap-mcp-server
+- google-maps-platform: $200 monthly credit is gone since 2025-03-01 (per-SKU free caps: 10k Essentials / 5k Pro / 1k Enterprise); entry free_tier already correct — check notes/desc for leftover "$200". https://developers.google.com/maps/billing-and-pricing/overview
+- speechmatics-api: mcp.url points to aggregator glama.ai; repo is https://github.com/ArchieMcM234/speechmatics_claude_code_mcp
+- paragon-actionkit: mcp: self-hosted only ("available as a self-hosted MCP"); mcp.url www.useparagon.com/mcp is a landing page, so kind "vendor-hosted" is wrong. https://docs.useparagon.com/actionkit/getting-started
+- zoom-api: mcp.remote_url missing (endpoint only in url). https://github.com/zoom/mcp-registry
+- circleci-api: mcp.tools lists 12, changelog says hosted server has 24. https://circleci.com/changelog/hosted-mcp-server-now-available/
+- google-gemini-api: mcp.tools: page names `search_documentation`, not gemini_search_docs/gemini_get_doc (low confidence). https://ai.google.dev/gemini-api/docs/coding-agents
+- alpha-vantage: `?apikey=` on MCP URL is deprecated; recommended sign-in is OAuth. https://github.com/alphavantage/alpha_vantage_mcp
+- ip2location-io: hosted MCP auth is `X-API-Key` header, not `?key=` (that is REST). https://github.com/ip2location/mcp-ip2location-io
+- paypal-api: mcp.remote_url https://mcp.paypal.com/http returns 404; /sse and /mcp return 401 (exist). https://docs.paypal.ai/developer/tools/ai/mcp-quickstart
+- wolfram-alpha-api: mcp: no remote_url; free endpoint https://agenttools.wolfram.com/mcp (no auth), paid https://services.wolfram.com/api/mcp (Bearer). https://support.wolfram.com/75237
+- rev-ai-api: mcp: remote_url missing (https://docs.rev.ai/mcp) and it is docs-only.
+- fireworks-ai, xai-grok-api: listed MCP servers are docs-only (docs.fireworks.ai/mcp, docs.x.ai/api/mcp) — mcp.type "official" overstates it.
+- atlassian-jira-confluence: mcp.url is deprecated v1 path; current https://mcp.atlassian.com/v2/mcp. https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/
+- postman-api: mcp.remote_url /mcp is "full" mode; default is /minimal; EU host needs API key. https://github.com/postmanlabs/postman-mcp-server
+- csm-common-sense-machines-api: mcp.url is aggregator (lobehub, 403); vendor repo github.com/CommonSenseMachines/blender-mcp returns 404 — MCP likely gone.
+- assemblyai-api: mcp.url https://mcp.assemblyai.com/docs is not documented; docs give https://assemblyai.com/docs/mcp and it is docs-only. https://www.assemblyai.com/docs/coding-agent-prompts
+- mistral-ai-api: MCP at api.mistral.ai/mcp only manages Studio Skills, not the general API. https://docs.mistral.ai/resources/mcp
+- webflow-data-api: repo README still shows old /sse; Webflow moved to /mcp over HTTP. https://developers.webflow.com/mcp/installing/claude-code
+- tencent-edgeone-pages: listed endpoint is the no-login HTML sharing server; full-stack deploy needs npx @edgeone/makers-mcp with login. https://pages.edgeone.ai/document/mcp
+- coingecko-api: remote_url is keyless public server; keyed server (mcp.pro-api.coingecko.com) uses OAuth. https://docs.coingecko.com/reference/mcp-server
+- openalex-api: MCP server covers six paper sources, not OpenAlex only (community multi-source). https://github.com/benedict2310/Scientific-Papers-MCP
+- mercado-pago-api: MCP tools are docs search, quality checks, webhooks, test users, app setup — cannot create payments. https://www.mercadopago.com.br/developers/en/docs/mcp-server/tools.md
+- shopify-admin-storefront-api: Dev MCP (@shopify/dev-mcp) only searches docs/validates code, cannot call Admin/Storefront API. https://www.npmjs.com/package/@shopify/dev-mcp
+- resemble-ai-api: MCP endpoint is docs-search only (Fern searchDocs). https://docs.resemble.ai/_mcp/server
+- airtable-api: mcp.type should be "official" (mcp.airtable.com/mcp is Airtable's hosted server); mcp.url still points to community repo domdomegg/airtable-mcp-server. https://airtable.com/developers/agents/mcp/getting-started
+- pagerduty-api: mcp.url points to self-hosted repo marked deprecated; hosted https://mcp.pagerduty.com/mcp. https://support.pagerduty.com/main/docs/pagerduty-mcp-server
+- vercel-ai-gateway: listed MCP is general Vercel MCP; docs never mention AI Gateway. https://vercel.com/docs/agent-resources/vercel-mcp
+- ayrshare: mcp.url https://www.ayrshare.com is a marketing page; action server docs https://www.ayrshare.com/docs/additional/mcp-action-server
+- browserbase-stagehand: mcp.repo archived since 2026-07-20; hosted mcp.browserbase.com/mcp works, key as `?browserbaseApiKey=`. https://github.com/browserbase/mcp-server-browserbase
+- reducto-api: mcp.remote_url missing: https://mcp.reducto.ai/mcp (Bearer); mcp.url is docs page (docs.reducto.ai/mcp is docs-only). https://docs.reducto.ai/mcp-server
+- aws-apis: mcp.tools are from old local aws-api-mcp-server (deprecated); remote lists aws___run_script, aws___search_documentation, aws___read_documentation, aws___get_presigned_url. domain_verified false although aws-mcp.us-east-1.api.aws is in AWS docs (base_domain api.aws vs amazon.com). https://docs.aws.amazon.com/aws-mcp/latest/userguide/getting-started-aws-mcp-server.html
+- aws-textract: linked community MCP is tiny (3 commits, 0 stars), no SigV4 explanation; point to official AWS MCP Server instead. https://github.com/ag2-mcp-servers/amazon-textract
+- d-id-api: docs MCP can also call the API (execute-request). https://docs.d-id.com/docs/mcp
+- coinmarketcap-api: MCP key header is `X-CMC-MCP-API-KEY`, not REST `X-CMC_PRO_API_KEY`. https://coinmarketcap.com/api/documentation/ai-agent-hub/mcp
+- gumloop: MCP auth is OAuth, not a key. https://docs.gumloop.com/mcp-server/overview
+- superglue: mcp.url points to docs root; endpoint https://api.superglue.cloud/mcp (OAuth or Bearer). https://superglue.ai/docs/mcp/using-the-mcp
+- tinybird: MCP token only as `?token=` query param. https://www.tinybird.co/docs/forward/analytics-agents/mcp
+- parallel-web-systems-search-api: MCP works without key at lower limits; Bearer key raises them. https://docs.parallel.ai/integrations/mcp/search-mcp
+- retell-ai: auth_scheme null; Bearer $RETELL_API_KEY. https://docs.retellai.com/get-started/mcp-server
+- openrouter: auth_scheme null; MCP uses OAuth. https://openrouter.ai/docs/guides/overview/mcp-server
+- mongodb-atlas: MongoDB-hosted Atlas MCP (OAuth, recommended) not listed; URL not found on vendor page. https://github.com/mongodb-js/mongodb-mcp-server
+- elevenlabs-api: mcp repo github.com/elevenlabs/elevenlabs-mcp archived 2026-08-20; README says use hosted OAuth server https://api.elevenlabs.io/v1/mcp (should be mcp.remote_url). base_url/auth_scheme null: https://api.elevenlabs.io/v1, header xi-api-key. https://elevenlabs.io/docs/api-reference/text-to-speech/convert
+- serper: base_url null; endpoint https://google.serper.dev (confirmed only by live call, docs behind login). Pricing: no subscriptions, prepaid credits $1.00/1k down to $0.30/1k, valid 6 months. https://serper.dev
+- firecrawl: API-key MCP endpoint https://mcp.firecrawl.dev/v2/mcp takes key as Authorization Bearer header, not in URL. https://docs.firecrawl.dev/mcp-server
+- brave-search-api: MCP README: STDIO is default transport since v2.x (HTTP optional). https://github.com/brave/brave-search-mcp-server
+- luma-ai-dream-machine-api: current Luma API is Luma Agents API (https://agents.lumalabs.ai/v1, ray-3.2); "~$0.60-$1.05 per 5s clip (Ray 2)" not confirmable; pricing lists Ray3.2 5s t2v $0.15@540p/$0.30@720p/$1.20@1080p. https://lumalabs.ai/api/pricing
+- kling-ai-api: auth: docs now recommend plain API key `Authorization: Bearer <API key>`; JWT is legacy. docs moved: https://kling.ai/document-api/llms.txt (new paths /text-to-video/kling-2.6, GET /tasks). https://kling.ai/document-api/api/get-started/authentication.md
+- fal-ai: free_tier "check pricing" is not a value; prices per model (FLUX.1 schnell $0.003/MP). MCP header is `Authorization: Bearer <FAL_KEY>` (REST uses `Key`). https://fal.ai/docs/documentation/setting-up/mcp
+- replicate: MCP endpoint https://mcp.replicate.com/sse (SSE), not bare domain; base_url https://api.replicate.com/v1 and Bearer auth_scheme are null. https://replicate.com/docs/reference/http
+- runway-api: two MCP servers: mcp.runwayml.com/mcp (generation) vs dev.runwayml.com/mcp (portal/docs); worth a note. https://docs.dev.runwayml.com/llms-small.txt
+- deepgram-api: mcp.remote_url https://developers.deepgram.com/_mcp/server is docs-only (searchDocs); the API-calling server is local `dg mcp` from Deepgram CLI. https://developers.deepgram.com/developer-tools/cli/mcp-server.md
+- e2b: mcp.type "official" but e2b-dev/mcp-server archived since 2026-04-16. auth_hint: Bearer only works with a team header; simple method is X-API-Key. https://github.com/e2b-dev/E2B/blob/main/spec/openapi.yml
+- deepl-api: base_url null: https://api.deepl.com (Free: https://api-free.deepl.com); auth_scheme missing. https://developers.deepl.com/api-reference/translate.md
+- github-api: X-GitHub-Api-Version current value 2026-03-10. https://docs.github.com/en/rest/issues/issues
+- bigcommerce-api: mcp.url is docs-search server (only searchDocs), but tools list storefront MCP tools (different, store-specific endpoint POST /api/mcp). https://docs.bigcommerce.com/developer/api-reference/mcp/storefront/b2c.md
+- twilio-programmable-voice: mcp.type "community" but repo is twilio-labs (Twilio's own, README "our official ones"). https://github.com/twilio-labs/mcp
+- overpass-api-osm: mcp.url null; public hosted https://openstreetmap.caseyjhand.com/mcp. https://github.com/cyanheads/openstreetmap-mcp-server
+- keboola: remote_url https://mcp.keboola.com/mcp is US-Virginia stack only; other regions own hosts (mcp.eu-central-1.keboola.com). https://github.com/keboola/mcp-server
+- nocodb-cloud: https://app.nocodb.com/mcp is OAuth path; key access uses /mcp/<ncId> + x-api-key. https://nocodb.com/docs/apis-and-mcp/mcp
+- cartesia-api: mcp.tools missing download_file, get_credit_usage. https://docs.cartesia.ai/tools/ai/mcp.md
+- semantic-scholar-api: README says 16 tools incl. paper_authors (entry has 13). https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server
+- twilio: hosted mcp.twilio.com/docs is docs-only ("does not execute API calls"); executing server is repo twilio-labs/mcp (stdio, alpha). Consider pointing mcp at the executing server or flagging kind. https://www.twilio.com/docs/ai/mcp
+- open-meteo: free_tier could state 300,000 calls/month non-commercial cap. https://open-meteo.com/en/pricing
+- hume-ai-api: mcp.url points to docs-only server; API server is stdio `npx @humeai/mcp-server` + HUME_API_KEY. https://dev.hume.ai/docs/integrations/mcp.md
+- cohere-api, together-ai: listed MCP is docs-only.
+- tomorrow-io-api: MCP uses X-Api-Key header, not apikey query. https://docs.tomorrow.io/reference/mcp.md
+- make-api-mcp: MCP token header is `Authorization: Bearer <MCP_TOKEN>` on https://<MAKE_ZONE>/mcp. https://developers.make.com/mcp-server
+- unstructured-api: UNS-MCP repo is workflow/connector server; transformation via hosted Transform server. https://github.com/Unstructured-IO/UNS-MCP
+- docusign-esignature-api: mcp-d.docusign.com is demo; production https://mcp.docusign.com/mcp. https://developers.docusign.com/platform/mcp-server/
+- tripo-api: MCP alpha, last push 2025-04, needs Blender + addon. https://github.com/VAST-AI-Research/tripo-mcp
+- mercado-libre-api: MCP is docs-only. https://developers.mercadolibre.com.ar/en_us/mcp-server
+- riza: mcp.riza.io and api.riza.io refused connections 2026-09-24 (TLS/socket) — check if service is down.
+- elevenlabs-music-api: mcp.repo elevenlabs-mcp archived; README says use hosted server. https://github.com/elevenlabs/elevenlabs-mcp
+- sentry-api: domain_verified false but mcp.sentry.dev is Sentry's own (base_domain sentry.dev vs sentry.io). https://github.com/getsentry/sentry-mcp
+- datadog-api: remote_url missing: https://mcp.<site>/v1/mcp. https://docs.datadoghq.com/getting_started/software_delivery_mcp_tools/
+- penpot-api: remote_url missing: https://design.penpot.app/mcp/stream?userToken=... (needs plugin open in browser). https://help.penpot.app/mcp/
+- coinbase-cdp-x402: payments-mcp signs in with browser wallet (email), while entry auth is CDP API key. https://docs.cdp.coinbase.com/agentic-wallet/mcp/quickstart.md
