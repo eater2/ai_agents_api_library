@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "start": "node mcp/server.mjs",
-    "test": "node mcp/test.mjs"
+    "test": "node mcp/test.mjs && node mcp/ranking.test.mjs"
   },
   "engines": {
     "node": ">=20"
