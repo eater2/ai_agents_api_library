@@ -14,7 +14,9 @@
    "auth_hint": "AWS SigV4 signing with IAM access keys",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: Polly 5M chars/mo standard, Transcribe 60 min/mo (12 months)",
    "sdk": [
@@ -47,7 +49,9 @@
    "auth_hint": "Authorization: <key> (no Bearer prefix)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.assemblyai.com/docs"
+    "url": "https://mcp.assemblyai.com/docs",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: $50 credit, no card required",
    "sdk": [
@@ -80,7 +84,9 @@
    "auth_hint": "Ocp-Apim-Subscription-Key: <key>, or Authorization: Bearer <Entra token>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/microsoft/azure-speech-mcp-server"
+    "url": "https://github.com/microsoft/azure-speech-mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier (F0): 5 audio hrs/mo STT, 0.5M chars/mo neural TTS",
    "sdk": [
@@ -128,7 +134,9 @@
    "auth_hint": "Authorization: Bearer <key> plus Cartesia-Version header",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.cartesia.ai/mcp"
+    "url": "https://mcp.cartesia.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 20,000 credits/mo",
    "sdk": [
@@ -161,7 +169,9 @@
    "auth_hint": "Authorization: Token <key>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/deepgram/mcp"
+    "url": "https://github.com/deepgram/mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: $200 credit, no card required",
    "sdk": [
@@ -209,7 +219,9 @@
    "auth_hint": "xi-api-key: <key>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/elevenlabs/elevenlabs-mcp"
+    "url": "https://github.com/elevenlabs/elevenlabs-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free plan: limited monthly credits",
    "sdk": [
@@ -265,7 +277,9 @@
    "auth_hint": "API key (?key=) or OAuth2 service-account token: Authorization: Bearer <token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: TTS 4M chars/mo standard, STT 60 min/mo",
    "sdk": [
@@ -301,7 +315,9 @@
    "auth_hint": "X-Hume-Api-Key: <key> (REST); api_key query param (EVI WebSocket)",
    "mcp": {
     "type": "official",
-    "url": "https://dev.hume.ai/_mcp/server"
+    "url": "https://dev.hume.ai/_mcp/server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan: 10,000 TTS chars/mo + 5 EVI min/mo",
    "sdk": [
@@ -332,7 +348,9 @@
    "auth_hint": "API key from Murf dashboard",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing",
    "sdk": [
@@ -371,7 +389,9 @@
    "auth_hint": "Authorization: Bearer <key>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "paid only (pay-per-use)",
    "sdk": [
@@ -418,7 +438,9 @@
    "auth_hint": "API key from app.resemble.ai dashboard",
    "mcp": {
     "type": "official",
-    "url": "https://docs.resemble.ai/_mcp/server"
+    "url": "https://docs.resemble.ai/_mcp/server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "pay-as-you-go Flex plan ($0/mo base)",
    "sdk": [],
@@ -456,7 +478,9 @@
    "auth_hint": "Authorization: Bearer <access_token>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.rev.ai/"
+    "url": "https://docs.rev.ai/",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "trial credits (about 5 hours of ASR)",
    "sdk": [
@@ -488,7 +512,9 @@
    "auth_hint": "Authorization: Bearer <key>",
    "mcp": {
     "type": "community",
-    "url": "https://glama.ai/mcp/servers/ArchieMcM234/speechmatics_claude_code_mcp"
+    "url": "https://glama.ai/mcp/servers/ArchieMcM234/speechmatics_claude_code_mcp",
+    "domain_verified": false,
+    "kind": "community"
    },
    "free_tier": "free tier: 480 min/mo batch transcription",
    "sdk": [

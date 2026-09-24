@@ -3,30 +3,349 @@
   "$id": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/data/schema.json",
   "title": "AI Agents Accessible APIs — catalog entry",
   "type": "object",
-  "required": ["id", "name", "category", "docs", "auth", "mcp", "desc_en", "desc_pl"],
+  "required": [
+    "id",
+    "name",
+    "category",
+    "docs",
+    "auth",
+    "mcp",
+    "desc_en",
+    "desc_pl"
+  ],
   "properties": {
-    "id": {"type": "string", "pattern": "^[a-z0-9-]+$", "description": "Stable slug, used as HTML anchor."},
-    "name": {"type": "string"},
-    "category": {"type": "string", "description": "One of the ids in data/categories.json."},
-    "homepage": {"type": ["string", "null"], "format": "uri"},
-    "docs": {"type": "string", "format": "uri", "description": "Official API reference an agent should read."},
-    "auth": {"enum": ["api_key", "oauth2", "api_key+oauth2", "none", "cloud_iam"]},
-    "auth_hint": {"type": "string", "description": "How the credential is sent, e.g. 'Authorization: Bearer <key>'."},
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Stable slug, used as HTML anchor."
+    },
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "description": "One of the ids in data/categories.json."
+    },
+    "homepage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "docs": {
+      "type": "string",
+      "format": "uri",
+      "description": "Official API reference an agent should read."
+    },
+    "auth": {
+      "enum": [
+        "api_key",
+        "oauth2",
+        "api_key+oauth2",
+        "none",
+        "cloud_iam"
+      ]
+    },
+    "auth_hint": {
+      "type": "string",
+      "description": "How the credential is sent, e.g. 'Authorization: Bearer <key>'."
+    },
     "mcp": {
       "type": "object",
-      "required": ["type"],
+      "required": [
+        "type"
+      ],
       "properties": {
-        "type": {"enum": ["official", "community", "none"]},
-        "url": {"type": ["string", "null"], "description": "Remote MCP endpoint, or repository/docs of the server."}
+        "type": {
+          "enum": [
+            "official",
+            "community",
+            "none"
+          ]
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Remote MCP endpoint, or repository/docs of the server."
+        },
+        "maintainer": {
+          "enum": [
+            "vendor",
+            "community",
+            "none"
+          ]
+        },
+        "remote_url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Hosted MCP endpoint."
+        },
+        "repo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Source or package of a local (stdio) server."
+        },
+        "tools": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "covers_full_api": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Vendor page the value was read from."
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "kind": {
+          "enum": [
+            "vendor-hosted",
+            "official",
+            "community",
+            "none"
+          ],
+          "description": "Derived in catalog/*.json: vendor-hosted = vendor's endpoint on the vendor's own domain."
+        },
+        "domain_verified": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Derived in catalog/*.json: remote_url is on the homepage or docs domain."
+        }
       }
     },
-    "free_tier": {"type": "string"},
-    "sdk": {"type": "array", "items": {"type": "string"}},
-    "openapi": {"type": ["string", "null"], "format": "uri"},
-    "llms_txt": {"type": ["string", "null"], "format": "uri"},
-    "desc_en": {"type": "string"},
-    "desc_pl": {"type": "string"},
-    "notes": {"type": "string"},
-    "verified": {"type": "string", "format": "date", "description": "Date the entry was last checked against official docs."}
+    "free_tier": {
+      "type": "string"
+    },
+    "sdk": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "openapi": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "llms_txt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "desc_en": {
+      "type": "string"
+    },
+    "desc_pl": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "verified": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the entry was last checked against official docs."
+    },
+    "free_plan": {
+      "type": "object",
+      "description": "Structured free plan, researched on the vendor's pricing page.",
+      "properties": {
+        "kind": {
+          "enum": [
+            "free_tier",
+            "trial",
+            "no_key",
+            "none"
+          ]
+        },
+        "requires_card": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "quota": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "period": {
+          "enum": [
+            "day",
+            "month",
+            "year",
+            "one_time",
+            null
+          ]
+        },
+        "watermark": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Vendor page the value was read from."
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "auth_scheme": {
+      "type": "object",
+      "description": "Credential format as an OpenAPI securityScheme.",
+      "properties": {
+        "type": {
+          "enum": [
+            "apiKey",
+            "http",
+            "oauth2",
+            "none",
+            "cloud_iam"
+          ]
+        },
+        "in": {
+          "enum": [
+            "header",
+            "query",
+            "cookie",
+            null
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scheme": {
+          "enum": [
+            "bearer",
+            "basic",
+            null
+          ]
+        },
+        "format": {
+          "type": "string",
+          "description": "Literal example of what goes on the wire."
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Vendor page the value was read from."
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "base_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "rate_limits": {
+      "type": "object",
+      "description": "Rate limits as the vendor states them.",
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Vendor page the value was read from."
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "data_policy": {
+      "type": "object",
+      "description": "Training use and retention of API inputs.",
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Vendor page the value was read from."
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "oauth_scopes": {
+      "type": "object",
+      "properties": {
+        "scopes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Vendor page the value was read from."
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "async_jobs": {
+      "type": "object",
+      "description": "Long-running work returns a job id instead of the result.",
+      "properties": {
+        "value": {
+          "type": "boolean"
+        },
+        "how": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Vendor page the value was read from."
+        }
+      }
+    }
   }
 }

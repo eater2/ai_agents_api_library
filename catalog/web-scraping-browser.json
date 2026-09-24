@@ -14,7 +14,9 @@
    "auth_hint": "anchor-api-key header",
    "mcp": {
     "type": "official",
-    "url": "https://api.anchorbrowser.io/mcp"
+    "url": "https://api.anchorbrowser.io/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "$5 free credits/mo, no card required",
    "sdk": [],
@@ -52,7 +54,9 @@
    "auth_hint": "Authorization: Bearer <token> for REST; browser-based OAuth2 or bearer token for hosted MCP",
    "mcp": {
     "type": "official",
-    "url": "https://docs.apify.com/platform/integrations/mcp"
+    "url": "https://docs.apify.com/platform/integrations/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan: $5/mo platform usage credit, no card required",
    "sdk": [
@@ -98,7 +102,9 @@
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/brightdata/brightdata-mcp"
+    "url": "https://github.com/brightdata/brightdata-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: up to 5,000 requests/mo",
    "sdk": [
@@ -155,7 +161,9 @@
    "auth_hint": "Authorization: Bearer <key>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free forever plan: 50 credits/mo, no card required",
    "sdk": [
@@ -187,7 +195,9 @@
    "auth_hint": "X-Browser-Use-API-Key header (key prefix bu_)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "$15 one-time signup credit for new accounts (Google/GitHub/Microsoft); paid usage afterward",
    "sdk": [
@@ -218,7 +228,9 @@
    "auth_hint": "X-BB-API-Key header, plus Project ID",
    "mcp": {
     "type": "official",
-    "url": "https://www.browserbase.com/mcp"
+    "url": "https://www.browserbase.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: limited browser hours, single concurrency, no card required",
    "sdk": [
@@ -265,7 +277,9 @@
    "auth_hint": "token= query parameter",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free plan: 10,000 credits/mo, no card required (5 req/min limit)",
    "sdk": [],
@@ -292,7 +306,9 @@
    "auth_hint": "Authorization: Bearer <fc-key>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.firecrawl.dev/v2/mcp"
+    "url": "https://mcp.firecrawl.dev/v2/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 1,000 credits/mo, no card required",
    "sdk": [
@@ -334,7 +350,9 @@
    "auth_hint": "x-api-key header",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/hyperbrowserai/mcp"
+    "url": "https://github.com/hyperbrowserai/mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free plan: starter credits, 1 concurrent browser, no card required",
    "sdk": [
@@ -377,7 +395,9 @@
    "auth_hint": "HTTP Basic Auth with API-user credentials (--user USERNAME:PASSWORD)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free trial available (check pricing)",
    "sdk": [
@@ -416,7 +436,9 @@
    "auth_hint": "no auth; runs as a local process via npx",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/microsoft/playwright-mcp"
+    "url": "https://github.com/microsoft/playwright-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free, open source, no key",
    "sdk": [],
@@ -456,7 +478,9 @@
    "auth_hint": "API key from dashboard (exact header name not published; check docs)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free plan: 500 one-time API credits",
    "sdk": [
@@ -487,7 +511,9 @@
    "auth_hint": "api_key query parameter",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "5,000 free API credits (trial), no long-term free plan",
    "sdk": [],
@@ -514,7 +540,9 @@
    "auth_hint": "key= query param for REST API; API key or OAuth2 for MCP server",
    "mcp": {
     "type": "official",
-    "url": "https://scrapfly.io/products/mcp-cloud"
+    "url": "https://scrapfly.io/products/mcp-cloud",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "1,000 free credits/mo, no card required, no time limit",
    "sdk": [
@@ -545,7 +573,9 @@
    "auth_hint": "Authorization: Bearer <key> (legacy: api_key query param, deprecated)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "1,000 free API credits, no card required",
    "sdk": [
@@ -575,7 +605,9 @@
    "auth_hint": "Authorization: Bearer sk-<key>",
    "mcp": {
     "type": "official",
-    "url": "https://spider.cloud/mcp/"
+    "url": "https://spider.cloud/mcp/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "keyless trial: 25 free runs/day, no account required",
    "sdk": [
@@ -607,7 +639,9 @@
    "auth_hint": "Steel-Api-Key header",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "Hobby tier: 100 browser-hours/mo, 500 requests/day, no card required",
    "sdk": [
@@ -637,7 +671,9 @@
    "auth_hint": "HTTP Basic Auth: API key as username, blank password",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "$5 free credit for the first month",
    "sdk": [

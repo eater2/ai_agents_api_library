@@ -14,7 +14,9 @@
    "auth_hint": "apiKey query param",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: 3,000 credits/day (~90,000/month), no card required",
    "sdk": [
@@ -44,7 +46,9 @@
    "auth_hint": "key query param (OAuth2/IAM for some enterprise/Datasets APIs)",
    "mcp": {
     "type": "official",
-    "url": "https://mapstools.googleapis.com/mcp"
+    "url": "https://mapstools.googleapis.com/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "$200 free monthly usage credit across most Maps APIs",
    "sdk": [
@@ -88,7 +92,9 @@
    "auth_hint": "apiKey query param (OAuth2 app tokens also supported)",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: roughly 30,000 transactions/month on the Base/Freemium plan",
    "sdk": [
@@ -121,7 +127,9 @@
    "auth_hint": "Query parameter ?key=<API_KEY> (optional: keyless lookups allowed at a lower quota)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/ip2location/mcp-ip2location-io"
+    "url": "https://github.com/ip2location/mcp-ip2location-io",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "Free plan: 50,000 IP geolocation queries/month, 500 domain WHOIS and 50 hosted-domain queries/month (attribution required); keyless: 1,000 queries/day.",
    "sdk": [
@@ -152,7 +160,9 @@
    "auth_hint": "Header X-API-Key: <API_KEY> or query parameter ?apikey=<API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/iplocate/mcp-server-iplocate"
+    "url": "https://github.com/iplocate/mcp-server-iplocate",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "Free plan: 1,000 requests/day forever, all data types (geolocation, VPN/proxy/Tor, ASN, company, abuse contacts), no credit card.",
    "sdk": [
@@ -182,7 +192,9 @@
    "auth_hint": "access_token query param or Bearer token",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/mapbox/mcp-server"
+    "url": "https://github.com/mapbox/mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: monthly free quotas per API (e.g. 50,000 map loads/month)",
    "sdk": [
@@ -232,7 +244,9 @@
    "auth_hint": "none, but requires a descriptive User-Agent header",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key, no rate-limit tier (fair-use)",
    "sdk": [],
@@ -260,7 +274,9 @@
    "auth_hint": "none for non-commercial use; API key + 'customer-' host prefix for commercial tier",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key for non-commercial use (fair-use limits apply)",
    "sdk": [
@@ -289,7 +305,9 @@
    "auth_hint": "Authorization header with API key",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: ~2,000 requests/day (varies by endpoint), signup required",
    "sdk": [
@@ -319,7 +337,9 @@
    "auth_hint": "none, but must send a valid User-Agent/Referer identifying the app",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key; public demo server capped at 1 request/second, bulk use prohibited",
    "sdk": [],
@@ -346,7 +366,9 @@
    "auth_hint": "appid query param",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/robertn702/mcp-openweathermap"
+    "url": "https://github.com/robertn702/mcp-openweathermap",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: 1,000 calls/day (60 calls/min) on current weather/forecast",
    "sdk": [],
@@ -386,7 +408,9 @@
    "auth_hint": "none",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key; public instances are fair-use/rate-limited",
    "sdk": [],
@@ -413,7 +437,9 @@
    "auth_hint": "apikey query param",
    "mcp": {
     "type": "official",
-    "url": "https://www.pulsemcp.com/servers/tomorrow-io"
+    "url": "https://www.pulsemcp.com/servers/tomorrow-io",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free tier: 500 requests/day, 3 req/sec, 1 monitored location/alert",
    "sdk": [],

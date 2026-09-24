@@ -14,7 +14,9 @@
    "auth_hint": "API key generated via dashboard (exact header name not published)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing",
    "sdk": [],
@@ -51,7 +53,9 @@
    "auth_hint": "xi-api-key: <API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/elevenlabs/elevenlabs-mcp"
+    "url": "https://github.com/elevenlabs/elevenlabs-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "shares ElevenLabs account credit pool (limited free credits on sign-up); check pricing for per-track cost",
    "sdk": [
@@ -94,7 +98,9 @@
    "auth_hint": "API key issued on account creation (exact header name not published)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free track allowance on signup, then volume-based pay-as-you-go pricing",
    "sdk": [],
@@ -131,7 +137,9 @@
    "auth_hint": "customer-id + access-token headers (credentials emailed after checkout)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "paid only; plans start at $49/mo (100 generations/mo), no free tier",
    "sdk": [],
@@ -158,7 +166,9 @@
    "auth_hint": "check docs (exact header not publicly disclosed on marketing pages)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "paid only; Starter plan $29.99/mo for 100 songs/mo, no free tier confirmed",
    "sdk": [],
@@ -195,7 +205,9 @@
    "auth_hint": "Authorization: Bearer <STABILITY_API_KEY>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "shares Stability AI platform credits; 25 free credits on signup, then pay-as-you-go",
    "sdk": [

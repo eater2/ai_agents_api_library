@@ -16,7 +16,7 @@ import zipfile
 import re
 from datetime import date
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 
 REPO = "eater2/ai_agents_api_library"
 BRANCH = "main"
@@ -250,6 +250,73 @@ def ratings_note(lang):
     return f'<p class="proof-note">{text}: <time datetime="{ts[-1]}">{span}</time>.</p>'
 
 
+def base_domain(url):
+    host = urlparse(url or "").netloc.lower().split(":")[0]
+    parts = host.removeprefix("www.").split(".")
+    # keep three labels for second-level country domains such as example.co.uk
+    return ".".join(parts[-3:] if len(parts) > 2 and len(parts[-2]) <= 3 and len(parts[-1]) == 2 else parts[-2:])
+
+
+def mcp_details(e):
+    """Derived MCP fields for agents: kind (vendor-hosted / official / community / none) and domain_verified,
+    true when the hosted endpoint is on the vendor's own domain (homepage or docs)."""
+    m = dict(e.get("mcp") or {})
+    remote = m.get("remote_url")
+    url = m.get("url") or ""
+    if not remote and url.startswith("https://") and "github.com" not in url and re.search(r"mcp|/sse", url):
+        remote = url  # entries not yet researched: url that looks like a hosted endpoint
+    vendor = m.get("maintainer") == "vendor" or m.get("type") == "official"
+    own = {base_domain(e.get("homepage")), base_domain(e.get("docs"))} - {""}
+    m["domain_verified"] = base_domain(remote) in own if remote else None
+    if m.get("type") == "none" and m.get("maintainer") in (None, "none"):
+        m["kind"] = "none"
+    elif vendor and remote and m["domain_verified"]:
+        m["kind"] = "vendor-hosted"
+    elif vendor:
+        m["kind"] = "official"
+    else:
+        m["kind"] = "community"
+    return m
+
+
+def details_items(e):
+    """(label, text, source_url) for the researched structured fields."""
+    out = []
+    if e.get("base_url"):
+        out.append(("Base URL", e["base_url"], None))
+    fp = e.get("free_plan") or {}
+    if fp.get("quota") or fp.get("kind"):
+        bits = [fp.get("quota") or fp.get("kind")]
+        if fp.get("period") and fp["period"] not in (fp.get("quota") or ""):
+            bits.append(f"per {fp['period']}" if fp["period"] != "one_time" else "one-time")
+        if fp.get("requires_card") is not None:
+            bits.append("card required" if fp["requires_card"] else "no card")
+        if fp.get("watermark"):
+            bits.append("watermarked")
+        out.append(("Free plan", ", ".join(bits), fp.get("source_url")))
+    for key, label in (("rate_limits", "Rate limits"), ("data_policy", "Data policy")):
+        if (e.get(key) or {}).get("summary"):
+            out.append((label, e[key]["summary"], e[key].get("source_url")))
+    aj = e.get("async_jobs") or {}
+    if aj.get("value"):
+        out.append(("Async jobs", aj.get("how") or "yes", aj.get("source_url")))
+    sc = (e.get("oauth_scopes") or {}).get("scopes")
+    if sc:
+        out.append(("OAuth scopes", ", ".join(sc[:8]), e["oauth_scopes"].get("source_url")))
+    tools = (e.get("mcp") or {}).get("tools")
+    if tools:
+        out.append(("MCP tools", f"{len(tools)}: " + ", ".join(tools[:6]) + (" …" if len(tools) > 6 else ""), (e.get("mcp") or {}).get("source_url")))
+    return out
+
+
+def details_html(e):
+    rows = []
+    for label, text, src in details_items(e):
+        link = f' <a href="{html.escape(src)}" title="source">↗</a>' if src else ""
+        rows.append(f"<b>{html.escape(label)}:</b> {html.escape(text)}{link}")
+    return "<br>".join(rows) or "—"
+
+
 def mcp_mark(e, fmt="md"):
     m = e.get("mcp") or {}
     sym = {"official": "✅", "community": "◐"}.get(m.get("type"), "—")
@@ -304,7 +371,7 @@ def readme(lang, cats, items, dirs):
             o.append(f"| `{path}` — {d} | {url} |")
         o.append(f"\n{t['agents_recipe']}\n")
         o.append("### MCP server\n\nThe catalog is also an MCP server with four tools: `search_apis` (filters: `query`, `category`, "
-                 "`mcp`, `no_auth`, `free_tier`, `auth`), `get_api`, `get_reviews` (user reviews with pros and cons) and `list_categories`. No key needed. Add it to your MCP client:\n")
+                 "`mcp` (official/remote/any), `no_auth`, `free_tier`, `no_card`, `auth`), `get_api`, `get_reviews` (user reviews with pros and cons) and `list_categories`. No key needed. Add it to your MCP client:\n")
         o.append('```json\n{\n  "mcpServers": {\n    "ai-agents-api-library": {\n      "command": "npx",\n'
                  f'      "args": ["-y", "github:{REPO}"]\n    }}\n  }}\n}}\n```\n')
         o.append(f"Claude Code: `claude mcp add ai-agents-api-library -- npx -y github:{REPO}`\n")
@@ -370,7 +437,11 @@ def llms(cats, items, dirs):
          "", "Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, "
          "plus derived booleans has_free_tier, has_trial, no_auth, stale, link_check{checked_at, docs, mcp} and "
          "ratings[] (proof of use: SourceForge rating and review count, GitHub stars, Smithery uses; each with url and fetched_at) "
-         "and reviews_url (up to 100 user reviews with pros/cons, reviewer names removed; also via the MCP tool get_reviews).",
+         "and reviews_url (up to 100 user reviews with pros/cons, reviewer names removed; also via the MCP tool get_reviews). "
+         "Researched on vendor pages, each with source_url and checked_at: free_plan{kind, requires_card, quota, period, watermark}, "
+         "auth_scheme (OpenAPI securityScheme: type, in, name, scheme, format), base_url, rate_limits, oauth_scopes, async_jobs, data_policy, "
+         "mcp{maintainer, remote_url, repo, tools, covers_full_api} plus derived mcp.kind (vendor-hosted/official/community/none) "
+         "and mcp.domain_verified.",
          "", "## Data", "",
          f"- [Full catalog (JSON)]({RAW}catalog/all.json): all entries in one array",
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
@@ -404,7 +475,8 @@ def llms_full(cats, items):
          "# format: [tags] name | what it does | auth (hint) | mcp | free tier | docs",
          "# tags: [FREE] lasting free tier or free usage, [TRIAL] one-off free trial credits, "
          "[NO-KEY] callable without any credential, [MCP] official MCP server",
-         "# proof: public ratings and usage (SourceForge rating/reviews, GitHub stars, Smithery uses), date = when fetched", ""]
+         "# proof: public ratings and usage (SourceForge rating/reviews, GitHub stars, Smithery uses), date = when fetched",
+         "# base url, free plan, rate limits, data policy, async jobs, oauth scopes: researched on vendor pages; sources in the JSON", ""]
     for c in cats:
         rows = [e for e in items if e["category"] == c["id"]]
         o.append(f"## {c['en']} [{c['id']}]")
@@ -417,8 +489,9 @@ def llms_full(cats, items):
                                                 ("[MCP]", m.get("type") == "official")) if on)
             proof = proof_items(e)
             proof = f" | proof: {'; '.join(l for l, _, _ in proof)} (fetched {stamp(proof[0][2])})" if proof else ""
+            extra = "".join(f" | {label.lower()}: {text}" for label, text, _ in details_items(e) if label != "MCP tools")
             o.append(f"- {tags + ' ' if tags else ''}{e['name']} | {e['desc_en']} | auth:{e['auth']}{hint} | {mcp} | "
-                     f"{e.get('free_tier') or '?'} | {e['docs']}{proof}{note}")
+                     f"{e.get('free_tier') or '?'} | {e['docs']}{extra}{proof}{note}")
         o.append("")
     return "\n".join(o)
 
@@ -458,6 +531,7 @@ code{background:var(--soft);padding:1px 4px;border-radius:2px;font-size:13px}
 .filter input[type=search]{flex:1;min-width:200px;padding:6px 8px;border:1px solid var(--border);background:var(--page);color:var(--text);border-radius:2px;font-size:14px}
 .cat-desc{font-style:italic;color:var(--muted)}
 .refs{font-size:13px}
+.det{font-size:13px;min-width:260px}
 .proof{color:var(--muted);white-space:nowrap}.proof time{font-size:11px}.proof-note{color:var(--muted);font-size:13px}
 footer{color:var(--muted);font-size:12px;margin-top:2em;border-top:1px solid var(--soft);padding-top:8px}
 @media (max-width:720px){.infobox{float:none;width:100%;margin:0 0 1em}.toc ol ol{columns:1}.tabs a{margin:0 12px 0 0}}
@@ -612,7 +686,7 @@ def category_page(c, rows, cats):
          f"instead of parsing this page. Last verified {VERIFIED}.</p>",
          ratings_note("en"),
          '<div class="tw"><table class="wikitable"><thead><tr><th>Service</th><th>What an agent can do</th><th>Auth</th>'
-         '<th>MCP server</th><th>Free tier</th><th>Notes</th><th>Proof (ratings, usage)</th></tr></thead><tbody>']
+         '<th>MCP server</th><th>Free tier</th><th>Details (with sources)</th><th>Notes</th><th>Proof (ratings, usage)</th></tr></thead><tbody>']
     for e in rows:
         m = e.get("mcp") or {}
         mcp = {"official": "official", "community": "community"}.get(m.get("type"), "—")
@@ -620,8 +694,8 @@ def category_page(c, rows, cats):
             mcp = f'<a href="{e_(m["url"])}">{mcp}</a>'
         auth = e_(t["auth"].get(e["auth"], e["auth"])) + (f'<br><code>{e_(e["auth_hint"])}</code>' if e.get("auth_hint") else "")
         o.append(f'<tr id="{e["id"]}"><td><a href="{e_(e["docs"])}"><b>{e_(e["name"])}</b></a></td><td>{e_(e["desc_en"])}</td>'
-                 f'<td>{auth}</td><td class="c">{mcp}</td><td>{e_(e.get("free_tier") or "")}</td><td>{e_(e.get("notes") or "")}</td>'
-                 f'<td>{proof_html(e).removeprefix("<br>") or "—"}</td></tr>')
+                 f'<td>{auth}</td><td class="c">{mcp}</td><td>{e_(e.get("free_tier") or "")}</td><td class="det">{details_html(e)}</td>'
+                 f'<td>{e_(e.get("notes") or "")}</td><td>{proof_html(e).removeprefix("<br>") or "—"}</td></tr>')
     o.append("</tbody></table></div>")
     o.append("<h2>Other categories</h2><ul>" + "".join(
         f'<li><a href="../{x["id"]}/">{e_(x["en"])}</a></li>' for x in cats if x["id"] != c["id"]) + "</ul>")
@@ -667,6 +741,7 @@ def main():
         x = {k: v for k, v in e.items() if k != "desc_pl"}
         # Derived fields agents asked for in the discovery interviews.
         x["no_auth"] = e["auth"] == "none"
+        x["mcp"] = mcp_details(e)
         x["has_free_tier"] = is_free(e)
         x["has_trial"] = is_trial(e)
         x["stale"] = bool(e.get("verified")) and (today - date.fromisoformat(e["verified"])).days > STALE_DAYS

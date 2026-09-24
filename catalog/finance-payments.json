@@ -14,7 +14,9 @@
    "auth_hint": "X-API-Key header (or client-key for client-side)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "paid only; requires a signed merchant contract, pay per-transaction",
    "sdk": [
@@ -69,7 +71,9 @@
    "auth_hint": "APCA-API-KEY-ID + APCA-API-SECRET-KEY headers",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free paper trading (unlimited); free basic (IEX) market data feed",
    "sdk": [
@@ -100,7 +104,9 @@
    "auth_hint": "apikey query param",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: 25 requests/day",
    "sdk": [],
@@ -127,7 +133,9 @@
    "auth_hint": "CDP API Key ID/Secret, JWT-signed bearer requests",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free CDP API access (usage-based fees on some onchain services); x402 is pay-per-request, not a subscription",
    "sdk": [
@@ -167,7 +175,9 @@
    "auth_hint": "x-cg-demo-api-key or x-cg-pro-api-key header; keyless via the free MCP endpoint",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.api.coingecko.com/mcp"
+    "url": "https://mcp.api.coingecko.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free Demo API plan (~10k calls/month, 30 calls/min); keyless free MCP with shared rate limits",
    "sdk": [],
@@ -205,7 +215,9 @@
    "auth_hint": "Header X-CMC_PRO_API_KEY: <API_KEY> (keyless public API under https://pro-api.coinmarketcap.com/public-api/... needs no key; MCP uses header X-CMC-MCP-API-KEY)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.coinmarketcap.com/mcp"
+    "url": "https://mcp.coinmarketcap.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "Free Basic plan: 15,000 credits/month, 50 requests/min, 1 API key, commercial use allowed; plus a keyless public API with lower rate limits",
    "sdk": [
@@ -231,7 +243,9 @@
    "auth_hint": "No key needed on https://api.dexpaprika.com; optional free key sent as the whole header value: Authorization: <API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.dexpaprika.com/streamable-http"
+    "url": "https://mcp.dexpaprika.com/streamable-http",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "No key; 30,000 credits per rolling 30 days per IP at 15 requests/min. Free registered key: 100,000 credits/30 days at 30 requests/min, no card",
    "sdk": [
@@ -259,7 +273,9 @@
    "auth_hint": "apikey query param",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: 250 requests/day (limited endpoints)",
    "sdk": [],
@@ -296,7 +312,9 @@
    "auth_hint": "Authorization: Bearer <ACCESS_TOKEN> (test or production access token from Your integrations; OAuth for acting on behalf of sellers)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.mercadopago.com/mcp"
+    "url": "https://mcp.mercadopago.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "Free to integrate: no API or monthly fees, only per-transaction commissions; free test credentials and test users for sandbox payments",
    "sdk": [
@@ -327,7 +345,9 @@
    "auth_hint": "app_id query param",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: 1,000 requests/month, USD base only, hourly updates",
    "sdk": [],
@@ -354,7 +374,9 @@
    "auth_hint": "OAuth2 client-credentials Bearer token; MCP also supports an access-token env var",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.paypal.com"
+    "url": "https://mcp.paypal.com",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free to integrate; pay per-transaction fees only; sandbox for testing",
    "sdk": [
@@ -404,7 +426,9 @@
    "auth_hint": "PLAID-CLIENT-ID + PLAID-SECRET headers",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free Sandbox/Development access; Production requires approval and has per-item pricing",
    "sdk": [
@@ -458,7 +482,9 @@
    "auth_hint": "Authorization: Bearer <api_key> or apiKey query param",
    "mcp": {
     "type": "official",
-    "url": "https://massive.com/docs"
+    "url": "https://massive.com/docs",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier available (delayed data, limited calls/min); paid plans for real-time",
    "sdk": [
@@ -490,7 +516,9 @@
    "auth_hint": "Authorization: Bearer <access_token> (personal token or OAuth2)",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free to integrate; pay per-transaction processing fees; free Sandbox for testing",
    "sdk": [
@@ -537,7 +565,9 @@
    "auth_hint": "Authorization: Bearer <secret_key> (or OAuth/Agent key for MCP)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.stripe.com"
+    "url": "https://mcp.stripe.com",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free to integrate; pay per-transaction fees only, no monthly fee",
    "sdk": [
@@ -590,7 +620,9 @@
    "auth_hint": "Authorization: Bearer <API token> (personal) or OAuth2 (Wise Platform partners)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free API access; normal Wise transfer fees apply per transaction; sandbox available",
    "sdk": [],

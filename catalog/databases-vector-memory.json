@@ -14,7 +14,9 @@
    "auth_hint": "Authorization: Bearer <API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.agentset.ai/production/mcp-server"
+    "url": "https://docs.agentset.ai/production/mcp-server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "Free plan (forever): 1,000 pages ingested and 10,000 retrievals per month, 60 requests/min per namespace",
    "sdk": [
@@ -40,7 +42,9 @@
    "auth_hint": "x-chroma-token or Authorization header",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/chroma-core/chroma-mcp"
+    "url": "https://github.com/chroma-core/chroma-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "freemium: ~1M embeddings plus free credits, no card for signup",
    "sdk": [
@@ -83,7 +87,9 @@
    "auth_hint": "Basic auth with Cloud API key id/secret",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/ClickHouse/mcp-clickhouse"
+    "url": "https://github.com/ClickHouse/mcp-clickhouse",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "no permanent free tier; 30-day trial with $300 credits",
    "sdk": [
@@ -128,7 +134,9 @@
    "auth_hint": "deploy key / admin key",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/get-convex/convex-backend"
+    "url": "https://github.com/get-convex/convex-backend",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "generous free tier for small apps, zero cost/maintenance",
    "sdk": [
@@ -172,7 +180,9 @@
    "auth_hint": "OAuth2/IAM (Google Cloud service account or user credentials)",
    "mcp": {
     "type": "official",
-    "url": "https://bigquery.googleapis.com/mcp"
+    "url": "https://bigquery.googleapis.com/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free tier: 1TB queries/mo, 10GB storage/mo",
    "sdk": [
@@ -213,7 +223,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://api.letta.com/mcp"
+    "url": "https://api.letta.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free personal tier with rotating free models; usage-based billing beyond that",
    "sdk": [
@@ -244,7 +256,9 @@
    "auth_hint": "Authorization: Token <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.mem0.ai/mcp/"
+    "url": "https://mcp.mem0.ai/mcp/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free (Hobby) tier: 10K add requests, 1K retrievals/mo, 1 project",
    "sdk": [
@@ -275,7 +289,9 @@
    "auth_hint": "HTTP Digest auth with Atlas public/private API key, or OAuth2 service account",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/mongodb-js/mongodb-mcp-server"
+    "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: M0 cluster free forever (512MB)",
    "sdk": [
@@ -330,7 +346,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/neondatabase/mcp-server-neon"
+    "url": "https://github.com/neondatabase/mcp-server-neon",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: 1 project, 0.5GB storage",
    "sdk": [],
@@ -372,7 +390,9 @@
    "auth_hint": "Api-Key header",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/pinecone-io/pinecone-mcp"
+    "url": "https://github.com/pinecone-io/pinecone-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier (Starter plan, limited pods/reads)",
    "sdk": [
@@ -418,7 +438,9 @@
    "auth_hint": "Service token or OAuth (for MCP)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.pscale.dev/mcp/planetscale"
+    "url": "https://mcp.pscale.dev/mcp/planetscale",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free tier available (Hobby plan)",
    "sdk": [
@@ -457,7 +479,9 @@
    "auth_hint": "api-key header",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/qdrant/mcp-server-qdrant"
+    "url": "https://github.com/qdrant/mcp-server-qdrant",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: 1GB disk / 1 node cluster, no card; suspends after 1 week idle",
    "sdk": [
@@ -502,7 +526,9 @@
    "auth_hint": "Key-pair auth, OAuth, or PAT; cloud_iam variants for Snowpark",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/Snowflake-Labs/mcp"
+    "url": "https://github.com/Snowflake-Labs/mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "trial credits (no permanent free tier); check pricing",
    "sdk": [
@@ -555,7 +581,9 @@
    "auth_hint": "apikey header + Authorization: Bearer <service_role or PAT>",
    "mcp": {
     "type": "official",
-    "url": "https://supabase.com/docs/guides/getting-started/mcp"
+    "url": "https://supabase.com/docs/guides/getting-started/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 2 projects, 500MB DB, 5GB bandwidth",
    "sdk": [
@@ -596,7 +624,9 @@
    "auth_hint": "HTTP Digest auth with API public key as username and private key as password (Management API); SQL via MySQL connection string or serverless HTTP driver with cluster user/password",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/pingcap/pytidb"
+    "url": "https://github.com/pingcap/pytidb",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "Free: up to 5 Starter instances per org, 25 GiB row storage + 25 GiB columnar storage + 250M Request Units per month in total; no credit card",
    "sdk": [
@@ -622,7 +652,9 @@
    "auth_hint": "Authorization: Bearer <TINYBIRD_TOKEN> (workspace admin, resource-scoped token or JWT)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN"
+    "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "Free plan: 10 GB storage, 1,000 API requests/day, 0.25 vCPU shared; no credit card",
    "sdk": [
@@ -648,7 +680,9 @@
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: 100 databases, 500M row reads/mo, no card required",
    "sdk": [
@@ -680,7 +714,9 @@
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.upstash.com/mcp"
+    "url": "https://mcp.upstash.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: Redis 256MB/500K cmds/mo; Vector 10K vectors",
    "sdk": [
@@ -712,7 +748,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/weaviate/mcp-server-weaviate"
+    "url": "https://github.com/weaviate/mcp-server-weaviate",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free 14-day Sandbox, ~50K objects, no card required (expires, not for persistence)",
    "sdk": [
@@ -757,7 +795,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://help.getzep.com/memory-mcp-server"
+    "url": "https://help.getzep.com/memory-mcp-server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "check pricing",
    "sdk": [
@@ -788,7 +828,9 @@
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/zilliztech/zilliz-mcp-server"
+    "url": "https://github.com/zilliztech/zilliz-mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: serverless cluster, 5GB storage + $100 credits, no card",
    "sdk": [

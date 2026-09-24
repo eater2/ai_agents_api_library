@@ -14,7 +14,9 @@
    "auth_hint": "AWS SigV4 (IAM credentials) via AWS SDK/CLI",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: 2M characters/month for 12 months (new AWS accounts)",
    "sdk": [
@@ -57,7 +59,9 @@
    "auth_hint": "Ocp-Apim-Subscription-Key header (+ Ocp-Apim-Subscription-Region)",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier (F0): 2,000,000 characters/month",
    "sdk": [
@@ -90,7 +94,9 @@
    "auth_hint": "Authorization: DeepL-Auth-Key <key>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/DeepL/deepl-mcp-server"
+    "url": "https://github.com/DeepL/deepl-mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "API Free plan retired mid-2026 for new signups; now Developer/Growth paid plans with trial credits",
    "sdk": [
@@ -146,7 +152,9 @@
    "auth_hint": "OAuth2/IAM (GCP service account), or a simple API key for the Basic v2 edition",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: 500,000 characters/month (permanent, not a trial)",
    "sdk": [
@@ -181,7 +189,9 @@
    "auth_hint": "username + api_key query params (Premium); anonymous on the free public endpoint",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key needed on public endpoint (rate-limited: 20 req/min, 75,000 chars/min)",
    "sdk": [],
@@ -219,7 +229,9 @@
    "auth_hint": "MMT-ApiKey header",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free trial (no credit card); no permanent free tier, paid plans from $8/M characters",
    "sdk": [

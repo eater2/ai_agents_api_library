@@ -14,7 +14,9 @@
    "auth_hint": "x-api-key: <api_key> (or Client ID/Secret to obtain a token, then Authorization: Bearer <token>)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free Basic plan with limited credits, no card required",
    "sdk": [],
@@ -41,7 +43,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free trial, 50 API credits",
    "sdk": [],
@@ -68,7 +72,9 @@
    "auth_hint": "Authorization: Basic <api_key> (generated from Account page)",
    "mcp": {
     "type": "official",
-    "url": "https://docs.d-id.com/mcp"
+    "url": "https://docs.d-id.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "14-day trial with 3 minutes of video credits, then paid only (~$5.90/min API)",
    "sdk": [],
@@ -96,7 +102,9 @@
    "auth_hint": "Gemini API: x-goog-api-key header or ?key= param. Vertex AI alternative uses cloud_iam (service-account OAuth2 access token).",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "no free tier for video; Veo generation requires a paid Gemini API / Vertex AI billing account",
    "sdk": [
@@ -128,7 +136,9 @@
    "auth_hint": "API key: X-Api-Key: <key> (bills to API plan). OAuth2: Authorization: Bearer <token> via https://api2.heygen.com/v1/oauth/token (bills to user's subscription credits).",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.heygen.com/mcp/v1/"
+    "url": "https://mcp.heygen.com/mcp/v1/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "no free API credits since Feb 2026; pay-as-you-go from $5, $0.50-$0.99/credit. Free plan (3 videos/mo) exists but is for the web app, not standalone API.",
    "sdk": [
@@ -170,7 +180,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing (no free API tier found; consumer plans from $14/mo, API is usage-based)",
    "sdk": [],
@@ -197,7 +209,9 @@
    "auth_hint": "Authorization: Bearer <JWT> - JWT signed (HS256) client-side from an Access Key/Secret Key pair issued in the Kling Open Platform console",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/199-mcp/mcp-kling"
+    "url": "https://github.com/199-mcp/mcp-kling",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "paid only; prepaid credit packages from $0.14/unit, e.g. 5,000 units/$700, 180-day validity",
    "sdk": [],
@@ -237,7 +251,9 @@
    "auth_hint": "Authorization: Bearer <API_KEY> (key from platform.lumalabs.ai)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/lumalabs/luma-api-mcp"
+    "url": "https://github.com/lumalabs/luma-api-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "paid only; pay-as-you-go, ~$0.60-$1.05 per 5s clip (Ray 2), $5,000/mo cap on default Build tier",
    "sdk": [
@@ -279,7 +295,9 @@
    "auth_hint": "Authorization: Bearer <API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/MiniMax-AI/MiniMax-MCP"
+    "url": "https://github.com/MiniMax-AI/MiniMax-MCP",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "new accounts get 50 signup credits (~1 short clip); 5s video costs ~45-70 credits, 1000 credits=$1",
    "sdk": [
@@ -322,7 +340,9 @@
    "auth_hint": "HTTP Basic auth: <token_id>:<token_secret>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.mux.com"
+    "url": "https://mcp.mux.com",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
    "sdk": [
@@ -356,7 +376,9 @@
    "auth_hint": "API key from platform.pixverse.ai, sent as bearer/header per docs",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/PixVerseAI/PixVerse-MCP"
+    "url": "https://github.com/PixVerseAI/PixVerse-MCP",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "paid only; prepaid credits from $10, ~$0.28-$0.45 per 5s clip",
    "sdk": [],
@@ -396,7 +418,9 @@
    "auth_hint": "Authorization: Bearer <API_KEY> plus required X-Runway-Version header",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.runwayml.com/mcp"
+    "url": "https://mcp.runwayml.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "no free tier; $10 minimum credit top-up, $0.01/credit",
    "sdk": [
@@ -427,7 +451,9 @@
    "auth_hint": "x-api-key: <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.shotstack.io/"
+    "url": "https://mcp.shotstack.io/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "10 free credits (valid 30 days), then pay-as-you-go or subscription",
    "sdk": [],
@@ -455,7 +481,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing (no permanent free API tier; paid plans include API minutes)",
    "sdk": [],
@@ -492,7 +520,9 @@
    "auth_hint": "x-api-key: <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.tavus.io/mcp"
+    "url": "https://mcp.tavus.io/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "check pricing",
    "sdk": [

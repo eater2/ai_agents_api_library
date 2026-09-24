@@ -14,7 +14,9 @@
    "auth_hint": "Authorization: Bearer <api_token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "paid only - API tokens require an active paid team plan",
    "sdk": [],
@@ -41,7 +43,9 @@
    "auth_hint": "API key based; OpenAPI 3.1 spec published at api.icepanel.io",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: 10,000 read requests/mo, 1,000 write requests/mo, 5 import/export requests/mo",
    "sdk": [],
@@ -80,7 +84,9 @@
    "auth_hint": "",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free, no key; public hosted instance at kroki.io sponsored by Exoscale (no SLA)",
    "sdk": [],
@@ -107,7 +113,9 @@
    "auth_hint": "Authorization: Bearer <api_key> or OAuth 2.0 access token",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing",
    "sdk": [],
@@ -134,7 +142,9 @@
    "auth_hint": "API token from account settings; MCP tools use bearer-style auth",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.mermaid.ai/mcp"
+    "url": "https://mcp.mermaid.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "unauthenticated MCP validate/render tools are free; saving to a Mermaid Chart account needs a token, check pricing for limits",
    "sdk": [],
@@ -163,7 +173,9 @@
    "auth_hint": "Authorization: Bearer <access_token> (OAuth 2.0 authorization code flow, or OAuth 2.1 for MCP)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.miro.com/"
+    "url": "https://mcp.miro.com/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan allows up to 3 editable team boards; MCP server available on all plans including free",
    "sdk": [],
@@ -192,7 +204,9 @@
    "auth_hint": "Authorization: Bearer <api_token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "included on every plan; any account can create a token and call the API, limited by credits",
    "sdk": [],
@@ -219,7 +233,9 @@
    "auth_hint": "",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free, no key; public hosted server at plantuml.com/plantuml",
    "sdk": [],
@@ -246,7 +262,9 @@
    "auth_hint": "X-Authorization header: apiKey:base64(HMAC-SHA256(apiSecret, digest)) plus Nonce header",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: workspaces up to 0.5MB; paid plans raise the limit to 5MB",
    "sdk": [

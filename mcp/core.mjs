@@ -132,6 +132,8 @@ const summary = (e) => ({
   has_free_tier: e.has_free_tier,
   has_trial: e.has_trial,
   docs: e.docs,
+  free_plan: e.free_plan, // structured: kind, requires_card, quota, period, source_url
+  base_url: e.base_url,
   ratings: e.ratings, // proof of use: SourceForge rating/reviews, GitHub stars, Smithery uses (with url, fetched_at)
 });
 
@@ -179,20 +181,24 @@ export function createServer() {
       inputSchema: {
         query: z.string().optional().describe("What you need, e.g. 'text to video', 'geocoding', 'send sms'"),
         category: z.string().optional().describe("Category id from list_categories, e.g. 'video-generation'"),
-        mcp: z.enum(["official", "any"]).optional().describe("Only services with an official MCP server, or any MCP server"),
+        mcp: z.enum(["official", "remote", "any"]).optional()
+          .describe("official: MCP server by the vendor; remote: hosted MCP endpoint (no install); any: any MCP server"),
         no_auth: z.boolean().optional().describe("Only services usable without any key"),
         free_tier: z.boolean().optional().describe("Only services with a free tier or free usage"),
+        no_card: z.boolean().optional().describe("Only services whose free plan needs no payment card (or no account at all)"),
         auth: z.enum(["api_key", "oauth2", "api_key+oauth2", "none", "cloud_iam"]).optional(),
         limit: z.number().int().min(1).max(50).optional().describe("Max results, default 10"),
       },
     },
-    async ({ query, category, mcp, no_auth, free_tier, auth, limit = 10 }) => {
+    async ({ query, category, mcp, no_auth, free_tier, no_card, auth, limit = 10 }) => {
       const terms = words(query);
       const hits = catalog
         .filter((e) => !category || e.category === category)
-        .filter((e) => !mcp || (mcp === "official" ? e.mcp?.type === "official" : e.mcp?.type !== "none"))
+        .filter((e) => !mcp || (mcp === "official" ? e.mcp?.type === "official"
+          : mcp === "remote" ? Boolean(e.mcp?.remote_url || e.mcp?.kind === "vendor-hosted") : e.mcp?.type !== "none"))
         .filter((e) => no_auth === undefined || e.no_auth === no_auth)
         .filter((e) => !free_tier || e.has_free_tier)
+        .filter((e) => !no_card || e.no_auth || (e.has_free_tier && e.free_plan?.requires_card === false))
         .filter((e) => !auth || e.auth === auth)
         .map((e) => [score(e, terms), e])
         .filter(([s]) => s > 0)

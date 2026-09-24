@@ -14,7 +14,9 @@
    "auth_hint": "Authorization: Bearer <access_token> obtained via OAuth Server-to-Server client_credentials grant (client_id/client_secret)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: 500 document transactions/month, no credit card required",
    "sdk": [
@@ -46,7 +48,9 @@
    "auth_hint": "AWS SigV4-signed requests using IAM access key/secret or role credentials",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/ag2-mcp-servers/amazon-textract"
+    "url": "https://github.com/ag2-mcp-servers/amazon-textract",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: 1,000 pages/month (DetectDocumentText & AnalyzeDocument, each) for first 3 months; AnalyzeExpense/AnalyzeID get 150 pages/month free",
    "sdk": [
@@ -94,7 +98,9 @@
    "auth_hint": "Ocp-Apim-Subscription-Key: <key> header (Azure AD/Entra ID Bearer token also supported)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: F0 pricing tier, 500 pages/month, rate-limited",
    "sdk": [
@@ -126,7 +132,9 @@
    "auth_hint": "Authorization: Bearer <API_KEY> (OAuth2 authorization-code/implicit flow also supported for user-facing apps)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.cloudconvert.com"
+    "url": "https://mcp.cloudconvert.com",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free: 25 conversion minutes/day for the web tool; paid credit packages for the API; free Sandbox API for unlimited test jobs without consuming credits",
    "sdk": [
@@ -172,7 +180,9 @@
    "auth_hint": "Authorization: Bearer <access_token> via OAuth2 Authorization Code grant or JWT Grant",
    "mcp": {
     "type": "official",
-    "url": "https://developers.docusign.com/platform/mcp-server/"
+    "url": "https://developers.docusign.com/platform/mcp-server/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free developer/demo sandbox account (account-d.docusign.com) with unlimited test envelopes; production use requires a paid DocuSign plan",
    "sdk": [
@@ -220,7 +230,9 @@
    "auth_hint": "X-API-KEY: <key> (OAuth 2.0 Bearer tokens also accepted on the same endpoints)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.gamma.app/mcp"
+    "url": "https://mcp.gamma.app/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "paid only: requires Pro, Ultra, Teams, or Business plan; no free API tier",
    "sdk": [],
@@ -249,7 +261,9 @@
    "auth_hint": "Authorization: Bearer <OAuth2 access token> (service account) or API key for some endpoints",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: 1,000 pages/month per processor type, then $0.65-$10 per 1,000 pages",
    "sdk": [
@@ -286,7 +300,9 @@
    "auth_hint": "Authorization: Bearer <OAuth2 token>; scopes e.g. https://www.googleapis.com/auth/presentations",
    "mcp": {
     "type": "official",
-    "url": "https://slidesmcp.googleapis.com/mcp"
+    "url": "https://slidesmcp.googleapis.com/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free, no key (standard Google API usage quotas apply; requires GCP project + OAuth consent)",
    "sdk": [
@@ -320,7 +336,9 @@
    "auth_hint": "Authorization: Bearer <LLAMA_CLOUD_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.llamaindex.ai/mcp"
+    "url": "https://mcp.llamaindex.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "check pricing: credit-based at $1.25/1,000 credits (1-45+ credits/page depending on tier); 48h parse cache is free to re-query",
    "sdk": [
@@ -354,7 +372,9 @@
    "auth_hint": "Authorization: Bearer <MISTRAL_API_KEY>",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/D-Diaa/mistral-ocr-mcp"
+    "url": "https://github.com/D-Diaa/mistral-ocr-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "paid only: $4/1,000 pages (OCR), $5/1,000 pages (Document AI); 50% off via Batch API; no free tier confirmed",
    "sdk": [
@@ -398,7 +418,9 @@
    "auth_hint": "x-api-key: <API_KEY> header",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "trial credits: 10,000 credits for 1 month, no credit card required",
    "sdk": [],
@@ -426,7 +448,9 @@
    "auth_hint": "Authorization: Bearer <REDUCTO_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.reducto.ai/mcp-server"
+    "url": "https://docs.reducto.ai/mcp-server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "15,000 free credits (~$150 value) for new Standard accounts; extra credits via Startup Program for qualifying early-stage teams",
    "sdk": [
@@ -460,7 +484,9 @@
    "auth_hint": "X-API-Key: <key>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/SlideSpeak/slidespeak-mcp"
+    "url": "https://github.com/SlideSpeak/slidespeak-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "check pricing (no free tier confirmed on docs; requires API key from developer settings)",
    "sdk": [],
@@ -508,7 +534,9 @@
    "auth_hint": "unstructured-api-key: <key> (verify exact header on api-reference page)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/Unstructured-IO/UNS-MCP"
+    "url": "https://github.com/Unstructured-IO/UNS-MCP",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "check pricing: low-cost entry tier plus Pay-As-You-Go per-page billing; no explicit free quota confirmed",
    "sdk": [

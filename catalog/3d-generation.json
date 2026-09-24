@@ -14,7 +14,9 @@
    "auth_hint": "API key created from Cube webapp user profile, sent as bearer/header token",
    "mcp": {
     "type": "community",
-    "url": "https://lobehub.com/mcp/commonsensemachines-blender-mcp"
+    "url": "https://lobehub.com/mcp/commonsensemachines-blender-mcp",
+    "domain_verified": false,
+    "kind": "community"
    },
    "free_tier": "limited free tier (watermarked outputs); full API access is bundled with mid-tier ($19.99+/mo) or higher Cube subscriptions",
    "sdk": [],
@@ -43,7 +45,9 @@
    "auth_hint": "API key from API dashboard, sent via Authorization header (exact header name in docs)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "10 starter credits on signup (spent only on downloads, not generation); paid credits $1.5 each",
    "sdk": [],
@@ -70,7 +74,9 @@
    "auth_hint": "Authorization: Bearer <msy-...>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/meshy-dev/meshy-mcp-server"
+    "url": "https://github.com/meshy-dev/meshy-mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free web plan: 100 credits/mo; API key creation requires a paid plan (Pro $20/mo+)",
    "sdk": [],
@@ -112,7 +118,9 @@
    "auth_hint": "X-API-Key header (personal token) or OAuth2 login; legacy v2 token-in-header also exists but is deprecated",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/gregkop/sketchfab-mcp-server"
+    "url": "https://github.com/gregkop/sketchfab-mcp-server",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key needed for public search; private API token is free with any Sketchfab account",
    "sdk": [],
@@ -152,7 +160,9 @@
    "auth_hint": "Authorization: Bearer <key>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "25 free credits on signup, then pay-as-you-go (Stable Fast 3D costs 10 credits ~ $0.10/generation)",
    "sdk": [],
@@ -179,7 +189,9 @@
    "auth_hint": "Tencent Cloud SecretId/SecretKey, TC3-HMAC-SHA256 signed requests via the Tencent Cloud API/SDK",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "pay-as-you-go from ~$0.02/generation; some enterprise sign-ups get bundled free credits",
    "sdk": [],
@@ -206,7 +218,9 @@
    "auth_hint": "Authorization: Bearer <tsk-...>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/VAST-AI-Research/tripo-mcp"
+    "url": "https://github.com/VAST-AI-Research/tripo-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free/trial credits on signup (amounts and promos change, e.g. ~300 credits/2 weeks); pay-as-you-go at $0.01/credit",
    "sdk": [],

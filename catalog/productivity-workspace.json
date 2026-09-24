@@ -14,7 +14,9 @@
    "auth_hint": "Authorization: Bearer <personal access token>",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/domdomegg/airtable-mcp-server"
+    "url": "https://github.com/domdomegg/airtable-mcp-server",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: API access on Free plan, ~5 req/sec per base",
    "sdk": [
@@ -70,7 +72,9 @@
    "auth_hint": "Authorization: Bearer <personal access token or OAuth2 token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: API included on Personal (free) plan, rate limited",
    "sdk": [
@@ -120,7 +124,9 @@
    "auth_hint": "Authorization: Bearer <OAuth2 token> (or basic auth with API token for Cloud REST)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.atlassian.com/v1/mcp/authv2"
+    "url": "https://mcp.atlassian.com/v1/mcp/authv2",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: available on Free Jira/Confluence plans; rate limits vary by plan",
    "sdk": [
@@ -153,7 +159,9 @@
    "auth_hint": "Authorization: Bearer <access_token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing (Box API generally requires a paid Box account for meaningful use)",
    "sdk": [
@@ -185,7 +193,9 @@
    "auth_hint": "Authorization: Bearer <API key>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: API included on Free plan, 120 req/min (higher limits on request)",
    "sdk": [
@@ -215,7 +225,9 @@
    "auth_hint": "Authorization: Bearer <personal access token or OAuth2 token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing (personal access tokens available for own-account use; broader API access varies by plan)",
    "sdk": [],
@@ -258,7 +270,9 @@
    "auth_hint": "Authorization: <personal API token> (no Bearer prefix) or OAuth2 token",
    "mcp": {
     "type": "official",
-    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server"
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: API access included on Free Forever plan",
    "sdk": [],
@@ -302,7 +316,9 @@
    "auth_hint": "Authorization: Bearer <API token>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.superhuman.com/developers/apis/v1"
+    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free, included for all users on both free and paid workspaces",
    "sdk": [],
@@ -330,7 +346,9 @@
    "auth_hint": "Authorization: Bearer <access_token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: API access included on Basic (free) plan, rate limited",
    "sdk": [
@@ -371,7 +389,9 @@
    "auth_hint": "Authorization: Bearer <OAuth2 token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free (subject to per-API daily quotas)",
    "sdk": [
@@ -403,7 +423,9 @@
    "auth_hint": "Authorization: Bearer <API key or OAuth2 token>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.linear.app/mcp"
+    "url": "https://mcp.linear.app/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: API access included on Free plan (rate limited)",
    "sdk": [
@@ -449,7 +471,9 @@
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free with a Microsoft 365/Entra ID tenant (free dev tenant via Microsoft 365 Developer Program)",
    "sdk": [
@@ -482,7 +506,9 @@
    "auth_hint": "Authorization: <personal API token or OAuth2 token>",
    "mcp": {
     "type": "official",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: GraphQL API included on Free plan (rate limited)",
    "sdk": [
@@ -521,7 +547,9 @@
    "auth_hint": "REST: 'xc-token: <API_TOKEN>' header; MCP: 'x-api-key: <MCP_TOKEN>' header or OAuth sign-in",
    "mcp": {
     "type": "official",
-    "url": "https://app.nocodb.com/mcp"
+    "url": "https://app.nocodb.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "Free plan: 1,000 records, 1 GB storage, 1,000 API calls/month, 3 editors, 100 automation runs; no credit card",
    "sdk": [],
@@ -544,7 +572,9 @@
    "auth_hint": "Authorization: Bearer <integration token or OAuth2 token>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.notion.com/mcp"
+    "url": "https://mcp.notion.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free, API access included on all plans (rate limit ~3 req/sec)",
    "sdk": [
@@ -592,7 +622,9 @@
    "auth_hint": "Authorization: Bearer <API token or OAuth2 token>",
    "mcp": {
     "type": "official",
-    "url": "https://ai.todoist.net/mcp"
+    "url": "https://ai.todoist.net/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free to use; some features gated by the user's Todoist plan",
    "sdk": [
@@ -633,7 +665,9 @@
    "auth_hint": "Authorization: Bearer <access_token> (or legacy key+token query params)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free, no key needed to register an app; usage is rate limited",
    "sdk": [],

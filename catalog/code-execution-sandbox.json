@@ -14,7 +14,9 @@
    "auth_hint": "Cloudflare API token to deploy the Worker; the sandbox itself is reached through your own deployed Worker route",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "requires Workers Paid plan ($5/mo) for Containers; no free tier for container-backed sandboxes",
    "sdk": [
@@ -43,7 +45,9 @@
    "auth_hint": "CSB_API_KEY env var, passed to the CodeSandbox() SDK constructor",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "Free plan: 400 VM credits/mo (~40 Nano-VM hrs), up to 10 concurrent VMs",
    "sdk": [
@@ -72,7 +76,9 @@
    "auth_hint": "Authorization: Bearer <DAYTONA_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://www.daytona.io/docs/en/mcp/"
+    "url": "https://www.daytona.io/docs/en/mcp/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "$200 free compute credit + 5GB storage, no credit card required",
    "sdk": [
@@ -104,7 +110,9 @@
    "auth_hint": "E2B_API_KEY env var / Authorization Bearer or X-API-Key header",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/e2b-dev/mcp-server"
+    "url": "https://github.com/e2b-dev/mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free Hobby tier with limited sandbox hours, then pay-as-you-go",
    "sdk": [
@@ -148,7 +156,9 @@
    "auth_hint": "X-Auth-Token header (self-hosted, if enabled) or X-RapidAPI-Key (RapidAPI-hosted); can run with none if self-hosted unauthenticated",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "RapidAPI free Basic plan (rate-limited); self-host free & open-source (GPLv3)",
    "sdk": [],
@@ -175,7 +185,9 @@
    "auth_hint": "MODAL_TOKEN_ID + MODAL_TOKEN_SECRET (generated via `modal token new`)",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/milkymap/mcp4modal_sandbox"
+    "url": "https://github.com/milkymap/mcp4modal_sandbox",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "Starter plan: $0 base + $30/mo free credits",
    "sdk": [
@@ -219,7 +231,9 @@
    "auth_hint": "no key needed for the public instance (rate-limited)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free, no key, public instance rate-limited (~5 req/sec); self-host for unlimited/production use",
    "sdk": [],
@@ -258,7 +272,9 @@
    "auth_hint": "Authorization: Bearer <RIZA_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.riza.io/code-interpreter"
+    "url": "https://mcp.riza.io/code-interpreter",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free for side projects/low usage, then usage-based pricing",
    "sdk": [
@@ -292,7 +308,9 @@
    "auth_hint": "Authorization: Bearer <RUNLOOP_API_KEY> (auto-loaded from RUNLOOP_API_KEY env var)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "$50 free credits on signup, then usage-based ($0.108/CPU-hr, $0.0252/GB-hr)",
    "sdk": [
@@ -323,7 +341,9 @@
    "auth_hint": "VERCEL_OIDC_TOKEN (recommended, auto on Vercel) or VERCEL_TOKEN Bearer + team/project IDs",
    "mcp": {
     "type": "official",
-    "url": "https://vercel.com/docs/mcp"
+    "url": "https://vercel.com/docs/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "usage included on Hobby plan, otherwise usage-based on Pro/Enterprise",
    "sdk": [
