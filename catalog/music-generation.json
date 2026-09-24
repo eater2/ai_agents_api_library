@@ -54,8 +54,8 @@
    "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -165,8 +165,8 @@
    "notes": "Audio endpoint lives under the same platform.stability.ai API and credit system as Stability's image API; exact endpoint path not independently re-verified this pass.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

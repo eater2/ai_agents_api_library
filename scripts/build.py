@@ -172,8 +172,12 @@ def load():
 
 def is_free(e):
     f = (e.get("free_tier") or "").lower()
+    recurring = re.search(r"/(day|mo|month|year)\b|per (day|month)|monthly|daily|always free|perpetual", f)
     if f.startswith(("no key", "free")) or re.search(r"free [\w ]*/(day|mo|month)\b", f):
         return True
+    # One-off signup credits ("50 signup credits", "valid 30 days", "one-time") are a trial, not a free tier.
+    if not recurring and re.search(r"sign[- ]?up|on sign|one[- ]time|valid \d+ days|first \d+ days|after account verification", f):
+        return False
     if not f or f.startswith(("paid", "no ", "check pricing", "requires")):
         return False
     return not any(w in f for w in ("paid only", "no free", "no permanent free", "no confirmed free", "free plan retired", "trial"))
@@ -182,7 +186,8 @@ def is_free(e):
 def is_trial(e):
     """No lasting free tier, but one-off trial credits to test without paying."""
     f = (e.get("free_tier") or "").lower()
-    return not is_free(e) and "trial" in f and "no free-plan" not in f
+    one_off = re.search(r"trial|sign[- ]?up|on sign|one[- ]time|valid \d+ days|after account verification", f)
+    return not is_free(e) and bool(one_off) and "no free-plan" not in f
 
 
 def mcp_mark(e, fmt="md"):
