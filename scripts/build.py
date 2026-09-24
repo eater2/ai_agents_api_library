@@ -689,13 +689,15 @@ def main():
         write(f"catalog/{c['id']}.json", text)
         write(f"docs/c/{c['id']}/index.html", category_page(c, [e for e in items if e["category"] == c["id"]], cats))
     # Skill as a zip for uploading to claude.ai. Fixed timestamp and no compression keep it byte-identical
-    # across builds and platforms (zlib versions compress differently).
+    # across builds and platforms (zlib versions compress differently, create_system is OS-specific).
     skill_dir = ROOT / "skills" / "ai-agents-api-library"
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_STORED) as z:
         for f in sorted(skill_dir.rglob("*")):
             if f.is_file():
                 info = zipfile.ZipInfo(f"ai-agents-api-library/{f.relative_to(skill_dir).as_posix()}", (2026, 1, 1, 0, 0, 0))
+                info.create_system = 3  # Unix; Python's default depends on the OS the build runs on
+                info.external_attr = 0o644 << 16
                 z.writestr(info, f.read_bytes(), zipfile.ZIP_STORED)
     (ROOT / "docs" / "ai-agents-api-library-skill.zip").write_bytes(buf.getvalue())
     write("docs/.nojekyll", "")
