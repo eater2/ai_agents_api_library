@@ -7,6 +7,7 @@ Outputs: README.md, README.pl.md, llms.txt, llms-full.txt, catalog/*.json,
          docs/index.html, docs/pl/index.html, docs/catalog.json, docs/llms.txt,
          docs/robots.txt, docs/sitemap.xml
 """
+import base64
 import html
 import io
 import json
@@ -14,6 +15,7 @@ import zipfile
 import re
 from datetime import date
 from pathlib import Path
+from urllib.parse import quote
 
 REPO = "eater2/ai_agents_api_library"
 BRANCH = "main"
@@ -23,6 +25,20 @@ RAW = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/"
 GH = f"https://github.com/{REPO}"
 
 MCP_URL = "https://ai-agents-api-library.vercel.app/mcp"
+SMITHERY = "https://smithery.ai/servers/eater2/ai-agents-api-library"
+REGISTRY = "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.eater2/ai-agents-api-library"
+
+
+def badges():
+    """Listings as proof under the title: (alt, image, link). Smithery's own badge endpoint returns 500, so shields.io + its logo."""
+    sm = base64.b64encode((ROOT / "scripts/logos/smithery.svg").read_bytes()).decode()
+    sh = "https://img.shields.io/badge/"
+    return [
+        ("Official MCP Registry", sh + "MCP_Registry-io.github.eater2%2Fai--agents--api--library-0A66C2?logo=modelcontextprotocol&logoColor=white", REGISTRY),
+        ("Smithery", sh + "Smithery-eater2%2Fai--agents--api--library-FF5601?logo=data:image/svg%2bxml;base64," + quote(sm), SMITHERY),
+        ("Claude Code plugin", sh + "Claude_Code-plugin-D97757?logo=claude&logoColor=white", GH + "#claude-skill-and-plugin"),
+        ("Remote MCP endpoint", sh + "remote_MCP-no_key-000000?logo=vercel&logoColor=white", GH + "#mcp-server"),
+    ]
 STALE_DAYS = 90
 MAX_CATEGORY_BYTES = 30 * 1024
 
@@ -218,6 +234,7 @@ def readme(lang, cats, items, excluded, dirs):
     o.append(f'<p align="right"><a href="{t["other_readme"]}">{t["other_label"]}</a> · <a href="{PAGES}">HTML</a> · '
              f'<a href="llms.txt">llms.txt</a> · <a href="catalog/all.json">catalog.json</a></p>\n')
     o.append(f"# {TITLE}\n")
+    o.append(" ".join(f'<a href="{u}"><img alt="{a}" src="{i}"></a>' for a, i, u in badges()) + "\n")
     o.append(f"<em>{t['tagline']}</em>\n")
     o.append("> " + t["hatnote"].replace("#excluded", "#" + gh_slug(t["h_excluded"])) + "\n")
     o.append('<table align="right" width="300">')
@@ -382,6 +399,7 @@ main{max-width:1180px;margin:0 auto;padding:16px 16px 48px;background:var(--page
 h1,h2{font-family:"Linux Libertine","Georgia","Times",serif;font-weight:400;border-bottom:1px solid var(--border);margin:1.2em 0 .5em;line-height:1.3}
 h1{font-size:2em;margin-top:.3em}h2{font-size:1.5em}
 .sub{color:var(--muted);font-size:13px;margin-top:-6px}
+.badges{margin:4px 0 10px;display:flex;flex-wrap:wrap;gap:6px}.badges img{display:block}
 .hatnote{font-style:italic;padding-left:1.6em;color:var(--muted);margin:.5em 0 1em}
 .infobox{float:right;clear:right;width:300px;margin:0 0 1em 1.4em;border:1px solid var(--border);background:var(--hat);font-size:13px;border-collapse:collapse}
 .infobox caption{font-weight:700;font-size:15px;padding:6px;background:var(--head);border:1px solid var(--border);border-bottom:0}
@@ -455,7 +473,9 @@ def page(lang, cats, items, excluded, dirs):
          f'<header class="top"><div class="in"><a class="brand" href="{self_url}">{e_(TITLE)}<small>{e_(t["tagline"][:80])}…</small></a>',
          f'<nav class="tabs"><a href="{other_url}">{t["other_label"]}</a><a href="{base}catalog.json">JSON</a>'
          f'<a href="{base}llms.txt">llms.txt</a><a href="{GH}">GitHub</a></nav></div></header><main>',
-         f"<h1>{e_(TITLE)}</h1>", f'<div class="sub">{e_(t["tagline"])}</div>',
+         f"<h1>{e_(TITLE)}</h1>",
+         '<p class="badges">' + " ".join(f'<a href="{e_(u)}"><img alt="{e_(a)}" src="{e_(i)}" height="20"></a>' for a, i, u in badges()) + "</p>",
+         f'<div class="sub">{e_(t["tagline"])}</div>',
          f'<div class="hatnote">{t["hatnote"]}</div>',
          f'<table class="infobox"><caption>{e_(TITLE)}</caption>']
     for k, v in t["infobox"]:
