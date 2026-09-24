@@ -30,7 +30,7 @@ def apply_fixes(by_id, today):
                 continue
             changed = False
             for field, value in patch.items():
-                if field == "free_plan_kind" and value in ("free_tier", "trial", "none") and e.get("free_plan"):
+                if field == "free_plan_kind" and value in ("free_tier", "trial", "no_key", "none") and e.get("free_plan"):
                     if e["free_plan"].get("kind") != value:
                         e["free_plan"]["kind"] = value
                         changed = True

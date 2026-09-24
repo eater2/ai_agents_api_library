@@ -1,0 +1,265 @@
+{
+ "calendly-api": {
+  "free_tier": "Free: API reads and most writes work on every plan incl. Free (except 3 Enterprise-only endpoints); booking through the Scheduling API (POST /invitees) and webhooks need a paid plan",
+  "sources": [
+   "https://developer.calendly.com/docs/api-guides/schedule-events-with-ai-agents",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "groq-api": {
+  "notes": "Free-tier limits vary by model (e.g. 30 RPM / 1K RPD); see console.groq.com/settings/limits. Not to be confused with xAI Grok. Llama 3.x models (llama-3.3-70b-versatile, llama-3.1-8b-instant) are now contact-sales, not self-serve per-token",
+  "sources": [
+   "https://console.groq.com/docs/models",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "murf-ai-api": {
+  "notes": "Two model families: Falcon 2 (low latency, for streaming; $0.01/min) and Gen2 (studio quality).",
+  "sources": [
+   "https://murf.ai/api/docs/text-to-speech-models/falcon-2",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "zyte-api": {
+  "docs": "https://docs.zyte.com/zyte-api/usage/http.html",
+  "sources": [
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "languagetool-api": {
+  "notes": "This is a proofreading/grammar API, not machine translation. The keyless host api.languagetool.org is documented only on dev.languagetool.org/public-http-api; the OpenAPI spec lists only the Premium host",
+  "sources": [
+   "https://dev.languagetool.org/public-http-api",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "d-id-api": {
+  "free_tier": "Trial: 14 days with 3 minutes of video credits, then paid plans only (API price per minute not published in machine-readable form)",
+  "sources": [
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "wise-api": {
+  "notes": "Personal tokens cover only quotes, recipients, transfers, batch groups and transfer events; funding and balance statements only for US/CA/AU/NZ/SG/MY accounts. Full access needs a partnership agreement. Docs use versioned paths, e.g. https://api.wise.com/2026Q3/profiles/{profileId}/quotes",
+  "sources": [
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "stable-audio-api-stability-ai": {
+  "desc_en": "Generate music and sound effects from text prompts via REST API (Stable Audio 2.5, or Stable Audio 3.0 for tracks up to 6 minutes).",
+  "notes": "Endpoint POST /v2beta/audio/stable-audio-2/text-to-audio; default model 2.5 costs 20 credits per generation; Stable Audio 3.0 (up to 6 min, async) costs 26 credits. Shares the platform.stability.ai credit system with Stability's image API.",
+  "sources": [
+   "https://platform.stability.ai/pricing",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "unstructured-api": {
+  "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Workflow API. Hosted Transform MCP parses documents; the UNS-MCP repo only manages connectors/workflows and is no longer maintained. Current parse endpoint: POST https://transform.unstructured.io/api/v2/parse with header unstructured-api-key",
+  "sources": [
+   "https://docs.unstructured.io/transform/parse",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "gitingest": {
+  "notes": "GET /api/{user}/{repo} or POST /api/ingest (include/exclude patterns); digest returned inline (summary, tree, content) plus a download URL. For heavy use the vendor recommends the open-source CLI (pip install gitingest).",
+  "sources": [
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "gumloop": {
+  "notes": "Added: widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled. The MCP server authenticates via OAuth sign-in, not a pasted key. Personal API keys also need the header x-auth-key: <user_id>, and API keys require the Pro plan or higher",
+  "sources": [
+   "https://docs.gumloop.com/api-reference/authentication",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "ayrshare": {
+  "docs": "https://www.ayrshare.com/docs/apis/overview",
+  "sources": [
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "apify": {
+  "notes": "MCP search/docs tools work unauthenticated; running paid Actors consumes platform usage credit. Actor endpoints use /v2/actors/{actorId}/... (e.g. run-sync-get-dataset-items)",
+  "sources": [
+   "https://docs.apify.com/api/v2/act-run-sync-get-dataset-items-post",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "cohere-api": {
+  "notes": "Vendor MCP at https://docs.cohere.com/_mcp/server only searches the docs. Trial keys are not for production use. v2 API is current; v1 is legacy. Flagship chat model: command-a-plus-05-2026",
+  "sources": [
+   "https://docs.cohere.com/v2/reference/chat",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "penpot-api": {
+  "notes": "API is RPC-style; methods are listed at https://design.penpot.app/api/main/methods/<name>, no OpenAPI file; open source, self-hostable. Remote MCP takes ?userToken=<MCP key> and needs the MCP plugin open in a Penpot browser tab; local: npx @penpot/mcp@stable.",
+  "sources": [
+   "https://design.penpot.app/api/_doc",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "coda-api-superhuman-docs": {
+  "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL coda.io/apis/v1 still works, and the OpenAPI spec now names https://docs.superhuman.com/apis/v1. The official MCP server uses OAuth via id.superhuman.com (scope mcp:all).",
+  "sources": [
+   "https://coda.io/apis/v1/openapi.json",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "mistral-ocr-api": {
+  "notes": "Current model: Mistral OCR 4; block/table/bounding-box extraction requires OCR 4+/2512+; no official Mistral-maintained MCP server, only community implementations.",
+  "sources": [
+   "https://mistral.ai/news/ocr-4/",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "amazon-selling-partner-api": {
+  "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review. Official MCP uses Seller Central OAuth consent. Orders v0 getOrders is deprecated; use searchOrders (v2026-01-01). Planned SP-API fees were cancelled",
+  "sources": [
+   "https://developer-docs.amazon/sp-api/reference/searchorders.md",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "scrapegraphai-api": {
+  "free_tier": "Trial: 500 API credits one-time on the Free plan (10 requests/min), no card required",
+  "free_plan_kind": "trial",
+  "sources": [
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "line-messaging-api": {
+  "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited. Beyond that only paid plans (Light JPY 5,000 for 5,000 messages, Standard JPY 15,000 for 30,000). Free quotas vary by region",
+  "sources": [
+   "https://developers.line.biz/en/docs/messaging-api/pricing/",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "nocodb-cloud": {
+  "notes": "Free plan API quota is very small (1,000 calls/month). v3 Data API reference at https://nocodb.com/apis/v3/data/ (base https://app.nocodb.com; xc-token or Authorization: Bearer) and Meta API at https://meta-apis-v3.nocodb.com/. Remote MCP over Streamable HTTP; tools follow the token owner's base role and plan-gated features.",
+  "sources": [
+   "https://nocodb.com/apis/v3/swagger-v3.json",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "amazon-translate": {
+  "notes": "Requires an AWS account and IAM credentials. The generic AWS API MCP Server (awslabs) can call Translate via AWS CLI commands.",
+  "sources": [
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "keboola": {
+  "notes": "Remote MCP URL is per stack: mcp.keboola.com is US Virginia (AWS) only; others e.g. mcp.eu-central-1.keboola.com; local server at github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months. Storage API reference: https://api.keboola.com/?service=storage (the Apiary docs are retired)",
+  "sources": [
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "pipedrive-api": {
+  "notes": "Official hosted MCP at mcp.pipedrive.ai/mcp uses Pipedrive account sign-in (OAuth). Offers a free Sandbox account for development/testing separate from production pricing. Core endpoints (e.g. POST /deals) are v2 only: https://api.pipedrive.com/api/v2/deals; v1 remains for the rest",
+  "sources": [
+   "https://developers.pipedrive.com/docs/api/v1/openapi-v2.yaml",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "postman-api": {
+  "notes": "Reference docs are at learning.postman.com. Remote MCP modes: /minimal (default), /code, /mcp (full, 100+ tools); US host supports OAuth, EU host mcp.eu.postman.com needs an API key. Docs-search MCP at learning.postman.com/_mcp/server. API host https://api.postman.com (EU: api.eu.postman.com); api.getpostman.com is legacy",
+  "sources": [
+   "https://learning.postman.com/api-docs/api-reference/collections/get-collections",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "stackone": {
+  "desc_en": "Call 520+ SaaS connectors (HRIS, ATS, CRM, documents) through one unified API or MCP gateway covering 32,000+ actions.",
+  "notes": "Plans: Starter free (1,000 credits per seat per month), Team $600/month, Enterprise quote-based.",
+  "sources": [
+   "https://www.stackone.com/pricing",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "netlify-api": {
+  "docs": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+  "sources": [
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "vercel-sandbox": {
+  "notes": "Pricing = active CPU + provisioned memory + per Sandbox.create() call + data transfer; 64 GB ephemeral NVMe per sandbox (SDK 3.0.0+ and custom images).",
+  "sources": [
+   "https://vercel.com/docs/sandbox/pricing",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "freepik-api": {
+  "desc_en": "Generate and edit images, and generate video, music and sound effects via REST API, plus access the Freepik stock asset library.",
+  "sources": [
+   "https://docs.magnific.com/llms.txt",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "youtube-data-api": {
+  "notes": "Daily quota of 10,000 units shared across most calls; search.list costs 1 unit from a separate Search Queries bucket capped at 100 calls/day.",
+  "sources": [
+   "https://developers.google.com/youtube/v3/docs/search/list",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "spider-cloud": {
+  "free_tier": "Free: keyless /scrape endpoint, rate-limited (quota not published); other endpoints return 402 without a key",
+  "sources": [
+   "https://spider.cloud/llms.txt",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "browser-use-cloud-api": {
+  "notes": "Pay-as-you-go: model cost + 20% and browsers at $0.02/hour, no per-run fees; no ongoing free tier beyond the signup credit.",
+  "sources": [
+   "https://browser-use.com/pricing",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "parallel-web-systems-search-api": {
+  "notes": "The remote MCP server works without an account/API key at lower rate limits; an Authorization: Bearer key raises them. The main REST API requires an API key from the dashboard. Search defaults to mode advanced ($5 per 1,000 requests); set mode fast for $1 per 1,000",
+  "sources": [
+   "https://docs.parallel.ai/search/modes",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "merge-agent-handler": {
+  "notes": "Separate product from Merge's classic Unified API (HRIS/ATS/CRM sync); Agent Handler is the AI-agent-facing tool-calling layer. All plans include unlimited registered users and tool packs. An agent can sign up without a human: POST https://ah-api.merge.dev/api/v1/agent/signup/ (no auth) creates an organization and returns an API key",
+  "sources": [
+   "https://docs.merge.dev/merge-agent-handler/setup/agent-quickstart.md",
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "google-gemini-api": {
+  "notes": "Vendor MCP at https://gemini-api-docs-mcp.dev only searches the docs. Free-tier content may be used to improve Google products. Unrestricted standard API keys are rejected in 2026; use a current key type. Google publishes a Discovery document, not OpenAPI. The quickstart now uses POST /v1beta/interactions (header Api-Revision: 2026-05-20) rather than generateContent",
+  "sources": [
+   "research/p0b-3b/corrections-2026-09-24-round2.md"
+  ]
+ },
+ "you-com-api": {
+  "free_tier": "Free: 100 queries/day with no API key or sign-up through the MCP free profile (search and discover only); new API-key accounts also get $100 in one-time credit",
+  "sources": [
+   "https://you.com/docs/build-with-agents/mcp-server"
+  ],
+  "free_plan_kind": "no_key"
+ },
+ "zendesk-api": {
+  "free_tier": "Trial: 14-day free trial of Suite Professional, one-time, no credit card required; no free plan, paid plans from $19/agent/mo (Support Team, annual)",
+  "sources": [
+   "https://www.zendesk.com/free-trial/"
+  ]
+ },
+ "aws-textract": {
+  "free_tier": "Trial: new AWS customers get 3 months free, per month 1,000 pages DetectDocumentText, 100 pages AnalyzeDocument forms/tables/layout/queries, 100 AnalyzeExpense/AnalyzeID, 2,000 pages AnalyzeLending; card required",
+  "sources": [
+   "https://aws.amazon.com/textract/pricing/"
+  ]
+ },
+ "kling-ai-api": {
+  "free_plan_kind": "none",
+  "sources": [
+   "https://kling.ai/dev/pricing"
+  ]
+ }
+}

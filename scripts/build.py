@@ -41,7 +41,7 @@ def badges():
         ("Remote MCP endpoint", sh + "remote_MCP-no_key-000000?logo=vercel&logoColor=white", GH + "#mcp-server"),
     ]
 STALE_DAYS = 90
-MAX_CATEGORY_BYTES = 60 * 1024  # ~15k tokens; grew from 30 KB when per-field sources were added
+MAX_CATEGORY_BYTES = 60 * 1024  # ~15k tokens; compact JSON (one entry per line) since call/unit_price were added
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -844,7 +844,9 @@ def main():
     for c in cats:
         rows = [{k: v for k, v in e.items() if k != "category"} for e in en if e["category"] == c["id"]]
         cat = {"id": c["id"], "name": c["en"], "description": c["desc_en"]}
-        text = json.dumps({"category": cat, "entries": rows}, ensure_ascii=False, indent=1) + "\n"
+        # Compact, one entry per line: indentation costs an agent tokens, one line per entry keeps diffs readable
+        compact = lambda v: json.dumps(v, ensure_ascii=False, separators=(",", ":"))  # noqa: E731
+        text = ('{"category":' + compact(cat) + ',"entries":[\n' + ",\n".join(compact(r) for r in rows) + "\n]}\n")
         if len(text.encode()) > MAX_CATEGORY_BYTES:
             print(f"WARNING: catalog/{c['id']}.json is {len(text.encode()) // 1024} KB (limit {MAX_CATEGORY_BYTES // 1024} KB)")
         write(f"catalog/{c['id']}.json", text)
