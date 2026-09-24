@@ -8,7 +8,9 @@ Outputs: README.md, README.pl.md, llms.txt, llms-full.txt, catalog/*.json,
          docs/robots.txt, docs/sitemap.xml
 """
 import html
+import io
 import json
+import zipfile
 import re
 from datetime import date
 from pathlib import Path
@@ -240,6 +242,14 @@ def readme(lang, cats, items, excluded, dirs):
         o.append('```json\n{\n  "mcpServers": {\n    "ai-agents-api-library": {\n      "command": "npx",\n'
                  f'      "args": ["-y", "github:{REPO}"]\n    }}\n  }}\n}}\n```\n')
         o.append(f"Claude Code: `claude mcp add ai-agents-api-library -- npx -y github:{REPO}`\n")
+        o.append("### Claude skill and plugin\n\nThe skill tells Claude when to reach for the catalog and how to pick a service. "
+                 "The plugin bundles the skill with the MCP server:\n")
+        o.append(f"- **Claude Code plugin** (skill + MCP server):\n  ```\n  /plugin marketplace add {REPO}\n"
+                 "  /plugin install ai-agents-api-library@eater2\n  ```")
+        o.append("- **Skill only, Claude Code:** copy [`skills/ai-agents-api-library/`](skills/ai-agents-api-library/SKILL.md) "
+                 "to `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).")
+        o.append(f"- **Skill only, claude.ai / Claude Desktop:** download [the skill zip]({PAGES}ai-agents-api-library-skill.zip) "
+                 "and upload it under Settings → Capabilities → Skills.\n")
 
     o.append(f"## {t['h_criteria']}\n")
     o.append("\n".join(f"- {x}" for x in t["criteria"]) + "\n")
@@ -602,6 +612,15 @@ def main():
             print(f"WARNING: catalog/{c['id']}.json is {len(text.encode()) // 1024} KB (limit {MAX_CATEGORY_BYTES // 1024} KB)")
         write(f"catalog/{c['id']}.json", text)
         write(f"docs/c/{c['id']}/index.html", category_page(c, [e for e in items if e["category"] == c["id"]], cats))
+    # Skill as a zip for uploading to claude.ai; fixed timestamp keeps the file byte-identical between builds.
+    skill_dir = ROOT / "skills" / "ai-agents-api-library"
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+        for f in sorted(skill_dir.rglob("*")):
+            if f.is_file():
+                info = zipfile.ZipInfo(f"ai-agents-api-library/{f.relative_to(skill_dir).as_posix()}", (2026, 1, 1, 0, 0, 0))
+                z.writestr(info, f.read_bytes(), zipfile.ZIP_DEFLATED)
+    (ROOT / "docs" / "ai-agents-api-library-skill.zip").write_bytes(buf.getvalue())
     write("docs/.nojekyll", "")
     write("docs/robots.txt", f"User-agent: *\nAllow: /\nSitemap: {PAGES}sitemap.xml\n")
     write("docs/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

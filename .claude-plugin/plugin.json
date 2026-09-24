@@ -1,0 +1,18 @@
+{
+  "name": "ai-agents-api-library",
+  "displayName": "AI Agents API Library",
+  "description": "Find verified third-party APIs and MCP servers for any capability an agent lacks (image, video, search, maps, email, payments, CAD...), with auth method, free tier, MCP endpoint and docs.",
+  "version": "0.1.0",
+  "author": { "name": "Marek Papis" },
+  "homepage": "https://eater2.github.io/ai_agents_api_library/",
+  "repository": "https://github.com/eater2/ai_agents_api_library",
+  "license": "MIT",
+  "keywords": ["api", "mcp", "catalog", "ai-agents", "tools"],
+  "skills": "./skills/",
+  "mcpServers": {
+    "ai-agents-api-library": {
+      "command": "npx",
+      "args": ["-y", "github:eater2/ai_agents_api_library"]
+    }
+  }
+}
