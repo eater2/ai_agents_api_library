@@ -14,7 +14,9 @@
    "auth_hint": "LWA (Login with Amazon) OAuth2 access token via x-amz-access-token header",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free API access; requires an existing Amazon Seller/Vendor Central account",
    "sdk": [
@@ -59,7 +61,9 @@
    "auth_hint": "X-Auth-Token header (store API account) or OAuth2 for public apps",
    "mcp": {
     "type": "official",
-    "url": "https://docs.bigcommerce.com/_mcp/server"
+    "url": "https://docs.bigcommerce.com/_mcp/server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free API access; requires an active BigCommerce store plan",
    "sdk": [
@@ -99,7 +103,9 @@
    "auth_hint": "Authorization: Bearer <OAuth2 token> (application or user token)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free developer tier with call-volume limits; sandbox environment included",
    "sdk": [
@@ -138,7 +144,9 @@
    "auth_hint": "OAuth2 Bearer token + x-api-key header (app keystring)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free developer keystring (rate-limited, e.g. 10 req/sec, ~5,000 req/day per app by default)",
    "sdk": [],
@@ -165,7 +173,9 @@
    "auth_hint": "Authorization: Bearer <ACCESS_TOKEN> obtained via OAuth 2.0 with the app's Client ID and Secret from DevCenter",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.mercadolibre.com/devsite/v1/mcp"
+    "url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "Free API access for any Mercado Libre account that creates an app in DevCenter; only normal marketplace selling fees apply",
    "sdk": [],
@@ -188,7 +198,9 @@
    "auth_hint": "Authorization: Bearer <token> (Private token or OAuth2 for public apps)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free API access; pay only for products/fulfillment/shipping ordered",
    "sdk": [],
@@ -226,7 +238,9 @@
    "auth_hint": "X-Shopify-Access-Token header (custom app token or OAuth2 for public apps)",
    "mcp": {
     "type": "official",
-    "url": "https://shopify.dev/docs/apps/build/devmcp"
+    "url": "https://shopify.dev/docs/apps/build/devmcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free API access; requires an active paid Shopify store subscription to use",
    "sdk": [
@@ -257,7 +271,9 @@
    "auth_hint": "OAuth1.0a signature (HTTP) or Basic auth with Consumer Key/Secret (HTTPS)",
    "mcp": {
     "type": "community",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free (self-hosted plugin; no vendor API fees, only your own WordPress hosting costs)",
    "sdk": [

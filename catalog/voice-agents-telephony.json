@@ -14,7 +14,9 @@
    "auth_hint": "authorization: <api_key> header",
    "mcp": {
     "type": "official",
-    "url": "https://api.bland.ai/v1/mcp"
+    "url": "https://api.bland.ai/v1/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free credits + inbound number on signup (Start plan), no credit card required",
    "sdk": [],
@@ -43,7 +45,9 @@
    "auth_hint": "Authorization: Token <api_key>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "$200 free credit on signup",
    "sdk": [
@@ -75,7 +79,9 @@
    "auth_hint": "xi-api-key: <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://api.elevenlabs.io/v1/mcp"
+    "url": "https://api.elevenlabs.io/v1/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan: 10k credits/month shared across ElevenLabs products",
    "sdk": [
@@ -111,7 +117,9 @@
    "auth_hint": "API key + secret sign a JWT access token sent as Authorization: Bearer <token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free Build plan: 1,000 agent session minutes/mo, 5,000 WebRTC participant minutes/mo, 50GB data transfer",
    "sdk": [
@@ -147,7 +155,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.retellai.com"
+    "url": "https://mcp.retellai.com",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "$10 free credit on signup, then pay-as-you-go ($0.07-$0.31/min for voice)",
    "sdk": [
@@ -189,7 +199,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "self-serve free trial to build/test agents (pay only for actual calls); enterprise plans from ~$30k/yr for scale",
    "sdk": [],
@@ -227,7 +239,9 @@
    "auth_hint": "Basic Auth (Account SID + Auth Token) or API Key/Secret",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/twilio-labs/mcp"
+    "url": "https://github.com/twilio-labs/mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "trial account with free trial credit (~$15), then pay-as-you-go",
    "sdk": [
@@ -285,7 +299,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.vapi.ai/mcp"
+    "url": "https://mcp.vapi.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "$5 free credit on signup, then pay-as-you-go (~$0.05/min platform fee + provider costs)",
    "sdk": [

@@ -14,7 +14,9 @@
    "auth_hint": "x-api-key: <ANTHROPIC_API_KEY> (plus anthropic-version header)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "paid only",
    "sdk": [
@@ -50,7 +52,9 @@
    "auth_hint": "Authorization: Bearer <COHERE_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.cohere.com/_mcp/server"
+    "url": "https://docs.cohere.com/_mcp/server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free trial key: 1,000 calls/mo, rate-limited",
    "sdk": [
@@ -94,7 +98,9 @@
    "auth_hint": "Headers 'authorization: <OPIK_API_KEY>' (no Bearer prefix) and 'Comet-Workspace: <WORKSPACE>'; remote MCP uses browser sign-in",
    "mcp": {
     "type": "official",
-    "url": "https://www.comet.com/opik/api/v1/mcp"
+    "url": "https://www.comet.com/opik/api/v1/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "Free cloud plan: 25k spans/month, 60-day data retention, up to 10 team members",
    "sdk": [
@@ -120,7 +126,9 @@
    "auth_hint": "Authorization: Bearer <DEEPSEEK_API_KEY>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "paid only",
    "sdk": [],
@@ -158,7 +166,9 @@
    "auth_hint": "Authorization: Key <FAL_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.fal.ai/mcp"
+    "url": "https://mcp.fal.ai/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "check pricing",
    "sdk": [
@@ -190,7 +200,9 @@
    "auth_hint": "Authorization: Bearer <FIREWORKS_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.fireworks.ai/mcp"
+    "url": "https://docs.fireworks.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "trial credits: $1 on signup",
    "sdk": [
@@ -222,7 +234,9 @@
    "auth_hint": "x-goog-api-key: <GEMINI_API_KEY> (or ?key= query param)",
    "mcp": {
     "type": "official",
-    "url": "https://gemini-api-docs-mcp.dev"
+    "url": "https://gemini-api-docs-mcp.dev",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free tier: rate-limited access to Flash/Pro models",
    "sdk": [
@@ -256,7 +270,9 @@
    "auth_hint": "Authorization: Bearer <GROQ_API_KEY>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: rate-limited per model, no card",
    "sdk": [
@@ -287,7 +303,9 @@
    "auth_hint": "Authorization: Bearer <HF_TOKEN>",
    "mcp": {
     "type": "official",
-    "url": "https://huggingface.co/mcp"
+    "url": "https://huggingface.co/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: monthly credits (more with PRO)",
    "sdk": [
@@ -319,7 +337,9 @@
    "auth_hint": "Authorization: Bearer <MISTRAL_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://api.mistral.ai/mcp"
+    "url": "https://api.mistral.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: Studio free mode, rate-limited",
    "sdk": [
@@ -362,7 +382,9 @@
    "auth_hint": "Authorization: Bearer <OPENAI_API_KEY>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "paid only",
    "sdk": [
@@ -408,7 +430,9 @@
    "auth_hint": "Authorization: Bearer <OPENROUTER_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.openrouter.ai/mcp"
+    "url": "https://mcp.openrouter.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free models: 50 req/day (1,000/day after $10 purchase)",
    "sdk": [
@@ -451,7 +475,9 @@
    "auth_hint": "X-API-Key: <key>",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/apinetwork/piapi-mcp-server"
+    "url": "https://github.com/apinetwork/piapi-mcp-server",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "trial credits: $0.50 on signup",
    "sdk": [],
@@ -492,7 +518,9 @@
    "auth_hint": "Authorization: Bearer <REPLICATE_API_TOKEN>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.replicate.com"
+    "url": "https://mcp.replicate.com",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "paid only",
    "sdk": [
@@ -527,7 +555,9 @@
    "auth_hint": "Authorization: Bearer <TOGETHER_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.together.ai/mcp"
+    "url": "https://docs.together.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "check pricing",
    "sdk": [
@@ -560,7 +590,9 @@
    "auth_hint": "Authorization: Bearer <AI_GATEWAY_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.vercel.com"
+    "url": "https://mcp.vercel.com",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: monthly credits on subset of models",
    "sdk": [
@@ -592,7 +624,9 @@
    "auth_hint": "Authorization: Bearer <VOYAGE_API_KEY>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: 200M tokens on current models",
    "sdk": [
@@ -622,7 +656,9 @@
    "auth_hint": "Authorization: Bearer <XAI_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.x.ai/api/mcp"
+    "url": "https://docs.x.ai/api/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "paid only (prepaid credits)",
    "sdk": [

@@ -9,7 +9,9 @@
     "auth_hint": "X-Subscription-Token: <API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/brave/brave-search-mcp-server"
+      "url": "https://github.com/brave/brave-search-mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "$5 free monthly credits (~1,000 queries on Search plan); credit card required at signup as anti-fraud measure",
     "sdk": [],
@@ -65,7 +67,9 @@
     "auth_hint": "Authorization: Bearer <EXA_API_KEY> (or x-api-key header)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.exa.ai/mcp"
+      "url": "https://mcp.exa.ai/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free tier: $10 free credits/month (~1,400 searches), no payment method required",
     "sdk": [
@@ -109,7 +113,9 @@
     "auth_hint": "Authorization: Bearer <JINA_API_KEY> (works without a key too, but at a lower rate limit)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "no key needed: 100 RPM (s.jina.ai search) / 500 RPM (r.jina.ai reader); free API key raises limits to 1,000/5,000 RPM with token-based billing",
     "sdk": [],
@@ -139,7 +145,9 @@
     "auth_hint": "Authorization: Bot <token>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/kagisearch/kagimcp"
+      "url": "https://github.com/kagisearch/kagimcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "no free tier: pay-per-use, $12 per 1,000 search requests, invoiced monthly or at $100 usage, whichever first",
     "sdk": [
@@ -185,7 +193,9 @@
     "auth_hint": "Authorization: Bearer <LINKUP_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.linkup.so/mcp"
+      "url": "https://mcp.linkup.so/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "$20 free credits/month for new accounts signing up with a professional email",
     "sdk": [
@@ -226,7 +236,9 @@
     "auth_hint": "check docs (exact query-param name obtained after contacting Mojeek for a plan)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "limited-query free trial available on request; paid plans from £2 CPM (Startup, 5 req/s, 100k/day cap)",
     "sdk": [],
@@ -254,7 +266,9 @@
     "auth_hint": "x-api-key: <PARALLEL_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://search.parallel.ai/mcp"
+      "url": "https://search.parallel.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free: 5,000 requests/month across APIs, plus up to $80 signup credit and $5/month free credits",
     "sdk": [
@@ -288,7 +302,9 @@
     "auth_hint": "Authorization: Bearer <PERPLEXITY_API_KEY> (remote MCP also supports OAuth sign-in)",
     "mcp": {
       "type": "official",
-      "url": "https://api.perplexity.ai/mcp"
+      "url": "https://api.perplexity.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "no confirmed free tier; pay-as-you-go, Search API billed at $5 per 1,000 requests",
     "sdk": [
@@ -321,7 +337,9 @@
     "auth_hint": "api_key=<KEY> as query param, or Authorization: Bearer <KEY>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "100 free requests, no credit card required; then paid plans from $40/mo (10,000 searches)",
     "sdk": [],
@@ -350,7 +368,9 @@
     "auth_hint": "none by default; self-hosted instance owner controls access (can add auth/proxy in front)",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/ihor-sokoliuk/mcp-searxng"
+      "url": "https://github.com/ihor-sokoliuk/mcp-searxng",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key (self-hosted; you run and pay for the instance yourself)",
     "sdk": [],
@@ -391,7 +411,9 @@
     "auth_hint": "api_key query parameter (also usable as header depending on client library)",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/serpapi/serpapi-mcp"
+      "url": "https://github.com/serpapi/serpapi-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free plan: 250 searches/month, 50 requests/hour throughput",
     "sdk": [
@@ -443,7 +465,9 @@
     "auth_hint": "X-API-KEY header (per widely published examples; could not independently re-confirm via automated fetch, see notes)",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/marcopesani/mcp-server-serper"
+      "url": "https://github.com/marcopesani/mcp-server-serper",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: 2,500 queries, no credit card required",
     "sdk": [],
@@ -484,7 +508,9 @@
     "auth_hint": "Authorization: Bearer tvly-<API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.tavily.com/mcp/"
+      "url": "https://mcp.tavily.com/mcp/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: 1,000 API credits/month, no credit card required",
     "sdk": [
@@ -525,7 +551,9 @@
     "auth_hint": "X-API-Key header (or YDC_API_KEY env var)",
     "mcp": {
       "type": "official",
-      "url": "https://api.you.com/mcp"
+      "url": "https://api.you.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free credits on signup via you.com/platform; free search profile also available through the keyless Docs MCP server",
     "sdk": [
@@ -569,7 +597,9 @@
     "auth_hint": "anchor-api-key header",
     "mcp": {
       "type": "official",
-      "url": "https://api.anchorbrowser.io/mcp"
+      "url": "https://api.anchorbrowser.io/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "$5 free credits/mo, no card required",
     "sdk": [],
@@ -608,7 +638,9 @@
     "auth_hint": "Authorization: Bearer <token> for REST; browser-based OAuth2 or bearer token for hosted MCP",
     "mcp": {
       "type": "official",
-      "url": "https://docs.apify.com/platform/integrations/mcp"
+      "url": "https://docs.apify.com/platform/integrations/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free plan: $5/mo platform usage credit, no card required",
     "sdk": [
@@ -655,7 +687,9 @@
     "auth_hint": "Authorization: Bearer <token>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/brightdata/brightdata-mcp"
+      "url": "https://github.com/brightdata/brightdata-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: up to 5,000 requests/mo",
     "sdk": [
@@ -713,7 +747,9 @@
     "auth_hint": "Authorization: Bearer <key>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free forever plan: 50 credits/mo, no card required",
     "sdk": [
@@ -746,7 +782,9 @@
     "auth_hint": "X-Browser-Use-API-Key header (key prefix bu_)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "$15 one-time signup credit for new accounts (Google/GitHub/Microsoft); paid usage afterward",
     "sdk": [
@@ -778,7 +816,9 @@
     "auth_hint": "X-BB-API-Key header, plus Project ID",
     "mcp": {
       "type": "official",
-      "url": "https://www.browserbase.com/mcp"
+      "url": "https://www.browserbase.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: limited browser hours, single concurrency, no card required",
     "sdk": [
@@ -826,7 +866,9 @@
     "auth_hint": "token= query parameter",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free plan: 10,000 credits/mo, no card required (5 req/min limit)",
     "sdk": [],
@@ -854,7 +896,9 @@
     "auth_hint": "Authorization: Bearer <fc-key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.firecrawl.dev/v2/mcp"
+      "url": "https://mcp.firecrawl.dev/v2/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: 1,000 credits/mo, no card required",
     "sdk": [
@@ -897,7 +941,9 @@
     "auth_hint": "x-api-key header",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/hyperbrowserai/mcp"
+      "url": "https://github.com/hyperbrowserai/mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free plan: starter credits, 1 concurrent browser, no card required",
     "sdk": [
@@ -941,7 +987,9 @@
     "auth_hint": "HTTP Basic Auth with API-user credentials (--user USERNAME:PASSWORD)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free trial available (check pricing)",
     "sdk": [
@@ -981,7 +1029,9 @@
     "auth_hint": "no auth; runs as a local process via npx",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/microsoft/playwright-mcp"
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free, open source, no key",
     "sdk": [],
@@ -1022,7 +1072,9 @@
     "auth_hint": "API key from dashboard (exact header name not published; check docs)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free plan: 500 one-time API credits",
     "sdk": [
@@ -1054,7 +1106,9 @@
     "auth_hint": "api_key query parameter",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "5,000 free API credits (trial), no long-term free plan",
     "sdk": [],
@@ -1082,7 +1136,9 @@
     "auth_hint": "key= query param for REST API; API key or OAuth2 for MCP server",
     "mcp": {
       "type": "official",
-      "url": "https://scrapfly.io/products/mcp-cloud"
+      "url": "https://scrapfly.io/products/mcp-cloud",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "1,000 free credits/mo, no card required, no time limit",
     "sdk": [
@@ -1114,7 +1170,9 @@
     "auth_hint": "Authorization: Bearer <key> (legacy: api_key query param, deprecated)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "1,000 free API credits, no card required",
     "sdk": [
@@ -1145,7 +1203,9 @@
     "auth_hint": "Authorization: Bearer sk-<key>",
     "mcp": {
       "type": "official",
-      "url": "https://spider.cloud/mcp/"
+      "url": "https://spider.cloud/mcp/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "keyless trial: 25 free runs/day, no account required",
     "sdk": [
@@ -1178,7 +1238,9 @@
     "auth_hint": "Steel-Api-Key header",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "Hobby tier: 100 browser-hours/mo, 500 requests/day, no card required",
     "sdk": [
@@ -1209,7 +1271,9 @@
     "auth_hint": "HTTP Basic Auth: API key as username, blank password",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "$5 free credit for the first month",
     "sdk": [
@@ -1239,7 +1303,9 @@
     "auth_hint": "no auth",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/blazickjp/arxiv-mcp-server"
+      "url": "https://github.com/blazickjp/arxiv-mcp-server",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key",
     "sdk": [],
@@ -1286,7 +1352,9 @@
     "auth_hint": "api.data.gov key: query parameter ?api_key=<API_KEY> or header X-Api-Key: <API_KEY>",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/cyanheads/congressgov-mcp-server"
+      "url": "https://github.com/cyanheads/congressgov-mcp-server",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "Free: government API, key issued instantly by email; 5,000 requests/hour.",
     "sdk": [],
@@ -1310,7 +1378,9 @@
     "auth_hint": "Authorization: Bearer <ctx7sk_... key> (optional; works at low limits without key)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.context7.com/mcp"
+      "url": "https://mcp.context7.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free; low limits without key, free API key from context7.com/dashboard raises limits",
     "sdk": [
@@ -1350,7 +1420,9 @@
     "auth_hint": "no key; add mailto=<email> param or User-Agent contact for the 'polite pool'",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/afrise/academic-search-mcp-server"
+      "url": "https://github.com/afrise/academic-search-mcp-server",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key",
     "sdk": [],
@@ -1392,7 +1464,9 @@
     "auth_hint": "no auth",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/cyanheads/gdelt-mcp-server"
+      "url": "https://github.com/cyanheads/gdelt-mcp-server",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key",
     "sdk": [],
@@ -1433,7 +1507,9 @@
     "auth_hint": "No key for public repos: GET https://gitingest.com/api/<owner>/<repo>; optional GitHub token for private repos via the 'token' parameter",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/narumiruna/gitingest-mcp"
+      "url": "https://github.com/narumiruna/gitingest-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "No key; free public service with no published quota (the web UI has rate limiting and CAPTCHA protection).",
     "sdk": [
@@ -1459,7 +1535,9 @@
     "auth_hint": "no auth",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/pskill9/hn-server"
+      "url": "https://github.com/pskill9/hn-server",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key",
     "sdk": [],
@@ -1510,7 +1588,9 @@
     "auth_hint": "No key; send a User-Agent header with app name and contact email, e.g. 'User-Agent: MyApp (me@example.org)'",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/8enSmith/mcp-open-library"
+      "url": "https://github.com/8enSmith/mcp-open-library",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "No key; free and open: 1 request/second anonymous, 3 requests/second with an identifying User-Agent.",
     "sdk": [],
@@ -1534,7 +1614,9 @@
     "auth_hint": "Query parameter ?api-key=<API_KEY> (create an app at developer.nytimes.com and enable the APIs you need)",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/jeffmm/nytimes-mcp"
+      "url": "https://github.com/jeffmm/nytimes-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "Free: all public APIs are free; most APIs 500 requests/day and 5 requests/minute (Archive API higher).",
     "sdk": [],
@@ -1558,7 +1640,9 @@
     "auth_hint": "X-Api-Key: <key> header or apiKey=<key> query param",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/matteoantoci/mcp-newsapi"
+      "url": "https://github.com/matteoantoci/mcp-newsapi",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free Developer plan: 100 req/day, dev/test only, 24h article delay",
     "sdk": [],
@@ -1599,7 +1683,9 @@
     "auth_hint": "api_key=<key> query param (optional; basic use works without key)",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/benedict2310/Scientific-Papers-MCP"
+      "url": "https://github.com/benedict2310/Scientific-Papers-MCP",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free: $1 of API usage/day without payment method; free key raises daily budget 10x",
     "sdk": [],
@@ -1642,7 +1728,9 @@
     "auth_hint": "optional api_key=<NCBI key> query param; tool and email params recommended",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/openags/paper-search-mcp"
+      "url": "https://github.com/openags/paper-search-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free; 3 req/s without key, 10 req/s with free NCBI API key",
     "sdk": [],
@@ -1683,7 +1771,9 @@
     "auth_hint": "x-api-key: <key> (optional; unauthenticated access allowed)",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server"
+      "url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free; no key (shared, throttled pool) or free API key on request",
     "sdk": [],
@@ -1725,7 +1815,9 @@
     "auth_hint": "no auth for reads (descriptive User-Agent required); OAuth2 Bearer only for edits",
     "mcp": {
       "type": "official",
-      "url": "https://wd-mcp.wmcloud.org/mcp"
+      "url": "https://wd-mcp.wmcloud.org/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free, no key",
     "sdk": [],
@@ -1754,7 +1846,9 @@
     "auth_hint": "Reads need no key but require a descriptive User-Agent header with contact info. Optional OAuth2 via Authorization: Bearer <access token> raises rate limits.",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/Rudra-ravi/wikipedia-mcp"
+      "url": "https://github.com/Rudra-ravi/wikipedia-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key (rate-limited)",
     "sdk": [],
@@ -1795,7 +1889,9 @@
     "auth_hint": "appid=<AppID> query param or Authorization: Bearer <AppID>",
     "mcp": {
       "type": "official",
-      "url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/"
+      "url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free non-commercial developer AppID (reported up to 2,000 calls/month); paid for commercial use",
     "sdk": [],
@@ -1824,7 +1920,9 @@
     "auth_hint": "OAuth2 Server-to-Server (Client ID/Secret via Adobe IMS); Authorization: Bearer <token>, token valid 24h",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing; requires Adobe Developer Console project and Firefly Services entitlement",
     "sdk": [],
@@ -1852,7 +1950,9 @@
     "auth_hint": "x-key: <BFL_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.bfl.ai"
+      "url": "https://mcp.bfl.ai",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "paid only, no free tier (FLUX Schnell weights are open for self-hosting)",
     "sdk": [
@@ -1883,7 +1983,9 @@
     "auth_hint": "x-freepik-api-key header (migrating to x-magnific-api-key under Magnific rebrand)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
     "sdk": [],
@@ -1911,7 +2013,9 @@
     "auth_hint": "x-goog-api-key: $GEMINI_API_KEY",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing (free API key tier exists but image models are mostly usage-billed)",
     "sdk": [
@@ -1944,7 +2048,9 @@
     "auth_hint": "Api-Key: <IDEOGRAM_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.ideogram.ai/mcp"
+      "url": "https://mcp.ideogram.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "no free API credits (web app has 10 slow credits/week); API is pay-per-image, $40 min top-up",
     "sdk": [],
@@ -1973,7 +2079,9 @@
     "auth_hint": "Authorization: Bearer <LEONARDO_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.leonardo.ai/v1/mcp"
+      "url": "https://mcp.leonardo.ai/v1/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "$5 free API credits after account verification, then pay-as-you-go",
     "sdk": [],
@@ -2012,7 +2120,9 @@
     "auth_hint": "Authorization: Bearer <OPENAI_API_KEY>",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp"
+      "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "paid only; no free image credits, usage-based billing",
     "sdk": [
@@ -2060,7 +2170,9 @@
     "auth_hint": "Authorization: Bearer RECRAFT_API_TOKEN",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/recraft-ai/mcp-recraft-server"
+      "url": "https://github.com/recraft-ai/mcp-recraft-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "paid only; pay-per-image (from $0.007/image on V4.1 Flash), no confirmed free credits",
     "sdk": [],
@@ -2103,7 +2215,9 @@
     "auth_hint": "X-Api-Key header",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free: 50 API calls/month (preview/small resolution only), then paid credits",
     "sdk": [],
@@ -2131,7 +2245,9 @@
     "auth_hint": "Authorization: Bearer <STABILITY_API_KEY>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "25 free credits on signup, then pay-as-you-go",
     "sdk": [
@@ -2161,7 +2277,9 @@
     "auth_hint": "x-api-key: <api_key> (or Client ID/Secret to obtain a token, then Authorization: Bearer <token>)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free Basic plan with limited credits, no card required",
     "sdk": [],
@@ -2189,7 +2307,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free trial, 50 API credits",
     "sdk": [],
@@ -2217,7 +2337,9 @@
     "auth_hint": "Authorization: Basic <api_key> (generated from Account page)",
     "mcp": {
       "type": "official",
-      "url": "https://docs.d-id.com/mcp"
+      "url": "https://docs.d-id.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "14-day trial with 3 minutes of video credits, then paid only (~$5.90/min API)",
     "sdk": [],
@@ -2246,7 +2368,9 @@
     "auth_hint": "Gemini API: x-goog-api-key header or ?key= param. Vertex AI alternative uses cloud_iam (service-account OAuth2 access token).",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "no free tier for video; Veo generation requires a paid Gemini API / Vertex AI billing account",
     "sdk": [
@@ -2279,7 +2403,9 @@
     "auth_hint": "API key: X-Api-Key: <key> (bills to API plan). OAuth2: Authorization: Bearer <token> via https://api2.heygen.com/v1/oauth/token (bills to user's subscription credits).",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.heygen.com/mcp/v1/"
+      "url": "https://mcp.heygen.com/mcp/v1/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "no free API credits since Feb 2026; pay-as-you-go from $5, $0.50-$0.99/credit. Free plan (3 videos/mo) exists but is for the web app, not standalone API.",
     "sdk": [
@@ -2322,7 +2448,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing (no free API tier found; consumer plans from $14/mo, API is usage-based)",
     "sdk": [],
@@ -2350,7 +2478,9 @@
     "auth_hint": "Authorization: Bearer <JWT> - JWT signed (HS256) client-side from an Access Key/Secret Key pair issued in the Kling Open Platform console",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/199-mcp/mcp-kling"
+      "url": "https://github.com/199-mcp/mcp-kling",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "paid only; prepaid credit packages from $0.14/unit, e.g. 5,000 units/$700, 180-day validity",
     "sdk": [],
@@ -2391,7 +2521,9 @@
     "auth_hint": "Authorization: Bearer <API_KEY> (key from platform.lumalabs.ai)",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/lumalabs/luma-api-mcp"
+      "url": "https://github.com/lumalabs/luma-api-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "paid only; pay-as-you-go, ~$0.60-$1.05 per 5s clip (Ray 2), $5,000/mo cap on default Build tier",
     "sdk": [
@@ -2434,7 +2566,9 @@
     "auth_hint": "Authorization: Bearer <API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/MiniMax-AI/MiniMax-MCP"
+      "url": "https://github.com/MiniMax-AI/MiniMax-MCP",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "new accounts get 50 signup credits (~1 short clip); 5s video costs ~45-70 credits, 1000 credits=$1",
     "sdk": [
@@ -2478,7 +2612,9 @@
     "auth_hint": "HTTP Basic auth: <token_id>:<token_secret>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.mux.com"
+      "url": "https://mcp.mux.com",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
     "sdk": [
@@ -2513,7 +2649,9 @@
     "auth_hint": "API key from platform.pixverse.ai, sent as bearer/header per docs",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/PixVerseAI/PixVerse-MCP"
+      "url": "https://github.com/PixVerseAI/PixVerse-MCP",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "paid only; prepaid credits from $10, ~$0.28-$0.45 per 5s clip",
     "sdk": [],
@@ -2554,7 +2692,9 @@
     "auth_hint": "Authorization: Bearer <API_KEY> plus required X-Runway-Version header",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.runwayml.com/mcp"
+      "url": "https://mcp.runwayml.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "no free tier; $10 minimum credit top-up, $0.01/credit",
     "sdk": [
@@ -2586,7 +2726,9 @@
     "auth_hint": "x-api-key: <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.shotstack.io/"
+      "url": "https://mcp.shotstack.io/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "10 free credits (valid 30 days), then pay-as-you-go or subscription",
     "sdk": [],
@@ -2615,7 +2757,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing (no permanent free API tier; paid plans include API minutes)",
     "sdk": [],
@@ -2653,7 +2797,9 @@
     "auth_hint": "x-api-key: <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.tavus.io/mcp"
+      "url": "https://mcp.tavus.io/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "check pricing",
     "sdk": [
@@ -2688,7 +2834,9 @@
     "auth_hint": "AWS SigV4 signing with IAM access keys",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: Polly 5M chars/mo standard, Transcribe 60 min/mo (12 months)",
     "sdk": [
@@ -2722,7 +2870,9 @@
     "auth_hint": "Authorization: <key> (no Bearer prefix)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.assemblyai.com/docs"
+      "url": "https://mcp.assemblyai.com/docs",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: $50 credit, no card required",
     "sdk": [
@@ -2756,7 +2906,9 @@
     "auth_hint": "Ocp-Apim-Subscription-Key: <key>, or Authorization: Bearer <Entra token>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/microsoft/azure-speech-mcp-server"
+      "url": "https://github.com/microsoft/azure-speech-mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier (F0): 5 audio hrs/mo STT, 0.5M chars/mo neural TTS",
     "sdk": [
@@ -2805,7 +2957,9 @@
     "auth_hint": "Authorization: Bearer <key> plus Cartesia-Version header",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.cartesia.ai/mcp"
+      "url": "https://mcp.cartesia.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: 20,000 credits/mo",
     "sdk": [
@@ -2839,7 +2993,9 @@
     "auth_hint": "Authorization: Token <key>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/deepgram/mcp"
+      "url": "https://github.com/deepgram/mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: $200 credit, no card required",
     "sdk": [
@@ -2888,7 +3044,9 @@
     "auth_hint": "xi-api-key: <key>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/elevenlabs/elevenlabs-mcp"
+      "url": "https://github.com/elevenlabs/elevenlabs-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free plan: limited monthly credits",
     "sdk": [
@@ -2945,7 +3103,9 @@
     "auth_hint": "API key (?key=) or OAuth2 service-account token: Authorization: Bearer <token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: TTS 4M chars/mo standard, STT 60 min/mo",
     "sdk": [
@@ -2982,7 +3142,9 @@
     "auth_hint": "X-Hume-Api-Key: <key> (REST); api_key query param (EVI WebSocket)",
     "mcp": {
       "type": "official",
-      "url": "https://dev.hume.ai/_mcp/server"
+      "url": "https://dev.hume.ai/_mcp/server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free plan: 10,000 TTS chars/mo + 5 EVI min/mo",
     "sdk": [
@@ -3014,7 +3176,9 @@
     "auth_hint": "API key from Murf dashboard",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing",
     "sdk": [
@@ -3054,7 +3218,9 @@
     "auth_hint": "Authorization: Bearer <key>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "paid only (pay-per-use)",
     "sdk": [
@@ -3102,7 +3268,9 @@
     "auth_hint": "API key from app.resemble.ai dashboard",
     "mcp": {
       "type": "official",
-      "url": "https://docs.resemble.ai/_mcp/server"
+      "url": "https://docs.resemble.ai/_mcp/server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "pay-as-you-go Flex plan ($0/mo base)",
     "sdk": [],
@@ -3141,7 +3309,9 @@
     "auth_hint": "Authorization: Bearer <access_token>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.rev.ai/"
+      "url": "https://docs.rev.ai/",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "trial credits (about 5 hours of ASR)",
     "sdk": [
@@ -3174,7 +3344,9 @@
     "auth_hint": "Authorization: Bearer <key>",
     "mcp": {
       "type": "community",
-      "url": "https://glama.ai/mcp/servers/ArchieMcM234/speechmatics_claude_code_mcp"
+      "url": "https://glama.ai/mcp/servers/ArchieMcM234/speechmatics_claude_code_mcp",
+      "domain_verified": false,
+      "kind": "community"
     },
     "free_tier": "free tier: 480 min/mo batch transcription",
     "sdk": [
@@ -3207,7 +3379,9 @@
     "auth_hint": "API key generated via dashboard (exact header name not published)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing",
     "sdk": [],
@@ -3245,7 +3419,9 @@
     "auth_hint": "xi-api-key: <API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/elevenlabs/elevenlabs-mcp"
+      "url": "https://github.com/elevenlabs/elevenlabs-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "shares ElevenLabs account credit pool (limited free credits on sign-up); check pricing for per-track cost",
     "sdk": [
@@ -3289,7 +3465,9 @@
     "auth_hint": "API key issued on account creation (exact header name not published)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free track allowance on signup, then volume-based pay-as-you-go pricing",
     "sdk": [],
@@ -3327,7 +3505,9 @@
     "auth_hint": "customer-id + access-token headers (credentials emailed after checkout)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "paid only; plans start at $49/mo (100 generations/mo), no free tier",
     "sdk": [],
@@ -3355,7 +3535,9 @@
     "auth_hint": "check docs (exact header not publicly disclosed on marketing pages)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "paid only; Starter plan $29.99/mo for 100 songs/mo, no free tier confirmed",
     "sdk": [],
@@ -3393,7 +3575,9 @@
     "auth_hint": "Authorization: Bearer <STABILITY_API_KEY>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "shares Stability AI platform credits; 25 free credits on signup, then pay-as-you-go",
     "sdk": [
@@ -3423,7 +3607,9 @@
     "auth_hint": "API key created from Cube webapp user profile, sent as bearer/header token",
     "mcp": {
       "type": "community",
-      "url": "https://lobehub.com/mcp/commonsensemachines-blender-mcp"
+      "url": "https://lobehub.com/mcp/commonsensemachines-blender-mcp",
+      "domain_verified": false,
+      "kind": "community"
     },
     "free_tier": "limited free tier (watermarked outputs); full API access is bundled with mid-tier ($19.99+/mo) or higher Cube subscriptions",
     "sdk": [],
@@ -3453,7 +3639,9 @@
     "auth_hint": "API key from API dashboard, sent via Authorization header (exact header name in docs)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "10 starter credits on signup (spent only on downloads, not generation); paid credits $1.5 each",
     "sdk": [],
@@ -3481,7 +3669,9 @@
     "auth_hint": "Authorization: Bearer <msy-...>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/meshy-dev/meshy-mcp-server"
+      "url": "https://github.com/meshy-dev/meshy-mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free web plan: 100 credits/mo; API key creation requires a paid plan (Pro $20/mo+)",
     "sdk": [],
@@ -3524,7 +3714,9 @@
     "auth_hint": "X-API-Key header (personal token) or OAuth2 login; legacy v2 token-in-header also exists but is deprecated",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/gregkop/sketchfab-mcp-server"
+      "url": "https://github.com/gregkop/sketchfab-mcp-server",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key needed for public search; private API token is free with any Sketchfab account",
     "sdk": [],
@@ -3565,7 +3757,9 @@
     "auth_hint": "Authorization: Bearer <key>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "25 free credits on signup, then pay-as-you-go (Stable Fast 3D costs 10 credits ~ $0.10/generation)",
     "sdk": [],
@@ -3593,7 +3787,9 @@
     "auth_hint": "Tencent Cloud SecretId/SecretKey, TC3-HMAC-SHA256 signed requests via the Tencent Cloud API/SDK",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "pay-as-you-go from ~$0.02/generation; some enterprise sign-ups get bundled free credits",
     "sdk": [],
@@ -3621,7 +3817,9 @@
     "auth_hint": "Authorization: Bearer <tsk-...>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/VAST-AI-Research/tripo-mcp"
+      "url": "https://github.com/VAST-AI-Research/tripo-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free/trial credits on signup (amounts and promos change, e.g. ~300 credits/2 weeks); pay-as-you-go at $0.01/credit",
     "sdk": [],
@@ -3662,7 +3860,9 @@
     "auth_hint": "Authorization: Bearer <token> (2-legged or 3-legged OAuth2)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free trial credits, then pay-as-you-go",
     "sdk": [
@@ -3693,7 +3893,9 @@
     "auth_hint": "Authorization: Bearer <token> (OAuth2 via Bentley IMS)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free developer sign-up/trial, then consumption-based pricing",
     "sdk": [
@@ -3723,7 +3925,9 @@
     "auth_hint": "API key (token param) or OAuth2 Bearer token",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier with monthly free credits, then usage-based pricing",
     "sdk": [
@@ -3757,7 +3961,9 @@
     "auth_hint": "HMAC-signed API key pair (access/secret) for personal scripts, or OAuth2 Bearer token for published apps",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier (public documents only); private documents need a paid plan",
     "sdk": [],
@@ -3785,7 +3991,9 @@
     "auth_hint": "Authorization: Bearer <token> (OAuth2 authorization code / client credentials)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free developer sandbox; production requires customer's paid Procore plan",
     "sdk": [],
@@ -3823,7 +4031,9 @@
     "auth_hint": "optional RhinoComputeKey header; endpoint is otherwise open once deployed",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "self-hosted only; requires a Rhino license, cloud deployment billed by core-hour",
     "sdk": [],
@@ -3851,7 +4061,9 @@
     "auth_hint": "Authorization: Bearer <personal access token>, or OAuth2 for published apps",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free Explore plan (1 project, 3 users), unlimited API calls",
     "sdk": [
@@ -3884,7 +4096,9 @@
     "auth_hint": "Authorization: Bearer <token> (Trimble Identity OAuth2)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing",
     "sdk": [],
@@ -3912,7 +4126,9 @@
     "auth_hint": "Authorization: Bearer <token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "start free trial credits, then usage-based pay-as-you-go",
     "sdk": [
@@ -3946,7 +4162,9 @@
     "auth_hint": "Authorization: Bearer <api_token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "paid only - API tokens require an active paid team plan",
     "sdk": [],
@@ -3974,7 +4192,9 @@
     "auth_hint": "API key based; OpenAPI 3.1 spec published at api.icepanel.io",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: 10,000 read requests/mo, 1,000 write requests/mo, 5 import/export requests/mo",
     "sdk": [],
@@ -4014,7 +4234,9 @@
     "auth_hint": "",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free, no key; public hosted instance at kroki.io sponsored by Exoscale (no SLA)",
     "sdk": [],
@@ -4042,7 +4264,9 @@
     "auth_hint": "Authorization: Bearer <api_key> or OAuth 2.0 access token",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing",
     "sdk": [],
@@ -4070,7 +4294,9 @@
     "auth_hint": "API token from account settings; MCP tools use bearer-style auth",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.mermaid.ai/mcp"
+      "url": "https://mcp.mermaid.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "unauthenticated MCP validate/render tools are free; saving to a Mermaid Chart account needs a token, check pricing for limits",
     "sdk": [],
@@ -4100,7 +4326,9 @@
     "auth_hint": "Authorization: Bearer <access_token> (OAuth 2.0 authorization code flow, or OAuth 2.1 for MCP)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.miro.com/"
+      "url": "https://mcp.miro.com/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free plan allows up to 3 editable team boards; MCP server available on all plans including free",
     "sdk": [],
@@ -4130,7 +4358,9 @@
     "auth_hint": "Authorization: Bearer <api_token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "included on every plan; any account can create a token and call the API, limited by credits",
     "sdk": [],
@@ -4158,7 +4388,9 @@
     "auth_hint": "",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free, no key; public hosted server at plantuml.com/plantuml",
     "sdk": [],
@@ -4186,7 +4418,9 @@
     "auth_hint": "X-Authorization header: apiKey:base64(HMAC-SHA256(apiSecret, digest)) plus Nonce header",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: workspaces up to 0.5MB; paid plans raise the limit to 5MB",
     "sdk": [
@@ -4216,7 +4450,9 @@
     "auth_hint": "OAuth2 Authorization Code + PKCE (SHA-256); Authorization: Bearer <access_token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing (free to build/test; public apps require Canva review before production use)",
     "sdk": [],
@@ -4245,7 +4481,9 @@
     "auth_hint": "X-Figma-Token: <personal-access-token> or OAuth2 Bearer token",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.figma.com/mcp"
+      "url": "https://mcp.figma.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free: personal access tokens work on free plan, rate-limited per seat/plan tier; MCP free during beta",
     "sdk": [],
@@ -4288,7 +4526,9 @@
     "auth_hint": "Project-scoped API key generated in Site Settings, passed to the framer-api SDK's connect() function",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing (no separate API fee found; scoped to a Framer project/site plan)",
     "sdk": [
@@ -4328,7 +4568,9 @@
     "auth_hint": "Authorization: Token <personal-access-token>",
     "mcp": {
       "type": "official",
-      "url": "https://penpot.app/ai/mcp-server"
+      "url": "https://penpot.app/ai/mcp-server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: free cloud account (design.penpot.app) plus free, open-source self-hosting",
     "sdk": [],
@@ -4367,7 +4609,9 @@
     "auth_hint": "Authorization: Bearer <V0_API_KEY>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing (usage-based; credits included on v0 Premium/Team plans, no separate free API key tier confirmed)",
     "sdk": [
@@ -4397,7 +4641,9 @@
     "auth_hint": "Authorization: Bearer <site-token|workspace-token|oauth-token>",
     "mcp": {
       "type": "official",
-      "url": "https://developers.webflow.com/_mcp/server"
+      "url": "https://developers.webflow.com/_mcp/server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "check pricing (API access itself is free with a token; some CMS/publish actions require the site to be on a paid Webflow plan)",
     "sdk": [],
@@ -4427,7 +4673,9 @@
     "auth_hint": "Authorization: Bearer <access_token> obtained via OAuth Server-to-Server client_credentials grant (client_id/client_secret)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: 500 document transactions/month, no credit card required",
     "sdk": [
@@ -4460,7 +4708,9 @@
     "auth_hint": "AWS SigV4-signed requests using IAM access key/secret or role credentials",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/ag2-mcp-servers/amazon-textract"
+      "url": "https://github.com/ag2-mcp-servers/amazon-textract",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: 1,000 pages/month (DetectDocumentText & AnalyzeDocument, each) for first 3 months; AnalyzeExpense/AnalyzeID get 150 pages/month free",
     "sdk": [
@@ -4509,7 +4759,9 @@
     "auth_hint": "Ocp-Apim-Subscription-Key: <key> header (Azure AD/Entra ID Bearer token also supported)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: F0 pricing tier, 500 pages/month, rate-limited",
     "sdk": [
@@ -4542,7 +4794,9 @@
     "auth_hint": "Authorization: Bearer <API_KEY> (OAuth2 authorization-code/implicit flow also supported for user-facing apps)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.cloudconvert.com"
+      "url": "https://mcp.cloudconvert.com",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free: 25 conversion minutes/day for the web tool; paid credit packages for the API; free Sandbox API for unlimited test jobs without consuming credits",
     "sdk": [
@@ -4589,7 +4843,9 @@
     "auth_hint": "Authorization: Bearer <access_token> via OAuth2 Authorization Code grant or JWT Grant",
     "mcp": {
       "type": "official",
-      "url": "https://developers.docusign.com/platform/mcp-server/"
+      "url": "https://developers.docusign.com/platform/mcp-server/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free developer/demo sandbox account (account-d.docusign.com) with unlimited test envelopes; production use requires a paid DocuSign plan",
     "sdk": [
@@ -4638,7 +4894,9 @@
     "auth_hint": "X-API-KEY: <key> (OAuth 2.0 Bearer tokens also accepted on the same endpoints)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.gamma.app/mcp"
+      "url": "https://mcp.gamma.app/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "paid only: requires Pro, Ultra, Teams, or Business plan; no free API tier",
     "sdk": [],
@@ -4668,7 +4926,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 access token> (service account) or API key for some endpoints",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: 1,000 pages/month per processor type, then $0.65-$10 per 1,000 pages",
     "sdk": [
@@ -4706,7 +4966,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 token>; scopes e.g. https://www.googleapis.com/auth/presentations",
     "mcp": {
       "type": "official",
-      "url": "https://slidesmcp.googleapis.com/mcp"
+      "url": "https://slidesmcp.googleapis.com/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free, no key (standard Google API usage quotas apply; requires GCP project + OAuth consent)",
     "sdk": [
@@ -4741,7 +5003,9 @@
     "auth_hint": "Authorization: Bearer <LLAMA_CLOUD_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.llamaindex.ai/mcp"
+      "url": "https://mcp.llamaindex.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "check pricing: credit-based at $1.25/1,000 credits (1-45+ credits/page depending on tier); 48h parse cache is free to re-query",
     "sdk": [
@@ -4776,7 +5040,9 @@
     "auth_hint": "Authorization: Bearer <MISTRAL_API_KEY>",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/D-Diaa/mistral-ocr-mcp"
+      "url": "https://github.com/D-Diaa/mistral-ocr-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "paid only: $4/1,000 pages (OCR), $5/1,000 pages (Document AI); 50% off via Batch API; no free tier confirmed",
     "sdk": [
@@ -4821,7 +5087,9 @@
     "auth_hint": "x-api-key: <API_KEY> header",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "trial credits: 10,000 credits for 1 month, no credit card required",
     "sdk": [],
@@ -4850,7 +5118,9 @@
     "auth_hint": "Authorization: Bearer <REDUCTO_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.reducto.ai/mcp-server"
+      "url": "https://docs.reducto.ai/mcp-server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "15,000 free credits (~$150 value) for new Standard accounts; extra credits via Startup Program for qualifying early-stage teams",
     "sdk": [
@@ -4885,7 +5155,9 @@
     "auth_hint": "X-API-Key: <key>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/SlideSpeak/slidespeak-mcp"
+      "url": "https://github.com/SlideSpeak/slidespeak-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "check pricing (no free tier confirmed on docs; requires API key from developer settings)",
     "sdk": [],
@@ -4934,7 +5206,9 @@
     "auth_hint": "unstructured-api-key: <key> (verify exact header on api-reference page)",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/Unstructured-IO/UNS-MCP"
+      "url": "https://github.com/Unstructured-IO/UNS-MCP",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "check pricing: low-cost entry tier plus Pay-As-You-Go per-page billing; no explicit free quota confirmed",
     "sdk": [
@@ -4978,7 +5252,9 @@
     "auth_hint": "AWS SigV4 (IAM credentials) via AWS SDK/CLI",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: 2M characters/month for 12 months (new AWS accounts)",
     "sdk": [
@@ -5022,7 +5298,9 @@
     "auth_hint": "Ocp-Apim-Subscription-Key header (+ Ocp-Apim-Subscription-Region)",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier (F0): 2,000,000 characters/month",
     "sdk": [
@@ -5056,7 +5334,9 @@
     "auth_hint": "Authorization: DeepL-Auth-Key <key>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/DeepL/deepl-mcp-server"
+      "url": "https://github.com/DeepL/deepl-mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "API Free plan retired mid-2026 for new signups; now Developer/Growth paid plans with trial credits",
     "sdk": [
@@ -5113,7 +5393,9 @@
     "auth_hint": "OAuth2/IAM (GCP service account), or a simple API key for the Basic v2 edition",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: 500,000 characters/month (permanent, not a trial)",
     "sdk": [
@@ -5149,7 +5431,9 @@
     "auth_hint": "username + api_key query params (Premium); anonymous on the free public endpoint",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key needed on public endpoint (rate-limited: 20 req/min, 75,000 chars/min)",
     "sdk": [],
@@ -5188,7 +5472,9 @@
     "auth_hint": "MMT-ApiKey header",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free trial (no credit card); no permanent free tier, paid plans from $8/M characters",
     "sdk": [
@@ -5220,7 +5506,9 @@
     "auth_hint": "Cloudflare API token to deploy the Worker; the sandbox itself is reached through your own deployed Worker route",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "requires Workers Paid plan ($5/mo) for Containers; no free tier for container-backed sandboxes",
     "sdk": [
@@ -5250,7 +5538,9 @@
     "auth_hint": "CSB_API_KEY env var, passed to the CodeSandbox() SDK constructor",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "Free plan: 400 VM credits/mo (~40 Nano-VM hrs), up to 10 concurrent VMs",
     "sdk": [
@@ -5280,7 +5570,9 @@
     "auth_hint": "Authorization: Bearer <DAYTONA_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://www.daytona.io/docs/en/mcp/"
+      "url": "https://www.daytona.io/docs/en/mcp/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "$200 free compute credit + 5GB storage, no credit card required",
     "sdk": [
@@ -5313,7 +5605,9 @@
     "auth_hint": "E2B_API_KEY env var / Authorization Bearer or X-API-Key header",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/e2b-dev/mcp-server"
+      "url": "https://github.com/e2b-dev/mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free Hobby tier with limited sandbox hours, then pay-as-you-go",
     "sdk": [
@@ -5358,7 +5652,9 @@
     "auth_hint": "X-Auth-Token header (self-hosted, if enabled) or X-RapidAPI-Key (RapidAPI-hosted); can run with none if self-hosted unauthenticated",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "RapidAPI free Basic plan (rate-limited); self-host free & open-source (GPLv3)",
     "sdk": [],
@@ -5386,7 +5682,9 @@
     "auth_hint": "MODAL_TOKEN_ID + MODAL_TOKEN_SECRET (generated via `modal token new`)",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/milkymap/mcp4modal_sandbox"
+      "url": "https://github.com/milkymap/mcp4modal_sandbox",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "Starter plan: $0 base + $30/mo free credits",
     "sdk": [
@@ -5431,7 +5729,9 @@
     "auth_hint": "no key needed for the public instance (rate-limited)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free, no key, public instance rate-limited (~5 req/sec); self-host for unlimited/production use",
     "sdk": [],
@@ -5471,7 +5771,9 @@
     "auth_hint": "Authorization: Bearer <RIZA_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.riza.io/code-interpreter"
+      "url": "https://mcp.riza.io/code-interpreter",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free for side projects/low usage, then usage-based pricing",
     "sdk": [
@@ -5506,7 +5808,9 @@
     "auth_hint": "Authorization: Bearer <RUNLOOP_API_KEY> (auto-loaded from RUNLOOP_API_KEY env var)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "$50 free credits on signup, then usage-based ($0.108/CPU-hr, $0.0252/GB-hr)",
     "sdk": [
@@ -5538,7 +5842,9 @@
     "auth_hint": "VERCEL_OIDC_TOKEN (recommended, auto on Vercel) or VERCEL_TOKEN Bearer + team/project IDs",
     "mcp": {
       "type": "official",
-      "url": "https://vercel.com/docs/mcp"
+      "url": "https://vercel.com/docs/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "usage included on Hobby plan, otherwise usage-based on Pro/Enterprise",
     "sdk": [
@@ -5571,7 +5877,9 @@
     "auth_hint": "Circle-Token: <token>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/CircleCI-Public/mcp-server-circleci"
+      "url": "https://github.com/CircleCI-Public/mcp-server-circleci",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free plan: 30,000 credits/month (~6,000 build minutes on a small Docker resource class), credits expire monthly",
     "sdk": [],
@@ -5621,7 +5929,9 @@
     "auth_hint": "DD-API-KEY: <api_key> plus DD-APPLICATION-KEY: <app_key> for some endpoints",
     "mcp": {
       "type": "official",
-      "url": "https://docs.datadoghq.com/mcp_server/setup/"
+      "url": "https://docs.datadoghq.com/mcp_server/setup/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free Infrastructure Monitoring plan: 1-day metric retention, up to 5 hosts; other products (APM, Logs, Security) are paid",
     "sdk": [
@@ -5668,7 +5978,9 @@
     "auth_hint": "Authorization: Bearer <token> (obtained via login or a Personal/Organization Access Token)",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/docker/hub-mcp"
+      "url": "https://github.com/docker/hub-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free personal accounts with rate-limited image pulls; paid Pro/Team/Business tiers raise pull limits",
     "sdk": [],
@@ -5710,7 +6022,9 @@
     "auth_hint": "Authorization: Bearer <token>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/github/github-mcp-server"
+      "url": "https://github.com/github/github-mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free with any GitHub account; 5,000 req/hr authenticated, 60/hr unauthenticated",
     "sdk": [
@@ -5771,7 +6085,9 @@
     "auth_hint": "PRIVATE-TOKEN: <personal_access_token>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/"
+      "url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: full REST API access on GitLab.com Free plan; some features gated to Premium/Ultimate",
     "sdk": [],
@@ -5812,7 +6128,9 @@
     "auth_hint": "No key required; optional token from dash.globalping.io raises limits: 'Authorization: Bearer <GLOBALPING_TOKEN>'",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.globalping.dev/mcp"
+      "url": "https://mcp.globalping.dev/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "No key; 250 tests/hour anonymously (up to 50 probes per measurement), 500 tests/hour with a free account token (up to 500 probes); extra tests use credits.",
     "sdk": [
@@ -5839,7 +6157,9 @@
     "auth_hint": "No key: GET https://search.maven.org/solrsearch/select?q=<query>&rows=20&wt=json",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/arvindand/maven-tools-mcp"
+      "url": "https://github.com/arvindand/maven-tools-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "No key; free public API with no published quota (fair use).",
     "sdk": [],
@@ -5863,7 +6183,9 @@
     "auth_hint": "Authorization: Token token=<API_KEY> (or Authorization: Bearer <oauth_token>)",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/PagerDuty/pagerduty-mcp-server"
+      "url": "https://github.com/PagerDuty/pagerduty-mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free plan for up to 5 users: 100 monthly SMS/phone notifications, 1 on-call schedule, 1 escalation policy, API access",
     "sdk": [],
@@ -5923,7 +6245,9 @@
     "auth_hint": "X-API-Key: <POSTMAN_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://learning.postman.com/_mcp/server"
+      "url": "https://learning.postman.com/_mcp/server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free plan available; rate limits ~300 req/min general, stricter for specific endpoints",
     "sdk": [],
@@ -5970,7 +6294,9 @@
     "auth_hint": "Authorization: Bearer <REFLAG_API_KEY> (scoped Management API key); remote MCP uses OAuth sign-in",
     "mcp": {
       "type": "official",
-      "url": "https://app.reflag.com/api/mcp"
+      "url": "https://app.reflag.com/api/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "Free Starter plan: 1,000 monthly tracked users, unlimited seats, 3 environments; no overage (upgrade required)",
     "sdk": [
@@ -5997,7 +6323,9 @@
     "auth_hint": "Authorization: Bearer <auth_token>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.sentry.dev/mcp"
+      "url": "https://mcp.sentry.dev/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free Developer plan: 1 user, 5,000 errors/mo, 5GB logs, 50 replays; includes MCP access",
     "sdk": [],
@@ -6036,7 +6364,9 @@
     "auth_hint": "Authorization: Bearer <access_token>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.supabase.com/mcp"
+      "url": "https://mcp.supabase.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free plan available; rate limit 120 req/min per user/project (lower for heavier endpoints)",
     "sdk": [],
@@ -6067,7 +6397,9 @@
     "auth_hint": "AWS Signature Version 4 (SigV4) signed request using IAM access key/secret or STS temporary credentials",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/awslabs/mcp"
+      "url": "https://github.com/awslabs/mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "new accounts get up to $200 in credits plus free usage of 90+ services for up to 6 months; some services also have a perpetual Always Free tier",
     "sdk": [
@@ -6122,7 +6454,9 @@
     "auth_hint": "Authorization: Bearer <access_token> (Microsoft Entra ID / Azure AD OAuth2)",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/microsoft/mcp"
+      "url": "https://github.com/microsoft/mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "12 months of select free services plus $200 credit for 30 days for new accounts; many services also have a permanent always-free monthly amount",
     "sdk": [
@@ -6183,7 +6517,9 @@
     "auth_hint": "Authorization: Bearer <API_Token>",
     "mcp": {
       "type": "official",
-      "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/"
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free with any Cloudflare account; API access itself is free, manages both free and paid Cloudflare products",
     "sdk": [
@@ -6234,7 +6570,9 @@
     "auth_hint": "Authorization: Bearer <FLY_API_TOKEN>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.fly.io/sprites/integrations/remote-mcp"
+      "url": "https://docs.fly.io/sprites/integrations/remote-mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "no perpetual free tier; pay-as-you-go billing with trial credit for new accounts",
     "sdk": [
@@ -6266,7 +6604,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 access token> (service account or Application Default Credentials); API keys for select public APIs",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/googleapis/genai-toolbox"
+      "url": "https://github.com/googleapis/genai-toolbox",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free trial credit for new customers plus an Always Free tier with perpetual no-cost limits on select products",
     "sdk": [
@@ -6317,7 +6657,9 @@
     "auth_hint": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN>",
     "mcp": {
       "type": "official",
-      "url": "https://netlify-mcp.netlify.app/mcp"
+      "url": "https://netlify-mcp.netlify.app/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free Starter plan; API usage subject to account plan limits",
     "sdk": [
@@ -6367,7 +6709,9 @@
     "auth_hint": "Authorization: Bearer <api-key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.render.com/mcp"
+      "url": "https://mcp.render.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free static sites; free web services that spin down after inactivity",
     "sdk": [],
@@ -6398,7 +6742,9 @@
     "auth_hint": "API token created in the EdgeOne Makers console (API Token tab), passed to the MCP server or CLI as EDGEONE_PAGES_API_TOKEN; the hosted HTML-sharing MCP needs no token",
     "mcp": {
       "type": "official",
-      "url": "https://mcp-on-edge.edgeone.app/mcp-server"
+      "url": "https://mcp-on-edge.edgeone.app/mcp-server",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "Free plan (stated as permanent): 40 projects, 500 builds/month, 3M Edge Function and 1M Cloud Function invocations/month, 5 GB storage, 1 GB KV, 1 GB Blob.",
     "sdk": [],
@@ -6422,7 +6768,9 @@
     "auth_hint": "Authorization: Bearer <access_token>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.vercel.com"
+      "url": "https://mcp.vercel.com",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free on Hobby plan; some resources/endpoints require Pro/paid plan",
     "sdk": [
@@ -6471,7 +6819,9 @@
     "auth_hint": "Authorization: Bearer <API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.agentset.ai/production/mcp-server"
+      "url": "https://docs.agentset.ai/production/mcp-server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "Free plan (forever): 1,000 pages ingested and 10,000 retrievals per month, 60 requests/min per namespace",
     "sdk": [
@@ -6498,7 +6848,9 @@
     "auth_hint": "x-chroma-token or Authorization header",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/chroma-core/chroma-mcp"
+      "url": "https://github.com/chroma-core/chroma-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "freemium: ~1M embeddings plus free credits, no card for signup",
     "sdk": [
@@ -6542,7 +6894,9 @@
     "auth_hint": "Basic auth with Cloud API key id/secret",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/ClickHouse/mcp-clickhouse"
+      "url": "https://github.com/ClickHouse/mcp-clickhouse",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "no permanent free tier; 30-day trial with $300 credits",
     "sdk": [
@@ -6588,7 +6942,9 @@
     "auth_hint": "deploy key / admin key",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/get-convex/convex-backend"
+      "url": "https://github.com/get-convex/convex-backend",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "generous free tier for small apps, zero cost/maintenance",
     "sdk": [
@@ -6633,7 +6989,9 @@
     "auth_hint": "OAuth2/IAM (Google Cloud service account or user credentials)",
     "mcp": {
       "type": "official",
-      "url": "https://bigquery.googleapis.com/mcp"
+      "url": "https://bigquery.googleapis.com/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free tier: 1TB queries/mo, 10GB storage/mo",
     "sdk": [
@@ -6675,7 +7033,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://api.letta.com/mcp"
+      "url": "https://api.letta.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free personal tier with rotating free models; usage-based billing beyond that",
     "sdk": [
@@ -6707,7 +7067,9 @@
     "auth_hint": "Authorization: Token <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.mem0.ai/mcp/"
+      "url": "https://mcp.mem0.ai/mcp/",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free (Hobby) tier: 10K add requests, 1K retrievals/mo, 1 project",
     "sdk": [
@@ -6739,7 +7101,9 @@
     "auth_hint": "HTTP Digest auth with Atlas public/private API key, or OAuth2 service account",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/mongodb-js/mongodb-mcp-server"
+      "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: M0 cluster free forever (512MB)",
     "sdk": [
@@ -6795,7 +7159,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/neondatabase/mcp-server-neon"
+      "url": "https://github.com/neondatabase/mcp-server-neon",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: 1 project, 0.5GB storage",
     "sdk": [],
@@ -6838,7 +7204,9 @@
     "auth_hint": "Api-Key header",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/pinecone-io/pinecone-mcp"
+      "url": "https://github.com/pinecone-io/pinecone-mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier (Starter plan, limited pods/reads)",
     "sdk": [
@@ -6885,7 +7253,9 @@
     "auth_hint": "Service token or OAuth (for MCP)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.pscale.dev/mcp/planetscale"
+      "url": "https://mcp.pscale.dev/mcp/planetscale",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free tier available (Hobby plan)",
     "sdk": [
@@ -6925,7 +7295,9 @@
     "auth_hint": "api-key header",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/qdrant/mcp-server-qdrant"
+      "url": "https://github.com/qdrant/mcp-server-qdrant",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: 1GB disk / 1 node cluster, no card; suspends after 1 week idle",
     "sdk": [
@@ -6971,7 +7343,9 @@
     "auth_hint": "Key-pair auth, OAuth, or PAT; cloud_iam variants for Snowpark",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/Snowflake-Labs/mcp"
+      "url": "https://github.com/Snowflake-Labs/mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "trial credits (no permanent free tier); check pricing",
     "sdk": [
@@ -7025,7 +7399,9 @@
     "auth_hint": "apikey header + Authorization: Bearer <service_role or PAT>",
     "mcp": {
       "type": "official",
-      "url": "https://supabase.com/docs/guides/getting-started/mcp"
+      "url": "https://supabase.com/docs/guides/getting-started/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: 2 projects, 500MB DB, 5GB bandwidth",
     "sdk": [
@@ -7067,7 +7443,9 @@
     "auth_hint": "HTTP Digest auth with API public key as username and private key as password (Management API); SQL via MySQL connection string or serverless HTTP driver with cluster user/password",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/pingcap/pytidb"
+      "url": "https://github.com/pingcap/pytidb",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "Free: up to 5 Starter instances per org, 25 GiB row storage + 25 GiB columnar storage + 250M Request Units per month in total; no credit card",
     "sdk": [
@@ -7094,7 +7472,9 @@
     "auth_hint": "Authorization: Bearer <TINYBIRD_TOKEN> (workspace admin, resource-scoped token or JWT)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN"
+      "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "Free plan: 10 GB storage, 1,000 API requests/day, 0.25 vCPU shared; no credit card",
     "sdk": [
@@ -7121,7 +7501,9 @@
     "auth_hint": "Authorization: Bearer <token>",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: 100 databases, 500M row reads/mo, no card required",
     "sdk": [
@@ -7154,7 +7536,9 @@
     "auth_hint": "Authorization: Bearer <token>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.upstash.com/mcp"
+      "url": "https://mcp.upstash.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: Redis 256MB/500K cmds/mo; Vector 10K vectors",
     "sdk": [
@@ -7187,7 +7571,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/weaviate/mcp-server-weaviate"
+      "url": "https://github.com/weaviate/mcp-server-weaviate",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free 14-day Sandbox, ~50K objects, no card required (expires, not for persistence)",
     "sdk": [
@@ -7233,7 +7619,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://help.getzep.com/memory-mcp-server"
+      "url": "https://help.getzep.com/memory-mcp-server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "check pricing",
     "sdk": [
@@ -7265,7 +7653,9 @@
     "auth_hint": "Authorization: Bearer <token>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/zilliztech/zilliz-mcp-server"
+      "url": "https://github.com/zilliztech/zilliz-mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: serverless cluster, 5GB storage + $100 credits, no card",
     "sdk": [
@@ -7311,7 +7701,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.agentmail.to"
+      "url": "https://docs.agentmail.to",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free: 3 inboxes, 3,000 emails/mo, 3GB storage, no card required",
     "sdk": [
@@ -7343,7 +7735,9 @@
     "auth_hint": "Authorization: Bot <token>",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/SaseQ/discord-mcp"
+      "url": "https://github.com/SaseQ/discord-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key needed beyond creating a bot application",
     "sdk": [
@@ -7395,7 +7789,9 @@
     "auth_hint": "Authorization: Bearer <CHANNEL_ACCESS_TOKEN> (issued for the Messaging API channel in LINE Developers Console)",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/line/line-bot-mcp-server"
+      "url": "https://github.com/line/line-bot-mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited and never counted. Free quotas vary by region",
     "sdk": [
@@ -7426,7 +7822,9 @@
     "auth_hint": "Basic auth: api:<API_KEY>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free: 100 emails/day; 30-day free trial on paid tiers",
     "sdk": [
@@ -7472,7 +7870,9 @@
     "auth_hint": "No key for public topics: POST the message body to https://ntfy.sh/<topic>. Optional access token for reserved topics: 'Authorization: Bearer tk_<TOKEN>'",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/gitmotion/ntfy-me-mcp"
+      "url": "https://github.com/gitmotion/ntfy-me-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "No key; anonymous publishing to public topics, rate-limited per visitor IP (burst of 60 requests, then 1 request every 5 s, roughly 17,280/day); paid plans from $6/month add reserved topics, higher limits, email and phone-call notifications.",
     "sdk": [],
@@ -7496,7 +7896,9 @@
     "auth_hint": "X-Postmark-Server-Token: <token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free: 100 emails/month (Developer plan, no expiry)",
     "sdk": [
@@ -7532,7 +7934,9 @@
     "auth_hint": "Authorization: Bearer re_xxxxxxxxx",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.resend.com/mcp"
+      "url": "https://mcp.resend.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: 3,000 emails/mo, 100/day",
     "sdk": [
@@ -7578,7 +7982,9 @@
     "auth_hint": "Authorization: Bearer SG.xxxxxxxxx",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing (trial-based; no confirmed permanent free plan)",
     "sdk": [
@@ -7624,7 +8030,9 @@
     "auth_hint": "Authorization: Bearer xoxb-...",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.slack.com/mcp"
+      "url": "https://mcp.slack.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free, no key needed beyond creating a Slack app/workspace",
     "sdk": [
@@ -7673,7 +8081,9 @@
     "auth_hint": "API key + server-side secret used to mint short-lived user JWT tokens",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier available (limited monthly active users), then usage-based pricing",
     "sdk": [
@@ -7707,7 +8117,9 @@
     "auth_hint": "token in URL path: https://api.telegram.org/bot<token>/METHOD",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/chigwell/telegram-mcp"
+      "url": "https://github.com/chigwell/telegram-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key needed beyond a bot token from @BotFather",
     "sdk": [
@@ -7752,7 +8164,9 @@
     "auth_hint": "Basic auth: AccountSID:AuthToken (or API Key SID:Secret)",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/twilio-labs/mcp"
+      "url": "https://github.com/twilio-labs/mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free trial credit, no permanent free tier (pay-as-you-go after)",
     "sdk": [
@@ -7808,7 +8222,9 @@
     "auth_hint": "API key+secret for SMS/Number Insight; JWT bearer token for Voice/Video APIs",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "trial/test credit on signup, then pay-as-you-go",
     "sdk": [
@@ -7843,7 +8259,9 @@
     "auth_hint": "Authorization: Bearer <system-user access token>",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/lharries/whatsapp-mcp"
+      "url": "https://github.com/lharries/whatsapp-mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "1,000 free service conversations/mo (Meta), then per-conversation pricing",
     "sdk": [],
@@ -7884,7 +8302,9 @@
     "auth_hint": "Authorization: Bearer <access_token> (Server-to-Server OAuth recommended for agents)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "usable on free Zoom account within Basic plan limits; some endpoints require paid plan",
     "sdk": [
@@ -7917,7 +8337,9 @@
     "auth_hint": "authorization: <api_key> header",
     "mcp": {
       "type": "official",
-      "url": "https://api.bland.ai/v1/mcp"
+      "url": "https://api.bland.ai/v1/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free credits + inbound number on signup (Start plan), no credit card required",
     "sdk": [],
@@ -7947,7 +8369,9 @@
     "auth_hint": "Authorization: Token <api_key>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "$200 free credit on signup",
     "sdk": [
@@ -7980,7 +8404,9 @@
     "auth_hint": "xi-api-key: <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://api.elevenlabs.io/v1/mcp"
+      "url": "https://api.elevenlabs.io/v1/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free plan: 10k credits/month shared across ElevenLabs products",
     "sdk": [
@@ -8017,7 +8443,9 @@
     "auth_hint": "API key + secret sign a JWT access token sent as Authorization: Bearer <token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free Build plan: 1,000 agent session minutes/mo, 5,000 WebRTC participant minutes/mo, 50GB data transfer",
     "sdk": [
@@ -8054,7 +8482,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.retellai.com"
+      "url": "https://mcp.retellai.com",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "$10 free credit on signup, then pay-as-you-go ($0.07-$0.31/min for voice)",
     "sdk": [
@@ -8097,7 +8527,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "self-serve free trial to build/test agents (pay only for actual calls); enterprise plans from ~$30k/yr for scale",
     "sdk": [],
@@ -8136,7 +8568,9 @@
     "auth_hint": "Basic Auth (Account SID + Auth Token) or API Key/Secret",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/twilio-labs/mcp"
+      "url": "https://github.com/twilio-labs/mcp",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "trial account with free trial credit (~$15), then pay-as-you-go",
     "sdk": [
@@ -8195,7 +8629,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.vapi.ai/mcp"
+      "url": "https://mcp.vapi.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "$5 free credit on signup, then pay-as-you-go (~$0.05/min platform fee + provider costs)",
     "sdk": [
@@ -8229,7 +8665,9 @@
     "auth_hint": "Authorization: Bearer <personal access token>",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/domdomegg/airtable-mcp-server"
+      "url": "https://github.com/domdomegg/airtable-mcp-server",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: API access on Free plan, ~5 req/sec per base",
     "sdk": [
@@ -8286,7 +8724,9 @@
     "auth_hint": "Authorization: Bearer <personal access token or OAuth2 token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: API included on Personal (free) plan, rate limited",
     "sdk": [
@@ -8337,7 +8777,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 token> (or basic auth with API token for Cloud REST)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.atlassian.com/v1/mcp/authv2"
+      "url": "https://mcp.atlassian.com/v1/mcp/authv2",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: available on Free Jira/Confluence plans; rate limits vary by plan",
     "sdk": [
@@ -8371,7 +8813,9 @@
     "auth_hint": "Authorization: Bearer <access_token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing (Box API generally requires a paid Box account for meaningful use)",
     "sdk": [
@@ -8404,7 +8848,9 @@
     "auth_hint": "Authorization: Bearer <API key>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: API included on Free plan, 120 req/min (higher limits on request)",
     "sdk": [
@@ -8435,7 +8881,9 @@
     "auth_hint": "Authorization: Bearer <personal access token or OAuth2 token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing (personal access tokens available for own-account use; broader API access varies by plan)",
     "sdk": [],
@@ -8479,7 +8927,9 @@
     "auth_hint": "Authorization: <personal API token> (no Bearer prefix) or OAuth2 token",
     "mcp": {
       "type": "official",
-      "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server"
+      "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: API access included on Free Forever plan",
     "sdk": [],
@@ -8524,7 +8974,9 @@
     "auth_hint": "Authorization: Bearer <API token>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.superhuman.com/developers/apis/v1"
+      "url": "https://docs.superhuman.com/developers/apis/v1",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free, included for all users on both free and paid workspaces",
     "sdk": [],
@@ -8553,7 +9005,9 @@
     "auth_hint": "Authorization: Bearer <access_token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: API access included on Basic (free) plan, rate limited",
     "sdk": [
@@ -8595,7 +9049,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free (subject to per-API daily quotas)",
     "sdk": [
@@ -8628,7 +9084,9 @@
     "auth_hint": "Authorization: Bearer <API key or OAuth2 token>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.linear.app/mcp"
+      "url": "https://mcp.linear.app/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: API access included on Free plan (rate limited)",
     "sdk": [
@@ -8675,7 +9133,9 @@
     "auth_hint": "Authorization: Bearer <token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free with a Microsoft 365/Entra ID tenant (free dev tenant via Microsoft 365 Developer Program)",
     "sdk": [
@@ -8709,7 +9169,9 @@
     "auth_hint": "Authorization: <personal API token or OAuth2 token>",
     "mcp": {
       "type": "official",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: GraphQL API included on Free plan (rate limited)",
     "sdk": [
@@ -8749,7 +9211,9 @@
     "auth_hint": "REST: 'xc-token: <API_TOKEN>' header; MCP: 'x-api-key: <MCP_TOKEN>' header or OAuth sign-in",
     "mcp": {
       "type": "official",
-      "url": "https://app.nocodb.com/mcp"
+      "url": "https://app.nocodb.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "Free plan: 1,000 records, 1 GB storage, 1,000 API calls/month, 3 editors, 100 automation runs; no credit card",
     "sdk": [],
@@ -8773,7 +9237,9 @@
     "auth_hint": "Authorization: Bearer <integration token or OAuth2 token>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.notion.com/mcp"
+      "url": "https://mcp.notion.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free, API access included on all plans (rate limit ~3 req/sec)",
     "sdk": [
@@ -8822,7 +9288,9 @@
     "auth_hint": "Authorization: Bearer <API token or OAuth2 token>",
     "mcp": {
       "type": "official",
-      "url": "https://ai.todoist.net/mcp"
+      "url": "https://ai.todoist.net/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free to use; some features gated by the user's Todoist plan",
     "sdk": [
@@ -8864,7 +9332,9 @@
     "auth_hint": "Authorization: Bearer <access_token> (or legacy key+token query params)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free, no key needed to register an app; usage is rate limited",
     "sdk": [],
@@ -8892,7 +9362,9 @@
     "auth_hint": "Authorization: Bearer <api_key_or_oauth_token>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.attio.com/mcp"
+      "url": "https://mcp.attio.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "check pricing (free trial available; no permanent free tier confirmed)",
     "sdk": [],
@@ -8931,7 +9403,9 @@
     "auth_hint": "Authorization: Bearer <private-app-token> (or OAuth2 access token)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.hubspot.com"
+      "url": "https://mcp.hubspot.com",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free CRM account with limited-scope API access; many endpoints require a paid Hub tier (see APIs-by-tier docs)",
     "sdk": [
@@ -8975,7 +9449,9 @@
     "auth_hint": "Authorization: Bearer <access_token>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.intercom.com/mcp"
+      "url": "https://mcp.intercom.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free development workspace for building/testing; production use requires a paid Intercom plan",
     "sdk": [],
@@ -9014,7 +9490,9 @@
     "auth_hint": "Authorization: Klaviyo-API-Key <private_api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.klaviyo.com/mcp"
+      "url": "https://mcp.klaviyo.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free plan up to 250 contacts / 500 email sends per month",
     "sdk": [],
@@ -9060,7 +9538,9 @@
     "auth_hint": "Basic auth 'anystring:<api_key>' or Authorization: Bearer <token>; API key suffix encodes data center (e.g. -us6)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free plan up to 250 contacts / 500 emails per month (API accessible on free plan)",
     "sdk": [],
@@ -9089,7 +9569,9 @@
     "auth_hint": "api_token query param, or Authorization: Bearer <oauth_token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "no free tier; 14/30-day trial and free developer sandbox account for testing",
     "sdk": [
@@ -9131,7 +9613,9 @@
     "auth_hint": "Authorization: Bearer <access_token> (OAuth2 web-server / JWT bearer flow)",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/salesforcecli/mcp"
+      "url": "https://github.com/salesforcecli/mcp",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free Developer Edition org available via signup at developer.salesforce.com/signup",
     "sdk": [
@@ -9184,7 +9668,9 @@
     "auth_hint": "Authorization: Bearer <oauth_token> (or Basic {email}/token:{api_token})",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/reminia/zendesk-mcp-server"
+      "url": "https://github.com/reminia/zendesk-mcp-server",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free trial (14 days); no permanent free tier, paid Suite plans required for ongoing use",
     "sdk": [],
@@ -9233,7 +9719,9 @@
     "auth_hint": "Authorization: Bearer <API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://www.ayrshare.com"
+      "url": "https://www.ayrshare.com",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "trial credits; no permanent free tier — paid plans required for production use",
     "sdk": [
@@ -9275,7 +9763,9 @@
     "auth_hint": "Authorization: Bearer <session/OAuth2 token> (legacy app passwords also supported)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free, no key needed for public reads; free account required for posting",
     "sdk": [
@@ -9306,7 +9796,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "check pricing — most scopes require LinkedIn Partner Program approval",
     "sdk": [],
@@ -9334,7 +9826,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free, no central key; register an app per instance, no cost",
     "sdk": [],
@@ -9372,7 +9866,9 @@
     "auth_hint": "access_token=<token> query param or Authorization: Bearer <token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free, but most non-trivial read/write permissions require Meta App Review and business verification",
     "sdk": [
@@ -9404,7 +9900,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: standard rate limits; higher limits/trial access require app review",
     "sdk": [],
@@ -9442,7 +9940,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free for non-commercial/personal use under Reddit Data API terms; commercial or high-volume use requires a paid Data API license",
     "sdk": [
@@ -9482,7 +9982,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free; requires app review for production access, sandbox mode available for testing",
     "sdk": [],
@@ -9520,7 +10022,9 @@
     "auth_hint": "Authorization: Bearer <App Bearer token or OAuth2 user token>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "very limited free tier: write-only, ~500 posts/month, no meaningful read access; paid tiers (Basic $200/mo+) needed for real usage",
     "sdk": [
@@ -9551,7 +10055,9 @@
     "auth_hint": "key=<API_KEY> for public reads; Authorization: Bearer <OAuth2 token> for writes/private data",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: 10,000 quota units/day (extendable on request)",
     "sdk": [
@@ -9583,7 +10089,9 @@
     "auth_hint": "apiKey query param",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: 3,000 credits/day (~90,000/month), no card required",
     "sdk": [
@@ -9614,7 +10122,9 @@
     "auth_hint": "key query param (OAuth2/IAM for some enterprise/Datasets APIs)",
     "mcp": {
       "type": "official",
-      "url": "https://mapstools.googleapis.com/mcp"
+      "url": "https://mapstools.googleapis.com/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "$200 free monthly usage credit across most Maps APIs",
     "sdk": [
@@ -9659,7 +10169,9 @@
     "auth_hint": "apiKey query param (OAuth2 app tokens also supported)",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: roughly 30,000 transactions/month on the Base/Freemium plan",
     "sdk": [
@@ -9693,7 +10205,9 @@
     "auth_hint": "Query parameter ?key=<API_KEY> (optional: keyless lookups allowed at a lower quota)",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/ip2location/mcp-ip2location-io"
+      "url": "https://github.com/ip2location/mcp-ip2location-io",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "Free plan: 50,000 IP geolocation queries/month, 500 domain WHOIS and 50 hosted-domain queries/month (attribution required); keyless: 1,000 queries/day.",
     "sdk": [
@@ -9725,7 +10239,9 @@
     "auth_hint": "Header X-API-Key: <API_KEY> or query parameter ?apikey=<API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/iplocate/mcp-server-iplocate"
+      "url": "https://github.com/iplocate/mcp-server-iplocate",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "Free plan: 1,000 requests/day forever, all data types (geolocation, VPN/proxy/Tor, ASN, company, abuse contacts), no credit card.",
     "sdk": [
@@ -9756,7 +10272,9 @@
     "auth_hint": "access_token query param or Bearer token",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/mapbox/mcp-server"
+      "url": "https://github.com/mapbox/mcp-server",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: monthly free quotas per API (e.g. 50,000 map loads/month)",
     "sdk": [
@@ -9807,7 +10325,9 @@
     "auth_hint": "none, but requires a descriptive User-Agent header",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key, no rate-limit tier (fair-use)",
     "sdk": [],
@@ -9836,7 +10356,9 @@
     "auth_hint": "none for non-commercial use; API key + 'customer-' host prefix for commercial tier",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key for non-commercial use (fair-use limits apply)",
     "sdk": [
@@ -9866,7 +10388,9 @@
     "auth_hint": "Authorization header with API key",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: ~2,000 requests/day (varies by endpoint), signup required",
     "sdk": [
@@ -9897,7 +10421,9 @@
     "auth_hint": "none, but must send a valid User-Agent/Referer identifying the app",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key; public demo server capped at 1 request/second, bulk use prohibited",
     "sdk": [],
@@ -9925,7 +10451,9 @@
     "auth_hint": "appid query param",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/robertn702/mcp-openweathermap"
+      "url": "https://github.com/robertn702/mcp-openweathermap",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: 1,000 calls/day (60 calls/min) on current weather/forecast",
     "sdk": [],
@@ -9966,7 +10494,9 @@
     "auth_hint": "none",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free, no key; public instances are fair-use/rate-limited",
     "sdk": [],
@@ -9994,7 +10524,9 @@
     "auth_hint": "apikey query param",
     "mcp": {
       "type": "official",
-      "url": "https://www.pulsemcp.com/servers/tomorrow-io"
+      "url": "https://www.pulsemcp.com/servers/tomorrow-io",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free tier: 500 requests/day, 3 req/sec, 1 monitored location/alert",
     "sdk": [],
@@ -10023,7 +10555,9 @@
     "auth_hint": "X-API-Key header (or client-key for client-side)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "paid only; requires a signed merchant contract, pay per-transaction",
     "sdk": [
@@ -10079,7 +10613,9 @@
     "auth_hint": "APCA-API-KEY-ID + APCA-API-SECRET-KEY headers",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free paper trading (unlimited); free basic (IEX) market data feed",
     "sdk": [
@@ -10111,7 +10647,9 @@
     "auth_hint": "apikey query param",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: 25 requests/day",
     "sdk": [],
@@ -10139,7 +10677,9 @@
     "auth_hint": "CDP API Key ID/Secret, JWT-signed bearer requests",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free CDP API access (usage-based fees on some onchain services); x402 is pay-per-request, not a subscription",
     "sdk": [
@@ -10180,7 +10720,9 @@
     "auth_hint": "x-cg-demo-api-key or x-cg-pro-api-key header; keyless via the free MCP endpoint",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.api.coingecko.com/mcp"
+      "url": "https://mcp.api.coingecko.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free Demo API plan (~10k calls/month, 30 calls/min); keyless free MCP with shared rate limits",
     "sdk": [],
@@ -10219,7 +10761,9 @@
     "auth_hint": "Header X-CMC_PRO_API_KEY: <API_KEY> (keyless public API under https://pro-api.coinmarketcap.com/public-api/... needs no key; MCP uses header X-CMC-MCP-API-KEY)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.coinmarketcap.com/mcp"
+      "url": "https://mcp.coinmarketcap.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "Free Basic plan: 15,000 credits/month, 50 requests/min, 1 API key, commercial use allowed; plus a keyless public API with lower rate limits",
     "sdk": [
@@ -10246,7 +10790,9 @@
     "auth_hint": "No key needed on https://api.dexpaprika.com; optional free key sent as the whole header value: Authorization: <API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.dexpaprika.com/streamable-http"
+      "url": "https://mcp.dexpaprika.com/streamable-http",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "No key; 30,000 credits per rolling 30 days per IP at 15 requests/min. Free registered key: 100,000 credits/30 days at 30 requests/min, no card",
     "sdk": [
@@ -10275,7 +10821,9 @@
     "auth_hint": "apikey query param",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free tier: 250 requests/day (limited endpoints)",
     "sdk": [],
@@ -10313,7 +10861,9 @@
     "auth_hint": "Authorization: Bearer <ACCESS_TOKEN> (test or production access token from Your integrations; OAuth for acting on behalf of sellers)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.mercadopago.com/mcp"
+      "url": "https://mcp.mercadopago.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "Free to integrate: no API or monthly fees, only per-transaction commissions; free test credentials and test users for sandbox payments",
     "sdk": [
@@ -10345,7 +10895,9 @@
     "auth_hint": "app_id query param",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: 1,000 requests/month, USD base only, hourly updates",
     "sdk": [],
@@ -10373,7 +10925,9 @@
     "auth_hint": "OAuth2 client-credentials Bearer token; MCP also supports an access-token env var",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.paypal.com"
+      "url": "https://mcp.paypal.com",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free to integrate; pay per-transaction fees only; sandbox for testing",
     "sdk": [
@@ -10424,7 +10978,9 @@
     "auth_hint": "PLAID-CLIENT-ID + PLAID-SECRET headers",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free Sandbox/Development access; Production requires approval and has per-item pricing",
     "sdk": [
@@ -10479,7 +11035,9 @@
     "auth_hint": "Authorization: Bearer <api_key> or apiKey query param",
     "mcp": {
       "type": "official",
-      "url": "https://massive.com/docs"
+      "url": "https://massive.com/docs",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier available (delayed data, limited calls/min); paid plans for real-time",
     "sdk": [
@@ -10512,7 +11070,9 @@
     "auth_hint": "Authorization: Bearer <access_token> (personal token or OAuth2)",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free to integrate; pay per-transaction processing fees; free Sandbox for testing",
     "sdk": [
@@ -10560,7 +11120,9 @@
     "auth_hint": "Authorization: Bearer <secret_key> (or OAuth/Agent key for MCP)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.stripe.com"
+      "url": "https://mcp.stripe.com",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free to integrate; pay per-transaction fees only, no monthly fee",
     "sdk": [
@@ -10614,7 +11176,9 @@
     "auth_hint": "Authorization: Bearer <API token> (personal) or OAuth2 (Wise Platform partners)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free API access; normal Wise transfer fees apply per transaction; sandbox available",
     "sdk": [],
@@ -10642,7 +11206,9 @@
     "auth_hint": "LWA (Login with Amazon) OAuth2 access token via x-amz-access-token header",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free API access; requires an existing Amazon Seller/Vendor Central account",
     "sdk": [
@@ -10688,7 +11254,9 @@
     "auth_hint": "X-Auth-Token header (store API account) or OAuth2 for public apps",
     "mcp": {
       "type": "official",
-      "url": "https://docs.bigcommerce.com/_mcp/server"
+      "url": "https://docs.bigcommerce.com/_mcp/server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free API access; requires an active BigCommerce store plan",
     "sdk": [
@@ -10729,7 +11297,9 @@
     "auth_hint": "Authorization: Bearer <OAuth2 token> (application or user token)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free developer tier with call-volume limits; sandbox environment included",
     "sdk": [
@@ -10769,7 +11339,9 @@
     "auth_hint": "OAuth2 Bearer token + x-api-key header (app keystring)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free developer keystring (rate-limited, e.g. 10 req/sec, ~5,000 req/day per app by default)",
     "sdk": [],
@@ -10797,7 +11369,9 @@
     "auth_hint": "Authorization: Bearer <ACCESS_TOKEN> obtained via OAuth 2.0 with the app's Client ID and Secret from DevCenter",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.mercadolibre.com/devsite/v1/mcp"
+      "url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "Free API access for any Mercado Libre account that creates an app in DevCenter; only normal marketplace selling fees apply",
     "sdk": [],
@@ -10821,7 +11395,9 @@
     "auth_hint": "Authorization: Bearer <token> (Private token or OAuth2 for public apps)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free API access; pay only for products/fulfillment/shipping ordered",
     "sdk": [],
@@ -10860,7 +11436,9 @@
     "auth_hint": "X-Shopify-Access-Token header (custom app token or OAuth2 for public apps)",
     "mcp": {
       "type": "official",
-      "url": "https://shopify.dev/docs/apps/build/devmcp"
+      "url": "https://shopify.dev/docs/apps/build/devmcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free API access; requires an active paid Shopify store subscription to use",
     "sdk": [
@@ -10892,7 +11470,9 @@
     "auth_hint": "OAuth1.0a signature (HTTP) or Basic auth with Consumer Key/Secret (HTTPS)",
     "mcp": {
       "type": "community",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "free (self-hosted plugin; no vendor API fees, only your own WordPress hosting costs)",
     "sdk": [
@@ -10922,7 +11502,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://www.activepieces.com/docs/mcp/overview"
+      "url": "https://www.activepieces.com/docs/mcp/overview",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free: open-source, self-hostable at no cost; cloud free plan gives 100 credits/day, no card required",
     "sdk": [],
@@ -10952,7 +11534,9 @@
     "auth_hint": "Authorization: Bearer <api_key>; tool auth uses managed per-provider OAuth (e.g. GitHub, Google)",
     "mcp": {
       "type": "official",
-      "url": "https://docs.arcade.dev/en/resources/integrations"
+      "url": "https://docs.arcade.dev/en/resources/integrations",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: 2,000 auth events + 2,000 tool calls/mo, no credit card required",
     "sdk": [
@@ -10985,7 +11569,9 @@
     "auth_hint": "Authorization: Bearer <api_key>; per-toolkit connections use managed OAuth",
     "mcp": {
       "type": "official",
-      "url": "https://docs.composio.dev/docs/composio-connect"
+      "url": "https://docs.composio.dev/docs/composio-connect",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: 100,000 tool calls + 50,000 trigger events/mo, no credit card required",
     "sdk": [
@@ -11018,7 +11604,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.gumloop.com/gumloop/mcp"
+      "url": "https://mcp.gumloop.com/gumloop/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "14-day free trial of Pro (20,000 credits), requires credit card, no permanent free tier",
     "sdk": [
@@ -11051,7 +11639,9 @@
     "auth_hint": "Webhooks key in URL path: https://maker.ifttt.com/trigger/{event}/with/key/{key}",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "no free-plan access; Webhooks/API require Pro plan ($2.99+/mo)",
     "sdk": [],
@@ -11090,7 +11680,9 @@
     "auth_hint": "X-StorageApi-Token: <STORAGE_API_TOKEN>; remote MCP uses OAuth sign-in",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.keboola.com/mcp"
+      "url": "https://mcp.keboola.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "Free plan: 1 project, 120 compute minutes in the first month then 60 minutes/month, extra-small Snowflake backend; no credit card",
     "sdk": [
@@ -11117,7 +11709,9 @@
     "auth_hint": "Authorization: Token <api_token>",
     "mcp": {
       "type": "official",
-      "url": "https://www.make.com/en/mcp"
+      "url": "https://www.make.com/en/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: 1,000 operations/mo; most REST API endpoints require a paid plan",
     "sdk": [],
@@ -11147,7 +11741,9 @@
     "auth_hint": "Authorization: Bearer <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration"
+      "url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: 2,000 monthly credits for evaluation; production usage needs a paid Starter/Business/Enterprise plan",
     "sdk": [
@@ -11180,7 +11776,9 @@
     "auth_hint": "X-N8N-API-KEY: <api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger"
+      "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free, self-hosted (open source, unlimited); n8n Cloud offers a paid-plan trial",
     "sdk": [],
@@ -11220,7 +11818,9 @@
     "auth_hint": "Authorization: Bearer <secret_key>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: 10 connections, 10 compute hours, 10GB data transfer/mo",
     "sdk": [
@@ -11251,7 +11851,9 @@
     "auth_hint": "Authorization: Bearer <token>; connected accounts use managed OAuth",
     "mcp": {
       "type": "official",
-      "url": "https://www.useparagon.com/mcp"
+      "url": "https://www.useparagon.com/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free experimentation tier with self-serve keys; production/scale pricing is usage-based or contract",
     "sdk": [],
@@ -11281,7 +11883,9 @@
     "auth_hint": "Authorization: Bearer <access_token> (OAuth client-credentials flow recommended)",
     "mcp": {
       "type": "official",
-      "url": "https://pipedream.com/docs/connect/mcp/developers"
+      "url": "https://pipedream.com/docs/connect/mcp/developers",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "check pricing (pipedream.com/pricing) for current Connect free-tier request/credit limits",
     "sdk": [
@@ -11313,7 +11917,9 @@
     "auth_hint": "Authorization: Bearer <stackone_api_key>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.stackone.com/connect/ai-platforms/overview"
+      "url": "https://docs.stackone.com/connect/ai-platforms/overview",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: 1,000 action-call credits/seat/mo (Starter), no credit card required",
     "sdk": [
@@ -11346,7 +11952,9 @@
     "auth_hint": "Authorization: Bearer <api_key> (exact header not independently confirmed - verify in docs)",
     "mcp": {
       "type": "official",
-      "url": "https://superglue.ai/docs"
+      "url": "https://superglue.ai/docs",
+      "domain_verified": null,
+      "kind": "official"
     },
     "free_tier": "free tier: Pro plan free to start, 3,000 executions/mo and 5M tokens/mo included, self-serve signup",
     "sdk": [],
@@ -11375,7 +11983,9 @@
     "auth_hint": "Authorization: Bearer <connection_token> (OAuth auto-configured for listed clients like Claude/ChatGPT)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.zapier.com/api/v1/connect"
+      "url": "https://mcp.zapier.com/api/v1/connect",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "Zapier Free plan (100 tasks/mo) covers MCP tool calls; more on paid plans",
     "sdk": [],
@@ -11405,7 +12015,9 @@
     "auth_hint": "x-api-key: <ANTHROPIC_API_KEY> (plus anthropic-version header)",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "paid only",
     "sdk": [
@@ -11442,7 +12054,9 @@
     "auth_hint": "Authorization: Bearer <COHERE_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.cohere.com/_mcp/server"
+      "url": "https://docs.cohere.com/_mcp/server",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free trial key: 1,000 calls/mo, rate-limited",
     "sdk": [
@@ -11487,7 +12101,9 @@
     "auth_hint": "Headers 'authorization: <OPIK_API_KEY>' (no Bearer prefix) and 'Comet-Workspace: <WORKSPACE>'; remote MCP uses browser sign-in",
     "mcp": {
       "type": "official",
-      "url": "https://www.comet.com/opik/api/v1/mcp"
+      "url": "https://www.comet.com/opik/api/v1/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "Free cloud plan: 25k spans/month, 60-day data retention, up to 10 team members",
     "sdk": [
@@ -11514,7 +12130,9 @@
     "auth_hint": "Authorization: Bearer <DEEPSEEK_API_KEY>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "paid only",
     "sdk": [],
@@ -11553,7 +12171,9 @@
     "auth_hint": "Authorization: Key <FAL_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.fal.ai/mcp"
+      "url": "https://mcp.fal.ai/mcp",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "check pricing",
     "sdk": [
@@ -11586,7 +12206,9 @@
     "auth_hint": "Authorization: Bearer <FIREWORKS_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.fireworks.ai/mcp"
+      "url": "https://docs.fireworks.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "trial credits: $1 on signup",
     "sdk": [
@@ -11619,7 +12241,9 @@
     "auth_hint": "x-goog-api-key: <GEMINI_API_KEY> (or ?key= query param)",
     "mcp": {
       "type": "official",
-      "url": "https://gemini-api-docs-mcp.dev"
+      "url": "https://gemini-api-docs-mcp.dev",
+      "domain_verified": false,
+      "kind": "official"
     },
     "free_tier": "free tier: rate-limited access to Flash/Pro models",
     "sdk": [
@@ -11654,7 +12278,9 @@
     "auth_hint": "Authorization: Bearer <GROQ_API_KEY>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: rate-limited per model, no card",
     "sdk": [
@@ -11686,7 +12312,9 @@
     "auth_hint": "Authorization: Bearer <HF_TOKEN>",
     "mcp": {
       "type": "official",
-      "url": "https://huggingface.co/mcp"
+      "url": "https://huggingface.co/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: monthly credits (more with PRO)",
     "sdk": [
@@ -11719,7 +12347,9 @@
     "auth_hint": "Authorization: Bearer <MISTRAL_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://api.mistral.ai/mcp"
+      "url": "https://api.mistral.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: Studio free mode, rate-limited",
     "sdk": [
@@ -11763,7 +12393,9 @@
     "auth_hint": "Authorization: Bearer <OPENAI_API_KEY>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "paid only",
     "sdk": [
@@ -11810,7 +12442,9 @@
     "auth_hint": "Authorization: Bearer <OPENROUTER_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.openrouter.ai/mcp"
+      "url": "https://mcp.openrouter.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free models: 50 req/day (1,000/day after $10 purchase)",
     "sdk": [
@@ -11854,7 +12488,9 @@
     "auth_hint": "X-API-Key: <key>",
     "mcp": {
       "type": "community",
-      "url": "https://github.com/apinetwork/piapi-mcp-server"
+      "url": "https://github.com/apinetwork/piapi-mcp-server",
+      "domain_verified": null,
+      "kind": "community"
     },
     "free_tier": "trial credits: $0.50 on signup",
     "sdk": [],
@@ -11896,7 +12532,9 @@
     "auth_hint": "Authorization: Bearer <REPLICATE_API_TOKEN>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.replicate.com"
+      "url": "https://mcp.replicate.com",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "paid only",
     "sdk": [
@@ -11932,7 +12570,9 @@
     "auth_hint": "Authorization: Bearer <TOGETHER_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.together.ai/mcp"
+      "url": "https://docs.together.ai/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "check pricing",
     "sdk": [
@@ -11966,7 +12606,9 @@
     "auth_hint": "Authorization: Bearer <AI_GATEWAY_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.vercel.com"
+      "url": "https://mcp.vercel.com",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "free tier: monthly credits on subset of models",
     "sdk": [
@@ -11999,7 +12641,9 @@
     "auth_hint": "Authorization: Bearer <VOYAGE_API_KEY>",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "domain_verified": null,
+      "kind": "none"
     },
     "free_tier": "free tier: 200M tokens on current models",
     "sdk": [
@@ -12030,7 +12674,9 @@
     "auth_hint": "Authorization: Bearer <XAI_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.x.ai/api/mcp"
+      "url": "https://docs.x.ai/api/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted"
     },
     "free_tier": "paid only (prepaid credits)",
     "sdk": [

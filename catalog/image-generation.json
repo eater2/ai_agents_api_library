@@ -14,7 +14,9 @@
    "auth_hint": "OAuth2 Server-to-Server (Client ID/Secret via Adobe IMS); Authorization: Bearer <token>, token valid 24h",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing; requires Adobe Developer Console project and Firefly Services entitlement",
    "sdk": [],
@@ -41,7 +43,9 @@
    "auth_hint": "x-key: <BFL_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.bfl.ai"
+    "url": "https://mcp.bfl.ai",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "paid only, no free tier (FLUX Schnell weights are open for self-hosting)",
    "sdk": [
@@ -71,7 +75,9 @@
    "auth_hint": "x-freepik-api-key header (migrating to x-magnific-api-key under Magnific rebrand)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
    "sdk": [],
@@ -98,7 +104,9 @@
    "auth_hint": "x-goog-api-key: $GEMINI_API_KEY",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing (free API key tier exists but image models are mostly usage-billed)",
    "sdk": [
@@ -130,7 +138,9 @@
    "auth_hint": "Api-Key: <IDEOGRAM_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.ideogram.ai/mcp"
+    "url": "https://mcp.ideogram.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "no free API credits (web app has 10 slow credits/week); API is pay-per-image, $40 min top-up",
    "sdk": [],
@@ -158,7 +168,9 @@
    "auth_hint": "Authorization: Bearer <LEONARDO_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.leonardo.ai/v1/mcp"
+    "url": "https://mcp.leonardo.ai/v1/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "$5 free API credits after account verification, then pay-as-you-go",
    "sdk": [],
@@ -196,7 +208,9 @@
    "auth_hint": "Authorization: Bearer <OPENAI_API_KEY>",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp"
+    "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "paid only; no free image credits, usage-based billing",
    "sdk": [
@@ -243,7 +257,9 @@
    "auth_hint": "Authorization: Bearer RECRAFT_API_TOKEN",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/recraft-ai/mcp-recraft-server"
+    "url": "https://github.com/recraft-ai/mcp-recraft-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "paid only; pay-per-image (from $0.007/image on V4.1 Flash), no confirmed free credits",
    "sdk": [],
@@ -285,7 +301,9 @@
    "auth_hint": "X-Api-Key header",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free: 50 API calls/month (preview/small resolution only), then paid credits",
    "sdk": [],
@@ -312,7 +330,9 @@
    "auth_hint": "Authorization: Bearer <STABILITY_API_KEY>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "25 free credits on signup, then pay-as-you-go",
    "sdk": [

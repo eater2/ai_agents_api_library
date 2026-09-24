@@ -49,7 +49,7 @@ Recommended agent workflow: (1) pick the category file, (2) filter by `auth` and
 
 ### MCP server
 
-The catalog is also an MCP server with four tools: `search_apis` (filters: `query`, `category`, `mcp`, `no_auth`, `free_tier`, `auth`), `get_api`, `get_reviews` (user reviews with pros and cons) and `list_categories`. No key needed. Add it to your MCP client:
+The catalog is also an MCP server with four tools: `search_apis` (filters: `query`, `category`, `mcp` (official/remote/any), `no_auth`, `free_tier`, `no_card`, `auth`), `get_api`, `get_reviews` (user reviews with pros and cons) and `list_categories`. No key needed. Add it to your MCP client:
 
 ```json
 {

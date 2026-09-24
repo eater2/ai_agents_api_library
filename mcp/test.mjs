@@ -31,6 +31,13 @@ const geo = JSON.parse(await call("search_apis", { query: "geocoding", no_auth: 
 assert.ok(geo.results.every((r) => r.no_auth));
 console.log("geocoding without key:", geo.results.map((r) => r.name).join(", "));
 
+const remote = JSON.parse(await call("search_apis", { query: "web search", mcp: "remote", limit: 5 }));
+assert.ok(remote.results.length > 0 && remote.results.every((r) => r.mcp.remote_url || r.mcp.kind === "vendor-hosted"));
+console.log("web search with hosted MCP:", remote.results.map((r) => r.name).join(", "));
+
+const noCard = JSON.parse(await call("search_apis", { query: "web search", no_card: true, limit: 5 }));
+assert.ok(noCard.results.every((r) => r.no_auth || r.free_plan?.requires_card === false));
+
 const detail = JSON.parse(await call("get_api", { id: video.results[0].id }));
 assert.ok(detail.docs.startsWith("http"));
 

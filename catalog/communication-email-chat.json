@@ -14,7 +14,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.agentmail.to"
+    "url": "https://docs.agentmail.to",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free: 3 inboxes, 3,000 emails/mo, 3GB storage, no card required",
    "sdk": [
@@ -45,7 +47,9 @@
    "auth_hint": "Authorization: Bot <token>",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/SaseQ/discord-mcp"
+    "url": "https://github.com/SaseQ/discord-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key needed beyond creating a bot application",
    "sdk": [
@@ -96,7 +100,9 @@
    "auth_hint": "Authorization: Bearer <CHANNEL_ACCESS_TOKEN> (issued for the Messaging API channel in LINE Developers Console)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/line/line-bot-mcp-server"
+    "url": "https://github.com/line/line-bot-mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited and never counted. Free quotas vary by region",
    "sdk": [
@@ -126,7 +132,9 @@
    "auth_hint": "Basic auth: api:<API_KEY>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free: 100 emails/day; 30-day free trial on paid tiers",
    "sdk": [
@@ -171,7 +179,9 @@
    "auth_hint": "No key for public topics: POST the message body to https://ntfy.sh/<topic>. Optional access token for reserved topics: 'Authorization: Bearer tk_<TOKEN>'",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/gitmotion/ntfy-me-mcp"
+    "url": "https://github.com/gitmotion/ntfy-me-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "No key; anonymous publishing to public topics, rate-limited per visitor IP (burst of 60 requests, then 1 request every 5 s, roughly 17,280/day); paid plans from $6/month add reserved topics, higher limits, email and phone-call notifications.",
    "sdk": [],
@@ -194,7 +204,9 @@
    "auth_hint": "X-Postmark-Server-Token: <token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free: 100 emails/month (Developer plan, no expiry)",
    "sdk": [
@@ -229,7 +241,9 @@
    "auth_hint": "Authorization: Bearer re_xxxxxxxxx",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.resend.com/mcp"
+    "url": "https://mcp.resend.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 3,000 emails/mo, 100/day",
    "sdk": [
@@ -274,7 +288,9 @@
    "auth_hint": "Authorization: Bearer SG.xxxxxxxxx",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing (trial-based; no confirmed permanent free plan)",
    "sdk": [
@@ -319,7 +335,9 @@
    "auth_hint": "Authorization: Bearer xoxb-...",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.slack.com/mcp"
+    "url": "https://mcp.slack.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free, no key needed beyond creating a Slack app/workspace",
    "sdk": [
@@ -367,7 +385,9 @@
    "auth_hint": "API key + server-side secret used to mint short-lived user JWT tokens",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier available (limited monthly active users), then usage-based pricing",
    "sdk": [
@@ -400,7 +420,9 @@
    "auth_hint": "token in URL path: https://api.telegram.org/bot<token>/METHOD",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/chigwell/telegram-mcp"
+    "url": "https://github.com/chigwell/telegram-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key needed beyond a bot token from @BotFather",
    "sdk": [
@@ -444,7 +466,9 @@
    "auth_hint": "Basic auth: AccountSID:AuthToken (or API Key SID:Secret)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/twilio-labs/mcp"
+    "url": "https://github.com/twilio-labs/mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free trial credit, no permanent free tier (pay-as-you-go after)",
    "sdk": [
@@ -499,7 +523,9 @@
    "auth_hint": "API key+secret for SMS/Number Insight; JWT bearer token for Voice/Video APIs",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "trial/test credit on signup, then pay-as-you-go",
    "sdk": [
@@ -533,7 +559,9 @@
    "auth_hint": "Authorization: Bearer <system-user access token>",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/lharries/whatsapp-mcp"
+    "url": "https://github.com/lharries/whatsapp-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "1,000 free service conversations/mo (Meta), then per-conversation pricing",
    "sdk": [],
@@ -573,7 +601,9 @@
    "auth_hint": "Authorization: Bearer <access_token> (Server-to-Server OAuth recommended for agents)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "usable on free Zoom account within Basic plan limits; some endpoints require paid plan",
    "sdk": [

@@ -14,7 +14,9 @@
    "auth_hint": "X-Subscription-Token: <API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/brave/brave-search-mcp-server"
+    "url": "https://github.com/brave/brave-search-mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "$5 free monthly credits (~1,000 queries on Search plan); credit card required at signup as anti-fraud measure",
    "sdk": [],
@@ -69,7 +71,9 @@
    "auth_hint": "Authorization: Bearer <EXA_API_KEY> (or x-api-key header)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.exa.ai/mcp"
+    "url": "https://mcp.exa.ai/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free tier: $10 free credits/month (~1,400 searches), no payment method required",
    "sdk": [
@@ -112,7 +116,9 @@
    "auth_hint": "Authorization: Bearer <JINA_API_KEY> (works without a key too, but at a lower rate limit)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "no key needed: 100 RPM (s.jina.ai search) / 500 RPM (r.jina.ai reader); free API key raises limits to 1,000/5,000 RPM with token-based billing",
    "sdk": [],
@@ -141,7 +147,9 @@
    "auth_hint": "Authorization: Bot <token>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/kagisearch/kagimcp"
+    "url": "https://github.com/kagisearch/kagimcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "no free tier: pay-per-use, $12 per 1,000 search requests, invoiced monthly or at $100 usage, whichever first",
    "sdk": [
@@ -186,7 +194,9 @@
    "auth_hint": "Authorization: Bearer <LINKUP_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.linkup.so/mcp"
+    "url": "https://mcp.linkup.so/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "$20 free credits/month for new accounts signing up with a professional email",
    "sdk": [
@@ -226,7 +236,9 @@
    "auth_hint": "check docs (exact query-param name obtained after contacting Mojeek for a plan)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "limited-query free trial available on request; paid plans from £2 CPM (Startup, 5 req/s, 100k/day cap)",
    "sdk": [],
@@ -253,7 +265,9 @@
    "auth_hint": "x-api-key: <PARALLEL_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://search.parallel.ai/mcp"
+    "url": "https://search.parallel.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free: 5,000 requests/month across APIs, plus up to $80 signup credit and $5/month free credits",
    "sdk": [
@@ -286,7 +300,9 @@
    "auth_hint": "Authorization: Bearer <PERPLEXITY_API_KEY> (remote MCP also supports OAuth sign-in)",
    "mcp": {
     "type": "official",
-    "url": "https://api.perplexity.ai/mcp"
+    "url": "https://api.perplexity.ai/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "no confirmed free tier; pay-as-you-go, Search API billed at $5 per 1,000 requests",
    "sdk": [
@@ -318,7 +334,9 @@
    "auth_hint": "api_key=<KEY> as query param, or Authorization: Bearer <KEY>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "100 free requests, no credit card required; then paid plans from $40/mo (10,000 searches)",
    "sdk": [],
@@ -346,7 +364,9 @@
    "auth_hint": "none by default; self-hosted instance owner controls access (can add auth/proxy in front)",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/ihor-sokoliuk/mcp-searxng"
+    "url": "https://github.com/ihor-sokoliuk/mcp-searxng",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key (self-hosted; you run and pay for the instance yourself)",
    "sdk": [],
@@ -386,7 +406,9 @@
    "auth_hint": "api_key query parameter (also usable as header depending on client library)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/serpapi/serpapi-mcp"
+    "url": "https://github.com/serpapi/serpapi-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free plan: 250 searches/month, 50 requests/hour throughput",
    "sdk": [
@@ -437,7 +459,9 @@
    "auth_hint": "X-API-KEY header (per widely published examples; could not independently re-confirm via automated fetch, see notes)",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/marcopesani/mcp-server-serper"
+    "url": "https://github.com/marcopesani/mcp-server-serper",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free tier: 2,500 queries, no credit card required",
    "sdk": [],
@@ -477,7 +501,9 @@
    "auth_hint": "Authorization: Bearer tvly-<API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.tavily.com/mcp/"
+    "url": "https://mcp.tavily.com/mcp/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 1,000 API credits/month, no credit card required",
    "sdk": [
@@ -517,7 +543,9 @@
    "auth_hint": "X-API-Key header (or YDC_API_KEY env var)",
    "mcp": {
     "type": "official",
-    "url": "https://api.you.com/mcp"
+    "url": "https://api.you.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free credits on signup via you.com/platform; free search profile also available through the keyless Docs MCP server",
    "sdk": [

@@ -14,7 +14,9 @@
    "auth_hint": "AWS Signature Version 4 (SigV4) signed request using IAM access key/secret or STS temporary credentials",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/awslabs/mcp"
+    "url": "https://github.com/awslabs/mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "new accounts get up to $200 in credits plus free usage of 90+ services for up to 6 months; some services also have a perpetual Always Free tier",
    "sdk": [
@@ -68,7 +70,9 @@
    "auth_hint": "Authorization: Bearer <access_token> (Microsoft Entra ID / Azure AD OAuth2)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/microsoft/mcp"
+    "url": "https://github.com/microsoft/mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "12 months of select free services plus $200 credit for 30 days for new accounts; many services also have a permanent always-free monthly amount",
    "sdk": [
@@ -128,7 +132,9 @@
    "auth_hint": "Authorization: Bearer <API_Token>",
    "mcp": {
     "type": "official",
-    "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/"
+    "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free with any Cloudflare account; API access itself is free, manages both free and paid Cloudflare products",
    "sdk": [
@@ -178,7 +184,9 @@
    "auth_hint": "Authorization: Bearer <FLY_API_TOKEN>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.fly.io/sprites/integrations/remote-mcp"
+    "url": "https://docs.fly.io/sprites/integrations/remote-mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "no perpetual free tier; pay-as-you-go billing with trial credit for new accounts",
    "sdk": [
@@ -209,7 +217,9 @@
    "auth_hint": "Authorization: Bearer <OAuth2 access token> (service account or Application Default Credentials); API keys for select public APIs",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/googleapis/genai-toolbox"
+    "url": "https://github.com/googleapis/genai-toolbox",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free trial credit for new customers plus an Always Free tier with perpetual no-cost limits on select products",
    "sdk": [
@@ -259,7 +269,9 @@
    "auth_hint": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN>",
    "mcp": {
     "type": "official",
-    "url": "https://netlify-mcp.netlify.app/mcp"
+    "url": "https://netlify-mcp.netlify.app/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free Starter plan; API usage subject to account plan limits",
    "sdk": [
@@ -308,7 +320,9 @@
    "auth_hint": "Authorization: Bearer <api-key>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.render.com/mcp"
+    "url": "https://mcp.render.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free static sites; free web services that spin down after inactivity",
    "sdk": [],
@@ -338,7 +352,9 @@
    "auth_hint": "API token created in the EdgeOne Makers console (API Token tab), passed to the MCP server or CLI as EDGEONE_PAGES_API_TOKEN; the hosted HTML-sharing MCP needs no token",
    "mcp": {
     "type": "official",
-    "url": "https://mcp-on-edge.edgeone.app/mcp-server"
+    "url": "https://mcp-on-edge.edgeone.app/mcp-server",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "Free plan (stated as permanent): 40 projects, 500 builds/month, 3M Edge Function and 1M Cloud Function invocations/month, 5 GB storage, 1 GB KV, 1 GB Blob.",
    "sdk": [],
@@ -361,7 +377,9 @@
    "auth_hint": "Authorization: Bearer <access_token>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.vercel.com"
+    "url": "https://mcp.vercel.com",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free on Hobby plan; some resources/endpoints require Pro/paid plan",
    "sdk": [

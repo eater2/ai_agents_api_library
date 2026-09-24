@@ -14,7 +14,9 @@
    "auth_hint": "no auth",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/blazickjp/arxiv-mcp-server"
+    "url": "https://github.com/blazickjp/arxiv-mcp-server",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key",
    "sdk": [],
@@ -60,7 +62,9 @@
    "auth_hint": "api.data.gov key: query parameter ?api_key=<API_KEY> or header X-Api-Key: <API_KEY>",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/cyanheads/congressgov-mcp-server"
+    "url": "https://github.com/cyanheads/congressgov-mcp-server",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "Free: government API, key issued instantly by email; 5,000 requests/hour.",
    "sdk": [],
@@ -83,7 +87,9 @@
    "auth_hint": "Authorization: Bearer <ctx7sk_... key> (optional; works at low limits without key)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.context7.com/mcp"
+    "url": "https://mcp.context7.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free; low limits without key, free API key from context7.com/dashboard raises limits",
    "sdk": [
@@ -122,7 +128,9 @@
    "auth_hint": "no key; add mailto=<email> param or User-Agent contact for the 'polite pool'",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/afrise/academic-search-mcp-server"
+    "url": "https://github.com/afrise/academic-search-mcp-server",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key",
    "sdk": [],
@@ -163,7 +171,9 @@
    "auth_hint": "no auth",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/cyanheads/gdelt-mcp-server"
+    "url": "https://github.com/cyanheads/gdelt-mcp-server",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key",
    "sdk": [],
@@ -203,7 +213,9 @@
    "auth_hint": "No key for public repos: GET https://gitingest.com/api/<owner>/<repo>; optional GitHub token for private repos via the 'token' parameter",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/narumiruna/gitingest-mcp"
+    "url": "https://github.com/narumiruna/gitingest-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "No key; free public service with no published quota (the web UI has rate limiting and CAPTCHA protection).",
    "sdk": [
@@ -228,7 +240,9 @@
    "auth_hint": "no auth",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/pskill9/hn-server"
+    "url": "https://github.com/pskill9/hn-server",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key",
    "sdk": [],
@@ -278,7 +292,9 @@
    "auth_hint": "No key; send a User-Agent header with app name and contact email, e.g. 'User-Agent: MyApp (me@example.org)'",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/8enSmith/mcp-open-library"
+    "url": "https://github.com/8enSmith/mcp-open-library",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "No key; free and open: 1 request/second anonymous, 3 requests/second with an identifying User-Agent.",
    "sdk": [],
@@ -301,7 +317,9 @@
    "auth_hint": "Query parameter ?api-key=<API_KEY> (create an app at developer.nytimes.com and enable the APIs you need)",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/jeffmm/nytimes-mcp"
+    "url": "https://github.com/jeffmm/nytimes-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "Free: all public APIs are free; most APIs 500 requests/day and 5 requests/minute (Archive API higher).",
    "sdk": [],
@@ -324,7 +342,9 @@
    "auth_hint": "X-Api-Key: <key> header or apiKey=<key> query param",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/matteoantoci/mcp-newsapi"
+    "url": "https://github.com/matteoantoci/mcp-newsapi",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free Developer plan: 100 req/day, dev/test only, 24h article delay",
    "sdk": [],
@@ -364,7 +384,9 @@
    "auth_hint": "api_key=<key> query param (optional; basic use works without key)",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/benedict2310/Scientific-Papers-MCP"
+    "url": "https://github.com/benedict2310/Scientific-Papers-MCP",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free: $1 of API usage/day without payment method; free key raises daily budget 10x",
    "sdk": [],
@@ -406,7 +428,9 @@
    "auth_hint": "optional api_key=<NCBI key> query param; tool and email params recommended",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/openags/paper-search-mcp"
+    "url": "https://github.com/openags/paper-search-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free; 3 req/s without key, 10 req/s with free NCBI API key",
    "sdk": [],
@@ -446,7 +470,9 @@
    "auth_hint": "x-api-key: <key> (optional; unauthenticated access allowed)",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server"
+    "url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free; no key (shared, throttled pool) or free API key on request",
    "sdk": [],
@@ -487,7 +513,9 @@
    "auth_hint": "no auth for reads (descriptive User-Agent required); OAuth2 Bearer only for edits",
    "mcp": {
     "type": "official",
-    "url": "https://wd-mcp.wmcloud.org/mcp"
+    "url": "https://wd-mcp.wmcloud.org/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free, no key",
    "sdk": [],
@@ -515,7 +543,9 @@
    "auth_hint": "Reads need no key but require a descriptive User-Agent header with contact info. Optional OAuth2 via Authorization: Bearer <access token> raises rate limits.",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/Rudra-ravi/wikipedia-mcp"
+    "url": "https://github.com/Rudra-ravi/wikipedia-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free, no key (rate-limited)",
    "sdk": [],
@@ -555,7 +585,9 @@
    "auth_hint": "appid=<AppID> query param or Authorization: Bearer <AppID>",
    "mcp": {
     "type": "official",
-    "url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/"
+    "url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free non-commercial developer AppID (reported up to 2,000 calls/month); paid for commercial use",
    "sdk": [],

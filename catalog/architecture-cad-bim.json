@@ -14,7 +14,9 @@
    "auth_hint": "Authorization: Bearer <token> (2-legged or 3-legged OAuth2)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free trial credits, then pay-as-you-go",
    "sdk": [
@@ -44,7 +46,9 @@
    "auth_hint": "Authorization: Bearer <token> (OAuth2 via Bentley IMS)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free developer sign-up/trial, then consumption-based pricing",
    "sdk": [
@@ -73,7 +77,9 @@
    "auth_hint": "API key (token param) or OAuth2 Bearer token",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier with monthly free credits, then usage-based pricing",
    "sdk": [
@@ -106,7 +112,9 @@
    "auth_hint": "HMAC-signed API key pair (access/secret) for personal scripts, or OAuth2 Bearer token for published apps",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier (public documents only); private documents need a paid plan",
    "sdk": [],
@@ -133,7 +141,9 @@
    "auth_hint": "Authorization: Bearer <token> (OAuth2 authorization code / client credentials)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free developer sandbox; production requires customer's paid Procore plan",
    "sdk": [],
@@ -170,7 +180,9 @@
    "auth_hint": "optional RhinoComputeKey header; endpoint is otherwise open once deployed",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "self-hosted only; requires a Rhino license, cloud deployment billed by core-hour",
    "sdk": [],
@@ -197,7 +209,9 @@
    "auth_hint": "Authorization: Bearer <personal access token>, or OAuth2 for published apps",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free Explore plan (1 project, 3 users), unlimited API calls",
    "sdk": [
@@ -229,7 +243,9 @@
    "auth_hint": "Authorization: Bearer <token> (Trimble Identity OAuth2)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing",
    "sdk": [],
@@ -256,7 +272,9 @@
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "start free trial credits, then usage-based pay-as-you-go",
    "sdk": [

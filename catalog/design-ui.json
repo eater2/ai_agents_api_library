@@ -14,7 +14,9 @@
    "auth_hint": "OAuth2 Authorization Code + PKCE (SHA-256); Authorization: Bearer <access_token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing (free to build/test; public apps require Canva review before production use)",
    "sdk": [],
@@ -42,7 +44,9 @@
    "auth_hint": "X-Figma-Token: <personal-access-token> or OAuth2 Bearer token",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.figma.com/mcp"
+    "url": "https://mcp.figma.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free: personal access tokens work on free plan, rate-limited per seat/plan tier; MCP free during beta",
    "sdk": [],
@@ -84,7 +88,9 @@
    "auth_hint": "Project-scoped API key generated in Site Settings, passed to the framer-api SDK's connect() function",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing (no separate API fee found; scoped to a Framer project/site plan)",
    "sdk": [
@@ -123,7 +129,9 @@
    "auth_hint": "Authorization: Token <personal-access-token>",
    "mcp": {
     "type": "official",
-    "url": "https://penpot.app/ai/mcp-server"
+    "url": "https://penpot.app/ai/mcp-server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: free cloud account (design.penpot.app) plus free, open-source self-hosting",
    "sdk": [],
@@ -161,7 +169,9 @@
    "auth_hint": "Authorization: Bearer <V0_API_KEY>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "check pricing (usage-based; credits included on v0 Premium/Team plans, no separate free API key tier confirmed)",
    "sdk": [
@@ -190,7 +200,9 @@
    "auth_hint": "Authorization: Bearer <site-token|workspace-token|oauth-token>",
    "mcp": {
     "type": "official",
-    "url": "https://developers.webflow.com/_mcp/server"
+    "url": "https://developers.webflow.com/_mcp/server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "check pricing (API access itself is free with a token; some CMS/publish actions require the site to be on a paid Webflow plan)",
    "sdk": [],

@@ -14,7 +14,9 @@
    "auth_hint": "Authorization: Bearer <api_key_or_oauth_token>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.attio.com/mcp"
+    "url": "https://mcp.attio.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "check pricing (free trial available; no permanent free tier confirmed)",
    "sdk": [],
@@ -52,7 +54,9 @@
    "auth_hint": "Authorization: Bearer <private-app-token> (or OAuth2 access token)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.hubspot.com"
+    "url": "https://mcp.hubspot.com",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free CRM account with limited-scope API access; many endpoints require a paid Hub tier (see APIs-by-tier docs)",
    "sdk": [
@@ -95,7 +99,9 @@
    "auth_hint": "Authorization: Bearer <access_token>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.intercom.com/mcp"
+    "url": "https://mcp.intercom.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free development workspace for building/testing; production use requires a paid Intercom plan",
    "sdk": [],
@@ -133,7 +139,9 @@
    "auth_hint": "Authorization: Klaviyo-API-Key <private_api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.klaviyo.com/mcp"
+    "url": "https://mcp.klaviyo.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan up to 250 contacts / 500 email sends per month",
    "sdk": [],
@@ -178,7 +186,9 @@
    "auth_hint": "Basic auth 'anystring:<api_key>' or Authorization: Bearer <token>; API key suffix encodes data center (e.g. -us6)",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free plan up to 250 contacts / 500 emails per month (API accessible on free plan)",
    "sdk": [],
@@ -206,7 +216,9 @@
    "auth_hint": "api_token query param, or Authorization: Bearer <oauth_token>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "no free tier; 14/30-day trial and free developer sandbox account for testing",
    "sdk": [
@@ -247,7 +259,9 @@
    "auth_hint": "Authorization: Bearer <access_token> (OAuth2 web-server / JWT bearer flow)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/salesforcecli/mcp"
+    "url": "https://github.com/salesforcecli/mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free Developer Edition org available via signup at developer.salesforce.com/signup",
    "sdk": [
@@ -299,7 +313,9 @@
    "auth_hint": "Authorization: Bearer <oauth_token> (or Basic {email}/token:{api_token})",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/reminia/zendesk-mcp-server"
+    "url": "https://github.com/reminia/zendesk-mcp-server",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "free trial (14 days); no permanent free tier, paid Suite plans required for ongoing use",
    "sdk": [],

@@ -2,7 +2,7 @@
 
 > Verified catalog of 323 third-party APIs and MCP servers that AI agents can call on a user's behalf after a one-time API key / OAuth / MCP setup. 27 categories. Last verified 2026-09-24. Each entry: docs URL, auth method + header hint, MCP server (official/community), free tier, SDKs, OpenAPI and llms.txt links.
 
-Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, plus derived booleans has_free_tier, has_trial, no_auth, stale, link_check{checked_at, docs, mcp} and ratings[] (proof of use: SourceForge rating and review count, GitHub stars, Smithery uses; each with url and fetched_at) and reviews_url (up to 100 user reviews with pros/cons, reviewer names removed; also via the MCP tool get_reviews).
+Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, plus derived booleans has_free_tier, has_trial, no_auth, stale, link_check{checked_at, docs, mcp} and ratings[] (proof of use: SourceForge rating and review count, GitHub stars, Smithery uses; each with url and fetched_at) and reviews_url (up to 100 user reviews with pros/cons, reviewer names removed; also via the MCP tool get_reviews). Researched on vendor pages, each with source_url and checked_at: free_plan{kind, requires_card, quota, period, watermark}, auth_scheme (OpenAPI securityScheme: type, in, name, scheme, format), base_url, rate_limits, oauth_scopes, async_jobs, data_policy, mcp{maintainer, remote_url, repo, tools, covers_full_api} plus derived mcp.kind (vendor-hosted/official/community/none) and mcp.domain_verified.
 
 ## Data
 

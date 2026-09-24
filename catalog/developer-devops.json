@@ -14,7 +14,9 @@
    "auth_hint": "Circle-Token: <token>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/CircleCI-Public/mcp-server-circleci"
+    "url": "https://github.com/CircleCI-Public/mcp-server-circleci",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free plan: 30,000 credits/month (~6,000 build minutes on a small Docker resource class), credits expire monthly",
    "sdk": [],
@@ -63,7 +65,9 @@
    "auth_hint": "DD-API-KEY: <api_key> plus DD-APPLICATION-KEY: <app_key> for some endpoints",
    "mcp": {
     "type": "official",
-    "url": "https://docs.datadoghq.com/mcp_server/setup/"
+    "url": "https://docs.datadoghq.com/mcp_server/setup/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free Infrastructure Monitoring plan: 1-day metric retention, up to 5 hosts; other products (APM, Logs, Security) are paid",
    "sdk": [
@@ -109,7 +113,9 @@
    "auth_hint": "Authorization: Bearer <token> (obtained via login or a Personal/Organization Access Token)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/docker/hub-mcp"
+    "url": "https://github.com/docker/hub-mcp",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free personal accounts with rate-limited image pulls; paid Pro/Team/Business tiers raise pull limits",
    "sdk": [],
@@ -150,7 +156,9 @@
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/github/github-mcp-server"
+    "url": "https://github.com/github/github-mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free with any GitHub account; 5,000 req/hr authenticated, 60/hr unauthenticated",
    "sdk": [
@@ -210,7 +218,9 @@
    "auth_hint": "PRIVATE-TOKEN: <personal_access_token>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/"
+    "url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: full REST API access on GitLab.com Free plan; some features gated to Premium/Ultimate",
    "sdk": [],
@@ -250,7 +260,9 @@
    "auth_hint": "No key required; optional token from dash.globalping.io raises limits: 'Authorization: Bearer <GLOBALPING_TOKEN>'",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.globalping.dev/mcp"
+    "url": "https://mcp.globalping.dev/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "No key; 250 tests/hour anonymously (up to 50 probes per measurement), 500 tests/hour with a free account token (up to 500 probes); extra tests use credits.",
    "sdk": [
@@ -276,7 +288,9 @@
    "auth_hint": "No key: GET https://search.maven.org/solrsearch/select?q=<query>&rows=20&wt=json",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/arvindand/maven-tools-mcp"
+    "url": "https://github.com/arvindand/maven-tools-mcp",
+    "domain_verified": null,
+    "kind": "community"
    },
    "free_tier": "No key; free public API with no published quota (fair use).",
    "sdk": [],
@@ -299,7 +313,9 @@
    "auth_hint": "Authorization: Token token=<API_KEY> (or Authorization: Bearer <oauth_token>)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/PagerDuty/pagerduty-mcp-server"
+    "url": "https://github.com/PagerDuty/pagerduty-mcp-server",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free plan for up to 5 users: 100 monthly SMS/phone notifications, 1 on-call schedule, 1 escalation policy, API access",
    "sdk": [],
@@ -358,7 +374,9 @@
    "auth_hint": "X-API-Key: <POSTMAN_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://learning.postman.com/_mcp/server"
+    "url": "https://learning.postman.com/_mcp/server",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan available; rate limits ~300 req/min general, stricter for specific endpoints",
    "sdk": [],
@@ -404,7 +422,9 @@
    "auth_hint": "Authorization: Bearer <REFLAG_API_KEY> (scoped Management API key); remote MCP uses OAuth sign-in",
    "mcp": {
     "type": "official",
-    "url": "https://app.reflag.com/api/mcp"
+    "url": "https://app.reflag.com/api/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "Free Starter plan: 1,000 monthly tracked users, unlimited seats, 3 environments; no overage (upgrade required)",
    "sdk": [
@@ -430,7 +450,9 @@
    "auth_hint": "Authorization: Bearer <auth_token>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.sentry.dev/mcp"
+    "url": "https://mcp.sentry.dev/mcp",
+    "domain_verified": false,
+    "kind": "official"
    },
    "free_tier": "free Developer plan: 1 user, 5,000 errors/mo, 5GB logs, 50 replays; includes MCP access",
    "sdk": [],
@@ -468,7 +490,9 @@
    "auth_hint": "Authorization: Bearer <access_token>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.supabase.com/mcp"
+    "url": "https://mcp.supabase.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free plan available; rate limit 120 req/min per user/project (lower for heavier endpoints)",
    "sdk": [],

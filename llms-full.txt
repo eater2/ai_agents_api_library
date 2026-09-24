@@ -2,6 +2,7 @@
 # format: [tags] name | what it does | auth (hint) | mcp | free tier | docs
 # tags: [FREE] lasting free tier or free usage, [TRIAL] one-off free trial credits, [NO-KEY] callable without any credential, [MCP] official MCP server
 # proof: public ratings and usage (SourceForge rating/reviews, GitHub stars, Smithery uses), date = when fetched
+# base url, free plan, rate limits, data policy, async jobs, oauth scopes: researched on vendor pages; sources in the JSON
 
 ## Web search [web-search]
 - [FREE][MCP] Brave Search API | Lets an agent query Brave's independent web/image/video/news search index and get cited, LLM-ready results. | auth:api_key (X-Subscription-Token: <API_KEY>) | mcp:official https://github.com/brave/brave-search-mcp-server | $5 free monthly credits (~1,000 queries on Search plan); credit card required at signup as anti-fraud measure | https://api-dashboard.search.brave.com/app/documentation/web-search/get-started | proof: GitHub 1,467★ brave/brave-search-mcp-server; Smithery 119.0k uses; SourceForge 4.5★/2 reviews (fetched 2026-09-24 16:54 UTC) | note: Official MCP server (@brave/brave-search-mcp-server) is self-hosted only via npx/Docker/HTTP transport, no vendor-hosted remote endpoint found; Answers plan is separate ($4/1,000 req + token costs).

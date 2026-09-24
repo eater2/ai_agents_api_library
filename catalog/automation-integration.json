@@ -14,7 +14,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://www.activepieces.com/docs/mcp/overview"
+    "url": "https://www.activepieces.com/docs/mcp/overview",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free: open-source, self-hostable at no cost; cloud free plan gives 100 credits/day, no card required",
    "sdk": [],
@@ -43,7 +45,9 @@
    "auth_hint": "Authorization: Bearer <api_key>; tool auth uses managed per-provider OAuth (e.g. GitHub, Google)",
    "mcp": {
     "type": "official",
-    "url": "https://docs.arcade.dev/en/resources/integrations"
+    "url": "https://docs.arcade.dev/en/resources/integrations",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: 2,000 auth events + 2,000 tool calls/mo, no credit card required",
    "sdk": [
@@ -75,7 +79,9 @@
    "auth_hint": "Authorization: Bearer <api_key>; per-toolkit connections use managed OAuth",
    "mcp": {
     "type": "official",
-    "url": "https://docs.composio.dev/docs/composio-connect"
+    "url": "https://docs.composio.dev/docs/composio-connect",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: 100,000 tool calls + 50,000 trigger events/mo, no credit card required",
    "sdk": [
@@ -107,7 +113,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.gumloop.com/gumloop/mcp"
+    "url": "https://mcp.gumloop.com/gumloop/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "14-day free trial of Pro (20,000 credits), requires credit card, no permanent free tier",
    "sdk": [
@@ -139,7 +147,9 @@
    "auth_hint": "Webhooks key in URL path: https://maker.ifttt.com/trigger/{event}/with/key/{key}",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "no free-plan access; Webhooks/API require Pro plan ($2.99+/mo)",
    "sdk": [],
@@ -177,7 +187,9 @@
    "auth_hint": "X-StorageApi-Token: <STORAGE_API_TOKEN>; remote MCP uses OAuth sign-in",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.keboola.com/mcp"
+    "url": "https://mcp.keboola.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "Free plan: 1 project, 120 compute minutes in the first month then 60 minutes/month, extra-small Snowflake backend; no credit card",
    "sdk": [
@@ -203,7 +215,9 @@
    "auth_hint": "Authorization: Token <api_token>",
    "mcp": {
     "type": "official",
-    "url": "https://www.make.com/en/mcp"
+    "url": "https://www.make.com/en/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 1,000 operations/mo; most REST API endpoints require a paid plan",
    "sdk": [],
@@ -232,7 +246,9 @@
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration"
+    "url": "https://docs.merge.dev/merge-agent-handler/build/connecting-agents/mcp-integration",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free tier: 2,000 monthly credits for evaluation; production usage needs a paid Starter/Business/Enterprise plan",
    "sdk": [
@@ -264,7 +280,9 @@
    "auth_hint": "X-N8N-API-KEY: <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger"
+    "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free, self-hosted (open source, unlimited); n8n Cloud offers a paid-plan trial",
    "sdk": [],
@@ -303,7 +321,9 @@
    "auth_hint": "Authorization: Bearer <secret_key>",
    "mcp": {
     "type": "none",
-    "url": null
+    "url": null,
+    "domain_verified": null,
+    "kind": "none"
    },
    "free_tier": "free tier: 10 connections, 10 compute hours, 10GB data transfer/mo",
    "sdk": [
@@ -333,7 +353,9 @@
    "auth_hint": "Authorization: Bearer <token>; connected accounts use managed OAuth",
    "mcp": {
     "type": "official",
-    "url": "https://www.useparagon.com/mcp"
+    "url": "https://www.useparagon.com/mcp",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "free experimentation tier with self-serve keys; production/scale pricing is usage-based or contract",
    "sdk": [],
@@ -362,7 +384,9 @@
    "auth_hint": "Authorization: Bearer <access_token> (OAuth client-credentials flow recommended)",
    "mcp": {
     "type": "official",
-    "url": "https://pipedream.com/docs/connect/mcp/developers"
+    "url": "https://pipedream.com/docs/connect/mcp/developers",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "check pricing (pipedream.com/pricing) for current Connect free-tier request/credit limits",
    "sdk": [
@@ -393,7 +417,9 @@
    "auth_hint": "Authorization: Bearer <stackone_api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.stackone.com/connect/ai-platforms/overview"
+    "url": "https://docs.stackone.com/connect/ai-platforms/overview",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: 1,000 action-call credits/seat/mo (Starter), no credit card required",
    "sdk": [
@@ -425,7 +451,9 @@
    "auth_hint": "Authorization: Bearer <api_key> (exact header not independently confirmed - verify in docs)",
    "mcp": {
     "type": "official",
-    "url": "https://superglue.ai/docs"
+    "url": "https://superglue.ai/docs",
+    "domain_verified": null,
+    "kind": "official"
    },
    "free_tier": "free tier: Pro plan free to start, 3,000 executions/mo and 5M tokens/mo included, self-serve signup",
    "sdk": [],
@@ -453,7 +481,9 @@
    "auth_hint": "Authorization: Bearer <connection_token> (OAuth auto-configured for listed clients like Claude/ChatGPT)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.zapier.com/api/v1/connect"
+    "url": "https://mcp.zapier.com/api/v1/connect",
+    "domain_verified": true,
+    "kind": "vendor-hosted"
    },
    "free_tier": "Zapier Free plan (100 tasks/mo) covers MCP tool calls; more on paid plans",
    "sdk": [],
