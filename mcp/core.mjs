@@ -226,10 +226,20 @@ function mcpRegistry(e) {
   const r = bySource(e, "smithery");
   return r ? { source: r.source, uses: r.uses, url: r.url, fetched_at: r.fetched_at } : { ...UNAVAILABLE };
 }
+// Availability probes (scripts/probe_uptime.py), e.g. "api 29/30 up, median 540 ms, last up 2026-09-24T18:26Z".
+function uptimeBrief(e) {
+  const u = e.uptime;
+  const parts = ["api", "mcp"].filter((k) => u?.[k]).map((k) => {
+    const x = u[k];
+    return `${k} ${x.up}/${x.probes} up in ${u.window_days} d, median ${x.median_ms} ms, last ${x.last?.up ? "up" : "DOWN"} ${x.last?.at}`;
+  });
+  return parts.length ? parts.join("; ") : "unavailable";
+}
 // Compact form for search results.
 function ratingsBrief(e) {
   const pr = productReviews(e), repo = mcpRepo(e);
   return {
+    uptime: uptimeBrief(e),
     reviews: pr.status || `${pr.rating}/5 from ${pr.count} (${pr.source})`,
     mcp_repo: repo.status || `${repo.archived ? "ARCHIVED, " : ""}last push ${repo.pushed_at}`,
   };
@@ -278,7 +288,7 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.3.2" },
+    { name: "ai-agents-api-library", version: "0.3.3" },
     {
       instructions:
         "Catalog of third-party APIs and MCP servers (entries with a last-checked date) an agent can call after a one-time human setup " +
@@ -401,7 +411,7 @@ export function createServer() {
         "Full entry for one service: docs, auth scheme and how the credential is sent, base URL, operations, " +
         "MCP endpoint or repository (check which: a repository must be installed, a docs-only server does not call the API), " +
         "free plan vs trial, rate limits, data policy, notes, last-checked dates, link check, and separate signals: " +
-        "mcp_repo (archived, last push), mcp_registry (installs) and product_reviews (rating, count, date range), each with its fetch date. " +
+        "uptime (our availability probes of base URL and MCP endpoint), mcp_repo (archived, last push), mcp_registry (installs) and product_reviews (rating, count, date range), each with its fetch date. " +
         "Values come with the vendor page they were read from; confirm pricing and terms there before real use.",
       inputSchema: { id: z.string().describe("Service id from search_apis") },
     },
@@ -417,7 +427,8 @@ export function createServer() {
         if (dates.length) reviews.date_range = [dates[0], dates[dates.length - 1]];
         if (data) reviews.texts = "get_reviews";
       }
-      const out = { ...rest, mcp_repo: mcpRepo(e), mcp_registry: mcpRegistry(e), product_reviews: reviews };
+      const { uptime, ...other } = rest;
+      const out = { ...other, uptime: uptime || { ...UNAVAILABLE }, mcp_repo: mcpRepo(e), mcp_registry: mcpRegistry(e), product_reviews: reviews };
       return { content: [{ type: "text", text: JSON.stringify(out, null, 1) }] };
     },
   );

@@ -54,6 +54,7 @@ assert.ok(apiReviews.reviews.every((r) => r.date >= "2024" && r.aspects.length))
 // Ratings: separate signals, explicit gaps, no aggregate score.
 const twilio = JSON.parse(await call("get_api", { id: "twilio" }));
 assert.ok(!("ratings" in twilio) && twilio.mcp_repo.pushed_at && twilio.product_reviews.count > 0);
+assert.ok(twilio.uptime && typeof video.results[0].ratings.uptime === "string");
 assert.ok(video.results.every((r) => typeof r.ratings.reviews === "string" && typeof r.ratings.mcp_repo === "string"));
 // Docs-only MCP servers don't count for the mcp filter.
 const sms = JSON.parse(await call("search_apis", { query: "send sms", mcp: "official" }));
