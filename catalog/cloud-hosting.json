@@ -14,17 +14,22 @@
    "auth_hint": "AWS Signature Version 4 (SigV4) signed request using IAM access key/secret or STS temporary credentials",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/awslabs/mcp",
+    "url": "https://aws-mcp.us-east-1.api.aws/mcp",
     "maintainer": "vendor",
     "remote_url": "https://aws-mcp.us-east-1.api.aws/mcp",
-    "repo": "https://github.com/awslabs/mcp",
+    "repo": "https://github.com/aws/mcp-proxy-for-aws",
     "tools": [
-     "call_aws",
-     "suggest_aws_commands",
-     "get_execution_plan"
+     "aws___run_script",
+     "aws___get_presigned_url",
+     "aws___get_tasks",
+     "aws___search_documentation",
+     "aws___read_documentation",
+     "aws___retrieve_skill",
+     "aws___list_regions",
+     "aws___get_regional_availability"
     ],
     "covers_full_api": true,
-    "source_url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
+    "source_url": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/understanding-mcp-server-tools.html",
     "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official",
@@ -56,7 +61,7 @@
    "openapi": null,
    "llms_txt": "https://docs.aws.amazon.com/llms.txt",
    "desc_en": "An agent can provision and control thousands of AWS resources (compute, storage, databases, ML) via SDKs/CLI/REST.",
-   "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own IAM scoping, rate limits, and regional availability; no single unified OpenAPI spec.",
+   "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own IAM scoping, rate limits, and regional availability; no unified OpenAPI spec. The managed AWS MCP Server (OAuth or SigV4 proxy) replaces the local aws-api-mcp-server.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -939,10 +944,11 @@
     "url": "https://mcp-on-edge.edgeone.app/mcp-server",
     "maintainer": "vendor",
     "remote_url": "https://mcp-on-edge.edgeone.app/mcp-server",
+    "repo": "https://www.npmjs.com/package/@edgeone/makers-mcp",
     "tools": [
-     "deploy_html",
-     "deploy_folder"
+     "deploy-html"
     ],
+    "covers_full_api": false,
     "source_url": "https://pages.edgeone.ai/document/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": false,

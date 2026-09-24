@@ -1463,7 +1463,7 @@
    "homepage": "https://nocodb.com",
    "docs": "https://nocodb.com/docs/apis-and-mcp",
    "auth": "api_key+oauth2",
-   "auth_hint": "REST: 'xc-token: <API_TOKEN>' header; MCP: 'x-api-key: <MCP_TOKEN>' header or OAuth sign-in",
+   "auth_hint": "REST: 'xc-token: <API_TOKEN>' header; MCP: OAuth at app.nocodb.com/mcp, or token access at /mcp/<ncId> with 'x-api-key: <MCP_TOKEN>' header",
    "mcp": {
     "type": "official",
     "url": "https://app.nocodb.com/mcp",

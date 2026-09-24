@@ -189,6 +189,14 @@
     "url": "https://docs.d-id.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://docs.d-id.com/mcp",
+    "tools": [
+     "list-endpoints",
+     "get-endpoint",
+     "search-endpoints",
+     "list-specs",
+     "execute-request"
+    ],
+    "covers_full_api": true,
     "source_url": "https://docs.d-id.com/docs/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
@@ -556,9 +564,9 @@
    "id": "kling-ai-api",
    "name": "Kling AI API",
    "homepage": "https://klingai.com",
-   "docs": "https://kling.ai/document-api/",
+   "docs": "https://kling.ai/document-api/guides/get-started/quick-start",
    "auth": "api_key",
-   "auth_hint": "Authorization: Bearer <API_KEY> (API key from the Kling console); legacy-design endpoints use a JWT (HS256, 30 min) signed from an Access Key/Secret Key pair",
+   "auth_hint": "Authorization: Bearer <API_KEY> (create at kling.ai/dev/api-key); legacy Access/Secret Key pairs need a client-signed HS256 JWT instead",
    "mcp": {
     "type": "community",
     "url": "https://github.com/199-mcp/mcp-kling",
@@ -601,9 +609,9 @@
    "free_tier": "Paid only; prepaid credit packages from $0.14/unit, e.g. 5,000 units/$700, 180-day validity; a Trial Resource Package for integration testing is offered",
    "sdk": [],
    "openapi": null,
-   "llms_txt": null,
-   "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API.",
-   "notes": "Current API uses a console-issued API key as Bearer token; the Access/Secret key JWT applies only to legacy-design endpoints. API domain: https://api-singapore.klingai.com.",
+   "llms_txt": "https://kling.ai/document-api/llms.txt",
+   "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API with a Bearer API key.",
+   "notes": "New versioned endpoints (e.g. /text-to-video/kling-2.6) take a plain API key; the older Access/Secret key pair with a client-built JWT is legacy (model_name-parameter endpoints).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "trial",
@@ -694,7 +702,7 @@
    "id": "luma-ai-dream-machine-api",
    "name": "Luma AI Dream Machine API",
    "homepage": "https://lumalabs.ai",
-   "docs": "https://docs.lumalabs.ai",
+   "docs": "https://docs.agents.lumalabs.ai",
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <API_KEY> (key from platform.lumalabs.ai)",
    "mcp": {
@@ -728,14 +736,14 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "Paid only; pay-as-you-go, Ray 3.2 from $0.15 (540p) to $1.20 (1080p) per 5s text/image-to-video clip, $5,000/mo cap on default Build tier",
+   "free_tier": "Paid only; pay per video, e.g. Ray 3.2 5s text/image-to-video $0.15 (540p) / $0.30 (720p) / $1.20 (1080p), $5,000/mo cap on default Build tier",
    "sdk": [
     "python"
    ],
    "openapi": null,
    "llms_txt": null,
-   "desc_en": "Generate and extend AI videos from text or start/end keyframe images via async REST API (Ray 2).",
-   "notes": "API credits are separate from Dream Machine subscription credits (do not transfer); failed generations are refunded.",
+   "desc_en": "Generate and extend AI videos from text or start/end keyframe images via async REST API (Ray 3.2).",
+   "notes": "The Luma Agents API (https://agents.lumalabs.ai/v1) supersedes the older Dream Machine API. API credits are separate from Dream Machine subscription credits; failed generations are refunded.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "none",
@@ -1065,7 +1073,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate and edit images/video (Gen-4.5) via async task-based REST API: submit, poll, download.",
-   "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Official MCP also usable from Claude/ChatGPT/Cursor. Runway Dev MCP (https://dev.runwayml.com/mcp, OAuth only) handles tasks, model routers and docs.",
+   "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Generation MCP is mcp.runwayml.com/mcp; a separate dev.runwayml.com/mcp (OAuth) only covers Developer Portal tasks, model routers and docs.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "none",

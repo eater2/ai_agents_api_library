@@ -117,7 +117,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate original music tracks from text prompts or detailed composition plans via REST API, with commercial licensing.",
-   "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS. The local elevenlabs-mcp repo is deprecated in favor of the hosted OAuth MCP server.",
+   "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS. Hosted OAuth MCP at api.elevenlabs.io/v1/mcp; the elevenlabs-mcp repo is archived since 2026-08-20.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",

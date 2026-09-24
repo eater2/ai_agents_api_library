@@ -1,0 +1,590 @@
+{
+ "twilio-programmable-voice": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": null,
+   "repo": "https://github.com/twilio-labs/mcp",
+   "tools": null,
+   "covers_full_api": true,
+   "source_url": "https://github.com/twilio-labs/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "deepgram-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": null,
+   "repo": "https://github.com/deepgram/mcp",
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://github.com/deepgram/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "assemblyai-api": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://www.assemblyai.com/docs/coding-agent-prompts",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "rev-ai-api": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://docs.rev.ai/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "fireworks-ai": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://docs.fireworks.ai/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "xai-grok-api": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://docs.x.ai/developers/docs-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "cohere-api": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://docs.cohere.com/llms.txt",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "together-ai": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://docs.together.ai/docs/agent-skills.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "hume-ai-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": null,
+   "repo": "https://github.com/HumeAI/mcp-server-hume",
+   "tools": [
+    "tts",
+    "play_previous_audio",
+    "list_voices",
+    "save_voice",
+    "delete_voice"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://dev.hume.ai/docs/integrations/mcp.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "resemble-ai-api": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://github.com/resemble-ai/resemble-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "mercado-libre-api": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://developers.mercadolibre.com.ar/en_us/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "shopify-admin-storefront-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://{shop}.myshopify.com/api/mcp",
+   "repo": null,
+   "tools": [
+    "get_cart",
+    "update_cart",
+    "search_shop_policies_and_faqs",
+    "search_catalog",
+    "lookup_catalog",
+    "get_product"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "bigcommerce-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": null,
+   "repo": null,
+   "tools": [
+    "search_products",
+    "get_product_details",
+    "related_products",
+    "add_item_to_cart",
+    "update_cart_item",
+    "remove_item_from_cart",
+    "create_checkout_url"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "google-gemini-api": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "d-id-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://docs.d-id.com/mcp",
+   "repo": null,
+   "tools": [
+    "list-endpoints",
+    "get-endpoint",
+    "search-endpoints",
+    "list-specs",
+    "execute-request"
+   ],
+   "covers_full_api": true,
+   "source_url": "https://docs.d-id.com/docs/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "tavily": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.tavily.com/mcp",
+   "repo": "https://github.com/tavily-ai/tavily-mcp",
+   "tools": [
+    "tavily-search",
+    "tavily-extract",
+    "tavily-map",
+    "tavily-crawl"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://github.com/tavily-ai/tavily-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "openstreetmap-nominatim": {
+  "mcp": {
+   "maintainer": "community",
+   "remote_url": "https://openstreetmap.caseyjhand.com/mcp",
+   "repo": "https://github.com/cyanheads/openstreetmap-mcp-server",
+   "tools": [
+    "openstreetmap_search_places",
+    "openstreetmap_reverse_geocode",
+    "openstreetmap_lookup_objects",
+    "openstreetmap_query_nearby",
+    "openstreetmap_query_bbox",
+    "openstreetmap_query_raw"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "overpass-api-osm": {
+  "mcp": {
+   "maintainer": "community",
+   "remote_url": "https://openstreetmap.caseyjhand.com/mcp",
+   "repo": "https://github.com/cyanheads/openstreetmap-mcp-server",
+   "tools": [
+    "openstreetmap_query_nearby",
+    "openstreetmap_query_bbox",
+    "openstreetmap_query_raw"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "speechmatics-api": {
+  "mcp": {
+   "maintainer": "community",
+   "remote_url": null,
+   "repo": "https://github.com/ArchieMcM234/speechmatics_claude_code_mcp",
+   "tools": [
+    "transcribe_file",
+    "transcribe_directory",
+    "get_transcript",
+    "get_usage"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://github.com/ArchieMcM234/speechmatics_claude_code_mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "paragon-actionkit": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": null,
+   "repo": "https://github.com/useparagon/paragon-mcp",
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://docs.useparagon.com/actionkit/getting-started",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "zoom-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.zoom.us/mcp/zoom/streamable",
+   "repo": null,
+   "tools": null,
+   "covers_full_api": false,
+   "source_url": "https://github.com/zoom/mcp-registry",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "circleci-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.circleci.com/v1/mcp",
+   "repo": "https://github.com/CircleCI-Public/mcp-server-circleci",
+   "tools": [
+    "list_runs",
+    "get_run",
+    "list_run_workflows",
+    "get_workflow",
+    "list_workflow_jobs",
+    "get_job",
+    "list_job_tests",
+    "get_job_logs",
+    "get_job_resource_usage",
+    "list_job_artifacts",
+    "rerun_workflow",
+    "cancel_workflow",
+    "validate_config",
+    "get_orb",
+    "get_orb_source",
+    "list_deployments",
+    "list_deploy_components",
+    "list_deploy_environments",
+    "list_deploy_component_versions",
+    "rollback_deploy_component",
+    "get_me",
+    "download_usage_data"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://circleci.com/changelog/hosted-mcp-server-now-available/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "paypal-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.paypal.com/mcp",
+   "repo": "https://github.com/paypal/agent-toolkit",
+   "tools": [
+    "create_product",
+    "list_product",
+    "show_product_details",
+    "list_disputes",
+    "get_dispute",
+    "accept_dispute_claim",
+    "create_invoice",
+    "list_invoices",
+    "get_invoice",
+    "send_invoice",
+    "send_invoice_reminder",
+    "cancel_sent_invoice",
+    "generate_invoice_qr_code",
+    "create_order",
+    "create_refund",
+    "get_order",
+    "get_refund",
+    "pay_order",
+    "get_merchant_insights",
+    "list_transaction",
+    "create_shipment_tracking",
+    "get_shipment_tracking",
+    "update_shipment_tracking",
+    "cancel_subscription",
+    "create_subscription",
+    "create_subscription_plan",
+    "list_subscription_plans",
+    "show_subscription_details",
+    "show_subscription_plan_details",
+    "update_subscription"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://docs.paypal.ai/developer/tools/ai/mcp-quickstart",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "wolfram-alpha-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://agenttools.wolfram.com/mcp",
+   "repo": null,
+   "tools": [
+    "WolframAlpha",
+    "WolframLanguageEvaluator",
+    "WolframContext"
+   ],
+   "covers_full_api": null,
+   "source_url": "https://support.wolfram.com/75237",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "csm-common-sense-machines-api": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://github.com/CommonSenseMachines/blender-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "tencent-edgeone-pages": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp-on-edge.edgeone.app/mcp-server",
+   "repo": "https://www.npmjs.com/package/@edgeone/makers-mcp",
+   "tools": [
+    "deploy-html"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://pages.edgeone.ai/document/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "vercel-ai-gateway": {
+  "mcp": {
+   "maintainer": "none",
+   "remote_url": null,
+   "repo": null,
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "reducto-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.reducto.ai/mcp",
+   "repo": null,
+   "tools": [
+    "parse_document",
+    "extract_data",
+    "split_document",
+    "classify_document",
+    "edit_document",
+    "upload_file"
+   ],
+   "covers_full_api": true,
+   "source_url": "https://docs.reducto.ai/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "aws-apis": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://aws-mcp.us-east-1.api.aws/mcp",
+   "repo": "https://github.com/aws/mcp-proxy-for-aws",
+   "tools": [
+    "aws___run_script",
+    "aws___get_presigned_url",
+    "aws___get_tasks",
+    "aws___search_documentation",
+    "aws___read_documentation",
+    "aws___retrieve_skill",
+    "aws___list_regions",
+    "aws___get_regional_availability"
+   ],
+   "covers_full_api": true,
+   "source_url": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/understanding-mcp-server-tools.html",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "aws-textract": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://aws-mcp.us-east-1.api.aws/mcp",
+   "repo": "https://github.com/aws/mcp-proxy-for-aws",
+   "tools": [
+    "aws___run_script",
+    "aws___get_presigned_url",
+    "aws___get_tasks",
+    "aws___search_documentation",
+    "aws___read_documentation",
+    "aws___retrieve_skill",
+    "aws___list_regions",
+    "aws___get_regional_availability"
+   ],
+   "covers_full_api": true,
+   "source_url": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/understanding-mcp-server-tools.html",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "elevenlabs-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://api.elevenlabs.io/v1/mcp",
+   "repo": "https://github.com/elevenlabs/elevenlabs-mcp",
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://github.com/elevenlabs/elevenlabs-mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "replicate": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.replicate.com/sse",
+   "repo": "https://www.npmjs.com/package/replicate-mcp",
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://replicate.com/docs/reference/mcp",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "cartesia-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.cartesia.ai/mcp",
+   "repo": null,
+   "tools": [
+    "text_to_speech",
+    "speech_to_text",
+    "list_voices",
+    "get_voice",
+    "clone_voice",
+    "update_voice",
+    "delete_voice",
+    "voice_change",
+    "localize_voice",
+    "list_pronunciation_dicts",
+    "create_pronunciation_dict",
+    "get_pronunciation_dict",
+    "update_pronunciation_dict",
+    "delete_pronunciation_dict",
+    "download_file",
+    "get_credit_usage"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://docs.cartesia.ai/tools/ai/mcp.md",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "semantic-scholar-api": {
+  "mcp": {
+   "maintainer": "community",
+   "remote_url": null,
+   "repo": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+   "tools": [
+    "paper_relevance_search",
+    "paper_bulk_search",
+    "paper_title_search",
+    "paper_details",
+    "paper_batch_details",
+    "paper_authors",
+    "paper_autocomplete",
+    "snippet_search",
+    "paper_citations",
+    "paper_references",
+    "author_search",
+    "author_details",
+    "author_papers",
+    "author_batch_details",
+    "get_paper_recommendations_single",
+    "get_paper_recommendations_multi"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://github.com/zongmin-yu/semantic-scholar-fastmcp-mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "docusign-esignature-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.docusign.com/mcp",
+   "repo": null,
+   "tools": null,
+   "covers_full_api": false,
+   "source_url": "https://mcp.docusign.com/.well-known/oauth-protected-resource",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "datadog-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp.datadoghq.com/v1/mcp",
+   "repo": null,
+   "tools": [
+    "search_datadog_logs",
+    "analyze_datadog_logs",
+    "search_datadog_metrics",
+    "get_datadog_metric",
+    "search_datadog_monitors",
+    "search_datadog_incidents",
+    "get_datadog_incident",
+    "search_datadog_dashboards",
+    "search_datadog_spans",
+    "get_datadog_trace",
+    "search_datadog_hosts",
+    "search_datadog_events",
+    "create_datadog_notebook"
+   ],
+   "covers_full_api": false,
+   "source_url": "https://docs.datadoghq.com/getting_started/software_delivery_mcp_tools/",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "penpot-api": {
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://design.penpot.app/mcp/stream",
+   "repo": "https://github.com/penpot/penpot/tree/develop/mcp",
+   "tools": null,
+   "covers_full_api": null,
+   "source_url": "https://help.penpot.app/mcp/",
+   "checked_at": "2026-09-24"
+  }
+ }
+}

@@ -32,7 +32,7 @@
     "llms_txt": "https://api-dashboard.search.brave.com/llms.txt",
     "desc_en": "Lets an agent query Brave's independent web/image/video/news search index and get cited, LLM-ready results.",
     "desc_pl": "Pozwala agentowi przeszukiwać niezależny indeks Brave (web, obrazy, wideo, wiadomości) i uzyskiwać wyniki z cytowaniami gotowe dla LLM.",
-    "notes": "Official MCP server (@brave/brave-search-mcp-server) is self-hosted only via npx/Docker/HTTP transport, no vendor-hosted remote endpoint found; Answers plan is separate ($4/1,000 req + token costs).",
+    "notes": "Official MCP server (@brave/brave-search-mcp-server) is self-hosted only (npx/Docker); STDIO is the default transport since v2.x, HTTP optional; no vendor-hosted endpoint. Answers plan is separate ($4/1,000 req + token costs).",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -107,7 +107,7 @@
     "llms_txt": "https://exa.ai/docs/llms.txt",
     "desc_en": "Lets an agent run neural or keyword web search, retrieve page contents, and find similar links via Exa's API.",
     "desc_pl": "Wyszukiwanie w sieci (neuronowe lub po słowach kluczowych), pobieranie treści stron i znajdowanie podobnych linków przez API Exa.",
-    "notes": "Remote MCP endpoint requires no API key to start; self-hosted npm package (exa-mcp-server) also available.",
+    "notes": "Remote MCP works keyless (rate-limited); for your own plan send x-api-key or sign in via OAuth at https://mcp.exa.ai/mcp?login (agent_run requires auth). Self-hosted npm package (exa-mcp-server) also available.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -414,7 +414,7 @@
     "llms_txt": "https://docs.parallel.ai/llms.txt",
     "desc_en": "Lets an agent run Parallel's low-latency Search API for web research, content extraction, and entity discovery.",
     "desc_pl": "Pozwala agentowi korzystać z niskoopóźnieniowego Search API Parallel do badań w sieci, ekstrakcji treści i wykrywania encji.",
-    "notes": "The remote MCP server is free and requires no account/API key; the main REST API requires an API key from the dashboard.",
+    "notes": "The remote MCP server works without an account/API key at lower rate limits; an Authorization: Bearer key raises them. The main REST API requires an API key from the dashboard.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -713,7 +713,7 @@
     "llms_txt": null,
     "desc_en": "Lets an agent fetch fast, low-cost Google search results (web, images, news, maps, shopping) via Serper's REST API.",
     "desc_pl": "Pozwala agentowi pobierać szybkie i tanie wyniki wyszukiwania Google (web, obrazy, wiadomości, mapy, zakupy) przez REST API Serper.",
-    "notes": "serper.dev's docs/playground is a JS-rendered, login-gated SPA so automated fetch could not fully re-verify all details beyond the public marketing page (2,500 free queries confirmed there). No official MCP server found; listed repo is the most-starred community one.",
+    "notes": "Docs/playground are login-gated. No subscriptions: prepaid credits from $1.00/1k down to $0.30/1k, valid 6 months. No official MCP server found; listed repo is the most-starred community one.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -746,9 +746,9 @@
     "auth_hint": "Authorization: Bearer tvly-<API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.tavily.com/mcp/",
+      "url": "https://mcp.tavily.com/mcp",
       "maintainer": "vendor",
-      "remote_url": "https://mcp.tavily.com/mcp/",
+      "remote_url": "https://mcp.tavily.com/mcp",
       "repo": "https://github.com/tavily-ai/tavily-mcp",
       "tools": [
         "tavily-search",
@@ -769,7 +769,7 @@
     "llms_txt": "https://docs.tavily.com/llms.txt",
     "desc_en": "Lets an agent call Tavily's search API or MCP server to run web searches and get AI-ready summarized results.",
     "desc_pl": "Pozwala agentowi wywoływać API lub serwer MCP Tavily, aby wykonywać wyszukiwania w sieci i uzyskiwać podsumowane wyniki gotowe dla LLM.",
-    "notes": "Advanced search depth costs 2 credits vs 1 for basic/fast; remote MCP server supports both API key and OAuth authentication; repo: github.com/tavily-ai/tavily-mcp.",
+    "notes": "Advanced search depth costs 2 credits vs 1 for basic/fast; remote MCP: OAuth at https://mcp.tavily.com/mcp or API key via https://mcp.tavily.com/mcp/?tavilyApiKey=<key>; repo: github.com/tavily-ai/tavily-mcp.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -1196,7 +1196,7 @@
     "llms_txt": null,
     "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
     "desc_pl": "Uruchamiaj i steruj przeglądarkami headless w chmurze programistycznie, korzystając ze Stagehand do sterowania stroną językiem naturalnym.",
-    "notes": "Billed by browser-hours/compute time; Stagehand SDK itself is open source but needs a browser backend such as Browserbase. The MCP GitHub repo was archived in July 2026; use the hosted endpoint.",
+    "notes": "Billed by browser-hours; Stagehand SDK is open source but needs a browser backend such as Browserbase. Hosted MCP takes the key as ?browserbaseApiKey=; the mcp-server-browserbase repo is archived since 2026-07-20.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -2626,7 +2626,7 @@
     "llms_txt": "https://help.openalex.org/llms.txt",
     "desc_en": "Query an open catalog of scholarly works, authors, institutions, sources and topics, including citation data, via REST.",
     "desc_pl": "Przeszukuj otwarty katalog prac naukowych, autorów, instytucji, źródeł i tematów wraz z danymi o cytowaniach przez REST.",
-    "notes": "Base URL https://api.openalex.org. docs.openalex.org now redirects to help.openalex.org. Free daily budget resets at midnight UTC; above it, pay-as-you-go with prepaid $1 increments. Annual Member plans start at $5,000/yr. Data is CC0.",
+    "notes": "Base URL https://api.openalex.org. docs.openalex.org redirects to help.openalex.org. Free daily budget resets at midnight UTC; then pay-as-you-go in prepaid $1 increments. Member plans from $5,000/yr. Data is CC0. Listed MCP is a community multi-source papers server (arXiv, OpenAlex, PMC and more).",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -2732,12 +2732,15 @@
         "paper_title_search",
         "paper_details",
         "paper_batch_details",
+        "paper_authors",
+        "paper_autocomplete",
+        "snippet_search",
         "paper_citations",
         "paper_references",
         "author_search",
         "author_details",
         "author_papers",
-        "snippet_search",
+        "author_batch_details",
         "get_paper_recommendations_single",
         "get_paper_recommendations_multi"
       ],
@@ -2906,9 +2909,15 @@
     "auth_hint": "appid=<AppID> query param or Authorization: Bearer <AppID>",
     "mcp": {
       "type": "official",
-      "url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/",
+      "url": "https://agenttools.wolfram.com/mcp",
       "maintainer": "vendor",
-      "source_url": "https://www.wolfram.com/artificial-intelligence/mcp/cloud/",
+      "remote_url": "https://agenttools.wolfram.com/mcp",
+      "tools": [
+        "WolframAlpha",
+        "WolframLanguageEvaluator",
+        "WolframContext"
+      ],
+      "source_url": "https://support.wolfram.com/75237",
       "checked_at": "2026-09-24"
     },
     "free_tier": "Free: non-commercial developer AppID with up to 2,000 calls/month; paid for commercial use",
@@ -2917,7 +2926,7 @@
     "llms_txt": null,
     "desc_en": "Get computed answers, structured data and step-by-step results for math, science and factual queries.",
     "desc_pl": "Uzyskuj obliczone odpowiedzi, dane strukturalne i wyniki krok po kroku dla zapytań matematycznych, naukowych i faktograficznych.",
-    "notes": "LLM API endpoint https://www.wolframalpha.com/api/v1/llm-api is built for agents; output length set by maxchars (default 6800). Get an AppID via the Developer Portal. Other APIs: Full Results, Simple, Short Answers, Spoken Results. Commercial use requires a paid license. The official MCP is the Wolfram Cloud MCP, covering Wolfram technology broadly.",
+    "notes": "LLM API https://www.wolframalpha.com/api/v1/llm-api is built for agents (maxchars, default 6800); get an AppID in the Developer Portal; commercial use needs a paid license. Official MCP: free, no auth at agenttools.wolfram.com/mcp; paid services.wolfram.com/api/mcp (Bearer).",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -3703,6 +3712,14 @@
       "url": "https://docs.d-id.com/mcp",
       "maintainer": "vendor",
       "remote_url": "https://docs.d-id.com/mcp",
+      "tools": [
+        "list-endpoints",
+        "get-endpoint",
+        "search-endpoints",
+        "list-specs",
+        "execute-request"
+      ],
+      "covers_full_api": true,
       "source_url": "https://docs.d-id.com/docs/mcp",
       "checked_at": "2026-09-24"
     },
@@ -3922,9 +3939,9 @@
     "name": "Kling AI API",
     "category": "video-generation",
     "homepage": "https://klingai.com",
-    "docs": "https://kling.ai/document-api/",
+    "docs": "https://kling.ai/document-api/guides/get-started/quick-start",
     "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <API_KEY> (API key from the Kling console); legacy-design endpoints use a JWT (HS256, 30 min) signed from an Access Key/Secret Key pair",
+    "auth_hint": "Authorization: Bearer <API_KEY> (create at kling.ai/dev/api-key); legacy Access/Secret Key pairs need a client-signed HS256 JWT instead",
     "mcp": {
       "type": "community",
       "url": "https://github.com/199-mcp/mcp-kling",
@@ -3950,10 +3967,10 @@
     "free_tier": "Paid only; prepaid credit packages from $0.14/unit, e.g. 5,000 units/$700, 180-day validity; a Trial Resource Package for integration testing is offered",
     "sdk": [],
     "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API.",
+    "llms_txt": "https://kling.ai/document-api/llms.txt",
+    "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API with a Bearer API key.",
     "desc_pl": "Generuj wideo z tekstu i obrazu, lip-sync oraz efekty wideo przez REST API z żądaniami podpisywanymi JWT.",
-    "notes": "Current API uses a console-issued API key as Bearer token; the Access/Secret key JWT applies only to legacy-design endpoints. API domain: https://api-singapore.klingai.com.",
+    "notes": "New versioned endpoints (e.g. /text-to-video/kling-2.6) take a plain API key; the older Access/Secret key pair with a client-built JWT is legacy (model_name-parameter endpoints).",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -3991,7 +4008,7 @@
     "name": "Luma AI Dream Machine API",
     "category": "video-generation",
     "homepage": "https://lumalabs.ai",
-    "docs": "https://docs.lumalabs.ai",
+    "docs": "https://docs.agents.lumalabs.ai",
     "auth": "api_key",
     "auth_hint": "Authorization: Bearer <API_KEY> (key from platform.lumalabs.ai)",
     "mcp": {
@@ -4003,15 +4020,15 @@
       "source_url": "https://github.com/lumalabs/luma-api-mcp",
       "checked_at": "2026-09-24"
     },
-    "free_tier": "Paid only; pay-as-you-go, Ray 3.2 from $0.15 (540p) to $1.20 (1080p) per 5s text/image-to-video clip, $5,000/mo cap on default Build tier",
+    "free_tier": "Paid only; pay per video, e.g. Ray 3.2 5s text/image-to-video $0.15 (540p) / $0.30 (720p) / $1.20 (1080p), $5,000/mo cap on default Build tier",
     "sdk": [
       "python"
     ],
     "openapi": null,
     "llms_txt": null,
-    "desc_en": "Generate and extend AI videos from text or start/end keyframe images via async REST API (Ray 2).",
+    "desc_en": "Generate and extend AI videos from text or start/end keyframe images via async REST API (Ray 3.2).",
     "desc_pl": "Generuj i przedłużaj wideo AI z tekstu lub obrazów kluczowych (początek/koniec) przez asynchroniczne REST API (Ray 2).",
-    "notes": "API credits are separate from Dream Machine subscription credits (do not transfer); failed generations are refunded.",
+    "notes": "The Luma Agents API (https://agents.lumalabs.ai/v1) supersedes the older Dream Machine API. API credits are separate from Dream Machine subscription credits; failed generations are refunded.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "none",
@@ -4181,7 +4198,7 @@
     "llms_txt": null,
     "desc_en": "Generate and edit images/video (Gen-4.5) via async task-based REST API: submit, poll, download.",
     "desc_pl": "Generuj i edytuj obrazy oraz wideo (Gen-4.5) przez asynchroniczne REST API: zleć zadanie, sprawdzaj status, pobierz wynik.",
-    "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Official MCP also usable from Claude/ChatGPT/Cursor. Runway Dev MCP (https://dev.runwayml.com/mcp, OAuth only) handles tasks, model routers and docs.",
+    "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Generation MCP is mcp.runwayml.com/mcp; a separate dev.runwayml.com/mcp (OAuth) only covers Developer Portal tasks, model routers and docs.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "none",
@@ -4464,11 +4481,9 @@
     "auth": "api_key",
     "auth_hint": "Authorization: <key> (no Bearer prefix)",
     "mcp": {
-      "type": "official",
-      "url": "https://assemblyai.com/docs/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://assemblyai.com/docs/mcp",
-      "covers_full_api": false,
+      "type": "none",
+      "url": null,
+      "maintainer": "none",
       "source_url": "https://www.assemblyai.com/docs/coding-agent-prompts",
       "checked_at": "2026-09-24"
     },
@@ -4481,7 +4496,7 @@
     "llms_txt": "https://www.assemblyai.com/docs/llms.txt",
     "desc_en": "Transcribe recorded or streaming audio with speaker diarization, sentiment analysis and LLM-based audio insights via REST.",
     "desc_pl": "Transkrybuj nagrane lub strumieniowane audio z diaryzacją mówców, analizą sentymentu i analizą opartą na LLM przez REST.",
-    "notes": "The official hosted MCP only searches the documentation. To run transcriptions, call the REST API or an SDK.",
+    "notes": "Vendor MCP at https://assemblyai.com/docs/mcp only searches the docs. To run transcriptions, call the REST API or an SDK.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -4608,7 +4623,9 @@
         "create_pronunciation_dict",
         "get_pronunciation_dict",
         "update_pronunciation_dict",
-        "delete_pronunciation_dict"
+        "delete_pronunciation_dict",
+        "download_file",
+        "get_credit_usage"
       ],
       "covers_full_api": false,
       "source_url": "https://docs.cartesia.ai/tools/ai/mcp.md",
@@ -4669,8 +4686,8 @@
       "type": "official",
       "url": "https://github.com/deepgram/mcp",
       "maintainer": "vendor",
-      "remote_url": "https://developers.deepgram.com/_mcp/server",
-      "source_url": "https://developers.deepgram.com/developer-tools/cli/mcp-server.md",
+      "repo": "https://github.com/deepgram/mcp",
+      "source_url": "https://github.com/deepgram/mcp",
       "checked_at": "2026-09-24"
     },
     "free_tier": "Trial: $200 in free credit one-time on signup, no credit card required; then pay-as-you-go",
@@ -4685,7 +4702,7 @@
     "llms_txt": "https://developers.deepgram.com/llms.txt",
     "desc_en": "Transcribe batch or streaming audio with diarization, synthesize speech, and run real-time voice agents via REST/WebSocket.",
     "desc_pl": "Transkrybuj audio wsadowo lub strumieniowo z diaryzacją, syntezuj mowę i uruchamiaj agentów głosowych w czasie rzeczywistym przez REST/WebSocket.",
-    "notes": "The official MCP also runs locally via the Deepgram CLI ('dg mcp', stdio or SSE) and proxies developer API tools. https://developers.deepgram.com/_mcp/server only searches the documentation.",
+    "notes": "Hosted MCP at https://developers.deepgram.com/_mcp/server only searches the docs; the API-calling server is local `dg mcp` (Deepgram CLI) or pip deepgram-mcp.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -4733,8 +4750,8 @@
       "url": "https://api.elevenlabs.io/v1/mcp",
       "maintainer": "vendor",
       "remote_url": "https://api.elevenlabs.io/v1/mcp",
-      "covers_full_api": false,
-      "source_url": "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp.md",
+      "repo": "https://github.com/elevenlabs/elevenlabs-mcp",
+      "source_url": "https://github.com/elevenlabs/elevenlabs-mcp",
       "checked_at": "2026-09-24"
     },
     "free_tier": "Free: limited monthly credits; non-commercial use with attribution only, no voice cloning",
@@ -4749,7 +4766,7 @@
     "llms_txt": "https://elevenlabs.io/docs/llms.txt",
     "desc_en": "Generate, clone and stream text-to-speech voices and transcribe audio via REST/WebSocket API.",
     "desc_pl": "Generuj, klonuj i strumieniuj głosy text-to-speech oraz transkrybuj audio przez API REST/WebSocket.",
-    "notes": "The local elevenlabs-mcp repo was archived on 2026-08-20. The official hosted MCP (OAuth) manages agents and generates speech.",
+    "notes": "Official hosted MCP https://api.elevenlabs.io/v1/mcp uses OAuth; the local stdio repo elevenlabs/elevenlabs-mcp is archived since 2026-08-20.",
     "verified": "2026-09-24",
     "operations": [
       "text-to-speech",
@@ -4849,9 +4866,9 @@
     "auth_hint": "X-Hume-Api-Key: <key> (REST); api_key query param (EVI WebSocket)",
     "mcp": {
       "type": "official",
-      "url": "https://dev.hume.ai/docs/integrations/mcp",
+      "url": "https://github.com/HumeAI/mcp-server-hume",
       "maintainer": "vendor",
-      "repo": "https://github.com/HumeAI/mcp-server",
+      "repo": "https://github.com/HumeAI/mcp-server-hume",
       "tools": [
         "tts",
         "play_previous_audio",
@@ -4872,7 +4889,7 @@
     "llms_txt": null,
     "desc_en": "Generate expressive text-to-speech and run real-time empathic voice conversations (EVI) via REST/WebSocket.",
     "desc_pl": "Generuj ekspresyjną mowę z tekstu i prowadź rozmowy głosowe w czasie rzeczywistym (EVI) przez REST/WebSocket.",
-    "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans. The Octave TTS MCP runs locally (npx @humeai/mcp-server); https://dev.hume.ai/_mcp/server only searches the documentation.",
+    "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans. The API MCP is local `npx @humeai/mcp-server` (HUME_API_KEY); dev.hume.ai/_mcp/server only searches the docs.",
     "verified": "2026-09-24",
     "operations": [
       "text-to-speech",
@@ -5016,16 +5033,9 @@
     "auth": "api_key",
     "auth_hint": "API key from app.resemble.ai dashboard",
     "mcp": {
-      "type": "official",
-      "url": "https://docs.resemble.ai/_mcp/server",
-      "maintainer": "vendor",
-      "remote_url": "https://docs.resemble.ai/_mcp/server",
-      "repo": "https://github.com/resemble-ai/resemble-mcp",
-      "tools": [
-        "resemble_search",
-        "resemble_api_search"
-      ],
-      "covers_full_api": false,
+      "type": "none",
+      "url": null,
+      "maintainer": "none",
       "source_url": "https://github.com/resemble-ai/resemble-mcp",
       "checked_at": "2026-09-24"
     },
@@ -5035,7 +5045,7 @@
     "llms_txt": null,
     "desc_en": "Synthesize speech, clone voices, convert speech-to-speech and detect deepfake audio via REST API.",
     "desc_pl": "Syntezuj mowę, klonuj głosy, konwertuj mowę na mowę i wykrywaj deepfake audio przez REST API.",
-    "notes": "Enterprise plans are available for on-prem deployment and custom model training. The official MCP servers (docs _mcp/server, resemble-ai/resemble-mcp) only search the docs and OpenAPI spec; they do not generate speech.",
+    "notes": "Enterprise plans are available for on-prem deployment and custom model training. Vendor MCP at https://docs.resemble.ai/_mcp/server only searches the docs.",
     "verified": "2026-09-24",
     "operations": [
       "text-to-speech",
@@ -5069,8 +5079,11 @@
     "auth": "api_key",
     "auth_hint": "Authorization: Bearer <access_token>",
     "mcp": {
-      "type": "official",
-      "url": "https://docs.rev.ai/mcp"
+      "type": "none",
+      "url": null,
+      "maintainer": "none",
+      "source_url": "https://docs.rev.ai/mcp",
+      "checked_at": "2026-09-24"
     },
     "free_tier": "trial credits (about 5 hours of ASR)",
     "sdk": [
@@ -5082,7 +5095,7 @@
     "llms_txt": null,
     "desc_en": "Submit audio for asynchronous or streaming speech-to-text transcription, plus sentiment and topic extraction, via REST.",
     "desc_pl": "Przesyłaj audio do asynchronicznej lub strumieniowej transkrypcji mowy na tekst oraz analizy sentymentu i tematów przez REST.",
-    "notes": "The docs MCP at https://docs.rev.ai/mcp only searches the documentation and OpenAPI spec; it does not call the API. Human transcription is sold separately as a paid option.",
+    "notes": "Vendor MCP at https://docs.rev.ai/mcp only searches the docs. Human transcription is sold separately as a paid option.",
     "verified": "2026-09-24",
     "operations": [
       "speech-to-text"
@@ -5128,9 +5141,15 @@
     "auth_hint": "Authorization: Bearer <key>",
     "mcp": {
       "type": "community",
-      "url": "https://glama.ai/mcp/servers/ArchieMcM234/speechmatics_claude_code_mcp",
+      "url": "https://github.com/ArchieMcM234/speechmatics_claude_code_mcp",
       "maintainer": "community",
       "repo": "https://github.com/ArchieMcM234/speechmatics_claude_code_mcp",
+      "tools": [
+        "transcribe_file",
+        "transcribe_directory",
+        "get_transcript",
+        "get_usage"
+      ],
       "covers_full_api": false,
       "source_url": "https://github.com/ArchieMcM234/speechmatics_claude_code_mcp",
       "checked_at": "2026-09-24"
@@ -5245,7 +5264,7 @@
     "llms_txt": null,
     "desc_en": "Generate original music tracks from text prompts or detailed composition plans via REST API, with commercial licensing.",
     "desc_pl": "Generuj oryginalne utwory muzyczne z promptów tekstowych lub szczegółowych planów kompozycji przez REST API, z licencją komercyjną.",
-    "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS. The local elevenlabs-mcp repo is deprecated in favor of the hosted OAuth MCP server.",
+    "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS. Hosted OAuth MCP at api.elevenlabs.io/v1/mcp; the elevenlabs-mcp repo is archived since 2026-08-20.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -5458,7 +5477,10 @@
     "auth_hint": "API key created from Cube webapp user profile, sent as bearer/header token",
     "mcp": {
       "type": "none",
-      "url": null
+      "url": null,
+      "maintainer": "none",
+      "source_url": "https://github.com/CommonSenseMachines/blender-mcp",
+      "checked_at": "2026-09-24"
     },
     "free_tier": "Unavailable: service appears discontinued",
     "sdk": [],
@@ -5466,7 +5488,7 @@
     "llms_txt": null,
     "desc_en": "Create 3D assets and multi-part kits from images via async REST sessions (image-to-3D, retopology).",
     "desc_pl": "Twórz zasoby 3D i wieloczęściowe zestawy z obrazów przez asynchroniczne sesje REST (obraz-do-3D, retopologia).",
-    "notes": "Service appears discontinued: csm.ai domains do not resolve (checked 2026-09-24).",
+    "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. The vendor's Blender MCP repo (github.com/CommonSenseMachines/blender-mcp) now returns 404; no maintained MCP server found.",
     "verified": "2026-09-24",
     "operations": [
       "image-to-3d"
@@ -5770,7 +5792,7 @@
     "llms_txt": null,
     "desc_en": "Generate textured 3D meshes from text or images via REST API, with an official MCP server for agents.",
     "desc_pl": "Generuj teksturowane modele 3D z tekstu lub obrazów przez REST API, z oficjalnym serwerem MCP dla agentów.",
-    "notes": "MCP server by VAST AI Research (Tripo's developer) is alpha and works only through the Tripo Blender add-on (generate and import into Blender), not as a standalone API wrapper. Free-credit amounts vary; verify in console.",
+    "notes": "Maintained by VAST AI Research (Tripo's developer). Free-credit amounts vary by promotion. The MCP server is alpha (last commit 2025-04) and needs Blender with the Tripo addon.",
     "verified": "2026-09-24",
     "auth_scheme": {
       "type": "http",
@@ -6891,10 +6913,11 @@
     "auth_hint": "Authorization: Token <personal-access-token>",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/penpot/penpot/tree/develop/mcp",
+      "url": "https://design.penpot.app/mcp/stream",
       "maintainer": "vendor",
+      "remote_url": "https://design.penpot.app/mcp/stream",
       "repo": "https://github.com/penpot/penpot/tree/develop/mcp",
-      "source_url": "https://penpot.app/ai/mcp-server",
+      "source_url": "https://help.penpot.app/mcp/",
       "checked_at": "2026-09-24"
     },
     "free_tier": "free tier: free cloud account (design.penpot.app) plus free, open-source self-hosting",
@@ -6903,7 +6926,7 @@
     "llms_txt": null,
     "desc_en": "Read, create, and modify Penpot design files, comments, and webhooks via a token-authenticated RPC/REST API, or via the official MCP server.",
     "desc_pl": "Umożliwia odczyt, tworzenie i modyfikację plików projektowych, komentarzy i webhooków Penpot przez API RPC/REST z tokenem lub przez oficjalny serwer MCP.",
-    "notes": "API is RPC-style (e.g. /api/rpc/command/get-profile) with auto-generated reference docs, not a conventional OpenAPI/Swagger file. Fully open source; can be self-hosted. MCP server runs locally (npx @penpot/mcp, http://localhost:4401/mcp); no hosted endpoint.",
+    "notes": "API is RPC-style (e.g. /api/rpc/command/get-profile), no OpenAPI file; open source, self-hostable. Remote MCP takes ?userToken=<MCP key> and needs the MCP plugin open in a Penpot browser tab; local: npx @penpot/mcp@stable.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -7122,12 +7145,23 @@
     "auth": "cloud_iam",
     "auth_hint": "AWS SigV4-signed requests using IAM access key/secret or role credentials",
     "mcp": {
-      "type": "community",
-      "url": "https://github.com/ag2-mcp-servers/amazon-textract",
-      "maintainer": "community",
-      "repo": "https://github.com/ag2-mcp-servers/amazon-textract",
+      "type": "official",
+      "url": "https://aws-mcp.us-east-1.api.aws/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://aws-mcp.us-east-1.api.aws/mcp",
+      "repo": "https://github.com/aws/mcp-proxy-for-aws",
+      "tools": [
+        "aws___run_script",
+        "aws___get_presigned_url",
+        "aws___get_tasks",
+        "aws___search_documentation",
+        "aws___read_documentation",
+        "aws___retrieve_skill",
+        "aws___list_regions",
+        "aws___get_regional_availability"
+      ],
       "covers_full_api": true,
-      "source_url": "https://github.com/ag2-mcp-servers/amazon-textract",
+      "source_url": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/understanding-mcp-server-tools.html",
       "checked_at": "2026-09-24"
     },
     "free_tier": "Trial: new AWS customers get 3 months free, per month 1,000 pages DetectDocumentText, 100 pages AnalyzeDocument forms/tables/layout/queries, 100 AnalyzeExpense/AnalyzeID",
@@ -7144,7 +7178,7 @@
     "llms_txt": null,
     "desc_en": "Detect and extract text, forms, tables, and data from scanned documents and images via API calls.",
     "desc_pl": "Wykrywaj i wydobywaj tekst, formularze, tabele i dane ze skanów oraz obrazów za pomocą wywołań API.",
-    "notes": "Requires an AWS account and IAM credentials; region-specific; free tier applies only for the first 3 months after the first Textract request; official AWS Labs MCP catalog exists (github.com/awslabs/mcp) but has no dedicated Textract server, only community ones.",
+    "notes": "Requires an AWS account and IAM credentials; region-specific; free tier applies only for the first 3 months after the first Textract request. No dedicated Textract MCP; the official AWS MCP Server can call Textract via aws___run_script.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -7316,11 +7350,11 @@
     "auth_hint": "Authorization: Bearer <access_token> via OAuth2 Authorization Code grant or JWT Grant",
     "mcp": {
       "type": "official",
-      "url": "https://mcp-d.docusign.com/mcp",
+      "url": "https://mcp.docusign.com/mcp",
       "maintainer": "vendor",
-      "remote_url": "https://mcp-d.docusign.com/mcp",
+      "remote_url": "https://mcp.docusign.com/mcp",
       "covers_full_api": false,
-      "source_url": "https://www.docusign.com/blog/developers/claude-docusign-mcp-connector-guide",
+      "source_url": "https://mcp.docusign.com/.well-known/oauth-protected-resource",
       "checked_at": "2026-09-24"
     },
     "free_tier": "free developer/demo sandbox account (account-d.docusign.com) with unlimited test envelopes; production use requires a paid DocuSign plan",
@@ -7336,7 +7370,7 @@
     "llms_txt": null,
     "desc_en": "Send, sign, track, and manage electronic signature envelopes and agreement workflows via REST API.",
     "desc_pl": "Wysyłaj, podpisuj, śledź i zarządzaj kopertami podpisów elektronicznych oraz przepływami umów przez REST API.",
-    "notes": "Official Docusign MCP Server (Open Beta, OAuth) covers eSignature plus Navigator/Maestro/Workspaces; mcp-d endpoint is for developer accounts, production via the Claude connectors directory. JWT grant needs one-time user consent; production calls need a paid plan.",
+    "notes": "Official Docusign MCP Server (Open Beta, OAuth) covers eSignature plus Navigator/Maestro/Workspaces: production https://mcp.docusign.com/mcp, developer accounts https://mcp-d.docusign.com/mcp. JWT grant needs one-time user consent.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -7811,8 +7845,9 @@
     "auth_hint": "Authorization: Bearer <REDUCTO_API_KEY>",
     "mcp": {
       "type": "official",
-      "url": "https://docs.reducto.ai/mcp-server",
+      "url": "https://mcp.reducto.ai/mcp",
       "maintainer": "vendor",
+      "remote_url": "https://mcp.reducto.ai/mcp",
       "tools": [
         "parse_document",
         "extract_data",
@@ -7953,7 +7988,7 @@
     "llms_txt": "https://docs.unstructured.io/llms.txt",
     "desc_en": "Partition and extract structured elements (text, tables, layout) from PDFs, docs, and images for RAG pipelines via API.",
     "desc_pl": "Podział i wyodrębnianie ustrukturyzowanych elementów (tekst, tabele, układ) z PDF-ów, dokumentów i obrazów do pipeline'ów RAG przez API.",
-    "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Pipeline/Workflow API. Official hosted Transform MCP server (mcp.transform.unstructured.io) parses documents; the older UNS-MCP repo is no longer actively maintained.",
+    "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Workflow API. Hosted Transform MCP parses documents; the UNS-MCP repo only manages connectors/workflows and is no longer maintained.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -8456,7 +8491,7 @@
     "homepage": "https://e2b.dev",
     "docs": "https://e2b.dev/docs",
     "auth": "api_key",
-    "auth_hint": "E2B_API_KEY env var / Authorization Bearer or X-API-Key header",
+    "auth_hint": "E2B_API_KEY env var / X-API-Key: <key> header (Bearer works only together with an X-Team-ID header)",
     "mcp": {
       "type": "official",
       "url": "https://github.com/e2b-dev/mcp-server",
@@ -8820,19 +8855,29 @@
       "tools": [
         "list_runs",
         "get_run",
-        "list_workflows",
+        "list_run_workflows",
         "get_workflow",
+        "list_workflow_jobs",
+        "get_job",
+        "list_job_tests",
+        "get_job_logs",
+        "get_job_resource_usage",
+        "list_job_artifacts",
         "rerun_workflow",
         "cancel_workflow",
-        "list_jobs",
-        "get_job",
-        "get_job_logs",
-        "list_artifacts",
-        "list_job_tests",
+        "validate_config",
+        "get_orb",
+        "get_orb_source",
+        "list_deployments",
+        "list_deploy_components",
+        "list_deploy_environments",
+        "list_deploy_component_versions",
+        "rollback_deploy_component",
+        "get_me",
         "download_usage_data"
       ],
       "covers_full_api": false,
-      "source_url": "https://circleci.com/docs/guides/toolkit/circleci-mcp-overview/",
+      "source_url": "https://circleci.com/changelog/hosted-mcp-server-now-available/",
       "checked_at": "2026-09-24"
     },
     "free_tier": "free plan: 30,000 credits/month (~6,000 build minutes on a small Docker resource class), credits expire monthly",
@@ -8841,7 +8886,7 @@
     "llms_txt": "https://circleci.com/docs/llms.txt",
     "desc_en": "An agent can trigger pipelines, rerun workflows, fetch logs/test results, and validate CI/CD configuration via REST.",
     "desc_pl": "Agent może uruchamiać pipeline'y, ponawiać workflow, pobierać logi/wyniki testów i walidować konfigurację CI/CD przez REST.",
-    "notes": "Use the v3 API for new work (v2 still supported). The mcp-server-circleci npm package is deprecated in favor of CircleCI's hosted MCP (mcp.circleci.com/v1/mcp, OAuth2 or personal API token) or CLI MCP mode.",
+    "notes": "Use the v3 API for new work (v2 still supported). CircleCI's hosted MCP is at https://mcp.circleci.com/v1/mcp (OAuth2 sign-in, 24 tools); the mcp-server-circleci npm package is deprecated.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -8874,8 +8919,9 @@
     "auth_hint": "DD-API-KEY: <api_key> plus DD-APPLICATION-KEY: <app_key> for some endpoints",
     "mcp": {
       "type": "official",
-      "url": "https://docs.datadoghq.com/mcp_server/setup/",
+      "url": "https://mcp.datadoghq.com/v1/mcp",
       "maintainer": "vendor",
+      "remote_url": "https://mcp.datadoghq.com/v1/mcp",
       "tools": [
         "search_datadog_logs",
         "analyze_datadog_logs",
@@ -8892,7 +8938,7 @@
         "create_datadog_notebook"
       ],
       "covers_full_api": false,
-      "source_url": "https://docs.datadoghq.com/bits_ai/mcp_server/tools/",
+      "source_url": "https://docs.datadoghq.com/getting_started/software_delivery_mcp_tools/",
       "checked_at": "2026-09-24"
     },
     "free_tier": "free Infrastructure Monitoring plan: 1-day metric retention, up to 5 hosts; other products (APM, Logs, Security) are paid",
@@ -9302,7 +9348,7 @@
     "llms_txt": null,
     "desc_en": "An agent can create/manage incidents, on-call schedules, escalation policies, and services via REST.",
     "desc_pl": "Agent może tworzyć i zarządzać incydentami, harmonogramami dyżurów, politykami eskalacji i usługami przez REST.",
-    "notes": "The self-hosted pagerduty-mcp-server repo is deprecated and archived; use the PagerDuty-hosted Remote MCP server (US: mcp.pagerduty.com/mcp, EU: mcp.eu.pagerduty.com/mcp).",
+    "notes": "The self-hosted pagerduty-mcp-server repo is deprecated and archived; use the hosted MCP https://mcp.pagerduty.com/mcp (EU: https://mcp.eu.pagerduty.com/mcp) with an API token or OAuth.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -9348,7 +9394,7 @@
     "llms_txt": "https://learning.postman.com/llms.txt",
     "desc_en": "An agent can manage Postman collections, workspaces, environments, mocks, monitors, and API specs via REST.",
     "desc_pl": "Agent może zarządzać kolekcjami, przestrzeniami roboczymi, środowiskami, mockami, monitorami i specyfikacjami API w Postmanie przez REST.",
-    "notes": "Reference docs are at learning.postman.com. The Postman API MCP server has full (/mcp), minimal (default, /minimal) and code (/code) variants; EU at mcp.eu.postman.com (API key only); npm @postman/postman-mcp-server.",
+    "notes": "Reference docs are at learning.postman.com. Remote MCP modes: /minimal (default), /code, /mcp (full, 100+ tools); US host supports OAuth, EU host mcp.eu.postman.com needs an API key. Docs-search MCP at learning.postman.com/_mcp/server.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -9558,17 +9604,22 @@
     "auth_hint": "AWS Signature Version 4 (SigV4) signed request using IAM access key/secret or STS temporary credentials",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/awslabs/mcp",
+      "url": "https://aws-mcp.us-east-1.api.aws/mcp",
       "maintainer": "vendor",
       "remote_url": "https://aws-mcp.us-east-1.api.aws/mcp",
-      "repo": "https://github.com/awslabs/mcp",
+      "repo": "https://github.com/aws/mcp-proxy-for-aws",
       "tools": [
-        "call_aws",
-        "suggest_aws_commands",
-        "get_execution_plan"
+        "aws___run_script",
+        "aws___get_presigned_url",
+        "aws___get_tasks",
+        "aws___search_documentation",
+        "aws___read_documentation",
+        "aws___retrieve_skill",
+        "aws___list_regions",
+        "aws___get_regional_availability"
       ],
       "covers_full_api": true,
-      "source_url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
+      "source_url": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/understanding-mcp-server-tools.html",
       "checked_at": "2026-09-24"
     },
     "free_tier": "Free tier: 30+ services always free within monthly limits; new accounts also get up to $200 one-time credits ($100 on signup + up to $100 earned) usable over 6 months",
@@ -9590,7 +9641,7 @@
     "llms_txt": "https://docs.aws.amazon.com/llms.txt",
     "desc_en": "An agent can provision and control thousands of AWS resources (compute, storage, databases, ML) via SDKs/CLI/REST.",
     "desc_pl": "Agent może udostępniać i kontrolować tysiące zasobów AWS (obliczenia, pamięć masowa, bazy danych, ML) przez SDK/CLI/REST.",
-    "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own IAM scoping, rate limits, and regional availability; no single unified OpenAPI spec.",
+    "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own IAM scoping, rate limits, and regional availability; no unified OpenAPI spec. The managed AWS MCP Server (OAuth or SigV4 proxy) replaces the local aws-api-mcp-server.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -10070,10 +10121,11 @@
       "url": "https://mcp-on-edge.edgeone.app/mcp-server",
       "maintainer": "vendor",
       "remote_url": "https://mcp-on-edge.edgeone.app/mcp-server",
+      "repo": "https://www.npmjs.com/package/@edgeone/makers-mcp",
       "tools": [
-        "deploy_html",
-        "deploy_folder"
+        "deploy-html"
       ],
+      "covers_full_api": false,
       "source_url": "https://pages.edgeone.ai/document/mcp",
       "checked_at": "2026-09-24"
     },
@@ -10177,6 +10229,798 @@
       "serverless-deploy",
       "web-analytics",
       "dns-cdn"
+    ]
+  },
+  {
+    "id": "clickhouse-cloud",
+    "name": "ClickHouse Cloud",
+    "category": "databases",
+    "homepage": "https://clickhouse.com",
+    "docs": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
+    "auth": "api_key",
+    "auth_hint": "Basic auth with Cloud API key id/secret",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/ClickHouse/mcp-clickhouse",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.clickhouse.cloud/mcp",
+      "repo": "https://github.com/ClickHouse/mcp-clickhouse",
+      "tools": [
+        "get_organizations",
+        "list_databases",
+        "list_tables",
+        "run_select_query",
+        "get_services_list",
+        "get_service_details",
+        "get_service_backup_configuration",
+        "list_service_backups",
+        "list_clickpipes",
+        "get_organization_cost"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://clickhouse.com/docs/products/cloud/features/ai-ml/mcp/remote-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "no permanent free tier; 30-day trial with $300 credits",
+    "sdk": [
+      "python",
+      "javascript",
+      "go",
+      "java"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Run SQL analytics queries and manage Cloud services/backups via REST API or official MCP server.",
+    "desc_pl": "Wykonuj analityczne zapytania SQL oraz zarządzaj usługami/kopiami zapasowymi Cloud przez REST API lub oficjalny serwer MCP.",
+    "notes": "Cloud-hosted remote MCP adds service management, billing, and ClickPipe visibility.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "$300 in credits over 30 days",
+      "period": "one_time",
+      "source_url": "https://clickhouse.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(<KEY_ID>:<KEY_SECRET>)",
+      "source_url": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.clickhouse.cloud/v1",
+    "rate_limits": {
+      "summary": "Cloud API: 10 requests per 10-second window per API key; up to 100 keys per organization",
+      "source_url": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "analytics-query",
+      "sql-database"
+    ]
+  },
+  {
+    "id": "convex",
+    "name": "Convex",
+    "category": "databases",
+    "homepage": "https://www.convex.dev",
+    "docs": "https://docs.convex.dev/ai/convex-mcp-server",
+    "auth": "api_key",
+    "auth_hint": "deploy key / admin key",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/get-convex/convex-backend",
+      "maintainer": "vendor",
+      "tools": [
+        "status",
+        "tables",
+        "data",
+        "runOneoffQuery",
+        "functionSpec",
+        "run",
+        "logs",
+        "insights",
+        "envList",
+        "envGet",
+        "envSet",
+        "envRemove"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://docs.convex.dev/ai/convex-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "generous free tier for small apps, zero cost/maintenance",
+    "sdk": [
+      "javascript",
+      "python",
+      "rust"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Introspect tables/functions, call functions, and read/write data in a reactive database via MCP or client SDKs.",
+    "desc_pl": "Przeglądaj tabele/funkcje, wywołuj funkcje oraz odczytuj/zapisuj dane w reaktywnej bazie przez MCP lub SDK klienckie.",
+    "notes": "Vector search available even on the free tier.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "quota": "1M function calls, 0.5 GB database storage, 1 GB data egress, 1 GB file storage",
+      "period": "month",
+      "source_url": "https://www.convex.dev/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "format": "Authorization: Convex <DEPLOY_KEY> (admin); Authorization: Bearer <user JWT> for user-level calls",
+      "source_url": "https://docs.convex.dev/http-api/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://<deployment>.convex.cloud/api",
+    "operations": [
+      "nosql-database",
+      "vector-search"
+    ]
+  },
+  {
+    "id": "google-bigquery",
+    "name": "Google BigQuery",
+    "category": "databases",
+    "homepage": "https://cloud.google.com/bigquery",
+    "docs": "https://docs.cloud.google.com/bigquery/docs/reference/mcp",
+    "auth": "cloud_iam",
+    "auth_hint": "OAuth2/IAM (Google Cloud service account or user credentials)",
+    "mcp": {
+      "type": "official",
+      "url": "https://bigquery.googleapis.com/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://bigquery.googleapis.com/mcp",
+      "tools": [
+        "list_dataset_ids",
+        "get_dataset_info",
+        "list_table_ids",
+        "get_table_info",
+        "execute_sql",
+        "execute_sql_readonly",
+        "run_bq_command"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Free tier: 1 TiB of querying and 10 GiB of storage per month",
+    "sdk": [
+      "python",
+      "javascript",
+      "java",
+      "go"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Run SQL queries and inspect datasets/tables in BigQuery via REST API or the fully-managed remote MCP server.",
+    "desc_pl": "Wykonuj zapytania SQL i przeglądaj zbiory danych/tabele w BigQuery przez REST API lub w pełni zarządzany zdalny serwer MCP.",
+    "notes": "Remote MCP server is hosted by Google, no local install needed.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": true,
+      "quota": "1 TiB of querying and 10 GiB of storage",
+      "period": "month",
+      "source_url": "https://docs.cloud.google.com/free/docs/free-cloud-features",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "cloud_iam",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <OAuth2 access token>",
+      "source_url": "https://docs.cloud.google.com/docs/authentication/rest",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://bigquery.googleapis.com",
+    "rate_limits": {
+      "summary": "100 API requests per second per user per method; tabledata.list 1,000 req/s per project; on-demand query usage 200 TiB/day per project",
+      "source_url": "https://docs.cloud.google.com/bigquery/quotas",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "https://www.googleapis.com/auth/bigquery"
+      ],
+      "source_url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "analytics-query",
+      "sql-database"
+    ]
+  },
+  {
+    "id": "mongodb-atlas",
+    "name": "MongoDB Atlas",
+    "category": "databases",
+    "homepage": "https://www.mongodb.com/atlas",
+    "docs": "https://www.mongodb.com/docs/atlas/api/atlas-admin-api-ref/",
+    "auth": "api_key+oauth2",
+    "auth_hint": "OAuth2 service account (client credentials) -> Authorization: Bearer <access token, 1h>; legacy: HTTP Digest with Atlas public/private API key",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "maintainer": "vendor",
+      "repo": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "tools": [
+        "find",
+        "aggregate",
+        "count",
+        "insert-many",
+        "update-many",
+        "delete-many",
+        "create-collection",
+        "list-collections",
+        "list-databases",
+        "collection-schema",
+        "create-index",
+        "explain",
+        "export",
+        "atlas-list-clusters",
+        "atlas-create-free-cluster",
+        "atlas-connect-cluster",
+        "atlas-create-project",
+        "atlas-list-projects",
+        "atlas-create-db-user",
+        "atlas-create-access-list",
+        "atlas-list-alerts",
+        "atlas-get-performance-advisor",
+        "search-knowledge"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/mongodb-js/mongodb-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "free tier: M0 cluster free forever (512MB)",
+    "sdk": [
+      "python",
+      "javascript",
+      "java",
+      "csharp",
+      "go",
+      "rust"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Create/manage Atlas clusters and query MongoDB data via Admin API, drivers, or official MCP server.",
+    "desc_pl": "Twórz i zarządzaj klastrami Atlas oraz odpytuj dane MongoDB przez Admin API, sterowniki lub oficjalny serwer MCP.",
+    "notes": "MongoDB also runs the Atlas Managed MCP Server (GA Aug 2026, OAuth, recommended), reached via AI-client plugins or the mongodb-atlas-mcp-remote npm package; no public endpoint URL is documented.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "quota": "M0 Free cluster: 512 MB storage, shared RAM/vCPU, up to 100 ops/sec; free forever",
+      "source_url": "https://www.mongodb.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <service-account access token> (OAuth2 client credentials, 1h tokens); legacy API keys use HTTP Digest",
+      "source_url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://cloud.mongodb.com/api/atlas/v2",
+    "operations": [
+      "nosql-database"
+    ]
+  },
+  {
+    "id": "neon-postgres",
+    "name": "Neon Postgres",
+    "category": "databases",
+    "homepage": "https://neon.com",
+    "docs": "https://neon.com/docs/reference/api",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Authorization: Bearer <api_key>",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/neondatabase/mcp-server-neon",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.neon.tech/mcp",
+      "repo": "https://github.com/neondatabase/mcp-server-neon",
+      "tools": [
+        "list_projects",
+        "describe_project",
+        "create_project",
+        "delete_project",
+        "list_organizations",
+        "list_branches",
+        "create_branch",
+        "reset_from_parent",
+        "delete_branch",
+        "describe_branch",
+        "restore_snapshot",
+        "list_postgres_endpoints",
+        "list_snapshots",
+        "get_connection_string",
+        "run_sql",
+        "run_sql_transaction",
+        "get_database_tables",
+        "describe_table_schema",
+        "compare_database_schema",
+        "prepare_database_migration",
+        "complete_database_migration",
+        "inspect_database",
+        "list_slow_queries",
+        "explain_sql_statement",
+        "prepare_query_tuning",
+        "complete_query_tuning",
+        "provision_neon_auth",
+        "provision_neon_data_api",
+        "query_logs",
+        "list_functions",
+        "list_storage_buckets",
+        "search",
+        "fetch"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://neon.com/docs/ai/neon-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Free tier: 100 projects; 0.5 GB storage, 100 CU-hours and 5 GB egress per project per month, no card required",
+    "sdk": [],
+    "openapi": "https://neon.com/api_spec/release/v2.json",
+    "llms_txt": "https://api-docs.neon.tech/llms.txt",
+    "desc_en": "Provision and manage serverless Postgres projects/branches and run SQL via REST API or MCP server.",
+    "desc_pl": "Twórz i zarządzaj projektami/gałęziami serverless Postgres oraz wykonuj SQL przez REST API lub serwer MCP.",
+    "notes": "OAuth recommended for local IDEs, static API key for headless agents.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100 projects; 0.5 GB storage, 100 CU-hours and 5 GB egress per project per month",
+      "period": "month",
+      "source_url": "https://neon.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <NEON_API_KEY>",
+      "source_url": "https://neon.com/docs/reference/api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://console.neon.tech/api/v2",
+    "async_jobs": {
+      "value": true,
+      "how": "long-running tasks return operation IDs; poll GET /projects/{project_id}/operations/{operation_id}",
+      "source_url": "https://neon.com/docs/reference/api"
+    },
+    "operations": [
+      "sql-database"
+    ]
+  },
+  {
+    "id": "planetscale",
+    "name": "PlanetScale",
+    "category": "databases",
+    "homepage": "https://planetscale.com",
+    "docs": "https://planetscale.com/docs/connect/mcp",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Service token or OAuth (for MCP)",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.pscale.dev/mcp/planetscale",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.pscale.dev/mcp/planetscale",
+      "covers_full_api": false,
+      "source_url": "https://planetscale.com/docs/connect/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Paid only: no free or Hobby plan; cheapest is Postgres PS-5 single node at $5/month",
+    "sdk": [
+      "javascript"
+    ],
+    "openapi": null,
+    "llms_txt": "https://planetscale.com/docs/llms.txt",
+    "desc_en": "Manage MySQL databases, branches, and schema, and view Insights via hosted MCP server or API.",
+    "desc_pl": "Zarządzaj bazami MySQL, gałęziami i schematem oraz przeglądaj Insights przez hostowany serwer MCP lub API.",
+    "notes": "MCP server launched Jan 2026; configurable read-only vs full-access permissions.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "none",
+      "source_url": "https://planetscale.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "format": "Authorization: <SERVICE_TOKEN_ID>:<SERVICE_TOKEN>",
+      "source_url": "https://planetscale.com/docs/api/reference/service-tokens",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.planetscale.com/v1",
+    "rate_limits": {
+      "summary": "600 requests per minute (subject to change)",
+      "source_url": "https://planetscale.com/docs/api/reference/getting-started-with-planetscale-api",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "sql-database"
+    ]
+  },
+  {
+    "id": "snowflake",
+    "name": "Snowflake",
+    "category": "databases",
+    "homepage": "https://www.snowflake.com",
+    "docs": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Key-pair auth, OAuth, or PAT; cloud_iam variants for Snowpark",
+    "mcp": {
+      "type": "official",
+      "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://<account_url>/api/v2/databases/{database}/schemas/{schema}/mcp-servers/{name}",
+      "repo": "https://github.com/Snowflake-Labs/mcp",
+      "covers_full_api": false,
+      "source_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "trial credits (no permanent free tier); check pricing",
+    "sdk": [
+      "python",
+      "javascript",
+      "java",
+      "go"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Run SQL, Cortex Analyst, and Cortex Search over warehoused data via REST API or managed MCP server.",
+    "desc_pl": "Wykonuj SQL, Cortex Analyst i Cortex Search na danych w hurtowni przez REST API lub zarządzany serwer MCP.",
+    "notes": "Snowflake-managed MCP server reached GA Nov 2025; hosted per account at https://<account_url>/api/v2/databases/{db}/schemas/{schema}/mcp-servers/{name}. Snowflake-Labs/mcp is a separate self-hosted server.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "30-day trial with a free usage balance (ends at 30 days or when balance is used up); AI features disabled until a card is added",
+      "period": "one_time",
+      "source_url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <OAuth token | key-pair JWT | PAT> with optional X-Snowflake-Authorization-Token-Type header",
+      "source_url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://<account_identifier>.snowflakecomputing.com/api/v2",
+    "operations": [
+      "analytics-query",
+      "sql-database"
+    ]
+  },
+  {
+    "id": "supabase",
+    "name": "Supabase",
+    "category": "databases",
+    "homepage": "https://supabase.com",
+    "docs": "https://supabase.com/docs/guides/api",
+    "auth": "api_key+oauth2",
+    "auth_hint": "apikey: <publishable or secret key> (not Authorization: Bearer; new keys are not JWTs); Management API: Authorization: Bearer <PAT or OAuth token>",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.supabase.com/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.supabase.com/mcp",
+      "repo": "https://github.com/supabase-community/supabase-mcp",
+      "tools": [
+        "list_organizations",
+        "get_organization",
+        "list_projects",
+        "get_project",
+        "create_project",
+        "pause_project",
+        "restore_project",
+        "get_cost",
+        "confirm_cost",
+        "list_tables",
+        "list_extensions",
+        "list_migrations",
+        "apply_migration",
+        "execute_sql",
+        "get_advisors",
+        "get_project_url",
+        "get_publishable_keys",
+        "generate_typescript_types",
+        "list_edge_functions",
+        "get_edge_function",
+        "deploy_edge_function",
+        "search_docs",
+        "list_storage_buckets",
+        "get_storage_config",
+        "create_branch",
+        "list_branches",
+        "delete_branch",
+        "merge_branch",
+        "reset_branch",
+        "rebase_branch"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://supabase.com/docs/guides/getting-started/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "free tier: 2 projects, 500MB DB, 5GB bandwidth",
+    "sdk": [
+      "javascript",
+      "python",
+      "dart",
+      "swift"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Manage Postgres tables, auth, storage, and edge functions via REST/GraphQL APIs or client SDKs.",
+    "desc_pl": "Zarządzaj tabelami Postgres, autoryzacją, magazynem i funkcjami edge przez REST/GraphQL lub SDK klienckie.",
+    "notes": "Official MCP server can also create/manage whole projects, not just query data.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "quota": "2 active projects, 500 MB database, 5 GB egress, 1 GB file storage, 50,000 MAU; paused after 1 week of inactivity",
+      "period": "month",
+      "source_url": "https://supabase.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "apikey",
+      "format": "apikey: <publishable or secret key>",
+      "source_url": "https://supabase.com/docs/guides/api/api-keys",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.supabase.com/v1",
+    "rate_limits": {
+      "summary": "Management API: 120 requests/min per user per scope; some analytics and database endpoints 30 or 10/min; Free plan data API requests unlimited",
+      "source_url": "https://supabase.com/docs/reference/api/introduction",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "sql-database",
+      "object-storage"
+    ]
+  },
+  {
+    "id": "tidb-cloud",
+    "name": "TiDB Cloud API (Starter)",
+    "category": "databases",
+    "homepage": "https://www.pingcap.com/tidb/cloud/",
+    "docs": "https://docs.pingcap.com/api/tidb-cloud-api-overview/",
+    "auth": "api_key",
+    "auth_hint": "HTTP Digest auth with API public key as username and private key as password (Management API); SQL via MySQL connection string or serverless HTTP driver with cluster user/password",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/pingcap/pytidb",
+      "maintainer": "vendor",
+      "repo": "https://github.com/pingcap/pytidb",
+      "tools": [
+        "show_databases",
+        "switch_database",
+        "show_tables",
+        "db_query",
+        "db_execute",
+        "db_create_user",
+        "db_remove_user"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/pingcap/pytidb/blob/main/pytidb/ext/mcp/server.py",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Free: up to 5 Starter instances per org, 25 GiB row storage + 25 GiB columnar storage + 250M Request Units per month in total; no credit card",
+    "sdk": [
+      "python",
+      "javascript"
+    ],
+    "openapi": null,
+    "llms_txt": "https://docs.pingcap.com/llms.txt",
+    "desc_en": "Lets an agent create and manage serverless MySQL-compatible TiDB clusters and run SQL, full-text and vector search queries against them.",
+    "desc_pl": "Pozwala agentowi tworzyć serverlessowe klastry TiDB zgodne z MySQL, zarządzać nimi i wykonywać na nich zapytania SQL, pełnotekstowe i wektorowe.",
+    "notes": "Cloud API is in public preview (v1beta1 for Starter/Essential/Dedicated). Official MCP server is local (uvx --from pytidb[mcp] tidb-mcp-server, stdio or SSE) and needs the cluster connection credentials. A 6th instance requires a card and spending limit.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "25 GiB row storage, 25 GiB column storage and 250M Request Units per organization",
+      "period": "month",
+      "source_url": "https://www.pingcap.com/tidb-cloud-pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": "header",
+      "name": "Authorization",
+      "format": "HTTP Digest auth: API public key as username, private key as password",
+      "source_url": "https://docs.pingcap.com/api/tidb-cloud-api-overview/",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "sql-database",
+      "vector-search"
+    ]
+  },
+  {
+    "id": "tinybird",
+    "name": "Tinybird API",
+    "category": "databases",
+    "homepage": "https://www.tinybird.co",
+    "docs": "https://www.tinybird.co/docs/api-reference",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <TINYBIRD_TOKEN> (workspace admin, resource-scoped token or JWT)",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN",
+      "tools": [
+        "call_endpoint",
+        "execute_query",
+        "text_to_sql",
+        "list_endpoints",
+        "list_datasources",
+        "list_service_datasources"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://www.tinybird.co/docs/forward/analytics-agents/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Free plan: 10 GB storage, 1,000 API requests/day, 0.25 vCPU shared; no credit card",
+    "sdk": [
+      "python",
+      "javascript"
+    ],
+    "openapi": null,
+    "llms_txt": "https://www.tinybird.co/docs/llms.txt",
+    "desc_en": "Lets an agent ingest events into real-time ClickHouse-based data sources, run SQL queries and call published analytics API endpoints.",
+    "desc_pl": "Pozwala agentowi zasilać zdarzeniami źródła danych czasu rzeczywistego oparte na ClickHouse, wykonywać zapytania SQL i wywoływać opublikowane endpointy analityczne.",
+    "notes": "Remote MCP over Streamable HTTP, token passed as query parameter (add &host=... for non-default regions); use mcp-remote for older clients. API host depends on workspace region.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "10 GB storage, 1,000 API requests per day, 0.25 vCPU",
+      "period": "day",
+      "source_url": "https://www.tinybird.co/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <TINYBIRD_TOKEN> (or ?token=<TINYBIRD_TOKEN>)",
+      "source_url": "https://www.tinybird.co/docs/api-reference",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.tinybird.co",
+    "rate_limits": {
+      "summary": "Limits depend on plan (Free: 1,000 API requests/day); 429 Too many requests when exceeded",
+      "source_url": "https://www.tinybird.co/docs/api-reference",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "analytics-query",
+      "data-pipeline"
+    ]
+  },
+  {
+    "id": "turso",
+    "name": "Turso",
+    "category": "databases",
+    "homepage": "https://turso.tech",
+    "docs": "https://docs.turso.tech",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <token>",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.turso.ai/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.turso.ai/mcp",
+      "repo": "https://github.com/tursodatabase/turso-mcp",
+      "covers_full_api": true,
+      "source_url": "https://docs.turso.tech/integrations/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Free tier: 100 databases, 5 GB storage, 500M rows read and 10M rows written per month, no card required",
+    "sdk": [
+      "javascript",
+      "python",
+      "rust",
+      "go"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Create and query edge SQLite (libSQL) databases programmatically via HTTP/SDK client libraries.",
+    "desc_pl": "Twórz i odpytuj bazy SQLite (libSQL) na edge programowo przez API HTTP/biblioteki klienckie.",
+    "notes": "Official hosted MCP server (OAuth 2.1) manages databases and groups and runs SQL; repo github.com/tursodatabase/turso-mcp.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100 databases, 5 GB storage, 500M rows read and 10M rows written per month",
+      "period": "month",
+      "source_url": "https://turso.tech/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <TURSO_API_TOKEN>",
+      "source_url": "https://docs.turso.tech/api-reference/authentication",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.turso.tech/v1",
+    "operations": [
+      "sql-database"
+    ]
+  },
+  {
+    "id": "upstash-redis-vector",
+    "name": "Upstash (Redis, Vector)",
+    "category": "databases",
+    "homepage": "https://upstash.com",
+    "docs": "https://upstash.com/docs/redis/overall/getstarted",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <token>",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.upstash.com/mcp",
+      "maintainer": "vendor",
+      "repo": "https://github.com/upstash/mcp-server",
+      "covers_full_api": false,
+      "source_url": "https://github.com/upstash/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Free tier: Redis 256MB/500K cmds per month; Vector 10K queries+updates per day (max 200M vectors x dimensions, 1,536 dims)",
+    "sdk": [
+      "javascript",
+      "python",
+      "go"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Call serverless Redis, Vector, and QStash over HTTP REST API from edge/serverless runtimes.",
+    "desc_pl": "Wywołuj serverless Redis, Vector i QStash przez REST API z środowisk edge/serverless.",
+    "notes": "Remote MCP endpoint supports OAuth or API key.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Redis: 256 MB data, 500K commands/month; Vector: 1 free index, 10K queries+updates/day",
+      "period": "month",
+      "source_url": "https://upstash.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <UPSTASH_REDIS_REST_TOKEN> (or ?_token=<TOKEN>)",
+      "source_url": "https://upstash.com/docs/redis/features/restapi",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "key-value-store",
+      "vector-search"
     ]
   },
   {
@@ -10288,214 +11132,6 @@
     "base_url": "https://api.trychroma.com",
     "operations": [
       "vector-search"
-    ]
-  },
-  {
-    "id": "clickhouse-cloud",
-    "name": "ClickHouse Cloud",
-    "category": "databases-vector-memory",
-    "homepage": "https://clickhouse.com",
-    "docs": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
-    "auth": "api_key",
-    "auth_hint": "Basic auth with Cloud API key id/secret",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/ClickHouse/mcp-clickhouse",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.clickhouse.cloud/mcp",
-      "repo": "https://github.com/ClickHouse/mcp-clickhouse",
-      "tools": [
-        "get_organizations",
-        "list_databases",
-        "list_tables",
-        "run_select_query",
-        "get_services_list",
-        "get_service_details",
-        "get_service_backup_configuration",
-        "list_service_backups",
-        "list_clickpipes",
-        "get_organization_cost"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://clickhouse.com/docs/products/cloud/features/ai-ml/mcp/remote-mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "no permanent free tier; 30-day trial with $300 credits",
-    "sdk": [
-      "python",
-      "javascript",
-      "go",
-      "java"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Run SQL analytics queries and manage Cloud services/backups via REST API or official MCP server.",
-    "desc_pl": "Wykonuj analityczne zapytania SQL oraz zarządzaj usługami/kopiami zapasowymi Cloud przez REST API lub oficjalny serwer MCP.",
-    "notes": "Cloud-hosted remote MCP adds service management, billing, and ClickPipe visibility.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "trial",
-      "requires_card": false,
-      "quota": "$300 in credits over 30 days",
-      "period": "one_time",
-      "source_url": "https://clickhouse.com/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "in": "header",
-      "name": "Authorization",
-      "scheme": "basic",
-      "format": "Authorization: Basic base64(<KEY_ID>:<KEY_SECRET>)",
-      "source_url": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.clickhouse.cloud/v1",
-    "rate_limits": {
-      "summary": "Cloud API: 10 requests per 10-second window per API key; up to 100 keys per organization",
-      "source_url": "https://clickhouse.com/docs/products/cloud/features/admin-features/api/api-overview",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "analytics-query",
-      "sql-database"
-    ]
-  },
-  {
-    "id": "convex",
-    "name": "Convex",
-    "category": "databases-vector-memory",
-    "homepage": "https://www.convex.dev",
-    "docs": "https://docs.convex.dev/ai/convex-mcp-server",
-    "auth": "api_key",
-    "auth_hint": "deploy key / admin key",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/get-convex/convex-backend",
-      "maintainer": "vendor",
-      "tools": [
-        "status",
-        "tables",
-        "data",
-        "runOneoffQuery",
-        "functionSpec",
-        "run",
-        "logs",
-        "insights",
-        "envList",
-        "envGet",
-        "envSet",
-        "envRemove"
-      ],
-      "covers_full_api": true,
-      "source_url": "https://docs.convex.dev/ai/convex-mcp-server",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "generous free tier for small apps, zero cost/maintenance",
-    "sdk": [
-      "javascript",
-      "python",
-      "rust"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Introspect tables/functions, call functions, and read/write data in a reactive database via MCP or client SDKs.",
-    "desc_pl": "Przeglądaj tabele/funkcje, wywołuj funkcje oraz odczytuj/zapisuj dane w reaktywnej bazie przez MCP lub SDK klienckie.",
-    "notes": "Vector search available even on the free tier.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "quota": "1M function calls, 0.5 GB database storage, 1 GB data egress, 1 GB file storage",
-      "period": "month",
-      "source_url": "https://www.convex.dev/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "Authorization",
-      "format": "Authorization: Convex <DEPLOY_KEY> (admin); Authorization: Bearer <user JWT> for user-level calls",
-      "source_url": "https://docs.convex.dev/http-api/",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://<deployment>.convex.cloud/api",
-    "operations": [
-      "nosql-database",
-      "vector-search"
-    ]
-  },
-  {
-    "id": "google-bigquery",
-    "name": "Google BigQuery",
-    "category": "databases-vector-memory",
-    "homepage": "https://cloud.google.com/bigquery",
-    "docs": "https://docs.cloud.google.com/bigquery/docs/reference/mcp",
-    "auth": "cloud_iam",
-    "auth_hint": "OAuth2/IAM (Google Cloud service account or user credentials)",
-    "mcp": {
-      "type": "official",
-      "url": "https://bigquery.googleapis.com/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://bigquery.googleapis.com/mcp",
-      "tools": [
-        "list_dataset_ids",
-        "get_dataset_info",
-        "list_table_ids",
-        "get_table_info",
-        "execute_sql",
-        "execute_sql_readonly",
-        "run_bq_command"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Free tier: 1 TiB of querying and 10 GiB of storage per month",
-    "sdk": [
-      "python",
-      "javascript",
-      "java",
-      "go"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Run SQL queries and inspect datasets/tables in BigQuery via REST API or the fully-managed remote MCP server.",
-    "desc_pl": "Wykonuj zapytania SQL i przeglądaj zbiory danych/tabele w BigQuery przez REST API lub w pełni zarządzany zdalny serwer MCP.",
-    "notes": "Remote MCP server is hosted by Google, no local install needed.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": true,
-      "quota": "1 TiB of querying and 10 GiB of storage",
-      "period": "month",
-      "source_url": "https://docs.cloud.google.com/free/docs/free-cloud-features",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "cloud_iam",
-      "in": "header",
-      "name": "Authorization",
-      "scheme": "bearer",
-      "format": "Authorization: Bearer <OAuth2 access token>",
-      "source_url": "https://docs.cloud.google.com/docs/authentication/rest",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://bigquery.googleapis.com",
-    "rate_limits": {
-      "summary": "100 API requests per second per user per method; tabledata.list 1,000 req/s per project; on-demand query usage 200 TiB/day per project",
-      "source_url": "https://docs.cloud.google.com/bigquery/quotas",
-      "checked_at": "2026-09-24"
-    },
-    "oauth_scopes": {
-      "scopes": [
-        "https://www.googleapis.com/auth/bigquery"
-      ],
-      "source_url": "https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "analytics-query",
-      "sql-database"
     ]
   },
   {
@@ -10622,171 +11258,6 @@
     ]
   },
   {
-    "id": "mongodb-atlas",
-    "name": "MongoDB Atlas",
-    "category": "databases-vector-memory",
-    "homepage": "https://www.mongodb.com/atlas",
-    "docs": "https://www.mongodb.com/docs/atlas/api/atlas-admin-api-ref/",
-    "auth": "api_key+oauth2",
-    "auth_hint": "OAuth2 service account (client credentials) -> Authorization: Bearer <access token, 1h>; legacy: HTTP Digest with Atlas public/private API key",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/mongodb-js/mongodb-mcp-server",
-      "maintainer": "vendor",
-      "repo": "https://github.com/mongodb-js/mongodb-mcp-server",
-      "tools": [
-        "find",
-        "aggregate",
-        "count",
-        "insert-many",
-        "update-many",
-        "delete-many",
-        "create-collection",
-        "list-collections",
-        "list-databases",
-        "collection-schema",
-        "create-index",
-        "explain",
-        "export",
-        "atlas-list-clusters",
-        "atlas-create-free-cluster",
-        "atlas-connect-cluster",
-        "atlas-create-project",
-        "atlas-list-projects",
-        "atlas-create-db-user",
-        "atlas-create-access-list",
-        "atlas-list-alerts",
-        "atlas-get-performance-advisor",
-        "search-knowledge"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://github.com/mongodb-js/mongodb-mcp-server",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "free tier: M0 cluster free forever (512MB)",
-    "sdk": [
-      "python",
-      "javascript",
-      "java",
-      "csharp",
-      "go",
-      "rust"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Create/manage Atlas clusters and query MongoDB data via Admin API, drivers, or official MCP server.",
-    "desc_pl": "Twórz i zarządzaj klastrami Atlas oraz odpytuj dane MongoDB przez Admin API, sterowniki lub oficjalny serwer MCP.",
-    "notes": "MongoDB also offers a managed MCP server hosted by Atlas itself.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "quota": "M0 Free cluster: 512 MB storage, shared RAM/vCPU, up to 100 ops/sec; free forever",
-      "source_url": "https://www.mongodb.com/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "oauth2",
-      "in": "header",
-      "name": "Authorization",
-      "scheme": "bearer",
-      "format": "Authorization: Bearer <service-account access token> (OAuth2 client credentials, 1h tokens); legacy API keys use HTTP Digest",
-      "source_url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://cloud.mongodb.com/api/atlas/v2",
-    "operations": [
-      "nosql-database"
-    ]
-  },
-  {
-    "id": "neon-postgres",
-    "name": "Neon Postgres",
-    "category": "databases-vector-memory",
-    "homepage": "https://neon.com",
-    "docs": "https://neon.com/docs/reference/api",
-    "auth": "api_key+oauth2",
-    "auth_hint": "Authorization: Bearer <api_key>",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/neondatabase/mcp-server-neon",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.neon.tech/mcp",
-      "repo": "https://github.com/neondatabase/mcp-server-neon",
-      "tools": [
-        "list_projects",
-        "describe_project",
-        "create_project",
-        "delete_project",
-        "list_organizations",
-        "list_branches",
-        "create_branch",
-        "reset_from_parent",
-        "delete_branch",
-        "describe_branch",
-        "restore_snapshot",
-        "list_postgres_endpoints",
-        "list_snapshots",
-        "get_connection_string",
-        "run_sql",
-        "run_sql_transaction",
-        "get_database_tables",
-        "describe_table_schema",
-        "compare_database_schema",
-        "prepare_database_migration",
-        "complete_database_migration",
-        "inspect_database",
-        "list_slow_queries",
-        "explain_sql_statement",
-        "prepare_query_tuning",
-        "complete_query_tuning",
-        "provision_neon_auth",
-        "provision_neon_data_api",
-        "query_logs",
-        "list_functions",
-        "list_storage_buckets",
-        "search",
-        "fetch"
-      ],
-      "covers_full_api": true,
-      "source_url": "https://neon.com/docs/ai/neon-mcp-server",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Free tier: 100 projects; 0.5 GB storage, 100 CU-hours and 5 GB egress per project per month, no card required",
-    "sdk": [],
-    "openapi": "https://neon.com/api_spec/release/v2.json",
-    "llms_txt": "https://api-docs.neon.tech/llms.txt",
-    "desc_en": "Provision and manage serverless Postgres projects/branches and run SQL via REST API or MCP server.",
-    "desc_pl": "Twórz i zarządzaj projektami/gałęziami serverless Postgres oraz wykonuj SQL przez REST API lub serwer MCP.",
-    "notes": "OAuth recommended for local IDEs, static API key for headless agents.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "100 projects; 0.5 GB storage, 100 CU-hours and 5 GB egress per project per month",
-      "period": "month",
-      "source_url": "https://neon.com/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "in": "header",
-      "name": "Authorization",
-      "scheme": "bearer",
-      "format": "Authorization: Bearer <NEON_API_KEY>",
-      "source_url": "https://neon.com/docs/reference/api",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://console.neon.tech/api/v2",
-    "async_jobs": {
-      "value": true,
-      "how": "long-running tasks return operation IDs; poll GET /projects/{project_id}/operations/{operation_id}",
-      "source_url": "https://neon.com/docs/reference/api"
-    },
-    "operations": [
-      "sql-database"
-    ]
-  },
-  {
     "id": "pinecone",
     "name": "Pinecone",
     "category": "databases-vector-memory",
@@ -10855,56 +11326,6 @@
     ]
   },
   {
-    "id": "planetscale",
-    "name": "PlanetScale",
-    "category": "databases-vector-memory",
-    "homepage": "https://planetscale.com",
-    "docs": "https://planetscale.com/docs/connect/mcp",
-    "auth": "api_key+oauth2",
-    "auth_hint": "Service token or OAuth (for MCP)",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.pscale.dev/mcp/planetscale",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.pscale.dev/mcp/planetscale",
-      "covers_full_api": false,
-      "source_url": "https://planetscale.com/docs/connect/mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Paid only: no free or Hobby plan; cheapest is Postgres PS-5 single node at $5/month",
-    "sdk": [
-      "javascript"
-    ],
-    "openapi": null,
-    "llms_txt": "https://planetscale.com/docs/llms.txt",
-    "desc_en": "Manage MySQL databases, branches, and schema, and view Insights via hosted MCP server or API.",
-    "desc_pl": "Zarządzaj bazami MySQL, gałęziami i schematem oraz przeglądaj Insights przez hostowany serwer MCP lub API.",
-    "notes": "MCP server launched Jan 2026; configurable read-only vs full-access permissions.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "none",
-      "source_url": "https://planetscale.com/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "Authorization",
-      "format": "Authorization: <SERVICE_TOKEN_ID>:<SERVICE_TOKEN>",
-      "source_url": "https://planetscale.com/docs/api/reference/service-tokens",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.planetscale.com/v1",
-    "rate_limits": {
-      "summary": "600 requests per minute (subject to change)",
-      "source_url": "https://planetscale.com/docs/api/reference/getting-started-with-planetscale-api",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "sql-database"
-    ]
-  },
-  {
     "id": "qdrant-cloud",
     "name": "Qdrant Cloud",
     "category": "databases-vector-memory",
@@ -10954,375 +11375,6 @@
     },
     "base_url": "https://<cluster>.<region>.<provider>.cloud.qdrant.io:6333",
     "operations": [
-      "vector-search"
-    ]
-  },
-  {
-    "id": "snowflake",
-    "name": "Snowflake",
-    "category": "databases-vector-memory",
-    "homepage": "https://www.snowflake.com",
-    "docs": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
-    "auth": "api_key+oauth2",
-    "auth_hint": "Key-pair auth, OAuth, or PAT; cloud_iam variants for Snowpark",
-    "mcp": {
-      "type": "official",
-      "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://<account_url>/api/v2/databases/{database}/schemas/{schema}/mcp-servers/{name}",
-      "repo": "https://github.com/Snowflake-Labs/mcp",
-      "covers_full_api": false,
-      "source_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "trial credits (no permanent free tier); check pricing",
-    "sdk": [
-      "python",
-      "javascript",
-      "java",
-      "go"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Run SQL, Cortex Analyst, and Cortex Search over warehoused data via REST API or managed MCP server.",
-    "desc_pl": "Wykonuj SQL, Cortex Analyst i Cortex Search na danych w hurtowni przez REST API lub zarządzany serwer MCP.",
-    "notes": "Snowflake-managed MCP server reached GA Nov 2025; hosted per account at https://<account_url>/api/v2/databases/{db}/schemas/{schema}/mcp-servers/{name}. Snowflake-Labs/mcp is a separate self-hosted server.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "trial",
-      "requires_card": false,
-      "quota": "30-day trial with a free usage balance (ends at 30 days or when balance is used up); AI features disabled until a card is added",
-      "period": "one_time",
-      "source_url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "in": "header",
-      "name": "Authorization",
-      "scheme": "bearer",
-      "format": "Authorization: Bearer <OAuth token | key-pair JWT | PAT> with optional X-Snowflake-Authorization-Token-Type header",
-      "source_url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://<account_identifier>.snowflakecomputing.com/api/v2",
-    "operations": [
-      "analytics-query",
-      "sql-database"
-    ]
-  },
-  {
-    "id": "supabase",
-    "name": "Supabase",
-    "category": "databases-vector-memory",
-    "homepage": "https://supabase.com",
-    "docs": "https://supabase.com/docs/guides/api",
-    "auth": "api_key+oauth2",
-    "auth_hint": "apikey: <publishable or secret key> (not Authorization: Bearer; new keys are not JWTs); Management API: Authorization: Bearer <PAT or OAuth token>",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.supabase.com/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.supabase.com/mcp",
-      "repo": "https://github.com/supabase-community/supabase-mcp",
-      "tools": [
-        "list_organizations",
-        "get_organization",
-        "list_projects",
-        "get_project",
-        "create_project",
-        "pause_project",
-        "restore_project",
-        "get_cost",
-        "confirm_cost",
-        "list_tables",
-        "list_extensions",
-        "list_migrations",
-        "apply_migration",
-        "execute_sql",
-        "get_advisors",
-        "get_project_url",
-        "get_publishable_keys",
-        "generate_typescript_types",
-        "list_edge_functions",
-        "get_edge_function",
-        "deploy_edge_function",
-        "search_docs",
-        "list_storage_buckets",
-        "get_storage_config",
-        "create_branch",
-        "list_branches",
-        "delete_branch",
-        "merge_branch",
-        "reset_branch",
-        "rebase_branch"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://supabase.com/docs/guides/getting-started/mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "free tier: 2 projects, 500MB DB, 5GB bandwidth",
-    "sdk": [
-      "javascript",
-      "python",
-      "dart",
-      "swift"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Manage Postgres tables, auth, storage, and edge functions via REST/GraphQL APIs or client SDKs.",
-    "desc_pl": "Zarządzaj tabelami Postgres, autoryzacją, magazynem i funkcjami edge przez REST/GraphQL lub SDK klienckie.",
-    "notes": "Official MCP server can also create/manage whole projects, not just query data.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "quota": "2 active projects, 500 MB database, 5 GB egress, 1 GB file storage, 50,000 MAU; paused after 1 week of inactivity",
-      "period": "month",
-      "source_url": "https://supabase.com/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "apikey",
-      "format": "apikey: <publishable or secret key>",
-      "source_url": "https://supabase.com/docs/guides/api/api-keys",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.supabase.com/v1",
-    "rate_limits": {
-      "summary": "Management API: 120 requests/min per user per scope; some analytics and database endpoints 30 or 10/min; Free plan data API requests unlimited",
-      "source_url": "https://supabase.com/docs/reference/api/introduction",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "sql-database",
-      "object-storage"
-    ]
-  },
-  {
-    "id": "tidb-cloud",
-    "name": "TiDB Cloud API (Starter)",
-    "category": "databases-vector-memory",
-    "homepage": "https://www.pingcap.com/tidb/cloud/",
-    "docs": "https://docs.pingcap.com/api/tidb-cloud-api-overview/",
-    "auth": "api_key",
-    "auth_hint": "HTTP Digest auth with API public key as username and private key as password (Management API); SQL via MySQL connection string or serverless HTTP driver with cluster user/password",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/pingcap/pytidb",
-      "maintainer": "vendor",
-      "repo": "https://github.com/pingcap/pytidb",
-      "tools": [
-        "show_databases",
-        "switch_database",
-        "show_tables",
-        "db_query",
-        "db_execute",
-        "db_create_user",
-        "db_remove_user"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://github.com/pingcap/pytidb/blob/main/pytidb/ext/mcp/server.py",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Free: up to 5 Starter instances per org, 25 GiB row storage + 25 GiB columnar storage + 250M Request Units per month in total; no credit card",
-    "sdk": [
-      "python",
-      "javascript"
-    ],
-    "openapi": null,
-    "llms_txt": "https://docs.pingcap.com/llms.txt",
-    "desc_en": "Lets an agent create and manage serverless MySQL-compatible TiDB clusters and run SQL, full-text and vector search queries against them.",
-    "desc_pl": "Pozwala agentowi tworzyć serverlessowe klastry TiDB zgodne z MySQL, zarządzać nimi i wykonywać na nich zapytania SQL, pełnotekstowe i wektorowe.",
-    "notes": "Cloud API is in public preview (v1beta1 for Starter/Essential/Dedicated). Official MCP server is local (uvx --from pytidb[mcp] tidb-mcp-server, stdio or SSE) and needs the cluster connection credentials. A 6th instance requires a card and spending limit.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "25 GiB row storage, 25 GiB column storage and 250M Request Units per organization",
-      "period": "month",
-      "source_url": "https://www.pingcap.com/tidb-cloud-pricing/",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "in": "header",
-      "name": "Authorization",
-      "format": "HTTP Digest auth: API public key as username, private key as password",
-      "source_url": "https://docs.pingcap.com/api/tidb-cloud-api-overview/",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "sql-database",
-      "vector-search"
-    ]
-  },
-  {
-    "id": "tinybird",
-    "name": "Tinybird API",
-    "category": "databases-vector-memory",
-    "homepage": "https://www.tinybird.co",
-    "docs": "https://www.tinybird.co/docs/api-reference",
-    "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <TINYBIRD_TOKEN> (workspace admin, resource-scoped token or JWT)",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN",
-      "tools": [
-        "call_endpoint",
-        "execute_query",
-        "text_to_sql",
-        "list_endpoints",
-        "list_datasources",
-        "list_service_datasources"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://www.tinybird.co/docs/forward/analytics-agents/mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Free plan: 10 GB storage, 1,000 API requests/day, 0.25 vCPU shared; no credit card",
-    "sdk": [
-      "python",
-      "javascript"
-    ],
-    "openapi": null,
-    "llms_txt": "https://www.tinybird.co/docs/llms.txt",
-    "desc_en": "Lets an agent ingest events into real-time ClickHouse-based data sources, run SQL queries and call published analytics API endpoints.",
-    "desc_pl": "Pozwala agentowi zasilać zdarzeniami źródła danych czasu rzeczywistego oparte na ClickHouse, wykonywać zapytania SQL i wywoływać opublikowane endpointy analityczne.",
-    "notes": "Remote MCP over Streamable HTTP, token passed as query parameter (add &host=... for non-default regions); use mcp-remote for older clients. API host depends on workspace region.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "10 GB storage, 1,000 API requests per day, 0.25 vCPU",
-      "period": "day",
-      "source_url": "https://www.tinybird.co/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "in": "header",
-      "name": "Authorization",
-      "scheme": "bearer",
-      "format": "Authorization: Bearer <TINYBIRD_TOKEN> (or ?token=<TINYBIRD_TOKEN>)",
-      "source_url": "https://www.tinybird.co/docs/api-reference",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.tinybird.co",
-    "rate_limits": {
-      "summary": "Limits depend on plan (Free: 1,000 API requests/day); 429 Too many requests when exceeded",
-      "source_url": "https://www.tinybird.co/docs/api-reference",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "analytics-query",
-      "data-pipeline"
-    ]
-  },
-  {
-    "id": "turso",
-    "name": "Turso",
-    "category": "databases-vector-memory",
-    "homepage": "https://turso.tech",
-    "docs": "https://docs.turso.tech",
-    "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <token>",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.turso.ai/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.turso.ai/mcp",
-      "repo": "https://github.com/tursodatabase/turso-mcp",
-      "covers_full_api": true,
-      "source_url": "https://docs.turso.tech/integrations/mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Free tier: 100 databases, 5 GB storage, 500M rows read and 10M rows written per month, no card required",
-    "sdk": [
-      "javascript",
-      "python",
-      "rust",
-      "go"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Create and query edge SQLite (libSQL) databases programmatically via HTTP/SDK client libraries.",
-    "desc_pl": "Twórz i odpytuj bazy SQLite (libSQL) na edge programowo przez API HTTP/biblioteki klienckie.",
-    "notes": "Official hosted MCP server (OAuth 2.1) manages databases and groups and runs SQL; repo github.com/tursodatabase/turso-mcp.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "100 databases, 5 GB storage, 500M rows read and 10M rows written per month",
-      "period": "month",
-      "source_url": "https://turso.tech/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "in": "header",
-      "name": "Authorization",
-      "scheme": "bearer",
-      "format": "Authorization: Bearer <TURSO_API_TOKEN>",
-      "source_url": "https://docs.turso.tech/api-reference/authentication",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.turso.tech/v1",
-    "operations": [
-      "sql-database"
-    ]
-  },
-  {
-    "id": "upstash-redis-vector",
-    "name": "Upstash (Redis, Vector)",
-    "category": "databases-vector-memory",
-    "homepage": "https://upstash.com",
-    "docs": "https://upstash.com/docs/redis/overall/getstarted",
-    "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <token>",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.upstash.com/mcp",
-      "maintainer": "vendor",
-      "repo": "https://github.com/upstash/mcp-server",
-      "covers_full_api": false,
-      "source_url": "https://github.com/upstash/mcp-server",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Free tier: Redis 256MB/500K cmds per month; Vector 10K queries+updates per day (max 200M vectors x dimensions, 1,536 dims)",
-    "sdk": [
-      "javascript",
-      "python",
-      "go"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Call serverless Redis, Vector, and QStash over HTTP REST API from edge/serverless runtimes.",
-    "desc_pl": "Wywołuj serverless Redis, Vector i QStash przez REST API z środowisk edge/serverless.",
-    "notes": "Remote MCP endpoint supports OAuth or API key.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "Redis: 256 MB data, 500K commands/month; Vector: 1 free index, 10K queries+updates/day",
-      "period": "month",
-      "source_url": "https://upstash.com/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "in": "header",
-      "name": "Authorization",
-      "scheme": "bearer",
-      "format": "Authorization: Bearer <UPSTASH_REDIS_REST_TOKEN> (or ?_token=<TOKEN>)",
-      "source_url": "https://upstash.com/docs/redis/features/restapi",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "key-value-store",
       "vector-search"
     ]
   },
@@ -11574,177 +11626,6 @@
     ]
   },
   {
-    "id": "aws-end-user-messaging-sms",
-    "name": "AWS End User Messaging SMS",
-    "category": "communication-email-chat",
-    "homepage": "https://aws.amazon.com/end-user-messaging/",
-    "docs": "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/Welcome.html",
-    "auth": "cloud_iam",
-    "auth_hint": "AWS Signature Version 4 with IAM credentials (use an AWS SDK or CLI: aws pinpoint-sms-voice-v2 send-text-message)",
-    "mcp": {
-      "type": "official",
-      "url": "https://aws-mcp.us-east-1.api.aws/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://aws-mcp.us-east-1.api.aws/mcp",
-      "repo": "https://github.com/aws/mcp-proxy-for-aws",
-      "tools": [
-        "aws___run_script",
-        "aws___search_documentation",
-        "aws___read_documentation",
-        "aws___retrieve_skill",
-        "aws___list_regions",
-        "aws___get_regional_availability",
-        "aws___get_presigned_url",
-        "aws___get_tasks"
-      ],
-      "covers_full_api": true,
-      "source_url": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/understanding-mcp-server-tools.html",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Paid only; US SMS $0.00774/message + $0.00421 carrier fee (10DLC or toll-free)",
-    "sdk": [
-      "python",
-      "node",
-      "java",
-      "csharp",
-      "go",
-      "ruby",
-      "php",
-      "cpp",
-      "rust",
-      "kotlin",
-      "swift"
-    ],
-    "openapi": null,
-    "llms_txt": "https://docs.aws.amazon.com/llms.txt",
-    "desc_en": "Send SMS, MMS and voice messages and manage sender numbers, opt-outs and registrations via the AWS SMS and Voice v2 API.",
-    "desc_pl": "Wysyłaj SMS-y, MMS-y i wiadomości głosowe oraz zarządzaj numerami nadawcy, rezygnacjami (opt-out) i rejestracjami przez API AWS SMS and Voice v2.",
-    "notes": "New accounts start in a sandbox: $1/month spend limit, up to 10 verified destination numbers. Production access needs an AWS Support case (reviewed, about 24 h). US sending needs a registered 10DLC or toll-free number. SendTextMessage defaults to 1 request/s per region. The AWS MCP Server is generic (calls any AWS API).",
-    "verified": "2026-09-24",
-    "operations": [
-      "sms",
-      "phone-calls"
-    ],
-    "free_plan": {
-      "kind": "none",
-      "requires_card": null,
-      "quota": null,
-      "period": null,
-      "source_url": "https://aws.amazon.com/end-user-messaging/pricing/",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "cloud_iam",
-      "in": null,
-      "name": null,
-      "scheme": null,
-      "format": "AWS SigV4-signed request (Authorization: AWS4-HMAC-SHA256 Credential=...) to sms-voice.<region>.amazonaws.com",
-      "source_url": "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_SendTextMessage.html",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://sms-voice.{region}.amazonaws.com",
-    "rate_limits": {
-      "summary": "SendTextMessage 1 request/s per region by default (raisable); 1 msg/s per recipient; sandbox $1/month spend",
-      "source_url": "https://docs.aws.amazon.com/sms-voice/latest/userguide/quotas.html",
-      "checked_at": "2026-09-24"
-    },
-    "oauth_scopes": null,
-    "async_jobs": null,
-    "data_policy": null
-  },
-  {
-    "id": "bird",
-    "name": "Bird (formerly MessageBird)",
-    "category": "communication-email-chat",
-    "homepage": "https://bird.com",
-    "docs": "https://bird.com/docs/api",
-    "auth": "api_key+oauth2",
-    "auth_hint": "Authorization: Bearer bk_<region>_... workspace API key (dashboard), or OAuth 2.0 user token (auth code + PKCE or device flow)",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.bird.com",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.bird.com",
-      "repo": null,
-      "tools": [
-        "sms_send",
-        "sms_send_batch",
-        "sms_get",
-        "sms_list",
-        "sms_list_events",
-        "sms_senders_create",
-        "sms_templates_list",
-        "email_send",
-        "whatsapp_send",
-        "lookup_phone_number",
-        "verify_verifications_create",
-        "numbers_available_list",
-        "numbers_orders_create",
-        "whoami"
-      ],
-      "covers_full_api": null,
-      "source_url": "https://bird.com/docs/ai/mcp-server",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Paid only; prepaid wallet, US long code or toll-free $0.0035/SMS + carrier fees",
-    "sdk": [
-      "typescript",
-      "python",
-      "go",
-      "php"
-    ],
-    "openapi": "https://bird.com/openapi.json",
-    "llms_txt": "https://bird.com/llms.txt",
-    "desc_en": "Send SMS, email and WhatsApp messages, verify phone numbers and track delivery via REST API or hosted MCP.",
-    "desc_pl": "Wysyłaj SMS-y, e-maile i wiadomości WhatsApp, weryfikuj numery telefonów i śledź doręczenia przez REST API lub hostowany serwer MCP.",
-    "notes": "SMS draws on a prepaid wallet (402 if empty). Destination countries are default-deny except your home country; enable more in the dashboard. US long codes need 10DLC registration; the US has no alphanumeric senders. Hosted MCP uses OAuth; a local stdio MCP runs via the bird CLI (bird mcp).",
-    "verified": "2026-09-24",
-    "operations": [
-      "sms",
-      "email-send",
-      "chat-messaging",
-      "phone-calls"
-    ],
-    "free_plan": {
-      "kind": "none",
-      "requires_card": null,
-      "quota": null,
-      "period": null,
-      "source_url": "https://bird.com/docs/guides/billing-and-usage",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "in": null,
-      "name": null,
-      "scheme": "bearer",
-      "format": "Authorization: Bearer bk_us1_<API_KEY>",
-      "source_url": "https://bird.com/docs/api",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://us1.platform.bird.com/v1 (or https://eu1.platform.bird.com/v1)",
-    "rate_limits": {
-      "summary": "Per-organization regional policies (e.g. sms_send); quota in RateLimit-Policy header; 429 with Retry-After",
-      "source_url": "https://bird.com/docs/guides/rate-limits",
-      "checked_at": "2026-09-24"
-    },
-    "oauth_scopes": {
-      "scopes": [
-        "sms:write",
-        "sms_management:write",
-        "numbers:write"
-      ],
-      "source_url": "https://platform.bird.com/.well-known/oauth-authorization-server",
-      "checked_at": "2026-09-24"
-    },
-    "async_jobs": {
-      "value": true,
-      "how": "POST /v1/sms/messages returns 202 Accepted with a message id; final status via webhooks or GET",
-      "source_url": "https://bird.com/docs/guides/sms/sending-sms"
-    },
-    "data_policy": null
-  },
-  {
     "id": "discord-api",
     "name": "Discord API",
     "category": "communication-email-chat",
@@ -11815,73 +11696,6 @@
     },
     "operations": [
       "team-chat"
-    ]
-  },
-  {
-    "id": "line-messaging-api",
-    "name": "LINE Messaging API",
-    "category": "communication-email-chat",
-    "homepage": "https://developers.line.biz/en/services/messaging-api/",
-    "docs": "https://developers.line.biz/en/reference/messaging-api/",
-    "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <CHANNEL_ACCESS_TOKEN> (issued for the Messaging API channel in LINE Developers Console)",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/line/line-bot-mcp-server",
-      "maintainer": "vendor",
-      "repo": "https://github.com/line/line-bot-mcp-server",
-      "tools": [
-        "push_text_message",
-        "push_flex_message",
-        "broadcast_text_message",
-        "broadcast_flex_message",
-        "get_profile",
-        "get_message_quota",
-        "get_rich_menu_list",
-        "create_rich_menu",
-        "delete_rich_menu",
-        "set_rich_menu_default",
-        "cancel_rich_menu_default",
-        "get_follower_ids",
-        "get_group_summary"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://github.com/line/line-bot-mcp-server",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited and never counted. Free quotas vary by region",
-    "sdk": [
-      "java",
-      "php",
-      "go",
-      "ruby",
-      "python",
-      "javascript"
-    ],
-    "openapi": "https://raw.githubusercontent.com/line/line-openapi/main/messaging-api.yml",
-    "llms_txt": "https://developers.line.biz/llms.txt",
-    "desc_en": "Lets an agent send and reply to messages, rich messages and broadcasts to users of a LINE Official Account and read user profiles.",
-    "desc_pl": "Pozwala agentowi wysyłać wiadomości, odpowiedzi, wiadomości rozszerzone i broadcasty do użytkowników konta LINE Official Account oraz odczytywać profile użytkowników.",
-    "notes": "Requires a LINE Official Account and a Messaging API channel. MCP server is local (stdio, npx @line/line-bot-mcp-server) with channel token and user ID env vars.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "200 messages (Communication plan, Japan)",
-      "period": "month",
-      "source_url": "https://www.lycbiz.com/jp/service/line-official-account/plan/",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "scheme": "bearer",
-      "format": "Authorization: Bearer <CHANNEL_ACCESS_TOKEN>",
-      "source_url": "https://developers.line.biz/en/reference/messaging-api/",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.line.me",
-    "operations": [
-      "chat-messaging"
     ]
   },
   {
@@ -11992,79 +11806,6 @@
     "operations": [
       "push-notification"
     ]
-  },
-  {
-    "id": "plivo",
-    "name": "Plivo",
-    "category": "communication-email-chat",
-    "homepage": "https://www.plivo.com",
-    "docs": "https://www.plivo.com/docs/messaging/api/overview",
-    "auth": "api_key",
-    "auth_hint": "HTTP Basic auth: Auth ID as username, Auth Token as password (from Plivo console)",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/plivo/mcp",
-      "maintainer": "vendor",
-      "remote_url": null,
-      "repo": "https://github.com/plivo/mcp",
-      "tools": [
-        "send_sms",
-        "make_call",
-        "create_application",
-        "create_endpoint",
-        "get_cdr",
-        "get_mdr"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://github.com/plivo/mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Trial: $10 free credits, no card; then paid per message (US long code $0.0077/SMS + carrier surcharge)",
-    "sdk": [
-      "python",
-      "node",
-      "ruby",
-      "php",
-      "java",
-      "csharp",
-      "go"
-    ],
-    "openapi": null,
-    "llms_txt": "https://www.plivo.com/docs/llms.txt",
-    "desc_en": "Send and receive SMS and MMS worldwide and check delivery status via REST API.",
-    "desc_pl": "Wysyłaj i odbieraj SMS-y i MMS-y na całym świecie oraz sprawdzaj status doręczenia przez REST API.",
-    "notes": "Signup needs a business email and phone verification. Trial accounts can only message verified sandbox numbers, no alphanumeric sender IDs. US A2P traffic needs 10DLC or toll-free registration. The MCP at plivo.com/docs/mcp only searches docs.",
-    "verified": "2026-09-24",
-    "operations": [
-      "sms",
-      "phone-calls"
-    ],
-    "free_plan": {
-      "kind": "trial",
-      "requires_card": false,
-      "quota": "$10 in free credits",
-      "period": "one_time",
-      "source_url": "https://www.plivo.com/pricing/",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "in": null,
-      "name": null,
-      "scheme": "basic",
-      "format": "Authorization: Basic base64(<AUTH_ID>:<AUTH_TOKEN>)",
-      "source_url": "https://www.plivo.com/docs/messaging/api/overview",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.plivo.com/v1/Account/{auth_id}",
-    "rate_limits": {
-      "summary": "300 requests per 5 seconds; 429 when exceeded",
-      "source_url": "https://plivo.com/docs/account/api/overview",
-      "checked_at": "2026-09-24"
-    },
-    "oauth_scopes": null,
-    "async_jobs": null,
-    "data_policy": null
   },
   {
     "id": "postmark",
@@ -12281,83 +12022,6 @@
     ]
   },
   {
-    "id": "sinch",
-    "name": "Sinch",
-    "category": "communication-email-chat",
-    "homepage": "https://sinch.com",
-    "docs": "https://developers.sinch.com/docs/conversation/api-reference",
-    "auth": "api_key",
-    "auth_hint": "Access key ID + secret (dashboard > Access keys): HTTP Basic, or exchange at https://auth.sinch.com/oauth2/token (client credentials) for a Bearer token",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/sinch/sinch-mcp-server",
-      "maintainer": "vendor",
-      "remote_url": null,
-      "repo": "https://github.com/sinch/sinch-mcp-server",
-      "tools": [
-        "send-text-message",
-        "send-media-message",
-        "send-template-message",
-        "send-choice-message",
-        "send-location-message",
-        "list-conversation-apps",
-        "send-email",
-        "number-lookup",
-        "start-sms-verification",
-        "tts-callout",
-        "search-for-available-numbers"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://github.com/sinch/sinch-mcp-server",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Trial: free trial credit and a free test number on signup, no card; then paid (US 10DLC $0.0078/SMS + carrier fees)",
-    "sdk": [
-      "node",
-      "java",
-      "csharp",
-      "python"
-    ],
-    "openapi": "https://developers.sinch.com/_spec/docs/conversation/api-reference/conversation.yaml",
-    "llms_txt": "https://developers.sinch.com/llms.txt",
-    "desc_en": "Send and receive SMS (and WhatsApp, RCS and other channels) via the Conversation REST API.",
-    "desc_pl": "Wysyłaj i odbieraj SMS-y (a także wiadomości WhatsApp, RCS i na innych kanałach) przez REST API Conversation.",
-    "notes": "The standalone SMS API is only for existing customers; new accounts send SMS through the Conversation API with an SMS channel. The trial test number can only text your own verified numbers. US A2P needs 10DLC or toll-free registration. MCP server (npm @sinch/mcp) is a developer preview, run locally or self-hosted.",
-    "verified": "2026-09-24",
-    "operations": [
-      "sms",
-      "chat-messaging",
-      "phone-calls",
-      "email-send"
-    ],
-    "free_plan": {
-      "kind": "trial",
-      "requires_card": false,
-      "quota": "Trial credit and one free test number on signup",
-      "period": "one_time",
-      "source_url": "https://sinch.com/build-dashboard-overview/",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "in": null,
-      "name": null,
-      "scheme": "basic",
-      "format": "Authorization: Basic base64(<KEY_ID>:<KEY_SECRET>) (or Bearer <token> from OAuth2 client credentials)",
-      "source_url": "https://developers.sinch.com/_spec/docs/conversation/api-reference/conversation.yaml",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://{region}.conversation.api.sinch.com (region: us, eu, br)",
-    "rate_limits": {
-      "summary": "800 requests/s per project; app queue drains to channel at 20 msg/s by default; 429 when exceeded",
-      "source_url": "https://developers.sinch.com/_spec/docs/conversation/api-reference/conversation.yaml",
-      "checked_at": "2026-09-24"
-    },
-    "oauth_scopes": null,
-    "async_jobs": null,
-    "data_policy": null
-  },
-  {
     "id": "slack-api",
     "name": "Slack API",
     "category": "communication-email-chat",
@@ -12471,9 +12135,452 @@
     ]
   },
   {
+    "id": "zoom-api",
+    "name": "Zoom API",
+    "category": "communication-email-chat",
+    "homepage": "https://developers.zoom.us",
+    "docs": "https://developers.zoom.us/docs/api/",
+    "auth": "oauth2",
+    "auth_hint": "Authorization: Bearer <access_token> (Server-to-Server OAuth recommended for agents)",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.zoom.us/mcp/zoom/streamable",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.zoom.us/mcp/zoom/streamable",
+      "covers_full_api": false,
+      "source_url": "https://github.com/zoom/mcp-registry",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "usable on free Zoom account within Basic plan limits; some endpoints require paid plan",
+    "sdk": [
+      "python",
+      "node",
+      "java",
+      "csharp"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Schedule, update, and manage meetings, webinars, and cloud recordings programmatically via REST API.",
+    "desc_pl": "Planuj, aktualizuj i zarządzaj spotkaniami, webinarami oraz nagraniami w chmurze programistycznie przez REST API.",
+    "notes": "Server-to-Server OAuth app type is the recommended path for unattended agent use; some features gated behind licensed/paid plans. Official remote MCP servers (streamable HTTP, user OAuth) run at the mcp.zoom.us gateway.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "Free plan API limits: light 4/s and 6,000/day, medium 2/s and 2,000/day, heavy 1/s and 1,000/day",
+      "period": "day",
+      "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "oauth2",
+      "format": "Authorization: Bearer <ACCESS_TOKEN> (Server-to-Server OAuth, grant_type=account_credentials at https://zoom.us/oauth/token, 1 h tokens)",
+      "source_url": "https://developers.zoom.us/docs/internal-apps/s2s-oauth/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.zoom.us/v2",
+    "rate_limits": {
+      "summary": "Per plan: Free light 4/s (6,000/day), Pro light 30/s, Business+ light 80/s; medium/heavy lower; 429 on excess",
+      "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "video-conferencing",
+      "calendar"
+    ]
+  },
+  {
+    "id": "aws-end-user-messaging-sms",
+    "name": "AWS End User Messaging SMS",
+    "category": "sms-messaging",
+    "homepage": "https://aws.amazon.com/end-user-messaging/",
+    "docs": "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/Welcome.html",
+    "auth": "cloud_iam",
+    "auth_hint": "AWS Signature Version 4 with IAM credentials (use an AWS SDK or CLI: aws pinpoint-sms-voice-v2 send-text-message)",
+    "mcp": {
+      "type": "official",
+      "url": "https://aws-mcp.us-east-1.api.aws/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://aws-mcp.us-east-1.api.aws/mcp",
+      "repo": "https://github.com/aws/mcp-proxy-for-aws",
+      "tools": [
+        "aws___run_script",
+        "aws___search_documentation",
+        "aws___read_documentation",
+        "aws___retrieve_skill",
+        "aws___list_regions",
+        "aws___get_regional_availability",
+        "aws___get_presigned_url",
+        "aws___get_tasks"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/understanding-mcp-server-tools.html",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Paid only; US SMS $0.00774/message + $0.00421 carrier fee (10DLC or toll-free)",
+    "sdk": [
+      "python",
+      "node",
+      "java",
+      "csharp",
+      "go",
+      "ruby",
+      "php",
+      "cpp",
+      "rust",
+      "kotlin",
+      "swift"
+    ],
+    "openapi": null,
+    "llms_txt": "https://docs.aws.amazon.com/llms.txt",
+    "desc_en": "Send SMS, MMS and voice messages and manage sender numbers, opt-outs and registrations via the AWS SMS and Voice v2 API.",
+    "desc_pl": "Wysyłaj SMS-y, MMS-y i wiadomości głosowe oraz zarządzaj numerami nadawcy, rezygnacjami (opt-out) i rejestracjami przez API AWS SMS and Voice v2.",
+    "notes": "New accounts start in a sandbox: $1/month spend limit, up to 10 verified destination numbers. Production access needs an AWS Support case (reviewed, about 24 h). US sending needs a registered 10DLC or toll-free number. SendTextMessage defaults to 1 request/s per region. The AWS MCP Server is generic (calls any AWS API).",
+    "verified": "2026-09-24",
+    "operations": [
+      "sms",
+      "phone-calls"
+    ],
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "source_url": "https://aws.amazon.com/end-user-messaging/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "cloud_iam",
+      "in": null,
+      "name": null,
+      "scheme": null,
+      "format": "AWS SigV4-signed request (Authorization: AWS4-HMAC-SHA256 Credential=...) to sms-voice.<region>.amazonaws.com",
+      "source_url": "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_SendTextMessage.html",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://sms-voice.{region}.amazonaws.com",
+    "rate_limits": {
+      "summary": "SendTextMessage 1 request/s per region by default (raisable); 1 msg/s per recipient; sandbox $1/month spend",
+      "source_url": "https://docs.aws.amazon.com/sms-voice/latest/userguide/quotas.html",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null
+  },
+  {
+    "id": "bird",
+    "name": "Bird (formerly MessageBird)",
+    "category": "sms-messaging",
+    "homepage": "https://bird.com",
+    "docs": "https://bird.com/docs/api",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Authorization: Bearer bk_<region>_... workspace API key (dashboard), or OAuth 2.0 user token (auth code + PKCE or device flow)",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.bird.com",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.bird.com",
+      "repo": null,
+      "tools": [
+        "sms_send",
+        "sms_send_batch",
+        "sms_get",
+        "sms_list",
+        "sms_list_events",
+        "sms_senders_create",
+        "sms_templates_list",
+        "email_send",
+        "whatsapp_send",
+        "lookup_phone_number",
+        "verify_verifications_create",
+        "numbers_available_list",
+        "numbers_orders_create",
+        "whoami"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://bird.com/docs/ai/mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Paid only; prepaid wallet, US long code or toll-free $0.0035/SMS + carrier fees",
+    "sdk": [
+      "typescript",
+      "python",
+      "go",
+      "php"
+    ],
+    "openapi": "https://bird.com/openapi.json",
+    "llms_txt": "https://bird.com/llms.txt",
+    "desc_en": "Send SMS, email and WhatsApp messages, verify phone numbers and track delivery via REST API or hosted MCP.",
+    "desc_pl": "Wysyłaj SMS-y, e-maile i wiadomości WhatsApp, weryfikuj numery telefonów i śledź doręczenia przez REST API lub hostowany serwer MCP.",
+    "notes": "SMS draws on a prepaid wallet (402 if empty). Destination countries are default-deny except your home country; enable more in the dashboard. US long codes need 10DLC registration; the US has no alphanumeric senders. Hosted MCP uses OAuth; a local stdio MCP runs via the bird CLI (bird mcp).",
+    "verified": "2026-09-24",
+    "operations": [
+      "sms",
+      "email-send",
+      "chat-messaging",
+      "phone-calls"
+    ],
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "quota": null,
+      "period": null,
+      "source_url": "https://bird.com/docs/guides/billing-and-usage",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer bk_us1_<API_KEY>",
+      "source_url": "https://bird.com/docs/api",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://us1.platform.bird.com/v1 (or https://eu1.platform.bird.com/v1)",
+    "rate_limits": {
+      "summary": "Per-organization regional policies (e.g. sms_send); quota in RateLimit-Policy header; 429 with Retry-After",
+      "source_url": "https://bird.com/docs/guides/rate-limits",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": {
+      "scopes": [
+        "sms:write",
+        "sms_management:write",
+        "numbers:write"
+      ],
+      "source_url": "https://platform.bird.com/.well-known/oauth-authorization-server",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": {
+      "value": true,
+      "how": "POST /v1/sms/messages returns 202 Accepted with a message id; final status via webhooks or GET",
+      "source_url": "https://bird.com/docs/guides/sms/sending-sms"
+    },
+    "data_policy": null
+  },
+  {
+    "id": "line-messaging-api",
+    "name": "LINE Messaging API",
+    "category": "sms-messaging",
+    "homepage": "https://developers.line.biz/en/services/messaging-api/",
+    "docs": "https://developers.line.biz/en/reference/messaging-api/",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <CHANNEL_ACCESS_TOKEN> (issued for the Messaging API channel in LINE Developers Console)",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/line/line-bot-mcp-server",
+      "maintainer": "vendor",
+      "repo": "https://github.com/line/line-bot-mcp-server",
+      "tools": [
+        "push_text_message",
+        "push_flex_message",
+        "broadcast_text_message",
+        "broadcast_flex_message",
+        "get_profile",
+        "get_message_quota",
+        "get_rich_menu_list",
+        "create_rich_menu",
+        "delete_rich_menu",
+        "set_rich_menu_default",
+        "cancel_rich_menu_default",
+        "get_follower_ids",
+        "get_group_summary"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/line/line-bot-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited and never counted. Free quotas vary by region",
+    "sdk": [
+      "java",
+      "php",
+      "go",
+      "ruby",
+      "python",
+      "javascript"
+    ],
+    "openapi": "https://raw.githubusercontent.com/line/line-openapi/main/messaging-api.yml",
+    "llms_txt": "https://developers.line.biz/llms.txt",
+    "desc_en": "Lets an agent send and reply to messages, rich messages and broadcasts to users of a LINE Official Account and read user profiles.",
+    "desc_pl": "Pozwala agentowi wysyłać wiadomości, odpowiedzi, wiadomości rozszerzone i broadcasty do użytkowników konta LINE Official Account oraz odczytywać profile użytkowników.",
+    "notes": "Requires a LINE Official Account and a Messaging API channel. MCP server is local (stdio, npx @line/line-bot-mcp-server) with channel token and user ID env vars.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "200 messages (Communication plan, Japan)",
+      "period": "month",
+      "source_url": "https://www.lycbiz.com/jp/service/line-official-account/plan/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <CHANNEL_ACCESS_TOKEN>",
+      "source_url": "https://developers.line.biz/en/reference/messaging-api/",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.line.me",
+    "operations": [
+      "chat-messaging"
+    ]
+  },
+  {
+    "id": "plivo",
+    "name": "Plivo",
+    "category": "sms-messaging",
+    "homepage": "https://www.plivo.com",
+    "docs": "https://www.plivo.com/docs/messaging/api/overview",
+    "auth": "api_key",
+    "auth_hint": "HTTP Basic auth: Auth ID as username, Auth Token as password (from Plivo console)",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/plivo/mcp",
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/plivo/mcp",
+      "tools": [
+        "send_sms",
+        "make_call",
+        "create_application",
+        "create_endpoint",
+        "get_cdr",
+        "get_mdr"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/plivo/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Trial: $10 free credits, no card; then paid per message (US long code $0.0077/SMS + carrier surcharge)",
+    "sdk": [
+      "python",
+      "node",
+      "ruby",
+      "php",
+      "java",
+      "csharp",
+      "go"
+    ],
+    "openapi": null,
+    "llms_txt": "https://www.plivo.com/docs/llms.txt",
+    "desc_en": "Send and receive SMS and MMS worldwide and check delivery status via REST API.",
+    "desc_pl": "Wysyłaj i odbieraj SMS-y i MMS-y na całym świecie oraz sprawdzaj status doręczenia przez REST API.",
+    "notes": "Signup needs a business email and phone verification. Trial accounts can only message verified sandbox numbers, no alphanumeric sender IDs. US A2P traffic needs 10DLC or toll-free registration. The MCP at plivo.com/docs/mcp only searches docs.",
+    "verified": "2026-09-24",
+    "operations": [
+      "sms",
+      "phone-calls"
+    ],
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "$10 in free credits",
+      "period": "one_time",
+      "source_url": "https://www.plivo.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(<AUTH_ID>:<AUTH_TOKEN>)",
+      "source_url": "https://www.plivo.com/docs/messaging/api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.plivo.com/v1/Account/{auth_id}",
+    "rate_limits": {
+      "summary": "300 requests per 5 seconds; 429 when exceeded",
+      "source_url": "https://plivo.com/docs/account/api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null
+  },
+  {
+    "id": "sinch",
+    "name": "Sinch",
+    "category": "sms-messaging",
+    "homepage": "https://sinch.com",
+    "docs": "https://developers.sinch.com/docs/conversation/api-reference",
+    "auth": "api_key",
+    "auth_hint": "Access key ID + secret (dashboard > Access keys): HTTP Basic, or exchange at https://auth.sinch.com/oauth2/token (client credentials) for a Bearer token",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/sinch/sinch-mcp-server",
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": "https://github.com/sinch/sinch-mcp-server",
+      "tools": [
+        "send-text-message",
+        "send-media-message",
+        "send-template-message",
+        "send-choice-message",
+        "send-location-message",
+        "list-conversation-apps",
+        "send-email",
+        "number-lookup",
+        "start-sms-verification",
+        "tts-callout",
+        "search-for-available-numbers"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/sinch/sinch-mcp-server",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Trial: free trial credit and a free test number on signup, no card; then paid (US 10DLC $0.0078/SMS + carrier fees)",
+    "sdk": [
+      "node",
+      "java",
+      "csharp",
+      "python"
+    ],
+    "openapi": "https://developers.sinch.com/_spec/docs/conversation/api-reference/conversation.yaml",
+    "llms_txt": "https://developers.sinch.com/llms.txt",
+    "desc_en": "Send and receive SMS (and WhatsApp, RCS and other channels) via the Conversation REST API.",
+    "desc_pl": "Wysyłaj i odbieraj SMS-y (a także wiadomości WhatsApp, RCS i na innych kanałach) przez REST API Conversation.",
+    "notes": "The standalone SMS API is only for existing customers; new accounts send SMS through the Conversation API with an SMS channel. The trial test number can only text your own verified numbers. US A2P needs 10DLC or toll-free registration. MCP server (npm @sinch/mcp) is a developer preview, run locally or self-hosted.",
+    "verified": "2026-09-24",
+    "operations": [
+      "sms",
+      "chat-messaging",
+      "phone-calls",
+      "email-send"
+    ],
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "Trial credit and one free test number on signup",
+      "period": "one_time",
+      "source_url": "https://sinch.com/build-dashboard-overview/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(<KEY_ID>:<KEY_SECRET>) (or Bearer <token> from OAuth2 client credentials)",
+      "source_url": "https://developers.sinch.com/_spec/docs/conversation/api-reference/conversation.yaml",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://{region}.conversation.api.sinch.com (region: us, eu, br)",
+    "rate_limits": {
+      "summary": "800 requests/s per project; app queue drains to channel at 20 msg/s by default; 429 when exceeded",
+      "source_url": "https://developers.sinch.com/_spec/docs/conversation/api-reference/conversation.yaml",
+      "checked_at": "2026-09-24"
+    },
+    "oauth_scopes": null,
+    "async_jobs": null,
+    "data_policy": null
+  },
+  {
     "id": "telegram-bot-api",
     "name": "Telegram Bot API",
-    "category": "communication-email-chat",
+    "category": "sms-messaging",
     "homepage": "https://core.telegram.org/bots/api",
     "docs": "https://core.telegram.org/bots/api",
     "auth": "api_key",
@@ -12505,7 +12612,7 @@
     "llms_txt": null,
     "desc_en": "Send/receive messages, media, and inline interactions via a simple HTTPS bot API.",
     "desc_pl": "Wysyłaj i odbieraj wiadomości, media oraz interakcje inline przez proste HTTPS API bota.",
-    "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits. Listed MCP server uses a user account via Telethon/MTProto, not the Bot API.",
+    "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits. Listed MCP server uses a user account via Telethon/MTProto (API_ID/API_HASH + session string from my.telegram.org), not the bot token.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -12532,7 +12639,7 @@
   {
     "id": "telnyx",
     "name": "Telnyx",
-    "category": "communication-email-chat",
+    "category": "sms-messaging",
     "homepage": "https://telnyx.com",
     "docs": "https://developers.telnyx.com/api-reference/messages/send-a-message",
     "auth": "api_key",
@@ -12606,14 +12713,14 @@
   {
     "id": "twilio",
     "name": "Twilio",
-    "category": "communication-email-chat",
+    "category": "sms-messaging",
     "homepage": "https://www.twilio.com",
     "docs": "https://www.twilio.com/docs/usage/api",
     "auth": "api_key",
     "auth_hint": "Basic auth: AccountSID:AuthToken (or API Key SID:Secret)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.twilio.com/docs",
+      "url": "https://github.com/twilio-labs/mcp",
       "maintainer": "vendor",
       "repo": "https://github.com/twilio-labs/mcp",
       "covers_full_api": true,
@@ -12659,7 +12766,7 @@
   {
     "id": "vonage-api",
     "name": "Vonage API",
-    "category": "communication-email-chat",
+    "category": "sms-messaging",
     "homepage": "https://developer.vonage.com",
     "docs": "https://developer.vonage.com/en/documentation",
     "auth": "api_key",
@@ -12713,7 +12820,7 @@
   {
     "id": "whatsapp-business-cloud-api",
     "name": "WhatsApp Business Cloud API",
-    "category": "communication-email-chat",
+    "category": "sms-messaging",
     "homepage": "https://developers.facebook.com/docs/whatsapp/cloud-api",
     "docs": "https://developers.facebook.com/docs/whatsapp/cloud-api",
     "auth": "oauth2",
@@ -12773,60 +12880,6 @@
     },
     "operations": [
       "chat-messaging"
-    ]
-  },
-  {
-    "id": "zoom-api",
-    "name": "Zoom API",
-    "category": "communication-email-chat",
-    "homepage": "https://developers.zoom.us",
-    "docs": "https://developers.zoom.us/docs/api/",
-    "auth": "oauth2",
-    "auth_hint": "Authorization: Bearer <access_token> (Server-to-Server OAuth recommended for agents)",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.zoom.us/mcp/zoom/streamable",
-      "maintainer": "vendor",
-      "covers_full_api": false,
-      "source_url": "https://developers.zoom.us/docs/mcp.md",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "usable on free Zoom account within Basic plan limits; some endpoints require paid plan",
-    "sdk": [
-      "python",
-      "node",
-      "java",
-      "csharp"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Schedule, update, and manage meetings, webinars, and cloud recordings programmatically via REST API.",
-    "desc_pl": "Planuj, aktualizuj i zarządzaj spotkaniami, webinarami oraz nagraniami w chmurze programistycznie przez REST API.",
-    "notes": "Server-to-Server OAuth app type is the recommended path for unattended agent use; some features gated behind licensed/paid plans. Official remote MCP servers (streamable HTTP, user OAuth) run at the mcp.zoom.us gateway.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "Free plan API limits: light 4/s and 6,000/day, medium 2/s and 2,000/day, heavy 1/s and 1,000/day",
-      "period": "day",
-      "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "oauth2",
-      "format": "Authorization: Bearer <ACCESS_TOKEN> (Server-to-Server OAuth, grant_type=account_credentials at https://zoom.us/oauth/token, 1 h tokens)",
-      "source_url": "https://developers.zoom.us/docs/internal-apps/s2s-oauth/",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.zoom.us/v2",
-    "rate_limits": {
-      "summary": "Per plan: Free light 4/s (6,000/day), Pro light 30/s, Business+ light 80/s; medium/heavy lower; 429 on excess",
-      "source_url": "https://developers.zoom.us/docs/api/rate-limits/",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "video-conferencing",
-      "calendar"
     ]
   },
   {
@@ -13222,7 +13275,7 @@
     "llms_txt": null,
     "desc_en": "Programmatically make, receive, and control phone calls (IVR, recording, conferencing) via REST API.",
     "desc_pl": "Programowo wykonuj, odbieraj i kontroluj połączenia telefoniczne (IVR, nagrywanie, konferencje) przez REST API.",
-    "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit). MCP: Twilio Labs' @twilio-alpha/mcp exposes all public APIs via OpenAPI (filter with --services).",
+    "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage. Twilio's own MCP (npm @twilio-alpha/mcp) is alpha.",
     "verified": "2026-09-24",
     "operations": [
       "phone-calls"
@@ -14143,7 +14196,7 @@
     "homepage": "https://nocodb.com",
     "docs": "https://nocodb.com/docs/apis-and-mcp",
     "auth": "api_key+oauth2",
-    "auth_hint": "REST: 'xc-token: <API_TOKEN>' header; MCP: 'x-api-key: <MCP_TOKEN>' header or OAuth sign-in",
+    "auth_hint": "REST: 'xc-token: <API_TOKEN>' header; MCP: OAuth at app.nocodb.com/mcp, or token access at /mcp/<ncId> with 'x-api-key: <MCP_TOKEN>' header",
     "mcp": {
       "type": "official",
       "url": "https://app.nocodb.com/mcp",
@@ -14968,7 +15021,7 @@
     "llms_txt": null,
     "desc_en": "Unified API to post, schedule, and analyze content across 14+ social networks (X, Instagram, LinkedIn, TikTok, etc.) with one API key.",
     "desc_pl": "Ujednolicone API do publikowania, planowania i analizowania treści na ponad 14 sieciach społecznościowych (X, Instagram, LinkedIn, TikTok itd.) za pomocą jednego klucza API.",
-    "notes": "Ayrshare holds most per-platform app approvals, so agents avoid applying for Meta/TikTok developer access (X now needs your own X app keys). Action MCP has 27 tools with API-key auth.",
+    "notes": "Ayrshare itself holds the underlying per-platform app approvals, so agents avoid individually applying for X/Meta/TikTok developer access. Hosted MCP action server at https://api.ayrshare.com/mcp (Streamable HTTP, 27 tools).",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -16017,7 +16070,7 @@
       "source_url": "https://github.com/cmer81/open-meteo-mcp",
       "checked_at": "2026-09-24"
     },
-    "free_tier": "free, no key for non-commercial use (fair-use limits apply)",
+    "free_tier": "No key needed for non-commercial use: 10,000 calls/day, 300,000/month (also 600/min, 5,000/hour)",
     "sdk": [
       "python"
     ],
@@ -16193,8 +16246,9 @@
     "auth_hint": "none, but must send a valid User-Agent/Referer identifying the app",
     "mcp": {
       "type": "community",
-      "url": null,
+      "url": "https://openstreetmap.caseyjhand.com/mcp",
       "maintainer": "community",
+      "remote_url": "https://openstreetmap.caseyjhand.com/mcp",
       "repo": "https://github.com/cyanheads/openstreetmap-mcp-server",
       "tools": [
         "openstreetmap_search_places",
@@ -16208,13 +16262,13 @@
       "source_url": "https://github.com/cyanheads/openstreetmap-mcp-server",
       "checked_at": "2026-09-24"
     },
-    "free_tier": "free, no key; public demo server capped at 1 request/second, bulk use prohibited",
+    "free_tier": "No key needed; public server max 1 request/second, bulk geocoding discouraged (small one-off jobs only, cached), no systematic or autocomplete queries",
     "sdk": [],
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Geocode and reverse-geocode addresses from OpenStreetMap data via a free public REST API.",
     "desc_pl": "Geokoduj i odwrotnie geokoduj adresy z danych OpenStreetMap przez darmowe publiczne REST API.",
-    "notes": "Public demo instance is fair-use only (1 req/s, no bulk/systematic queries); self-host or use a commercial provider for production volume.",
+    "notes": "Public demo instance is fair-use only (1 req/s, bulk discouraged, no systematic queries); self-host or use a commercial provider for production volume. Listed MCP is a community server, also hosted by its author.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "no_key",
@@ -16308,8 +16362,9 @@
     "auth_hint": "none",
     "mcp": {
       "type": "community",
-      "url": null,
+      "url": "https://openstreetmap.caseyjhand.com/mcp",
       "maintainer": "community",
+      "remote_url": "https://openstreetmap.caseyjhand.com/mcp",
       "repo": "https://github.com/cyanheads/openstreetmap-mcp-server",
       "tools": [
         "openstreetmap_query_nearby",
@@ -16359,7 +16414,7 @@
     "homepage": "https://www.tomorrow.io/weather-api/",
     "docs": "https://docs.tomorrow.io",
     "auth": "api_key",
-    "auth_hint": "apikey query param",
+    "auth_hint": "apikey query param (REST); MCP takes 'X-Api-Key: <API_KEY>' header",
     "mcp": {
       "type": "official",
       "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp",
@@ -16551,7 +16606,7 @@
     "llms_txt": null,
     "desc_en": "Fetch stock, forex, crypto prices and technical/fundamental indicators via a free REST API.",
     "desc_pl": "Pobieraj ceny akcji, forex, krypto oraz wskaźniki techniczne/fundamentalne przez darmowe REST API.",
-    "notes": "Free tier is limited to 25 requests/day; paid Premium plans needed for real-time/higher volume.",
+    "notes": "Free tier is limited to 25 requests/day; paid Premium plans needed for real-time/higher volume. Remote MCP signs in via OAuth; the ?apikey= URL parameter is deprecated.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -16607,7 +16662,7 @@
     "llms_txt": null,
     "desc_en": "Create wallets, send crypto, and pay per-API-call with stablecoins over HTTP (x402) via the Coinbase Developer Platform SDK.",
     "desc_pl": "Twórz portfele, wysyłaj kryptowaluty i płać za wywołania API stablecoinami przez HTTP (x402) za pomocą Coinbase Developer Platform SDK.",
-    "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API - useful for agent-to-agent micropayments. Official local Payments MCP (npx @coinbase/payments-mcp) combines a wallet, onramp and x402 payments.",
+    "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API. Official local Payments MCP (npx @coinbase/payments-mcp) signs in with an email-based browser wallet, not the CDP API key.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -16652,7 +16707,7 @@
     "llms_txt": null,
     "desc_en": "Fetch live and historical crypto prices, market data, and NFT data via REST API or the official CoinGecko MCP server.",
     "desc_pl": "Pobieraj bieżące i historyczne ceny krypto, dane rynkowe i dane NFT przez REST API lub oficjalny serwer MCP CoinGecko.",
-    "notes": "Free MCP endpoint (mcp.api.coingecko.com) requires no key at all, just shared rate limits; a Pro-key MCP endpoint also exists.",
+    "notes": "Free MCP endpoint (mcp.api.coingecko.com) requires no key, just shared rate limits; keyed endpoint mcp.pro-api.coingecko.com/mcp asks for your API key via browser sign-in (OAuth).",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -16976,9 +17031,9 @@
     "auth_hint": "OAuth2 client-credentials Bearer token; MCP also supports an access-token env var",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.paypal.com/http",
+      "url": "https://mcp.paypal.com/mcp",
       "maintainer": "vendor",
-      "remote_url": "https://mcp.paypal.com/http",
+      "remote_url": "https://mcp.paypal.com/mcp",
       "repo": "https://github.com/paypal/agent-toolkit",
       "tools": [
         "create_product",
@@ -17028,7 +17083,7 @@
     "llms_txt": null,
     "desc_en": "Process payments, payouts, invoices, and subscriptions via REST API or PayPal's official MCP server.",
     "desc_pl": "Przetwarzaj płatności, wypłaty, faktury i subskrypcje przez REST API lub oficjalny serwer MCP PayPal.",
-    "notes": "Remote MCP transports: /http (Streamable HTTP) or /sse; separate sandbox MCP endpoint at https://mcp.sandbox.paypal.com for testing.",
+    "notes": "Remote MCP: https://mcp.paypal.com/mcp (Streamable HTTP, OAuth login) or /sse; docs still list /http, which returns 404. Sandbox MCP at https://mcp.sandbox.paypal.com for testing.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -17444,7 +17499,7 @@
         "create_checkout_url"
       ],
       "covers_full_api": false,
-      "source_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/storefront/b2c",
+      "source_url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview.md",
       "checked_at": "2026-09-24"
     },
     "free_tier": "free API access; requires an active BigCommerce store plan",
@@ -17455,7 +17510,7 @@
     "llms_txt": null,
     "desc_en": "Manage catalog, orders, customers, and carts on a BigCommerce store via REST/GraphQL APIs.",
     "desc_pl": "Zarządzaj katalogiem, zamówieniami, klientami i koszykami w sklepie BigCommerce przez REST/GraphQL API.",
-    "notes": "Official Storefront MCP (B2C/B2B, per-store URL from the control panel) covers catalog, cart and checkout only, not the admin API; docs.bigcommerce.com/_mcp/server is a docs-search MCP.",
+    "notes": "Official Storefront MCP (early access; per-storefront URL, POST /api/mcp) searches the catalog, edits carts and creates checkout links. Vendor MCP at https://docs.bigcommerce.com/_mcp/server only searches the docs.",
     "verified": "2026-09-24",
     "auth_scheme": {
       "type": "apiKey",
@@ -17608,10 +17663,9 @@
     "auth": "oauth2",
     "auth_hint": "Authorization: Bearer <ACCESS_TOKEN> obtained via OAuth 2.0 with the app's Client ID and Secret from DevCenter",
     "mcp": {
-      "type": "official",
-      "url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
+      "type": "none",
+      "url": null,
+      "maintainer": "none",
       "source_url": "https://developers.mercadolibre.com.ar/en_us/mcp-server",
       "checked_at": "2026-09-24"
     },
@@ -17621,7 +17675,7 @@
     "llms_txt": null,
     "desc_en": "Lets an agent search items and categories and manage a seller's listings, orders, questions, shipments and promotions on the Mercado Libre marketplace.",
     "desc_pl": "Pozwala agentowi wyszukiwać produkty i kategorie oraz zarządzać ofertami, zamówieniami, pytaniami, wysyłkami i promocjami sprzedawcy w serwisie Mercado Libre.",
-    "notes": "In AR, MX, BR and CL the account holder's details must be validated before creating an app; redirect URI must be HTTPS; rate limited (HTTP 429). Official MCP (OAuth, streamable HTTP) only searches and reads developer documentation.",
+    "notes": "In AR, MX, BR and CL the account holder's details must be validated before creating an app; redirect URI must be HTTPS; rate limited (HTTP 429). Vendor MCP at https://mcp.mercadolibre.com/devsite/v1/mcp only searches the docs.",
     "verified": "2026-09-24",
     "operations": [
       "product-search",
@@ -17708,17 +17762,16 @@
       "url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront",
       "maintainer": "vendor",
       "remote_url": "https://{shop}.myshopify.com/api/mcp",
-      "repo": "https://www.npmjs.com/package/@shopify/dev-mcp",
       "tools": [
-        "search_catalog",
-        "lookup_catalog",
-        "get_product",
         "get_cart",
         "update_cart",
-        "search_shop_policies_and_faqs"
+        "search_shop_policies_and_faqs",
+        "search_catalog",
+        "lookup_catalog",
+        "get_product"
       ],
       "covers_full_api": false,
-      "source_url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront",
+      "source_url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront.md",
       "checked_at": "2026-09-24"
     },
     "free_tier": "free API access; requires an active paid Shopify store subscription to use",
@@ -17730,7 +17783,7 @@
     "llms_txt": null,
     "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
     "desc_pl": "Zarządzaj produktami, zamówieniami, klientami i magazynem (Admin API) lub buduj sklepy (Storefront API) przez REST/GraphQL.",
-    "notes": "REST Admin API is legacy; new public apps must use GraphQL Admin. Dev MCP (npx @shopify/dev-mcp) serves docs/schemas only; per-store Storefront MCP at https://{shop}.myshopify.com/api/mcp needs no auth (catalog, cart, policies).",
+    "notes": "Official Storefront MCP per store (https://{shop}.myshopify.com/api/mcp, no auth) handles cart and policies, catalog tools at /api/ucp/mcp; Admin operations need an Admin API token. Dev MCP only searches docs.",
     "verified": "2026-09-24",
     "operations": [
       "store-management",
@@ -17983,7 +18036,7 @@
     "llms_txt": "https://docs.gumloop.com/llms.txt",
     "desc_en": "Create AI agents, start chat sessions, and trigger no-code automations via REST API, SDKs, or the Gumloop MCP server.",
     "desc_pl": "Tworzy agentów AI, uruchamia sesje czatu i wyzwala automatyzacje no-code przez REST API, SDK lub serwer MCP Gumloop.",
-    "notes": "Added: missing from the candidate list but a widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled.",
+    "notes": "Added: widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled. The MCP server authenticates via OAuth sign-in, not a pasted key.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -18096,7 +18149,7 @@
     "llms_txt": "https://help.keboola.com/llms.txt",
     "desc_en": "Lets an agent load and query tables, create SQL and Python transformations, and trigger data pipeline jobs in a Keboola project.",
     "desc_pl": "Pozwala agentowi ładować i odpytywać tabele, tworzyć transformacje SQL i Python oraz uruchamiać zadania potoków danych w projekcie Keboola.",
-    "notes": "Remote MCP URL is region-specific (https://mcp.<region>.keboola.com/mcp, e.g. mcp.eu-central-1.keboola.com); a local server is available from github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months. Developer docs: https://developers.keboola.com/.",
+    "notes": "Remote MCP URL is per stack: mcp.keboola.com is US Virginia (AWS) only; others e.g. mcp.eu-central-1.keboola.com; local server at github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -18127,7 +18180,7 @@
     "homepage": "https://www.make.com",
     "docs": "https://developers.make.com/api-documentation",
     "auth": "api_key",
-    "auth_hint": "Authorization: Token <api_token>",
+    "auth_hint": "Authorization: Token <api_token>; MCP: OAuth at https://mcp.make.com, or 'Authorization: Bearer <MCP_TOKEN>' on https://<zone>.make.com/mcp",
     "mcp": {
       "type": "official",
       "url": "https://mcp.make.com",
@@ -18368,7 +18421,7 @@
     "llms_txt": "https://docs.useparagon.com/llms.txt",
     "desc_en": "Call thousands of pre-built Tools and Triggers across 130+ SaaS apps (Slack, Salesforce, Gmail) via API or MCP.",
     "desc_pl": "Wywołuje tysiące gotowych narzędzi i wyzwalaczy w ponad 130 aplikacjach SaaS (Slack, Salesforce, Gmail) przez API lub MCP.",
-    "notes": "Paragon's embedded-iPaaS platform and ActionKit are sales-quoted after a free trial. The ActionKit MCP server is self-hosted (Docker) from github.com/useparagon/paragon-mcp; no hosted endpoint.",
+    "notes": "ActionKit has a self-serve free tier for experimentation; Paragon's broader embedded-iPaaS platform is contract/sales-only. ActionKit MCP is self-hosted only (repo useparagon/paragon-mcp, SSE transport); no vendor-hosted endpoint.",
     "verified": "2026-09-24",
     "auth_scheme": {
       "type": "http",
@@ -18650,14 +18703,9 @@
     "auth": "api_key",
     "auth_hint": "Authorization: Bearer <COHERE_API_KEY>",
     "mcp": {
-      "type": "official",
-      "url": "https://docs.cohere.com/_mcp/server",
-      "maintainer": "vendor",
-      "remote_url": "https://docs.cohere.com/_mcp/server",
-      "tools": [
-        "searchDocs"
-      ],
-      "covers_full_api": false,
+      "type": "none",
+      "url": null,
+      "maintainer": "none",
       "source_url": "https://docs.cohere.com/llms.txt",
       "checked_at": "2026-09-24"
     },
@@ -18672,7 +18720,7 @@
     "llms_txt": "https://docs.cohere.com/llms.txt",
     "desc_en": "Call chat, embed, rerank and classify endpoints for text generation, semantic search and RAG.",
     "desc_pl": "Wywołuj endpointy czatu, embeddingów, rerankingu i klasyfikacji do generowania tekstu, wyszukiwania semantycznego i RAG.",
-    "notes": "Official MCP server only searches documentation. Trial keys are not for production use. v2 API is current; v1 is legacy.",
+    "notes": "Vendor MCP at https://docs.cohere.com/_mcp/server only searches the docs. Trial keys are not for production use. v2 API is current; v1 is legacy.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -18832,7 +18880,7 @@
       "source_url": "https://fal.ai/docs/documentation/setting-up/mcp",
       "checked_at": "2026-09-24"
     },
-    "free_tier": "Paid only: prepaid credits bought in advance; no free tier stated",
+    "free_tier": "Paid only; prepaid credits, priced per model (e.g. FLUX.1 schnell $0.003/megapixel)",
     "sdk": [
       "python",
       "typescript"
@@ -18841,7 +18889,7 @@
     "llms_txt": "https://fal.ai/docs/llms.txt",
     "desc_en": "Generate images, video, audio and 3D with 1,000+ hosted models via queued REST or real-time WebSocket.",
     "desc_pl": "Generuj obrazy, wideo, audio i 3D ponad 1000 hostowanymi modelami przez kolejkowe REST lub WebSocket w czasie rzeczywistym.",
-    "notes": "The auth header prefix is 'Key', not 'Bearer'. The MCP server accepts an API key or OAuth. Long jobs use the queue API (submit, status, result).",
+    "notes": "REST auth header prefix is 'Key', not 'Bearer'; the MCP server takes 'Authorization: Bearer <FAL_KEY>' or OAuth. Long jobs use the queue API (submit, status, result).",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "none",
@@ -18888,16 +18936,9 @@
     "auth": "api_key",
     "auth_hint": "Authorization: Bearer <FIREWORKS_API_KEY>",
     "mcp": {
-      "type": "official",
-      "url": "https://docs.fireworks.ai/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://docs.fireworks.ai/mcp",
-      "tools": [
-        "search_fireworks_ai_docs",
-        "query_docs_filesystem_fireworks_ai_docs",
-        "submit_feedback"
-      ],
-      "covers_full_api": false,
+      "type": "none",
+      "url": null,
+      "maintainer": "none",
       "source_url": "https://docs.fireworks.ai/mcp",
       "checked_at": "2026-09-24"
     },
@@ -18909,7 +18950,7 @@
     "llms_txt": "https://docs.fireworks.ai/llms.txt",
     "desc_en": "Run serverless or dedicated inference and fine-tuning for open models via OpenAI-compatible APIs.",
     "desc_pl": "Uruchamiaj bezserwerowe lub dedykowane wnioskowanie i fine-tuning otwartych modeli przez API zgodne z OpenAI.",
-    "notes": "Official MCP server only searches documentation. The Responses API can call external MCP servers as tools.",
+    "notes": "Vendor MCP at https://docs.fireworks.ai/mcp only searches the docs. The Responses API can call external MCP servers as tools.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -18955,15 +18996,9 @@
     "auth": "api_key",
     "auth_hint": "x-goog-api-key: <GEMINI_API_KEY> (or ?key= query param)",
     "mcp": {
-      "type": "official",
-      "url": "https://gemini-api-docs-mcp.dev",
-      "maintainer": "vendor",
-      "remote_url": "https://gemini-api-docs-mcp.dev",
-      "tools": [
-        "gemini_search_docs",
-        "gemini_get_doc"
-      ],
-      "covers_full_api": false,
+      "type": "none",
+      "url": null,
+      "maintainer": "none",
       "source_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
       "checked_at": "2026-09-24"
     },
@@ -18978,7 +19013,7 @@
     "llms_txt": "https://ai.google.dev/gemini-api/docs/llms.txt",
     "desc_en": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
     "desc_pl": "Generuj tekst i obrazy, analizuj dane multimodalne (wideo, audio, PDF) i uruchamiaj wykonywanie kodu modelami Gemini.",
-    "notes": "Official MCP server only searches documentation; it does not run inference. Free-tier content may be used to improve Google products. Google is replacing standard API keys with authorization keys; unrestricted standard keys are rejected in 2026, so use a current key type. Google publishes a Discovery document, not an OpenAPI spec.",
+    "notes": "Vendor MCP at https://gemini-api-docs-mcp.dev only searches the docs. Free-tier content may be used to improve Google products. Unrestricted standard API keys are rejected in 2026; use a current key type. Google publishes a Discovery document, not OpenAPI.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -19413,7 +19448,6 @@
       "maintainer": "vendor",
       "remote_url": "https://mcp.replicate.com/sse",
       "repo": "https://www.npmjs.com/package/replicate-mcp",
-      "covers_full_api": true,
       "source_url": "https://replicate.com/docs/reference/mcp",
       "checked_at": "2026-09-24"
     },
@@ -19470,12 +19504,10 @@
     "auth": "api_key",
     "auth_hint": "Authorization: Bearer <TOGETHER_API_KEY>",
     "mcp": {
-      "type": "official",
-      "url": "https://docs.together.ai/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://docs.together.ai/mcp",
-      "covers_full_api": false,
-      "source_url": "https://docs.together.ai/docs/agent-skills",
+      "type": "none",
+      "url": null,
+      "maintainer": "none",
+      "source_url": "https://docs.together.ai/docs/agent-skills.md",
       "checked_at": "2026-09-24"
     },
     "free_tier": "Paid only: no free trial; minimum $5 prepaid credit purchase",
@@ -19487,7 +19519,7 @@
     "llms_txt": "https://docs.together.ai/llms.txt",
     "desc_en": "Run serverless inference, batch jobs, fine-tuning and dedicated GPU endpoints for open-source models.",
     "desc_pl": "Uruchamiaj bezserwerowe wnioskowanie, zadania wsadowe, fine-tuning i dedykowane endpointy GPU dla otwartych modeli.",
-    "notes": "Official MCP server only searches documentation. The API is OpenAI-compatible.",
+    "notes": "Vendor MCP at https://docs.together.ai/mcp only searches the docs. The API is OpenAI-compatible.",
     "verified": "2026-09-24",
     "operations": [
       "llm-inference",
@@ -19531,11 +19563,9 @@
     "auth": "api_key+oauth2",
     "auth_hint": "Authorization: Bearer <AI_GATEWAY_API_KEY>",
     "mcp": {
-      "type": "official",
-      "url": "https://mcp.vercel.com",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.vercel.com",
-      "covers_full_api": false,
+      "type": "none",
+      "url": null,
+      "maintainer": "none",
       "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
       "checked_at": "2026-09-24"
     },
@@ -19548,7 +19578,7 @@
     "llms_txt": "https://vercel.com/llms.txt",
     "desc_en": "Send chat, image, embedding and rerank requests to 100+ models through one gateway with failover and spend tracking.",
     "desc_pl": "Wysyłaj zapytania czatu, obrazów, embeddingów i rerankingu do ponad 100 modeli przez jedną bramkę z failoverem i kontrolą wydatków.",
-    "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's MCP server is for the whole platform and does not run inference. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
+    "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's platform MCP (mcp.vercel.com) does not call the gateway, only buys its credits. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
     "verified": "2026-09-24",
     "operations": [
       "llm-inference",
@@ -19647,17 +19677,9 @@
     "auth": "api_key",
     "auth_hint": "Authorization: Bearer <XAI_API_KEY>",
     "mcp": {
-      "type": "official",
-      "url": "https://docs.x.ai/api/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://docs.x.ai/api/mcp",
-      "tools": [
-        "list_doc_pages",
-        "get_doc_page",
-        "search_docs",
-        "get_llms_txt"
-      ],
-      "covers_full_api": false,
+      "type": "none",
+      "url": null,
+      "maintainer": "none",
       "source_url": "https://docs.x.ai/developers/docs-mcp",
       "checked_at": "2026-09-24"
     },
@@ -19669,7 +19691,7 @@
     "llms_txt": "https://docs.x.ai/llms.txt",
     "desc_en": "Generate text, images, video and voice with Grok models, with built-in web search and code tools.",
     "desc_pl": "Generuj tekst, obrazy, wideo i mowę modelami Grok z wbudowanym wyszukiwaniem w sieci i narzędziami do kodu.",
-    "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Official MCP server only searches documentation.",
+    "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Vendor MCP at https://docs.x.ai/api/mcp only searches the docs.",
     "verified": "2026-09-24",
     "operations": [
       "llm-inference",

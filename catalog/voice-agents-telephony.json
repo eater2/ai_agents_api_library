@@ -636,7 +636,7 @@
    "openapi": "https://github.com/twilio/twilio-oai",
    "llms_txt": null,
    "desc_en": "Programmatically make, receive, and control phone calls (IVR, recording, conferencing) via REST API.",
-   "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit). MCP: Twilio Labs' @twilio-alpha/mcp exposes all public APIs via OpenAPI (filter with --services).",
+   "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage. Twilio's own MCP (npm @twilio-alpha/mcp) is alpha.",
    "verified": "2026-09-24",
    "operations": [
     "phone-calls"

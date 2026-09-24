@@ -95,28 +95,14 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <COHERE_API_KEY>",
    "mcp": {
-    "type": "official",
-    "url": "https://docs.cohere.com/_mcp/server",
-    "maintainer": "vendor",
-    "remote_url": "https://docs.cohere.com/_mcp/server",
-    "tools": [
-     "searchDocs"
-    ],
-    "covers_full_api": false,
+    "type": "none",
+    "url": null,
+    "maintainer": "none",
     "source_url": "https://docs.cohere.com/llms.txt",
     "checked_at": "2026-09-24",
-    "domain_verified": true,
-    "kind": "vendor-hosted",
-    "config": {
-     "transport": "streamable-http",
-     "url": "https://docs.cohere.com/_mcp/server",
-     "headers": null,
-     "oauth": false,
-     "env": [],
-     "docs_only": true,
-     "source_url": "https://docs.cohere.com/llms.txt",
-     "checked_at": "2026-09-24"
-    }
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free trial key: 1,000 calls/mo, rate-limited",
    "sdk": [
@@ -128,7 +114,7 @@
    "openapi": null,
    "llms_txt": "https://docs.cohere.com/llms.txt",
    "desc_en": "Call chat, embed, rerank and classify endpoints for text generation, semantic search and RAG.",
-   "notes": "Official MCP server only searches documentation. Trial keys are not for production use. v2 API is current; v1 is legacy.",
+   "notes": "Vendor MCP at https://docs.cohere.com/_mcp/server only searches the docs. Trial keys are not for production use. v2 API is current; v1 is legacy.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -420,7 +406,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "Paid only: prepaid credits bought in advance; no free tier stated",
+   "free_tier": "Paid only; prepaid credits, priced per model (e.g. FLUX.1 schnell $0.003/megapixel)",
    "sdk": [
     "python",
     "typescript"
@@ -428,7 +414,7 @@
    "openapi": null,
    "llms_txt": "https://fal.ai/docs/llms.txt",
    "desc_en": "Generate images, video, audio and 3D with 1,000+ hosted models via queued REST or real-time WebSocket.",
-   "notes": "The auth header prefix is 'Key', not 'Bearer'. The MCP server accepts an API key or OAuth. Long jobs use the queue API (submit, status, result).",
+   "notes": "REST auth header prefix is 'Key', not 'Bearer'; the MCP server takes 'Authorization: Bearer <FAL_KEY>' or OAuth. Long jobs use the queue API (submit, status, result).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "none",
@@ -529,29 +515,14 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <FIREWORKS_API_KEY>",
    "mcp": {
-    "type": "official",
-    "url": "https://docs.fireworks.ai/mcp",
-    "maintainer": "vendor",
-    "remote_url": "https://docs.fireworks.ai/mcp",
-    "tools": [
-     "search_fireworks_ai_docs",
-     "query_docs_filesystem_fireworks_ai_docs",
-     "submit_feedback"
-    ],
-    "covers_full_api": false,
+    "type": "none",
+    "url": null,
+    "maintainer": "none",
     "source_url": "https://docs.fireworks.ai/mcp",
     "checked_at": "2026-09-24",
-    "domain_verified": true,
-    "kind": "vendor-hosted",
-    "config": {
-     "transport": "streamable-http",
-     "url": "https://docs.fireworks.ai/mcp",
-     "headers": null,
-     "oauth": false,
-     "docs_only": true,
-     "source_url": "https://docs.fireworks.ai/mcp",
-     "checked_at": "2026-09-24"
-    }
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
    },
    "free_tier": "trial credits: $1 on signup",
    "sdk": [
@@ -560,7 +531,7 @@
    "openapi": "https://docs.fireworks.ai/merged.openapi.yaml",
    "llms_txt": "https://docs.fireworks.ai/llms.txt",
    "desc_en": "Run serverless or dedicated inference and fine-tuning for open models via OpenAI-compatible APIs.",
-   "notes": "Official MCP server only searches documentation. The Responses API can call external MCP servers as tools.",
+   "notes": "Vendor MCP at https://docs.fireworks.ai/mcp only searches the docs. The Responses API can call external MCP servers as tools.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "trial",
@@ -642,28 +613,14 @@
    "auth": "api_key",
    "auth_hint": "x-goog-api-key: <GEMINI_API_KEY> (or ?key= query param)",
    "mcp": {
-    "type": "official",
-    "url": "https://gemini-api-docs-mcp.dev",
-    "maintainer": "vendor",
-    "remote_url": "https://gemini-api-docs-mcp.dev",
-    "tools": [
-     "gemini_search_docs",
-     "gemini_get_doc"
-    ],
-    "covers_full_api": false,
+    "type": "none",
+    "url": null,
+    "maintainer": "none",
     "source_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
     "checked_at": "2026-09-24",
-    "domain_verified": false,
-    "kind": "official",
-    "config": {
-     "transport": "streamable-http",
-     "url": "https://gemini-api-docs-mcp.dev",
-     "headers": null,
-     "oauth": false,
-     "docs_only": true,
-     "source_url": "https://ai.google.dev/gemini-api/docs/coding-agents",
-     "checked_at": "2026-09-24"
-    }
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free tier: rate-limited access to Flash/Pro models",
    "sdk": [
@@ -675,7 +632,7 @@
    "openapi": null,
    "llms_txt": "https://ai.google.dev/gemini-api/docs/llms.txt",
    "desc_en": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
-   "notes": "Official MCP server only searches documentation; it does not run inference. Free-tier content may be used to improve Google products. Google is replacing standard API keys with authorization keys; unrestricted standard keys are rejected in 2026, so use a current key type. Google publishes a Discovery document, not an OpenAPI spec.",
+   "notes": "Vendor MCP at https://gemini-api-docs-mcp.dev only searches the docs. Free-tier content may be used to improve Google products. Unrestricted standard API keys are rejected in 2026; use a current key type. Google publishes a Discovery document, not OpenAPI.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -1432,7 +1389,6 @@
     "maintainer": "vendor",
     "remote_url": "https://mcp.replicate.com/sse",
     "repo": "https://www.npmjs.com/package/replicate-mcp",
-    "covers_full_api": true,
     "source_url": "https://replicate.com/docs/reference/mcp",
     "checked_at": "2026-09-24",
     "domain_verified": true,
@@ -1556,25 +1512,14 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <TOGETHER_API_KEY>",
    "mcp": {
-    "type": "official",
-    "url": "https://docs.together.ai/mcp",
-    "maintainer": "vendor",
-    "remote_url": "https://docs.together.ai/mcp",
-    "covers_full_api": false,
-    "source_url": "https://docs.together.ai/docs/agent-skills",
+    "type": "none",
+    "url": null,
+    "maintainer": "none",
+    "source_url": "https://docs.together.ai/docs/agent-skills.md",
     "checked_at": "2026-09-24",
-    "domain_verified": true,
-    "kind": "vendor-hosted",
-    "config": {
-     "transport": "streamable-http",
-     "url": "https://docs.together.ai/mcp",
-     "headers": null,
-     "oauth": false,
-     "env": [],
-     "docs_only": true,
-     "source_url": "https://docs.together.ai/docs/mcp",
-     "checked_at": "2026-09-24"
-    }
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
    },
    "free_tier": "Paid only: no free trial; minimum $5 prepaid credit purchase",
    "sdk": [
@@ -1584,7 +1529,7 @@
    "openapi": "https://docs.together.ai/openapi.yaml",
    "llms_txt": "https://docs.together.ai/llms.txt",
    "desc_en": "Run serverless inference, batch jobs, fine-tuning and dedicated GPU endpoints for open-source models.",
-   "notes": "Official MCP server only searches documentation. The API is OpenAI-compatible.",
+   "notes": "Vendor MCP at https://docs.together.ai/mcp only searches the docs. The API is OpenAI-compatible.",
    "verified": "2026-09-24",
    "operations": [
     "llm-inference",
@@ -1664,24 +1609,14 @@
    "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <AI_GATEWAY_API_KEY>",
    "mcp": {
-    "type": "official",
-    "url": "https://mcp.vercel.com",
-    "maintainer": "vendor",
-    "remote_url": "https://mcp.vercel.com",
-    "covers_full_api": false,
+    "type": "none",
+    "url": null,
+    "maintainer": "none",
     "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
     "checked_at": "2026-09-24",
-    "domain_verified": true,
-    "kind": "vendor-hosted",
-    "config": {
-     "transport": "streamable-http",
-     "url": "https://mcp.vercel.com",
-     "headers": null,
-     "oauth": true,
-     "docs_only": false,
-     "source_url": "https://vercel.com/docs/agent-resources/vercel-mcp",
-     "checked_at": "2026-09-24"
-    }
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
    },
    "free_tier": "free tier: monthly credits on subset of models",
    "sdk": [
@@ -1691,7 +1626,7 @@
    "openapi": null,
    "llms_txt": "https://vercel.com/llms.txt",
    "desc_en": "Send chat, image, embedding and rerank requests to 100+ models through one gateway with failover and spend tracking.",
-   "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's MCP server is for the whole platform and does not run inference. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
+   "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's platform MCP (mcp.vercel.com) does not call the gateway, only buys its credits. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
    "verified": "2026-09-24",
    "operations": [
     "llm-inference",
@@ -1850,30 +1785,14 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <XAI_API_KEY>",
    "mcp": {
-    "type": "official",
-    "url": "https://docs.x.ai/api/mcp",
-    "maintainer": "vendor",
-    "remote_url": "https://docs.x.ai/api/mcp",
-    "tools": [
-     "list_doc_pages",
-     "get_doc_page",
-     "search_docs",
-     "get_llms_txt"
-    ],
-    "covers_full_api": false,
+    "type": "none",
+    "url": null,
+    "maintainer": "none",
     "source_url": "https://docs.x.ai/developers/docs-mcp",
     "checked_at": "2026-09-24",
-    "domain_verified": true,
-    "kind": "vendor-hosted",
-    "config": {
-     "transport": "streamable-http",
-     "url": "https://docs.x.ai/api/mcp",
-     "headers": null,
-     "oauth": false,
-     "docs_only": true,
-     "source_url": "https://docs.x.ai/developers/docs-mcp",
-     "checked_at": "2026-09-24"
-    }
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
    },
    "free_tier": "paid only (prepaid credits)",
    "sdk": [
@@ -1882,7 +1801,7 @@
    "openapi": "https://docs.x.ai/openapi.json",
    "llms_txt": "https://docs.x.ai/llms.txt",
    "desc_en": "Generate text, images, video and voice with Grok models, with built-in web search and code tools.",
-   "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Official MCP server only searches documentation.",
+   "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Vendor MCP at https://docs.x.ai/api/mcp only searches the docs.",
    "verified": "2026-09-24",
    "operations": [
     "llm-inference",

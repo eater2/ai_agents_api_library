@@ -248,7 +248,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Fetch stock, forex, crypto prices and technical/fundamental indicators via a free REST API.",
-   "notes": "Free tier is limited to 25 requests/day; paid Premium plans needed for real-time/higher volume.",
+   "notes": "Free tier is limited to 25 requests/day; paid Premium plans needed for real-time/higher volume. Remote MCP signs in via OAuth; the ?apikey= URL parameter is deprecated.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -349,7 +349,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Create wallets, send crypto, and pay per-API-call with stablecoins over HTTP (x402) via the Coinbase Developer Platform SDK.",
-   "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API - useful for agent-to-agent micropayments. Official local Payments MCP (npx @coinbase/payments-mcp) combines a wallet, onramp and x402 payments.",
+   "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API. Official local Payments MCP (npx @coinbase/payments-mcp) signs in with an email-based browser wallet, not the CDP API key.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -436,7 +436,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Fetch live and historical crypto prices, market data, and NFT data via REST API or the official CoinGecko MCP server.",
-   "notes": "Free MCP endpoint (mcp.api.coingecko.com) requires no key at all, just shared rate limits; a Pro-key MCP endpoint also exists.",
+   "notes": "Free MCP endpoint (mcp.api.coingecko.com) requires no key, just shared rate limits; keyed endpoint mcp.pro-api.coingecko.com/mcp asks for your API key via browser sign-in (OAuth).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -994,9 +994,9 @@
    "auth_hint": "OAuth2 client-credentials Bearer token; MCP also supports an access-token env var",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.paypal.com/http",
+    "url": "https://mcp.paypal.com/mcp",
     "maintainer": "vendor",
-    "remote_url": "https://mcp.paypal.com/http",
+    "remote_url": "https://mcp.paypal.com/mcp",
     "repo": "https://github.com/paypal/agent-toolkit",
     "tools": [
      "create_product",
@@ -1058,7 +1058,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Process payments, payouts, invoices, and subscriptions via REST API or PayPal's official MCP server.",
-   "notes": "Remote MCP transports: /http (Streamable HTTP) or /sse; separate sandbox MCP endpoint at https://mcp.sandbox.paypal.com for testing.",
+   "notes": "Remote MCP: https://mcp.paypal.com/mcp (Streamable HTTP, OAuth login) or /sse; docs still list /http, which returns 404. Sandbox MCP at https://mcp.sandbox.paypal.com for testing.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",

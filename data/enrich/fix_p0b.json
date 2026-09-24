@@ -1,0 +1,585 @@
+{
+ "twilio": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/twilio-labs/mcp"
+  },
+  "sources": [
+   "https://www.twilio.com/docs/ai/mcp",
+   "https://github.com/twilio-labs/mcp"
+  ]
+ },
+ "twilio-programmable-voice": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/twilio-labs/mcp"
+  },
+  "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage. Twilio's own MCP (npm @twilio-alpha/mcp) is alpha.",
+  "sources": [
+   "https://github.com/twilio-labs/mcp"
+  ]
+ },
+ "deepgram-api": {
+  "notes": "Hosted MCP at https://developers.deepgram.com/_mcp/server only searches the docs; the API-calling server is local `dg mcp` (Deepgram CLI) or pip deepgram-mcp.",
+  "sources": [
+   "https://developers.deepgram.com/developer-tools/cli/mcp-server.md",
+   "https://github.com/deepgram/mcp"
+  ]
+ },
+ "assemblyai-api": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "Vendor MCP at https://assemblyai.com/docs/mcp only searches the docs. To run transcriptions, call the REST API or an SDK.",
+  "sources": [
+   "https://www.assemblyai.com/docs/coding-agent-prompts"
+  ]
+ },
+ "rev-ai-api": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "Vendor MCP at https://docs.rev.ai/mcp only searches the docs. Human transcription is sold separately as a paid option.",
+  "sources": [
+   "https://docs.rev.ai/mcp"
+  ]
+ },
+ "fireworks-ai": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "Vendor MCP at https://docs.fireworks.ai/mcp only searches the docs. The Responses API can call external MCP servers as tools.",
+  "sources": [
+   "https://docs.fireworks.ai/mcp",
+   "https://docs.fireworks.ai/ecosystem/integrations/development-setup.md"
+  ]
+ },
+ "xai-grok-api": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "The account must have prepaid credits (console.x.ai). The API is OpenAI-compatible (/v1/responses, /v1/chat/completions). Vendor MCP at https://docs.x.ai/api/mcp only searches the docs.",
+  "sources": [
+   "https://docs.x.ai/developers/docs-mcp",
+   "https://docs.x.ai/api/mcp"
+  ]
+ },
+ "cohere-api": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "Vendor MCP at https://docs.cohere.com/_mcp/server only searches the docs. Trial keys are not for production use. v2 API is current; v1 is legacy.",
+  "sources": [
+   "https://docs.cohere.com/llms.txt",
+   "https://docs.cohere.com/_mcp/server"
+  ]
+ },
+ "together-ai": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "Vendor MCP at https://docs.together.ai/mcp only searches the docs. The API is OpenAI-compatible.",
+  "sources": [
+   "https://docs.together.ai/docs/agent-skills.md",
+   "https://docs.together.ai/mcp"
+  ]
+ },
+ "hume-ai-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/HumeAI/mcp-server-hume"
+  },
+  "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans. The API MCP is local `npx @humeai/mcp-server` (HUME_API_KEY); dev.hume.ai/_mcp/server only searches the docs.",
+  "sources": [
+   "https://dev.hume.ai/docs/integrations/mcp.md",
+   "https://github.com/HumeAI/mcp-server-hume"
+  ]
+ },
+ "resemble-ai-api": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "Enterprise plans are available for on-prem deployment and custom model training. Vendor MCP at https://docs.resemble.ai/_mcp/server only searches the docs.",
+  "sources": [
+   "https://docs.resemble.ai/_mcp/server",
+   "https://github.com/resemble-ai/resemble-mcp"
+  ]
+ },
+ "mercado-libre-api": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "In AR, MX, BR and CL the account holder's details must be validated before creating an app; redirect URI must be HTTPS; rate limited (HTTP 429). Vendor MCP at https://mcp.mercadolibre.com/devsite/v1/mcp only searches the docs.",
+  "sources": [
+   "https://developers.mercadolibre.com.ar/en_us/mcp-server"
+  ]
+ },
+ "shopify-admin-storefront-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront"
+  },
+  "notes": "Official Storefront MCP per store (https://{shop}.myshopify.com/api/mcp, no auth) handles cart and policies, catalog tools at /api/ucp/mcp; Admin operations need an Admin API token. Dev MCP only searches docs.",
+  "sources": [
+   "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront.md",
+   "https://www.npmjs.com/package/@shopify/dev-mcp"
+  ]
+ },
+ "bigcommerce-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview"
+  },
+  "notes": "Official Storefront MCP (early access; per-storefront URL, POST /api/mcp) searches the catalog, edits carts and creates checkout links. Vendor MCP at https://docs.bigcommerce.com/_mcp/server only searches the docs.",
+  "sources": [
+   "https://docs.bigcommerce.com/developer/api-reference/mcp/overview.md",
+   "https://docs.bigcommerce.com/developer/api-reference/mcp/storefront/b2c.md"
+  ]
+ },
+ "google-gemini-api": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "Vendor MCP at https://gemini-api-docs-mcp.dev only searches the docs. Free-tier content may be used to improve Google products. Unrestricted standard API keys are rejected in 2026; use a current key type. Google publishes a Discovery document, not OpenAPI.",
+  "sources": [
+   "https://ai.google.dev/gemini-api/docs/coding-agents",
+   "https://gemini-api-docs-mcp.dev"
+  ]
+ },
+ "telegram-bot-api": {
+  "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits. Listed MCP server uses a user account via Telethon/MTProto (API_ID/API_HASH + session string from my.telegram.org), not the bot token.",
+  "sources": [
+   "https://github.com/chigwell/telegram-mcp"
+  ]
+ },
+ "tavily": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.tavily.com/mcp"
+  },
+  "notes": "Advanced search depth costs 2 credits vs 1 for basic/fast; remote MCP: OAuth at https://mcp.tavily.com/mcp or API key via https://mcp.tavily.com/mcp/?tavilyApiKey=<key>; repo: github.com/tavily-ai/tavily-mcp.",
+  "sources": [
+   "https://github.com/tavily-ai/tavily-mcp"
+  ]
+ },
+ "exa": {
+  "notes": "Remote MCP works keyless (rate-limited); for your own plan send x-api-key or sign in via OAuth at https://mcp.exa.ai/mcp?login (agent_run requires auth). Self-hosted npm package (exa-mcp-server) also available.",
+  "sources": [
+   "https://exa.ai/docs/reference/exa-mcp"
+  ]
+ },
+ "openstreetmap-nominatim": {
+  "free_tier": "No key needed; public server max 1 request/second, bulk geocoding discouraged (small one-off jobs only, cached), no systematic or autocomplete queries",
+  "mcp": {
+   "type": "community",
+   "url": "https://openstreetmap.caseyjhand.com/mcp"
+  },
+  "notes": "Public demo instance is fair-use only (1 req/s, bulk discouraged, no systematic queries); self-host or use a commercial provider for production volume. Listed MCP is a community server, also hosted by its author.",
+  "sources": [
+   "https://operations.osmfoundation.org/policies/nominatim/",
+   "https://github.com/cyanheads/openstreetmap-mcp-server"
+  ]
+ },
+ "overpass-api-osm": {
+  "mcp": {
+   "type": "community",
+   "url": "https://openstreetmap.caseyjhand.com/mcp"
+  },
+  "sources": [
+   "https://github.com/cyanheads/openstreetmap-mcp-server"
+  ]
+ },
+ "speechmatics-api": {
+  "mcp": {
+   "type": "community",
+   "url": "https://github.com/ArchieMcM234/speechmatics_claude_code_mcp"
+  },
+  "sources": [
+   "https://github.com/ArchieMcM234/speechmatics_claude_code_mcp"
+  ]
+ },
+ "paragon-actionkit": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/useparagon/paragon-mcp"
+  },
+  "notes": "ActionKit has a self-serve free tier for experimentation; Paragon's broader embedded-iPaaS platform is contract/sales-only. ActionKit MCP is self-hosted only (repo useparagon/paragon-mcp, SSE transport); no vendor-hosted endpoint.",
+  "sources": [
+   "https://docs.useparagon.com/actionkit/getting-started"
+  ]
+ },
+ "circleci-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.circleci.com/v1/mcp"
+  },
+  "notes": "Use the v3 API for new work (v2 still supported). CircleCI's hosted MCP is at https://mcp.circleci.com/v1/mcp (OAuth2 sign-in, 24 tools); the mcp-server-circleci npm package is deprecated.",
+  "sources": [
+   "https://circleci.com/changelog/hosted-mcp-server-now-available/"
+  ]
+ },
+ "alpha-vantage": {
+  "notes": "Free tier is limited to 25 requests/day; paid Premium plans needed for real-time/higher volume. Remote MCP signs in via OAuth; the ?apikey= URL parameter is deprecated.",
+  "sources": [
+   "https://github.com/alphavantage/alpha_vantage_mcp"
+  ]
+ },
+ "paypal-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.paypal.com/mcp"
+  },
+  "notes": "Remote MCP: https://mcp.paypal.com/mcp (Streamable HTTP, OAuth login) or /sse; docs still list /http, which returns 404. Sandbox MCP at https://mcp.sandbox.paypal.com for testing.",
+  "sources": [
+   "https://docs.paypal.ai/developer/tools/ai/mcp-quickstart",
+   "https://mcp.paypal.com/.well-known/oauth-protected-resource/mcp"
+  ]
+ },
+ "wolfram-alpha-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://agenttools.wolfram.com/mcp"
+  },
+  "notes": "LLM API https://www.wolframalpha.com/api/v1/llm-api is built for agents (maxchars, default 6800); get an AppID in the Developer Portal; commercial use needs a paid license. Official MCP: free, no auth at agenttools.wolfram.com/mcp; paid services.wolfram.com/api/mcp (Bearer).",
+  "sources": [
+   "https://support.wolfram.com/75237"
+  ]
+ },
+ "atlassian-jira-confluence": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.atlassian.com/v2/mcp"
+  },
+  "sources": [
+   "https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/"
+  ]
+ },
+ "postman-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.postman.com/mcp"
+  },
+  "notes": "Reference docs are at learning.postman.com. Remote MCP modes: /minimal (default), /code, /mcp (full, 100+ tools); US host supports OAuth, EU host mcp.eu.postman.com needs an API key. Docs-search MCP at learning.postman.com/_mcp/server.",
+  "sources": [
+   "https://github.com/postmanlabs/postman-mcp-server"
+  ]
+ },
+ "csm-common-sense-machines-api": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. The vendor's Blender MCP repo (github.com/CommonSenseMachines/blender-mcp) now returns 404; no maintained MCP server found.",
+  "sources": [
+   "https://github.com/CommonSenseMachines/blender-mcp"
+  ]
+ },
+ "webflow-data-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.webflow.com/mcp"
+  },
+  "sources": [
+   "https://developers.webflow.com/mcp/installing/claude-code",
+   "https://developers.webflow.com/data/reference/rate-limits"
+  ]
+ },
+ "coingecko-api": {
+  "notes": "Free MCP endpoint (mcp.api.coingecko.com) requires no key, just shared rate limits; keyed endpoint mcp.pro-api.coingecko.com/mcp asks for your API key via browser sign-in (OAuth).",
+  "sources": [
+   "https://docs.coingecko.com/reference/mcp-server"
+  ]
+ },
+ "openalex-api": {
+  "notes": "Base URL https://api.openalex.org. docs.openalex.org redirects to help.openalex.org. Free daily budget resets at midnight UTC; then pay-as-you-go in prepaid $1 increments. Member plans from $5,000/yr. Data is CC0. Listed MCP is a community multi-source papers server (arXiv, OpenAlex, PMC and more).",
+  "sources": [
+   "https://github.com/benedict2310/Scientific-Papers-MCP"
+  ]
+ },
+ "airtable-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.airtable.com/mcp"
+  },
+  "sources": [
+   "https://airtable.com/developers/agents/mcp/getting-started"
+  ]
+ },
+ "pagerduty-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.pagerduty.com/mcp"
+  },
+  "notes": "The self-hosted pagerduty-mcp-server repo is deprecated and archived; use the hosted MCP https://mcp.pagerduty.com/mcp (EU: https://mcp.eu.pagerduty.com/mcp) with an API token or OAuth.",
+  "sources": [
+   "https://support.pagerduty.com/main/docs/pagerduty-mcp-server"
+  ]
+ },
+ "vercel-ai-gateway": {
+  "mcp": {
+   "type": "none",
+   "url": null
+  },
+  "notes": "The base URL https://ai-gateway.vercel.sh works with OpenAI and Anthropic SDKs. Vercel's platform MCP (mcp.vercel.com) does not call the gateway, only buys its credits. Tokens have no markup. BYOK requires the paid tier. Free-tier overage returns 429. On Vercel, OIDC tokens can replace the API key.",
+  "sources": [
+   "https://vercel.com/docs/agent-resources/vercel-mcp",
+   "https://vercel.com/docs/agent-resources/vercel-mcp/tools"
+  ]
+ },
+ "ayrshare": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.ayrshare.com/mcp"
+  },
+  "notes": "Ayrshare itself holds the underlying per-platform app approvals, so agents avoid individually applying for X/Meta/TikTok developer access. Hosted MCP action server at https://api.ayrshare.com/mcp (Streamable HTTP, 27 tools).",
+  "sources": [
+   "https://www.ayrshare.com/docs/additional/mcp-action-server"
+  ]
+ },
+ "browserbase-stagehand": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.browserbase.com/mcp"
+  },
+  "notes": "Billed by browser-hours; Stagehand SDK is open source but needs a browser backend such as Browserbase. Hosted MCP takes the key as ?browserbaseApiKey=; the mcp-server-browserbase repo is archived since 2026-07-20.",
+  "sources": [
+   "https://github.com/browserbase/mcp-server-browserbase",
+   "https://docs.browserbase.com/integrations/mcp/setup"
+  ]
+ },
+ "reducto-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.reducto.ai/mcp"
+  },
+  "sources": [
+   "https://docs.reducto.ai/mcp-server"
+  ]
+ },
+ "aws-apis": {
+  "mcp": {
+   "type": "official",
+   "url": "https://aws-mcp.us-east-1.api.aws/mcp"
+  },
+  "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own IAM scoping, rate limits, and regional availability; no unified OpenAPI spec. The managed AWS MCP Server (OAuth or SigV4 proxy) replaces the local aws-api-mcp-server.",
+  "sources": [
+   "https://docs.aws.amazon.com/aws-mcp/latest/userguide/getting-started-aws-mcp-server.html",
+   "https://docs.aws.amazon.com/aws-mcp/latest/userguide/understanding-mcp-server-tools.html"
+  ]
+ },
+ "aws-textract": {
+  "mcp": {
+   "type": "official",
+   "url": "https://aws-mcp.us-east-1.api.aws/mcp"
+  },
+  "notes": "Requires an AWS account and IAM credentials; region-specific; free tier applies only for the first 3 months after the first Textract request. No dedicated Textract MCP; the official AWS MCP Server can call Textract via aws___run_script.",
+  "sources": [
+   "https://docs.aws.amazon.com/aws-mcp/latest/userguide/getting-started-aws-mcp-server.html",
+   "https://docs.aws.amazon.com/aws-mcp/latest/userguide/understanding-mcp-server-tools.html",
+   "https://github.com/ag2-mcp-servers/amazon-textract"
+  ]
+ },
+ "gumloop": {
+  "notes": "Added: widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled. The MCP server authenticates via OAuth sign-in, not a pasted key.",
+  "sources": [
+   "https://docs.gumloop.com/mcp-server/overview"
+  ]
+ },
+ "parallel-web-systems-search-api": {
+  "notes": "The remote MCP server works without an account/API key at lower rate limits; an Authorization: Bearer key raises them. The main REST API requires an API key from the dashboard.",
+  "sources": [
+   "https://docs.parallel.ai/integrations/mcp/search-mcp"
+  ]
+ },
+ "mongodb-atlas": {
+  "notes": "MongoDB also runs the Atlas Managed MCP Server (GA Aug 2026, OAuth, recommended), reached via AI-client plugins or the mongodb-atlas-mcp-remote npm package; no public endpoint URL is documented.",
+  "sources": [
+   "https://github.com/mongodb-js/mongodb-mcp-server",
+   "https://www.mongodb.com/products/updates/now-ga-mongodb-atlas-managed-mcp-server/",
+   "https://www.mongodb.com/docs/mcp-server/get-started/"
+  ]
+ },
+ "elevenlabs-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.elevenlabs.io/v1/mcp"
+  },
+  "notes": "Official hosted MCP https://api.elevenlabs.io/v1/mcp uses OAuth; the local stdio repo elevenlabs/elevenlabs-mcp is archived since 2026-08-20.",
+  "sources": [
+   "https://github.com/elevenlabs/elevenlabs-mcp"
+  ]
+ },
+ "elevenlabs-music-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.elevenlabs.io/v1/mcp"
+  },
+  "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS. Hosted OAuth MCP at api.elevenlabs.io/v1/mcp; the elevenlabs-mcp repo is archived since 2026-08-20.",
+  "sources": [
+   "https://github.com/elevenlabs/elevenlabs-mcp"
+  ]
+ },
+ "brave-search-api": {
+  "notes": "Official MCP server (@brave/brave-search-mcp-server) is self-hosted only (npx/Docker); STDIO is the default transport since v2.x, HTTP optional; no vendor-hosted endpoint. Answers plan is separate ($4/1,000 req + token costs).",
+  "sources": [
+   "https://github.com/brave/brave-search-mcp-server"
+  ]
+ },
+ "luma-ai-dream-machine-api": {
+  "docs": "https://docs.agents.lumalabs.ai",
+  "free_tier": "Paid only; pay per video, e.g. Ray 3.2 5s text/image-to-video $0.15 (540p) / $0.30 (720p) / $1.20 (1080p), $5,000/mo cap on default Build tier",
+  "notes": "The Luma Agents API (https://agents.lumalabs.ai/v1) supersedes the older Dream Machine API. API credits are separate from Dream Machine subscription credits; failed generations are refunded.",
+  "desc_en": "Generate and extend AI videos from text or start/end keyframe images via async REST API (Ray 3.2).",
+  "sources": [
+   "https://lumalabs.ai/api/pricing",
+   "https://docs.agents.lumalabs.ai/",
+   "https://docs.lumalabs.ai"
+  ]
+ },
+ "kling-ai-api": {
+  "docs": "https://kling.ai/document-api/guides/get-started/quick-start",
+  "auth_hint": "Authorization: Bearer <API_KEY> (create at kling.ai/dev/api-key); legacy Access/Secret Key pairs need a client-signed HS256 JWT instead",
+  "llms_txt": "https://kling.ai/document-api/llms.txt",
+  "notes": "New versioned endpoints (e.g. /text-to-video/kling-2.6) take a plain API key; the older Access/Secret key pair with a client-built JWT is legacy (model_name-parameter endpoints).",
+  "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API with a Bearer API key.",
+  "sources": [
+   "https://kling.ai/document-api/api/get-started/authentication.md",
+   "https://kling.ai/document-api/llms.txt",
+   "https://kling.ai/document-api/guides/get-started/quick-start.md"
+  ]
+ },
+ "fal-ai": {
+  "free_tier": "Paid only; prepaid credits, priced per model (e.g. FLUX.1 schnell $0.003/megapixel)",
+  "notes": "REST auth header prefix is 'Key', not 'Bearer'; the MCP server takes 'Authorization: Bearer <FAL_KEY>' or OAuth. Long jobs use the queue API (submit, status, result).",
+  "sources": [
+   "https://fal.ai/docs/documentation/setting-up/mcp",
+   "https://fal.ai/docs/documentation/model-apis/pricing",
+   "https://fal.ai/models/fal-ai/flux/schnell"
+  ]
+ },
+ "replicate": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.replicate.com/sse"
+  },
+  "sources": [
+   "https://mcp.replicate.com",
+   "https://replicate.com/docs/reference/mcp",
+   "https://replicate.com/docs/reference/http"
+  ]
+ },
+ "runway-api": {
+  "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Generation MCP is mcp.runwayml.com/mcp; a separate dev.runwayml.com/mcp (OAuth) only covers Developer Portal tasks, model routers and docs.",
+  "sources": [
+   "https://docs.dev.runwayml.com/llms-small.txt"
+  ]
+ },
+ "e2b": {
+  "auth_hint": "E2B_API_KEY env var / X-API-Key: <key> header (Bearer works only together with an X-Team-ID header)",
+  "sources": [
+   "https://raw.githubusercontent.com/e2b-dev/E2B/main/spec/openapi.yml",
+   "https://github.com/e2b-dev/mcp-server"
+  ]
+ },
+ "keboola": {
+  "notes": "Remote MCP URL is per stack: mcp.keboola.com is US Virginia (AWS) only; others e.g. mcp.eu-central-1.keboola.com; local server at github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months.",
+  "sources": [
+   "https://github.com/keboola/mcp-server"
+  ]
+ },
+ "nocodb-cloud": {
+  "auth_hint": "REST: 'xc-token: <API_TOKEN>' header; MCP: OAuth at app.nocodb.com/mcp, or token access at /mcp/<ncId> with 'x-api-key: <MCP_TOKEN>' header",
+  "sources": [
+   "https://nocodb.com/docs/apis-and-mcp/mcp"
+  ]
+ },
+ "open-meteo": {
+  "free_tier": "No key needed for non-commercial use: 10,000 calls/day, 300,000/month (also 600/min, 5,000/hour)",
+  "sources": [
+   "https://open-meteo.com/en/pricing"
+  ]
+ },
+ "tomorrow-io-api": {
+  "auth_hint": "apikey query param (REST); MCP takes 'X-Api-Key: <API_KEY>' header",
+  "sources": [
+   "https://docs.tomorrow.io/reference/mcp.md"
+  ]
+ },
+ "make-api-mcp": {
+  "auth_hint": "Authorization: Token <api_token>; MCP: OAuth at https://mcp.make.com, or 'Authorization: Bearer <MCP_TOKEN>' on https://<zone>.make.com/mcp",
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.make.com"
+  },
+  "sources": [
+   "https://developers.make.com/mcp-server"
+  ]
+ },
+ "unstructured-api": {
+  "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Workflow API. Hosted Transform MCP parses documents; the UNS-MCP repo only manages connectors/workflows and is no longer maintained.",
+  "sources": [
+   "https://github.com/Unstructured-IO/UNS-MCP"
+  ]
+ },
+ "docusign-esignature-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.docusign.com/mcp"
+  },
+  "notes": "Official Docusign MCP Server (Open Beta, OAuth) covers eSignature plus Navigator/Maestro/Workspaces: production https://mcp.docusign.com/mcp, developer accounts https://mcp-d.docusign.com/mcp. JWT grant needs one-time user consent.",
+  "sources": [
+   "https://mcp.docusign.com/.well-known/oauth-protected-resource",
+   "https://mcp-d.docusign.com/.well-known/oauth-protected-resource",
+   "https://www.docusign.com/blog/developers/claude-docusign-mcp-connector-guide"
+  ]
+ },
+ "tripo-api": {
+  "notes": "Maintained by VAST AI Research (Tripo's developer). Free-credit amounts vary by promotion. The MCP server is alpha (last commit 2025-04) and needs Blender with the Tripo addon.",
+  "sources": [
+   "https://github.com/VAST-AI-Research/tripo-mcp",
+   "https://github.com/VAST-AI-Research/tripo-mcp/commits/main"
+  ]
+ },
+ "datadog-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.datadoghq.com/v1/mcp"
+  },
+  "sources": [
+   "https://docs.datadoghq.com/getting_started/software_delivery_mcp_tools/",
+   "https://docs.datadoghq.com/mcp_server/setup/",
+   "https://mcp.datadoghq.com/.well-known/oauth-protected-resource/v1/mcp"
+  ]
+ },
+ "penpot-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://design.penpot.app/mcp/stream"
+  },
+  "notes": "API is RPC-style (e.g. /api/rpc/command/get-profile), no OpenAPI file; open source, self-hostable. Remote MCP takes ?userToken=<MCP key> and needs the MCP plugin open in a Penpot browser tab; local: npx @penpot/mcp@stable.",
+  "sources": [
+   "https://help.penpot.app/mcp/"
+  ]
+ },
+ "coinbase-cdp-x402": {
+  "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API. Official local Payments MCP (npx @coinbase/payments-mcp) signs in with an email-based browser wallet, not the CDP API key.",
+  "sources": [
+   "https://docs.cdp.coinbase.com/agentic-wallet/mcp/quickstart.md"
+  ]
+ },
+ "serper": {
+  "notes": "Docs/playground are login-gated. No subscriptions: prepaid credits from $1.00/1k down to $0.30/1k, valid 6 months. No official MCP server found; listed repo is the most-starred community one.",
+  "sources": [
+   "https://serper.dev"
+  ]
+ }
+}

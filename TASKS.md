@@ -15,10 +15,10 @@ Wyszukiwanie (`mcp/core.mjs`)
 - [x] Opisy narzędzi MCP: warunek pominięcia (podłączone narzędzie lub własny model), „once a human has provisioned credentials”, „ranking is not proof of fit”, `get_reviews` opcjonalne (54)
 
 Dane (`data/catalog.json`)
-- [ ] `operations`: kontrolowany słownik czynności (np. `text-to-video`, `sms`, `street-geocoding`, `ip-geolocation`, `video-hosting`) dla wszystkich 323 wpisów + opis słownika w schemacie (bf)
-- [ ] `has_free_tier` / `has_trial` liczone z `free_plan.kind`, a nie z tekstu (dziś „free trial…” liczy się jako darmowy plan); dodać `no_card` do JSON dla agentów (bf)
-- [ ] Poprawki z testu: Esri → `maps-geo-weather`; `video-generation` bez usług hostingu (Mux) i szablonów, albo jawne `operations`; przegląd kategorii pod kątem podobnych pomyłek (bf)
-- [ ] Brakujący dostawcy wskazani przez agentów: SMS — Plivo, Sinch, Telnyx, AWS SNS (End User Messaging), Bird; geokodowanie — OpenCage, LocationIQ (bf)
+- [x] `operations`: kontrolowany słownik czynności (np. `text-to-video`, `sms`, `street-geocoding`, `ip-geolocation`, `video-hosting`) dla wszystkich 323 wpisów + opis słownika w schemacie (bf)
+- [x] `has_free_tier` / `has_trial` liczone z `free_plan.kind`, a nie z tekstu (dziś „free trial…” liczy się jako darmowy plan); dodać `no_card` do JSON dla agentów (bf)
+- [x] Poprawki z testu: Esri → `maps-geo-weather`; `video-generation` bez usług hostingu (Mux) i szablonów, albo jawne `operations`; przegląd kategorii pod kątem podobnych pomyłek (bf)
+- [x] Brakujący dostawcy wskazani przez agentów: SMS — Plivo, Sinch, Telnyx, AWS SNS (End User Messaging), Bird; geokodowanie — OpenCage, LocationIQ (bf)
 
 Wywołanie i MCP (`get_api`)
 - [x] Minimalny przykład żądania + ścieżka endpointu + metoda + kluczowe pola odpowiedzi dla ok. 30 najczęściej wybieranych usług — 7/7 agentów (3b): pole `call` dla 31 usług w `data/usage.json` (curl, metoda, URL, pola odpowiedzi, `source_url`)
@@ -28,6 +28,9 @@ Wywołanie i MCP (`get_api`)
 Teksty (skill, llms.txt, README)
 - [x] Skill: najpierw dopasowanie do czynności i wolumenu, dopiero potem `no_auth` / free tier; trial ≠ free tier; sprawdzić, czy `mcp` to endpoint czy repozytorium; `get_reviews` opcjonalne; wyzwalacz „naprawczy” (403, limit, nieobsługiwany format); pominąć zadania, które model robi sam (tłumaczenie, diagramy) (3b)
 - [x] „verified” → „last checked” wszędzie, gdzie sprawdzamy tylko linki; osobno data sprawdzenia linku i danych (3b): etykiety w README/llms/stronach/manifestach/skillu; pole `verified` zostaje, dane mają własne `checked_at`, linki `link_check.checked_at`. Opisy narzędzi w `mcp/core.mjs` — 54
+
+- [x] Poprawki z `research/p0b-3b/corrections-2026-09-24.md` (69 wpisów: MCP tylko do dokumentacji → `none` z notatką, zarchiwizowane repo, martwe URL-e, hostowane endpointy) przez `data/enrich/fix_p0b.json` + `b_p0b.json` (bf)
+- [x] Podział kategorii przekraczających 60 KB: `sms-messaging` wydzielone z `communication-email-chat`, `databases` z `databases-vector-memory` (bf)
 
 Na koniec
 - [ ] Powtórzyć test produktu (`python scripts/interview_product_test.py`) i porównać z 2026-09-24 (bf)
