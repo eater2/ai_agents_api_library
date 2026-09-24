@@ -6,6 +6,32 @@
  },
  "entries": [
   {
+   "id": "agentset",
+   "name": "Agentset RAG API",
+   "homepage": "https://agentset.ai/",
+   "docs": "https://docs.agentset.ai/api-reference/introduction",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.agentset.ai/production/mcp-server"
+   },
+   "free_tier": "Free plan (forever): 1,000 pages ingested and 10,000 retrievals per month, 60 requests/min per namespace",
+   "sdk": [
+    "javascript",
+    "python"
+   ],
+   "openapi": "https://spec.speakeasy.com/agentset-ktc/api/agentset-api-with-code-samples",
+   "llms_txt": "https://docs.agentset.ai/llms.txt",
+   "desc_en": "Lets an agent ingest documents into managed RAG namespaces and run semantic search or cited question answering over them.",
+   "notes": "MCP server is local (stdio, npx @agentset/mcp) and needs AGENTSET_API_KEY plus a namespace ID. Open-source, self-hostable.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
    "id": "chroma-cloud",
    "name": "Chroma Cloud",
    "homepage": "https://www.trychroma.com",
@@ -560,6 +586,58 @@
      "fetched_at": "2026-09-24T16:54Z"
     }
    ]
+  },
+  {
+   "id": "tidb-cloud",
+   "name": "TiDB Cloud API (Starter)",
+   "homepage": "https://www.pingcap.com/tidb/cloud/",
+   "docs": "https://docs.pingcap.com/api/tidb-cloud-api-overview/",
+   "auth": "api_key",
+   "auth_hint": "HTTP Digest auth with API public key as username and private key as password (Management API); SQL via MySQL connection string or serverless HTTP driver with cluster user/password",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/pingcap/pytidb"
+   },
+   "free_tier": "Free: up to 5 Starter instances per org, 25 GiB row storage + 25 GiB columnar storage + 250M Request Units per month in total; no credit card",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.pingcap.com/llms.txt",
+   "desc_en": "Lets an agent create and manage serverless MySQL-compatible TiDB clusters and run SQL, full-text and vector search queries against them.",
+   "notes": "Cloud API is in public preview (v1beta1 for Starter/Essential/Dedicated). Official MCP server is local (uvx --from pytidb[mcp] tidb-mcp-server, stdio or SSE) and needs the cluster connection credentials. A 6th instance requires a card and spending limit.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
+   "id": "tinybird",
+   "name": "Tinybird API",
+   "homepage": "https://www.tinybird.co",
+   "docs": "https://www.tinybird.co/docs/api-reference",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <TINYBIRD_TOKEN> (workspace admin, resource-scoped token or JWT)",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN"
+   },
+   "free_tier": "Free plan: 10 GB storage, 1,000 API requests/day, 0.25 vCPU shared; no credit card",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://www.tinybird.co/docs/llms.txt",
+   "desc_en": "Lets an agent ingest events into real-time ClickHouse-based data sources, run SQL queries and call published analytics API endpoints.",
+   "notes": "Remote MCP over Streamable HTTP, token passed as query parameter (add &host=... for non-default regions); use mcp-remote for older clients. API host depends on workspace region.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
   },
   {
    "id": "turso",

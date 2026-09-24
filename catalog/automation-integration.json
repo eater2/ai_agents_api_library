@@ -169,6 +169,32 @@
    "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/ifttt-api.json"
   },
   {
+   "id": "keboola",
+   "name": "Keboola Storage API",
+   "homepage": "https://www.keboola.com",
+   "docs": "https://keboola.docs.apiary.io/",
+   "auth": "api_key+oauth2",
+   "auth_hint": "X-StorageApi-Token: <STORAGE_API_TOKEN>; remote MCP uses OAuth sign-in",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.keboola.com/mcp"
+   },
+   "free_tier": "Free plan: 1 project, 120 compute minutes in the first month then 60 minutes/month, extra-small Snowflake backend; no credit card",
+   "sdk": [
+    "python",
+    "php"
+   ],
+   "openapi": null,
+   "llms_txt": "https://help.keboola.com/llms.txt",
+   "desc_en": "Lets an agent load and query tables, create SQL and Python transformations, and trigger data pipeline jobs in a Keboola project.",
+   "notes": "Remote MCP URL is region-specific (https://mcp.<region>.keboola.com/mcp, e.g. mcp.eu-central-1.keboola.com); a local server is available from github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months. Developer docs: https://developers.keboola.com/.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
    "id": "make-api-mcp",
    "name": "Make API / MCP",
    "homepage": "https://www.make.com",

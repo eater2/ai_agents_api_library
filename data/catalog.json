@@ -769,6 +769,27 @@
     "verified": "2026-09-24"
   },
   {
+    "id": "congress-gov",
+    "name": "Congress.gov API",
+    "category": "knowledge-research",
+    "homepage": "https://www.congress.gov/",
+    "docs": "https://api.congress.gov/",
+    "auth": "api_key",
+    "auth_hint": "api.data.gov key: query parameter ?api_key=<API_KEY> or header X-Api-Key: <API_KEY>",
+    "mcp": {
+      "type": "community",
+      "url": "https://github.com/cyanheads/congressgov-mcp-server"
+    },
+    "free_tier": "Free: government API, key issued instantly by email; 5,000 requests/hour.",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Lets an agent look up U.S. bills, amendments, votes, members, committees, nominations and Congressional Record data from the Library of Congress.",
+    "desc_pl": "Pozwala agentowi wyszukiwać amerykańskie projekty ustaw, poprawki, głosowania, członków Kongresu, komisje, nominacje i dane Congressional Record z Biblioteki Kongresu.",
+    "notes": "Official Library of Congress API (v3); usage guide and endpoint docs in github.com/LibraryOfCongress/api.congress.gov. Paginated JSON/XML, max 250 results per page.",
+    "verified": "2026-09-24"
+  },
+  {
     "id": "context7-library-docs-for-agents",
     "name": "Context7 (library docs for agents)",
     "category": "knowledge-research",
@@ -834,6 +855,29 @@
     "verified": "2026-09-24"
   },
   {
+    "id": "gitingest",
+    "name": "Gitingest API",
+    "category": "knowledge-research",
+    "homepage": "https://gitingest.com",
+    "docs": "https://gitingest.com/llms.txt",
+    "auth": "none",
+    "auth_hint": "No key for public repos: GET https://gitingest.com/api/<owner>/<repo>; optional GitHub token for private repos via the 'token' parameter",
+    "mcp": {
+      "type": "community",
+      "url": "https://github.com/narumiruna/gitingest-mcp"
+    },
+    "free_tier": "No key; free public service with no published quota (the web UI has rate limiting and CAPTCHA protection).",
+    "sdk": [
+      "python"
+    ],
+    "openapi": "https://gitingest.com/openapi.json",
+    "llms_txt": "https://gitingest.com/llms.txt",
+    "desc_en": "Lets an agent turn any public Git repository into a single text digest (summary, directory tree and file contents) sized for an LLM prompt.",
+    "desc_pl": "Pozwala agentowi zamienić dowolne publiczne repozytorium Git w jeden tekstowy skrót (podsumowanie, drzewo katalogów i zawartość plików) dopasowany do promptu LLM.",
+    "notes": "GET /api/{user}/{repo} or POST /api/ingest (include/exclude patterns); digest returned as a download URL. For heavy use the vendor recommends the open-source CLI (pip install gitingest).",
+    "verified": "2026-09-24"
+  },
+  {
     "id": "hacker-news-api",
     "name": "Hacker News API",
     "category": "knowledge-research",
@@ -852,6 +896,48 @@
     "desc_en": "Read Hacker News stories, comments, jobs, polls, user profiles and front-page rankings as real-time JSON.",
     "desc_pl": "Odczytuj historie, komentarze, oferty pracy, ankiety, profile użytkowników i rankingi Hacker News jako JSON w czasie rzeczywistym.",
     "notes": "Base URL https://hacker-news.firebaseio.com/v0/. Read-only, no documented rate limit. No full-text search; use the separate Algolia HN Search API for that.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "open-library",
+    "name": "Internet Archive Open Library API",
+    "category": "knowledge-research",
+    "homepage": "https://openlibrary.org/",
+    "docs": "https://openlibrary.org/developers/api",
+    "auth": "none",
+    "auth_hint": "No key; send a User-Agent header with app name and contact email, e.g. 'User-Agent: MyApp (me@example.org)'",
+    "mcp": {
+      "type": "community",
+      "url": "https://github.com/8enSmith/mcp-open-library"
+    },
+    "free_tier": "No key; free and open: 1 request/second anonymous, 3 requests/second with an identifying User-Agent.",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Lets an agent search books, authors and subjects, fetch work/edition data by ISBN or OLID, search inside book texts and get cover images.",
+    "desc_pl": "Pozwala agentowi wyszukiwać książki, autorów i tematy, pobierać dane dzieł i wydań po ISBN lub OLID, przeszukiwać treść książek i pobierać okładki.",
+    "notes": "Bulk scraping discouraged; use the monthly data dumps for large jobs. Reading-log/list write endpoints need an Open Library login.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "nytimes",
+    "name": "New York Times APIs",
+    "category": "knowledge-research",
+    "homepage": "https://developer.nytimes.com/",
+    "docs": "https://developer.nytimes.com/apis",
+    "auth": "api_key",
+    "auth_hint": "Query parameter ?api-key=<API_KEY> (create an app at developer.nytimes.com and enable the APIs you need)",
+    "mcp": {
+      "type": "community",
+      "url": "https://github.com/jeffmm/nytimes-mcp"
+    },
+    "free_tier": "Free: all public APIs are free; most APIs 500 requests/day and 5 requests/minute (Archive API higher).",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Lets an agent search NYT articles back to 1851, read top stories, most-popular lists, the Times Wire feed and bestseller lists.",
+    "desc_pl": "Pozwala agentowi przeszukiwać artykuły NYT od 1851 roku, czytać najważniejsze wiadomości, listy najpopularniejszych tekstów, kanał Times Wire i listy bestsellerów.",
+    "notes": "Returns metadata/abstracts and links, not full article text. Exceeding limits returns HTTP 429; wait ~12 s between calls. Non-commercial use terms.",
     "verified": "2026-09-24"
   },
   {
@@ -3456,70 +3542,6 @@
     "verified": "2026-09-24"
   },
   {
-    "id": "aws-apis",
-    "name": "AWS APIs",
-    "category": "developer-devops",
-    "homepage": "https://aws.amazon.com",
-    "docs": "https://docs.aws.amazon.com/general/latest/gr/aws-apis-references.html",
-    "auth": "cloud_iam",
-    "auth_hint": "AWS Signature Version 4 (SigV4) signed request using IAM access key/secret or STS temporary credentials",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/awslabs/mcp"
-    },
-    "free_tier": "new accounts get up to $200 in credits plus free usage of 90+ services for up to 6 months; some services also have a perpetual Always Free tier",
-    "sdk": [
-      "python",
-      "javascript",
-      "typescript",
-      "java",
-      "go",
-      "dotnet",
-      "ruby",
-      "php",
-      "cpp",
-      "rust",
-      "kotlin",
-      "swift"
-    ],
-    "openapi": null,
-    "llms_txt": "https://docs.aws.amazon.com/llms.txt",
-    "desc_en": "An agent can provision and control thousands of AWS resources (compute, storage, databases, ML) via SDKs/CLI/REST.",
-    "desc_pl": "Agent może udostępniać i kontrolować tysiące zasobów AWS (obliczenia, pamięć masowa, bazy danych, ML) przez SDK/CLI/REST.",
-    "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own IAM scoping, rate limits, and regional availability; no single unified OpenAPI spec.",
-    "verified": "2026-09-24"
-  },
-  {
-    "id": "azure-apis",
-    "name": "Azure APIs",
-    "category": "developer-devops",
-    "homepage": "https://learn.microsoft.com/rest/api/azure/",
-    "docs": "https://learn.microsoft.com/rest/api/azure/",
-    "auth": "cloud_iam",
-    "auth_hint": "Authorization: Bearer <access_token> (Microsoft Entra ID / Azure AD OAuth2)",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/microsoft/mcp"
-    },
-    "free_tier": "12 months of select free services plus $200 credit for 30 days for new accounts; many services also have a permanent always-free monthly amount",
-    "sdk": [
-      "dotnet",
-      "java",
-      "javascript",
-      "typescript",
-      "python",
-      "go",
-      "cpp",
-      "rust"
-    ],
-    "openapi": "https://github.com/Azure/azure-rest-api-specs",
-    "llms_txt": null,
-    "desc_en": "An agent can deploy and manage Azure resources (compute, storage, databases, AI) across resource-provider REST APIs.",
-    "desc_pl": "Agent może wdrażać i zarządzać zasobami Azure (obliczenia, pamięć masowa, bazy danych, AI) przez interfejsy REST dostawców zasobów.",
-    "notes": "Umbrella platform: hundreds of resource-provider APIs, each independently versioned (api-version query param required); the Azure MCP repo moved from Azure/azure-mcp (archived) to microsoft/mcp.",
-    "verified": "2026-09-24"
-  },
-  {
     "id": "circleci-api",
     "name": "CircleCI API",
     "category": "developer-devops",
@@ -3537,32 +3559,7 @@
     "llms_txt": "https://circleci.com/docs/llms.txt",
     "desc_en": "An agent can trigger pipelines, rerun workflows, fetch logs/test results, and validate CI/CD configuration via REST.",
     "desc_pl": "Agent może uruchamiać pipeline'y, ponawiać workflow, pobierać logi/wyniki testów i walidować konfigurację CI/CD przez REST.",
-    "notes": "CircleCI recommends the v3 API for new development; v2 remains supported. The CircleCI-Public/mcp-server-circleci npm package is deprecated in favor of CircleCI's newer hosted MCP server / CLI MCP mode, whose exact endpoint could not be confirmed from fetchable docs at research time.",
-    "verified": "2026-09-24"
-  },
-  {
-    "id": "cloudflare-api",
-    "name": "Cloudflare API",
-    "category": "developer-devops",
-    "homepage": "https://developers.cloudflare.com/api/",
-    "docs": "https://developers.cloudflare.com/api/",
-    "auth": "api_key+oauth2",
-    "auth_hint": "Authorization: Bearer <API_Token>",
-    "mcp": {
-      "type": "official",
-      "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/"
-    },
-    "free_tier": "free with any Cloudflare account; API access itself is free, manages both free and paid Cloudflare products",
-    "sdk": [
-      "typescript",
-      "python",
-      "go"
-    ],
-    "openapi": "https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.yaml",
-    "llms_txt": "https://developers.cloudflare.com/llms.txt",
-    "desc_en": "An agent can manage DNS, Workers, zones, WAF/security rules, and caching for Cloudflare accounts programmatically.",
-    "desc_pl": "Agent może programistycznie zarządzać DNS, Workers, strefami, regułami bezpieczeństwa/WAF i cache'owaniem na koncie Cloudflare.",
-    "notes": "Global rate limit ~1,200 requests/5 min per user; per-IP limit ~200 req/sec; GraphQL Analytics API has a separate cost-based limit. Legacy X-Auth-Key global key auth also exists but is discouraged.",
+    "notes": "Use the v3 API for new work (v2 still supported). The mcp-server-circleci npm package is deprecated in favor of CircleCI's hosted MCP / CLI MCP mode (endpoint not confirmed).",
     "verified": "2026-09-24"
   },
   {
@@ -3611,30 +3608,7 @@
     "llms_txt": null,
     "desc_en": "An agent can search, push, pull, tag, and manage container images and repositories on Docker Hub.",
     "desc_pl": "Agent może wyszukiwać, wypychać, pobierać, tagować i zarządzać obrazami oraz repozytoriami kontenerów na Docker Hub.",
-    "notes": "API is labeled v2-beta; rate limits apply to anonymous/free image pulls. Docker also has a broader official MCP Catalog/Toolkit (docs.docker.com/ai/mcp-catalog-and-toolkit/) with 300+ containerized MCP servers.",
-    "verified": "2026-09-24"
-  },
-  {
-    "id": "fly-io-machines-api",
-    "name": "Fly.io Machines API",
-    "category": "developer-devops",
-    "homepage": "https://fly.io/docs/machines/api/",
-    "docs": "https://fly.io/docs/machines/api/",
-    "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <FLY_API_TOKEN>",
-    "mcp": {
-      "type": "official",
-      "url": "https://docs.fly.io/sprites/integrations/remote-mcp"
-    },
-    "free_tier": "no perpetual free tier; pay-as-you-go billing with trial credit for new accounts",
-    "sdk": [
-      "go"
-    ],
-    "openapi": "https://docs.fly.io/machines-api/openapi.json",
-    "llms_txt": null,
-    "desc_en": "An agent can create, start, stop, and destroy Fly.io Machines (lightweight VMs) programmatically via REST.",
-    "desc_pl": "Agent może programistycznie tworzyć, uruchamiać, zatrzymywać i usuwać maszyny Fly.io (lekkie VM) przez REST.",
-    "notes": "The official MCP server ships under Fly.io's Sprites product, adjacent to but distinct from the core Machines API.",
+    "notes": "API is v2-beta; free/anonymous pulls are rate-limited. Docker's MCP Catalog/Toolkit offers 300+ containerized MCP servers.",
     "verified": "2026-09-24"
   },
   {
@@ -3684,58 +3658,48 @@
     "verified": "2026-09-24"
   },
   {
-    "id": "google-cloud-apis",
-    "name": "Google Cloud APIs",
+    "id": "globalping",
+    "name": "Globalping Network Measurement API",
     "category": "developer-devops",
-    "homepage": "https://cloud.google.com/apis",
-    "docs": "https://cloud.google.com/apis/docs/overview",
-    "auth": "cloud_iam",
-    "auth_hint": "Authorization: Bearer <OAuth2 access token> (service account or Application Default Credentials); API keys for select public APIs",
+    "homepage": "https://globalping.io",
+    "docs": "https://globalping.io/docs/api.globalping.io",
+    "auth": "none",
+    "auth_hint": "No key required; optional token from dash.globalping.io raises limits: 'Authorization: Bearer <GLOBALPING_TOKEN>'",
     "mcp": {
       "type": "official",
-      "url": "https://github.com/googleapis/genai-toolbox"
+      "url": "https://mcp.globalping.dev/mcp"
     },
-    "free_tier": "free trial credit for new customers plus an Always Free tier with perpetual no-cost limits on select products",
+    "free_tier": "No key; 250 tests/hour anonymously (up to 50 probes per measurement), 500 tests/hour with a free account token (up to 500 probes); extra tests use credits.",
     "sdk": [
-      "python",
       "javascript",
-      "typescript",
-      "java",
-      "go",
-      "dotnet",
-      "ruby",
-      "php",
-      "cpp"
+      "go"
     ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "An agent can create and manage Google Cloud resources (compute, storage, data, AI/ML) via REST, gRPC, or client libraries.",
-    "desc_pl": "Agent może tworzyć i zarządzać zasobami Google Cloud (obliczenia, pamięć masowa, dane, AI/ML) przez REST, gRPC lub biblioteki klienckie.",
-    "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own scopes/quotas; many APIs require explicit per-project enabling. MCP Toolbox for Databases is Google's main official MCP offering (Cloud SQL, AlloyDB, BigQuery, Spanner).",
+    "openapi": "https://api.globalping.io/v1/spec.yaml",
+    "llms_txt": "https://globalping.io/llms.txt",
+    "desc_en": "Lets an agent run ping, traceroute, MTR, DNS and HTTP tests from thousands of probes worldwide to check reachability, latency and routing of a host.",
+    "desc_pl": "Pozwala agentowi uruchamiać testy ping, traceroute, MTR, DNS i HTTP z tysięcy sond na całym świecie, aby sprawdzić dostępność, opóźnienia i trasowanie do hosta.",
+    "notes": "Async: POST /v1/measurements, then poll GET /v1/measurements/{id}. Remote MCP (Streamable HTTP) takes OAuth or a Bearer token.",
     "verified": "2026-09-24"
   },
   {
-    "id": "netlify-api",
-    "name": "Netlify API",
+    "id": "maven-central-search",
+    "name": "Maven Central Search API",
     "category": "developer-devops",
-    "homepage": "https://docs.netlify.com/api/get-started/",
-    "docs": "https://docs.netlify.com/api/get-started/",
-    "auth": "api_key+oauth2",
-    "auth_hint": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN>",
+    "homepage": "https://central.sonatype.com",
+    "docs": "https://central.sonatype.org/search/rest-api-guide/",
+    "auth": "none",
+    "auth_hint": "No key: GET https://search.maven.org/solrsearch/select?q=<query>&rows=20&wt=json",
     "mcp": {
-      "type": "official",
-      "url": "https://netlify-mcp.netlify.app/mcp"
+      "type": "community",
+      "url": "https://github.com/arvindand/maven-tools-mcp"
     },
-    "free_tier": "free Starter plan; API usage subject to account plan limits",
-    "sdk": [
-      "go",
-      "javascript"
-    ],
-    "openapi": "https://open-api.netlify.com/",
-    "llms_txt": "https://docs.netlify.com/llms.txt",
-    "desc_en": "An agent can create/manage sites, trigger and monitor deploys, and configure DNS, domains, and env vars.",
-    "desc_pl": "Agent może tworzyć i zarządzać witrynami, uruchamiać oraz monitorować wdrożenia i konfigurować DNS, domeny oraz zmienne środowiskowe.",
-    "notes": "Rate limits: 500 req/min general, 3 deploys/min (100/day). Tokens are invalidated on password reset.",
+    "free_tier": "No key; free public API with no published quota (fair use).",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Lets an agent search Maven Central for Java/JVM artifacts by groupId, artifactId, class name or SHA-1 and look up the latest versions before adding a dependency.",
+    "desc_pl": "Pozwala agentowi przeszukiwać Maven Central pod kątem artefaktów Java/JVM po groupId, artifactId, nazwie klasy lub SHA-1 i sprawdzać najnowsze wersje przed dodaniem zależności.",
+    "notes": "Solr-style queries (g:, a:, v:, fc:); core=gav lists all versions. Sonatype may throttle heavy automated use.",
     "verified": "2026-09-24"
   },
   {
@@ -3756,7 +3720,7 @@
     "llms_txt": null,
     "desc_en": "An agent can create/manage incidents, on-call schedules, escalation policies, and services via REST.",
     "desc_pl": "Agent może tworzyć i zarządzać incydentami, harmonogramami dyżurów, politykami eskalacji i usługami przez REST.",
-    "notes": "The linked pagerduty-mcp-server GitHub repo is deprecated/read-only; PagerDuty has moved MCP development to a hosted Remote MCP Server with OAuth, but its exact endpoint URL could not be confirmed from fetchable docs at research time.",
+    "notes": "The pagerduty-mcp-server repo is deprecated; PagerDuty moved to a hosted Remote MCP server with OAuth (endpoint not confirmed).",
     "verified": "2026-09-24"
   },
   {
@@ -3777,28 +3741,31 @@
     "llms_txt": "https://learning.postman.com/llms.txt",
     "desc_en": "An agent can manage Postman collections, workspaces, environments, mocks, monitors, and API specs via REST.",
     "desc_pl": "Agent może zarządzać kolekcjami, przestrzeniami roboczymi, środowiskami, mockami, monitorami i specyfikacjami API w Postmanie przez REST.",
-    "notes": "The given candidate homepage is a UI workspace, not docs; the official docs.postman.com/learning.postman.com site is the real reference. Postman's confirmed official MCP endpoint is oriented at querying Postman's own docs/learning content, distinct from a full account-management MCP.",
+    "notes": "Reference docs are at learning.postman.com. The official MCP endpoint mainly queries Postman's own docs, not full account management.",
     "verified": "2026-09-24"
   },
   {
-    "id": "render-api",
-    "name": "Render API",
+    "id": "reflag",
+    "name": "Reflag Management API",
     "category": "developer-devops",
-    "homepage": "https://render.com/docs/api",
-    "docs": "https://api-docs.render.com/reference/introduction",
-    "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <api-key>",
+    "homepage": "https://reflag.com",
+    "docs": "https://docs.reflag.com/api/reflag-rest-api",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Authorization: Bearer <REFLAG_API_KEY> (scoped Management API key); remote MCP uses OAuth sign-in",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.render.com/mcp"
+      "url": "https://app.reflag.com/api/mcp"
     },
-    "free_tier": "free static sites; free web services that spin down after inactivity",
-    "sdk": [],
-    "openapi": "https://api-docs.render.com/openapi/render-public-api-1.json",
-    "llms_txt": "https://api-docs.render.com/llms.txt",
-    "desc_en": "An agent can create and manage Render services, trigger deployments, and configure databases and env vars.",
-    "desc_pl": "Agent może tworzyć i zarządzać usługami Render, uruchamiać wdrożenia oraz konfigurować bazy danych i zmienne środowiskowe.",
-    "notes": "OpenAPI spec endpoint/tag names may change over time even though the API itself stays backward compatible. Render's official MCP server supports potentially destructive operations (env var changes, triggering deploys).",
+    "free_tier": "Free Starter plan: 1,000 monthly tracked users, unlimited seats, 3 environments; no overage (upgrade required)",
+    "sdk": [
+      "javascript",
+      "ruby"
+    ],
+    "openapi": null,
+    "llms_txt": "https://docs.reflag.com/llms.txt",
+    "desc_en": "Lets an agent create feature flags, change their targeting for users and companies, and evaluate flags at runtime.",
+    "desc_pl": "Pozwala agentowi tworzyć flagi funkcji, zmieniać ich targetowanie dla użytkowników i firm oraz sprawdzać stan flag w czasie działania aplikacji.",
+    "notes": "Formerly Bucket. Management API key is per app with scopes; the Runtime API uses a separate secret key. Remote MCP over HTTP (mcp-remote for clients without OAuth).",
     "verified": "2026-09-24"
   },
   {
@@ -3844,9 +3811,218 @@
     "verified": "2026-09-24"
   },
   {
+    "id": "aws-apis",
+    "name": "AWS APIs",
+    "category": "cloud-hosting",
+    "homepage": "https://aws.amazon.com",
+    "docs": "https://docs.aws.amazon.com/general/latest/gr/aws-apis-references.html",
+    "auth": "cloud_iam",
+    "auth_hint": "AWS Signature Version 4 (SigV4) signed request using IAM access key/secret or STS temporary credentials",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/awslabs/mcp"
+    },
+    "free_tier": "new accounts get up to $200 in credits plus free usage of 90+ services for up to 6 months; some services also have a perpetual Always Free tier",
+    "sdk": [
+      "python",
+      "javascript",
+      "typescript",
+      "java",
+      "go",
+      "dotnet",
+      "ruby",
+      "php",
+      "cpp",
+      "rust",
+      "kotlin",
+      "swift"
+    ],
+    "openapi": null,
+    "llms_txt": "https://docs.aws.amazon.com/llms.txt",
+    "desc_en": "An agent can provision and control thousands of AWS resources (compute, storage, databases, ML) via SDKs/CLI/REST.",
+    "desc_pl": "Agent może udostępniać i kontrolować tysiące zasobów AWS (obliczenia, pamięć masowa, bazy danych, ML) przez SDK/CLI/REST.",
+    "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own IAM scoping, rate limits, and regional availability; no single unified OpenAPI spec.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "azure-apis",
+    "name": "Azure APIs",
+    "category": "cloud-hosting",
+    "homepage": "https://learn.microsoft.com/rest/api/azure/",
+    "docs": "https://learn.microsoft.com/rest/api/azure/",
+    "auth": "cloud_iam",
+    "auth_hint": "Authorization: Bearer <access_token> (Microsoft Entra ID / Azure AD OAuth2)",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/microsoft/mcp"
+    },
+    "free_tier": "12 months of select free services plus $200 credit for 30 days for new accounts; many services also have a permanent always-free monthly amount",
+    "sdk": [
+      "dotnet",
+      "java",
+      "javascript",
+      "typescript",
+      "python",
+      "go",
+      "cpp",
+      "rust"
+    ],
+    "openapi": "https://github.com/Azure/azure-rest-api-specs",
+    "llms_txt": null,
+    "desc_en": "An agent can deploy and manage Azure resources (compute, storage, databases, AI) across resource-provider REST APIs.",
+    "desc_pl": "Agent może wdrażać i zarządzać zasobami Azure (obliczenia, pamięć masowa, bazy danych, AI) przez interfejsy REST dostawców zasobów.",
+    "notes": "Umbrella platform: hundreds of resource-provider APIs, each independently versioned (api-version query param required); the Azure MCP repo moved from Azure/azure-mcp (archived) to microsoft/mcp.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "cloudflare-api",
+    "name": "Cloudflare API",
+    "category": "cloud-hosting",
+    "homepage": "https://developers.cloudflare.com/api/",
+    "docs": "https://developers.cloudflare.com/api/",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Authorization: Bearer <API_Token>",
+    "mcp": {
+      "type": "official",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/"
+    },
+    "free_tier": "free with any Cloudflare account; API access itself is free, manages both free and paid Cloudflare products",
+    "sdk": [
+      "typescript",
+      "python",
+      "go"
+    ],
+    "openapi": "https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.yaml",
+    "llms_txt": "https://developers.cloudflare.com/llms.txt",
+    "desc_en": "An agent can manage DNS, Workers, zones, WAF/security rules, and caching for Cloudflare accounts programmatically.",
+    "desc_pl": "Agent może programistycznie zarządzać DNS, Workers, strefami, regułami bezpieczeństwa/WAF i cache'owaniem na koncie Cloudflare.",
+    "notes": "Global rate limit ~1,200 requests/5 min per user; per-IP limit ~200 req/sec; GraphQL Analytics API has a separate cost-based limit. Legacy X-Auth-Key global key auth also exists but is discouraged.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "fly-io-machines-api",
+    "name": "Fly.io Machines API",
+    "category": "cloud-hosting",
+    "homepage": "https://fly.io/docs/machines/api/",
+    "docs": "https://fly.io/docs/machines/api/",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <FLY_API_TOKEN>",
+    "mcp": {
+      "type": "official",
+      "url": "https://docs.fly.io/sprites/integrations/remote-mcp"
+    },
+    "free_tier": "no perpetual free tier; pay-as-you-go billing with trial credit for new accounts",
+    "sdk": [
+      "go"
+    ],
+    "openapi": "https://docs.fly.io/machines-api/openapi.json",
+    "llms_txt": null,
+    "desc_en": "An agent can create, start, stop, and destroy Fly.io Machines (lightweight VMs) programmatically via REST.",
+    "desc_pl": "Agent może programistycznie tworzyć, uruchamiać, zatrzymywać i usuwać maszyny Fly.io (lekkie VM) przez REST.",
+    "notes": "The official MCP server ships under Fly.io's Sprites product, adjacent to but distinct from the core Machines API.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "google-cloud-apis",
+    "name": "Google Cloud APIs",
+    "category": "cloud-hosting",
+    "homepage": "https://cloud.google.com/apis",
+    "docs": "https://cloud.google.com/apis/docs/overview",
+    "auth": "cloud_iam",
+    "auth_hint": "Authorization: Bearer <OAuth2 access token> (service account or Application Default Credentials); API keys for select public APIs",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/googleapis/genai-toolbox"
+    },
+    "free_tier": "free trial credit for new customers plus an Always Free tier with perpetual no-cost limits on select products",
+    "sdk": [
+      "python",
+      "javascript",
+      "typescript",
+      "java",
+      "go",
+      "dotnet",
+      "ruby",
+      "php",
+      "cpp"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "An agent can create and manage Google Cloud resources (compute, storage, data, AI/ML) via REST, gRPC, or client libraries.",
+    "desc_pl": "Agent może tworzyć i zarządzać zasobami Google Cloud (obliczenia, pamięć masowa, dane, AI/ML) przez REST, gRPC lub biblioteki klienckie.",
+    "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own scopes/quotas; many APIs require explicit per-project enabling. MCP Toolbox for Databases is Google's main official MCP offering (Cloud SQL, AlloyDB, BigQuery, Spanner).",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "netlify-api",
+    "name": "Netlify API",
+    "category": "cloud-hosting",
+    "homepage": "https://docs.netlify.com/api/get-started/",
+    "docs": "https://docs.netlify.com/api/get-started/",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN>",
+    "mcp": {
+      "type": "official",
+      "url": "https://netlify-mcp.netlify.app/mcp"
+    },
+    "free_tier": "free Starter plan; API usage subject to account plan limits",
+    "sdk": [
+      "go",
+      "javascript"
+    ],
+    "openapi": "https://open-api.netlify.com/",
+    "llms_txt": "https://docs.netlify.com/llms.txt",
+    "desc_en": "An agent can create/manage sites, trigger and monitor deploys, and configure DNS, domains, and env vars.",
+    "desc_pl": "Agent może tworzyć i zarządzać witrynami, uruchamiać oraz monitorować wdrożenia i konfigurować DNS, domeny oraz zmienne środowiskowe.",
+    "notes": "Rate limits: 500 req/min general, 3 deploys/min (100/day). Tokens are invalidated on password reset.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "render-api",
+    "name": "Render API",
+    "category": "cloud-hosting",
+    "homepage": "https://render.com/docs/api",
+    "docs": "https://api-docs.render.com/reference/introduction",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <api-key>",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.render.com/mcp"
+    },
+    "free_tier": "free static sites; free web services that spin down after inactivity",
+    "sdk": [],
+    "openapi": "https://api-docs.render.com/openapi/render-public-api-1.json",
+    "llms_txt": "https://api-docs.render.com/llms.txt",
+    "desc_en": "An agent can create and manage Render services, trigger deployments, and configure databases and env vars.",
+    "desc_pl": "Agent może tworzyć i zarządzać usługami Render, uruchamiać wdrożenia oraz konfigurować bazy danych i zmienne środowiskowe.",
+    "notes": "OpenAPI spec endpoint/tag names may change over time even though the API itself stays backward compatible. Render's official MCP server supports potentially destructive operations (env var changes, triggering deploys).",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "tencent-edgeone-pages",
+    "name": "Tencent EdgeOne Pages (Makers)",
+    "category": "cloud-hosting",
+    "homepage": "https://pages.edgeone.ai",
+    "docs": "https://pages.edgeone.ai/document/mcp",
+    "auth": "api_key",
+    "auth_hint": "API token created in the EdgeOne Makers console (API Token tab), passed to the MCP server or CLI as EDGEONE_PAGES_API_TOKEN; the hosted HTML-sharing MCP needs no token",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp-on-edge.edgeone.app/mcp-server"
+    },
+    "free_tier": "Free plan (stated as permanent): 40 projects, 500 builds/month, 3M Edge Function and 1M Cloud Function invocations/month, 5 GB storage, 1 GB KV, 1 GB Blob.",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": "https://pages.edgeone.ai/llms.txt",
+    "desc_en": "Lets an agent deploy HTML pages, static sites and full-stack apps with edge functions to EdgeOne and get back a public URL.",
+    "desc_pl": "Pozwala agentowi wdrażać strony HTML, strony statyczne i aplikacje full-stack z funkcjami brzegowymi na EdgeOne i otrzymać publiczny adres URL.",
+    "notes": "Renamed EdgeOne Makers. No public REST API: use the MCP server (@edgeone/makers-mcp) or EdgeOne CLI. The remote endpoint's no-login tool deploys a single HTML page; projects need the token.",
+    "verified": "2026-09-24"
+  },
+  {
     "id": "vercel-api",
     "name": "Vercel API",
-    "category": "developer-devops",
+    "category": "cloud-hosting",
     "homepage": "https://vercel.com/docs/rest-api",
     "docs": "https://vercel.com/docs/rest-api",
     "auth": "api_key+oauth2",
@@ -3864,6 +4040,30 @@
     "desc_en": "An agent can create deployments, manage projects/domains/env vars, and query analytics and logs.",
     "desc_pl": "Agent może tworzyć wdrożenia, zarządzać projektami, domenami i zmiennymi środowiskowymi oraz odpytywać analitykę i logi.",
     "notes": "Vercel MCP (Beta) is remote/OAuth-based; write actions like deployments or purchases require explicit OAuth consent.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "agentset",
+    "name": "Agentset RAG API",
+    "category": "databases-vector-memory",
+    "homepage": "https://agentset.ai/",
+    "docs": "https://docs.agentset.ai/api-reference/introduction",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <API_KEY>",
+    "mcp": {
+      "type": "official",
+      "url": "https://docs.agentset.ai/production/mcp-server"
+    },
+    "free_tier": "Free plan (forever): 1,000 pages ingested and 10,000 retrievals per month, 60 requests/min per namespace",
+    "sdk": [
+      "javascript",
+      "python"
+    ],
+    "openapi": "https://spec.speakeasy.com/agentset-ktc/api/agentset-api-with-code-samples",
+    "llms_txt": "https://docs.agentset.ai/llms.txt",
+    "desc_en": "Lets an agent ingest documents into managed RAG namespaces and run semantic search or cited question answering over them.",
+    "desc_pl": "Pozwala agentowi wgrywać dokumenty do zarządzanych przestrzeni RAG i wykonywać na nich wyszukiwanie semantyczne lub odpowiadać na pytania z cytowaniem źródeł.",
+    "notes": "MCP server is local (stdio, npx @agentset/mcp) and needs AGENTSET_API_KEY plus a namespace ID. Open-source, self-hostable.",
     "verified": "2026-09-24"
   },
   {
@@ -4193,6 +4393,54 @@
     "verified": "2026-09-24"
   },
   {
+    "id": "tidb-cloud",
+    "name": "TiDB Cloud API (Starter)",
+    "category": "databases-vector-memory",
+    "homepage": "https://www.pingcap.com/tidb/cloud/",
+    "docs": "https://docs.pingcap.com/api/tidb-cloud-api-overview/",
+    "auth": "api_key",
+    "auth_hint": "HTTP Digest auth with API public key as username and private key as password (Management API); SQL via MySQL connection string or serverless HTTP driver with cluster user/password",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/pingcap/pytidb"
+    },
+    "free_tier": "Free: up to 5 Starter instances per org, 25 GiB row storage + 25 GiB columnar storage + 250M Request Units per month in total; no credit card",
+    "sdk": [
+      "python",
+      "javascript"
+    ],
+    "openapi": null,
+    "llms_txt": "https://docs.pingcap.com/llms.txt",
+    "desc_en": "Lets an agent create and manage serverless MySQL-compatible TiDB clusters and run SQL, full-text and vector search queries against them.",
+    "desc_pl": "Pozwala agentowi tworzyć serverlessowe klastry TiDB zgodne z MySQL, zarządzać nimi i wykonywać na nich zapytania SQL, pełnotekstowe i wektorowe.",
+    "notes": "Cloud API is in public preview (v1beta1 for Starter/Essential/Dedicated). Official MCP server is local (uvx --from pytidb[mcp] tidb-mcp-server, stdio or SSE) and needs the cluster connection credentials. A 6th instance requires a card and spending limit.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "tinybird",
+    "name": "Tinybird API",
+    "category": "databases-vector-memory",
+    "homepage": "https://www.tinybird.co",
+    "docs": "https://www.tinybird.co/docs/api-reference",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <TINYBIRD_TOKEN> (workspace admin, resource-scoped token or JWT)",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN"
+    },
+    "free_tier": "Free plan: 10 GB storage, 1,000 API requests/day, 0.25 vCPU shared; no credit card",
+    "sdk": [
+      "python",
+      "javascript"
+    ],
+    "openapi": null,
+    "llms_txt": "https://www.tinybird.co/docs/llms.txt",
+    "desc_en": "Lets an agent ingest events into real-time ClickHouse-based data sources, run SQL queries and call published analytics API endpoints.",
+    "desc_pl": "Pozwala agentowi zasilać zdarzeniami źródła danych czasu rzeczywistego oparte na ClickHouse, wykonywać zapytania SQL i wywoływać opublikowane endpointy analityczne.",
+    "notes": "Remote MCP over Streamable HTTP, token passed as query parameter (add &host=... for non-default regions); use mcp-remote for older clients. API host depends on workspace region.",
+    "verified": "2026-09-24"
+  },
+  {
     "id": "turso",
     "name": "Turso",
     "category": "databases-vector-memory",
@@ -4369,6 +4617,34 @@
     "verified": "2026-09-24"
   },
   {
+    "id": "line-messaging-api",
+    "name": "LINE Messaging API",
+    "category": "communication-email-chat",
+    "homepage": "https://developers.line.biz/en/services/messaging-api/",
+    "docs": "https://developers.line.biz/en/reference/messaging-api/",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <CHANNEL_ACCESS_TOKEN> (issued for the Messaging API channel in LINE Developers Console)",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/line/line-bot-mcp-server"
+    },
+    "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited and never counted. Free quotas vary by region",
+    "sdk": [
+      "java",
+      "php",
+      "go",
+      "ruby",
+      "python",
+      "javascript"
+    ],
+    "openapi": "https://raw.githubusercontent.com/line/line-openapi/main/messaging-api.yml",
+    "llms_txt": "https://developers.line.biz/llms.txt",
+    "desc_en": "Lets an agent send and reply to messages, rich messages and broadcasts to users of a LINE Official Account and read user profiles.",
+    "desc_pl": "Pozwala agentowi wysyłać wiadomości, odpowiedzi, wiadomości rozszerzone i broadcasty do użytkowników konta LINE Official Account oraz odczytywać profile użytkowników.",
+    "notes": "Requires a LINE Official Account and a Messaging API channel. MCP server is local (stdio, npx @line/line-bot-mcp-server) with channel token and user ID env vars.",
+    "verified": "2026-09-24"
+  },
+  {
     "id": "mailgun",
     "name": "Mailgun",
     "category": "communication-email-chat",
@@ -4395,6 +4671,27 @@
     "desc_en": "Send and validate transactional email via REST API and SMTP relay with webhooks.",
     "desc_pl": "Wysyłaj i waliduj e-maile transakcyjne przez REST API oraz SMTP relay z obsługą webhooków.",
     "notes": "Free plan limited to 1 sending domain and 1-day log retention.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "ntfy",
+    "name": "ntfy.sh Push Notifications API",
+    "category": "communication-email-chat",
+    "homepage": "https://ntfy.sh",
+    "docs": "https://docs.ntfy.sh/publish/",
+    "auth": "none",
+    "auth_hint": "No key for public topics: POST the message body to https://ntfy.sh/<topic>. Optional access token for reserved topics: 'Authorization: Bearer tk_<TOKEN>'",
+    "mcp": {
+      "type": "community",
+      "url": "https://github.com/gitmotion/ntfy-me-mcp"
+    },
+    "free_tier": "No key; anonymous publishing to public topics, rate-limited per visitor IP (burst of 60 requests, then 1 request every 5 s, roughly 17,280/day); paid plans from $6/month add reserved topics, higher limits, email and phone-call notifications.",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Lets an agent send push notifications to a user's phone or desktop by publishing a plain HTTP POST to an ntfy topic, and read messages back from it.",
+    "desc_pl": "Pozwala agentowi wysyłać powiadomienia push na telefon lub komputer użytkownika zwykłym żądaniem HTTP POST do tematu ntfy oraz odczytywać z niego wiadomości.",
+    "notes": "Public topic names act as passwords; anyone who knows the name can read or post, so use a hard-to-guess name or a reserved topic. Attachments up to 15 MB. Server is open source and self-hostable with the same API.",
     "verified": "2026-09-24"
   },
   {
@@ -5175,6 +5472,27 @@
     "verified": "2026-09-24"
   },
   {
+    "id": "nocodb-cloud",
+    "name": "NocoDB Cloud API",
+    "category": "productivity-workspace",
+    "homepage": "https://nocodb.com",
+    "docs": "https://nocodb.com/docs/apis-and-mcp",
+    "auth": "api_key+oauth2",
+    "auth_hint": "REST: 'xc-token: <API_TOKEN>' header; MCP: 'x-api-key: <MCP_TOKEN>' header or OAuth sign-in",
+    "mcp": {
+      "type": "official",
+      "url": "https://app.nocodb.com/mcp"
+    },
+    "free_tier": "Free plan: 1,000 records, 1 GB storage, 1,000 API calls/month, 3 editors, 100 automation runs; no credit card",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": "https://nocodb.com/llms.txt",
+    "desc_en": "Lets an agent read, create and update records, tables and views in NocoDB spreadsheet-style databases.",
+    "desc_pl": "Pozwala agentowi odczytywać, tworzyć i aktualizować rekordy, tabele i widoki w arkuszowych bazach danych NocoDB.",
+    "notes": "Free plan API quota is very small (1,000 calls/month). v3 Data API reference at https://data-apis-v3.nocodb.com/ and Meta API at https://meta-apis-v3.nocodb.com/. Remote MCP over Streamable HTTP; tools follow the token owner's base role and plan-gated features.",
+    "verified": "2026-09-24"
+  },
+  {
     "id": "notion-api",
     "name": "Notion API",
     "category": "productivity-workspace",
@@ -5730,6 +6048,63 @@
     "verified": "2026-09-24"
   },
   {
+    "id": "ip2location-io",
+    "name": "IP2Location.io API",
+    "category": "maps-geo-weather",
+    "homepage": "https://www.ip2location.io/",
+    "docs": "https://www.ip2location.io/ip2location-documentation",
+    "auth": "api_key",
+    "auth_hint": "Query parameter ?key=<API_KEY> (optional: keyless lookups allowed at a lower quota)",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/ip2location/mcp-ip2location-io"
+    },
+    "free_tier": "Free plan: 50,000 IP geolocation queries/month, 500 domain WHOIS and 50 hosted-domain queries/month (attribution required); keyless: 1,000 queries/day.",
+    "sdk": [
+      "python",
+      "javascript",
+      "php",
+      "java",
+      "csharp",
+      "go",
+      "ruby"
+    ],
+    "openapi": null,
+    "llms_txt": "https://www.ip2location.io/llms.txt",
+    "desc_en": "Lets an agent geolocate IPv4/IPv6 addresses, get ASN/ISP/proxy data, and look up domain WHOIS records.",
+    "desc_pl": "Pozwala agentowi zlokalizować adresy IPv4/IPv6, pobrać dane ASN, dostawcy i proxy oraz sprawdzić rekordy WHOIS domen.",
+    "notes": "Official MCP server is local (stdio via uv, env IP2LOCATION_API_KEY). Free plan returns basic fields; proxy/usage-type details need paid plans. Endpoint: GET https://api.ip2location.io/?key=...&ip=...",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "iplocate",
+    "name": "IPLocate IP Intelligence API",
+    "category": "maps-geo-weather",
+    "homepage": "https://www.iplocate.io/",
+    "docs": "https://www.iplocate.io/docs",
+    "auth": "api_key",
+    "auth_hint": "Header X-API-Key: <API_KEY> or query parameter ?apikey=<API_KEY>",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/iplocate/mcp-server-iplocate"
+    },
+    "free_tier": "Free plan: 1,000 requests/day forever, all data types (geolocation, VPN/proxy/Tor, ASN, company, abuse contacts), no credit card.",
+    "sdk": [
+      "python",
+      "javascript",
+      "java",
+      "php",
+      "go",
+      "ruby"
+    ],
+    "openapi": null,
+    "llms_txt": "https://www.iplocate.io/llms.txt",
+    "desc_en": "Lets an agent geolocate an IP address and get its ASN, ISP, company, abuse contacts and VPN/proxy/Tor/hosting flags.",
+    "desc_pl": "Pozwala agentowi zlokalizować adres IP i poznać jego ASN, dostawcę, firmę, kontakty abuse oraz flagi VPN/proxy/Tor/hostingu.",
+    "notes": "Official MCP server is local (stdio, reads IPLOCATE_API_KEY). Endpoint: GET https://iplocate.io/api/lookup/{ip}; batch lookup available. Docs link an OpenAPI schema (not directly fetchable).",
+    "verified": "2026-09-24"
+  },
+  {
     "id": "mapbox",
     "name": "Mapbox",
     "category": "maps-geo-weather",
@@ -6025,6 +6400,56 @@
     "verified": "2026-09-24"
   },
   {
+    "id": "coinmarketcap-api",
+    "name": "CoinMarketCap API",
+    "category": "finance-payments",
+    "homepage": "https://coinmarketcap.com/api/",
+    "docs": "https://coinmarketcap.com/api/documentation/v1/",
+    "auth": "api_key",
+    "auth_hint": "Header X-CMC_PRO_API_KEY: <API_KEY> (keyless public API under https://pro-api.coinmarketcap.com/public-api/... needs no key; MCP uses header X-CMC-MCP-API-KEY)",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.coinmarketcap.com/mcp"
+    },
+    "free_tier": "Free Basic plan: 15,000 credits/month, 50 requests/min, 1 API key, commercial use allowed; plus a keyless public API with lower rate limits",
+    "sdk": [
+      "python",
+      "javascript"
+    ],
+    "openapi": null,
+    "llms_txt": "https://coinmarketcap.com/api/documentation/llms.txt",
+    "desc_en": "Lets an agent fetch live and historical cryptocurrency prices, market caps, listings, exchange and DEX data, and indices like Fear & Greed.",
+    "desc_pl": "Pozwala agentowi pobierać bieżące i historyczne ceny kryptowalut, kapitalizację, rankingi, dane giełd i DEX-ów oraz indeksy takie jak Fear & Greed.",
+    "notes": "Basic plan covers core endpoints only (many historical endpoints are paid). Remote MCP over streamable HTTP; also x402 pay-per-request endpoints.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "dexpaprika",
+    "name": "DexPaprika DEX API",
+    "category": "finance-payments",
+    "homepage": "https://dexpaprika.com/",
+    "docs": "https://docs.dexpaprika.com/api-reference/introduction",
+    "auth": "none",
+    "auth_hint": "No key needed on https://api.dexpaprika.com; optional free key sent as the whole header value: Authorization: <API_KEY>",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.dexpaprika.com/streamable-http"
+    },
+    "free_tier": "No key; 30,000 credits per rolling 30 days per IP at 15 requests/min. Free registered key: 100,000 credits/30 days at 30 requests/min, no card",
+    "sdk": [
+      "javascript",
+      "python",
+      "go",
+      "php"
+    ],
+    "openapi": "https://mcp.dexpaprika.com/openapi",
+    "llms_txt": "https://docs.dexpaprika.com/llms.txt",
+    "desc_en": "Lets an agent query on-chain DEX data across 36 blockchains: liquidity pools, swaps, token prices, OHLCV history and live price streams.",
+    "desc_pl": "Pozwala agentowi odpytywać dane on-chain z giełd DEX na 36 blockchainach: pule płynności, swapy, ceny tokenów, historię OHLCV i strumienie cen na żywo.",
+    "notes": "Keyless hosted MCP (also SSE at https://mcp.dexpaprika.com/sse). Batch endpoints cost 1 credit per item; HTTP 402 when the monthly allowance runs out.",
+    "verified": "2026-09-24"
+  },
+  {
     "id": "financial-modeling-prep",
     "name": "Financial Modeling Prep",
     "category": "finance-payments",
@@ -6043,6 +6468,35 @@
     "desc_en": "Fetch company financials, stock prices, and fundamental data via a REST API.",
     "desc_pl": "Pobieraj dane finansowe spółek, ceny akcji i dane fundamentalne przez REST API.",
     "notes": "Many endpoints (full financial statements, etc.) require a paid plan.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "mercado-pago-api",
+    "name": "Mercado Pago API",
+    "category": "finance-payments",
+    "homepage": "https://www.mercadopago.com/developers",
+    "docs": "https://www.mercadopago.com/developers/en/reference",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Authorization: Bearer <ACCESS_TOKEN> (test or production access token from Your integrations; OAuth for acting on behalf of sellers)",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.mercadopago.com/mcp"
+    },
+    "free_tier": "Free to integrate: no API or monthly fees, only per-transaction commissions; free test credentials and test users for sandbox payments",
+    "sdk": [
+      "javascript",
+      "python",
+      "java",
+      "php",
+      "ruby",
+      "dotnet",
+      "go"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Lets an agent create checkout preferences, payments, refunds and subscriptions and look up transactions in Latin America's Mercado Pago.",
+    "desc_pl": "Pozwala agentowi tworzyć preferencje checkoutu, płatności, zwroty i subskrypcje oraz sprawdzać transakcje w latynoamerykańskim Mercado Pago.",
+    "notes": "Available in Latin American countries (AR, BR, MX, CL, CO, PE, UY); live payments need a verified Mercado Pago account. Remote MCP uses OAuth and focuses on docs search, app/credential management, webhooks, test users and integration quality.",
     "verified": "2026-09-24"
   },
   {
@@ -6317,6 +6771,27 @@
     "verified": "2026-09-24"
   },
   {
+    "id": "mercado-libre-api",
+    "name": "Mercado Libre API",
+    "category": "ecommerce",
+    "homepage": "https://developers.mercadolibre.com.ar/",
+    "docs": "https://developers.mercadolibre.com.ar/en_us/api-docs",
+    "auth": "oauth2",
+    "auth_hint": "Authorization: Bearer <ACCESS_TOKEN> obtained via OAuth 2.0 with the app's Client ID and Secret from DevCenter",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.mercadolibre.com/devsite/v1/mcp"
+    },
+    "free_tier": "Free API access for any Mercado Libre account that creates an app in DevCenter; only normal marketplace selling fees apply",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Lets an agent search items and categories and manage a seller's listings, orders, questions, shipments and promotions on the Mercado Libre marketplace.",
+    "desc_pl": "Pozwala agentowi wyszukiwać produkty i kategorie oraz zarządzać ofertami, zamówieniami, pytaniami, wysyłkami i promocjami sprzedawcy w serwisie Mercado Libre.",
+    "notes": "In AR, MX, BR and CL the account holder's details must be validated before creating an app; redirect URI must be HTTPS; rate limited (HTTP 429). Official MCP (OAuth, streamable HTTP) only searches and reads developer documentation.",
+    "verified": "2026-09-24"
+  },
+  {
     "id": "printful-api",
     "name": "Printful API",
     "category": "ecommerce",
@@ -6496,6 +6971,30 @@
     "desc_en": "Fire a webhook event to trigger pre-configured Applets that act in connected consumer apps (Pro plan required).",
     "desc_pl": "Wysyła zdarzenie webhook, które uruchamia wcześniej skonfigurowane Aplety działające w połączonych aplikacjach konsumenckich (wymaga planu Pro).",
     "notes": "Weaker fit than other entries: an agent can only fire events for Applets a human already built in the IFTTT UI (no dynamic/generic action catalog like Zapier), free plan excludes Webhooks entirely, and the Platform/Connect API is aimed at building new IFTTT services, not calling existing consumer integrations.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "keboola",
+    "name": "Keboola Storage API",
+    "category": "automation-integration",
+    "homepage": "https://www.keboola.com",
+    "docs": "https://keboola.docs.apiary.io/",
+    "auth": "api_key+oauth2",
+    "auth_hint": "X-StorageApi-Token: <STORAGE_API_TOKEN>; remote MCP uses OAuth sign-in",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.keboola.com/mcp"
+    },
+    "free_tier": "Free plan: 1 project, 120 compute minutes in the first month then 60 minutes/month, extra-small Snowflake backend; no credit card",
+    "sdk": [
+      "python",
+      "php"
+    ],
+    "openapi": null,
+    "llms_txt": "https://help.keboola.com/llms.txt",
+    "desc_en": "Lets an agent load and query tables, create SQL and Python transformations, and trigger data pipeline jobs in a Keboola project.",
+    "desc_pl": "Pozwala agentowi ładować i odpytywać tabele, tworzyć transformacje SQL i Python oraz uruchamiać zadania potoków danych w projekcie Keboola.",
+    "notes": "Remote MCP URL is region-specific (https://mcp.<region>.keboola.com/mcp, e.g. mcp.eu-central-1.keboola.com); a local server is available from github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months. Developer docs: https://developers.keboola.com/.",
     "verified": "2026-09-24"
   },
   {
@@ -6750,6 +7249,30 @@
     "desc_en": "Call chat, embed, rerank and classify endpoints for text generation, semantic search and RAG.",
     "desc_pl": "Wywołuj endpointy czatu, embeddingów, rerankingu i klasyfikacji do generowania tekstu, wyszukiwania semantycznego i RAG.",
     "notes": "Official MCP server only searches documentation. Trial keys are not for production use. v2 API is current; v1 is legacy.",
+    "verified": "2026-09-24"
+  },
+  {
+    "id": "comet-opik",
+    "name": "Comet Opik Cloud API",
+    "category": "model-inference",
+    "homepage": "https://www.comet.com/site/products/opik/",
+    "docs": "https://www.comet.com/docs/opik/reference/rest-api/overview",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Headers 'authorization: <OPIK_API_KEY>' (no Bearer prefix) and 'Comet-Workspace: <WORKSPACE>'; remote MCP uses browser sign-in",
+    "mcp": {
+      "type": "official",
+      "url": "https://www.comet.com/opik/api/v1/mcp"
+    },
+    "free_tier": "Free cloud plan: 25k spans/month, 60-day data retention, up to 10 team members",
+    "sdk": [
+      "python",
+      "javascript"
+    ],
+    "openapi": null,
+    "llms_txt": "https://www.comet.com/docs/opik/llms.txt",
+    "desc_en": "Lets an agent log and read LLM traces and spans, score them with evaluations and manage datasets and prompts in Opik.",
+    "desc_pl": "Pozwala agentowi zapisywać i odczytywać ślady oraz spany wywołań LLM, oceniać je ewaluacjami i zarządzać zbiorami danych oraz promptami w Opik.",
+    "notes": "REST base https://www.comet.com/opik/api/v1/private/. Remote MCP needs OAuth browser sign-in; local: uvx opik mcp configure.",
     "verified": "2026-09-24"
   },
   {

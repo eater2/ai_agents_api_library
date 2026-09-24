@@ -157,6 +157,29 @@
    }
   },
   {
+   "id": "mercado-libre-api",
+   "name": "Mercado Libre API",
+   "homepage": "https://developers.mercadolibre.com.ar/",
+   "docs": "https://developers.mercadolibre.com.ar/en_us/api-docs",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <ACCESS_TOKEN> obtained via OAuth 2.0 with the app's Client ID and Secret from DevCenter",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.mercadolibre.com/devsite/v1/mcp"
+   },
+   "free_tier": "Free API access for any Mercado Libre account that creates an app in DevCenter; only normal marketplace selling fees apply",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Lets an agent search items and categories and manage a seller's listings, orders, questions, shipments and promotions on the Mercado Libre marketplace.",
+   "notes": "In AR, MX, BR and CL the account holder's details must be validated before creating an app; redirect URI must be HTTPS; rate limited (HTTP 429). Official MCP (OAuth, streamable HTTP) only searches and reads developer documentation.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "stale": false
+  },
+  {
    "id": "printful-api",
    "name": "Printful API",
    "homepage": "https://developers.printful.com",
