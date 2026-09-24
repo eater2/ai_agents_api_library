@@ -215,8 +215,7 @@
    },
    "operations": [
     "text-to-speech",
-    "speech-to-text",
-    "translation"
+    "speech-to-text"
    ],
    "no_auth": false,
    "has_free_tier": true,
@@ -584,8 +583,7 @@
    "verified": "2026-09-24",
    "operations": [
     "text-to-speech",
-    "voice-cloning",
-    "translation"
+    "voice-cloning"
    ],
    "no_auth": false,
    "has_free_tier": false,
@@ -635,8 +633,7 @@
    "verified": "2026-09-24",
    "operations": [
     "text-to-speech",
-    "speech-to-text",
-    "translation"
+    "speech-to-text"
    ],
    "no_auth": false,
    "has_free_tier": false,
