@@ -63,6 +63,18 @@ The catalog is also an MCP server with three tools: `search_apis` (filters: `que
 
 Claude Code: `claude mcp add ai-agents-api-library -- npx -y github:eater2/ai_agents_api_library`
 
+### Claude skill and plugin
+
+The skill tells Claude when to reach for the catalog and how to pick a service. The plugin bundles the skill with the MCP server:
+
+- **Claude Code plugin** (skill + MCP server):
+  ```
+  /plugin marketplace add eater2/ai_agents_api_library
+  /plugin install ai-agents-api-library@eater2
+  ```
+- **Skill only, Claude Code:** copy [`skills/ai-agents-api-library/`](skills/ai-agents-api-library/SKILL.md) to `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).
+- **Skill only, claude.ai / Claude Desktop:** download [the skill zip](https://eater2.github.io/ai_agents_api_library/ai-agents-api-library-skill.zip) and upload it under Settings → Capabilities → Skills.
+
 ## Inclusion criteria
 
 - The service exposes a **public, self-serve** programmatic interface (REST, GraphQL, SDK) **or** an MCP server.
