@@ -1,0 +1,59 @@
+name: Release
+
+# On a version tag (v0.2.0 ...): publish a GitHub release with the agent-facing files and the npm
+# tarball, plus SLSA build provenance signed through Sigstore. Verify a download with:
+#   gh attestation verify <file> --repo eater2/ai_agents_api_library
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to release, e.g. v0.2.0"
+        required: true
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generated files match the sources
+        run: |
+          python scripts/build.py
+          git diff --exit-code -- . ':!data/link-status.json'
+
+      - name: Collect release files
+        run: |
+          npm pack --pack-destination dist
+          cp catalog/all.json dist/catalog.json
+          cp llms.txt llms-full.txt SHA256SUMS docs/ai-agents-api-library-skill.zip dist/
+          (cd dist && sha256sum * > RELEASE-SHA256SUMS)
+          ls -l dist
+
+      - name: Sign build provenance (Sigstore)
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: dist/*
+
+      - name: Publish release
+        run: |
+          gh release view "$TAG" >/dev/null 2>&1 && gh release upload "$TAG" dist/* --clobber \
+            || gh release create "$TAG" dist/* --title "$TAG" --generate-notes \
+                 --notes "Verify any file: \`gh attestation verify <file> --repo ${{ github.repository }}\`"

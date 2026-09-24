@@ -26,6 +26,13 @@ export default async function handler(req, res) {
     });
   }
 
+  // One log line per call for usage stats (Vercel runtime logs). Tool name and category only, never the query text.
+  for (const msg of [].concat(req.body || [])) {
+    if (msg?.method) {
+      console.log(JSON.stringify({ evt: "mcp", method: msg.method, tool: msg.params?.name, category: msg.params?.arguments?.category }));
+    }
+  }
+
   await ensureLoaded();
   const server = createServer();
   const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined, enableJsonResponse: true });

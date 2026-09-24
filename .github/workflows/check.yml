@@ -53,6 +53,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/fetch_ratings.py --reviews 0
 
+      - name: Usage snapshot (data/stats.json)
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/stats.py
+
       - name: Rebuild with fresh link status
         run: python scripts/build.py
 
