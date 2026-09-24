@@ -40,7 +40,7 @@
     "openapi": "https://exa.ai/docs/exa-spec.yaml",
     "llms_txt": "https://exa.ai/docs/llms.txt",
     "desc_en": "Lets an agent run neural or keyword web search, retrieve page contents, and find similar links via Exa's API.",
-    "desc_pl": "Pozwala agentowi wykonywać neuronowe lub słowo-kluczowe wyszukiwanie w sieci, pobierać treść stron i znajdować podobne linki przez API Exa.",
+    "desc_pl": "Wyszukiwanie w sieci (neuronowe lub po słowach kluczowych), pobieranie treści stron i znajdowanie podobnych linków przez API Exa.",
     "notes": "Remote MCP endpoint requires no API key to start; self-hosted npm package (exa-mcp-server) also available.",
     "verified": "2026-09-24"
   },
