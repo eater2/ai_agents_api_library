@@ -54,7 +54,9 @@ test("task 2: geocoding 200 street addresses", { skip }, async () => {
 test("task 3: SMS reminder", { skip }, async () => {
   const res = await search({ query: "send an SMS reminder" });
   const top3 = names(res, 3);
-  assert.ok(has(top3, /twilio/i) || has(top3, /vonage/i), `expected Twilio or Vonage in top 3: ${top3}`);
+  // Any dedicated SMS provider counts; the catalog has several since the product test.
+  const smsProviders = /twilio|vonage|plivo|sinch|telnyx|aws end user messaging|bird/i;
+  assert.ok(top3.every((n) => smsProviders.test(n)), `expected only SMS providers in top 3: ${top3}`);
   const top5 = names(res, 5);
   assert.ok(!has(top5, /line messaging|discord|whatsapp/i), `chat apps in SMS results: ${top5}`);
 });
