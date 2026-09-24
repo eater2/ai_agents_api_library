@@ -13,8 +13,8 @@
    "auth": "oauth2",
    "auth_hint": "OAuth2 Server-to-Server (Client ID/Secret via Adobe IMS); Authorization: Bearer <token>, token valid 24h",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "community",
+    "url": "https://github.com/Focus-GTS/firefly-services-mcp",
     "maintainer": "community",
     "repo": "https://github.com/Focus-GTS/firefly-services-mcp",
     "tools": [
@@ -207,12 +207,12 @@
    "id": "freepik-api",
    "name": "Freepik API",
    "homepage": "https://www.freepik.com/api",
-   "docs": "https://docs.freepik.com",
+   "docs": "https://docs.magnific.com",
    "auth": "api_key",
-   "auth_hint": "x-freepik-api-key header (migrating to x-magnific-api-key under Magnific rebrand)",
+   "auth_hint": "x-magnific-api-key header (legacy x-freepik-api-key); base URL https://api.magnific.com/v1",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.magnific.com",
     "maintainer": "vendor",
     "remote_url": "https://mcp.magnific.com",
     "tools": [
@@ -229,8 +229,8 @@
     "covers_full_api": false,
     "source_url": "https://docs.magnific.com/modelcontextprotocol",
     "checked_at": "2026-09-24",
-    "domain_verified": false,
-    "kind": "official",
+    "domain_verified": true,
+    "kind": "vendor-hosted",
     "config": {
      "transport": "streamable-http",
      "url": "https://mcp.magnific.com",
@@ -242,7 +242,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate and edit images programmatically via REST API, plus access Freepik's stock asset library.",
-   "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com.",
+   "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com. The official remote MCP uses OAuth sign-in, no API key.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "apiKey",
@@ -299,7 +299,7 @@
     "kind": "official",
     "config": null
    },
-   "free_tier": "check pricing (free API key tier exists but image models are mostly usage-billed)",
+   "free_tier": "Paid only: pricing page lists Free Tier 'Not available' for all Gemini image models (Nano Banana family); usage-billed",
    "sdk": [
     "python",
     "typescript",
@@ -309,7 +309,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate and multi-turn edit images from text via REST (Nano Banana/Imagen models), up to 4K with reference-image support.",
-   "notes": "Also available via Vertex AI for enterprise/cloud_iam auth as an alternative.",
+   "notes": "Also available via Vertex AI for enterprise/cloud_iam auth as an alternative. Google's experimental mcp-genmedia servers (not officially supported) use Vertex AI ADC auth, not Gemini API keys.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "none",
@@ -388,12 +388,12 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "no free API credits (web app has 10 slow credits/week); API is pay-per-image, $40 min top-up",
+   "free_tier": "Paid only: no free API credits (web app has 10 slow credits/week); API is pay-per-image from prepaid credit (min one-time purchase $1, min auto top-up target $10)",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate, edit, remix, upscale, and describe images via REST or an official OAuth MCP server, strong at in-image text.",
-   "notes": "API billing is separate from Ideogram web subscriptions; requires payment method for API access.",
+   "notes": "API billing is separate from Ideogram web subscriptions; requires payment method for API access. The official MCP uses OAuth and draws from the Ideogram web subscription, not API credits.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "none",
@@ -467,12 +467,12 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "$5 free API credits after account verification, then pay-as-you-go",
+   "free_tier": "Paid only: Pay-As-You-Go API credit (USD balance) via manual or auto top-ups; API access is separate from free/web app plans",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate images and videos from text via REST or the official MCP server, with model selection and job status polling.",
-   "notes": "Requires a verified account with a payment method to receive API credits.",
+   "notes": "API credit is bought separately from web app subscriptions. The official MCP (https://mcp.leonardo.ai/v1/mcp) authenticates with an 'API-Key' header, not OAuth.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "http",
@@ -498,7 +498,7 @@
    ],
    "no_auth": false,
    "has_free_tier": false,
-   "has_trial": true,
+   "has_trial": false,
    "no_card": false,
    "stale": false,
    "link_check": {
@@ -520,8 +520,8 @@
   {
    "id": "openai-images-api-gpt-image",
    "name": "OpenAI Images API (gpt-image)",
-   "homepage": "https://platform.openai.com/docs/guides/image-generation",
-   "docs": "https://platform.openai.com/docs/guides/image-generation",
+   "homepage": "https://developers.openai.com/api/docs/guides/image-generation",
+   "docs": "https://developers.openai.com/api/docs/guides/image-generation",
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <OPENAI_API_KEY>",
    "mcp": {
@@ -564,7 +564,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate, edit, and iteratively refine images from text prompts via REST, with mask-based inpainting and streaming previews.",
-   "notes": "Requires an OpenAI API account with billing enabled; part of the Images API / Responses API.",
+   "notes": "Requires an OpenAI API account with billing enabled; part of the Images API / Responses API. Current models: gpt-image-2.5-sunburst and gpt-image-2.5-flare; API Organization Verification may be required.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "http",
@@ -632,7 +632,7 @@
    "auth_hint": "Authorization: Bearer RECRAFT_API_TOKEN",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/recraft-ai/mcp-recraft-server",
+    "url": "https://mcp.recraft.ai/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.recraft.ai/mcp",
     "repo": "https://github.com/recraft-ai/mcp-recraft-server",
@@ -667,7 +667,7 @@
    "openapi": "https://external.api.recraft.ai/doc/#/",
    "llms_txt": "https://www.recraft.ai/docs/llms.txt",
    "desc_en": "Generate, edit, upscale, and vectorize images via REST API using Recraft's proprietary models.",
-   "notes": "REST API, OpenAI-Python-library compatible for some endpoints (not all params supported); official MCP server on GitHub.",
+   "notes": "REST API, OpenAI-Python-library compatible for some endpoints (not all params supported). Official MCP: hosted at https://mcp.recraft.ai/mcp (OAuth 2.0, bills subscription credits) and a local server on GitHub (recraft-ai/mcp-recraft-server).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "none",
@@ -742,7 +742,7 @@
     "kind": "none",
     "config": null
    },
-   "free_tier": "free: 50 API calls/month (preview/small resolution only), then paid credits",
+   "free_tier": "Free: first 50 API calls per month, then paid credits",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
@@ -796,10 +796,25 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <STABILITY_API_KEY>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "community",
+    "url": "https://github.com/tadasant/mcp-server-stability-ai",
     "maintainer": "community",
     "repo": "https://github.com/tadasant/mcp-server-stability-ai",
+    "tools": [
+     "generate-image",
+     "generate-image-sd35",
+     "remove-background",
+     "outpaint",
+     "search-and-replace",
+     "upscale-fast",
+     "upscale-creative",
+     "control-sketch",
+     "control-style",
+     "control-structure",
+     "replace-background-and-relight",
+     "search-and-recolor"
+    ],
+    "covers_full_api": false,
     "source_url": "https://github.com/tadasant/mcp-server-stability-ai",
     "checked_at": "2026-09-24",
     "domain_verified": null,

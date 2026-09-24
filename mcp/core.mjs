@@ -55,7 +55,12 @@ const SYNONYMS = {
 const groups = (terms) => [...new Set(terms)].map((t) => [...new Set([t, ...(SYNONYMS[t] || [])].map(stem))]);
 
 // Crude English stemming so "geocoding" matches "geocode", "videos" matches "video".
-const stem = (w) => (w.length > 4 ? w.replace(/(ments?|ings?|ers?|ed|es|s|e)$/, "") : w);
+// Light stemming so verb and noun forms meet: translate/translation -> translat, geocode/geocoding -> geocod,
+// transcribe/transcription -> transcrib.
+const stem = (w) => (w.length > 4
+  ? w.replace(/scriptions?$/, "scrib").replace(/izations?$/, "iz").replace(/ations?$/, "at")
+    .replace(/(ments?|ings?|ers?|ed|es|s|e)$/, "")
+  : w);
 const stems = (s) => new Set(words(s).map(stem));
 
 // Per-entry stem sets plus inverse document frequency, so rare terms ("3d", "sms")
@@ -125,7 +130,8 @@ function score(e, terms) {
 
 // ---- operation fit ------------------------------------------------------------------------
 // Entries carry `operations`, a controlled vocabulary of what the API does ("text-to-video", "sms",
-// "street-geocoding"). An operation fits the query when all its words appear in the query (with synonyms).
+// "street-geocoding"), main one first. An operation fits the query when all its words appear in the query
+// (with synonyms); earlier operations rank slightly higher.
 const OP_FILLER = new Set(["to", "and", "or", "from", "of", "with", "via"]);
 const opTokens = (op) => op.split("-").filter((t) => !OP_FILLER.has(t)).map(stem);
 function queryStems(terms) {
@@ -133,14 +139,55 @@ function queryStems(terms) {
   for (const g of groups(terms)) g.forEach((t) => out.add(t));
   return out;
 }
+// Query phrases that name an operation without its own words ("transcribe" is speech-to-text).
+const OP_ALIASES = {
+  "speech-to-text": ["transcribe", "transcription", "stt", "dictation", "audio into text"],
+  "text-to-speech": ["tts", "narrate", "narration", "voiceover", "read aloud"],
+  "background-removal": ["remove background", "cut out background"],
+  "street-geocoding": ["geocode"],
+  "image-upscaling": ["upscale"],
+  "email-send": ["send email", "transactional email"],
+  "phone-calls": ["phone call", "voice call", "call phone"],
+  "web-scraping": ["scrape"],
+  "currency-exchange": ["exchange rate", "fx rate"],
+  "weather-forecast": ["weather"],
+  "ip-geolocation": ["geolocate ip", "ip location"],
+  "e-signature": ["esign", "sign document", "signature"],
+  "pdf-processing": ["pdf"],
+  "image-to-image": ["edit image", "restyle image", "transform image", "image variation"],
+};
+const ALIAS_STEMS = Object.fromEntries(Object.entries(OP_ALIASES)
+  .map(([op, phrases]) => [op, phrases.map((p) => words(p).map(stem))]));
+
+// Word positions in the raw query (stop words kept), to tell text-to-speech from speech-to-text.
+function queryOrder(query) {
+  const raw = (query || "").toLowerCase().split(/[^a-z0-9+#]+/).filter(Boolean);
+  const pos = new Map();
+  raw.forEach((w, i) => [w, ...(SYNONYMS[w] || [])].map(stem).forEach((t) => pos.has(t) || pos.set(t, i)));
+  return { pos, from: raw.flatMap((w, i) => (w === "from" ? [i] : [])) };
+}
+// "text to speech" and "speech from text" both read as text-to-speech.
+function forward(op, order) {
+  if (!op.includes("-to-")) return true;
+  const [L, R] = op.split("-to-").map(opTokens);
+  const at = (toks) => Math.min(...toks.map((t) => order.pos.get(t) ?? Infinity));
+  const pl = at(L), pr = at(R);
+  if (!Number.isFinite(pl) || !Number.isFinite(pr) || pl === pr) return true;
+  const fromBetween = order.from.some((i) => i > Math.min(pl, pr) && i < Math.max(pl, pr));
+  return (pl < pr) !== fromBetween;
+}
+
 // Best fraction of an operation's words present in the query: 1 = exact, 0 < x < 1 = adjacent.
-function opFit(e, q) {
-  let best = { frac: 0, op: null };
-  for (const op of e.operations || []) {
+function opFit(e, q, order) {
+  let best = { frac: 0, op: null, pos: 0 };
+  for (const [pos, op] of (e.operations || []).entries()) {
     const toks = opTokens(op);
     if (!toks.length) continue;
-    const frac = toks.filter((t) => q.has(t)).length / toks.length;
-    if (frac > best.frac) best = { frac, op };
+    // "image-to-image" has one distinct word, so "image" alone must not make it exact.
+    let frac = toks.filter((t) => q.has(t)).length / toks.length / (new Set(toks).size < toks.length ? 2 : 1);
+    if ((ALIAS_STEMS[op] || []).some((ph) => ph.every((t) => q.has(t)))) frac = 1;
+    else if (frac === 1 && order && !forward(op, order)) frac = 0.5;
+    if (frac > best.frac) best = { frac, op, pos };
   }
   return best;
 }
@@ -242,6 +289,7 @@ export function createServer() {
     async ({ query, category, mcp, no_auth, free_tier, no_card, auth, volume, limit = 10 }) => {
       const terms = words(query);
       const q = queryStems(terms);
+      const order = queryOrder(query);
       const bulk = bulkIntent(query, volume);
       const filters = { category, mcp, no_auth, free_tier, no_card, auth };
       const passes = (e) => (!category || e.category === category)
@@ -253,7 +301,7 @@ export function createServer() {
         && (!auth || e.auth === auth);
 
       // Score every entry, then decide by operation fit.
-      const all = catalog.map((e) => ({ e, s: score(e, terms), fit: opFit(e, q), warn: bulk ? bulkWarning(e) : null }))
+      const all = catalog.map((e) => ({ e, s: score(e, terms), fit: opFit(e, q, order), warn: bulk ? bulkWarning(e) : null }))
         .filter((h) => h.s > 0 || h.fit.frac > 0);
       const exactAll = all.filter((h) => h.fit.frac === 1);
       // With exact operation matches only those count; otherwise the best partial ones; otherwise topic words.
@@ -261,7 +309,7 @@ export function createServer() {
       const byOperation = pool.length > 0;
       if (!byOperation) pool = all.filter((h) => h.s > 0);
       const ranked = pool.filter((h) => passes(h.e))
-        .map((h) => ({ ...h, rank: (h.s + 1) * (1 + 2 * h.fit.frac) * (h.warn ? 0.2 : 1) }))
+        .map((h) => ({ ...h, rank: (h.s + 1) * (1 + 2 * h.fit.frac) * (1 - 0.1 * Math.min(h.fit.pos, 3)) * (h.warn ? 0.2 : 1) }))
         .sort((a, b) => b.rank - a.rank);
       // Word matches only: judge relevance against the best entry before filters, so a filter that removes
       // every relevant service yields an empty result instead of whatever else matches a word.

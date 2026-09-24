@@ -13,11 +13,15 @@
    "auth": "api_key+oauth2",
    "auth_hint": "API key (token param) or OAuth2 Bearer token",
    "mcp": {
-    "type": "none",
-    "url": null,
-    "domain_verified": null,
-    "kind": "none",
-    "config": null
+    "type": "official",
+    "url": "https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/",
+    "domain_verified": true,
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/",
+     "derived": true
+    }
    },
    "free_tier": "free tier with monthly free credits, then usage-based pricing",
    "sdk": [
@@ -30,7 +34,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Geocode addresses, render maps, run spatial analysis and manage geospatial site data via REST APIs and SDKs.",
-   "notes": "Free sign-up; usage beyond free monthly credits is billed per service call.",
+   "notes": "Free sign-up; usage beyond free monthly credits is billed per service call. MCP support for location services (geocoding, routing, elevation, static maps) is in beta.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",

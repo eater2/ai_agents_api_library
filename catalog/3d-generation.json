@@ -13,25 +13,25 @@
    "auth": "api_key",
    "auth_hint": "API key created from Cube webapp user profile, sent as bearer/header token",
    "mcp": {
-    "type": "community",
-    "url": "https://lobehub.com/mcp/commonsensemachines-blender-mcp",
-    "domain_verified": false,
-    "kind": "community",
+    "type": "none",
+    "url": null,
+    "domain_verified": null,
+    "kind": "none",
     "config": null,
     "issue": "source repo github.com/CommonSenseMachines/blender-mcp returns 404; entry links only a lobehub listing (403)"
    },
-   "free_tier": "limited free tier (watermarked outputs); full API access is bundled with mid-tier ($19.99+/mo) or higher Cube subscriptions",
+   "free_tier": "Unavailable: service appears discontinued",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Create 3D assets and multi-part kits from images via async REST sessions (image-to-3D, retopology).",
-   "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. A Blender/MCP integration exists but its official vendor-maintained status could not be fully confirmed.",
+   "notes": "Service appears discontinued: csm.ai domains do not resolve (checked 2026-09-24).",
    "verified": "2026-09-24",
    "operations": [
     "image-to-3d"
    ],
    "no_auth": false,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "has_trial": false,
    "no_card": false,
    "stale": false,
@@ -46,9 +46,9 @@
    "id": "hyper3d-rodin-api",
    "name": "Hyper3D Rodin API",
    "homepage": "https://hyper3d.ai",
-   "docs": "https://developer.hyper3d.ai/api-specification/overview_reset_v",
+   "docs": "https://docs.hyper3d.ai/",
    "auth": "api_key",
-   "auth_hint": "API key from API dashboard, sent via Authorization header (exact header name in docs)",
+   "auth_hint": "Authorization: Bearer <RODIN_API_KEY>",
    "mcp": {
     "type": "none",
     "url": null,
@@ -56,7 +56,7 @@
     "kind": "none",
     "config": null
    },
-   "free_tier": "10 starter credits on signup (spent only on downloads, not generation); paid credits $1.5 each",
+   "free_tier": "Paid only: API access requires the Business plan ($120/mo, $96/mo billed annually) or Enterprise; direct credits $1.5 each",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
@@ -153,7 +153,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free web plan: 100 credits/mo; API key creation requires a paid plan (Pro $20/mo+)",
+   "free_tier": "Paid only: creating API keys requires a paid plan (Pro $20/mo+); Free accounts get only a built-in test key for the Playground (free web plan 100 credits/mo)",
    "sdk": [],
    "openapi": "https://docs.meshy.ai/openapi.yaml",
    "llms_txt": "https://docs.meshy.ai/llms.txt",
@@ -226,7 +226,7 @@
    "homepage": "https://sketchfab.com/developers",
    "docs": "https://sketchfab.com/developers/data-api/v3",
    "auth": "api_key+oauth2",
-   "auth_hint": "X-API-Key header (personal token) or OAuth2 login; legacy v2 token-in-header also exists but is deprecated",
+   "auth_hint": "Authorization: Token <API_TOKEN> (personal token) or OAuth2 Authorization: Bearer <access_token>; legacy v2 endpoints are deprecated",
    "mcp": {
     "type": "community",
     "url": "https://github.com/gregkop/sketchfab-mcp-server",
@@ -258,7 +258,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free, no key needed for public search; private API token is free with any Sketchfab account",
+   "free_tier": "Free: no key needed for search and model listing (GET /v3/search, /v3/models); downloads (/v3/models/{uid}/download) need a free account token",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
@@ -377,7 +377,7 @@
     "kind": "none",
     "config": null
    },
-   "free_tier": "pay-as-you-go from ~$0.02/generation; some enterprise sign-ups get bundled free credits",
+   "free_tier": "Trial: 200 free credits one-time on first activation (valid 1 year); then postpaid $0.02/credit, Professional generation 25 credits (~$0.50), Express 15",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
@@ -451,12 +451,12 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free/trial credits on signup (amounts and promos change, e.g. ~300 credits/2 weeks); pay-as-you-go at $0.01/credit",
+   "free_tier": "Trial: one-time free credits on first API key (amount varies by signup path, not listed on the pricing page); then pay-as-you-go at $0.01/credit",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate textured 3D meshes from text or images via REST API, with an official MCP server for agents.",
-   "notes": "Maintained by VAST AI Research (Tripo's developer). Exact free-credit amounts vary by promotion; verify in console.",
+   "notes": "MCP server by VAST AI Research (Tripo's developer) is alpha and works only through the Tripo Blender add-on (generate and import into Blender), not as a standalone API wrapper. Free-credit amounts vary; verify in console.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "http",
@@ -481,8 +481,8 @@
     "image-to-3d"
    ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "no_card": false,
    "stale": false,
    "link_check": {

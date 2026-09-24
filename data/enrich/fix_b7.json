@@ -1,0 +1,267 @@
+{
+ "akool-api": {
+  "auth_hint": "x-api-key: <api_key> (recommended); the Client ID/Secret token flow is kept only for backward compatibility",
+  "free_tier": "Paid only for API: API access starts at the Pro Max plan; the Free plan is web-app only with full-screen watermark",
+  "sources": [
+   "https://akool.com/pricing",
+   "https://docs.akool.com/authentication/usage"
+  ]
+ },
+ "amazon-polly-amazon-transcribe-aws": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server"
+  },
+  "free_tier": "Free tier: Polly 5M chars/mo standard (neural 1M, generative 100K chars/mo for first 12 months), Transcribe 60 min/mo (12 months); new AWS accounts since 2025-07-15 get up to $200 Free Tier credits",
+  "notes": "Needs an AWS account and IAM credentials. Voice and feature availability differs by region. Transcribe docs: https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html. The generic AWS API MCP Server (awslabs) runs AWS CLI commands, incl. polly and transcribe.",
+  "sources": [
+   "https://aws.amazon.com/polly/pricing/",
+   "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server"
+  ]
+ },
+ "amazon-translate": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server"
+  },
+  "notes": "Requires an AWS account and IAM credentials; missing from the candidate list despite being a major agent-callable translation API. The generic AWS API MCP Server (awslabs) can call Translate via AWS CLI commands.",
+  "sources": [
+   "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server"
+  ]
+ },
+ "assemblyai-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://assemblyai.com/docs/mcp"
+  },
+  "free_tier": "Trial: $50 one-time credit on signup (does not expire), no card required",
+  "sources": [
+   "https://www.assemblyai.com/docs/coding-agent-prompts",
+   "https://www.assemblyai.com/docs/billing-and-pricing"
+  ]
+ },
+ "azure-ai-speech": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/microsoft/mcp"
+  },
+  "free_tier": "Free tier (F0): 5 audio hrs/mo STT, 0.5M chars/mo neural TTS; batch transcription not available on F0",
+  "notes": "Now branded 'Azure Speech in Foundry Tools'. Needs an Azure Speech resource, and endpoints are per region. Speech tools (speech stt recognize, speech tts synthesize) ship in the Azure MCP Server.",
+  "sources": [
+   "https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/tools/ai-services-speech",
+   "https://github.com/microsoft/azure-speech-mcp-server",
+   "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits"
+  ]
+ },
+ "cartesia-api": {
+  "free_tier": "Free tier: 20,000 credits/mo; no commercial-use license and no voice cloning",
+  "sources": [
+   "https://cartesia.ai/pricing"
+  ]
+ },
+ "creatomate-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.creatomate.com/mcp"
+  },
+  "free_tier": "Trial: 50 API credits one-time, no card required; free plan output is clamped to max 480 px per dimension",
+  "notes": "Per-project API keys; ~14 credits per minute of 720p video. The hosted MCP accepts OAuth or a Bearer project API key.",
+  "sources": [
+   "https://creatomate.com/llms/template-access.md",
+   "https://creatomate.com/llms/credits.md",
+   "https://creatomate.com/pricing"
+  ]
+ },
+ "deepgram-api": {
+  "free_tier": "Trial: $200 one-time credit on signup, no card required",
+  "notes": "The official MCP also runs locally via the Deepgram CLI ('dg mcp', stdio or SSE) and proxies developer API tools. https://developers.deepgram.com/_mcp/server only searches the documentation.",
+  "sources": [
+   "https://developers.deepgram.com/developer-tools/cli/mcp-server.md",
+   "https://github.com/deepgram/mcp",
+   "https://deepgram.com/pricing"
+  ]
+ },
+ "deepl-api": {
+  "free_tier": "Paid only for new signups: API Free plan retired mid-2026; API plans are Developer (from EUR 4.99/mo, 'test out the API for free'), Growth and Enterprise API; legacy Free keys (suffix :fx) use https://api-free.deepl.com",
+  "sources": [
+   "https://www.deepl.com/en/pro-api",
+   "https://developers.deepl.com/docs/getting-started/auth.md"
+  ]
+ },
+ "elevenlabs-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://api.elevenlabs.io/v1/mcp"
+  },
+  "free_tier": "Free: limited monthly credits; non-commercial use with attribution only, no voice cloning",
+  "notes": "The local elevenlabs-mcp repo was archived on 2026-08-20. The official hosted MCP (OAuth) manages agents and generates speech.",
+  "sources": [
+   "https://github.com/elevenlabs/elevenlabs-mcp",
+   "https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp.md",
+   "https://elevenlabs.io/docs/overview/administration/billing.md"
+  ]
+ },
+ "google-cloud-text-to-speech-speech-to-text": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/GoogleCloudPlatform/genmedia-creative-studio/tree/main/experiments/mcp-genmedia"
+  },
+  "free_tier": "Free tier: TTS 4M chars/mo Standard and WaveNet, 1M chars/mo Neural2, Chirp 3 HD and Studio; STT 60 min/mo",
+  "notes": "Requires a GCP project with billing enabled. Speech-to-Text docs are separate: https://cloud.google.com/speech-to-text/docs. Experimental vendor MCP mcp-chirp3-go (Genmedia) covers Chirp 3 HD TTS only.",
+  "sources": [
+   "https://cloud.google.com/text-to-speech/pricing",
+   "https://github.com/GoogleCloudPlatform/genmedia-creative-studio/blob/main/experiments/mcp-genmedia/mcp-genmedia-go/README.md"
+  ]
+ },
+ "google-veo-gemini-api-vertex-ai": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/GoogleCloudPlatform/genmedia-creative-studio/tree/main/experiments/mcp-genmedia"
+  },
+  "notes": "Same underlying model reachable via two auth paths: Gemini API (simple api_key, good for agents) or Vertex AI (cloud_iam, enterprise/region control). Experimental vendor MCP mcp-veo-go (Genmedia) uses Vertex AI via ADC.",
+  "sources": [
+   "https://github.com/GoogleCloudPlatform/genmedia-creative-studio/blob/main/experiments/mcp-genmedia/mcp-genmedia-go/README.md"
+  ]
+ },
+ "hume-ai-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://dev.hume.ai/docs/integrations/mcp"
+  },
+  "free_tier": "Free tier: 10,000 TTS chars/mo + 5 EVI min/mo; new accounts also get $20 in credits",
+  "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans. The Octave TTS MCP runs locally (npx @humeai/mcp-server); https://dev.hume.ai/_mcp/server only searches the documentation.",
+  "sources": [
+   "https://dev.hume.ai/docs/integrations/mcp.md",
+   "https://www.hume.ai/pricing",
+   "https://dev.hume.ai/docs/resources/billing.md"
+  ]
+ },
+ "klap-api": {
+  "free_tier": "Paid only; usage-based, billed monthly per operation (Generate Short $0.32, Video Input $0.44, Export $0.48); no free API credits stated",
+  "sources": [
+   "https://docs.klap.app/pricing"
+  ]
+ },
+ "kling-ai-api": {
+  "docs": "https://kling.ai/document-api/",
+  "auth_hint": "Authorization: Bearer <API_KEY> (API key from the Kling console); legacy-design endpoints use a JWT (HS256, 30 min) signed from an Access Key/Secret Key pair",
+  "free_tier": "Paid only; prepaid credit packages from $0.14/unit, e.g. 5,000 units/$700, 180-day validity; a Trial Resource Package for integration testing is offered",
+  "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API.",
+  "notes": "Current API uses a console-issued API key as Bearer token; the Access/Secret key JWT applies only to legacy-design endpoints. API domain: https://api-singapore.klingai.com.",
+  "sources": [
+   "https://kling.ai/document-api/api/get-started/authentication.md",
+   "https://kling.ai/document-api/guides/get-started/quick-start.md",
+   "https://kling.ai/document-api/"
+  ]
+ },
+ "languagetool-api": {
+  "auth_hint": "username + apiKey form-data params on https://api.languagetoolplus.com/v2 (Premium); anonymous on the free public endpoint https://api.languagetool.org/v2",
+  "free_tier": "Free: no key needed on public endpoint (rate-limited: 20 req/min, 75KB text/min per IP, 20KB per request)",
+  "sources": [
+   "https://dev.languagetool.org/public-http-api",
+   "https://languagetool.org/http-api/languagetool-swagger.json"
+  ]
+ },
+ "luma-ai-dream-machine-api": {
+  "free_tier": "Paid only; pay-as-you-go, Ray 3.2 from $0.15 (540p) to $1.20 (1080p) per 5s text/image-to-video clip, $5,000/mo cap on default Build tier",
+  "sources": [
+   "https://lumalabs.ai/api/pricing"
+  ]
+ },
+ "modernmt-api": {
+  "notes": "ModernMT is evolving into Lara (Lara Translate) and will sunset by the end of 2026; plan migration to the Lara API (developers.laratranslate.com).",
+  "sources": [
+   "https://www.modernmt.com/api/"
+  ]
+ },
+ "murf-ai-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://github.com/murf-ai/murf-mcp"
+  },
+  "auth_hint": "api-key: <key> request header (base URL https://api.murf.ai/v1)",
+  "free_tier": "Trial: 100,000 characters one-time on the free API plan, no time limit",
+  "sources": [
+   "https://murf.ai/api/docs/integrations/mcp-server.md",
+   "https://murf.ai/api/docs/resources/faq.md",
+   "https://murf.ai/api/docs/api-reference/text-to-speech/generate.md"
+  ]
+ },
+ "openai-audio-api-tts-transcription": {
+  "docs": "https://developers.openai.com/api/docs/guides/text-to-speech",
+  "notes": "Whisper transcription costs about $0.006/min. TTS is billed per character or per token, depending on the model. Speech-to-text guide: https://developers.openai.com/api/docs/guides/speech-to-text.",
+  "sources": [
+   "https://developers.openai.com/api/docs/guides/text-to-speech",
+   "https://developers.openai.com/api/docs/guides/speech-to-text"
+  ]
+ },
+ "pixverse-api": {
+  "auth_hint": "API-KEY: <key> header plus a unique Ai-trace-id (UUID) header per request",
+  "free_tier": "Paid only; prepaid credits from $10, $1 = 5 videos (v6, 720p, 5s, no audio)",
+  "sources": [
+   "https://docs.platform.pixverse.ai/quick-start-796052m0.md",
+   "https://docs.platform.pixverse.ai/pricing-796039m0.md"
+  ]
+ },
+ "resemble-ai-api": {
+  "free_tier": "Paid only; Flex plan is $0/mo base with pay-as-you-go credits, no free usage allowance stated",
+  "notes": "Enterprise plans are available for on-prem deployment and custom model training. The official MCP servers (docs _mcp/server, resemble-ai/resemble-mcp) only search the docs and OpenAPI spec; they do not generate speech.",
+  "sources": [
+   "https://github.com/resemble-ai/resemble-mcp",
+   "https://docs.resemble.ai/_mcp/server",
+   "https://www.resemble.ai/pricing"
+  ]
+ },
+ "rev-ai-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://docs.rev.ai/mcp"
+  },
+  "notes": "The docs MCP at https://docs.rev.ai/mcp only searches the documentation and OpenAPI spec; it does not call the API. Human transcription is sold separately as a paid option.",
+  "sources": [
+   "https://docs.rev.ai/",
+   "https://docs.rev.ai/mcp"
+  ]
+ },
+ "runway-api": {
+  "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Official MCP also usable from Claude/ChatGPT/Cursor. Runway Dev MCP (https://dev.runwayml.com/mcp, OAuth only) handles tasks, model routers and docs.",
+  "sources": [
+   "https://docs.dev.runwayml.com/llms-small.txt"
+  ]
+ },
+ "shotstack-api": {
+  "free_tier": "Trial: 10 free credits one-time (valid 30 days), then pay-as-you-go or subscription; stage sandbox (https://api.shotstack.io/edit/stage) for development, v1 production without watermarks",
+  "sources": [
+   "https://shotstack.io/docs/api/",
+   "https://shotstack.io/pricing/"
+  ]
+ },
+ "speechmatics-api": {
+  "free_tier": "Trial: one-time $100 credit grant, no payment card required",
+  "sources": [
+   "https://docs.speechmatics.com/administration/plans.md"
+  ]
+ },
+ "synthesia-api": {
+  "mcp": {
+   "type": "official",
+   "url": "https://mcp.synthesia.io/mcp"
+  },
+  "auth_hint": "Authorization: <api_key> (no Bearer prefix)",
+  "free_tier": "Paid only; API access requires the Creator plan or above",
+  "notes": "API access tied to paid plans; base URL https://api.synthesia.io/v2. Hosted MCP is in public beta and uses per-user OAuth.",
+  "sources": [
+   "https://docs.synthesia.io/reference/synthesia-mcp.md",
+   "https://docs.synthesia.io/reference/video-api-introduction.md",
+   "https://docs.synthesia.io/reference/create-video.md"
+  ]
+ },
+ "tavus-api": {
+  "free_tier": "Free tier: Basic developer plan with 25 min/mo conversational video + 5 min/mo AI video generation, no card required",
+  "notes": "llms_txt found at /llms-full.txt rather than /llms.txt exactly. The hosted MCP uses OAuth via the PAL Maker; never put a Tavus API key in the MCP client config.",
+  "sources": [
+   "https://www.tavus.io/pricing",
+   "https://docs.tavus.io/sections/agent-tools/mcp-server.md"
+  ]
+ }
+}

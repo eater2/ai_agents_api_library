@@ -328,7 +328,7 @@
    "notes": "Reader is usable without an API key at a low rate limit; Search needs a key. Interactive docs/playground at https://api.jina.ai/scalar. Official remote MCP server at https://mcp.jina.ai/v1 (github.com/jina-ai/MCP).",
    "verified": "2026-09-24",
    "free_plan": {
-    "kind": "trial",
+    "kind": "free_tier",
     "quota": "10M free tokens per new API key; Reader also usable without key at 20 RPM",
     "period": "one_time",
     "source_url": "https://jina.ai/reader/",
@@ -360,8 +360,8 @@
     "screenshot"
    ],
    "no_auth": false,
-   "has_free_tier": false,
-   "has_trial": true,
+   "has_free_tier": true,
+   "has_trial": false,
    "no_card": false,
    "stale": false,
    "link_check": {
@@ -825,7 +825,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "100 free requests, no credit card required; then paid plans from $40/mo (10,000 searches)",
+   "free_tier": "Trial: 100 free requests one-time on signup, no credit card required; then Developer plan $40/mo for 10,000 searches",
    "sdk": [],
    "openapi": "https://www.searchapi.io/openapi/google.yaml",
    "llms_txt": null,
@@ -1110,7 +1110,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free tier: 2,500 queries, no credit card required",
+   "free_tier": "Trial: 2,500 free queries one-time on signup, no credit card required; then prepaid query packages",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
@@ -1318,7 +1318,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "Free tier: $100 one-time credit on signup (no card); main remote MCP also has a keyless ?profile=free mode with 100 search queries/day",
+   "free_tier": "Free tier: Web Search API free without an API key at 100 queries/day; new accounts also get a $100 one-time credit on signup for Search, Contents, Answer and Research APIs",
    "sdk": [
     "python",
     "typescript"
@@ -1329,7 +1329,7 @@
    "notes": "Current endpoint is POST https://ydc-index.io/v1/search (recommended); legacy GET still works but won't get new features; also offers a separate keyless Docs MCP server at you.com/docs/_mcp/server for searching You.com's own docs.",
    "verified": "2026-09-24",
    "free_plan": {
-    "kind": "trial",
+    "kind": "free_tier",
     "quota": "$100 one-time credit for new accounts; keyless MCP free profile 100 queries/day",
     "period": "one_time",
     "source_url": "https://you.com/pricing",
@@ -1356,8 +1356,8 @@
     "stock-market-data"
    ],
    "no_auth": false,
-   "has_free_tier": false,
-   "has_trial": true,
+   "has_free_tier": true,
+   "has_trial": false,
    "no_card": false,
    "stale": false,
    "link_check": {

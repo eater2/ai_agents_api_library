@@ -11,10 +11,10 @@
    "homepage": "https://www.ayrshare.com",
    "docs": "https://www.ayrshare.com",
    "auth": "api_key",
-   "auth_hint": "Authorization: Bearer <API_KEY>",
+   "auth_hint": "Authorization: Bearer <API_KEY>; since 2026-03-31 X/Twitter requests also need X-Twitter-OAuth1-Api-Key and X-Twitter-OAuth1-Api-Secret headers",
    "mcp": {
     "type": "official",
-    "url": "https://www.ayrshare.com",
+    "url": "https://api.ayrshare.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://api.ayrshare.com/mcp",
     "covers_full_api": false,
@@ -34,7 +34,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "trial credits; no permanent free tier — paid plans required for production use",
+   "free_tier": "Trial: one-time 28-day free trial of the Launch plan ($299/mo), no card required; Premium from $149/mo",
    "sdk": [
     "javascript",
     "python"
@@ -42,7 +42,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Unified API to post, schedule, and analyze content across 14+ social networks (X, Instagram, LinkedIn, TikTok, etc.) with one API key.",
-   "notes": "Ayrshare itself holds the underlying per-platform app approvals, so agents avoid individually applying for X/Meta/TikTok developer access. Vendor confirms an MCP server for AI agents; exact endpoint URL not independently verified this session.",
+   "notes": "Ayrshare holds most per-platform app approvals, so agents avoid applying for Meta/TikTok developer access (X now needs your own X app keys). Action MCP has 27 tools with API-key auth.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "trial",
@@ -88,8 +88,8 @@
   {
    "id": "bluesky-at-protocol",
    "name": "Bluesky / AT Protocol",
-   "homepage": "https://docs.bsky.app",
-   "docs": "https://docs.bsky.app",
+   "homepage": "https://bsky.network/",
+   "docs": "https://bsky.network/",
    "auth": "oauth2",
    "auth_hint": "Authorization: Bearer <session/OAuth2 token> (legacy app passwords also supported)",
    "mcp": {
@@ -284,8 +284,8 @@
    "auth": "oauth2",
    "auth_hint": "access_token=<token> query param or Authorization: Bearer <token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.facebook.com/ads",
     "maintainer": "vendor",
     "remote_url": "https://mcp.facebook.com/ads",
     "covers_full_api": false,
@@ -308,7 +308,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Read and publish posts, manage Pages, and access Instagram business content via Meta's Graph API.",
-   "notes": "Most useful permissions (posting, Instagram content, insights) require Meta App Review; basic/dev-mode access is limited to admins/testers.",
+   "notes": "Most useful permissions (posting, Instagram content, insights) require Meta App Review; basic/dev-mode access is limited to admins/testers. The official MCP covers ads, catalogs and reporting only, not organic posting.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "oauth2",
@@ -482,7 +482,7 @@
     "kind": "none",
     "config": null
    },
-   "free_tier": "free; requires app review for production access, sandbox mode available for testing",
+   "free_tier": "Free: no fee; requires app review for production access, sandbox mode for testing; posts from unaudited clients are private-only until the app passes TikTok's audit",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
@@ -545,8 +545,8 @@
    "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <App Bearer token or OAuth2 user token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://api.x.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://api.x.com/mcp",
     "repo": "https://github.com/xdevplatform/xmcp",
@@ -561,7 +561,7 @@
      "derived": true
     }
    },
-   "free_tier": "very limited free tier: write-only, ~500 posts/month, no meaningful read access; paid tiers (Basic $200/mo+) needed for real usage",
+   "free_tier": "Paid only: pay-per-usage with prepaid credits (e.g. $0.005 per Post read, $0.001 per owned read), no subscriptions and no free tier",
    "sdk": [
     "python",
     "javascript"
@@ -569,7 +569,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Post, search, and read tweets and manage X (Twitter) content via REST API v2.",
-   "notes": "Free tier is write-only and extremely restricted; practical agent use (reading timelines/search) generally requires a paid API tier. Docs page returned HTTP 402 during this check, consistent with the paid-access posture.",
+   "notes": "Credits are deducted per request; pay-per-usage is capped at 3M Post reads per billing cycle, higher volumes need an Enterprise plan. The official xurl bridge (xdevplatform) handles OAuth for the MCP server.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "none",
@@ -612,7 +612,7 @@
     "kind": "none",
     "config": null
    },
-   "free_tier": "free tier: 10,000 quota units/day (extendable on request)",
+   "free_tier": "Free tier: 10,000 quota units/day plus separate caps of 100 search.list and 100 videos.insert calls/day (extendable on request)",
    "sdk": [
     "python",
     "javascript",

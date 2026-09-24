@@ -14,7 +14,7 @@
    "auth_hint": "Circle-Token: <token>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/CircleCI-Public/mcp-server-circleci",
+    "url": "https://mcp.circleci.com/v1/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.circleci.com/v1/mcp",
     "repo": "https://github.com/CircleCI-Public/mcp-server-circleci",
@@ -52,7 +52,7 @@
    "openapi": null,
    "llms_txt": "https://circleci.com/docs/llms.txt",
    "desc_en": "An agent can trigger pipelines, rerun workflows, fetch logs/test results, and validate CI/CD configuration via REST.",
-   "notes": "Use the v3 API for new work (v2 still supported). The mcp-server-circleci npm package is deprecated in favor of CircleCI's hosted MCP / CLI MCP mode (endpoint not confirmed).",
+   "notes": "Use the v3 API for new work (v2 still supported). The mcp-server-circleci npm package is deprecated in favor of CircleCI's hosted MCP (mcp.circleci.com/v1/mcp, OAuth2 or personal API token) or CLI MCP mode.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -260,7 +260,7 @@
    "openapi": "https://docs.docker.com/reference/api/hub/latest.yaml",
    "llms_txt": null,
    "desc_en": "An agent can search, push, pull, tag, and manage container images and repositories on Docker Hub.",
-   "notes": "API is v2-beta; free/anonymous pulls are rate-limited. Docker's MCP Catalog/Toolkit offers 300+ containerized MCP servers.",
+   "notes": "API is v2-beta; free/anonymous pulls are rate-limited. Docker's MCP Catalog/Toolkit offers 300+ containerized MCP servers. The hub-mcp server runs locally (stdio or self-run HTTP); no hosted endpoint.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -317,7 +317,7 @@
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/github/github-mcp-server",
+    "url": "https://api.githubcopilot.com/mcp/",
     "maintainer": "vendor",
     "remote_url": "https://api.githubcopilot.com/mcp/",
     "repo": "https://github.com/github/github-mcp-server",
@@ -459,7 +459,7 @@
    "auth_hint": "PRIVATE-TOKEN: <personal_access_token>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.gitlab.com/user/model_context_protocol/mcp_server/",
+    "url": "https://gitlab.com/api/v4/mcp",
     "maintainer": "vendor",
     "remote_url": "https://gitlab.com/api/v4/mcp",
     "tools": [
@@ -500,7 +500,7 @@
    "openapi": "https://gitlab.com/gitlab-org/gitlab/-/blob/master/doc/api/openapi/openapi_v3.yaml",
    "llms_txt": "https://docs.gitlab.com/llms.txt",
    "desc_en": "An agent can manage projects, issues, merge requests, CI/CD pipelines, and repository files via REST/GraphQL.",
-   "notes": "GitLab's official MCP server is in beta (GitLab 18.6+); no GitLab-maintained multi-language SDK, but popular community libraries (python-gitlab, node-gitlab) exist.",
+   "notes": "GitLab's official MCP server is in beta (GitLab 18.6+) at https://<gitlab-host>/api/v4/mcp with OAuth dynamic client registration, on all tiers incl. Free; no GitLab-maintained multi-language SDK, but community libraries (python-gitlab, node-gitlab) exist.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -684,7 +684,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Lets an agent search Maven Central for Java/JVM artifacts by groupId, artifactId, class name or SHA-1 and look up the latest versions before adding a dependency.",
-   "notes": "Solr-style queries (g:, a:, v:, fc:); core=gav lists all versions. Sonatype may throttle heavy automated use.",
+   "notes": "Solr-style queries (g:, a:, v:, fc:); core=gav lists all versions. Sonatype may throttle heavy automated use. Sonatype's own Guide MCP (mcp.guide.sonatype.com/mcp, bearer token) covers dependency intelligence, not this search API.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "no_key",
@@ -717,7 +717,7 @@
    "auth_hint": "Authorization: Token token=<API_KEY> (or Authorization: Bearer <oauth_token>)",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/PagerDuty/pagerduty-mcp-server",
+    "url": "https://mcp.pagerduty.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.pagerduty.com/mcp",
     "repo": "https://github.com/PagerDuty/pagerduty-mcp-server",
@@ -757,7 +757,7 @@
    "openapi": "https://github.com/PagerDuty/api-schema",
    "llms_txt": null,
    "desc_en": "An agent can create/manage incidents, on-call schedules, escalation policies, and services via REST.",
-   "notes": "The pagerduty-mcp-server repo is deprecated; PagerDuty moved to a hosted Remote MCP server with OAuth (endpoint not confirmed).",
+   "notes": "The self-hosted pagerduty-mcp-server repo is deprecated and archived; use the PagerDuty-hosted Remote MCP server (US: mcp.pagerduty.com/mcp, EU: mcp.eu.pagerduty.com/mcp).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -829,7 +829,7 @@
    "auth_hint": "X-API-Key: <POSTMAN_API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://learning.postman.com/_mcp/server",
+    "url": "https://mcp.postman.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.postman.com/mcp",
     "repo": "https://github.com/postmanlabs/postman-mcp-server",
@@ -850,12 +850,12 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free plan available; rate limits ~300 req/min general, stricter for specific endpoints",
+   "free_tier": "Free plan: 10,000 Postman API calls/month; rate limits ~300 req/min general, stricter for specific endpoints",
    "sdk": [],
    "openapi": "https://learning.postman.com/openapi.json",
    "llms_txt": "https://learning.postman.com/llms.txt",
    "desc_en": "An agent can manage Postman collections, workspaces, environments, mocks, monitors, and API specs via REST.",
-   "notes": "Reference docs are at learning.postman.com. The official MCP endpoint mainly queries Postman's own docs, not full account management.",
+   "notes": "Reference docs are at learning.postman.com. The Postman API MCP server has full (/mcp), minimal (default, /minimal) and code (/code) variants; EU at mcp.eu.postman.com (API key only); npm @postman/postman-mcp-server.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",

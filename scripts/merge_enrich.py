@@ -30,6 +30,11 @@ def apply_fixes(by_id, today):
                 continue
             changed = False
             for field, value in patch.items():
+                if field == "free_plan_kind" and value in ("free_tier", "trial", "none") and e.get("free_plan"):
+                    if e["free_plan"].get("kind") != value:
+                        e["free_plan"]["kind"] = value
+                        changed = True
+                    continue
                 if field not in PATCHABLE:
                     continue
                 if field == "auth" and value not in AUTH:

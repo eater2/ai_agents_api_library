@@ -221,7 +221,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free; low limits without key, free API key from context7.com/dashboard raises limits",
+   "free_tier": "Free: 1,000 API calls per month with a free API key (low limits without key); Pro $10/seat/month",
    "sdk": [
     "typescript"
    ],
@@ -316,7 +316,7 @@
    "openapi": "https://api.crossref.org/swagger-docs",
    "llms_txt": null,
    "desc_en": "Look up and search scholarly metadata such as DOIs, references, authors, funders and licenses across Crossref-registered works.",
-   "notes": "Base URL https://api.crossref.org (/works, /journals, /funders, /members). Rate limits are adaptive, reported in X-Rate-Limit-Limit/X-Rate-Limit-Interval headers. Identify yourself with mailto for better service. Metadata Plus is a paid SLA tier.",
+   "notes": "Base URL https://api.crossref.org (/works, /journals, /funders, /members). Rate limits are fixed per pool: public 5 req/s (concurrency 1), polite with mailto 10 req/s (concurrency 3); 429 when exceeded. Metadata Plus is a paid SLA tier (150 req/s).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "no_key",
@@ -485,7 +485,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "No key; free public service with no published quota (the web UI has rate limiting and CAPTCHA protection).",
+   "free_tier": "No key needed: free public service; hosted API limited to 10 requests/minute per endpoint (the web UI also has rate limiting and CAPTCHA protection).",
    "sdk": [
     "python"
    ],
@@ -530,7 +530,7 @@
    "auth_hint": "no auth",
    "mcp": {
     "type": "community",
-    "url": "https://github.com/pskill9/hn-server",
+    "url": "https://github.com/devrelopers/hackernews-mcp",
     "maintainer": "community",
     "repo": "https://github.com/pskill9/hn-server",
     "tools": [
@@ -732,12 +732,12 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "Free: all public APIs are free; most APIs 500 requests/day and 5 requests/minute (Archive API higher).",
+   "free_tier": "Free: all public APIs are free; 500 requests/day and 5 requests/minute per API.",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Lets an agent search NYT articles back to 1851, read top stories, most-popular lists, the Times Wire feed and bestseller lists.",
-   "notes": "Returns metadata/abstracts and links, not full article text. Exceeding limits returns HTTP 429; wait ~12 s between calls. Non-commercial use terms.",
+   "notes": "Returns metadata/abstracts and links, not full article text. Exceeding limits returns HTTP 429; wait ~12 s between calls. Non-commercial use only; terms forbid using the APIs to develop a software product or train an ML/AI system.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -1353,7 +1353,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free non-commercial developer AppID (reported up to 2,000 calls/month); paid for commercial use",
+   "free_tier": "Free: non-commercial developer AppID with up to 2,000 calls/month; paid for commercial use",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,

@@ -60,3 +60,12 @@ test("task 3: SMS reminder", { skip }, async () => {
   const top5 = names(res, 5);
   assert.ok(!has(top5, /line messaging|discord|whatsapp/i), `chat apps in SMS results: ${top5}`);
 });
+
+test("direction and verb forms: transcribe, text to speech, translate", { skip }, async () => {
+  const stt = await search({ query: "transcribe audio recording" });
+  assert.ok(stt.results.slice(0, 5).every((r) => r.match === "exact" && /speech-to-text/.test(r.reason)), `transcribe: ${names(stt, 5)}`);
+  const tts = await search({ query: "turn text to speech" });
+  assert.ok(tts.results.slice(0, 5).every((r) => /text-to-speech/.test(r.reason)), `tts: ${tts.results.slice(0, 5).map((r) => r.reason)}`);
+  const tr = await search({ query: "translate text" });
+  assert.ok(names(tr, 3).every((n) => /translat|deepl/i.test(n)), `translate: ${names(tr, 3)}`);
+});

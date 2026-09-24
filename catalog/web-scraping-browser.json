@@ -230,7 +230,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free tier: up to 5,000 requests/mo",
+   "free_tier": "Free tier: 5,000 requests/month via the MCP server (renews on the 1st, no card required); other products pay-as-you-go",
    "sdk": [
     "python",
     "node"
@@ -367,8 +367,8 @@
    "auth": "api_key",
    "auth_hint": "X-Browser-Use-API-Key header (key prefix bu_)",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://api.browser-use.com/v3/mcp",
     "maintainer": "vendor",
     "remote_url": "https://api.browser-use.com/v3/mcp",
     "tools": [
@@ -451,7 +451,7 @@
    "auth_hint": "X-BB-API-Key header, plus Project ID",
    "mcp": {
     "type": "official",
-    "url": "https://www.browserbase.com/mcp",
+    "url": "https://mcp.browserbase.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.browserbase.com/mcp",
     "repo": "https://github.com/browserbase/mcp-server-browserbase",
@@ -478,7 +478,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free tier: limited browser hours, single concurrency, no card required",
+   "free_tier": "Free tier: 1 browser hour/month, 3 concurrent browsers, 15 min/session, no card required",
    "sdk": [
     "python",
     "typescript"
@@ -486,7 +486,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
-   "notes": "Billed by browser-hours/compute time; Stagehand SDK itself is open source but needs a browser backend such as Browserbase.",
+   "notes": "Billed by browser-hours/compute time; Stagehand SDK itself is open source but needs a browser backend such as Browserbase. The MCP GitHub repo was archived in July 2026; use the hosted endpoint.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -735,7 +735,7 @@
    "id": "hyperbrowser",
    "name": "Hyperbrowser",
    "homepage": "https://www.hyperbrowser.ai",
-   "docs": "https://docs.hyperbrowser.ai",
+   "docs": "https://www.hyperbrowser.ai/docs",
    "auth": "api_key",
    "auth_hint": "x-api-key header",
    "mcp": {
@@ -831,8 +831,8 @@
    "auth": "api_key",
    "auth_hint": "HTTP Basic Auth with API-user credentials (--user USERNAME:PASSWORD)",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.oxylabs.io/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.oxylabs.io/mcp",
     "repo": "https://github.com/oxylabs/oxylabs-mcp",
@@ -859,14 +859,14 @@
      "derived": true
     }
    },
-   "free_tier": "free trial available (check pricing)",
+   "free_tier": "Trial: Web Scraper API free trial with up to 2,000 results one-time, no card required",
    "sdk": [
     "python"
    ],
    "openapi": null,
    "llms_txt": "https://developers.oxylabs.io/llms-full.txt",
    "desc_en": "Fetch web pages, search-engine results, and e-commerce data at scale via REST API with built-in proxy/unblocking infrastructure.",
-   "notes": "Enterprise-oriented pricing overall, but self-serve API-user creation and free trial are available via the dashboard.",
+   "notes": "Enterprise-oriented pricing overall, but self-serve API-user creation and free trial are available via the dashboard. Official MCP is hosted at mcp.oxylabs.io; its GitHub repo was archived on 2026-09-16.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "trial",
@@ -1011,10 +1011,10 @@
    "homepage": "https://scrapegraphai.com",
    "docs": "https://docs.scrapegraphai.com/introduction",
    "auth": "api_key",
-   "auth_hint": "API key from dashboard (exact header name not published; check docs)",
+   "auth_hint": "SGAI-APIKEY: <key> header",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.scrapegraphai.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.scrapegraphai.com/mcp",
     "tools": [
@@ -1050,7 +1050,7 @@
      "derived": true
     }
    },
-   "free_tier": "free plan: 500 one-time API credits",
+   "free_tier": "Free: 500 API credits per month, no card required",
    "sdk": [
     "python",
     "javascript"
@@ -1112,8 +1112,8 @@
    "auth": "api_key",
    "auth_hint": "api_key query parameter",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.scraperapi.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.scraperapi.com/mcp",
     "source_url": "https://docs.scraperapi.com/integrations/llm-integrations/mcp-server.md",
@@ -1126,12 +1126,12 @@
      "derived": true
     }
    },
-   "free_tier": "5,000 free API credits (trial), no long-term free plan",
+   "free_tier": "Free: free plan with 1,000 API credits per month (max 5 concurrent connections); new accounts start with a 7-day trial of 5,000 one-time credits, no card required",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Scrape any webpage with automatic proxy rotation, CAPTCHA handling, and JS rendering via a single REST API call.",
-   "notes": "Widely used alternative to ScrapingBee/Zyte; no official MCP server found.",
+   "notes": "Widely used alternative to ScrapingBee/Zyte; official hosted MCP server at mcp.scraperapi.com/mcp.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -1274,8 +1274,8 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <key> (legacy: api_key query param, deprecated)",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.scrapingbee.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.scrapingbee.com/mcp",
     "tools": [
@@ -1305,7 +1305,7 @@
      "derived": true
     }
    },
-   "free_tier": "1,000 free API credits, no card required",
+   "free_tier": "Trial: 1,000 free API credits one-time on signup, no card required; then Hobby plan $19/mo for 75,000 credits",
    "sdk": [
     "python",
     "node"
@@ -1313,7 +1313,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Scrape any webpage with JS rendering, proxy rotation, and screenshot capture via a single REST API call.",
-   "notes": "Postman collection provided in place of a published OpenAPI spec.",
+   "notes": "Postman collection provided in place of a published OpenAPI spec. Hosted MCP takes the API key as an api_key query parameter on the server URL.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "trial",
@@ -1357,7 +1357,7 @@
    "auth_hint": "Authorization: Bearer sk-<key>",
    "mcp": {
     "type": "official",
-    "url": "https://spider.cloud/mcp/",
+    "url": "https://mcp.spider.cloud/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.spider.cloud/mcp",
     "repo": "https://www.npmjs.com/package/spider-cloud-mcp",
@@ -1453,10 +1453,10 @@
    "homepage": "https://steel.dev",
    "docs": "https://docs.steel.dev",
    "auth": "api_key",
-   "auth_hint": "Steel-Api-Key header",
+   "auth_hint": "steel-api-key header",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/steel-dev/steel-mcp-server",
     "maintainer": "vendor",
     "repo": "https://github.com/steel-dev/steel-mcp-server",
     "tools": [
@@ -1484,7 +1484,7 @@
     "kind": "official",
     "config": null
    },
-   "free_tier": "Hobby tier: 100 browser-hours/mo, 500 requests/day, no card required",
+   "free_tier": "Trial: Launch plan is $0 + usage with $30 one-time usage credits valid 90 days (10 concurrent sessions, 60 requests/min); no Hobby plan",
    "sdk": [
     "python",
     "node"
@@ -1492,7 +1492,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Create managed cloud browser sessions with stealth proxies and CAPTCHA solving, controllable via REST API or Playwright/Puppeteer.",
-   "notes": "Open-source self-hostable browser engine (steel-browser) also available; no official MCP server confirmed as of check.",
+   "notes": "Open-source self-hostable browser engine (steel-browser) also available; official MCP server at steel-dev/steel-mcp-server.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "trial",
@@ -1550,7 +1550,7 @@
     "kind": "none",
     "config": null
    },
-   "free_tier": "$5 free credit for the first month",
+   "free_tier": "Trial: $5 free credit one-time on signup, valid 30 days, no subscription needed; then pay-as-you-go or a monthly commitment",
    "sdk": [
     "python"
    ],
