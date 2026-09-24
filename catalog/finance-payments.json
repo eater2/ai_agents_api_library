@@ -1,313 +1,400 @@
 {
-  "category": {
-    "id": "finance-payments",
-    "name": "Finance, payments and market data",
-    "description": "Accept payments, move money, access bank data and query stock, FX and crypto prices."
+ "category": {
+  "id": "finance-payments",
+  "name": "Finance, payments and market data",
+  "description": "Accept payments, move money, access bank data and query stock, FX and crypto prices."
+ },
+ "entries": [
+  {
+   "id": "adyen-api",
+   "name": "Adyen API",
+   "homepage": "https://docs.adyen.com",
+   "docs": "https://docs.adyen.com/api-explorer/",
+   "auth": "api_key",
+   "auth_hint": "X-API-Key header (or client-key for client-side)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "paid only; requires a signed merchant contract, pay per-transaction",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    "php",
+    ".net",
+    "go"
+   ],
+   "openapi": "https://github.com/Adyen/adyen-openapi",
+   "llms_txt": null,
+   "desc_en": "Process payments, payouts, and manage disputes/balances across global payment methods via REST API.",
+   "notes": "Requires an approved Adyen merchant account before API keys are issued; no self-serve free signup like Stripe.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "adyen-api",
-      "name": "Adyen API",
-      "category": "finance-payments",
-      "homepage": "https://docs.adyen.com",
-      "docs": "https://docs.adyen.com/api-explorer/",
-      "auth": "api_key",
-      "auth_hint": "X-API-Key header (or client-key for client-side)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "paid only; requires a signed merchant contract, pay per-transaction",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        "php",
-        ".net",
-        "go"
-      ],
-      "openapi": "https://github.com/Adyen/adyen-openapi",
-      "llms_txt": null,
-      "desc_en": "Process payments, payouts, and manage disputes/balances across global payment methods via REST API.",
-      "notes": "Requires an approved Adyen merchant account before API keys are issued; no self-serve free signup like Stripe.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "alpaca-trading-api",
-      "name": "Alpaca Trading API",
-      "category": "finance-payments",
-      "homepage": "https://alpaca.markets",
-      "docs": "https://docs.alpaca.markets",
-      "auth": "api_key",
-      "auth_hint": "APCA-API-KEY-ID + APCA-API-SECRET-KEY headers",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free paper trading (unlimited); free basic (IEX) market data feed",
-      "sdk": [
-        "python",
-        "node"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.alpaca.markets/us/llms.txt",
-      "desc_en": "Place stock/options/crypto trades and stream market data via REST/WebSocket API, with free paper trading.",
-      "notes": "Commission-free live trading requires a funded brokerage account (US persons/entities eligibility rules apply).",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "alpha-vantage",
-      "name": "Alpha Vantage",
-      "category": "finance-payments",
-      "homepage": "https://www.alphavantage.co",
-      "docs": "https://www.alphavantage.co/documentation/",
-      "auth": "api_key",
-      "auth_hint": "apikey query param",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free tier: 25 requests/day",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Fetch stock, forex, crypto prices and technical/fundamental indicators via a free REST API.",
-      "notes": "Free tier is limited to 25 requests/day; paid Premium plans needed for real-time/higher volume.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "coinbase-cdp-x402",
-      "name": "Coinbase (CDP / x402)",
-      "category": "finance-payments",
-      "homepage": "https://docs.cdp.coinbase.com",
-      "docs": "https://docs.cdp.coinbase.com",
-      "auth": "api_key",
-      "auth_hint": "CDP API Key ID/Secret, JWT-signed bearer requests",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free CDP API access (usage-based fees on some onchain services); x402 is pay-per-request, not a subscription",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Create wallets, send crypto, and pay per-API-call with stablecoins over HTTP (x402) via the Coinbase Developer Platform SDK.",
-      "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API - useful for agent-to-agent micropayments. No official MCP server confirmed.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "coingecko-api",
-      "name": "CoinGecko API",
-      "category": "finance-payments",
-      "homepage": "https://www.coingecko.com/en/api",
-      "docs": "https://docs.coingecko.com/reference/introduction",
-      "auth": "api_key",
-      "auth_hint": "x-cg-demo-api-key or x-cg-pro-api-key header; keyless via the free MCP endpoint",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.api.coingecko.com/mcp"
-      },
-      "free_tier": "free Demo API plan (~10k calls/month, 30 calls/min); keyless free MCP with shared rate limits",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Fetch live and historical crypto prices, market data, and NFT data via REST API or the official CoinGecko MCP server.",
-      "notes": "Free MCP endpoint (mcp.api.coingecko.com) requires no key at all, just shared rate limits; a Pro-key MCP endpoint also exists.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "financial-modeling-prep",
-      "name": "Financial Modeling Prep",
-      "category": "finance-payments",
-      "homepage": "https://site.financialmodelingprep.com",
-      "docs": "https://site.financialmodelingprep.com/developer/docs",
-      "auth": "api_key",
-      "auth_hint": "apikey query param",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free tier: 250 requests/day (limited endpoints)",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Fetch company financials, stock prices, and fundamental data via a REST API.",
-      "notes": "Many endpoints (full financial statements, etc.) require a paid plan.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "open-exchange-rates",
-      "name": "Open Exchange Rates",
-      "category": "finance-payments",
-      "homepage": "https://openexchangerates.org",
-      "docs": "https://docs.openexchangerates.org",
-      "auth": "api_key",
-      "auth_hint": "app_id query param",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: 1,000 requests/month, USD base only, hourly updates",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Fetch current and historical foreign-exchange rates for 200+ currencies via a REST API.",
-      "notes": "Free plan is restricted to USD as the base currency; multi-base conversion requires a paid plan.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "paypal-api",
-      "name": "PayPal API",
-      "category": "finance-payments",
-      "homepage": "https://developer.paypal.com",
-      "docs": "https://developer.paypal.com/api/rest/",
-      "auth": "api_key+oauth2",
-      "auth_hint": "OAuth2 client-credentials Bearer token; MCP also supports an access-token env var",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.paypal.com"
-      },
-      "free_tier": "free to integrate; pay per-transaction fees only; sandbox for testing",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        "php",
-        ".net"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Process payments, payouts, invoices, and subscriptions via REST API or PayPal's official MCP server.",
-      "notes": "Separate sandbox MCP endpoint at https://mcp.sandbox.paypal.com for testing.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "plaid-api",
-      "name": "Plaid API",
-      "category": "finance-payments",
-      "homepage": "https://plaid.com/docs/",
-      "docs": "https://plaid.com/docs/api/",
-      "auth": "api_key",
-      "auth_hint": "PLAID-CLIENT-ID + PLAID-SECRET headers",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free Sandbox/Development access; Production requires approval and has per-item pricing",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        "go",
-        "ruby"
-      ],
-      "openapi": "https://github.com/plaid/plaid-openapi",
-      "llms_txt": null,
-      "desc_en": "Link bank accounts and fetch balances, transactions, and identity data via REST API/SDKs.",
-      "notes": "Sandbox is free and unlimited for development; moving to Production requires a Plaid approval/compliance review.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "polygon-io-massive",
-      "name": "Polygon.io / Massive",
-      "category": "finance-payments",
-      "homepage": "https://massive.com",
-      "docs": "https://massive.com/docs",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <api_key> or apiKey query param",
-      "mcp": {
-        "type": "official",
-        "url": "https://massive.com/docs"
-      },
-      "free_tier": "free tier available (delayed data, limited calls/min); paid plans for real-time",
-      "sdk": [
-        "python",
-        "javascript",
-        "go"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Query real-time and historical stocks, options, forex, and crypto market data via REST/WebSocket API.",
-      "notes": "Polygon.io rebranded to 'Massive' in 2026; the old polygon.io domain now redirects there. Massive also offers an MCP server for AI tools.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "square-api",
-      "name": "Square API",
-      "category": "finance-payments",
-      "homepage": "https://squareup.com/us/en/developers",
-      "docs": "https://developer.squareup.com/reference/square",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <access_token> (personal token or OAuth2)",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free to integrate; pay per-transaction processing fees; free Sandbox for testing",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        "php",
-        "ruby",
-        ".net"
-      ],
-      "openapi": "https://github.com/square/connect-api-specification",
-      "llms_txt": null,
-      "desc_en": "Process in-person/online payments, manage orders, invoices, and catalog via REST API and SDKs.",
-      "notes": "Requires a Square merchant account; Sandbox environment is free for development/testing. Missing from candidate list despite being a major agent-callable payments API.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "stripe-api",
-      "name": "Stripe API",
-      "category": "finance-payments",
-      "homepage": "https://docs.stripe.com/api",
-      "docs": "https://docs.stripe.com/api",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <secret_key> (or OAuth/Agent key for MCP)",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.stripe.com"
-      },
-      "free_tier": "free to integrate; pay per-transaction fees only, no monthly fee",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        "go",
-        "ruby",
-        "php",
-        ".net"
-      ],
-      "openapi": "https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.json",
-      "llms_txt": null,
-      "desc_en": "Create payments, subscriptions, invoices, and refunds programmatically via REST API or the official Stripe MCP server.",
-      "notes": "From Oct 31, 2026, Stripe MCP requires an 'Agent' API key or OAuth - full-access/restricted keys without the Agent tag stop working.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "wise-api",
-      "name": "Wise API",
-      "category": "finance-payments",
-      "homepage": "https://docs.wise.com",
-      "docs": "https://docs.wise.com/api-docs",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <API token> (personal) or OAuth2 (Wise Platform partners)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free API access; normal Wise transfer fees apply per transaction; sandbox available",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Send international transfers, check exchange rates, and manage multi-currency balances via REST API.",
-      "notes": "Full Wise Platform (send-money-as-a-partner) access requires a partnership agreement; a personal token covers your own account only.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "alpaca-trading-api",
+   "name": "Alpaca Trading API",
+   "homepage": "https://alpaca.markets",
+   "docs": "https://docs.alpaca.markets",
+   "auth": "api_key",
+   "auth_hint": "APCA-API-KEY-ID + APCA-API-SECRET-KEY headers",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free paper trading (unlimited); free basic (IEX) market data feed",
+   "sdk": [
+    "python",
+    "node"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.alpaca.markets/us/llms.txt",
+   "desc_en": "Place stock/options/crypto trades and stream market data via REST/WebSocket API, with free paper trading.",
+   "notes": "Commission-free live trading requires a funded brokerage account (US persons/entities eligibility rules apply).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "alpha-vantage",
+   "name": "Alpha Vantage",
+   "homepage": "https://www.alphavantage.co",
+   "docs": "https://www.alphavantage.co/documentation/",
+   "auth": "api_key",
+   "auth_hint": "apikey query param",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free tier: 25 requests/day",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Fetch stock, forex, crypto prices and technical/fundamental indicators via a free REST API.",
+   "notes": "Free tier is limited to 25 requests/day; paid Premium plans needed for real-time/higher volume.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "coinbase-cdp-x402",
+   "name": "Coinbase (CDP / x402)",
+   "homepage": "https://docs.cdp.coinbase.com",
+   "docs": "https://docs.cdp.coinbase.com",
+   "auth": "api_key",
+   "auth_hint": "CDP API Key ID/Secret, JWT-signed bearer requests",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free CDP API access (usage-based fees on some onchain services); x402 is pay-per-request, not a subscription",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Create wallets, send crypto, and pay per-API-call with stablecoins over HTTP (x402) via the Coinbase Developer Platform SDK.",
+   "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API - useful for agent-to-agent micropayments. No official MCP server confirmed.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "coingecko-api",
+   "name": "CoinGecko API",
+   "homepage": "https://www.coingecko.com/en/api",
+   "docs": "https://docs.coingecko.com/reference/introduction",
+   "auth": "api_key",
+   "auth_hint": "x-cg-demo-api-key or x-cg-pro-api-key header; keyless via the free MCP endpoint",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.api.coingecko.com/mcp"
+   },
+   "free_tier": "free Demo API plan (~10k calls/month, 30 calls/min); keyless free MCP with shared rate limits",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Fetch live and historical crypto prices, market data, and NFT data via REST API or the official CoinGecko MCP server.",
+   "notes": "Free MCP endpoint (mcp.api.coingecko.com) requires no key at all, just shared rate limits; a Pro-key MCP endpoint also exists.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "financial-modeling-prep",
+   "name": "Financial Modeling Prep",
+   "homepage": "https://site.financialmodelingprep.com",
+   "docs": "https://site.financialmodelingprep.com/developer/docs",
+   "auth": "api_key",
+   "auth_hint": "apikey query param",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free tier: 250 requests/day (limited endpoints)",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Fetch company financials, stock prices, and fundamental data via a REST API.",
+   "notes": "Many endpoints (full financial statements, etc.) require a paid plan.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "open-exchange-rates",
+   "name": "Open Exchange Rates",
+   "homepage": "https://openexchangerates.org",
+   "docs": "https://docs.openexchangerates.org",
+   "auth": "api_key",
+   "auth_hint": "app_id query param",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: 1,000 requests/month, USD base only, hourly updates",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Fetch current and historical foreign-exchange rates for 200+ currencies via a REST API.",
+   "notes": "Free plan is restricted to USD as the base currency; multi-base conversion requires a paid plan.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "paypal-api",
+   "name": "PayPal API",
+   "homepage": "https://developer.paypal.com",
+   "docs": "https://developer.paypal.com/api/rest/",
+   "auth": "api_key+oauth2",
+   "auth_hint": "OAuth2 client-credentials Bearer token; MCP also supports an access-token env var",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.paypal.com"
+   },
+   "free_tier": "free to integrate; pay per-transaction fees only; sandbox for testing",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    "php",
+    ".net"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Process payments, payouts, invoices, and subscriptions via REST API or PayPal's official MCP server.",
+   "notes": "Separate sandbox MCP endpoint at https://mcp.sandbox.paypal.com for testing.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "plaid-api",
+   "name": "Plaid API",
+   "homepage": "https://plaid.com/docs/",
+   "docs": "https://plaid.com/docs/api/",
+   "auth": "api_key",
+   "auth_hint": "PLAID-CLIENT-ID + PLAID-SECRET headers",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free Sandbox/Development access; Production requires approval and has per-item pricing",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    "go",
+    "ruby"
+   ],
+   "openapi": "https://github.com/plaid/plaid-openapi",
+   "llms_txt": null,
+   "desc_en": "Link bank accounts and fetch balances, transactions, and identity data via REST API/SDKs.",
+   "notes": "Sandbox is free and unlimited for development; moving to Production requires a Plaid approval/compliance review.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
+  },
+  {
+   "id": "polygon-io-massive",
+   "name": "Polygon.io / Massive",
+   "homepage": "https://massive.com",
+   "docs": "https://massive.com/docs",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <api_key> or apiKey query param",
+   "mcp": {
+    "type": "official",
+    "url": "https://massive.com/docs"
+   },
+   "free_tier": "free tier available (delayed data, limited calls/min); paid plans for real-time",
+   "sdk": [
+    "python",
+    "javascript",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Query real-time and historical stocks, options, forex, and crypto market data via REST/WebSocket API.",
+   "notes": "Polygon.io rebranded to 'Massive' in 2026; the old polygon.io domain now redirects there. Massive also offers an MCP server for AI tools.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "square-api",
+   "name": "Square API",
+   "homepage": "https://squareup.com/us/en/developers",
+   "docs": "https://developer.squareup.com/reference/square",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <access_token> (personal token or OAuth2)",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free to integrate; pay per-transaction processing fees; free Sandbox for testing",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    "php",
+    "ruby",
+    ".net"
+   ],
+   "openapi": "https://github.com/square/connect-api-specification",
+   "llms_txt": null,
+   "desc_en": "Process in-person/online payments, manage orders, invoices, and catalog via REST API and SDKs.",
+   "notes": "Requires a Square merchant account; Sandbox environment is free for development/testing. Missing from candidate list despite being a major agent-callable payments API.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
+  },
+  {
+   "id": "stripe-api",
+   "name": "Stripe API",
+   "homepage": "https://docs.stripe.com/api",
+   "docs": "https://docs.stripe.com/api",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <secret_key> (or OAuth/Agent key for MCP)",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.stripe.com"
+   },
+   "free_tier": "free to integrate; pay per-transaction fees only, no monthly fee",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    "go",
+    "ruby",
+    "php",
+    ".net"
+   ],
+   "openapi": "https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.json",
+   "llms_txt": null,
+   "desc_en": "Create payments, subscriptions, invoices, and refunds programmatically via REST API or the official Stripe MCP server.",
+   "notes": "From Oct 31, 2026, Stripe MCP requires an 'Agent' API key or OAuth - full-access/restricted keys without the Agent tag stop working.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "openapi": "ok"
+   }
+  },
+  {
+   "id": "wise-api",
+   "name": "Wise API",
+   "homepage": "https://docs.wise.com",
+   "docs": "https://docs.wise.com/api-docs",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <API token> (personal) or OAuth2 (Wise Platform partners)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free API access; normal Wise transfer fees apply per transaction; sandbox available",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Send international transfers, check exchange rates, and manage multi-currency balances via REST API.",
+   "notes": "Full Wise Platform (send-money-as-a-partner) access requires a partnership agreement; a personal token covers your own account only.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  }
+ ]
 }

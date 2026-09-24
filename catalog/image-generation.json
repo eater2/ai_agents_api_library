@@ -1,225 +1,292 @@
 {
-  "category": {
-    "id": "image-generation",
-    "name": "Image generation and editing",
-    "description": "Text-to-image, image editing, inpainting, upscaling and background removal."
+ "category": {
+  "id": "image-generation",
+  "name": "Image generation and editing",
+  "description": "Text-to-image, image editing, inpainting, upscaling and background removal."
+ },
+ "entries": [
+  {
+   "id": "adobe-firefly-services-api",
+   "name": "Adobe Firefly Services API",
+   "homepage": "https://developer.adobe.com/firefly-services/",
+   "docs": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
+   "auth": "oauth2",
+   "auth_hint": "OAuth2 Server-to-Server (Client ID/Secret via Adobe IMS); Authorization: Bearer <token>, token valid 24h",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "check pricing; requires Adobe Developer Console project and Firefly Services entitlement",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate and edit images and manage creative assets programmatically via Adobe's Firefly REST APIs.",
+   "notes": "Enterprise-leaning; needs OAuth Server-to-Server credentials from Adobe Developer Console, not a simple sign-up API key.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "adobe-firefly-services-api",
-      "name": "Adobe Firefly Services API",
-      "category": "image-generation",
-      "homepage": "https://developer.adobe.com/firefly-services/",
-      "docs": "https://developer.adobe.com/firefly-services/docs/firefly-api/",
-      "auth": "oauth2",
-      "auth_hint": "OAuth2 Server-to-Server (Client ID/Secret via Adobe IMS); Authorization: Bearer <token>, token valid 24h",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "check pricing; requires Adobe Developer Console project and Firefly Services entitlement",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate and edit images and manage creative assets programmatically via Adobe's Firefly REST APIs.",
-      "notes": "Enterprise-leaning; needs OAuth Server-to-Server credentials from Adobe Developer Console, not a simple sign-up API key.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "black-forest-labs-flux-api",
-      "name": "Black Forest Labs FLUX API",
-      "category": "image-generation",
-      "homepage": "https://bfl.ai",
-      "docs": "https://docs.bfl.ai/quick_start/introduction",
-      "auth": "api_key",
-      "auth_hint": "x-key: <BFL_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.bfl.ai"
-      },
-      "free_tier": "paid only, no free tier (FLUX Schnell weights are open for self-hosting)",
-      "sdk": [
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate, edit, and vary FLUX model images from text prompts via REST or the official OAuth MCP server.",
-      "notes": "Official MCP server (flux-mcp) is remote/hosted at mcp.bfl.ai with OAuth-only login, billed to your BFL org.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "freepik-api",
-      "name": "Freepik API",
-      "category": "image-generation",
-      "homepage": "https://www.freepik.com/api",
-      "docs": "https://docs.freepik.com",
-      "auth": "api_key",
-      "auth_hint": "x-freepik-api-key header (migrating to x-magnific-api-key under Magnific rebrand)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate and edit images programmatically via REST API, plus access Freepik's stock asset library.",
-      "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "google-gemini-imagen-image-api",
-      "name": "Google Gemini / Imagen image API",
-      "category": "image-generation",
-      "homepage": "https://ai.google.dev/gemini-api/docs/image-generation",
-      "docs": "https://ai.google.dev/gemini-api/docs/image-generation",
-      "auth": "api_key",
-      "auth_hint": "x-goog-api-key: $GEMINI_API_KEY",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "check pricing (free API key tier exists but image models are mostly usage-billed)",
-      "sdk": [
-        "python",
-        "typescript",
-        "java",
-        "go"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate and multi-turn edit images from text via REST (Nano Banana/Imagen models), up to 4K with reference-image support.",
-      "notes": "Also available via Vertex AI for enterprise/cloud_iam auth as an alternative.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "ideogram-api",
-      "name": "Ideogram API",
-      "category": "image-generation",
-      "homepage": "https://ideogram.ai",
-      "docs": "https://developer.ideogram.ai/ideogram-api/api-setup",
-      "auth": "api_key",
-      "auth_hint": "Api-Key: <IDEOGRAM_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.ideogram.ai/mcp"
-      },
-      "free_tier": "no free API credits (web app has 10 slow credits/week); API is pay-per-image, $40 min top-up",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate, edit, remix, upscale, and describe images via REST or an official OAuth MCP server, strong at in-image text.",
-      "notes": "API billing is separate from Ideogram web subscriptions; requires payment method for API access.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "leonardo-ai-api",
-      "name": "Leonardo.Ai API",
-      "category": "image-generation",
-      "homepage": "https://leonardo.ai",
-      "docs": "https://docs.leonardo.ai/docs/getting-started",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <LEONARDO_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.leonardo.ai/v1/mcp"
-      },
-      "free_tier": "$5 free API credits after account verification, then pay-as-you-go",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate images and videos from text via REST or the official MCP server, with model selection and job status polling.",
-      "notes": "Requires a verified account with a payment method to receive API credits.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "openai-images-api-gpt-image",
-      "name": "OpenAI Images API (gpt-image)",
-      "category": "image-generation",
-      "homepage": "https://platform.openai.com/docs/guides/image-generation",
-      "docs": "https://platform.openai.com/docs/guides/image-generation",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <OPENAI_API_KEY>",
-      "mcp": {
-        "type": "community",
-        "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp"
-      },
-      "free_tier": "paid only; no free image credits, usage-based billing",
-      "sdk": [
-        "python",
-        "typescript",
-        "java",
-        "go",
-        "csharp",
-        "ruby"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate, edit, and iteratively refine images from text prompts via REST, with mask-based inpainting and streaming previews.",
-      "notes": "Requires an OpenAI API account with billing enabled; part of the Images API / Responses API.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "recraft-api",
-      "name": "Recraft API",
-      "category": "image-generation",
-      "homepage": "https://www.recraft.ai",
-      "docs": "https://www.recraft.ai/docs/api-reference/getting-started",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer RECRAFT_API_TOKEN",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/recraft-ai/mcp-recraft-server"
-      },
-      "free_tier": "paid only; pay-per-image (from $0.007/image on V4.1 Flash), no confirmed free credits",
-      "sdk": [],
-      "openapi": "https://external.api.recraft.ai/doc/#/",
-      "llms_txt": "https://www.recraft.ai/docs/llms.txt",
-      "desc_en": "Generate, edit, upscale, and vectorize images via REST API using Recraft's proprietary models.",
-      "notes": "REST API, OpenAI-Python-library compatible for some endpoints (not all params supported); official MCP server on GitHub.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "remove-bg-api",
-      "name": "remove.bg API",
-      "category": "image-generation",
-      "homepage": "https://www.remove.bg",
-      "docs": "https://www.remove.bg/api",
-      "auth": "api_key",
-      "auth_hint": "X-Api-Key header",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free: 50 API calls/month (preview/small resolution only), then paid credits",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Remove image backgrounds programmatically via a simple REST API with JSON or multipart uploads.",
-      "notes": "IMPORTANT: remove.bg API is being discontinued - stops accepting requests on December 1, 2026, with removal moving to Leonardo.ai.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "stability-ai-platform-api",
-      "name": "Stability AI Platform API",
-      "category": "image-generation",
-      "homepage": "https://platform.stability.ai",
-      "docs": "https://platform.stability.ai/docs/api-reference",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <STABILITY_API_KEY>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "25 free credits on signup, then pay-as-you-go",
-      "sdk": [
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate, upscale, and edit images via REST (Stable Image Ultra/Core/SD3 models) using simple credit-based billing.",
-      "notes": "",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "black-forest-labs-flux-api",
+   "name": "Black Forest Labs FLUX API",
+   "homepage": "https://bfl.ai",
+   "docs": "https://docs.bfl.ai/quick_start/introduction",
+   "auth": "api_key",
+   "auth_hint": "x-key: <BFL_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.bfl.ai"
+   },
+   "free_tier": "paid only, no free tier (FLUX Schnell weights are open for self-hosting)",
+   "sdk": [
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate, edit, and vary FLUX model images from text prompts via REST or the official OAuth MCP server.",
+   "notes": "Official MCP server (flux-mcp) is remote/hosted at mcp.bfl.ai with OAuth-only login, billed to your BFL org.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "freepik-api",
+   "name": "Freepik API",
+   "homepage": "https://www.freepik.com/api",
+   "docs": "https://docs.freepik.com",
+   "auth": "api_key",
+   "auth_hint": "x-freepik-api-key header (migrating to x-magnific-api-key under Magnific rebrand)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate and edit images programmatically via REST API, plus access Freepik's stock asset library.",
+   "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "google-gemini-imagen-image-api",
+   "name": "Google Gemini / Imagen image API",
+   "homepage": "https://ai.google.dev/gemini-api/docs/image-generation",
+   "docs": "https://ai.google.dev/gemini-api/docs/image-generation",
+   "auth": "api_key",
+   "auth_hint": "x-goog-api-key: $GEMINI_API_KEY",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "check pricing (free API key tier exists but image models are mostly usage-billed)",
+   "sdk": [
+    "python",
+    "typescript",
+    "java",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate and multi-turn edit images from text via REST (Nano Banana/Imagen models), up to 4K with reference-image support.",
+   "notes": "Also available via Vertex AI for enterprise/cloud_iam auth as an alternative.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "ideogram-api",
+   "name": "Ideogram API",
+   "homepage": "https://ideogram.ai",
+   "docs": "https://developer.ideogram.ai/ideogram-api/api-setup",
+   "auth": "api_key",
+   "auth_hint": "Api-Key: <IDEOGRAM_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.ideogram.ai/mcp"
+   },
+   "free_tier": "no free API credits (web app has 10 slow credits/week); API is pay-per-image, $40 min top-up",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate, edit, remix, upscale, and describe images via REST or an official OAuth MCP server, strong at in-image text.",
+   "notes": "API billing is separate from Ideogram web subscriptions; requires payment method for API access.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "leonardo-ai-api",
+   "name": "Leonardo.Ai API",
+   "homepage": "https://leonardo.ai",
+   "docs": "https://docs.leonardo.ai/docs/getting-started",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <LEONARDO_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.leonardo.ai/v1/mcp"
+   },
+   "free_tier": "$5 free API credits after account verification, then pay-as-you-go",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate images and videos from text via REST or the official MCP server, with model selection and job status polling.",
+   "notes": "Requires a verified account with a payment method to receive API credits.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "openai-images-api-gpt-image",
+   "name": "OpenAI Images API (gpt-image)",
+   "homepage": "https://platform.openai.com/docs/guides/image-generation",
+   "docs": "https://platform.openai.com/docs/guides/image-generation",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <OPENAI_API_KEY>",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp"
+   },
+   "free_tier": "paid only; no free image credits, usage-based billing",
+   "sdk": [
+    "python",
+    "typescript",
+    "java",
+    "go",
+    "csharp",
+    "ruby"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate, edit, and iteratively refine images from text prompts via REST, with mask-based inpainting and streaming previews.",
+   "notes": "Requires an OpenAI API account with billing enabled; part of the Images API / Responses API.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "recraft-api",
+   "name": "Recraft API",
+   "homepage": "https://www.recraft.ai",
+   "docs": "https://www.recraft.ai/docs/api-reference/getting-started",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer RECRAFT_API_TOKEN",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/recraft-ai/mcp-recraft-server"
+   },
+   "free_tier": "paid only; pay-per-image (from $0.007/image on V4.1 Flash), no confirmed free credits",
+   "sdk": [],
+   "openapi": "https://external.api.recraft.ai/doc/#/",
+   "llms_txt": "https://www.recraft.ai/docs/llms.txt",
+   "desc_en": "Generate, edit, upscale, and vectorize images via REST API using Recraft's proprietary models.",
+   "notes": "REST API, OpenAI-Python-library compatible for some endpoints (not all params supported); official MCP server on GitHub.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "remove-bg-api",
+   "name": "remove.bg API",
+   "homepage": "https://www.remove.bg",
+   "docs": "https://www.remove.bg/api",
+   "auth": "api_key",
+   "auth_hint": "X-Api-Key header",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free: 50 API calls/month (preview/small resolution only), then paid credits",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Remove image backgrounds programmatically via a simple REST API with JSON or multipart uploads.",
+   "notes": "IMPORTANT: remove.bg API is being discontinued - stops accepting requests on December 1, 2026, with removal moving to Leonardo.ai.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "stability-ai-platform-api",
+   "name": "Stability AI Platform API",
+   "homepage": "https://platform.stability.ai",
+   "docs": "https://platform.stability.ai/docs/api-reference",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <STABILITY_API_KEY>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "25 free credits on signup, then pay-as-you-go",
+   "sdk": [
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate, upscale, and edit images via REST (Stable Image Ultra/Core/SD3 models) using simple credit-based billing.",
+   "notes": "",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  }
+ ]
 }

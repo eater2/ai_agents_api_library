@@ -20,6 +20,9 @@ PAGES = f"https://{REPO.split('/')[0]}.github.io/{REPO.split('/')[1]}/"
 RAW = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/"
 GH = f"https://github.com/{REPO}"
 
+STALE_DAYS = 90
+MAX_CATEGORY_BYTES = 30 * 1024
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
@@ -224,6 +227,11 @@ def readme(lang, cats, items, excluded, dirs):
             url = RAW + path if "<" not in path else RAW + "catalog/"
             o.append(f"| `{path}` — {d} | {url} |")
         o.append(f"\n{t['agents_recipe']}\n")
+        o.append("### MCP server\n\nThe catalog is also an MCP server with three tools: `search_apis` (filters: `query`, `category`, "
+                 "`mcp`, `no_auth`, `free_tier`, `auth`), `get_api` and `list_categories`. No key needed. Add it to your MCP client:\n")
+        o.append('```json\n{\n  "mcpServers": {\n    "ai-agents-api-library": {\n      "command": "npx",\n'
+                 f'      "args": ["-y", "github:{REPO}"]\n    }}\n  }}\n}}\n```\n')
+        o.append(f"Claude Code: `claude mcp add ai-agents-api-library -- npx -y github:{REPO}`\n")
 
     o.append(f"## {t['h_criteria']}\n")
     o.append("\n".join(f"- {x}" for x in t["criteria"]) + "\n")
@@ -283,6 +291,7 @@ def llms(cats, items, dirs):
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
          f"- [JSON Schema]({RAW}data/schema.json): entry schema",
          f"- [Excluded services]({RAW}data/excluded.json): reviewed and rejected, with reasons",
+         f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` — tools search_apis, get_api, list_categories",
          "", "## Categories", ""]
     for c in cats:
         n = sum(1 for e in items if e["category"] == c["id"])
@@ -441,7 +450,8 @@ def page(lang, cats, items, excluded, dirs):
             continue
         o.append(f'<section class="cat"><h2 id="{c["id"]}">{e_(c[lang])}</h2>')
         o.append(f'<p><span class="cat-desc">{e_(c["desc_" + lang])}</span> — {t["count"].format(n=len(rows))}. '
-                 f'JSON: <a href="{RAW}catalog/{c["id"]}.json"><code>catalog/{c["id"]}.json</code></a></p>')
+                 f'JSON: <a href="{RAW}catalog/{c["id"]}.json"><code>catalog/{c["id"]}.json</code></a>'
+                 + (f' · <a href="c/{c["id"]}/">details page</a>' if lang == "en" else "") + "</p>")
         o.append('<div class="tw"><table class="wikitable"><thead><tr>' + "".join(f"<th>{e_(x)}</th>" for x in t["cols"]) + "</tr></thead><tbody>")
         for e in rows:
             mtype = (e.get("mcp") or {}).get("type", "none")
@@ -468,6 +478,49 @@ def page(lang, cats, items, excluded, dirs):
     o.append(f'<h2 id="references">{e_(t["h_sources"])}</h2><p>{e_(t["sources_intro"])}</p><ol class="refs">'
              + "".join(f'<li><a href="{b}">{e_(a)}</a></li>' for a, b in SOURCES) + "</ol>")
     o.append(f'<footer>{e_(t["footer"].format(date=VERIFIED))} · <a href="{GH}">{GH}</a></footer></main><script>{JS}</script></body></html>')
+    return "\n".join(o)
+
+
+def category_page(c, rows, cats):
+    """One page per category, titled after the queries agents actually run
+    (e.g. "video generation API MCP server free tier")."""
+    t, e_ = T["en"], html.escape
+    url = f"{PAGES}c/{c['id']}/"
+    title = f"{c['en']} APIs and MCP servers for AI agents"
+    n_mcp = sum(1 for e in rows if (e.get("mcp") or {}).get("type") == "official")
+    n_free = sum(1 for e in rows if is_free(e))
+    desc = (f"{len(rows)} verified {c['en'].lower()} APIs an AI agent can call: auth method and header, "
+            f"official MCP server ({n_mcp}), free tier ({n_free}), docs links. Machine-readable JSON included.")
+    ld = {"@context": "https://schema.org", "@type": "ItemList", "name": title, "description": desc, "url": url,
+          "numberOfItems": len(rows),
+          "itemListElement": [{"@type": "ListItem", "position": i, "name": e["name"], "url": e["docs"]} for i, e in enumerate(rows, 1)]}
+    o = [f'<!doctype html><html lang="en"><head><meta charset="utf-8">',
+         '<meta name="viewport" content="width=device-width,initial-scale=1">',
+         f"<title>{e_(title)}</title>", f'<meta name="description" content="{e_(desc)}">',
+         f'<link rel="canonical" href="{url}">',
+         f'<link rel="alternate" type="application/json" href="{RAW}catalog/{c["id"]}.json">',
+         f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>',
+         f"<style>{CSS}</style></head><body>",
+         f'<header class="top"><div class="in"><a class="brand" href="../../">{e_(TITLE)}<small>{e_(c["en"])}</small></a>',
+         f'<nav class="tabs"><a href="../../">All categories</a><a href="{RAW}catalog/{c["id"]}.json">JSON</a>'
+         f'<a href="../../llms.txt">llms.txt</a><a href="{GH}">GitHub</a></nav></div></header><main>',
+         f"<h1>{e_(title)}</h1>", f'<div class="sub">{e_(c["desc_en"])}</div>',
+         f"<p>{e_(desc)} Agents: fetch <a href=\"{RAW}catalog/{c['id']}.json\"><code>catalog/{c['id']}.json</code></a> "
+         f"instead of parsing this page. Last verified {VERIFIED}.</p>",
+         '<div class="tw"><table class="wikitable"><thead><tr><th>Service</th><th>What an agent can do</th><th>Auth</th>'
+         '<th>MCP server</th><th>Free tier</th><th>Notes</th></tr></thead><tbody>']
+    for e in rows:
+        m = e.get("mcp") or {}
+        mcp = {"official": "official", "community": "community"}.get(m.get("type"), "—")
+        if m.get("url") and mcp != "—":
+            mcp = f'<a href="{e_(m["url"])}">{mcp}</a>'
+        auth = e_(t["auth"].get(e["auth"], e["auth"])) + (f'<br><code>{e_(e["auth_hint"])}</code>' if e.get("auth_hint") else "")
+        o.append(f'<tr id="{e["id"]}"><td><a href="{e_(e["docs"])}"><b>{e_(e["name"])}</b></a></td><td>{e_(e["desc_en"])}</td>'
+                 f'<td>{auth}</td><td class="c">{mcp}</td><td>{e_(e.get("free_tier") or "")}</td><td>{e_(e.get("notes") or "")}</td></tr>')
+    o.append("</tbody></table></div>")
+    o.append("<h2>Other categories</h2><ul>" + "".join(
+        f'<li><a href="../{x["id"]}/">{e_(x["en"])}</a></li>' for x in cats if x["id"] != c["id"]) + "</ul>")
+    o.append(f'<footer>{e_(t["footer"].format(date=VERIFIED))} · <a href="{GH}">{GH}</a></footer></main></body></html>')
     return "\n".join(o)
 
 
@@ -499,18 +552,35 @@ def main():
         write(base + "llms-full.txt", lf)
     # data/catalog.json is the bilingual source; agent-facing JSON is English-only.
     write("data/catalog.json", json.dumps(items, ensure_ascii=False, indent=2) + "\n")
-    en = [{k: v for k, v in e.items() if k != "desc_pl"} for e in items]
+    status_file = DATA / "link-status.json"
+    links = json.loads(status_file.read_text("utf-8")) if status_file.exists() else {}
+    today = date.today()
+    en = []
+    for e in items:
+        x = {k: v for k, v in e.items() if k != "desc_pl"}
+        # Derived fields agents asked for in the discovery interviews.
+        x["no_auth"] = e["auth"] == "none"
+        x["has_free_tier"] = is_free(e)
+        x["stale"] = bool(e.get("verified")) and (today - date.fromisoformat(e["verified"])).days > STALE_DAYS
+        if e["id"] in links:
+            x["link_check"] = links[e["id"]]
+        en.append(x)
     dump = json.dumps(en, ensure_ascii=False, indent=2) + "\n"
     write("catalog/all.json", dump)
     write("docs/catalog.json", dump)
     for c in cats:
-        rows = [e for e in en if e["category"] == c["id"]]
+        rows = [{k: v for k, v in e.items() if k != "category"} for e in en if e["category"] == c["id"]]
         cat = {"id": c["id"], "name": c["en"], "description": c["desc_en"]}
-        write(f"catalog/{c['id']}.json", json.dumps({"category": cat, "entries": rows}, ensure_ascii=False, indent=2) + "\n")
+        text = json.dumps({"category": cat, "entries": rows}, ensure_ascii=False, indent=1) + "\n"
+        if len(text.encode()) > MAX_CATEGORY_BYTES:
+            print(f"WARNING: catalog/{c['id']}.json is {len(text.encode()) // 1024} KB (limit {MAX_CATEGORY_BYTES // 1024} KB)")
+        write(f"catalog/{c['id']}.json", text)
+        write(f"docs/c/{c['id']}/index.html", category_page(c, [e for e in items if e["category"] == c["id"]], cats))
     write("docs/.nojekyll", "")
     write("docs/robots.txt", f"User-agent: *\nAllow: /\nSitemap: {PAGES}sitemap.xml\n")
     write("docs/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-          + "".join(f"<url><loc>{u}</loc><lastmod>{VERIFIED}</lastmod></url>\n" for u in (PAGES, PAGES + "catalog.json", PAGES + "llms.txt"))
+          + "".join(f"<url><loc>{u}</loc><lastmod>{VERIFIED}</lastmod></url>\n" for u in
+                    [PAGES, PAGES + "catalog.json", PAGES + "llms.txt"] + [f"{PAGES}c/{c['id']}/" for c in cats])
           + "</urlset>\n")
     print(f"{len(items)} entries, {len(excluded)} excluded, {len(cats)} categories -> built")
 

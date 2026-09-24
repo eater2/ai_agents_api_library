@@ -1,161 +1,199 @@
 {
-  "category": {
-    "id": "translation-language",
-    "name": "Translation and language",
-    "description": "Machine translation, grammar and style checking."
+ "category": {
+  "id": "translation-language",
+  "name": "Translation and language",
+  "description": "Machine translation, grammar and style checking."
+ },
+ "entries": [
+  {
+   "id": "amazon-translate",
+   "name": "Amazon Translate",
+   "homepage": "https://aws.amazon.com/translate/",
+   "docs": "https://docs.aws.amazon.com/translate/",
+   "auth": "cloud_iam",
+   "auth_hint": "AWS SigV4 (IAM credentials) via AWS SDK/CLI",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free tier: 2M characters/month for 12 months (new AWS accounts)",
+   "sdk": [
+    "python",
+    "javascript",
+    "java",
+    "go",
+    ".net"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Translate text and documents in real time or batch across 75+ languages via the AWS SDK/API.",
+   "notes": "Requires an AWS account and IAM credentials; missing from the candidate list despite being a major agent-callable translation API.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "amazon-translate",
-      "name": "Amazon Translate",
-      "category": "translation-language",
-      "homepage": "https://aws.amazon.com/translate/",
-      "docs": "https://docs.aws.amazon.com/translate/",
-      "auth": "cloud_iam",
-      "auth_hint": "AWS SigV4 (IAM credentials) via AWS SDK/CLI",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free tier: 2M characters/month for 12 months (new AWS accounts)",
-      "sdk": [
-        "python",
-        "javascript",
-        "java",
-        "go",
-        ".net"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Translate text and documents in real time or batch across 75+ languages via the AWS SDK/API.",
-      "notes": "Requires an AWS account and IAM credentials; missing from the candidate list despite being a major agent-callable translation API.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "azure-ai-translator",
-      "name": "Azure AI Translator",
-      "category": "translation-language",
-      "homepage": "https://azure.microsoft.com/products/ai-services/ai-translator",
-      "docs": "https://learn.microsoft.com/azure/ai-services/translator/",
-      "auth": "api_key",
-      "auth_hint": "Ocp-Apim-Subscription-Key header (+ Ocp-Apim-Subscription-Region)",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free tier (F0): 2,000,000 characters/month",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        "csharp",
-        "go"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Translate text, detect language, and transliterate across 100+ languages via REST API within Azure AI Services.",
-      "notes": "F0 free tier excludes custom model training/hosting, which are billed separately.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "deepl-api",
-      "name": "DeepL API",
-      "category": "translation-language",
-      "homepage": "https://www.deepl.com/pro-api",
-      "docs": "https://developers.deepl.com/docs",
-      "auth": "api_key",
-      "auth_hint": "Authorization: DeepL-Auth-Key <key>",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/DeepL/deepl-mcp-server"
-      },
-      "free_tier": "API Free plan retired mid-2026 for new signups; now Developer/Growth paid plans with trial credits",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        ".net",
-        "php",
-        "go",
-        "ruby"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Translate and rephrase text or documents between 30+ languages via REST API, SDKs, or an official MCP server.",
-      "notes": "DeepL retired the API Free plan around July 2026; no more permanent free tier for new signups.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "google-cloud-translation",
-      "name": "Google Cloud Translation",
-      "category": "translation-language",
-      "homepage": "https://cloud.google.com/translate",
-      "docs": "https://cloud.google.com/translate/docs",
-      "auth": "cloud_iam",
-      "auth_hint": "OAuth2/IAM (GCP service account), or a simple API key for the Basic v2 edition",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free tier: 500,000 characters/month (permanent, not a trial)",
-      "sdk": [
-        "python",
-        "node",
-        "java",
-        "go",
-        ".net",
-        "php",
-        "ruby"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Translate text/documents and detect language across 100+ languages via REST/gRPC API within Google Cloud.",
-      "notes": "Advanced (v3) edition supports glossaries/custom models; requires a GCP project with billing enabled even for free usage.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "languagetool-api",
-      "name": "LanguageTool API",
-      "category": "translation-language",
-      "homepage": "https://languagetool.org/http-api/",
-      "docs": "https://languagetool.org/http-api/",
-      "auth": "api_key",
-      "auth_hint": "username + api_key query params (Premium); anonymous on the free public endpoint",
-      "mcp": {
-        "type": "community",
-        "url": null
-      },
-      "free_tier": "free, no key needed on public endpoint (rate-limited: 20 req/min, 75,000 chars/min)",
-      "sdk": [],
-      "openapi": "https://languagetool.org/http-api/swagger-ui/",
-      "llms_txt": null,
-      "desc_en": "Check grammar, style, and spelling in 30+ languages via a public HTTP API, with an optional Premium key for higher limits.",
-      "notes": "This is a proofreading/grammar API, not machine translation.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "modernmt-api",
-      "name": "ModernMT API",
-      "category": "translation-language",
-      "homepage": "https://www.modernmt.com",
-      "docs": "https://www.modernmt.com/api",
-      "auth": "api_key",
-      "auth_hint": "MMT-ApiKey header",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free trial (no credit card); no permanent free tier, paid plans from $8/M characters",
-      "sdk": [
-        "python",
-        "java",
-        "node"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Send adaptive neural machine translation requests with in-context learning via a REST API.",
-      "notes": "ModernMT is being folded into a new product called Lara; ModernMT API compatibility is stated to continue only until Dec 31, 2026 - plan for migration.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "azure-ai-translator",
+   "name": "Azure AI Translator",
+   "homepage": "https://azure.microsoft.com/products/ai-services/ai-translator",
+   "docs": "https://learn.microsoft.com/azure/ai-services/translator/",
+   "auth": "api_key",
+   "auth_hint": "Ocp-Apim-Subscription-Key header (+ Ocp-Apim-Subscription-Region)",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free tier (F0): 2,000,000 characters/month",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    "csharp",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Translate text, detect language, and transliterate across 100+ languages via REST API within Azure AI Services.",
+   "notes": "F0 free tier excludes custom model training/hosting, which are billed separately.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "deepl-api",
+   "name": "DeepL API",
+   "homepage": "https://www.deepl.com/pro-api",
+   "docs": "https://developers.deepl.com/docs",
+   "auth": "api_key",
+   "auth_hint": "Authorization: DeepL-Auth-Key <key>",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/DeepL/deepl-mcp-server"
+   },
+   "free_tier": "API Free plan retired mid-2026 for new signups; now Developer/Growth paid plans with trial credits",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    ".net",
+    "php",
+    "go",
+    "ruby"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Translate and rephrase text or documents between 30+ languages via REST API, SDKs, or an official MCP server.",
+   "notes": "DeepL retired the API Free plan around July 2026; no more permanent free tier for new signups.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "google-cloud-translation",
+   "name": "Google Cloud Translation",
+   "homepage": "https://cloud.google.com/translate",
+   "docs": "https://cloud.google.com/translate/docs",
+   "auth": "cloud_iam",
+   "auth_hint": "OAuth2/IAM (GCP service account), or a simple API key for the Basic v2 edition",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free tier: 500,000 characters/month (permanent, not a trial)",
+   "sdk": [
+    "python",
+    "node",
+    "java",
+    "go",
+    ".net",
+    "php",
+    "ruby"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Translate text/documents and detect language across 100+ languages via REST/gRPC API within Google Cloud.",
+   "notes": "Advanced (v3) edition supports glossaries/custom models; requires a GCP project with billing enabled even for free usage.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "languagetool-api",
+   "name": "LanguageTool API",
+   "homepage": "https://languagetool.org/http-api/",
+   "docs": "https://languagetool.org/http-api/",
+   "auth": "api_key",
+   "auth_hint": "username + api_key query params (Premium); anonymous on the free public endpoint",
+   "mcp": {
+    "type": "community",
+    "url": null
+   },
+   "free_tier": "free, no key needed on public endpoint (rate-limited: 20 req/min, 75,000 chars/min)",
+   "sdk": [],
+   "openapi": "https://languagetool.org/http-api/swagger-ui/",
+   "llms_txt": null,
+   "desc_en": "Check grammar, style, and spelling in 30+ languages via a public HTTP API, with an optional Premium key for higher limits.",
+   "notes": "This is a proofreading/grammar API, not machine translation.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
+  },
+  {
+   "id": "modernmt-api",
+   "name": "ModernMT API",
+   "homepage": "https://www.modernmt.com",
+   "docs": "https://www.modernmt.com/api",
+   "auth": "api_key",
+   "auth_hint": "MMT-ApiKey header",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free trial (no credit card); no permanent free tier, paid plans from $8/M characters",
+   "sdk": [
+    "python",
+    "java",
+    "node"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Send adaptive neural machine translation requests with in-context learning via a REST API.",
+   "notes": "ModernMT is being folded into a new product called Lara; ModernMT API compatibility is stated to continue only until Dec 31, 2026 - plan for migration.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  }
+ ]
 }

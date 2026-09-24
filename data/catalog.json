@@ -1612,7 +1612,7 @@
       "python",
       "typescript"
     ],
-    "openapi": "https://github.com/AssemblyAI/assemblyai-api-spec/blob/main/openapi.yml",
+    "openapi": "https://www.assemblyai.com/docs/openapi.json",
     "llms_txt": "https://www.assemblyai.com/docs/llms.txt",
     "desc_en": "Transcribe recorded or streaming audio with speaker diarization, sentiment analysis and LLM-based audio insights via REST.",
     "desc_pl": "Transkrybuj nagrane lub strumieniowane audio z diaryzacją mówców, analizą sentymentu i analizą opartą na LLM przez REST.",
@@ -2772,8 +2772,8 @@
     "auth": "cloud_iam",
     "auth_hint": "Ocp-Apim-Subscription-Key: <key> header (Azure AD/Entra ID Bearer token also supported)",
     "mcp": {
-      "type": "community",
-      "url": "https://playbooks.com/mcp/cognitive-stack-azure-form-recognizer"
+      "type": "none",
+      "url": null
     },
     "free_tier": "free tier: F0 pricing tier, 500 pages/month, rate-limited",
     "sdk": [
@@ -3598,7 +3598,7 @@
     "name": "Docker Hub API",
     "category": "developer-devops",
     "homepage": "https://docs.docker.com/docker-hub/api/latest/",
-    "docs": "https://hub.docker.com/reference/api/hub/latest/",
+    "docs": "https://docs.docker.com/reference/api/hub/latest/",
     "auth": "api_key",
     "auth_hint": "Authorization: Bearer <token> (obtained via login or a Personal/Organization Access Token)",
     "mcp": {
@@ -3607,7 +3607,7 @@
     },
     "free_tier": "free personal accounts with rate-limited image pulls; paid Pro/Team/Business tiers raise pull limits",
     "sdk": [],
-    "openapi": "https://hub.docker.com/reference/api/hub/latest.yaml",
+    "openapi": "https://docs.docker.com/reference/api/hub/latest.yaml",
     "llms_txt": null,
     "desc_en": "An agent can search, push, pull, tag, and manage container images and repositories on Docker Hub.",
     "desc_pl": "Agent może wyszukiwać, wypychać, pobierać, tagować i zarządzać obrazami oraz repozytoriami kontenerów na Docker Hub.",
@@ -3790,11 +3790,11 @@
     "auth_hint": "Authorization: Bearer <api-key>",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.render.com"
+      "url": "https://mcp.render.com/mcp"
     },
     "free_tier": "free static sites; free web services that spin down after inactivity",
     "sdk": [],
-    "openapi": "https://api-docs.render.com/openapi.json",
+    "openapi": "https://api-docs.render.com/openapi/render-public-api-1.json",
     "llms_txt": "https://api-docs.render.com/llms.txt",
     "desc_en": "An agent can create and manage Render services, trigger deployments, and configure databases and env vars.",
     "desc_pl": "Agent może tworzyć i zarządzać usługami Render, uruchamiać wdrożenia oraz konfigurować bazy danych i zmienne środowiskowe.",
@@ -4057,7 +4057,7 @@
     },
     "free_tier": "free tier: 1 project, 0.5GB storage",
     "sdk": [],
-    "openapi": "https://api-docs.neon.tech/reference/openapi",
+    "openapi": "https://neon.com/api_spec/release/v2.json",
     "llms_txt": "https://api-docs.neon.tech/llms.txt",
     "desc_en": "Provision and manage serverless Postgres projects/branches and run SQL via REST API or MCP server.",
     "desc_pl": "Twórz i zarządzaj projektami/gałęziami serverless Postgres oraz wykonuj SQL przez REST API lub serwer MCP.",
@@ -5295,7 +5295,7 @@
     "name": "Intercom API",
     "category": "crm-support-marketing",
     "homepage": "https://developers.intercom.com",
-    "docs": "https://developers.intercom.com/docs/references/rest-api/",
+    "docs": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io",
     "auth": "oauth2",
     "auth_hint": "Authorization: Bearer <access_token>",
     "mcp": {
@@ -6355,7 +6355,7 @@
       "ruby"
     ],
     "openapi": null,
-    "llms_txt": "https://shopify.dev/llms.txt",
+    "llms_txt": null,
     "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
     "desc_pl": "Zarządzaj produktami, zamówieniami, klientami i magazynem (Admin API) lub buduj sklepy (Storefront API) przez REST/GraphQL.",
     "notes": "The official Dev MCP server helps build/debug Shopify apps via docs & schema search; store operations themselves go through Admin/Storefront API tokens.",

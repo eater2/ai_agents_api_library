@@ -1,328 +1,426 @@
 {
-  "category": {
-    "id": "audio-speech",
-    "name": "Speech and audio",
-    "description": "Text-to-speech, speech-to-text, voice cloning, dubbing and audio intelligence."
+ "category": {
+  "id": "audio-speech",
+  "name": "Speech and audio",
+  "description": "Text-to-speech, speech-to-text, voice cloning, dubbing and audio intelligence."
+ },
+ "entries": [
+  {
+   "id": "amazon-polly-amazon-transcribe-aws",
+   "name": "Amazon Polly / Amazon Transcribe (AWS)",
+   "homepage": "https://aws.amazon.com/polly/",
+   "docs": "https://docs.aws.amazon.com/polly/latest/dg/what-is.html",
+   "auth": "cloud_iam",
+   "auth_hint": "AWS SigV4 signing with IAM access keys",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: Polly 5M chars/mo standard, Transcribe 60 min/mo (12 months)",
+   "sdk": [
+    "python",
+    "javascript",
+    "java",
+    "go",
+    "dotnet"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Convert text to lifelike speech (Polly) and transcribe audio with speaker diarization (Transcribe) via AWS API.",
+   "notes": "Needs an AWS account and IAM credentials. Voice and feature availability differs by region. Transcribe docs: https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "amazon-polly-amazon-transcribe-aws",
-      "name": "Amazon Polly / Amazon Transcribe (AWS)",
-      "category": "audio-speech",
-      "homepage": "https://aws.amazon.com/polly/",
-      "docs": "https://docs.aws.amazon.com/polly/latest/dg/what-is.html",
-      "auth": "cloud_iam",
-      "auth_hint": "AWS SigV4 signing with IAM access keys",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: Polly 5M chars/mo standard, Transcribe 60 min/mo (12 months)",
-      "sdk": [
-        "python",
-        "javascript",
-        "java",
-        "go",
-        "dotnet"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Convert text to lifelike speech (Polly) and transcribe audio with speaker diarization (Transcribe) via AWS API.",
-      "notes": "Needs an AWS account and IAM credentials. Voice and feature availability differs by region. Transcribe docs: https://docs.aws.amazon.com/transcribe/latest/dg/what-is.html.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "assemblyai-api",
-      "name": "AssemblyAI API",
-      "category": "audio-speech",
-      "homepage": "https://www.assemblyai.com",
-      "docs": "https://www.assemblyai.com/docs",
-      "auth": "api_key",
-      "auth_hint": "Authorization: <key> (no Bearer prefix)",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.assemblyai.com/docs"
-      },
-      "free_tier": "free tier: $50 credit, no card required",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": "https://github.com/AssemblyAI/assemblyai-api-spec/blob/main/openapi.yml",
-      "llms_txt": "https://www.assemblyai.com/docs/llms.txt",
-      "desc_en": "Transcribe recorded or streaming audio with speaker diarization, sentiment analysis and LLM-based audio insights via REST.",
-      "notes": "The official hosted MCP only searches the documentation. To run transcriptions, call the REST API or an SDK.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "azure-ai-speech",
-      "name": "Azure AI Speech",
-      "category": "audio-speech",
-      "homepage": "https://azure.microsoft.com/products/ai-services/ai-speech",
-      "docs": "https://learn.microsoft.com/azure/ai-services/speech-service/",
-      "auth": "cloud_iam",
-      "auth_hint": "Ocp-Apim-Subscription-Key: <key>, or Authorization: Bearer <Entra token>",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/microsoft/azure-speech-mcp-server"
-      },
-      "free_tier": "free tier (F0): 5 audio hrs/mo STT, 0.5M chars/mo neural TTS",
-      "sdk": [
-        "python",
-        "csharp",
-        "cpp",
-        "java",
-        "javascript",
-        "go",
-        "objective-c"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Convert text to speech, transcribe speech to text and translate speech via REST or Speech SDK.",
-      "notes": "Now branded 'Azure Speech in Foundry Tools'. Needs an Azure Speech resource, and endpoints are per region.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "cartesia-api",
-      "name": "Cartesia API",
-      "category": "audio-speech",
-      "homepage": "https://cartesia.ai",
-      "docs": "https://docs.cartesia.ai",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <key> plus Cartesia-Version header",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.cartesia.ai/mcp"
-      },
-      "free_tier": "free tier: 20,000 credits/mo",
-      "sdk": [
-        "python",
-        "typescript",
-        "go"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.cartesia.ai/llms.txt",
-      "desc_en": "Generate low-latency real-time text-to-speech, transcribe speech and clone voices via REST/WebSocket API.",
-      "notes": "The hosted MCP endpoint uses OAuth. The local MCP server is at https://github.com/cartesia-ai/cartesia-mcp.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "deepgram-api",
-      "name": "Deepgram API",
-      "category": "audio-speech",
-      "homepage": "https://deepgram.com",
-      "docs": "https://developers.deepgram.com/reference/deepgram-api-overview",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Token <key>",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/deepgram/mcp"
-      },
-      "free_tier": "free tier: $200 credit, no card required",
-      "sdk": [
-        "python",
-        "typescript",
-        "go",
-        "rust",
-        "dotnet"
-      ],
-      "openapi": "https://developers.deepgram.com/openapi.yaml",
-      "llms_txt": "https://developers.deepgram.com/llms.txt",
-      "desc_en": "Transcribe batch or streaming audio with diarization, synthesize speech, and run real-time voice agents via REST/WebSocket.",
-      "notes": "",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "elevenlabs-api",
-      "name": "ElevenLabs API",
-      "category": "audio-speech",
-      "homepage": "https://elevenlabs.io",
-      "docs": "https://elevenlabs.io/docs/api-reference/introduction",
-      "auth": "api_key",
-      "auth_hint": "xi-api-key: <key>",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/elevenlabs/elevenlabs-mcp"
-      },
-      "free_tier": "free plan: limited monthly credits",
-      "sdk": [
-        "python",
-        "typescript",
-        "swift",
-        "kotlin",
-        "flutter"
-      ],
-      "openapi": "https://api.elevenlabs.io/openapi.json",
-      "llms_txt": "https://elevenlabs.io/docs/llms.txt",
-      "desc_en": "Generate, clone and stream text-to-speech voices and transcribe audio via REST/WebSocket API.",
-      "notes": "Besides the local stdio MCP server, ElevenLabs also offers an official remote MCP endpoint that uses OAuth.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "google-cloud-text-to-speech-speech-to-text",
-      "name": "Google Cloud Text-to-Speech / Speech-to-Text",
-      "category": "audio-speech",
-      "homepage": "https://cloud.google.com/text-to-speech",
-      "docs": "https://cloud.google.com/text-to-speech/docs",
-      "auth": "cloud_iam",
-      "auth_hint": "API key (?key=) or OAuth2 service-account token: Authorization: Bearer <token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: TTS 4M chars/mo standard, STT 60 min/mo",
-      "sdk": [
-        "python",
-        "nodejs",
-        "go",
-        "java",
-        "php",
-        "ruby",
-        "csharp"
-      ],
-      "openapi": "https://texttospeech.googleapis.com/$discovery/rest?version=v1",
-      "llms_txt": null,
-      "desc_en": "Synthesize lifelike speech from text and transcribe audio to text via REST/gRPC using GCP credentials.",
-      "notes": "Requires a GCP project with billing enabled. Speech-to-Text docs are separate: https://cloud.google.com/speech-to-text/docs.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "hume-ai-api",
-      "name": "Hume AI API",
-      "category": "audio-speech",
-      "homepage": "https://www.hume.ai",
-      "docs": "https://dev.hume.ai/docs",
-      "auth": "api_key",
-      "auth_hint": "X-Hume-Api-Key: <key> (REST); api_key query param (EVI WebSocket)",
-      "mcp": {
-        "type": "official",
-        "url": "https://dev.hume.ai/_mcp/server"
-      },
-      "free_tier": "free plan: 10,000 TTS chars/mo + 5 EVI min/mo",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate expressive text-to-speech and run real-time empathic voice conversations (EVI) via REST/WebSocket.",
-      "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "murf-ai-api",
-      "name": "Murf AI API",
-      "category": "audio-speech",
-      "homepage": "https://murf.ai",
-      "docs": "https://murf.ai/api/docs/introduction/overview",
-      "auth": "api_key",
-      "auth_hint": "API key from Murf dashboard",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "check pricing",
-      "sdk": [
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate AI voiceovers, clone voices and dub audio in 35+ languages via REST API.",
-      "notes": "Two models are offered: Falcon (low latency, for streaming) and Gen2 (studio quality).",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "openai-audio-api-tts-transcription",
-      "name": "OpenAI Audio API (TTS / transcription)",
-      "category": "audio-speech",
-      "homepage": "https://platform.openai.com/docs/guides/audio",
-      "docs": "https://platform.openai.com/docs/guides/audio",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <key>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "paid only (pay-per-use)",
-      "sdk": [
-        "python",
-        "typescript",
-        "go",
-        "java",
-        "dotnet"
-      ],
-      "openapi": "https://github.com/openai/openai-openapi",
-      "llms_txt": "https://developers.openai.com/llms.txt",
-      "desc_en": "Synthesize speech with TTS models and transcribe or translate audio with Whisper/GPT-4o transcribe via REST.",
-      "notes": "Whisper transcription costs about $0.006/min. TTS is billed per character or per token, depending on the model.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "resemble-ai-api",
-      "name": "Resemble AI API",
-      "category": "audio-speech",
-      "homepage": "https://www.resemble.ai",
-      "docs": "https://docs.resemble.ai/",
-      "auth": "api_key",
-      "auth_hint": "API key from app.resemble.ai dashboard",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.resemble.ai/_mcp/server"
-      },
-      "free_tier": "pay-as-you-go Flex plan ($0/mo base)",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Synthesize speech, clone voices, convert speech-to-speech and detect deepfake audio via REST API.",
-      "notes": "Enterprise plans are available for on-prem deployment and custom model training.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "rev-ai-api",
-      "name": "Rev AI API",
-      "category": "audio-speech",
-      "homepage": "https://www.rev.ai",
-      "docs": "https://docs.rev.ai/",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <access_token>",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.rev.ai/"
-      },
-      "free_tier": "trial credits (about 5 hours of ASR)",
-      "sdk": [
-        "python",
-        "node",
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Submit audio for asynchronous or streaming speech-to-text transcription, plus sentiment and topic extraction, via REST.",
-      "notes": "The docs site offers an MCP install for Cursor and VS Code, but no remote endpoint URL was confirmed. Human transcription is sold separately as a paid option.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "speechmatics-api",
-      "name": "Speechmatics API",
-      "category": "audio-speech",
-      "homepage": "https://www.speechmatics.com",
-      "docs": "https://docs.speechmatics.com",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <key>",
-      "mcp": {
-        "type": "community",
-        "url": "https://glama.ai/mcp/servers/ArchieMcM234/speechmatics_claude_code_mcp"
-      },
-      "free_tier": "free tier: 480 min/mo batch transcription",
-      "sdk": [
-        "python",
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.speechmatics.com/llms.txt",
-      "desc_en": "Transcribe audio in batch or real time with speaker diarization across many languages via REST/WebSocket.",
-      "notes": "The free tier also includes 2 concurrent real-time sessions. No official vendor MCP server was found.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "assemblyai-api",
+   "name": "AssemblyAI API",
+   "homepage": "https://www.assemblyai.com",
+   "docs": "https://www.assemblyai.com/docs",
+   "auth": "api_key",
+   "auth_hint": "Authorization: <key> (no Bearer prefix)",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.assemblyai.com/docs"
+   },
+   "free_tier": "free tier: $50 credit, no card required",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": "https://www.assemblyai.com/docs/openapi.json",
+   "llms_txt": "https://www.assemblyai.com/docs/llms.txt",
+   "desc_en": "Transcribe recorded or streaming audio with speaker diarization, sentiment analysis and LLM-based audio insights via REST.",
+   "notes": "The official hosted MCP only searches the documentation. To run transcriptions, call the REST API or an SDK.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "azure-ai-speech",
+   "name": "Azure AI Speech",
+   "homepage": "https://azure.microsoft.com/products/ai-services/ai-speech",
+   "docs": "https://learn.microsoft.com/azure/ai-services/speech-service/",
+   "auth": "cloud_iam",
+   "auth_hint": "Ocp-Apim-Subscription-Key: <key>, or Authorization: Bearer <Entra token>",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/microsoft/azure-speech-mcp-server"
+   },
+   "free_tier": "free tier (F0): 5 audio hrs/mo STT, 0.5M chars/mo neural TTS",
+   "sdk": [
+    "python",
+    "csharp",
+    "cpp",
+    "java",
+    "javascript",
+    "go",
+    "objective-c"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Convert text to speech, transcribe speech to text and translate speech via REST or Speech SDK.",
+   "notes": "Now branded 'Azure Speech in Foundry Tools'. Needs an Azure Speech resource, and endpoints are per region.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "cartesia-api",
+   "name": "Cartesia API",
+   "homepage": "https://cartesia.ai",
+   "docs": "https://docs.cartesia.ai",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <key> plus Cartesia-Version header",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.cartesia.ai/mcp"
+   },
+   "free_tier": "free tier: 20,000 credits/mo",
+   "sdk": [
+    "python",
+    "typescript",
+    "go"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.cartesia.ai/llms.txt",
+   "desc_en": "Generate low-latency real-time text-to-speech, transcribe speech and clone voices via REST/WebSocket API.",
+   "notes": "The hosted MCP endpoint uses OAuth. The local MCP server is at https://github.com/cartesia-ai/cartesia-mcp.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "deepgram-api",
+   "name": "Deepgram API",
+   "homepage": "https://deepgram.com",
+   "docs": "https://developers.deepgram.com/reference/deepgram-api-overview",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Token <key>",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/deepgram/mcp"
+   },
+   "free_tier": "free tier: $200 credit, no card required",
+   "sdk": [
+    "python",
+    "typescript",
+    "go",
+    "rust",
+    "dotnet"
+   ],
+   "openapi": "https://developers.deepgram.com/openapi.yaml",
+   "llms_txt": "https://developers.deepgram.com/llms.txt",
+   "desc_en": "Transcribe batch or streaming audio with diarization, synthesize speech, and run real-time voice agents via REST/WebSocket.",
+   "notes": "",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "elevenlabs-api",
+   "name": "ElevenLabs API",
+   "homepage": "https://elevenlabs.io",
+   "docs": "https://elevenlabs.io/docs/api-reference/introduction",
+   "auth": "api_key",
+   "auth_hint": "xi-api-key: <key>",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/elevenlabs/elevenlabs-mcp"
+   },
+   "free_tier": "free plan: limited monthly credits",
+   "sdk": [
+    "python",
+    "typescript",
+    "swift",
+    "kotlin",
+    "flutter"
+   ],
+   "openapi": "https://api.elevenlabs.io/openapi.json",
+   "llms_txt": "https://elevenlabs.io/docs/llms.txt",
+   "desc_en": "Generate, clone and stream text-to-speech voices and transcribe audio via REST/WebSocket API.",
+   "notes": "Besides the local stdio MCP server, ElevenLabs also offers an official remote MCP endpoint that uses OAuth.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "google-cloud-text-to-speech-speech-to-text",
+   "name": "Google Cloud Text-to-Speech / Speech-to-Text",
+   "homepage": "https://cloud.google.com/text-to-speech",
+   "docs": "https://cloud.google.com/text-to-speech/docs",
+   "auth": "cloud_iam",
+   "auth_hint": "API key (?key=) or OAuth2 service-account token: Authorization: Bearer <token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: TTS 4M chars/mo standard, STT 60 min/mo",
+   "sdk": [
+    "python",
+    "nodejs",
+    "go",
+    "java",
+    "php",
+    "ruby",
+    "csharp"
+   ],
+   "openapi": "https://texttospeech.googleapis.com/$discovery/rest?version=v1",
+   "llms_txt": null,
+   "desc_en": "Synthesize lifelike speech from text and transcribe audio to text via REST/gRPC using GCP credentials.",
+   "notes": "Requires a GCP project with billing enabled. Speech-to-Text docs are separate: https://cloud.google.com/speech-to-text/docs.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
+  },
+  {
+   "id": "hume-ai-api",
+   "name": "Hume AI API",
+   "homepage": "https://www.hume.ai",
+   "docs": "https://dev.hume.ai/docs",
+   "auth": "api_key",
+   "auth_hint": "X-Hume-Api-Key: <key> (REST); api_key query param (EVI WebSocket)",
+   "mcp": {
+    "type": "official",
+    "url": "https://dev.hume.ai/_mcp/server"
+   },
+   "free_tier": "free plan: 10,000 TTS chars/mo + 5 EVI min/mo",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate expressive text-to-speech and run real-time empathic voice conversations (EVI) via REST/WebSocket.",
+   "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "murf-ai-api",
+   "name": "Murf AI API",
+   "homepage": "https://murf.ai",
+   "docs": "https://murf.ai/api/docs/introduction/overview",
+   "auth": "api_key",
+   "auth_hint": "API key from Murf dashboard",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "check pricing",
+   "sdk": [
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate AI voiceovers, clone voices and dub audio in 35+ languages via REST API.",
+   "notes": "Two models are offered: Falcon (low latency, for streaming) and Gen2 (studio quality).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "openai-audio-api-tts-transcription",
+   "name": "OpenAI Audio API (TTS / transcription)",
+   "homepage": "https://platform.openai.com/docs/guides/audio",
+   "docs": "https://platform.openai.com/docs/guides/audio",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <key>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "paid only (pay-per-use)",
+   "sdk": [
+    "python",
+    "typescript",
+    "go",
+    "java",
+    "dotnet"
+   ],
+   "openapi": "https://github.com/openai/openai-openapi",
+   "llms_txt": "https://developers.openai.com/llms.txt",
+   "desc_en": "Synthesize speech with TTS models and transcribe or translate audio with Whisper/GPT-4o transcribe via REST.",
+   "notes": "Whisper transcription costs about $0.006/min. TTS is billed per character or per token, depending on the model.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "resemble-ai-api",
+   "name": "Resemble AI API",
+   "homepage": "https://www.resemble.ai",
+   "docs": "https://docs.resemble.ai/",
+   "auth": "api_key",
+   "auth_hint": "API key from app.resemble.ai dashboard",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.resemble.ai/_mcp/server"
+   },
+   "free_tier": "pay-as-you-go Flex plan ($0/mo base)",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Synthesize speech, clone voices, convert speech-to-speech and detect deepfake audio via REST API.",
+   "notes": "Enterprise plans are available for on-prem deployment and custom model training.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "rev-ai-api",
+   "name": "Rev AI API",
+   "homepage": "https://www.rev.ai",
+   "docs": "https://docs.rev.ai/",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <access_token>",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.rev.ai/"
+   },
+   "free_tier": "trial credits (about 5 hours of ASR)",
+   "sdk": [
+    "python",
+    "node",
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Submit audio for asynchronous or streaming speech-to-text transcription, plus sentiment and topic extraction, via REST.",
+   "notes": "The docs site offers an MCP install for Cursor and VS Code, but no remote endpoint URL was confirmed. Human transcription is sold separately as a paid option.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "speechmatics-api",
+   "name": "Speechmatics API",
+   "homepage": "https://www.speechmatics.com",
+   "docs": "https://docs.speechmatics.com",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <key>",
+   "mcp": {
+    "type": "community",
+    "url": "https://glama.ai/mcp/servers/ArchieMcM234/speechmatics_claude_code_mcp"
+   },
+   "free_tier": "free tier: 480 min/mo batch transcription",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.speechmatics.com/llms.txt",
+   "desc_en": "Transcribe audio in batch or real time with speaker diarization across many languages via REST/WebSocket.",
+   "notes": "The free tier also includes 2 concurrent real-time sessions. No official vendor MCP server was found.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "llms_txt": "ok"
+   }
+  }
+ ]
 }

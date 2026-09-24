@@ -1,228 +1,289 @@
 {
-  "category": {
-    "id": "social-media",
-    "name": "Social media",
-    "description": "Read and publish posts, comments and videos on social platforms."
+ "category": {
+  "id": "social-media",
+  "name": "Social media",
+  "description": "Read and publish posts, comments and videos on social platforms."
+ },
+ "entries": [
+  {
+   "id": "ayrshare",
+   "name": "Ayrshare",
+   "homepage": "https://www.ayrshare.com",
+   "docs": "https://www.ayrshare.com",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://www.ayrshare.com"
+   },
+   "free_tier": "trial credits; no permanent free tier — paid plans required for production use",
+   "sdk": [
+    "javascript",
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Unified API to post, schedule, and analyze content across 14+ social networks (X, Instagram, LinkedIn, TikTok, etc.) with one API key.",
+   "notes": "Ayrshare itself holds the underlying per-platform app approvals, so agents avoid individually applying for X/Meta/TikTok developer access. Vendor confirms an MCP server for AI agents; exact endpoint URL not independently verified this session.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "ayrshare",
-      "name": "Ayrshare",
-      "category": "social-media",
-      "homepage": "https://www.ayrshare.com",
-      "docs": "https://www.ayrshare.com",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://www.ayrshare.com"
-      },
-      "free_tier": "trial credits; no permanent free tier — paid plans required for production use",
-      "sdk": [
-        "javascript",
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Unified API to post, schedule, and analyze content across 14+ social networks (X, Instagram, LinkedIn, TikTok, etc.) with one API key.",
-      "notes": "Ayrshare itself holds the underlying per-platform app approvals, so agents avoid individually applying for X/Meta/TikTok developer access. Vendor confirms an MCP server for AI agents; exact endpoint URL not independently verified this session.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "bluesky-at-protocol",
-      "name": "Bluesky / AT Protocol",
-      "category": "social-media",
-      "homepage": "https://docs.bsky.app",
-      "docs": "https://docs.bsky.app",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <session/OAuth2 token> (legacy app passwords also supported)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free, no key needed for public reads; free account required for posting",
-      "sdk": [
-        "typescript",
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Post, read, and moderate content on Bluesky via the open, self-hostable AT Protocol REST/XRPC API.",
-      "notes": "Decentralized protocol; official OAuth2 is replacing legacy app passwords as the recommended auth method.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "linkedin-api",
-      "name": "LinkedIn API",
-      "category": "social-media",
-      "homepage": "https://learn.microsoft.com/linkedin/",
-      "docs": "https://learn.microsoft.com/en-us/linkedin/",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <OAuth2 token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "check pricing — most scopes require LinkedIn Partner Program approval",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Sign users in and share basic posts via OAuth2/OpenID Connect; most other endpoints require partner approval.",
-      "notes": "LinkedIn API access is heavily gated; only a narrow self-serve subset (Sign In with LinkedIn/OpenID Connect, basic Share on LinkedIn) is available without applying to a partner program (Marketing, Sales, Talent, Learning solutions).",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "mastodon-api",
-      "name": "Mastodon API",
-      "category": "social-media",
-      "homepage": "https://docs.joinmastodon.org/api/",
-      "docs": "https://docs.joinmastodon.org/api/",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <OAuth2 token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free, no central key; register an app per instance, no cost",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Post statuses, read timelines, and manage accounts on any Mastodon instance via REST API.",
-      "notes": "Decentralized: each Mastodon instance is its own API endpoint; app registration is per-instance and free.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "meta-graph-api-facebook-instagram",
-      "name": "Meta Graph API (Facebook, Instagram)",
-      "category": "social-media",
-      "homepage": "https://developers.facebook.com/docs/graph-api",
-      "docs": "https://developers.facebook.com/docs/graph-api",
-      "auth": "oauth2",
-      "auth_hint": "access_token=<token> query param or Authorization: Bearer <token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free, but most non-trivial read/write permissions require Meta App Review and business verification",
-      "sdk": [
-        "python",
-        "javascript",
-        "php"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Read and publish posts, manage Pages, and access Instagram business content via Meta's Graph API.",
-      "notes": "Most useful permissions (posting, Instagram content, insights) require Meta App Review; basic/dev-mode access is limited to admins/testers.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "pinterest-api",
-      "name": "Pinterest API",
-      "category": "social-media",
-      "homepage": "https://developers.pinterest.com",
-      "docs": "https://developers.pinterest.com/docs/api/v5/",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <OAuth2 token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: standard rate limits; higher limits/trial access require app review",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Create pins and boards and read analytics data on Pinterest via REST API v5.",
-      "notes": "",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "reddit-api",
-      "name": "Reddit API",
-      "category": "social-media",
-      "homepage": "https://www.reddit.com/dev/api",
-      "docs": "https://www.reddit.com/dev/api",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <OAuth2 token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free for non-commercial/personal use under Reddit Data API terms; commercial or high-volume use requires a paid Data API license",
-      "sdk": [
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Read posts/comments and submit posts, comments, or votes on Reddit via OAuth2 REST API.",
-      "notes": "Since 2023, commercial/high-volume access requires a separate paid Reddit Data API agreement.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "tiktok-api",
-      "name": "TikTok API",
-      "category": "social-media",
-      "homepage": "https://developers.tiktok.com",
-      "docs": "https://developers.tiktok.com",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <OAuth2 token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free; requires app review for production access, sandbox mode available for testing",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Post videos/drafts and query content on TikTok via the Content Posting and Display OAuth2 REST APIs.",
-      "notes": "Apps must pass TikTok's review process before production/unaudited-client-mode access is granted.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "x-twitter-api",
-      "name": "X (Twitter) API",
-      "category": "social-media",
-      "homepage": "https://developer.x.com",
-      "docs": "https://docs.x.com/x-api/introduction",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <App Bearer token or OAuth2 user token>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "very limited free tier: write-only, ~500 posts/month, no meaningful read access; paid tiers (Basic $200/mo+) needed for real usage",
-      "sdk": [
-        "python",
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Post, search, and read tweets and manage X (Twitter) content via REST API v2.",
-      "notes": "Free tier is write-only and extremely restricted; practical agent use (reading timelines/search) generally requires a paid API tier. Docs page returned HTTP 402 during this check, consistent with the paid-access posture.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "youtube-data-api",
-      "name": "YouTube Data API",
-      "category": "social-media",
-      "homepage": "https://developers.google.com/youtube/v3",
-      "docs": "https://developers.google.com/youtube/v3",
-      "auth": "api_key+oauth2",
-      "auth_hint": "key=<API_KEY> for public reads; Authorization: Bearer <OAuth2 token> for writes/private data",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: 10,000 quota units/day (extendable on request)",
-      "sdk": [
-        "python",
-        "javascript",
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Search videos, manage playlists/comments, and upload videos to YouTube via REST API.",
-      "notes": "Daily quota shared across all calls; different operations cost different quota amounts (e.g. search is expensive).",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "bluesky-at-protocol",
+   "name": "Bluesky / AT Protocol",
+   "homepage": "https://docs.bsky.app",
+   "docs": "https://docs.bsky.app",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <session/OAuth2 token> (legacy app passwords also supported)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free, no key needed for public reads; free account required for posting",
+   "sdk": [
+    "typescript",
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Post, read, and moderate content on Bluesky via the open, self-hostable AT Protocol REST/XRPC API.",
+   "notes": "Decentralized protocol; official OAuth2 is replacing legacy app passwords as the recommended auth method.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "linkedin-api",
+   "name": "LinkedIn API",
+   "homepage": "https://learn.microsoft.com/linkedin/",
+   "docs": "https://learn.microsoft.com/en-us/linkedin/",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <OAuth2 token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "check pricing — most scopes require LinkedIn Partner Program approval",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Sign users in and share basic posts via OAuth2/OpenID Connect; most other endpoints require partner approval.",
+   "notes": "LinkedIn API access is heavily gated; only a narrow self-serve subset (Sign In with LinkedIn/OpenID Connect, basic Share on LinkedIn) is available without applying to a partner program (Marketing, Sales, Talent, Learning solutions).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "mastodon-api",
+   "name": "Mastodon API",
+   "homepage": "https://docs.joinmastodon.org/api/",
+   "docs": "https://docs.joinmastodon.org/api/",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <OAuth2 token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free, no central key; register an app per instance, no cost",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Post statuses, read timelines, and manage accounts on any Mastodon instance via REST API.",
+   "notes": "Decentralized: each Mastodon instance is its own API endpoint; app registration is per-instance and free.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "meta-graph-api-facebook-instagram",
+   "name": "Meta Graph API (Facebook, Instagram)",
+   "homepage": "https://developers.facebook.com/docs/graph-api",
+   "docs": "https://developers.facebook.com/docs/graph-api",
+   "auth": "oauth2",
+   "auth_hint": "access_token=<token> query param or Authorization: Bearer <token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free, but most non-trivial read/write permissions require Meta App Review and business verification",
+   "sdk": [
+    "python",
+    "javascript",
+    "php"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Read and publish posts, manage Pages, and access Instagram business content via Meta's Graph API.",
+   "notes": "Most useful permissions (posting, Instagram content, insights) require Meta App Review; basic/dev-mode access is limited to admins/testers.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "pinterest-api",
+   "name": "Pinterest API",
+   "homepage": "https://developers.pinterest.com",
+   "docs": "https://developers.pinterest.com/docs/api/v5/",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <OAuth2 token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: standard rate limits; higher limits/trial access require app review",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Create pins and boards and read analytics data on Pinterest via REST API v5.",
+   "notes": "",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "reddit-api",
+   "name": "Reddit API",
+   "homepage": "https://www.reddit.com/dev/api",
+   "docs": "https://www.reddit.com/dev/api",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <OAuth2 token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free for non-commercial/personal use under Reddit Data API terms; commercial or high-volume use requires a paid Data API license",
+   "sdk": [
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Read posts/comments and submit posts, comments, or votes on Reddit via OAuth2 REST API.",
+   "notes": "Since 2023, commercial/high-volume access requires a separate paid Reddit Data API agreement.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "tiktok-api",
+   "name": "TikTok API",
+   "homepage": "https://developers.tiktok.com",
+   "docs": "https://developers.tiktok.com",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <OAuth2 token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free; requires app review for production access, sandbox mode available for testing",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Post videos/drafts and query content on TikTok via the Content Posting and Display OAuth2 REST APIs.",
+   "notes": "Apps must pass TikTok's review process before production/unaudited-client-mode access is granted.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "x-twitter-api",
+   "name": "X (Twitter) API",
+   "homepage": "https://developer.x.com",
+   "docs": "https://docs.x.com/x-api/introduction",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <App Bearer token or OAuth2 user token>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "very limited free tier: write-only, ~500 posts/month, no meaningful read access; paid tiers (Basic $200/mo+) needed for real usage",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Post, search, and read tweets and manage X (Twitter) content via REST API v2.",
+   "notes": "Free tier is write-only and extremely restricted; practical agent use (reading timelines/search) generally requires a paid API tier. Docs page returned HTTP 402 during this check, consistent with the paid-access posture.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "youtube-data-api",
+   "name": "YouTube Data API",
+   "homepage": "https://developers.google.com/youtube/v3",
+   "docs": "https://developers.google.com/youtube/v3",
+   "auth": "api_key+oauth2",
+   "auth_hint": "key=<API_KEY> for public reads; Authorization: Bearer <OAuth2 token> for writes/private data",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: 10,000 quota units/day (extendable on request)",
+   "sdk": [
+    "python",
+    "javascript",
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Search videos, manage playlists/comments, and upload videos to YouTube via REST API.",
+   "notes": "Daily quota shared across all calls; different operations cost different quota amounts (e.g. search is expensive).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  }
+ ]
 }

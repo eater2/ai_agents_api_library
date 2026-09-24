@@ -1,412 +1,533 @@
 {
-  "category": {
-    "id": "web-scraping-browser",
-    "name": "Web scraping and browser automation",
-    "description": "Crawl, scrape and convert pages to Markdown/JSON, or drive a remote headless browser (clicks, forms, logins)."
+ "category": {
+  "id": "web-scraping-browser",
+  "name": "Web scraping and browser automation",
+  "description": "Crawl, scrape and convert pages to Markdown/JSON, or drive a remote headless browser (clicks, forms, logins)."
+ },
+ "entries": [
+  {
+   "id": "anchor-browser",
+   "name": "Anchor Browser",
+   "homepage": "https://anchorbrowser.io",
+   "docs": "https://docs.anchorbrowser.io",
+   "auth": "api_key",
+   "auth_hint": "anchor-api-key header",
+   "mcp": {
+    "type": "official",
+    "url": "https://api.anchorbrowser.io/mcp"
+   },
+   "free_tier": "$5 free credits/mo, no card required",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Provision authenticated cloud browser sessions and turn any website into callable MCP tools for agents.",
+   "notes": "Authenticated (logged-in) browser sessions require a paid tier; free tier covers unauthenticated browsing only.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
   },
-  "entries": [
-    {
-      "id": "anchor-browser",
-      "name": "Anchor Browser",
-      "category": "web-scraping-browser",
-      "homepage": "https://anchorbrowser.io",
-      "docs": "https://docs.anchorbrowser.io",
-      "auth": "api_key",
-      "auth_hint": "anchor-api-key header",
-      "mcp": {
-        "type": "official",
-        "url": "https://api.anchorbrowser.io/mcp"
-      },
-      "free_tier": "$5 free credits/mo, no card required",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Provision authenticated cloud browser sessions and turn any website into callable MCP tools for agents.",
-      "notes": "Authenticated (logged-in) browser sessions require a paid tier; free tier covers unauthenticated browsing only.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "apify",
-      "name": "Apify",
-      "category": "web-scraping-browser",
-      "homepage": "https://apify.com",
-      "docs": "https://docs.apify.com/api",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <token> for REST; browser-based OAuth2 or bearer token for hosted MCP",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.apify.com/platform/integrations/mcp"
-      },
-      "free_tier": "free plan: $5/mo platform usage credit, no card required",
-      "sdk": [
-        "python",
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Run web scraping/automation 'Actors' from a marketplace of thousands, and manage datasets, via REST API or MCP server.",
-      "notes": "MCP search/docs tools work unauthenticated; running paid Actors consumes platform usage credit.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "bright-data",
-      "name": "Bright Data",
-      "category": "web-scraping-browser",
-      "homepage": "https://brightdata.com",
-      "docs": "https://docs.brightdata.com/introduction",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <token>",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/brightdata/brightdata-mcp"
-      },
-      "free_tier": "free tier: up to 5,000 requests/mo",
-      "sdk": [
-        "python",
-        "node"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Access Web Unlocker, SERP API, Scraping Browser, and structured datasets via REST API or MCP to pull web data at scale.",
-      "notes": "Large multi-product suite; pricing and free-tier limits vary significantly by product (Web Unlocker vs Scraping Browser vs Datasets).",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "browse-ai-api",
-      "name": "Browse AI API",
-      "category": "web-scraping-browser",
-      "homepage": "https://www.browse.ai",
-      "docs": "https://docs.browse.ai/api/v2",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <key>",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free forever plan: 50 credits/mo, no card required",
-      "sdk": [
-        "python",
-        "node",
-        "ruby",
-        "php"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Trigger pre-built or custom 'robots' to extract and monitor web data via REST API, returning structured JSON.",
-      "notes": "",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "browser-use-cloud-api",
-      "name": "Browser Use Cloud API",
-      "category": "web-scraping-browser",
-      "homepage": "https://browser-use.com",
-      "docs": "https://docs.browser-use.com",
-      "auth": "api_key",
-      "auth_hint": "X-Browser-Use-API-Key header (key prefix bu_)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "$15 one-time signup credit for new accounts (Google/GitHub/Microsoft); paid usage afterward",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.browser-use.com/llms.txt",
-      "desc_en": "Launch cloud browser sessions and run AI browser-automation agent tasks via REST API or Python/TypeScript SDK.",
-      "notes": "Pay-as-you-go pricing: browser-hours + per-task fee + token markup; no ongoing free tier beyond signup credit.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "browserbase-stagehand",
-      "name": "Browserbase (+ Stagehand)",
-      "category": "web-scraping-browser",
-      "homepage": "https://www.browserbase.com",
-      "docs": "https://docs.browserbase.com",
-      "auth": "api_key",
-      "auth_hint": "X-BB-API-Key header, plus Project ID",
-      "mcp": {
-        "type": "official",
-        "url": "https://www.browserbase.com/mcp"
-      },
-      "free_tier": "free tier: limited browser hours, single concurrency, no card required",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
-      "notes": "Billed by browser-hours/compute time; Stagehand SDK itself is open source but needs a browser backend such as Browserbase.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "diffbot",
-      "name": "Diffbot",
-      "category": "web-scraping-browser",
-      "homepage": "https://www.diffbot.com",
-      "docs": "https://www.diffbot.com/docs/extract/",
-      "auth": "api_key",
-      "auth_hint": "token= query parameter",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free plan: 10,000 credits/mo, no card required (5 req/min limit)",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Automatically extract structured data (articles, products, people) from any URL via REST API, no custom parsing rules needed.",
-      "notes": "Also offers Knowledge Graph and Crawl products with separate pricing; official client library docs listed as 'coming soon'.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "firecrawl",
-      "name": "Firecrawl",
-      "category": "web-scraping-browser",
-      "homepage": "https://www.firecrawl.dev",
-      "docs": "https://docs.firecrawl.dev",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <fc-key>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.firecrawl.dev/v2/mcp"
-      },
-      "free_tier": "free tier: 1,000 credits/mo, no card required",
-      "sdk": [
-        "python",
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.firecrawl.dev/llms.txt",
-      "desc_en": "Scrape, crawl, and extract structured data from any website via a single REST API call.",
-      "notes": "Also offers OAuth-based remote MCP endpoint (mcp.firecrawl.dev/v2/mcp-oauth) and a keyless trial with daily limits.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "hyperbrowser",
-      "name": "Hyperbrowser",
-      "category": "web-scraping-browser",
-      "homepage": "https://www.hyperbrowser.ai",
-      "docs": "https://docs.hyperbrowser.ai",
-      "auth": "api_key",
-      "auth_hint": "x-api-key header",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/hyperbrowserai/mcp"
-      },
-      "free_tier": "free plan: starter credits, 1 concurrent browser, no card required",
-      "sdk": [
-        "python",
-        "node"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Spin up cloud browsers and call scrape, crawl, and structured-extract endpoints via REST API or MCP server.",
-      "notes": "SDKs are compatible with Playwright, Puppeteer, and Selenium.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "oxylabs",
-      "name": "Oxylabs",
-      "category": "web-scraping-browser",
-      "homepage": "https://oxylabs.io",
-      "docs": "https://developers.oxylabs.io",
-      "auth": "api_key",
-      "auth_hint": "HTTP Basic Auth with API-user credentials (--user USERNAME:PASSWORD)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free trial available (check pricing)",
-      "sdk": [
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": "https://developers.oxylabs.io/llms-full.txt",
-      "desc_en": "Fetch web pages, search-engine results, and e-commerce data at scale via REST API with built-in proxy/unblocking infrastructure.",
-      "notes": "Enterprise-oriented pricing overall, but self-serve API-user creation and free trial are available via the dashboard.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "playwright-mcp-microsoft",
-      "name": "Playwright MCP (Microsoft)",
-      "category": "web-scraping-browser",
-      "homepage": "https://github.com/microsoft/playwright-mcp",
-      "docs": "https://github.com/microsoft/playwright-mcp#readme",
-      "auth": "none",
-      "auth_hint": "no auth; runs as a local process via npx",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/microsoft/playwright-mcp"
-      },
-      "free_tier": "free, open source, no key",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Official Microsoft MCP server giving agents structured browser control (click, type, navigate) via Playwright's accessibility tree.",
-      "notes": "Runs locally/self-hosted via `npx @playwright/mcp`; no cloud hosting, account, or API key required, but needs a local or self-managed browser runtime. Apache-2.0 licensed.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "scrapegraphai-api",
-      "name": "ScrapeGraphAI API",
-      "category": "web-scraping-browser",
-      "homepage": "https://scrapegraphai.com",
-      "docs": "https://docs.scrapegraphai.com/introduction",
-      "auth": "api_key",
-      "auth_hint": "API key from dashboard (exact header name not published; check docs)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free plan: 500 one-time API credits",
-      "sdk": [
-        "python",
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.scrapegraphai.com/llms.txt",
-      "desc_en": "Use AI-driven prompts to scrape and extract structured data from webpages via REST API or Python/JS SDK.",
-      "notes": "Also offers the open-source scrapegraph-ai library with LangChain/LlamaIndex integrations.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "scraperapi",
-      "name": "ScraperAPI",
-      "category": "web-scraping-browser",
-      "homepage": "https://www.scraperapi.com",
-      "docs": "https://docs.scraperapi.com",
-      "auth": "api_key",
-      "auth_hint": "api_key query parameter",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "5,000 free API credits (trial), no long-term free plan",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Scrape any webpage with automatic proxy rotation, CAPTCHA handling, and JS rendering via a single REST API call.",
-      "notes": "Widely used alternative to ScrapingBee/Zyte; no official MCP server found.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "scrapfly",
-      "name": "Scrapfly",
-      "category": "web-scraping-browser",
-      "homepage": "https://scrapfly.io",
-      "docs": "https://scrapfly.io/docs",
-      "auth": "api_key+oauth2",
-      "auth_hint": "key= query param for REST API; API key or OAuth2 for MCP server",
-      "mcp": {
-        "type": "official",
-        "url": "https://scrapfly.io/products/mcp-cloud"
-      },
-      "free_tier": "1,000 free credits/mo, no card required, no time limit",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Scrape webpages, run cloud browsers, and capture screenshots via REST API or hosted MCP server with anti-bot bypass.",
-      "notes": "MCP usage draws from the same credit balance as direct API calls.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "scrapingbee",
-      "name": "ScrapingBee",
-      "category": "web-scraping-browser",
-      "homepage": "https://www.scrapingbee.com",
-      "docs": "https://www.scrapingbee.com/documentation/",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <key> (legacy: api_key query param, deprecated)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "1,000 free API credits, no card required",
-      "sdk": [
-        "python",
-        "node"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Scrape any webpage with JS rendering, proxy rotation, and screenshot capture via a single REST API call.",
-      "notes": "Postman collection provided in place of a published OpenAPI spec.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "spider-cloud",
-      "name": "Spider.cloud",
-      "category": "web-scraping-browser",
-      "homepage": "https://spider.cloud",
-      "docs": "https://spider.cloud/docs/api",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer sk-<key>",
-      "mcp": {
-        "type": "official",
-        "url": "https://spider.cloud/mcp/"
-      },
-      "free_tier": "keyless trial: 25 free runs/day, no account required",
-      "sdk": [
-        "python",
-        "javascript",
-        "rust"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Crawl and scrape websites at scale, returning JSON/XML/CSV, via REST API, CLI, or MCP server.",
-      "notes": "",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "steel",
-      "name": "Steel",
-      "category": "web-scraping-browser",
-      "homepage": "https://steel.dev",
-      "docs": "https://docs.steel.dev",
-      "auth": "api_key",
-      "auth_hint": "Steel-Api-Key header",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "Hobby tier: 100 browser-hours/mo, 500 requests/day, no card required",
-      "sdk": [
-        "python",
-        "node"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Create managed cloud browser sessions with stealth proxies and CAPTCHA solving, controllable via REST API or Playwright/Puppeteer.",
-      "notes": "Open-source self-hostable browser engine (steel-browser) also available; no official MCP server confirmed as of check.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "zyte-api",
-      "name": "Zyte API",
-      "category": "web-scraping-browser",
-      "homepage": "https://www.zyte.com",
-      "docs": "https://docs.zyte.com/zyte-api/get-started.html",
-      "auth": "api_key",
-      "auth_hint": "HTTP Basic Auth: API key as username, blank password",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "$5 free credit for the first month",
-      "sdk": [
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Fetch and auto-extract web pages (HTML, browser rendering, product/article data) via one HTTP API with ban avoidance.",
-      "notes": "Part of Zyte's broader suite (Scrapy Cloud, Zyte IDE).",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "apify",
+   "name": "Apify",
+   "homepage": "https://apify.com",
+   "docs": "https://docs.apify.com/api",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <token> for REST; browser-based OAuth2 or bearer token for hosted MCP",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.apify.com/platform/integrations/mcp"
+   },
+   "free_tier": "free plan: $5/mo platform usage credit, no card required",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Run web scraping/automation 'Actors' from a marketplace of thousands, and manage datasets, via REST API or MCP server.",
+   "notes": "MCP search/docs tools work unauthenticated; running paid Actors consumes platform usage credit.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "bright-data",
+   "name": "Bright Data",
+   "homepage": "https://brightdata.com",
+   "docs": "https://docs.brightdata.com/introduction",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <token>",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/brightdata/brightdata-mcp"
+   },
+   "free_tier": "free tier: up to 5,000 requests/mo",
+   "sdk": [
+    "python",
+    "node"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Access Web Unlocker, SERP API, Scraping Browser, and structured datasets via REST API or MCP to pull web data at scale.",
+   "notes": "Large multi-product suite; pricing and free-tier limits vary significantly by product (Web Unlocker vs Scraping Browser vs Datasets).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "browse-ai-api",
+   "name": "Browse AI API",
+   "homepage": "https://www.browse.ai",
+   "docs": "https://docs.browse.ai/api/v2",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <key>",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free forever plan: 50 credits/mo, no card required",
+   "sdk": [
+    "python",
+    "node",
+    "ruby",
+    "php"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Trigger pre-built or custom 'robots' to extract and monitor web data via REST API, returning structured JSON.",
+   "notes": "",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "browser-use-cloud-api",
+   "name": "Browser Use Cloud API",
+   "homepage": "https://browser-use.com",
+   "docs": "https://docs.browser-use.com",
+   "auth": "api_key",
+   "auth_hint": "X-Browser-Use-API-Key header (key prefix bu_)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "$15 one-time signup credit for new accounts (Google/GitHub/Microsoft); paid usage afterward",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.browser-use.com/llms.txt",
+   "desc_en": "Launch cloud browser sessions and run AI browser-automation agent tasks via REST API or Python/TypeScript SDK.",
+   "notes": "Pay-as-you-go pricing: browser-hours + per-task fee + token markup; no ongoing free tier beyond signup credit.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "browserbase-stagehand",
+   "name": "Browserbase (+ Stagehand)",
+   "homepage": "https://www.browserbase.com",
+   "docs": "https://docs.browserbase.com",
+   "auth": "api_key",
+   "auth_hint": "X-BB-API-Key header, plus Project ID",
+   "mcp": {
+    "type": "official",
+    "url": "https://www.browserbase.com/mcp"
+   },
+   "free_tier": "free tier: limited browser hours, single concurrency, no card required",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
+   "notes": "Billed by browser-hours/compute time; Stagehand SDK itself is open source but needs a browser backend such as Browserbase.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "diffbot",
+   "name": "Diffbot",
+   "homepage": "https://www.diffbot.com",
+   "docs": "https://www.diffbot.com/docs/extract/",
+   "auth": "api_key",
+   "auth_hint": "token= query parameter",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free plan: 10,000 credits/mo, no card required (5 req/min limit)",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Automatically extract structured data (articles, products, people) from any URL via REST API, no custom parsing rules needed.",
+   "notes": "Also offers Knowledge Graph and Crawl products with separate pricing; official client library docs listed as 'coming soon'.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "firecrawl",
+   "name": "Firecrawl",
+   "homepage": "https://www.firecrawl.dev",
+   "docs": "https://docs.firecrawl.dev",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <fc-key>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.firecrawl.dev/v2/mcp"
+   },
+   "free_tier": "free tier: 1,000 credits/mo, no card required",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.firecrawl.dev/llms.txt",
+   "desc_en": "Scrape, crawl, and extract structured data from any website via a single REST API call.",
+   "notes": "Also offers OAuth-based remote MCP endpoint (mcp.firecrawl.dev/v2/mcp-oauth) and a keyless trial with daily limits.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "hyperbrowser",
+   "name": "Hyperbrowser",
+   "homepage": "https://www.hyperbrowser.ai",
+   "docs": "https://docs.hyperbrowser.ai",
+   "auth": "api_key",
+   "auth_hint": "x-api-key header",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/hyperbrowserai/mcp"
+   },
+   "free_tier": "free plan: starter credits, 1 concurrent browser, no card required",
+   "sdk": [
+    "python",
+    "node"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Spin up cloud browsers and call scrape, crawl, and structured-extract endpoints via REST API or MCP server.",
+   "notes": "SDKs are compatible with Playwright, Puppeteer, and Selenium.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "oxylabs",
+   "name": "Oxylabs",
+   "homepage": "https://oxylabs.io",
+   "docs": "https://developers.oxylabs.io",
+   "auth": "api_key",
+   "auth_hint": "HTTP Basic Auth with API-user credentials (--user USERNAME:PASSWORD)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free trial available (check pricing)",
+   "sdk": [
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": "https://developers.oxylabs.io/llms-full.txt",
+   "desc_en": "Fetch web pages, search-engine results, and e-commerce data at scale via REST API with built-in proxy/unblocking infrastructure.",
+   "notes": "Enterprise-oriented pricing overall, but self-serve API-user creation and free trial are available via the dashboard.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "playwright-mcp-microsoft",
+   "name": "Playwright MCP (Microsoft)",
+   "homepage": "https://github.com/microsoft/playwright-mcp",
+   "docs": "https://github.com/microsoft/playwright-mcp#readme",
+   "auth": "none",
+   "auth_hint": "no auth; runs as a local process via npx",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/microsoft/playwright-mcp"
+   },
+   "free_tier": "free, open source, no key",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Official Microsoft MCP server giving agents structured browser control (click, type, navigate) via Playwright's accessibility tree.",
+   "notes": "Runs locally/self-hosted via `npx @playwright/mcp`; no cloud hosting, account, or API key required, but needs a local or self-managed browser runtime. Apache-2.0 licensed.",
+   "verified": "2026-09-24",
+   "no_auth": true,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "scrapegraphai-api",
+   "name": "ScrapeGraphAI API",
+   "homepage": "https://scrapegraphai.com",
+   "docs": "https://docs.scrapegraphai.com/introduction",
+   "auth": "api_key",
+   "auth_hint": "API key from dashboard (exact header name not published; check docs)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free plan: 500 one-time API credits",
+   "sdk": [
+    "python",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.scrapegraphai.com/llms.txt",
+   "desc_en": "Use AI-driven prompts to scrape and extract structured data from webpages via REST API or Python/JS SDK.",
+   "notes": "Also offers the open-source scrapegraph-ai library with LangChain/LlamaIndex integrations.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "scraperapi",
+   "name": "ScraperAPI",
+   "homepage": "https://www.scraperapi.com",
+   "docs": "https://docs.scraperapi.com",
+   "auth": "api_key",
+   "auth_hint": "api_key query parameter",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "5,000 free API credits (trial), no long-term free plan",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Scrape any webpage with automatic proxy rotation, CAPTCHA handling, and JS rendering via a single REST API call.",
+   "notes": "Widely used alternative to ScrapingBee/Zyte; no official MCP server found.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "scrapfly",
+   "name": "Scrapfly",
+   "homepage": "https://scrapfly.io",
+   "docs": "https://scrapfly.io/docs",
+   "auth": "api_key+oauth2",
+   "auth_hint": "key= query param for REST API; API key or OAuth2 for MCP server",
+   "mcp": {
+    "type": "official",
+    "url": "https://scrapfly.io/products/mcp-cloud"
+   },
+   "free_tier": "1,000 free credits/mo, no card required, no time limit",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Scrape webpages, run cloud browsers, and capture screenshots via REST API or hosted MCP server with anti-bot bypass.",
+   "notes": "MCP usage draws from the same credit balance as direct API calls.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "scrapingbee",
+   "name": "ScrapingBee",
+   "homepage": "https://www.scrapingbee.com",
+   "docs": "https://www.scrapingbee.com/documentation/",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <key> (legacy: api_key query param, deprecated)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "1,000 free API credits, no card required",
+   "sdk": [
+    "python",
+    "node"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Scrape any webpage with JS rendering, proxy rotation, and screenshot capture via a single REST API call.",
+   "notes": "Postman collection provided in place of a published OpenAPI spec.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "spider-cloud",
+   "name": "Spider.cloud",
+   "homepage": "https://spider.cloud",
+   "docs": "https://spider.cloud/docs/api",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer sk-<key>",
+   "mcp": {
+    "type": "official",
+    "url": "https://spider.cloud/mcp/"
+   },
+   "free_tier": "keyless trial: 25 free runs/day, no account required",
+   "sdk": [
+    "python",
+    "javascript",
+    "rust"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Crawl and scrape websites at scale, returning JSON/XML/CSV, via REST API, CLI, or MCP server.",
+   "notes": "",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "steel",
+   "name": "Steel",
+   "homepage": "https://steel.dev",
+   "docs": "https://docs.steel.dev",
+   "auth": "api_key",
+   "auth_hint": "Steel-Api-Key header",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "Hobby tier: 100 browser-hours/mo, 500 requests/day, no card required",
+   "sdk": [
+    "python",
+    "node"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Create managed cloud browser sessions with stealth proxies and CAPTCHA solving, controllable via REST API or Playwright/Puppeteer.",
+   "notes": "Open-source self-hostable browser engine (steel-browser) also available; no official MCP server confirmed as of check.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "zyte-api",
+   "name": "Zyte API",
+   "homepage": "https://www.zyte.com",
+   "docs": "https://docs.zyte.com/zyte-api/get-started.html",
+   "auth": "api_key",
+   "auth_hint": "HTTP Basic Auth: API key as username, blank password",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "$5 free credit for the first month",
+   "sdk": [
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Fetch and auto-extract web pages (HTML, browser rendering, product/article data) via one HTTP API with ban avoidance.",
+   "notes": "Part of Zyte's broader suite (Scrapy Cloud, Zyte IDE).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  }
+ ]
 }

@@ -1,0 +1,33 @@
+{
+  "name": "ai-agents-api-library",
+  "version": "0.1.0",
+  "description": "MCP server: search a verified catalog of 300+ APIs and MCP servers that AI agents can call (auth, free tier, MCP endpoint, docs).",
+  "type": "module",
+  "bin": {
+    "ai-agents-api-library": "mcp/server.mjs"
+  },
+  "files": [
+    "mcp/",
+    "catalog/"
+  ],
+  "scripts": {
+    "start": "node mcp/server.mjs",
+    "test": "node mcp/test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": ["mcp", "model-context-protocol", "ai-agents", "api-catalog", "tool-calling", "llm-tools"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eater2/ai_agents_api_library.git"
+  },
+  "homepage": "https://github.com/eater2/ai_agents_api_library#readme",
+  "license": "MIT",
+  "author": "Marek Papis",
+  "mcpName": "io.github.eater2/ai-agents-api-library",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.1",
+    "zod": "^4.6.5"
+  }
+}

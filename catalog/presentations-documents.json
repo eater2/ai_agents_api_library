@@ -1,350 +1,454 @@
 {
-  "category": {
-    "id": "presentations-documents",
-    "name": "Documents, OCR and presentations",
-    "description": "Parse PDFs and scans, convert file formats, generate slides and collect e-signatures."
+ "category": {
+  "id": "presentations-documents",
+  "name": "Documents, OCR and presentations",
+  "description": "Parse PDFs and scans, convert file formats, generate slides and collect e-signatures."
+ },
+ "entries": [
+  {
+   "id": "adobe-pdf-services-api",
+   "name": "Adobe PDF Services API",
+   "homepage": "https://developer.adobe.com/document-services/",
+   "docs": "https://developer.adobe.com/document-services/docs/overview/pdf-services-api/",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <access_token> obtained via OAuth Server-to-Server client_credentials grant (client_id/client_secret)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: 500 document transactions/month, no credit card required",
+   "sdk": [
+    "python",
+    "java",
+    "nodejs",
+    "dotnet"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Programmatically create, convert, combine, compress, OCR, and extract data from PDF documents.",
+   "notes": "As of January 2025, JWT/service-account auth is deprecated; all new integrations must use OAuth Server-to-Server (2-legged client-credentials) via Adobe Developer Console.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
   },
-  "entries": [
-    {
-      "id": "adobe-pdf-services-api",
-      "name": "Adobe PDF Services API",
-      "category": "presentations-documents",
-      "homepage": "https://developer.adobe.com/document-services/",
-      "docs": "https://developer.adobe.com/document-services/docs/overview/pdf-services-api/",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <access_token> obtained via OAuth Server-to-Server client_credentials grant (client_id/client_secret)",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: 500 document transactions/month, no credit card required",
-      "sdk": [
-        "python",
-        "java",
-        "nodejs",
-        "dotnet"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Programmatically create, convert, combine, compress, OCR, and extract data from PDF documents.",
-      "notes": "As of January 2025, JWT/service-account auth is deprecated; all new integrations must use OAuth Server-to-Server (2-legged client-credentials) via Adobe Developer Console.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "aws-textract",
-      "name": "AWS Textract",
-      "category": "presentations-documents",
-      "homepage": "https://aws.amazon.com/textract/",
-      "docs": "https://docs.aws.amazon.com/textract/latest/dg/what-is.html",
-      "auth": "cloud_iam",
-      "auth_hint": "AWS SigV4-signed requests using IAM access key/secret or role credentials",
-      "mcp": {
-        "type": "community",
-        "url": "https://github.com/ag2-mcp-servers/amazon-textract"
-      },
-      "free_tier": "free tier: 1,000 pages/month (DetectDocumentText & AnalyzeDocument, each) for first 3 months; AnalyzeExpense/AnalyzeID get 150 pages/month free",
-      "sdk": [
-        "python",
-        "java",
-        "javascript",
-        "dotnet",
-        "go",
-        "ruby",
-        "php"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Detect and extract text, forms, tables, and data from scanned documents and images via API calls.",
-      "notes": "Requires an AWS account and IAM credentials; region-specific; free tier applies only for the first 3 months after the first Textract request; official AWS Labs MCP catalog exists (github.com/awslabs/mcp) but has no dedicated Textract server, only community ones.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "azure-ai-document-intelligence",
-      "name": "Azure AI Document Intelligence",
-      "category": "presentations-documents",
-      "homepage": "https://azure.microsoft.com/products/ai-services/ai-document-intelligence",
-      "docs": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/",
-      "auth": "cloud_iam",
-      "auth_hint": "Ocp-Apim-Subscription-Key: <key> header (Azure AD/Entra ID Bearer token also supported)",
-      "mcp": {
-        "type": "community",
-        "url": "https://playbooks.com/mcp/cognitive-stack-azure-form-recognizer"
-      },
-      "free_tier": "free tier: F0 pricing tier, 500 pages/month, rate-limited",
-      "sdk": [
-        "python",
-        "csharp",
-        "java",
-        "javascript"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Analyze forms, invoices, receipts, and scanned documents to extract structured JSON via REST API.",
-      "notes": "Auth via Azure subscription key or Entra ID (Azure AD) OAuth2; current GA version is 4.0; legacy v3.0 API scheduled to retire March 30, 2029; no official Microsoft MCP server specific to Document Intelligence, only community implementations and the general-purpose Azure MCP Server.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "cloudconvert-api",
-      "name": "CloudConvert API",
-      "category": "presentations-documents",
-      "homepage": "https://cloudconvert.com/api/v2",
-      "docs": "https://cloudconvert.com/api/v2",
-      "auth": "api_key+oauth2",
-      "auth_hint": "Authorization: Bearer <API_KEY> (OAuth2 authorization-code/implicit flow also supported for user-facing apps)",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.cloudconvert.com"
-      },
-      "free_tier": "free: 25 conversion minutes/day for the web tool; paid credit packages for the API; free Sandbox API for unlimited test jobs without consuming credits",
-      "sdk": [
-        "php",
-        "nodejs",
-        "python",
-        "ruby",
-        "java",
-        "dotnet"
-      ],
-      "openapi": null,
-      "llms_txt": "https://cloudconvert.com/llms.txt",
-      "desc_en": "Convert, compress, merge, watermark, and OCR files across 200+ formats via REST API or MCP.",
-      "notes": "Official MCP server at https://mcp.cloudconvert.com uses Streamable HTTP transport and authenticates via OAuth2 against the user's CloudConvert account (no API key needed for MCP); no public OpenAPI/Swagger file is served by CloudConvert itself.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "docusign-esignature-api",
-      "name": "DocuSign eSignature API",
-      "category": "presentations-documents",
-      "homepage": "https://developers.docusign.com",
-      "docs": "https://developers.docusign.com/docs/esign-rest-api/",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <access_token> via OAuth2 Authorization Code grant or JWT Grant",
-      "mcp": {
-        "type": "official",
-        "url": "https://developers.docusign.com/platform/mcp-server/"
-      },
-      "free_tier": "free developer/demo sandbox account (account-d.docusign.com) with unlimited test envelopes; production use requires a paid DocuSign plan",
-      "sdk": [
-        "python",
-        "java",
-        "csharp",
-        "nodejs",
-        "php",
-        "ruby"
-      ],
-      "openapi": "https://github.com/docusign/OpenAPI-Specifications",
-      "llms_txt": null,
-      "desc_en": "Send, sign, track, and manage electronic signature envelopes and agreement workflows via REST API.",
-      "notes": "Official Docusign MCP Server is in Open Beta and covers eSignature plus Navigator/Maestro/Workspaces; JWT grant requires one-time user consent; production API calls require a paid plan beyond the free developer sandbox.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "gamma-api",
-      "name": "Gamma API",
-      "category": "presentations-documents",
-      "homepage": "https://gamma.app",
-      "docs": "https://developers.gamma.app/generations/create-generation",
-      "auth": "api_key+oauth2",
-      "auth_hint": "X-API-KEY: <key> (OAuth 2.0 Bearer tokens also accepted on the same endpoints)",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.gamma.app/mcp"
-      },
-      "free_tier": "paid only: requires Pro, Ultra, Teams, or Business plan; no free API tier",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": "https://developers.gamma.app/llms.txt",
-      "desc_en": "Generate, poll, and export AI-made presentations, documents, or social posts as PDF/PPTX via REST API.",
-      "notes": "Async workflow (POST /v1.0/generations then poll GET .../{id}); base URL https://public-api.gamma.app/v1.0; official remote MCP server is OAuth2-secured (RFC 7591 dynamic client registration).",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "google-document-ai",
-      "name": "Google Document AI",
-      "category": "presentations-documents",
-      "homepage": "https://cloud.google.com/document-ai",
-      "docs": "https://cloud.google.com/document-ai/docs/reference/rest",
-      "auth": "cloud_iam",
-      "auth_hint": "Authorization: Bearer <OAuth2 access token> (service account) or API key for some endpoints",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "free tier: 1,000 pages/month per processor type, then $0.65-$10 per 1,000 pages",
-      "sdk": [
-        "python",
-        "nodejs",
-        "java",
-        "go",
-        "php",
-        "ruby",
-        "csharp",
-        "cpp"
-      ],
-      "openapi": "https://documentai.googleapis.com/$discovery/rest?version=v1",
-      "llms_txt": null,
-      "desc_en": "Extract text, tables, and structured data from documents like invoices, forms, and IDs via REST API.",
-      "notes": "Requires a GCP project and service-account/OAuth2 credentials (standard Google Cloud IAM auth); region-specific endpoints (global/us/eu); no official MCP server found.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "google-slides-docs-api",
-      "name": "Google Slides / Docs API",
-      "category": "presentations-documents",
-      "homepage": "https://developers.google.com/slides",
-      "docs": "https://developers.google.com/workspace/slides/api/reference/rest",
-      "auth": "oauth2",
-      "auth_hint": "Authorization: Bearer <OAuth2 token>; scopes e.g. https://www.googleapis.com/auth/presentations",
-      "mcp": {
-        "type": "official",
-        "url": "https://slidesmcp.googleapis.com/mcp"
-      },
-      "free_tier": "free, no key (standard Google API usage quotas apply; requires GCP project + OAuth consent)",
-      "sdk": [
-        "python",
-        "java",
-        "javascript",
-        "go",
-        "nodejs"
-      ],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Read and programmatically edit Google Slides presentations (slides, shapes, text, tables) via REST API or MCP.",
-      "notes": "Official remote MCP server (slidesmcp.googleapis.com, tools: read_presentation, update_presentation) is part of the Google Workspace Developer Preview Program - limited/early access. Non-OpenAPI Discovery Doc available at https://slides.googleapis.com/$discovery/rest?version=v1.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "llamaparse-llamacloud",
-      "name": "LlamaParse (LlamaCloud)",
-      "category": "presentations-documents",
-      "homepage": "https://www.llamaindex.ai/llamaparse",
-      "docs": "https://developers.llamaindex.ai/llamaparse/",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <LLAMA_CLOUD_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://mcp.llamaindex.ai/mcp"
-      },
-      "free_tier": "check pricing: credit-based at $1.25/1,000 credits (1-45+ credits/page depending on tier); 48h parse cache is free to re-query",
-      "sdk": [
-        "python",
-        "typescript",
-        "go",
-        "java"
-      ],
-      "openapi": null,
-      "llms_txt": "https://developers.llamaindex.ai/llms.txt",
-      "desc_en": "Parse, classify, extract, and split complex documents (tables, forms, charts) into LLM-ready structured data via API.",
-      "notes": "Regional MCP endpoints: mcp.llamaindex.ai (North America) and mcp.eu.llamaindex.ai (Europe), sign in with LlamaCloud account. Pricing tiers: Fast/Cost-effective/Agentic/Agentic Plus.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "mistral-ocr-api",
-      "name": "Mistral OCR API",
-      "category": "presentations-documents",
-      "homepage": "https://mistral.ai",
-      "docs": "https://docs.mistral.ai/capabilities/OCR/basic_ocr/",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <MISTRAL_API_KEY>",
-      "mcp": {
-        "type": "community",
-        "url": "https://github.com/D-Diaa/mistral-ocr-mcp"
-      },
-      "free_tier": "paid only: $4/1,000 pages (OCR), $5/1,000 pages (Document AI); 50% off via Batch API; no free tier confirmed",
-      "sdk": [
-        "python",
-        "typescript"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.mistral.ai/llms.txt",
-      "desc_en": "Extract text, tables, and layout structure from PDFs and images as structured Markdown/JSON via REST API.",
-      "notes": "Fixed model id e.g. mistral-ocr-2512; block/table/bounding-box extraction requires OCR 4+/2512+; no official Mistral-maintained MCP server, only community implementations.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "pdf-co-api",
-      "name": "PDF.co API",
-      "category": "presentations-documents",
-      "homepage": "https://pdf.co",
-      "docs": "https://developer.pdf.co",
-      "auth": "api_key",
-      "auth_hint": "x-api-key: <API_KEY> header",
-      "mcp": {
-        "type": "none",
-        "url": null
-      },
-      "free_tier": "trial credits: 10,000 credits for 1 month, no credit card required",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": "https://developer.pdf.co/llms.txt",
-      "desc_en": "Convert, merge, split, edit, fill forms, OCR, and extract data from PDFs via REST API.",
-      "notes": "Base URL https://api.pdf.co/v1; credit-based usage pricing after trial; code samples (not formal SDKs) published at github.com/pdfdotco/pdf-co-api-samples.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "reducto-api",
-      "name": "Reducto API",
-      "category": "presentations-documents",
-      "homepage": "https://reducto.ai",
-      "docs": "https://docs.reducto.ai/get-started/quickstart",
-      "auth": "api_key",
-      "auth_hint": "Authorization: Bearer <REDUCTO_API_KEY>",
-      "mcp": {
-        "type": "official",
-        "url": "https://docs.reducto.ai/mcp-server"
-      },
-      "free_tier": "15,000 free credits (~$150 value) for new Standard accounts; extra credits via Startup Program for qualifying early-stage teams",
-      "sdk": [
-        "python",
-        "typescript",
-        "go"
-      ],
-      "openapi": "https://docs.reducto.ai/openapi.json",
-      "llms_txt": "https://docs.reducto.ai/llms.txt",
-      "desc_en": "Parse, extract, split, edit, and classify complex documents into structured JSON/Markdown via REST API or SDKs.",
-      "notes": "Pay-as-you-go after free credits: ~$10/1,000 pages (Parse), ~$20/1,000 pages (Extract); official MCP repo at github.com/reductoai/mcp-server-reducto; hosted MCP variant does not support local file paths, only URLs.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "slidespeak-api",
-      "name": "SlideSpeak API",
-      "category": "presentations-documents",
-      "homepage": "https://slidespeak.co",
-      "docs": "https://docs.slidespeak.co/v1/quickstart",
-      "auth": "api_key",
-      "auth_hint": "X-API-Key: <key>",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/SlideSpeak/slidespeak-mcp"
-      },
-      "free_tier": "check pricing (no free tier confirmed on docs; requires API key from developer settings)",
-      "sdk": [],
-      "openapi": null,
-      "llms_txt": null,
-      "desc_en": "Generate, edit, and download PowerPoint/PDF presentations from text, documents, or outlines via REST API.",
-      "notes": "Async task-based workflow with polling (GET /task_status/{task_id}); download URLs are short-lived; no official language SDK, only a Postman collection plus the MCP server.",
-      "verified": "2026-09-24"
-    },
-    {
-      "id": "unstructured-api",
-      "name": "Unstructured API",
-      "category": "presentations-documents",
-      "homepage": "https://unstructured.io",
-      "docs": "https://docs.unstructured.io/api-reference/overview",
-      "auth": "api_key",
-      "auth_hint": "unstructured-api-key: <key> (verify exact header on api-reference page)",
-      "mcp": {
-        "type": "official",
-        "url": "https://github.com/Unstructured-IO/UNS-MCP"
-      },
-      "free_tier": "check pricing: low-cost entry tier plus Pay-As-You-Go per-page billing; no explicit free quota confirmed",
-      "sdk": [
-        "python"
-      ],
-      "openapi": null,
-      "llms_txt": "https://docs.unstructured.io/llms.txt",
-      "desc_en": "Partition and extract structured elements (text, tables, layout) from PDFs, docs, and images for RAG pipelines via API.",
-      "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Pipeline/Workflow API. Official MCP server (UNS-MCP) manages sources, destinations, workflows and jobs rather than one-shot partitioning.",
-      "verified": "2026-09-24"
-    }
-  ]
+  {
+   "id": "aws-textract",
+   "name": "AWS Textract",
+   "homepage": "https://aws.amazon.com/textract/",
+   "docs": "https://docs.aws.amazon.com/textract/latest/dg/what-is.html",
+   "auth": "cloud_iam",
+   "auth_hint": "AWS SigV4-signed requests using IAM access key/secret or role credentials",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/ag2-mcp-servers/amazon-textract"
+   },
+   "free_tier": "free tier: 1,000 pages/month (DetectDocumentText & AnalyzeDocument, each) for first 3 months; AnalyzeExpense/AnalyzeID get 150 pages/month free",
+   "sdk": [
+    "python",
+    "java",
+    "javascript",
+    "dotnet",
+    "go",
+    "ruby",
+    "php"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Detect and extract text, forms, tables, and data from scanned documents and images via API calls.",
+   "notes": "Requires an AWS account and IAM credentials; region-specific; free tier applies only for the first 3 months after the first Textract request; official AWS Labs MCP catalog exists (github.com/awslabs/mcp) but has no dedicated Textract server, only community ones.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "azure-ai-document-intelligence",
+   "name": "Azure AI Document Intelligence",
+   "homepage": "https://azure.microsoft.com/products/ai-services/ai-document-intelligence",
+   "docs": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/",
+   "auth": "cloud_iam",
+   "auth_hint": "Ocp-Apim-Subscription-Key: <key> header (Azure AD/Entra ID Bearer token also supported)",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: F0 pricing tier, 500 pages/month, rate-limited",
+   "sdk": [
+    "python",
+    "csharp",
+    "java",
+    "javascript"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Analyze forms, invoices, receipts, and scanned documents to extract structured JSON via REST API.",
+   "notes": "Auth via Azure subscription key or Entra ID (Azure AD) OAuth2; current GA version is 4.0; legacy v3.0 API scheduled to retire March 30, 2029; no official Microsoft MCP server specific to Document Intelligence, only community implementations and the general-purpose Azure MCP Server.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok"
+   }
+  },
+  {
+   "id": "cloudconvert-api",
+   "name": "CloudConvert API",
+   "homepage": "https://cloudconvert.com/api/v2",
+   "docs": "https://cloudconvert.com/api/v2",
+   "auth": "api_key+oauth2",
+   "auth_hint": "Authorization: Bearer <API_KEY> (OAuth2 authorization-code/implicit flow also supported for user-facing apps)",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.cloudconvert.com"
+   },
+   "free_tier": "free: 25 conversion minutes/day for the web tool; paid credit packages for the API; free Sandbox API for unlimited test jobs without consuming credits",
+   "sdk": [
+    "php",
+    "nodejs",
+    "python",
+    "ruby",
+    "java",
+    "dotnet"
+   ],
+   "openapi": null,
+   "llms_txt": "https://cloudconvert.com/llms.txt",
+   "desc_en": "Convert, compress, merge, watermark, and OCR files across 200+ formats via REST API or MCP.",
+   "notes": "Official MCP server at https://mcp.cloudconvert.com uses Streamable HTTP transport and authenticates via OAuth2 against the user's CloudConvert account (no API key needed for MCP); no public OpenAPI/Swagger file is served by CloudConvert itself.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "docusign-esignature-api",
+   "name": "DocuSign eSignature API",
+   "homepage": "https://developers.docusign.com",
+   "docs": "https://developers.docusign.com/docs/esign-rest-api/",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <access_token> via OAuth2 Authorization Code grant or JWT Grant",
+   "mcp": {
+    "type": "official",
+    "url": "https://developers.docusign.com/platform/mcp-server/"
+   },
+   "free_tier": "free developer/demo sandbox account (account-d.docusign.com) with unlimited test envelopes; production use requires a paid DocuSign plan",
+   "sdk": [
+    "python",
+    "java",
+    "csharp",
+    "nodejs",
+    "php",
+    "ruby"
+   ],
+   "openapi": "https://github.com/docusign/OpenAPI-Specifications",
+   "llms_txt": null,
+   "desc_en": "Send, sign, track, and manage electronic signature envelopes and agreement workflows via REST API.",
+   "notes": "Official Docusign MCP Server is in Open Beta and covers eSignature plus Navigator/Maestro/Workspaces; JWT grant requires one-time user consent; production API calls require a paid plan beyond the free developer sandbox.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "openapi": "ok"
+   }
+  },
+  {
+   "id": "gamma-api",
+   "name": "Gamma API",
+   "homepage": "https://gamma.app",
+   "docs": "https://developers.gamma.app/generations/create-generation",
+   "auth": "api_key+oauth2",
+   "auth_hint": "X-API-KEY: <key> (OAuth 2.0 Bearer tokens also accepted on the same endpoints)",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.gamma.app/mcp"
+   },
+   "free_tier": "paid only: requires Pro, Ultra, Teams, or Business plan; no free API tier",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": "https://developers.gamma.app/llms.txt",
+   "desc_en": "Generate, poll, and export AI-made presentations, documents, or social posts as PDF/PPTX via REST API.",
+   "notes": "Async workflow (POST /v1.0/generations then poll GET .../{id}); base URL https://public-api.gamma.app/v1.0; official remote MCP server is OAuth2-secured (RFC 7591 dynamic client registration).",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "google-document-ai",
+   "name": "Google Document AI",
+   "homepage": "https://cloud.google.com/document-ai",
+   "docs": "https://cloud.google.com/document-ai/docs/reference/rest",
+   "auth": "cloud_iam",
+   "auth_hint": "Authorization: Bearer <OAuth2 access token> (service account) or API key for some endpoints",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "free tier: 1,000 pages/month per processor type, then $0.65-$10 per 1,000 pages",
+   "sdk": [
+    "python",
+    "nodejs",
+    "java",
+    "go",
+    "php",
+    "ruby",
+    "csharp",
+    "cpp"
+   ],
+   "openapi": "https://documentai.googleapis.com/$discovery/rest?version=v1",
+   "llms_txt": null,
+   "desc_en": "Extract text, tables, and structured data from documents like invoices, forms, and IDs via REST API.",
+   "notes": "Requires a GCP project and service-account/OAuth2 credentials (standard Google Cloud IAM auth); region-specific endpoints (global/us/eu); no official MCP server found.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "openapi": "ok"
+   }
+  },
+  {
+   "id": "google-slides-docs-api",
+   "name": "Google Slides / Docs API",
+   "homepage": "https://developers.google.com/slides",
+   "docs": "https://developers.google.com/workspace/slides/api/reference/rest",
+   "auth": "oauth2",
+   "auth_hint": "Authorization: Bearer <OAuth2 token>; scopes e.g. https://www.googleapis.com/auth/presentations",
+   "mcp": {
+    "type": "official",
+    "url": "https://slidesmcp.googleapis.com/mcp"
+   },
+   "free_tier": "free, no key (standard Google API usage quotas apply; requires GCP project + OAuth consent)",
+   "sdk": [
+    "python",
+    "java",
+    "javascript",
+    "go",
+    "nodejs"
+   ],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Read and programmatically edit Google Slides presentations (slides, shapes, text, tables) via REST API or MCP.",
+   "notes": "Official remote MCP server (slidesmcp.googleapis.com, tools: read_presentation, update_presentation) is part of the Google Workspace Developer Preview Program - limited/early access. Non-OpenAPI Discovery Doc available at https://slides.googleapis.com/$discovery/rest?version=v1.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable"
+   }
+  },
+  {
+   "id": "llamaparse-llamacloud",
+   "name": "LlamaParse (LlamaCloud)",
+   "homepage": "https://www.llamaindex.ai/llamaparse",
+   "docs": "https://developers.llamaindex.ai/llamaparse/",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <LLAMA_CLOUD_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.llamaindex.ai/mcp"
+   },
+   "free_tier": "check pricing: credit-based at $1.25/1,000 credits (1-45+ credits/page depending on tier); 48h parse cache is free to re-query",
+   "sdk": [
+    "python",
+    "typescript",
+    "go",
+    "java"
+   ],
+   "openapi": null,
+   "llms_txt": "https://developers.llamaindex.ai/llms.txt",
+   "desc_en": "Parse, classify, extract, and split complex documents (tables, forms, charts) into LLM-ready structured data via API.",
+   "notes": "Regional MCP endpoints: mcp.llamaindex.ai (North America) and mcp.eu.llamaindex.ai (Europe), sign in with LlamaCloud account. Pricing tiers: Fast/Cost-effective/Agentic/Agentic Plus.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "reachable",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "mistral-ocr-api",
+   "name": "Mistral OCR API",
+   "homepage": "https://mistral.ai",
+   "docs": "https://docs.mistral.ai/capabilities/OCR/basic_ocr/",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <MISTRAL_API_KEY>",
+   "mcp": {
+    "type": "community",
+    "url": "https://github.com/D-Diaa/mistral-ocr-mcp"
+   },
+   "free_tier": "paid only: $4/1,000 pages (OCR), $5/1,000 pages (Document AI); 50% off via Batch API; no free tier confirmed",
+   "sdk": [
+    "python",
+    "typescript"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.mistral.ai/llms.txt",
+   "desc_en": "Extract text, tables, and layout structure from PDFs and images as structured Markdown/JSON via REST API.",
+   "notes": "Fixed model id e.g. mistral-ocr-2512; block/table/bounding-box extraction requires OCR 4+/2512+; no official Mistral-maintained MCP server, only community implementations.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "pdf-co-api",
+   "name": "PDF.co API",
+   "homepage": "https://pdf.co",
+   "docs": "https://developer.pdf.co",
+   "auth": "api_key",
+   "auth_hint": "x-api-key: <API_KEY> header",
+   "mcp": {
+    "type": "none",
+    "url": null
+   },
+   "free_tier": "trial credits: 10,000 credits for 1 month, no credit card required",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": "https://developer.pdf.co/llms.txt",
+   "desc_en": "Convert, merge, split, edit, fill forms, OCR, and extract data from PDFs via REST API.",
+   "notes": "Base URL https://api.pdf.co/v1; credit-based usage pricing after trial; code samples (not formal SDKs) published at github.com/pdfdotco/pdf-co-api-samples.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "reducto-api",
+   "name": "Reducto API",
+   "homepage": "https://reducto.ai",
+   "docs": "https://docs.reducto.ai/get-started/quickstart",
+   "auth": "api_key",
+   "auth_hint": "Authorization: Bearer <REDUCTO_API_KEY>",
+   "mcp": {
+    "type": "official",
+    "url": "https://docs.reducto.ai/mcp-server"
+   },
+   "free_tier": "15,000 free credits (~$150 value) for new Standard accounts; extra credits via Startup Program for qualifying early-stage teams",
+   "sdk": [
+    "python",
+    "typescript",
+    "go"
+   ],
+   "openapi": "https://docs.reducto.ai/openapi.json",
+   "llms_txt": "https://docs.reducto.ai/llms.txt",
+   "desc_en": "Parse, extract, split, edit, and classify complex documents into structured JSON/Markdown via REST API or SDKs.",
+   "notes": "Pay-as-you-go after free credits: ~$10/1,000 pages (Parse), ~$20/1,000 pages (Extract); official MCP repo at github.com/reductoai/mcp-server-reducto; hosted MCP variant does not support local file paths, only URLs.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": true,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "openapi": "ok",
+    "llms_txt": "ok"
+   }
+  },
+  {
+   "id": "slidespeak-api",
+   "name": "SlideSpeak API",
+   "homepage": "https://slidespeak.co",
+   "docs": "https://docs.slidespeak.co/v1/quickstart",
+   "auth": "api_key",
+   "auth_hint": "X-API-Key: <key>",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/SlideSpeak/slidespeak-mcp"
+   },
+   "free_tier": "check pricing (no free tier confirmed on docs; requires API key from developer settings)",
+   "sdk": [],
+   "openapi": null,
+   "llms_txt": null,
+   "desc_en": "Generate, edit, and download PowerPoint/PDF presentations from text, documents, or outlines via REST API.",
+   "notes": "Async task-based workflow with polling (GET /task_status/{task_id}); download URLs are short-lived; no official language SDK, only a Postman collection plus the MCP server.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok"
+   }
+  },
+  {
+   "id": "unstructured-api",
+   "name": "Unstructured API",
+   "homepage": "https://unstructured.io",
+   "docs": "https://docs.unstructured.io/api-reference/overview",
+   "auth": "api_key",
+   "auth_hint": "unstructured-api-key: <key> (verify exact header on api-reference page)",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/Unstructured-IO/UNS-MCP"
+   },
+   "free_tier": "check pricing: low-cost entry tier plus Pay-As-You-Go per-page billing; no explicit free quota confirmed",
+   "sdk": [
+    "python"
+   ],
+   "openapi": null,
+   "llms_txt": "https://docs.unstructured.io/llms.txt",
+   "desc_en": "Partition and extract structured elements (text, tables, layout) from PDFs, docs, and images for RAG pipelines via API.",
+   "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Pipeline/Workflow API. Official MCP server (UNS-MCP) manages sources, destinations, workflows and jobs rather than one-shot partitioning.",
+   "verified": "2026-09-24",
+   "no_auth": false,
+   "has_free_tier": false,
+   "stale": false,
+   "link_check": {
+    "checked_at": "2026-09-24",
+    "docs": "ok",
+    "mcp": "ok",
+    "llms_txt": "ok"
+   }
+  }
+ ]
 }
