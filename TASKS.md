@@ -80,8 +80,8 @@ Na koniec
 - [x] Wersja 0.2.0 (nowe narzędzie `get_reviews`) we wszystkich manifestach i w `mcp/core.mjs`; test „one version everywhere” sprawdza też wersję serwera (2026-09-24)
 - [x] Tagi wersji (`v0.2.0` … `v0.2.3`); przy każdej zmianie narzędzi podbijać wersję, żeby `/plugin update` ją zauważył
 - [x] `vercel.json` includeFiles: `catalog/**`, więc `get_reviews` na Vercelu ma lokalną kopię opinii, gdy GitHub nie odpowiada (2026-09-24)
-- [ ] Weryfikacja per pole: `source_url` + `checked_at` dla `auth`, `free_tier`, `mcp`
-- [ ] Rozróżnienie MCP `official` / `vendor-hosted` / `community` + weryfikacja domeny
+- [x] Weryfikacja per pole: `source_url` + `checked_at` dla `auth`, `free_tier`, `mcp` (auth_scheme 327/330, free_plan 284, mcp 286; v0.3.0–0.3.3)
+- [x] Rozróżnienie MCP `official` / `vendor-hosted` / `community` + weryfikacja domeny (`mcp.kind`, `mcp.domain_verified`, v0.3.0)
 
 ## P2b — oceny i opinie jako „proof”
 
@@ -110,10 +110,10 @@ Propozycja startu: GitHub + npm/PyPI + Smithery/Glama (legalne API, mierzą uży
 
 ## P3 — pola danych
 - [x] `no_auth: true` dla usług działających bez klucza (agenci wybierają je w praktyce)
-- [ ] `free_tier` jako struktura: `requires_card`, `quota`, `period`, `watermark`, `source_url`
-- [ ] `auth` jako OpenAPI `securitySchemes` (nazwa nagłówka, format) zamiast prozy
-- [ ] `base_url`, `rate_limits`, `oauth_scopes`, `async_jobs`, `data_policy`
-- [ ] `mcp.tools` — lista narzędzi serwera MCP i czy pokrywa całe REST API
+- [x] `free_tier` jako struktura: `requires_card`, `quota`, `period`, `watermark`, `source_url` (`free_plan`, 284/330)
+- [x] `auth` jako OpenAPI `securitySchemes` (nazwa nagłówka, format) zamiast prozy (`auth_scheme`, 327/330)
+- [x] `base_url`, `rate_limits`, `oauth_scopes`, `async_jobs`, `data_policy` (296 / 223 / 45 / 100 / 54 wpisów; brak = dostawca nie publikuje albo nie potwierdzono)
+- [x] `mcp.tools` — lista narzędzi serwera MCP i czy pokrywa całe REST API (tools 191, covers_full_api 227 z 271 serwerów)
 
 ## P4 — format i bezpieczeństwo
 - [x] Pliki kategorii < 60 KB, ok. 15 tys. tokenów (kontrola w build; limit podniesiony z 30 KB po dodaniu źródeł per pole)
