@@ -19,7 +19,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import interview_agents as base  # noqa: E402  (chat() and the OpenRouter token)
 
 ROOT = base.ROOT
-OUT = ROOT / "research" / "agent-interviews" / f"{date.today().isoformat()}-product-test"
+# --suffix=NAME keeps a second run on the same day apart (e.g. a retest after fixes)
+SUFFIX = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--suffix=")), "")
+OUT = ROOT / "research" / "agent-interviews" / f"{date.today().isoformat()}-product-test{'-' + SUFFIX if SUFFIX else ''}"
 MCP_URL = "https://ai-agents-api-library.vercel.app/mcp"
 
 INTERVIEWER = base.INTERVIEWER
