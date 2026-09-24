@@ -9,6 +9,7 @@ Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint,
 - [Full catalog (JSON)](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/all.json): all entries in one array
 - [Full catalog (text)](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/llms-full.txt): one line per service
 - [JSON Schema](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/data/schema.json): entry schema
+- [SHA256SUMS](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/SHA256SUMS): checksums of llms.txt, llms-full.txt, schema and catalog/*.json (`sha256sum -c SHA256SUMS`)
 - [MCP server](https://github.com/eater2/ai_agents_api_library#mcp-server): `npx -y github:eater2/ai_agents_api_library` or remote https://ai-agents-api-library.vercel.app/mcp (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories
 
 ## Start free
