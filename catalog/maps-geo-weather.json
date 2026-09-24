@@ -435,6 +435,72 @@
    "stale": false
   },
   {
+   "id": "locationiq",
+   "name": "LocationIQ",
+   "homepage": "https://locationiq.com",
+   "docs": "https://docs.locationiq.com/reference/search",
+   "auth": "api_key",
+   "auth_hint": "key query parameter with an API access token (pk. prefix)",
+   "mcp": {
+    "type": "none",
+    "url": null,
+    "maintainer": "none",
+    "remote_url": null,
+    "repo": null,
+    "tools": null,
+    "covers_full_api": null,
+    "source_url": null,
+    "checked_at": "2026-09-24",
+    "domain_verified": null,
+    "kind": "none"
+   },
+   "free_tier": "Free: 5,000 requests/day, 2 requests/s, 60 requests/min, no card; commercial use requires a link back to LocationIQ",
+   "sdk": [],
+   "openapi": "https://docs.locationiq.com/openapi.yaml",
+   "llms_txt": "https://docs.locationiq.com/llms.txt",
+   "desc_en": "Geocode and reverse-geocode addresses, find nearby places, look up time zones, calculate routes and render map tiles via REST API.",
+   "notes": "Free plan allows commercial use only with a prominent link to LocationIQ; free accounts may cache responses for up to 48 hours. No official SDKs (community libraries only). US (us1) and EU (eu1) endpoints.",
+   "verified": "2026-09-24",
+   "operations": [
+    "street-geocoding",
+    "reverse-geocoding",
+    "places-search",
+    "routing",
+    "timezone-lookup"
+   ],
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "5,000 requests/day, 2 requests/s, 60 requests/min",
+    "period": "day",
+    "source_url": "https://locationiq.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "key",
+    "scheme": null,
+    "format": "https://us1.locationiq.com/v1/search?q=<QUERY>&format=json&key=<ACCESS_TOKEN>",
+    "source_url": "https://docs.locationiq.com/openapi.yaml",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://us1.locationiq.com/v1",
+   "rate_limits": {
+    "summary": "Free: 5,000/day, 2 requests/s, 60/min; paid plans 15-40 requests/s",
+    "source_url": "https://locationiq.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": null,
+   "async_jobs": null,
+   "data_policy": null,
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "no_card": true,
+   "stale": false
+  },
+  {
    "id": "mapbox",
    "name": "Mapbox",
    "homepage": "https://www.mapbox.com",
@@ -670,6 +736,83 @@
     "checked_at": "2026-09-24",
     "docs": "ok"
    }
+  },
+  {
+   "id": "opencage",
+   "name": "OpenCage Geocoding API",
+   "homepage": "https://opencagedata.com",
+   "docs": "https://opencagedata.com/api",
+   "auth": "api_key",
+   "auth_hint": "key query parameter (no header auth)",
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/OpenCageData/opencage-geocoding-mcp",
+    "maintainer": "vendor",
+    "remote_url": null,
+    "repo": "https://github.com/OpenCageData/opencage-geocoding-mcp",
+    "tools": [
+     "geocode-forward",
+     "geocode-reverse",
+     "get-opencage-info"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/OpenCageData/opencage-geocoding-mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": null,
+    "kind": "official"
+   },
+   "free_tier": "Free: 2,500 requests/day, 1 request/s, no card (for testing; production needs a paid plan from €45/month)",
+   "sdk": [
+    "java",
+    "php",
+    "ruby",
+    "scala",
+    "matlab"
+   ],
+   "openapi": null,
+   "llms_txt": "https://opencagedata.com/llms.txt",
+   "desc_en": "Convert addresses and place names to coordinates, and coordinates to addresses, worldwide via REST API.",
+   "notes": "Free trial is meant for testing only; inactive trial accounts are deleted after 3 months. Results may be cached indefinitely. Data comes from OpenStreetMap and other open sources, so attribute OSM. Use no_record=1 to stop query logging.",
+   "verified": "2026-09-24",
+   "operations": [
+    "street-geocoding",
+    "reverse-geocoding"
+   ],
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "2,500 requests/day, 1 request/s (testing use)",
+    "period": "day",
+    "source_url": "https://opencagedata.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "query",
+    "name": "key",
+    "scheme": null,
+    "format": "https://api.opencagedata.com/geocode/v1/json?q=<QUERY>&key=<API_KEY>",
+    "source_url": "https://opencagedata.com/api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.opencagedata.com/geocode/v1",
+   "rate_limits": {
+    "summary": "Free trial: 1 request/s and 2,500/day (402 when quota used, 429 when too fast); paid plans 15-40 requests/s",
+    "source_url": "https://opencagedata.com/api",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": null,
+   "async_jobs": null,
+   "data_policy": {
+    "summary": "Queries logged and deleted after 6 months; never used to train AI; no_record parameter disables query logging",
+    "source_url": "https://opencagedata.com/gdpr",
+    "checked_at": "2026-09-24"
+   },
+   "no_auth": false,
+   "has_free_tier": true,
+   "has_trial": false,
+   "no_card": true,
+   "stale": false
   },
   {
    "id": "openrouteservice",
