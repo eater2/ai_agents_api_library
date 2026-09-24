@@ -31,6 +31,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -63,6 +64,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -97,6 +99,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -131,7 +134,8 @@
    "notes": "Advanced (v3) edition supports glossaries/custom models; requires a GCP project with billing enabled even for free usage.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -158,6 +162,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -188,7 +193,8 @@
    "notes": "ModernMT is being folded into a new product called Lara; ModernMT API compatibility is stated to continue only until Dec 31, 2026 - plan for migration.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

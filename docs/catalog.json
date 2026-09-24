@@ -20,6 +20,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -52,6 +53,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -81,7 +83,8 @@
     "notes": "Usable without an API key at reduced rate limits; interactive docs/playground at https://api.jina.ai/scalar. No official MCP server found.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -116,6 +119,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -147,6 +151,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -176,6 +181,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -206,6 +212,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -239,6 +246,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -268,6 +276,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -296,6 +305,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -334,6 +344,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -363,6 +374,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -394,6 +406,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -426,6 +439,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -456,6 +470,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -487,6 +502,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -518,6 +534,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -551,6 +568,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -581,6 +599,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -612,6 +631,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -640,6 +660,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -670,6 +691,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -702,6 +724,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -731,7 +754,8 @@
     "notes": "Enterprise-oriented pricing overall, but self-serve API-user creation and free trial are available via the dashboard.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -760,6 +784,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -791,6 +816,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -819,6 +845,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -849,6 +876,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -880,6 +908,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -910,7 +939,8 @@
     "notes": "",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -942,6 +972,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -971,6 +1002,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -998,6 +1030,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1028,6 +1061,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1057,6 +1091,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1086,6 +1121,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1114,6 +1150,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1142,6 +1179,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1170,6 +1208,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1200,6 +1239,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1228,6 +1268,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1257,6 +1298,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1285,6 +1327,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1313,6 +1356,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1341,6 +1385,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1370,6 +1415,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1398,6 +1444,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1430,6 +1477,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1457,6 +1505,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1485,6 +1534,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1520,6 +1570,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1548,6 +1599,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1578,6 +1630,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1607,6 +1660,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1634,6 +1688,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1660,7 +1715,8 @@
     "notes": "Per-project API keys; ~14 credits per minute of 720p video.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1688,6 +1744,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1721,6 +1778,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1751,6 +1809,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1780,6 +1839,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1807,6 +1867,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1837,6 +1898,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1868,6 +1930,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1902,6 +1965,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1930,6 +1994,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1961,6 +2026,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1989,6 +2055,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2017,6 +2084,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2048,6 +2116,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2084,6 +2153,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2114,6 +2184,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2152,6 +2223,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2184,6 +2256,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2219,6 +2292,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2255,6 +2329,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2293,6 +2368,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2324,6 +2400,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2354,6 +2431,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2387,6 +2465,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2416,6 +2495,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2448,6 +2528,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2479,6 +2560,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2508,6 +2590,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2538,6 +2621,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2566,6 +2650,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2593,6 +2678,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2620,6 +2706,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2649,6 +2736,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2676,6 +2764,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2705,6 +2794,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2732,6 +2822,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2762,6 +2853,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2790,6 +2882,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2817,6 +2910,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2843,7 +2937,8 @@
     "notes": "Maintained by VAST AI Research (Tripo's developer). Exact free-credit amounts vary by promotion; verify in console.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2874,7 +2969,8 @@
     "notes": "Successor to Autodesk Forge; requires an Autodesk account and app registration in the APS console.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2903,7 +2999,8 @@
     "notes": "Built on iTwin.js; free developer account, but production data volumes/usage are billed.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2937,6 +3034,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2964,6 +3062,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -2991,6 +3090,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3018,6 +3118,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3049,6 +3150,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3077,6 +3179,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3109,6 +3212,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3137,6 +3241,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3164,6 +3269,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3193,6 +3299,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3220,6 +3327,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3247,6 +3355,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3276,6 +3385,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3305,6 +3415,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3332,6 +3443,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3361,6 +3473,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3388,6 +3501,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3416,6 +3530,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3448,6 +3563,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3475,6 +3591,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3505,6 +3622,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3532,6 +3650,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3566,6 +3685,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3601,6 +3721,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3634,6 +3755,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3668,6 +3790,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3704,6 +3827,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3733,6 +3857,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3771,6 +3896,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3805,6 +3931,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3838,6 +3965,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3870,6 +3998,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3899,6 +4028,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3931,6 +4061,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3961,6 +4092,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -3991,6 +4123,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4026,6 +4159,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4059,6 +4193,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4094,6 +4229,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4129,7 +4265,8 @@
     "notes": "Advanced (v3) edition supports glossaries/custom models; requires a GCP project with billing enabled even for free usage.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4157,6 +4294,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4188,7 +4326,8 @@
     "notes": "ModernMT is being folded into a new product called Lara; ModernMT API compatibility is stated to continue only until Dec 31, 2026 - plan for migration.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4218,6 +4357,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4247,6 +4387,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4277,6 +4418,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4309,6 +4451,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4338,6 +4481,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4369,6 +4513,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4397,6 +4542,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4428,6 +4574,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4461,6 +4608,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4492,6 +4640,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4534,6 +4683,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4572,6 +4722,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4601,6 +4752,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4634,6 +4786,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4671,6 +4824,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4700,6 +4854,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4731,6 +4886,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4764,6 +4920,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4794,6 +4951,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4833,7 +4991,8 @@
     "notes": "Umbrella platform: hundreds of distinct service APIs, each with its own scopes/quotas; many APIs require explicit per-project enabling. MCP Toolbox for Databases is Google's main official MCP offering (Cloud SQL, AlloyDB, BigQuery, Spanner).",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4865,6 +5024,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4895,6 +5055,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4924,6 +5085,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4954,6 +5116,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -4984,6 +5147,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5014,6 +5178,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5046,6 +5211,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5079,6 +5245,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5112,6 +5279,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5144,6 +5312,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5177,6 +5346,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5208,6 +5378,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5239,6 +5410,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5274,6 +5446,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5302,6 +5475,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5338,6 +5512,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5368,6 +5543,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5402,6 +5578,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5435,6 +5612,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5468,6 +5646,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5501,6 +5680,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5532,6 +5712,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5565,6 +5746,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5596,6 +5778,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5629,6 +5812,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5660,6 +5844,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5692,6 +5877,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5728,7 +5914,8 @@
     "notes": "Free plan limited to 1 sending domain and 1-day log retention.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5764,6 +5951,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5798,6 +5986,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5834,6 +6023,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5865,6 +6055,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5899,6 +6090,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5930,6 +6122,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -5964,7 +6157,8 @@
     "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Official Twilio Labs MCP server exposes the full API.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6000,6 +6194,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6027,6 +6222,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6060,6 +6256,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6087,6 +6284,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6121,6 +6319,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6154,6 +6353,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6192,6 +6392,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6223,6 +6424,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6252,6 +6454,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6287,6 +6490,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6319,6 +6523,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6351,6 +6556,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6385,6 +6591,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6417,6 +6624,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6451,6 +6659,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6480,6 +6689,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6508,6 +6718,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6535,6 +6746,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6563,6 +6775,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6595,6 +6808,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6627,6 +6841,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6656,6 +6871,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6690,6 +6906,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6719,6 +6936,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6749,6 +6967,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6781,6 +7000,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6809,6 +7029,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6836,6 +7057,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6871,6 +7093,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6901,6 +7124,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6929,6 +7153,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6958,6 +7183,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -6989,6 +7215,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7021,6 +7248,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7048,7 +7276,8 @@
     "notes": "No official Zendesk-maintained MCP server found as of research date; several community MCP servers exist. API tokens can impersonate any account user, including admins.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7080,6 +7309,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7111,6 +7341,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7138,6 +7369,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7165,6 +7397,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7196,6 +7429,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7222,7 +7456,8 @@
     "notes": "",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7252,6 +7487,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7279,6 +7515,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7309,6 +7546,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7340,6 +7578,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7369,6 +7608,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7403,6 +7643,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7437,6 +7678,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7468,6 +7710,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7496,6 +7739,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7526,6 +7770,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7556,6 +7801,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7583,6 +7829,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7610,6 +7857,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7638,6 +7886,7 @@
     "verified": "2026-09-24",
     "no_auth": true,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7665,6 +7914,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7700,6 +7950,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7731,6 +7982,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7759,6 +8011,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7789,6 +8042,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7816,6 +8070,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7844,6 +8099,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7871,6 +8127,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7904,6 +8161,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7938,6 +8196,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -7970,6 +8229,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8005,6 +8265,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8041,6 +8302,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8070,6 +8332,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8102,6 +8365,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8132,6 +8396,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8162,6 +8427,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8189,6 +8455,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8216,6 +8483,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8247,6 +8515,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8277,6 +8546,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8304,6 +8574,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8336,6 +8607,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8368,6 +8640,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8400,6 +8673,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8429,6 +8703,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8457,6 +8732,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8489,6 +8765,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8517,7 +8794,8 @@
     "notes": "REST API manages workflows/executions/credentials/users, not per-node business logic. MCP support is a first-party node (MCP Server Trigger / MCP Client Tool) inside a running n8n instance, not a single hosted vendor endpoint. Non-Enterprise API keys have full account access; scoped keys need Enterprise plan.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8549,6 +8827,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8577,6 +8856,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8608,6 +8888,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8640,6 +8921,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8669,6 +8951,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8697,6 +8980,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8734,6 +9018,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8766,7 +9051,8 @@
     "notes": "Official MCP server only searches documentation. Trial keys are not for production use. v2 API is current; v1 is legacy.",
     "verified": "2026-09-24",
     "no_auth": false,
-    "has_free_tier": false,
+    "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8796,6 +9082,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8827,6 +9114,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8858,6 +9146,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8893,6 +9182,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8925,6 +9215,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8956,6 +9247,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -8988,6 +9280,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9025,6 +9318,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9057,6 +9351,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9087,6 +9382,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9121,6 +9417,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9154,6 +9451,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9187,6 +9485,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9218,6 +9517,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": true,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -9248,6 +9548,7 @@
     "verified": "2026-09-24",
     "no_auth": false,
     "has_free_tier": false,
+    "has_trial": false,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",

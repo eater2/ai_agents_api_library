@@ -28,6 +28,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -59,6 +60,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -94,7 +96,8 @@
    "notes": "Free plan limited to 1 sending domain and 1-day log retention.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -129,6 +132,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -162,6 +166,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -197,6 +202,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -227,6 +233,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -260,6 +267,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -290,6 +298,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -323,7 +332,8 @@
    "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Official Twilio Labs MCP server exposes the full API.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -358,6 +368,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -384,6 +395,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -416,6 +428,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
