@@ -100,7 +100,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "Free tier: for the first 3 months, 1,000 pages/month DetectDocumentText (and AnalyzeDocument signatures-only), 100 pages/month AnalyzeDocument forms/tables/layout/queries, 100 pages/month AnalyzeExpense/AnalyzeID",
+   "free_tier": "Trial: new AWS customers get 3 months free, per month 1,000 pages DetectDocumentText, 100 pages AnalyzeDocument forms/tables/layout/queries, 100 AnalyzeExpense/AnalyzeID",
    "sdk": [
     "python",
     "java",
@@ -1035,7 +1035,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "15,000 free credits (~$150 value) for new Standard accounts; extra credits via Startup Program for qualifying early-stage teams",
+   "free_tier": "Trial: $150 in free credits (15,000 credits) one-time for new Standard accounts; then standard rates; Startup Program gives extra credits to qualifying teams",
    "sdk": [
     "python",
     "typescript",
@@ -1219,7 +1219,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "Free: 10,000 free pages one-time to start, no credit card; then Pay-As-You-Go at $0.015/page",
+   "free_tier": "Trial: 10,000 free pages one-time on signup, no credit card; then pay-as-you-go at $0.015/page",
    "sdk": [
     "python"
    ],

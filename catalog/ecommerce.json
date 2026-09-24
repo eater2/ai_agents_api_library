@@ -8,21 +8,21 @@
   {
    "id": "amazon-selling-partner-api",
    "name": "Amazon Selling Partner API",
-   "homepage": "https://developer-docs.amazon.com/sp-api/",
-   "docs": "https://developer-docs.amazon.com/sp-api/",
+   "homepage": "https://developer-docs.amazon/sp-api/",
+   "docs": "https://developer-docs.amazon/sp-api/",
    "auth": "oauth2",
    "auth_hint": "LWA (Login with Amazon) OAuth2 access token via x-amz-access-token header",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://sellingpartner-ai.amazon.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://sellingpartner-ai.amazon.com/mcp",
     "repo": "https://github.com/amzn/selling-partner-agentic-toolkit",
     "covers_full_api": false,
     "source_url": "https://github.com/amzn/selling-partner-agentic-toolkit",
     "checked_at": "2026-09-24",
-    "domain_verified": true,
-    "kind": "vendor-hosted",
+    "domain_verified": false,
+    "kind": "official",
     "config": {
      "transport": "streamable-http",
      "url": "https://sellingpartner-ai.amazon.com/mcp",
@@ -39,7 +39,7 @@
    "openapi": "https://github.com/amzn/selling-partner-api-models",
    "llms_txt": null,
    "desc_en": "Manage listings, orders, inventory, and reports for an Amazon seller/vendor account via REST API.",
-   "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review.",
+   "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review. Official MCP uses Seller Central OAuth consent.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -92,13 +92,13 @@
   {
    "id": "bigcommerce-api",
    "name": "BigCommerce API",
-   "homepage": "https://developer.bigcommerce.com",
-   "docs": "https://developer.bigcommerce.com/docs/rest",
+   "homepage": "https://docs.bigcommerce.com",
+   "docs": "https://docs.bigcommerce.com/developer/api-reference/rest/overview",
    "auth": "api_key+oauth2",
    "auth_hint": "X-Auth-Token header (store API account) or OAuth2 for public apps",
    "mcp": {
     "type": "official",
-    "url": "https://docs.bigcommerce.com/_mcp/server",
+    "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
     "maintainer": "vendor",
     "tools": [
      "search_products",
@@ -132,7 +132,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Manage catalog, orders, customers, and carts on a BigCommerce store via REST/GraphQL APIs.",
-   "notes": "Official MCP server is for documentation search/dev assistance, not direct storefront execution - use API tokens for that.",
+   "notes": "Official Storefront MCP (B2C/B2B, per-store URL from the control panel) covers catalog, cart and checkout only, not the admin API; docs.bigcommerce.com/_mcp/server is a docs-search MCP.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "apiKey",
@@ -192,10 +192,19 @@
    "auth": "oauth2",
    "auth_hint": "Authorization: Bearer <OAuth2 token> (application or user token)",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/eBay/npm-public-api-mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/eBay/npm-public-api-mcp",
+    "tools": [
+     "query_ebay_api",
+     "call_ebay_api"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/eBay/npm-public-api-mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "none",
+    "kind": "official",
     "config": null
    },
    "free_tier": "free developer tier with call-volume limits; sandbox environment included",
@@ -205,13 +214,18 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "List items, manage orders/inventory, and search listings across eBay marketplaces via REST APIs.",
-   "notes": "Production access requires an eBay developer account and app keys; rate limits scale with account compliance tier.",
+   "notes": "Production access requires an eBay developer account and app keys; rate limits scale with account compliance tier. Official MCP (npx @ebay/npm-public-api-mcp) runs locally, read-only (GET) in production.",
    "verified": "2026-09-24",
    "operations": [
     "marketplace-listing",
     "store-management",
     "product-search"
    ],
+   "auth_scheme": {
+    "type": "oauth2",
+    "source_url": "https://github.com/eBay/npm-public-api-mcp",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -238,26 +252,74 @@
    "homepage": "https://developer.etsy.com",
    "docs": "https://developer.etsy.com/documentation/",
    "auth": "oauth2",
-   "auth_hint": "OAuth2 Bearer token + x-api-key header (app keystring)",
+   "auth_hint": "OAuth2 Bearer token + x-api-key header (<keystring>:<shared_secret>)",
    "mcp": {
-    "type": "none",
-    "url": null,
-    "domain_verified": null,
-    "kind": "none",
-    "config": null
+    "type": "official",
+    "url": "https://mcp.api.etsycloud.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.api.etsycloud.com/mcp",
+    "tools": [
+     "learn_etsy_api",
+     "search_etsy_api",
+     "list_endpoints",
+     "get_endpoint",
+     "get_schema",
+     "list_guides",
+     "get_guide"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://developers.etsy.com/documentation/mcp_server/devmcpserver/",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.api.etsycloud.com/mcp",
+     "derived": true
+    }
    },
-   "free_tier": "free developer keystring (rate-limited, e.g. 10 req/sec, ~5,000 req/day per app by default)",
+   "free_tier": "Free: developer keystring at no cost; rate limits (QPS/QPD) are set per app and shown in the Developer Portal",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
    "desc_en": "List products, manage orders/shop, and search listings on the Etsy marketplace via REST API.",
-   "notes": "Requires an approved Etsy developer app; OAuth2 user consent needed for shop-management scopes. Missing from candidate list despite being a major agent-callable marketplace API.",
+   "notes": "Requires an approved Etsy developer app; OAuth2 user consent needed for shop-management scopes. Missing from candidate list despite being a major agent-callable marketplace API. Official Dev MCP covers the API spec only; it does not call the API.",
    "verified": "2026-09-24",
    "operations": [
     "marketplace-listing",
     "store-management",
     "product-search"
    ],
+   "auth_scheme": {
+    "type": "oauth2",
+    "in": "header",
+    "name": "x-api-key",
+    "scheme": "bearer",
+    "format": "x-api-key: <keystring>:<shared_secret> plus Authorization: Bearer <ACCESS_TOKEN> for OAuth endpoints",
+    "source_url": "https://developer.etsy.com/documentation/essentials/authentication",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.etsy.com/v3",
+   "rate_limits": {
+    "summary": "Per API key; current QPS/QPD limits shown in the Developer Portal and response headers (no fixed default published)",
+    "source_url": "https://developer.etsy.com/documentation/essentials/rate-limits",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "listings_r",
+     "listings_w",
+     "shops_r",
+     "shops_w",
+     "transactions_r",
+     "transactions_w",
+     "profile_r",
+     "email_r",
+     "address_r"
+    ],
+    "source_url": "https://developer.etsy.com/documentation/essentials/authentication",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -278,6 +340,10 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.mercadolibre.com/devsite/v1/mcp",
+    "source_url": "https://developers.mercadolibre.com.ar/en_us/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": false,
     "kind": "official",
     "config": {
@@ -304,6 +370,14 @@
     "store-management",
     "shipping"
    ],
+   "auth_scheme": {
+    "type": "oauth2",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer APP_USR-<ACCESS_TOKEN> (token from https://api.mercadolibre.com/oauth/token, valid 6 hours)",
+    "source_url": "https://developers.mercadolibre.com.ar/en_us/authentication-and-authorization",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.mercadolibre.com",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -335,6 +409,38 @@
     "store-management",
     "shipping"
    ],
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <PRIVATE_TOKEN> (account-level tokens also need X-PF-Store-Id)",
+    "source_url": "https://developers.printful.com/docs/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.printful.com",
+   "rate_limits": {
+    "summary": "120 API calls/min general limit; stricter for mockup generation; 60 s lockout when exceeded",
+    "source_url": "https://developers.printful.com/docs/",
+    "checked_at": "2026-09-24"
+   },
+   "oauth_scopes": {
+    "scopes": [
+     "orders",
+     "orders/read",
+     "sync_products",
+     "sync_products/read",
+     "file_library",
+     "file_library/read",
+     "webhooks",
+     "webhooks/read"
+    ],
+    "source_url": "https://developers.printful.com/docs/",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": true,
+    "how": "mockup generator creates tasks processed asynchronously; poll the task result",
+    "source_url": "https://developers.printful.com/docs/"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -360,14 +466,28 @@
    "id": "shopify-admin-storefront-api",
    "name": "Shopify Admin / Storefront API",
    "homepage": "https://shopify.dev",
-   "docs": "https://shopify.dev/docs/api/admin-rest",
+   "docs": "https://shopify.dev/docs/api/admin-graphql",
    "auth": "api_key+oauth2",
    "auth_hint": "X-Shopify-Access-Token header (custom app token or OAuth2 for public apps)",
    "mcp": {
     "type": "official",
-    "url": "https://shopify.dev/docs/apps/build/devmcp",
-    "domain_verified": true,
-    "kind": "vendor-hosted",
+    "url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront",
+    "maintainer": "vendor",
+    "remote_url": "https://{shop}.myshopify.com/api/mcp",
+    "repo": "https://www.npmjs.com/package/@shopify/dev-mcp",
+    "tools": [
+     "search_catalog",
+     "lookup_catalog",
+     "get_product",
+     "get_cart",
+     "update_cart",
+     "search_shop_policies_and_faqs"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://shopify.dev/docs/apps/build/storefront-mcp/servers/storefront",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
+    "kind": "official",
     "config": {
      "transport": "stdio",
      "command": "npx",
@@ -389,12 +509,26 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
-   "notes": "The official Dev MCP server helps build/debug Shopify apps via docs & schema search; store operations themselves go through Admin/Storefront API tokens.",
+   "notes": "REST Admin API is legacy; new public apps must use GraphQL Admin. Dev MCP (npx @shopify/dev-mcp) serves docs/schemas only; per-store Storefront MCP at https://{shop}.myshopify.com/api/mcp needs no auth (catalog, cart, policies).",
    "verified": "2026-09-24",
    "operations": [
     "store-management",
     "product-search"
    ],
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-Shopify-Access-Token",
+    "format": "X-Shopify-Access-Token: <ACCESS_TOKEN>",
+    "source_url": "https://shopify.dev/docs/api/admin-graphql",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://{store_name}.myshopify.com/admin/api/2026-07/graphql.json",
+   "rate_limits": {
+    "summary": "GraphQL Admin: calculated query cost, restore 100 pts/s Standard, 200 Advanced, 1000 Plus, 2000 enterprise",
+    "source_url": "https://shopify.dev/docs/apps/build/apis/graphql-admin/rate-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -414,10 +548,15 @@
    "auth": "api_key",
    "auth_hint": "OAuth1.0a signature (HTTP) or Basic auth with Consumer Key/Secret (HTTPS)",
    "mcp": {
-    "type": "community",
-    "url": null,
-    "domain_verified": null,
-    "kind": "community",
+    "type": "official",
+    "url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "maintainer": "vendor",
+    "remote_url": "https://{your-store}/wp-json/mcp/mcp-adapter-default-server",
+    "covers_full_api": false,
+    "source_url": "https://developer.woocommerce.com/docs/features/mcp/",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
+    "kind": "official",
     "config": null,
     "issue": "no MCP server listed in entry (mcp.url null)"
    },
@@ -428,11 +567,19 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Manage products, orders, and customers on a self-hosted WooCommerce store via REST API.",
-   "notes": "Requires your own WordPress+WooCommerce installation; there is no shared multi-tenant cloud endpoint.",
+   "notes": "Requires your own WordPress+WooCommerce installation; there is no shared multi-tenant cloud endpoint. Official MCP (developer preview) at /wp-json/mcp/mcp-adapter-default-server, auth via Application Passwords.",
    "verified": "2026-09-24",
    "operations": [
     "store-management"
    ],
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(<CONSUMER_KEY>:<CONSUMER_SECRET>) over HTTPS; OAuth 1.0a one-legged over HTTP",
+    "source_url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://{your-store}/wp-json/wc/v3",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,

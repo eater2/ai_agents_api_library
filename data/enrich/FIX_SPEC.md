@@ -20,6 +20,7 @@ Patchable fields, all in English, in the same style and length as the current va
 `docs`, `homepage`, `auth` (one of api_key | oauth2 | api_key+oauth2 | none | cloud_iam), `auth_hint`,
 `mcp` (whole object: `type` official | community | none, `url` = hosted endpoint if one exists, else repo/docs of the server),
 `free_tier`, `openapi`, `llms_txt`, `notes`, `desc_en`. Do not touch `desc_pl`, `id`, `name`, `category`.
+`free_plan_kind` (free_tier | trial | none) corrects the researched `free_plan.kind` when the vendor page contradicts it.
 
 Rules:
 - Before patching, open the source page the correction cites (or the vendor's page) and confirm it. Skip a correction you cannot confirm.

@@ -11,7 +11,7 @@
    "homepage": "https://www.bland.ai",
    "docs": "https://docs.bland.ai/api-v1/",
    "auth": "api_key",
-   "auth_hint": "authorization: <api_key> header",
+   "auth_hint": "Authorization: Bearer <api_key> header (bare key without prefix still accepted)",
    "mcp": {
     "type": "official",
     "url": "https://api.bland.ai/v1/mcp",
@@ -105,15 +105,19 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Token <api_key>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://developers.deepgram.com/developer-tools/cli/mcp-server",
     "maintainer": "vendor",
     "repo": "https://cli.deepgram.com",
     "source_url": "https://developers.deepgram.com/developer-tools/cli/mcp-server",
     "checked_at": "2026-09-24",
-    "domain_verified": null,
-    "kind": "official",
-    "config": null
+    "domain_verified": true,
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://developers.deepgram.com/developer-tools/cli/mcp-server",
+     "derived": true
+    }
    },
    "free_tier": "$200 free credit on signup",
    "sdk": [
@@ -125,7 +129,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Run a full-duplex speech-to-speech voice agent pipeline (STT+LLM+TTS) over a WebSocket API.",
-   "notes": "Primarily an STT/TTS/voice-agent infra layer, often paired with a telephony provider like Twilio to reach phone calls.",
+   "notes": "Primarily an STT/TTS/voice-agent infra layer, often paired with a telephony provider like Twilio to reach phone calls. MCP server built into the dg CLI ('dg mcp', stdio or SSE); docs MCP at https://developers.deepgram.com/_mcp/server.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "trial",
@@ -177,7 +181,7 @@
    "id": "elevenlabs-agents-platform",
    "name": "ElevenLabs Agents Platform",
    "homepage": "https://elevenlabs.io/agents",
-   "docs": "https://elevenlabs.io/docs/agents-platform/overview",
+   "docs": "https://elevenlabs.io/docs/eleven-agents/overview",
    "auth": "api_key",
    "auth_hint": "xi-api-key: <api_key>",
    "mcp": {
@@ -200,7 +204,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free plan: 10k credits/month shared across ElevenLabs products",
+   "free_tier": "Free plan: 10k credits/month shared across ElevenLabs products; no commercial license (from Starter, $6/month)",
    "sdk": [
     "python",
     "javascript",
@@ -254,7 +258,7 @@
   {
    "id": "livekit-cloud",
    "name": "LiveKit Cloud",
-   "homepage": "https://livekit.io",
+   "homepage": "https://livekit.com",
    "docs": "https://docs.livekit.io/reference/",
    "auth": "api_key",
    "auth_hint": "API key + secret sign a JWT access token sent as Authorization: Bearer <token>",
@@ -328,6 +332,10 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.retellai.com",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.retellai.com",
+    "source_url": "https://docs.retellai.com/get-started/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted",
     "config": {
@@ -350,12 +358,32 @@
    "openapi": null,
    "llms_txt": "https://docs.retellai.com/llms.txt",
    "desc_en": "Build, deploy, and manage AI voice agents that handle phone and web calls via REST API and SDKs.",
-   "notes": "",
+   "notes": "Official MCP at https://mcp.retellai.com (Streamable HTTP) authenticates with Authorization: Bearer <RETELL_API_KEY>.",
    "verified": "2026-09-24",
    "operations": [
     "voice-agent",
     "phone-calls"
    ],
+   "free_plan": {
+    "kind": "trial",
+    "quota": "$10 in free credits",
+    "period": "one_time",
+    "source_url": "https://www.retellai.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <RETELL_API_KEY>",
+    "source_url": "https://docs.retellai.com/api-references/overview",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.retellai.com",
+   "rate_limits": {
+    "summary": "Pay-As-You-Go workspaces: 20 concurrent calls by default (extra $8/call/month); calls max 1 hour by default",
+    "source_url": "https://docs.retellai.com/deploy/concurrency",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -386,23 +414,64 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
-    "type": "none",
-    "url": null,
-    "domain_verified": null,
-    "kind": "none",
-    "config": null
+    "type": "official",
+    "url": "https://mcp.synthflow.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.synthflow.ai/mcp",
+    "tools": [
+     "list_agents",
+     "get_agent",
+     "create_agent",
+     "update_agent",
+     "publish_agent_draft",
+     "delete_agent",
+     "list_calls",
+     "get_call_details",
+     "get_call_analytics",
+     "start_test_call",
+     "create_action",
+     "list_knowledge_bases",
+     "create_knowledge_base",
+     "execute_simulation_suite",
+     "list_phone_numbers",
+     "list_contacts",
+     "search_docs"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://docs.synthflow.ai/mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.synthflow.ai/mcp",
+     "derived": true
+    }
    },
-   "free_tier": "self-serve free trial to build/test agents (pay only for actual calls); enterprise plans from ~$30k/yr for scale",
+   "free_tier": "Paid only: pricing page lists Enterprise contracts from $30,000/year; no self-serve free trial shown",
    "sdk": [],
    "openapi": null,
    "llms_txt": "https://docs.synthflow.ai/llms-full.txt",
    "desc_en": "Create and manage AI phone voice agents and trigger/manage outbound calls programmatically via REST API.",
-   "notes": "Go-to-market leans enterprise-sales for scaled deployments; a self-serve trial with API access exists for building/testing.",
+   "notes": "Go-to-market is enterprise sales. Official remote MCP (~60 tools) also has regional URLs: https://mcp.us.synthflow.ai/mcp and https://mcp.eu.synthflow.ai/mcp.",
    "verified": "2026-09-24",
    "operations": [
     "voice-agent",
     "phone-calls"
    ],
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <SYNTHFLOW_API_KEY>",
+    "source_url": "https://docs.synthflow.ai/getting-started-with-your-api",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.synthflow.ai/v2",
+   "rate_limits": {
+    "summary": "Per-workspace concurrency limit and CAPS (calls initiated per second) limit; excess returns 429 or is queued",
+    "source_url": "https://docs.synthflow.ai/concurrency-calling-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
@@ -432,10 +501,15 @@
    "auth": "api_key",
    "auth_hint": "Basic Auth (Account SID + Auth Token) or API Key/Secret",
    "mcp": {
-    "type": "community",
+    "type": "official",
     "url": "https://github.com/twilio-labs/mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/twilio-labs/mcp",
+    "covers_full_api": true,
+    "source_url": "https://github.com/twilio-labs/mcp",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community",
+    "kind": "official",
     "config": {
      "transport": "stdio",
      "command": "npx",
@@ -450,7 +524,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "trial account with free trial credit (~$15), then pay-as-you-go",
+   "free_tier": "Trial: one-time free units (e.g. 75 voice minutes, 100 SMS, 100 WhatsApp, 3,000 emails), no card, expires after 30 days; then pay-as-you-go",
    "sdk": [
     "python",
     "javascript",
@@ -462,15 +536,36 @@
    "openapi": "https://github.com/twilio/twilio-oai",
    "llms_txt": null,
    "desc_en": "Programmatically make, receive, and control phone calls (IVR, recording, conferencing) via REST API.",
-   "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage.",
+   "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit). MCP: Twilio Labs' @twilio-alpha/mcp exposes all public APIs via OpenAPI (filter with --services).",
    "verified": "2026-09-24",
    "operations": [
     "phone-calls"
    ],
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "75 voice minutes, 100 SMS, 100 WhatsApp messages, 3,000 emails; verified numbers only",
+    "period": "one_time",
+    "source_url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "basic",
+    "format": "Authorization: Basic base64(<API_KEY_SID>:<API_KEY_SECRET>) (or AccountSid:AuthToken)",
+    "source_url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.twilio.com/2010-04-01",
+   "rate_limits": {
+    "summary": "Account API concurrency limit; exceeding returns 429 Too Many Requests",
+    "source_url": "https://www.twilio.com/docs/usage/twilios-response",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,
-   "no_card": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -511,6 +606,24 @@
    "mcp": {
     "type": "official",
     "url": "https://mcp.vapi.ai/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.vapi.ai/mcp",
+    "repo": "https://github.com/VapiAI/mcp-server",
+    "tools": [
+     "list_assistants",
+     "create_assistant",
+     "get_assistant",
+     "list_calls",
+     "create_call",
+     "get_call",
+     "list_phone_numbers",
+     "get_phone_number",
+     "list_tools",
+     "get_tool"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.vapi.ai/sdk/mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": true,
     "kind": "vendor-hosted",
     "config": {
@@ -542,6 +655,26 @@
     "voice-agent",
     "phone-calls"
    ],
+   "free_plan": {
+    "kind": "trial",
+    "quota": "$5 free credits",
+    "period": "one_time",
+    "source_url": "https://vapi.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "http",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer <VAPI_PRIVATE_API_KEY>",
+    "source_url": "https://docs.vapi.ai/api-reference",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.vapi.ai",
+   "rate_limits": {
+    "summary": "4 concurrent calls with no Success Package; 10 on Core ($29/mo), 30 on Pro",
+    "source_url": "https://vapi.ai/pricing",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,

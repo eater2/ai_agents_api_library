@@ -34,7 +34,7 @@
    "openapi": null,
    "llms_txt": "https://www.activepieces.com/docs/llms.txt",
    "desc_en": "Build, run and manage no-code flows across 400+ apps via REST API or the built-in MCP server.",
-   "notes": "MCP server URL is per-instance (https://your-instance.com/mcp); OAuth-based client auth, and connection secrets/API keys are never exposed through MCP tools.",
+   "notes": "MCP server URL is per-instance (https://your-instance.com/mcp); OAuth-based client auth, and connection secrets/API keys are never exposed through MCP tools. Endpoints docs say API key management is only in Platform and Enterprise editions.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -77,7 +77,7 @@
    "auth_hint": "Authorization: Bearer <api_key>; tool auth uses managed per-provider OAuth (e.g. GitHub, Google)",
    "mcp": {
     "type": "official",
-    "url": "https://docs.arcade.dev/en/resources/integrations",
+    "url": "https://docs.arcade.dev/en/guides/mcp-gateways",
     "maintainer": "vendor",
     "remote_url": "https://api.arcade.dev/mcp/{gateway-slug}",
     "source_url": "https://docs.arcade.dev/en/guides/mcp-gateways",
@@ -105,7 +105,7 @@
    "openapi": null,
    "llms_txt": "https://docs.arcade.dev/llms.txt",
    "desc_en": "Execute authorized tool calls (GitHub, Slack, Google, etc.) with managed OAuth via API, SDK, or 200+ MCP servers.",
-   "notes": "First use of an OAuth-gated tool requires the human to approve a browser consent screen; token is then reused automatically. Team plan adds $0.10/auth event and $0.01/tool call beyond free quota.",
+   "notes": "First use of an OAuth-gated tool requires the human to approve a browser consent screen; token is then reused automatically. Team plan adds $0.10/auth event and $0.01/tool call beyond free quota. MCP gateways: https://api.arcade.dev/mcp/<gateway-slug>.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -145,10 +145,10 @@
    "homepage": "https://composio.dev",
    "docs": "https://docs.composio.dev/docs/quickstart",
    "auth": "api_key+oauth2",
-   "auth_hint": "Authorization: Bearer <api_key>; per-toolkit connections use managed OAuth",
+   "auth_hint": "x-api-key: <api_key> (org-level keys: x-org-api-key); per-toolkit connections use managed OAuth",
    "mcp": {
     "type": "official",
-    "url": "https://docs.composio.dev/docs/composio-connect",
+    "url": "https://connect.composio.dev/mcp",
     "maintainer": "vendor",
     "remote_url": "https://connect.composio.dev/mcp",
     "tools": [
@@ -316,8 +316,8 @@
    "auth": "api_key",
    "auth_hint": "Webhooks key in URL path: https://maker.ifttt.com/trigger/{event}/with/key/{key}",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://ifttt.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://ifttt.com/mcp",
     "source_url": "https://ifttt.com/mcp",
@@ -378,7 +378,7 @@
    "id": "keboola",
    "name": "Keboola Storage API",
    "homepage": "https://www.keboola.com",
-   "docs": "https://keboola.docs.apiary.io/",
+   "docs": "https://help.keboola.com/storage/api/",
    "auth": "api_key+oauth2",
    "auth_hint": "X-StorageApi-Token: <STORAGE_API_TOKEN>; remote MCP uses OAuth sign-in",
    "mcp": {
@@ -466,7 +466,7 @@
    "auth_hint": "Authorization: Token <api_token>",
    "mcp": {
     "type": "official",
-    "url": "https://www.make.com/en/mcp",
+    "url": "https://mcp.make.com",
     "maintainer": "vendor",
     "remote_url": "https://mcp.make.com",
     "source_url": "https://developers.make.com/mcp-server",
@@ -484,12 +484,12 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free tier: 1,000 operations/mo; most REST API endpoints require a paid plan",
+   "free_tier": "Free tier: 1,000 credits/month, 2 active scenarios; Make API access requires Core plan or higher",
    "sdk": [],
    "openapi": null,
    "llms_txt": "https://developers.make.com/llms.txt",
    "desc_en": "Trigger and manage Make automation scenarios, or call MCP tools, via REST API and a native MCP server/client.",
-   "notes": "MCP Server and MCP Client are included free on all Make plans; you pay only for operations consumed when scenarios run. Most REST API endpoints are reserved for paid subscriptions.",
+   "notes": "MCP scenario-run tools are available on all Make plans, management tools on paid plans only; you pay for operations consumed when scenarios run. Token variant: https://<zone>/mcp with Authorization: Bearer <MCP_TOKEN>.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -574,7 +574,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free tier: 2,000 monthly credits for evaluation; production usage needs a paid Starter/Business/Enterprise plan",
+   "free_tier": "Free tier: 2,000 credits/month for prototyping/testing; production usage needs a paid Pro ($1,000/mo, 25,000 credits) or Enterprise plan",
    "sdk": [
     "python",
     "typescript"
@@ -582,7 +582,7 @@
    "openapi": null,
    "llms_txt": "https://docs.merge.dev/llms.txt",
    "desc_en": "Give an agent governed, audited tool access to Salesforce, Slack, Jira and 100+ enterprise apps via API or MCP.",
-   "notes": "Separate product from Merge's classic Unified API (HRIS/ATS/CRM sync); Agent Handler is the AI-agent-facing tool-calling layer. Paid tier starts around $650/mo for 10 linked accounts, then per-account pricing.",
+   "notes": "Separate product from Merge's classic Unified API (HRIS/ATS/CRM sync); Agent Handler is the AI-agent-facing tool-calling layer. All plans include unlimited registered users and tool packs.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -618,12 +618,12 @@
    "id": "n8n-api",
    "name": "n8n API",
    "homepage": "https://n8n.io",
-   "docs": "https://docs.n8n.io/api/",
+   "docs": "https://docs.n8n.io/connect/n8n-api",
    "auth": "api_key",
    "auth_hint": "X-N8N-API-KEY: <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger",
+    "url": "https://docs.n8n.io/connect/connect-to-n8n-mcp-server",
     "maintainer": "vendor",
     "remote_url": "https://<instance>/mcp-server/http",
     "tools": [
@@ -659,12 +659,12 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free, self-hosted (open source, unlimited); n8n Cloud offers a paid-plan trial",
+   "free_tier": "Free: self-hosted Community Edition (open source, unlimited); n8n Cloud trial has no API access",
    "sdk": [],
    "openapi": null,
    "llms_txt": "https://docs.n8n.io/llms.txt",
    "desc_en": "Create, run and monitor n8n workflows via REST API, and expose or consume tools through MCP trigger/client nodes.",
-   "notes": "REST API manages workflows/executions/credentials/users, not per-node business logic. MCP support is a first-party node (MCP Server Trigger / MCP Client Tool) inside a running n8n instance, not a single hosted vendor endpoint. Non-Enterprise API keys have full account access; scoped keys need Enterprise plan.",
+   "notes": "REST API manages workflows/executions/credentials/users, not per-node business logic. Built-in instance-level MCP server at https://<instance>/mcp-server/http (OAuth or Bearer token), plus MCP Server Trigger nodes. Scoped API keys need Enterprise plan.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -716,8 +716,8 @@
    "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <secret_key>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://nango.dev/docs/implementation-guides/use-cases/tool-calling/implement-mcp-server",
     "maintainer": "vendor",
     "tools": [
      "nango_tool_search",
@@ -727,9 +727,13 @@
     ],
     "source_url": "https://nango.dev/docs/implementation-guides/use-cases/tool-calling/implement-mcp-server",
     "checked_at": "2026-09-24",
-    "domain_verified": null,
-    "kind": "official",
-    "config": null
+    "domain_verified": true,
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://nango.dev/docs/implementation-guides/use-cases/tool-calling/implement-mcp-server",
+     "derived": true
+    }
    },
    "free_tier": "free tier: 10 connections, 10 compute hours, 10GB data transfer/mo",
    "sdk": [
@@ -738,7 +742,7 @@
    "openapi": null,
    "llms_txt": "https://nango.dev/llms.txt",
    "desc_en": "Authorize end users to 400+ third-party APIs/MCP servers and proxy authenticated calls to them from your app or agent.",
-   "notes": "Nango is primarily an auth/proxy broker (open source, self-hostable) rather than itself an MCP server; its 'MCP Auth' feature lets your app authorize users to OTHER vendors' MCP servers (Notion, HubSpot, etc.) and call them via Nango's proxy. Free self-hosting is not offered outside the Enterprise (BYOC) plan.",
+   "notes": "Nango is primarily an auth/proxy broker (open source). It also hosts a per-session MCP server (Streamable HTTP): POST /sessions returns mcp_url + session_token (Bearer). Free self-hosting is not offered outside the Enterprise (BYOC) plan.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -778,13 +782,13 @@
    "auth_hint": "Authorization: Bearer <token>; connected accounts use managed OAuth",
    "mcp": {
     "type": "official",
-    "url": "https://www.useparagon.com/mcp",
+    "url": "https://github.com/useparagon/paragon-mcp",
     "maintainer": "vendor",
     "repo": "https://github.com/useparagon/paragon-mcp",
     "source_url": "https://docs.useparagon.com/actionkit/getting-started",
     "checked_at": "2026-09-24",
-    "domain_verified": true,
-    "kind": "vendor-hosted",
+    "domain_verified": null,
+    "kind": "official",
     "config": {
      "transport": "streamable-http",
      "url": "http://localhost:3001/mcp?user={user-id}",
@@ -804,12 +808,12 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free experimentation tier with self-serve keys; production/scale pricing is usage-based or contract",
+   "free_tier": "Trial: free trial only; no lasting free tier confirmed; Pro/Enterprise pricing by quote",
    "sdk": [],
    "openapi": null,
    "llms_txt": "https://docs.useparagon.com/llms.txt",
    "desc_en": "Call thousands of pre-built Tools and Triggers across 130+ SaaS apps (Slack, Salesforce, Gmail) via API or MCP.",
-   "notes": "ActionKit specifically has a self-serve free tier for experimentation; Paragon's broader embedded-iPaaS platform is contract/sales-only with no public self-serve tier. ActionKit MCP uses SSE transport and is listed on the Anthropic MCP registry.",
+   "notes": "Paragon's embedded-iPaaS platform and ActionKit are sales-quoted after a free trial. The ActionKit MCP server is self-hosted (Docker) from github.com/useparagon/paragon-mcp; no hosted endpoint.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "http",
@@ -823,8 +827,8 @@
     "app-connectors"
    ],
    "no_auth": false,
-   "has_free_tier": true,
-   "has_trial": false,
+   "has_free_tier": false,
+   "has_trial": true,
    "no_card": false,
    "stale": false,
    "link_check": {
@@ -843,7 +847,7 @@
    "auth_hint": "Authorization: Bearer <access_token> (OAuth client-credentials flow recommended)",
    "mcp": {
     "type": "official",
-    "url": "https://pipedream.com/docs/connect/mcp/developers",
+    "url": "https://remote.mcp.pipedream.net/v3",
     "maintainer": "vendor",
     "remote_url": "https://remote.mcp.pipedream.net/v3",
     "source_url": "https://pipedream.com/docs/connect/mcp/developers",
@@ -866,14 +870,14 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "check pricing (pipedream.com/pricing) for current Connect free-tier request/credit limits",
+   "free_tier": "Free tier: free workspaces get a daily credit limit and limited connected accounts; Connect is free in development mode, production use needs a paid plan",
    "sdk": [
     "typescript"
    ],
    "openapi": null,
    "llms_txt": "https://pipedream.com/docs/llms.txt",
    "desc_en": "Call 2,700+ app APIs and run managed-auth actions on end users' behalf via REST API or Pipedream MCP servers.",
-   "notes": "Requires a Pipedream project plus client ID/secret/project ID to call the MCP server; managed auth handles end-user OAuth for connected apps.",
+   "notes": "Requires a Pipedream project plus client ID/secret/project ID to call the MCP server; managed auth handles end-user OAuth for connected apps. Send Bearer token plus x-pd-project-id, x-pd-environment, x-pd-external-user-id, x-pd-app-slug headers.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -915,10 +919,10 @@
    "homepage": "https://www.stackone.com",
    "docs": "https://docs.stackone.com/docs/getting-started",
    "auth": "api_key",
-   "auth_hint": "Authorization: Bearer <stackone_api_key>",
+   "auth_hint": "Authorization: Basic base64(<api_key>:) plus x-account-id: <account_id>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.stackone.com/connect/ai-platforms/overview",
+    "url": "https://mcp.stackone.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.stackone.com/mcp",
     "source_url": "https://docs.stackone.com/connect/ai-platforms/overview",
@@ -990,15 +994,15 @@
    "homepage": "https://superglue.ai",
    "docs": "https://superglue.ai/docs",
    "auth": "api_key",
-   "auth_hint": "Authorization: Bearer <api_key> (exact header not independently confirmed - verify in docs)",
+   "auth_hint": "Authorization: Bearer <api_key>",
    "mcp": {
     "type": "official",
-    "url": "https://superglue.ai/docs",
+    "url": "https://superglue.ai/docs/mcp/using-the-mcp/",
     "maintainer": "vendor",
     "source_url": "https://superglue.ai/docs/mcp/using-the-mcp/",
     "checked_at": "2026-09-24",
-    "domain_verified": null,
-    "kind": "official",
+    "domain_verified": true,
+    "kind": "vendor-hosted",
     "config": {
      "transport": "streamable-http",
      "url": "https://api.superglue.cloud/mcp",
@@ -1016,7 +1020,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Connect and orchestrate enterprise systems (ERP, CRM, databases) through a self-serve API and per-integration MCP servers.",
-   "notes": "Added: open-source, self-serve integration/migration agent for enterprise systems (NetSuite, SAP, Sage Intacct, Dynamics) with per-app MCP servers; some exact API details (auth header, SDK) could not be independently confirmed in this pass and should be double-checked in the live docs before use.",
+   "notes": "Open-source, self-serve integration/migration agent for enterprise systems (NetSuite, SAP, Sage Intacct, Dynamics). Default MCP server at https://<api-endpoint>/mcp (OAuth or creator API key); custom servers at /mcp/{orgId}/{serverName}.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -1087,7 +1091,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "Zapier Free plan (100 tasks/mo) covers MCP tool calls; more on paid plans",
+   "free_tier": "Free tier: 100 tasks/month; each successful MCP tool call uses 2 tasks (~50 calls/month); more on paid plans",
    "sdk": [],
    "openapi": null,
    "llms_txt": "https://docs.zapier.com/llms.txt",

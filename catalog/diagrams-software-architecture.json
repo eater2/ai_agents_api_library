@@ -13,8 +13,8 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <api_token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://app.eraser.io/api/mcp",
     "maintainer": "vendor",
     "remote_url": "https://app.eraser.io/api/mcp",
     "repo": "https://www.npmjs.com/package/@eraserlabs/eraser-mcp",
@@ -33,7 +33,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate diagrams from text prompts (DiagramGPT) and manage Eraser files programmatically via REST API.",
-   "notes": "No free tier for API access - tokens are only issued to paid teams, not free accounts.",
+   "notes": "No free tier for API access - tokens are only issued to paid teams, not free accounts. The official remote MCP server (OAuth or API key; local npm @eraserlabs/eraser-mcp) is free within in-app free-tier limits.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "none",
@@ -67,10 +67,10 @@
    "homepage": "https://icepanel.io",
    "docs": "https://developer.icepanel.io/",
    "auth": "api_key",
-   "auth_hint": "API key based; OpenAPI 3.1 spec published at api.icepanel.io",
+   "auth_hint": "X-API-Key: <ICEPANEL_API_KEY>; OpenAPI 3.1 spec published at api.icepanel.io",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.icepanel.io/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.icepanel.io/mcp",
     "covers_full_api": false,
@@ -89,7 +89,7 @@
    "openapi": "https://api.icepanel.io/",
    "llms_txt": "https://developer.icepanel.io/llms.txt",
    "desc_en": "Programmatically create, read, import, and export C4-style architecture landscapes and models via REST API.",
-   "notes": "Free plan has meaningful monthly request caps; higher volume requires Growth ($40/editor/mo), Scale ($80/editor/mo), or Enterprise plans.",
+   "notes": "Free plan has monthly request caps; higher volume requires Growth ($40/editor/mo), Scale ($80/editor/mo) or Enterprise. Official remote MCP (OAuth) is documented as paid plans only; the local IcePanel/mcp-server repo is deprecated.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -198,8 +198,8 @@
    "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <api_key> or OAuth 2.0 access token",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.lucid.app/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.lucid.app/mcp",
     "covers_full_api": false,
@@ -216,9 +216,9 @@
    "free_tier": "check pricing",
    "sdk": [],
    "openapi": null,
-   "llms_txt": null,
+   "llms_txt": "https://developer.lucid.co/llms.txt",
    "desc_en": "Create, read, search, and manage Lucidchart documents and folders programmatically via REST API.",
-   "notes": "Requires enabling Developer Tools on the account first; supports both API-key and OAuth 2.0 client-credential flows; exact free-tier API quota not published in docs.",
+   "notes": "Requires enabling Developer Tools on the account first; supports both API-key and OAuth 2.0 client-credential flows; exact free-tier API quota not published in docs. The official MCP server (OAuth, since 2025-11-18) must be enabled by an account admin.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "http",
@@ -295,7 +295,7 @@
    "free_tier": "unauthenticated MCP validate/render tools are free; saving to a Mermaid Chart account needs a token, check pricing for limits",
    "sdk": [],
    "openapi": null,
-   "llms_txt": "https://mermaid.ai/llms.txt",
+   "llms_txt": null,
    "desc_en": "Validate, render, and save Mermaid diagrams via Mermaid Chart's official MCP server using an account API token.",
    "notes": "Broad REST API docs are gated behind a Google Form request (contact-to-access); the MCP server (HTTP https://mcp.mermaid.ai/mcp, SSE https://mcp.mermaid.ai/sse) is the practical self-serve agent interface today.",
    "verified": "2026-09-24",
@@ -376,7 +376,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free plan allows up to 3 editable team boards; MCP server available on all plans including free",
+   "free_tier": "Free tier: up to 3 editable team boards; MCP on all plans, capped per day at 100 tool calls on Free (Starter 500, Business 2,000, Enterprise 10,000)",
    "sdk": [],
    "openapi": null,
    "llms_txt": "https://developers.miro.com/llms.txt",
@@ -516,7 +516,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Render UML and architecture-as-code diagrams to PNG/SVG/ASCII via a free public HTTP GET API using encoded diagram text.",
-   "notes": "Extremely widely used for UML/C4/architecture-as-code; no signup; self-hostable via plantuml.war for privacy or rate-limit control. Added because it's a very common agent-callable diagram-as-code service missing from the candidate list.",
+   "notes": "Extremely widely used for UML/C4/architecture-as-code; no signup; self-hostable via plantuml.war for privacy or rate-limit control. The official plantuml/plantuml-mcp is an MVP exposing only plantuml_version (no rendering yet).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "no_key",
@@ -557,8 +557,8 @@
    "auth": "api_key",
    "auth_hint": "X-Authorization header: apiKey:base64(HMAC-SHA256(apiSecret, digest)) plus Nonce header",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.structurizr.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.structurizr.com/mcp",
     "tools": [
@@ -587,7 +587,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Create and update C4-model software architecture diagram workspaces as JSON via a signed HTTPS API.",
-   "notes": "Uses a nonstandard HMAC signing scheme rather than a plain bearer token; docs recommend using the Structurizr CLI or client libraries (e.g. Structurizr for Java) instead of calling the raw API directly.",
+   "notes": "Cloud service is end-of-life (migrate to playground, local or self-hosted server per docs.structurizr.com/cloud). Uses a nonstandard HMAC signing scheme rather than a bearer token; docs recommend the Structurizr CLI or client libraries over the raw API.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "apiKey",

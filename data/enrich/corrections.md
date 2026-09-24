@@ -83,6 +83,13 @@ Apply to data/catalog.json after checking the source.
 - `amazon-selling-partner-api`: docs: developer-docs.amazon.com/sp-api now redirects to https://developer-docs.amazon/sp-api/
 - `bigcommerce-api`: mcp: https://docs.bigcommerce.com/_mcp/server is a docs-search MCP (single tool searchDocs), not an API server; the vendor's Storefront MCP (B2C/B2B) uses a per-store URL from the control panel and covers shopping/cart/checkout only, not the admin API
 - `bigcommerce-api`: docs: developer.bigcommerce.com now redirects to docs.bigcommerce.com
+- `ebay-apis`: mcp: eBay's official GitHub org publishes @ebay/npm-public-api-mcp (local server; discovers and calls eBay REST APIs via OpenAPI specs, GET/read-only in production); entry says none
+- `etsy-open-api-v3`: auth_hint: x-api-key header value is '<keystring>:<shared_secret>', not the keystring alone
+- `etsy-open-api-v3`: free_tier: rate-limit docs publish no fixed default (10 req/s, ~5,000/day not stated); limits are per app in the Developer Portal
+- `etsy-open-api-v3`: mcp: official Etsy Dev MCP at https://mcp.api.etsycloud.com/mcp (spec/docs helper; does not call the API); entry says none
+- `shopify-admin-storefront-api`: docs: REST Admin API is legacy since 2024-10-01 and new public apps must use the GraphQL Admin API; docs link should point to https://shopify.dev/docs/api/admin-graphql
+- `shopify-admin-storefront-api`: mcp: Dev MCP (npx @shopify/dev-mcp) serves docs/schemas only, not store data; per-store Storefront MCP at https://{shop}.myshopify.com/api/mcp needs no auth (catalog, cart, policies)
+- `woocommerce-rest-api`: mcp: WooCommerce has an official MCP integration (developer preview) via the WordPress MCP Adapter at /wp-json/mcp/mcp-adapter-default-server, auth with WordPress Application Passwords; entry marks it community
 - `csm-common-sense-machines-api`: homepage/docs: csm.ai, www.csm.ai, docs.csm.ai and api.csm.ai do not resolve in DNS on 2026-09-24; service may be discontinued - re-verify or remove
 - `csm-common-sense-machines-api`: mcp: github.com/CommonSenseMachines org and blender-mcp repo return 404 on GitHub; lobehub listing is an aggregator, not a vendor source
 - `hyper3d-rodin-api`: free_tier: pricing page says full API access is only on the Business plan ($120/mo, $96/mo annual); direct credits $1.5 each; the '10 starter credits' claim was not confirmed
@@ -109,6 +116,9 @@ Apply to data/catalog.json after checking the source.
 - `deepseek-api`: notes: off-peak discount is 50%; peak hours are 01:00-04:00 and 06:00-10:00 UTC Mon-Fri; fees are deducted from a topped-up or granted balance
 - `fal-ai`: free_tier: docs describe a prepaid credit model (credits bought in advance); no free tier is stated
 - `hugging-face-inference-providers`: free_tier: free users get $0.10/month in Inference Providers credits (PRO $2.00/month)
+- `openai-api`: mcp: OpenAI hosts an official documentation-only MCP server at https://developers.openai.com/mcp (does not call the API)
+- `replicate`: mcp: remote endpoint shown at mcp.replicate.com is https://mcp.replicate.com/sse (API-token auth)
+- `together-ai`: free_tier: docs say Together AI offers no free trial; platform access requires a minimum $5 credit purchase
 - `beatoven-ai-api`: auth_hint: official API spec (github.com/Beatoven/public-api) documents 'Authorization: Bearer <API_TOKEN>' at https://public-api.beatoven.ai
 - `elevenlabs-music-api`: mcp: local elevenlabs-mcp repo is marked deprecated; vendor now hosts a remote OAuth MCP server at https://api.elevenlabs.io/v1/mcp
 - `elevenlabs-music-api`: free_tier: pricing page states Free plan = 10k credits/month incl. Music; music commercial use requires Starter+
@@ -170,6 +180,11 @@ Apply to data/catalog.json after checking the source.
 - `elevenlabs-agents-platform`: free_tier: pricing page lists no commercial license on Free (Commercial License starts at Starter, $6/month)
 - `elevenlabs-agents-platform`: docs: Agents docs moved to elevenlabs.io/docs/eleven-agents/overview
 - `livekit-cloud`: homepage: livekit.io now redirects to livekit.com
+- `retell-ai`: notes: official MCP at https://mcp.retellai.com authenticates with Authorization: Bearer <RETELL_API_KEY>; legacy retell.stlmcp.com server was removed 2026-07-20
+- `synthflow-api`: mcp: vendor runs an official remote MCP at https://mcp.synthflow.ai/mcp (regional US/EU URLs too) with ~60 tools
+- `synthflow-api`: free_tier: pricing page now shows only enterprise contracts from $30,000/yr; no self-serve free trial shown there
+- `twilio-programmable-voice`: mcp: twilio-labs/mcp (@twilio-alpha/mcp) is published by Twilio's own twilio-labs GitHub org, so maintainer is vendor, not community; exposes all public APIs via OpenAPI with --services filter
+- `twilio-programmable-voice`: free_tier: trial now gives product free units (e.g. 75 voice minutes, 100 SMS), no card, ends after 30 days, not ~$15 credit
 - `attio-api`: free_tier: pricing page shows a lasting Free plan (up to 3 seats, 50,000 records, API and webhook access, no credit card); 14-day trial is for the Pro plan
 - `intercom-api`: auth: private apps use a workspace access token (Authorization: Bearer) without OAuth; OAuth is only required for public apps, so api_key+oauth2 fits better than oauth2
 - `mailchimp-marketing-api`: mcp: no official Marketing API MCP; community servers exist (e.g. github.com/damientilman/mailchimp-mcp-server, 227 tools). Mailchimp's official MCP (https://mandrillapp.com/mcp) covers only Transactional/Mandrill
@@ -206,26 +221,47 @@ Apply to data/catalog.json after checking the source.
 - `akool-api`: auth_hint: Client ID/Secret token flow is documented as legacy; x-api-key header is recommended
 - `amazon-polly-amazon-transcribe-aws`: mcp: generic AWS API MCP Server (awslabs, runs any AWS CLI command incl. polly/transcribe) is vendor-maintained
 - `amazon-polly-amazon-transcribe-aws`: free_tier: Polly neural 1M chars/mo and generative 100K chars/mo only for first 12 months; new AWS accounts since 2025-07-15 get up to $200 Free Tier credits
+- `amazon-translate`: mcp: generic vendor AWS API MCP Server (awslabs) can call Amazon Translate via AWS CLI commands
 - `assemblyai-api`: mcp: vendor MCP is a docs-search server at https://assemblyai.com/docs/mcp (search/fetch documentation), not an API server; catalog URL mcp.assemblyai.com/docs is outdated
 - `assemblyai-api`: free_tier: $50 credits are one-time for new accounts (do not expire), not a recurring free tier
 - `azure-ai-speech`: mcp: github.com/microsoft/azure-speech-mcp-server contains only a README; speech tools ship in the Azure MCP Server (microsoft/mcp) as 'speech stt recognize' and 'speech tts synthesize'
 - `azure-ai-speech`: free_tier: batch transcription is not supported on F0
+- `azure-ai-translator`: mcp: no vendor or notable community MCP server found (Azure MCP Server has no Translator tools)
 - `cartesia-api`: free_tier: free plan has no commercial-use license and no voice cloning
 - `creatomate-api`: mcp: vendor hosts a remote MCP server at https://api.creatomate.com/mcp (OAuth or Bearer API key), not none
 - `creatomate-api`: free_tier: free plan output is clamped to max 480 px per dimension
 - `deepgram-api`: mcp: Deepgram CLI (pip install deepctl) runs a local MCP server via 'dg mcp' (stdio or SSE) proxying developer API tools; docs MCP at https://developers.deepgram.com/_mcp/server
 - `deepgram-api`: free_tier: $200 credit is a one-time signup credit (trial), not a recurring free tier
+- `deepl-api`: free_tier: API plans listed are Developer ('Test out the API for free'), Growth and Enterprise API; Free-plan keys (suffix :fx) use https://api-free.deepl.com
+- `elevenlabs-api`: mcp: github.com/elevenlabs/elevenlabs-mcp is archived; vendor now hosts an OAuth MCP server at https://api.elevenlabs.io/v1/mcp exposing agent-management tools
+- `elevenlabs-api`: free_tier: free plan output is for non-commercial use with attribution only; no voice cloning
+- `google-cloud-text-to-speech-speech-to-text`: mcp: GoogleCloudPlatform publishes experimental mcp-chirp3-go (Chirp 3 HD TTS: chirp_tts, list_chirp_voices) in the Genmedia MCP servers
+- `google-cloud-text-to-speech-speech-to-text`: free_tier: TTS free tier also covers Neural2/Chirp 3 HD/Studio (1M chars/mo) and WaveNet (4M chars/mo)
+- `google-cloud-translation`: mcp: no vendor or notable community MCP server for Cloud Translation found
 - `google-veo-gemini-api-vertex-ai`: mcp: GoogleCloudPlatform publishes an experimental Genmedia MCP server (mcp-veo-go, Vertex AI via ADC) with veo_t2v/veo_i2v tools
 - `heygen-api`: mcp: remote MCP is OAuth-only and bills the user's web subscription credits, not API credits
+- `hume-ai-api`: mcp: https://dev.hume.ai/_mcp/server is a docs MCP; the Octave TTS MCP server is the open-source local server github.com/HumeAI/mcp-server (npx)
+- `hume-ai-api`: free_tier: new accounts also receive $20 in credits
 - `klap-api`: free_tier: API pricing is usage-based, billed monthly per operation (Generate Short $0.32, Video Input $0.44, Export $0.48); no free API credits stated
 - `kling-ai-api`: auth_hint: current API uses a console-issued API Key sent as Authorization: Bearer <API_KEY>; the AccessKey/SecretKey JWT (HS256, 30 min) is only for legacy-design endpoints
 - `kling-ai-api`: docs: docs moved to https://kling.ai/document-api/ (API domain https://api-singapore.klingai.com)
 - `kling-ai-api`: free_tier: a Trial Resource Package for integration testing is offered
+- `languagetool-api`: auth_hint: Premium credentials (username, apiKey) are form-data parameters on api.languagetoolplus.com/v2; public endpoint is api.languagetool.org/v2
+- `languagetool-api`: free_tier: public limit is 75KB text per minute per IP plus 20KB per request
 - `luma-ai-dream-machine-api`: free_tier: pricing now lists Ray 3.2 at $0.15 (540p) to $1.20 (1080p) per 5s T2V/I2V clip; API output has no watermark
+- `modernmt-api`: notes: ModernMT is transitioning to Lara (Lara Translate) and will sunset by end of 2026; pricing page now only shows migration guidance
+- `murf-ai-api`: mcp: vendor publishes a local MCP server (github.com/murf-ai/murf-mcp, uvx), not none
+- `murf-ai-api`: free_tier: free API plan gives 100,000 characters with no time limit
+- `murf-ai-api`: auth_hint: send the key in the api-key request header (https://api.murf.ai/v1)
+- `openai-audio-api-tts-transcription`: docs: docs moved to https://developers.openai.com/api/docs/guides/text-to-speech and /speech-to-text
 - `pixverse-api`: auth_hint: key is sent in the API-KEY request header, with a unique Ai-trace-id (UUID) header per request
 - `pixverse-api`: free_tier: pricing page states $1 = 5 videos (v6, 720p, 5s, no audio)
+- `resemble-ai-api`: mcp: vendor MCP servers (docs.resemble.ai/_mcp/server and resemble-ai/resemble-mcp) only search documentation/OpenAPI spec; they do not generate speech
+- `resemble-ai-api`: free_tier: Flex plan is $0/month with pay-as-you-go credits, no free usage allowance stated
+- `rev-ai-api`: mcp: no vendor MCP server found; https://docs.rev.ai/ is the docs site, not an MCP endpoint (only third-party Composio toolkit exists)
 - `runway-api`: mcp: besides the generation MCP (mcp.runwayml.com), there is a Runway Dev MCP at https://dev.runwayml.com/mcp (OAuth only) for tasks, model routers and docs
-- `shotstack-api`: free_tier: a free 'stage' sandbox environment also exists (https://api.shotstack.io/edit/stage), output is watermarked
+- `shotstack-api`: free_tier: API has a 'stage' development sandbox (https://api.shotstack.io/edit/stage); v1 is production 'without watermarks'
+- `speechmatics-api`: free_tier: Free plan is now a one-time $100 credit grant with no payment card required, not 480 min/month
 - `synthesia-api`: mcp: vendor hosts a public-beta MCP server at https://mcp.synthesia.io/mcp (drafts, generate video, status, video search), not none
 - `synthesia-api`: auth_hint: API key goes in the Authorization header without a Bearer prefix (securityScheme apiKey, name Authorization)
 - `synthesia-api`: free_tier: API access requires Creator plan or above

@@ -13,8 +13,8 @@
    "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <personal access token>",
    "mcp": {
-    "type": "community",
-    "url": "https://github.com/domdomegg/airtable-mcp-server",
+    "type": "official",
+    "url": "https://mcp.airtable.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.airtable.com/mcp",
     "source_url": "https://airtable.com/developers/agents/mcp/getting-started",
@@ -33,7 +33,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "free tier: API access on Free plan, ~5 req/sec per base",
+   "free_tier": "Free tier: 1,000 API calls per workspace per month on the Free plan, 5 req/sec per base",
    "sdk": [
     "javascript"
    ],
@@ -118,8 +118,8 @@
    "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <personal access token or OAuth2 token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.asana.com/v2/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.asana.com/v2/mcp",
     "tools": [
@@ -159,7 +159,7 @@
    "openapi": null,
    "llms_txt": "https://developers.asana.com/llms.txt",
    "desc_en": "Create tasks, projects, and comments in Asana workspaces via REST API.",
-   "notes": "No official MCP server confirmed as of this check.",
+   "notes": "Official remote MCP server uses OAuth; MCP tokens work only with the MCP server, not the REST API.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -231,7 +231,7 @@
    "auth_hint": "Authorization: Bearer <OAuth2 token> (or basic auth with API token for Cloud REST)",
    "mcp": {
     "type": "official",
-    "url": "https://mcp.atlassian.com/v1/mcp/authv2",
+    "url": "https://mcp.atlassian.com/v2/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.atlassian.com/v2/mcp",
     "tools": [
@@ -325,8 +325,8 @@
    "auth": "oauth2",
    "auth_hint": "Authorization: Bearer <access_token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.box.com",
     "maintainer": "vendor",
     "remote_url": "https://mcp.box.com",
     "tools": [
@@ -353,7 +353,7 @@
      "derived": true
     }
    },
-   "free_tier": "check pricing (Box API generally requires a paid Box account for meaningful use)",
+   "free_tier": "Free: developer plan with 10 GB storage, full API access and 1,000 AI units per month, no payment required",
    "sdk": [
     "python",
     "javascript",
@@ -415,8 +415,8 @@
    "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <API key>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.cal.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.cal.com/mcp",
     "repo": "https://github.com/calcom/companion/tree/main/apps/mcp-server",
@@ -488,8 +488,8 @@
    "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <personal access token or OAuth2 token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.calendly.com",
     "maintainer": "vendor",
     "remote_url": "https://mcp.calendly.com",
     "tools": [
@@ -510,7 +510,7 @@
      "derived": true
     }
    },
-   "free_tier": "check pricing (personal access tokens available for own-account use; broader API access varies by plan)",
+   "free_tier": "Free: API GET/POST works on every plan incl. Free (except 3 Enterprise-only endpoints); webhooks need a Standard, Teams or Enterprise plan",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
@@ -568,7 +568,7 @@
    "auth_hint": "Authorization: <personal API token> (no Bearer prefix) or OAuth2 token",
    "mcp": {
     "type": "official",
-    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+    "url": "https://mcp.clickup.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.clickup.com/mcp",
     "covers_full_api": false,
@@ -591,7 +591,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Create and manage ClickUp tasks, lists, and docs via REST API or the official MCP server.",
-   "notes": "",
+   "notes": "MCP server is OAuth-only (no API keys); Free Forever is limited to 50 MCP calls per 24h without the AI add-on.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -653,7 +653,7 @@
    "auth_hint": "Authorization: Bearer <API token>",
    "mcp": {
     "type": "official",
-    "url": "https://docs.superhuman.com/developers/apis/v1",
+    "url": "https://docs.superhuman.com/apis/mcp",
     "maintainer": "vendor",
     "remote_url": "https://docs.superhuman.com/apis/mcp",
     "source_url": "https://docs.superhuman.com/.well-known/oauth-protected-resource/apis/mcp",
@@ -675,7 +675,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Read and write Coda (now 'Superhuman Docs') documents, tables, and rows via REST API or an MCP server.",
-   "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL (coda.io/apis/v1) still works. Docs mention an official MCP server optimized for LLM usage, but the exact remote endpoint wasn't independently confirmed this session.",
+   "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL (coda.io/apis/v1) still works. The official MCP server uses OAuth via id.superhuman.com (scope mcp:all).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -723,8 +723,8 @@
    "auth": "oauth2",
    "auth_hint": "Authorization: Bearer <access_token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.dropbox.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.dropbox.com/mcp",
     "tools": [
@@ -760,7 +760,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Upload, download, and manage files and folders in Dropbox via the HTTP REST API.",
-   "notes": "",
+   "notes": "Official remote MCP server is in open beta and uses Dropbox OAuth.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -806,8 +806,8 @@
    "auth": "oauth2",
    "auth_hint": "Authorization: Bearer <OAuth2 token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://developers.google.com/workspace/guides/configure-mcp-servers",
     "maintainer": "vendor",
     "remote_url": "https://gmailmcp.googleapis.com/mcp/v1",
     "tools": [
@@ -829,7 +829,7 @@
      "derived": true
     }
    },
-   "free_tier": "free (subject to per-API daily quotas)",
+   "free_tier": "Free: no charge within per-API daily quotas; Google plans to bill quota overages to the Cloud billing account later in 2026",
    "sdk": [
     "python",
     "javascript",
@@ -839,7 +839,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Read/write Gmail messages, Calendar events, and Drive files programmatically via REST APIs.",
-   "notes": "Each Workspace API (Gmail, Calendar, Drive, Docs, Sheets) has its own quota; sensitive/restricted scopes require OAuth consent screen verification.",
+   "notes": "Each Workspace API (Gmail, Calendar, Drive, Docs, Sheets) has its own quota; sensitive/restricted scopes require OAuth consent screen verification. Official remote MCP servers (Developer Preview, OAuth) run per product, e.g. gmailmcp.googleapis.com/mcp/v1.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -891,7 +891,7 @@
    "homepage": "https://linear.app/developers",
    "docs": "https://linear.app/developers",
    "auth": "api_key+oauth2",
-   "auth_hint": "Authorization: Bearer <API key or OAuth2 token>",
+   "auth_hint": "Authorization: <API_KEY> (personal key, no Bearer) or Authorization: Bearer <OAuth2 token>",
    "mcp": {
     "type": "official",
     "url": "https://mcp.linear.app/mcp",
@@ -989,8 +989,8 @@
    "auth": "oauth2",
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.svc.cloud.microsoft/enterprise",
     "maintainer": "vendor",
     "remote_url": "https://mcp.svc.cloud.microsoft/enterprise",
     "tools": [
@@ -1020,7 +1020,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Single REST endpoint to read/write Outlook mail, Calendar events, Teams, and OneDrive/SharePoint data.",
-   "notes": "Requires app registration in Microsoft Entra ID; delegated vs application permissions determine required consent.",
+   "notes": "Requires app registration in Microsoft Entra ID; delegated vs application permissions determine required consent. The official MCP Server for Enterprise (preview) only runs read-only Entra directory queries.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "oauth2",
@@ -1067,7 +1067,7 @@
    "auth_hint": "Authorization: <personal API token or OAuth2 token>",
    "mcp": {
     "type": "official",
-    "url": null,
+    "url": "https://mcp.monday.com/mcp",
     "maintainer": "vendor",
     "remote_url": "https://mcp.monday.com/mcp",
     "repo": "https://github.com/mondaycom/mcp",
@@ -1107,7 +1107,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Query and update monday.com boards, items, and workflows via GraphQL API or a hosted MCP endpoint.",
-   "notes": "monday.com docs confirm a native/hosted MCP connection option for AI assistants, but the exact current endpoint URL could not be independently confirmed this session — check developer.monday.com.",
+   "notes": "Hosted MCP accepts a personal API token or OAuth 2.0; SSE transport is deprecated in favor of Streamable HTTP.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -1423,10 +1423,10 @@
    "homepage": "https://developer.atlassian.com/cloud/trello/",
    "docs": "https://developer.atlassian.com/cloud/trello/rest/",
    "auth": "api_key+oauth2",
-   "auth_hint": "Authorization: Bearer <access_token> (or legacy key+token query params)",
+   "auth_hint": "key=<API_KEY>&token=<API_TOKEN> query params, or Authorization: OAuth oauth_consumer_key=\"<API_KEY>\", oauth_token=\"<API_TOKEN>\"",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://mcp.trello.com/v1",
     "maintainer": "vendor",
     "remote_url": "https://mcp.trello.com/v1",
     "covers_full_api": false,
@@ -1445,7 +1445,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Create and manage Trello boards, lists, and cards via REST API.",
-   "notes": "Now documented under the Atlassian developer platform; supports both legacy key+token and OAuth2 bearer auth.",
+   "notes": "Now documented under the Atlassian developer platform; REST calls send an API key plus a user token (no Bearer). The official MCP server uses OAuth 2.0 and works on all Trello plans.",
    "verified": "2026-09-24",
    "auth_scheme": {
     "type": "apiKey",

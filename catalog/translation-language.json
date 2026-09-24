@@ -13,10 +13,20 @@
    "auth": "cloud_iam",
    "auth_hint": "AWS SigV4 (IAM credentials) via AWS SDK/CLI",
    "mcp": {
-    "type": "community",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
+    "tools": [
+     "call_aws",
+     "suggest_aws_commands",
+     "get_execution_plan"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/awslabs/mcp/tree/main/src/aws-api-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
-    "kind": "community",
+    "kind": "official",
     "config": null,
     "issue": "entry lists no MCP server (mcp.url is null)"
    },
@@ -31,11 +41,31 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Translate text and documents in real time or batch across 75+ languages via the AWS SDK/API.",
-   "notes": "Requires an AWS account and IAM credentials; missing from the candidate list despite being a major agent-callable translation API.",
+   "notes": "Requires an AWS account and IAM credentials; missing from the candidate list despite being a major agent-callable translation API. The generic AWS API MCP Server (awslabs) can call Translate via AWS CLI commands.",
    "verified": "2026-09-24",
    "operations": [
     "translation"
    ],
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": true,
+    "quota": "2M characters (first 12 months)",
+    "period": "month",
+    "source_url": "https://aws.amazon.com/translate/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "cloud_iam",
+    "format": "AWS Signature Version 4 signed requests with IAM credentials",
+    "source_url": "https://docs.aws.amazon.com/general/latest/gr/translate-service.html",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://translate.<region>.amazonaws.com",
+   "data_policy": {
+    "summary": "Text inputs may be stored and used to improve AWS AI services; opt out via AWS Organizations AI services opt-out policy",
+    "source_url": "https://aws.amazon.com/translate/faqs/",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -88,6 +118,27 @@
     "translation",
     "language-detection"
    ],
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "2M characters (standard + custom translation training)",
+    "period": "month",
+    "source_url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/translator/",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Ocp-Apim-Subscription-Key",
+    "format": "Ocp-Apim-Subscription-Key: <KEY> + Ocp-Apim-Subscription-Region: <region>",
+    "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/reference/v3/reference",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.cognitive.microsofttranslator.com",
+   "rate_limits": {
+    "summary": "F0: 2 million characters per hour, consumed evenly (~33,300 chars/min sliding window)",
+    "source_url": "https://learn.microsoft.com/en-us/azure/ai-services/translator/service-limits",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -108,6 +159,21 @@
    "mcp": {
     "type": "official",
     "url": "https://github.com/DeepL/deepl-mcp-server",
+    "maintainer": "vendor",
+    "repo": "https://github.com/DeepL/deepl-mcp-server",
+    "tools": [
+     "translate-text",
+     "translate-document",
+     "rephrase-text",
+     "get-source-languages",
+     "get-target-languages",
+     "get-glossary-info",
+     "get-glossary-entries",
+     "list-glossaries"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://developers.deepl.com/docs/getting-started/deepl-mcp-server.md",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "official",
     "config": {
@@ -125,7 +191,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "API Free plan retired mid-2026 for new signups; now Developer/Growth paid plans with trial credits",
+   "free_tier": "Paid only for new signups: API Free plan retired mid-2026; API plans are Developer (from EUR 4.99/mo, 'test out the API for free'), Growth and Enterprise API; legacy Free keys (suffix :fx) use https://api-free.deepl.com",
    "sdk": [
     "python",
     "node",
@@ -143,6 +209,20 @@
    "operations": [
     "translation"
    ],
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "format": "Authorization: DeepL-Auth-Key <api-key>",
+    "source_url": "https://developers.deepl.com/docs/getting-started/auth.md",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.deepl.com",
+   "rate_limits": {
+    "summary": "Max request size 128 KiB, header size 16 KiB; throttle on HTTP 429",
+    "source_url": "https://developers.deepl.com/docs/resources/usage-limits.md",
+    "checked_at": "2026-09-24"
+   },
    "no_auth": false,
    "call": {
     "operation": "translate text",
@@ -221,6 +301,21 @@
     "translation",
     "language-detection"
    ],
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "500,000 characters NMT (applied as $10 credit every month)",
+    "period": "month",
+    "source_url": "https://cloud.google.com/translate/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "cloud_iam",
+    "scheme": "bearer",
+    "format": "Authorization: Bearer $(gcloud auth print-access-token) + x-goog-user-project; Basic v2 also accepts ?key=<API_KEY>",
+    "source_url": "https://cloud.google.com/translate/docs/basic/translating-text",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://translation.googleapis.com",
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
@@ -237,16 +332,20 @@
    "homepage": "https://languagetool.org/http-api/",
    "docs": "https://languagetool.org/http-api/",
    "auth": "api_key",
-   "auth_hint": "username + api_key query params (Premium); anonymous on the free public endpoint",
+   "auth_hint": "username + apiKey form-data params on https://api.languagetoolplus.com/v2 (Premium); anonymous on the free public endpoint https://api.languagetool.org/v2",
    "mcp": {
     "type": "community",
     "url": null,
+    "maintainer": "community",
+    "repo": "https://github.com/BaconDroid/languagetool-mcp-server",
+    "source_url": "https://github.com/BaconDroid/languagetool-mcp-server",
+    "checked_at": "2026-09-24",
     "domain_verified": null,
     "kind": "community",
     "config": null,
     "issue": "entry lists no MCP server (mcp.url null)"
    },
-   "free_tier": "free, no key needed on public endpoint (rate-limited: 20 req/min, 75,000 chars/min)",
+   "free_tier": "Free: no key needed on public endpoint (rate-limited: 20 req/min, 75KB text/min per IP, 20KB per request)",
    "sdk": [],
    "openapi": "https://languagetool.org/http-api/swagger-ui/",
    "llms_txt": null,
@@ -256,10 +355,35 @@
    "operations": [
     "grammar-check"
    ],
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "quota": "20 requests/min and 75KB text/min per IP; 20KB per request",
+    "source_url": "https://dev.languagetool.org/public-http-api",
+    "checked_at": "2026-09-24"
+   },
+   "auth_scheme": {
+    "type": "apiKey",
+    "name": "apiKey",
+    "format": "POST form fields username=<login email>&apiKey=<key> (Premium, api.languagetoolplus.com/v2); none on public api.languagetool.org",
+    "source_url": "https://languagetool.org/http-api/languagetool-swagger.json",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.languagetool.org/v2",
+   "rate_limits": {
+    "summary": "Public API: 20 requests per IP per minute, 75KB text per IP per minute, 20KB per request",
+    "source_url": "https://dev.languagetool.org/public-http-api",
+    "checked_at": "2026-09-24"
+   },
+   "async_jobs": {
+    "value": false,
+    "how": "Synchronous POST /v2/check",
+    "source_url": "https://dev.languagetool.org/public-http-api"
+   },
    "no_auth": false,
    "has_free_tier": true,
    "has_trial": false,
-   "no_card": false,
+   "no_card": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -300,11 +424,25 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Send adaptive neural machine translation requests with in-context learning via a REST API.",
-   "notes": "ModernMT is being folded into a new product called Lara; ModernMT API compatibility is stated to continue only until Dec 31, 2026 - plan for migration.",
+   "notes": "ModernMT is evolving into Lara (Lara Translate) and will sunset by the end of 2026; plan migration to the Lara API (developers.laratranslate.com).",
    "verified": "2026-09-24",
    "operations": [
     "translation"
    ],
+   "auth_scheme": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "MMT-ApiKey",
+    "format": "MMT-ApiKey: <API_KEY>",
+    "source_url": "https://www.modernmt.com/api/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.modernmt.com",
+   "async_jobs": {
+    "value": true,
+    "how": "Batch translation delivers results to a webhook callback",
+    "source_url": "https://www.modernmt.com/api/"
+   },
    "no_auth": false,
    "has_free_tier": false,
    "has_trial": true,

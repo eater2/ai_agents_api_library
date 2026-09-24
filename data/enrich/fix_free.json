@@ -1,0 +1,85 @@
+{
+  "jina-ai-search-reader": {
+    "free_plan_kind": "free_tier",
+    "note": "Keyless Reader at 20 RPM is lasting free usage (no expiry); the 10M tokens per new key are the one-time part. free_tier text already correct.",
+    "sources": ["https://jina.ai/reader/"]
+  },
+  "searchapi-io": {
+    "free_tier": "Trial: 100 free requests one-time on signup, no credit card required; then Developer plan $40/mo for 10,000 searches",
+    "sources": ["https://www.searchapi.io/pricing"]
+  },
+  "serper": {
+    "free_tier": "Trial: 2,500 free queries one-time on signup, no credit card required; then prepaid query packages",
+    "sources": ["https://serper.dev"]
+  },
+  "you-com-api": {
+    "free_tier": "Free tier: Web Search API free without an API key at 100 queries/day; new accounts also get a $100 one-time credit on signup for Search, Contents, Answer and Research APIs",
+    "free_plan_kind": "free_tier",
+    "note": "Pricing page lists a Free plan for the Web Search API, 100 queries/day, no API key required - a lasting daily quota; the $100 credit is the one-time part.",
+    "sources": ["https://you.com/pricing"]
+  },
+  "scrapingbee": {
+    "free_tier": "Trial: 1,000 free API credits one-time on signup, no card required; then Hobby plan $19/mo for 75,000 credits",
+    "sources": ["https://www.scrapingbee.com/pricing/"]
+  },
+  "zyte-api": {
+    "free_tier": "Trial: $5 free credit one-time on signup, valid 30 days, no subscription needed; then pay-as-you-go or a monthly commitment",
+    "sources": ["https://www.zyte.com/pricing/"]
+  },
+  "creatomate-api": {
+    "free_tier": "Trial: full-featured trial with 50 credits one-time on signup, no credit card required; then Essential plan with 2,000 credits/mo",
+    "sources": ["https://creatomate.com/pricing"]
+  },
+  "tavus-api": {
+    "free_tier": "Free tier: Free plan with 25 min of conversational video and 5 min of video generation per month, full API access, 25 stock replicas; Starter $59/mo",
+    "sources": ["https://www.tavus.io/pricing"]
+  },
+  "assemblyai-api": {
+    "free_tier": "Trial: $50 in free credits one-time on signup, no card required, credits do not expire (LLM Gateway not included); then pay-as-you-go",
+    "sources": ["https://www.assemblyai.com/docs/billing-and-pricing"]
+  },
+  "deepgram-api": {
+    "free_tier": "Trial: $200 in free credit one-time on signup, no credit card required; then pay-as-you-go",
+    "sources": ["https://deepgram.com/pricing"]
+  },
+  "loudly-api": {
+    "free_tier": "Trial: free track allowance on signup with the API key from the developer portal; then volume-based pricing (Startup/SME/Corporate) or pay-as-you-go",
+    "sources": ["https://www.loudly.com/music-api"]
+  },
+  "meshy-api": {
+    "free_tier": "Paid only: creating API keys requires a paid plan (Pro $20/mo+); Free accounts get only a built-in test key for the Playground (free web plan 100 credits/mo)",
+    "sources": ["https://docs.meshy.ai/en/api/quick-start"]
+  },
+  "v0-platform-api-vercel": {
+    "free_tier": "Free tier: v0 Free plan includes $5 of credits per month (7 messages/day); Platform API use on Free not confirmed, credits also included on Premium/Team plans",
+    "sources": ["https://v0.app/docs/pricing"]
+  },
+  "aws-textract": {
+    "free_tier": "Trial: new AWS customers get 3 months free, per month 1,000 pages DetectDocumentText, 100 pages AnalyzeDocument forms/tables/layout/queries, 100 AnalyzeExpense/AnalyzeID",
+    "sources": ["https://aws.amazon.com/textract/pricing/"]
+  },
+  "reducto-api": {
+    "free_tier": "Trial: $150 in free credits (15,000 credits) one-time for new Standard accounts; then standard rates; Startup Program gives extra credits to qualifying teams",
+    "sources": ["https://reducto.ai/pricing"]
+  },
+  "unstructured-api": {
+    "free_tier": "Trial: 10,000 free pages one-time on signup, no credit card; then pay-as-you-go at $0.015/page",
+    "sources": ["https://unstructured.io/pricing"]
+  },
+  "daytona": {
+    "free_tier": "Trial: $200 free compute credit one-time on signup, no credit card required; first 5 GiB storage free; startup program up to $50k credits",
+    "sources": ["https://www.daytona.io/pricing"]
+  },
+  "zendesk-api": {
+    "free_tier": "Trial: 14-day free trial of Suite Professional, one-time; no free plan, paid plans from $19/agent/mo (Support Team, annual)",
+    "sources": ["https://www.zendesk.com/pricing/"]
+  },
+  "plaid-api": {
+    "free_tier": "Trial: Sandbox always free; new US/Canada teams (since 2026-04-15) get a free Trial plan with up to 10 Production Items one-time; then pay-as-you-go",
+    "sources": ["https://plaid.com/docs/account/billing/"]
+  },
+  "pipedream-connect": {
+    "free_tier": "Free tier: free workspaces get a daily credit limit and limited connected accounts; Connect is free in development mode, production use needs a paid plan",
+    "sources": ["https://pipedream.com/docs/pricing"]
+  }
+}

@@ -13,8 +13,8 @@
    "auth": "oauth2",
    "auth_hint": "Authorization: Bearer <token> (2-legged or 3-legged OAuth2)",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/autodesk-platform-services/aps-mcp-server-python",
     "maintainer": "vendor",
     "repo": "https://github.com/autodesk-platform-services/aps-mcp-server-nodejs",
     "tools": [
@@ -30,7 +30,7 @@
     "kind": "official",
     "config": null
    },
-   "free_tier": "free trial credits, then pay-as-you-go",
+   "free_tier": "Free tier: limited usage of rated APIs (Automation, Model Derivative, Flow Graph Engine, Reality Capture) per month, renews monthly; Pay as You Go beyond that needs a card or PayPal",
    "sdk": [
     "javascript",
     "dotnet"
@@ -38,7 +38,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Upload, translate, view and automate CAD/BIM files (Model Derivative, Data Management, Design Automation) via REST APIs.",
-   "notes": "Successor to Autodesk Forge; requires an Autodesk account and app registration in the APS console.",
+   "notes": "Successor to Autodesk Forge; requires an Autodesk account and app registration in the APS console. Autodesk publishes reference MCP servers (Node.js, Python, .NET) to run yourself; no hosted endpoint.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -94,7 +94,7 @@
     "kind": "none",
     "config": null
    },
-   "free_tier": "free developer sign-up/trial, then consumption-based pricing",
+   "free_tier": "Free tier: Community plan with 100 credits/month, 10 GB cloud data, 100 GB reality data; non-commercial, non-production use only; no expiry",
    "sdk": [
     "typescript"
    ],
@@ -150,10 +150,10 @@
    "homepage": "https://onshape-public.github.io/docs/",
    "docs": "https://onshape-public.github.io/docs/",
    "auth": "api_key+oauth2",
-   "auth_hint": "HMAC-signed API key pair (access/secret) for personal scripts, or OAuth2 Bearer token for published apps",
+   "auth_hint": "API key pair (access/secret) via Basic auth (base64 access:secret) or optional HMAC request signature; OAuth2 Bearer token for published apps",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://fs-mcp.labs.onshape.app/mcp",
     "maintainer": "vendor",
     "remote_url": "https://fs-mcp.labs.onshape.app/mcp",
     "covers_full_api": false,
@@ -172,7 +172,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Create, read and modify Onshape CAD documents, parts, assemblies and drawings programmatically via REST API.",
-   "notes": "Free-tier API access is limited to public documents; private/commercial use needs a paid Onshape subscription.",
+   "notes": "Free-tier API access is limited to public documents; private/commercial use needs a paid Onshape subscription. FeatureScript MCP server is in early access via Onshape Labs (App Store subscription).",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -224,8 +224,8 @@
    "auth": "oauth2",
    "auth_hint": "Authorization: Bearer <token> (OAuth2 authorization code / client credentials)",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://app.procore.com/rest/v1.0/mcp",
     "maintainer": "vendor",
     "remote_url": "https://app.procore.com/rest/v1.0/mcp",
     "tools": [
@@ -251,7 +251,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Read and write construction project data - RFIs, submittals, drawings, budgets, schedules - via REST API.",
-   "notes": "Requires joining the Procore Developer Program and OAuth app approval for production scopes; sandbox is free.",
+   "notes": "Requires joining the Procore Developer Program and OAuth app approval for production scopes; sandbox is free. Official AI Edge MCP (US02: us02.procore.com) authenticates with a Datagrid API key.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -310,7 +310,7 @@
     "kind": "none",
     "config": null
    },
-   "free_tier": "self-hosted only; requires a Rhino license, cloud deployment billed by core-hour",
+   "free_tier": "Paid only: self-hosted, requires a Rhino license; core-hour billing at $0.10 per core per hour of Rhino uptime on Windows Server, no free allowance",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
@@ -352,8 +352,8 @@
    "auth": "api_key+oauth2",
    "auth_hint": "Authorization: Bearer <personal access token>, or OAuth2 for published apps",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "community",
+    "url": "https://github.com/bimgeek/speckle-mcp",
     "maintainer": "community",
     "repo": "https://github.com/bimgeek/speckle-mcp",
     "covers_full_api": false,
@@ -465,8 +465,8 @@
    "auth": "api_key",
    "auth_hint": "Authorization: Bearer <token>",
    "mcp": {
-    "type": "none",
-    "url": null,
+    "type": "official",
+    "url": "https://github.com/KittyCAD/mcp",
     "maintainer": "vendor",
     "repo": "https://github.com/KittyCAD/mcp",
     "tools": [

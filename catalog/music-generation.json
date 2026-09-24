@@ -11,7 +11,7 @@
    "homepage": "https://www.beatoven.ai",
    "docs": "https://www.beatoven.ai/api",
    "auth": "api_key",
-   "auth_hint": "API key generated via dashboard (exact header name not published)",
+   "auth_hint": "Authorization: Bearer <API_TOKEN> (base URL https://public-api.beatoven.ai)",
    "mcp": {
     "type": "none",
     "url": null,
@@ -24,7 +24,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate royalty-cleared background music and sound effects from text prompts via REST API (Maestro).",
-   "notes": "Public marketing pages don't disclose exact auth header or free-credit amount; requires dashboard signup to see full docs.",
+   "notes": "Auth and endpoints are documented in the public API spec on GitHub (Beatoven/public-api); free-credit amount is not disclosed on public pages.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "none",
@@ -77,7 +77,7 @@
    "auth_hint": "xi-api-key: <API_KEY>",
    "mcp": {
     "type": "official",
-    "url": "https://github.com/elevenlabs/elevenlabs-mcp",
+    "url": "https://api.elevenlabs.io/v1/mcp",
     "maintainer": "vendor",
     "remote_url": "https://api.elevenlabs.io/v1/mcp",
     "repo": "https://github.com/elevenlabs/elevenlabs-mcp",
@@ -95,7 +95,7 @@
      "checked_at": "2026-09-24"
     }
    },
-   "free_tier": "shares ElevenLabs account credit pool (limited free credits on sign-up); check pricing for per-track cost",
+   "free_tier": "Free tier: 10,000 credits per month shared with TTS (music included, no commercial use of music on Free; Starter $6/mo or higher needed)",
    "sdk": [
     "python",
     "typescript"
@@ -103,7 +103,7 @@
    "openapi": null,
    "llms_txt": null,
    "desc_en": "Generate original music tracks from text prompts or detailed composition plans via REST API, with commercial licensing.",
-   "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS.",
+   "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS. The local elevenlabs-mcp repo is deprecated in favor of the hosted OAuth MCP server.",
    "verified": "2026-09-24",
    "free_plan": {
     "kind": "free_tier",
@@ -163,7 +163,7 @@
    "homepage": "https://www.loudly.com",
    "docs": "https://www.loudly.com/developers",
    "auth": "api_key",
-   "auth_hint": "API key issued on account creation (exact header name not published)",
+   "auth_hint": "API-KEY: <API_KEY> (base URL https://soundtracks.loudly.com)",
    "mcp": {
     "type": "none",
     "url": null,
@@ -171,7 +171,7 @@
     "kind": "none",
     "config": null
    },
-   "free_tier": "free track allowance on signup, then volume-based pay-as-you-go pricing",
+   "free_tier": "Trial: free track allowance on signup with the API key from the developer portal; then volume-based pricing (Startup/SME/Corporate) or pay-as-you-go",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
@@ -288,7 +288,7 @@
     "kind": "none",
     "config": null
    },
-   "free_tier": "paid only; Starter plan $29.99/mo for 100 songs/mo, no free tier confirmed",
+   "free_tier": "Trial: one-time 2-week free API trial with no commitment; then Starter $29.99/mo for 100 songs with a 6-month minimum commitment",
    "sdk": [],
    "openapi": null,
    "llms_txt": null,
