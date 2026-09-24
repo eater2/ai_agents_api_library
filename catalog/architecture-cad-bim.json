@@ -27,7 +27,8 @@
    "notes": "Successor to Autodesk Forge; requires an Autodesk account and app registration in the APS console.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -55,7 +56,8 @@
    "notes": "Built on iTwin.js; free developer account, but production data volumes/usage are billed.",
    "verified": "2026-09-24",
    "no_auth": false,
-   "has_free_tier": false,
+   "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -88,6 +90,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -114,6 +117,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -140,6 +144,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -166,6 +171,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -196,6 +202,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": true,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -223,6 +230,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": false,
+   "has_trial": false,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",
@@ -254,6 +262,7 @@
    "verified": "2026-09-24",
    "no_auth": false,
    "has_free_tier": false,
+   "has_trial": true,
    "stale": false,
    "link_check": {
     "checked_at": "2026-09-24",

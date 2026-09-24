@@ -2,7 +2,7 @@
 
 > Verified catalog of 301 third-party APIs and MCP servers that AI agents can call on a user's behalf after a one-time API key / OAuth / MCP setup. 26 categories. Last verified 2026-09-24. Each entry: docs URL, auth method + header hint, MCP server (official/community), free tier, SDKs, OpenAPI and llms.txt links.
 
-Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified.
+Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, plus derived booleans has_free_tier, has_trial, no_auth, stale and link_check{checked_at, docs, mcp}.
 
 ## Data
 
@@ -12,34 +12,57 @@ Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint,
 - [Excluded services](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/data/excluded.json): reviewed and rejected, with reasons
 - [MCP server](https://github.com/eater2/ai_agents_api_library#mcp-server): `npx -y github:eater2/ai_agents_api_library` — tools search_apis, get_api, list_categories
 
+## Start free
+
+232 of 301 services have a lasting free tier or free usage (JSON field `has_free_tier`; exact limits in `free_tier`), and 20 more give one-off free trial credits (`has_trial`). 16 work with no key at all (`no_auth`), so you can call them immediately without asking the user for credentials:
+
+- SearXNG (self-hosted JSON API) (web-search): Query a self-hosted SearXNG metasearch instance's JSON API to aggregate results from many search engines at once. Docs: https://docs.searxng.org/dev/search_api.html
+- Playwright MCP (Microsoft) (web-scraping-browser): Official Microsoft MCP server giving agents structured browser control (click, type, navigate) via Playwright's accessibility tree. Docs: https://github.com/microsoft/playwright-mcp#readme
+- arXiv API (knowledge-research): Search arXiv preprints by keyword, author, category or ID and retrieve metadata, abstracts and PDF links. Docs: https://info.arxiv.org/help/api/user-manual.html
+- Crossref REST API (knowledge-research): Look up and search scholarly metadata such as DOIs, references, authors, funders and licenses across Crossref-registered works. Docs: https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+- GDELT API (knowledge-research): Full-text search global news in about 65 languages and analyze coverage volume, tone and geography in near real time. Docs: https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/
+- Hacker News API (knowledge-research): Read Hacker News stories, comments, jobs, polls, user profiles and front-page rankings as real-time JSON. Docs: https://github.com/HackerNews/API
+- PubMed E-utilities (NCBI) (knowledge-research): Search, fetch, summarize and cross-link biomedical literature records from PubMed, PMC and other Entrez databases. Docs: https://www.ncbi.nlm.nih.gov/books/NBK25501/
+- Wikidata (knowledge-research): Query the Wikidata knowledge graph of entities, facts and relations via SPARQL, the REST API or MCP. Docs: https://www.wikidata.org/wiki/Wikidata:Data_access
+- Wikipedia / Wikimedia API (knowledge-research): Search, read and summarize Wikipedia and other Wikimedia content and metadata via REST and Action APIs. Docs: https://www.mediawiki.org/wiki/Wikimedia_APIs
+- Kroki (diagrams-software-architecture): Render 25+ diagram-as-code formats (PlantUML, Mermaid, C4, GraphViz, BPMN, etc.) from text via a free HTTP GET/POST API. Docs: https://docs.kroki.io/kroki/
+- PlantUML Server API (diagrams-software-architecture): Render UML and architecture-as-code diagrams to PNG/SVG/ASCII via a free public HTTP GET API using encoded diagram text. Docs: https://plantuml.com/server
+- Piston (code-execution-sandbox): Call a free public REST API to compile and run code in 70+ languages inside isolated containers. Docs: https://piston.readthedocs.io/en/latest/api-v2/
+- National Weather Service API (NWS) (maps-geo-weather): Fetch official US government weather forecasts, alerts, and observations via a free public REST API. Docs: https://www.weather.gov/documentation/services-web-api
+- Open-Meteo (maps-geo-weather): Fetch weather forecasts, historical weather, and climate data worldwide via a free open REST API, no key required. Docs: https://open-meteo.com/en/docs
+- OpenStreetMap Nominatim (maps-geo-weather): Geocode and reverse-geocode addresses from OpenStreetMap data via a free public REST API. Docs: https://nominatim.org/release-docs/latest/api/Overview/
+- Overpass API (OSM) (maps-geo-weather): Run custom queries (Overpass QL) over OpenStreetMap data - POIs, roads, boundaries - via a public read-only API. Docs: https://wiki.openstreetmap.org/wiki/Overpass_API
+
 ## Categories
 
-- [Web search](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/web-search.json): 14 services. Search engines and answer APIs that return fresh web results, snippets or full page content in agent-friendly formats.
-- [Web scraping and browser automation](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/web-scraping-browser.json): 18 services. Crawl, scrape and convert pages to Markdown/JSON, or drive a remote headless browser (clicks, forms, logins).
-- [Knowledge and research data](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/knowledge-research.json): 12 services. Encyclopedias, academic papers, news, computational knowledge and up-to-date library documentation.
-- [Image generation and editing](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/image-generation.json): 10 services. Text-to-image, image editing, inpainting, upscaling and background removal.
-- [Video generation and editing](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/video-generation.json): 15 services. Text/image-to-video models, talking avatars, programmatic video rendering and video hosting.
-- [Speech and audio](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/audio-speech.json): 13 services. Text-to-speech, speech-to-text, voice cloning, dubbing and audio intelligence.
-- [Music generation](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/music-generation.json): 6 services. Generate songs, instrumentals, loops and sound effects from prompts.
-- [3D generation and assets](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/3d-generation.json): 7 services. Text/image-to-3D mesh generation, texturing and 3D asset libraries.
-- [Architecture, CAD and BIM](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/architecture-cad-bim.json): 9 services. Building information models, CAD geometry, construction management and GIS platforms with programmatic access.
-- [Diagrams and software architecture](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/diagrams-software-architecture.json): 9 services. Render or edit diagrams (Mermaid, PlantUML, C4), whiteboards and architecture models.
-- [Design and UI](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/design-ui.json): 6 services. Read and write design files, generate branded graphics and publish websites.
-- [Documents, OCR and presentations](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/presentations-documents.json): 14 services. Parse PDFs and scans, convert file formats, generate slides and collect e-signatures.
-- [Translation and language](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/translation-language.json): 6 services. Machine translation, grammar and style checking.
-- [Code execution sandboxes](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/code-execution-sandbox.json): 10 services. Isolated cloud environments where an agent can run code, shells and whole dev environments safely.
-- [Developer platforms and DevOps](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/developer-devops.json): 17 services. Source control, deployment, cloud infrastructure, monitoring and incident management.
-- [Databases, vector stores and memory](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/databases-vector-memory.json): 18 services. Managed SQL/NoSQL databases, vector search and long-term memory layers for agents.
-- [Email, messaging and chat](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/communication-email-chat.json): 13 services. Send and receive email, SMS and chat messages; manage meetings.
-- [Voice agents and telephony](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/voice-agents-telephony.json): 8 services. Place and receive phone calls handled by AI voice agents, real-time audio/video rooms.
-- [Productivity and workspace](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/productivity-workspace.json): 16 services. Email, calendars, files, notes, tasks and project management.
-- [CRM, support and marketing](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/crm-support-marketing.json): 8 services. Contacts, deals, support tickets and email campaigns.
-- [Social media](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/social-media.json): 10 services. Read and publish posts, comments and videos on social platforms.
-- [Maps, geolocation and weather](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/maps-geo-weather.json): 11 services. Geocoding, routing, places, map tiles and weather forecasts.
-- [Finance, payments and market data](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/finance-payments.json): 13 services. Accept payments, move money, access bank data and query stock, FX and crypto prices.
-- [E-commerce](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/ecommerce.json): 7 services. Manage stores, products, orders and marketplace listings.
-- [Automation and integration platforms](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/automation-integration.json): 14 services. One connection that exposes thousands of third-party app actions to an agent, with managed auth.
-- [Model APIs and inference](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/model-inference.json): 17 services. LLM, embedding and multimodal model endpoints an agent can delegate sub-tasks to.
+Counts per category: services / with free tier / no key needed / official MCP server.
+
+- [Web search](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/web-search.json): 14 services / 11 free tier / 1 no key / 9 official MCP. Search engines and answer APIs that return fresh web results, snippets or full page content in agent-friendly formats.
+- [Web scraping and browser automation](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/web-scraping-browser.json): 18 services / 17 free tier / 1 no key / 9 official MCP. Crawl, scrape and convert pages to Markdown/JSON, or drive a remote headless browser (clicks, forms, logins).
+- [Knowledge and research data](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/knowledge-research.json): 12 services / 12 free tier / 7 no key / 3 official MCP. Encyclopedias, academic papers, news, computational knowledge and up-to-date library documentation.
+- [Image generation and editing](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/image-generation.json): 10 services / 4 free tier / 0 no key / 4 official MCP. Text-to-image, image editing, inpainting, upscaling and background removal.
+- [Video generation and editing](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/video-generation.json): 15 services / 5 free tier / 0 no key / 9 official MCP. Text/image-to-video models, talking avatars, programmatic video rendering and video hosting.
+- [Speech and audio](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/audio-speech.json): 13 services / 10 free tier / 0 no key / 8 official MCP. Text-to-speech, speech-to-text, voice cloning, dubbing and audio intelligence.
+- [Music generation](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/music-generation.json): 6 services / 3 free tier / 0 no key / 1 official MCP. Generate songs, instrumentals, loops and sound effects from prompts.
+- [3D generation and assets](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/3d-generation.json): 7 services / 7 free tier / 0 no key / 2 official MCP. Text/image-to-3D mesh generation, texturing and 3D asset libraries.
+- [Architecture, CAD and BIM](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/architecture-cad-bim.json): 9 services / 7 free tier / 0 no key / 0 official MCP. Building information models, CAD geometry, construction management and GIS platforms with programmatic access.
+- [Diagrams and software architecture](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/diagrams-software-architecture.json): 9 services / 7 free tier / 2 no key / 2 official MCP. Render or edit diagrams (Mermaid, PlantUML, C4), whiteboards and architecture models.
+- [Design and UI](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/design-ui.json): 6 services / 2 free tier / 0 no key / 3 official MCP. Read and write design files, generate branded graphics and publish websites.
+- [Documents, OCR and presentations](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/presentations-documents.json): 14 services / 8 free tier / 0 no key / 8 official MCP. Parse PDFs and scans, convert file formats, generate slides and collect e-signatures.
+- [Translation and language](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/translation-language.json): 6 services / 5 free tier / 0 no key / 1 official MCP. Machine translation, grammar and style checking.
+- [Code execution sandboxes](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/code-execution-sandbox.json): 10 services / 9 free tier / 1 no key / 4 official MCP. Isolated cloud environments where an agent can run code, shells and whole dev environments safely.
+- [Developer platforms and DevOps](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/developer-devops.json): 17 services / 16 free tier / 0 no key / 17 official MCP. Source control, deployment, cloud infrastructure, monitoring and incident management.
+- [Databases, vector stores and memory](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/databases-vector-memory.json): 18 services / 15 free tier / 0 no key / 17 official MCP. Managed SQL/NoSQL databases, vector search and long-term memory layers for agents.
+- [Email, messaging and chat](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/communication-email-chat.json): 13 services / 11 free tier / 0 no key / 4 official MCP. Send and receive email, SMS and chat messages; manage meetings.
+- [Voice agents and telephony](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/voice-agents-telephony.json): 8 services / 6 free tier / 0 no key / 4 official MCP. Place and receive phone calls handled by AI voice agents, real-time audio/video rooms.
+- [Productivity and workspace](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/productivity-workspace.json): 16 services / 14 free tier / 0 no key / 7 official MCP. Email, calendars, files, notes, tasks and project management.
+- [CRM, support and marketing](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/crm-support-marketing.json): 8 services / 6 free tier / 0 no key / 5 official MCP. Contacts, deals, support tickets and email campaigns.
+- [Social media](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/social-media.json): 10 services / 8 free tier / 0 no key / 1 official MCP. Read and publish posts, comments and videos on social platforms.
+- [Maps, geolocation and weather](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/maps-geo-weather.json): 11 services / 11 free tier / 4 no key / 3 official MCP. Geocoding, routing, places, map tiles and weather forecasts.
+- [Finance, payments and market data](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/finance-payments.json): 13 services / 12 free tier / 0 no key / 4 official MCP. Accept payments, move money, access bank data and query stock, FX and crypto prices.
+- [E-commerce](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/ecommerce.json): 7 services / 7 free tier / 0 no key / 2 official MCP. Manage stores, products, orders and marketplace listings.
+- [Automation and integration platforms](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/automation-integration.json): 14 services / 11 free tier / 0 no key / 12 official MCP. One connection that exposes thousands of third-party app actions to an agent, with managed auth.
+- [Model APIs and inference](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/model-inference.json): 17 services / 8 free tier / 0 no key / 11 official MCP. LLM, embedding and multimodal model endpoints an agent can delegate sub-tasks to.
 
 ## Optional
 

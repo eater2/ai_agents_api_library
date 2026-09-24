@@ -170,9 +170,17 @@ def load():
 
 def is_free(e):
     f = (e.get("free_tier") or "").lower()
+    if f.startswith(("no key", "free")) or re.search(r"free [\w ]*/(day|mo|month)\b", f):
+        return True
     if not f or f.startswith(("paid", "no ", "check pricing", "requires")):
         return False
     return not any(w in f for w in ("paid only", "no free", "no permanent free", "no confirmed free", "free plan retired", "trial"))
+
+
+def is_trial(e):
+    """No lasting free tier, but one-off trial credits to test without paying."""
+    f = (e.get("free_tier") or "").lower()
+    return not is_free(e) and "trial" in f and "no free-plan" not in f
 
 
 def mcp_mark(e, fmt="md"):
@@ -285,17 +293,29 @@ def llms(cats, items, dirs):
          f"> Verified catalog of {st['n']} third-party APIs and MCP servers that AI agents can call on a user's behalf "
          f"after a one-time API key / OAuth / MCP setup. {st['c']} categories. Last verified {VERIFIED}. "
          "Each entry: docs URL, auth method + header hint, MCP server (official/community), free tier, SDKs, OpenAPI and llms.txt links.",
-         "", "Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified.",
+         "", "Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, "
+         "plus derived booleans has_free_tier, has_trial, no_auth, stale and link_check{checked_at, docs, mcp}.",
          "", "## Data", "",
          f"- [Full catalog (JSON)]({RAW}catalog/all.json): all entries in one array",
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
          f"- [JSON Schema]({RAW}data/schema.json): entry schema",
          f"- [Excluded services]({RAW}data/excluded.json): reviewed and rejected, with reasons",
          f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` — tools search_apis, get_api, list_categories",
-         "", "## Categories", ""]
+         "", "## Start free", "",
+         f"{sum(map(is_free, items))} of {len(items)} services have a lasting free tier or free usage (JSON field `has_free_tier`; "
+         f"exact limits in `free_tier`), and {sum(map(is_trial, items))} more give one-off free trial credits (`has_trial`). "
+         f"{sum(e['auth'] == 'none' for e in items)} work with no key at all (`no_auth`), "
+         "so you can call them immediately without asking the user for credentials:", ""]
+    for e in (e for e in items if e["auth"] == "none"):
+        o.append(f"- {e['name']} ({e['category']}): {e['desc_en']} Docs: {e['docs']}")
+    o += ["", "## Categories", "", "Counts per category: services / with free tier / no key needed / official MCP server.", ""]
     for c in cats:
-        n = sum(1 for e in items if e["category"] == c["id"])
-        o.append(f"- [{c['en']}]({RAW}catalog/{c['id']}.json): {n} services. {c['desc_en']}")
+        rows = [e for e in items if e["category"] == c["id"]]
+        free = sum(map(is_free, rows))
+        nokey = sum(e["auth"] == "none" for e in rows)
+        mcp = sum((e.get("mcp") or {}).get("type") == "official" for e in rows)
+        o.append(f"- [{c['en']}]({RAW}catalog/{c['id']}.json): {len(rows)} services / {free} free tier / {nokey} no key / "
+                 f"{mcp} official MCP. {c['desc_en']}")
     o += ["", "## Optional", "",
           f"- [README]({GH}#readme)", f"- [HTML version]({PAGES})"]
     for d in dirs:
@@ -305,7 +325,9 @@ def llms(cats, items, dirs):
 
 def llms_full(cats, items):
     o = [f"# {TITLE} — full list ({len(items)} services, verified {VERIFIED})",
-         "# format: name | what it does | auth (hint) | mcp | free tier | docs", ""]
+         "# format: [tags] name | what it does | auth (hint) | mcp | free tier | docs",
+         "# tags: [FREE] lasting free tier or free usage, [TRIAL] one-off free trial credits, "
+         "[NO-KEY] callable without any credential, [MCP] official MCP server", ""]
     for c in cats:
         rows = [e for e in items if e["category"] == c["id"]]
         o.append(f"## {c['en']} [{c['id']}]")
@@ -314,7 +336,10 @@ def llms_full(cats, items):
             mcp = f"mcp:{m.get('type')}" + (f" {m['url']}" if m.get("url") else "") if m.get("type") != "none" else "mcp:none"
             hint = f" ({e['auth_hint']})" if e.get("auth_hint") else ""
             note = f" | note: {e['notes']}" if e.get("notes") else ""
-            o.append(f"- {e['name']} | {e['desc_en']} | auth:{e['auth']}{hint} | {mcp} | {e.get('free_tier') or '?'} | {e['docs']}{note}")
+            tags = "".join(tag for tag, on in (("[FREE]", is_free(e)), ("[TRIAL]", is_trial(e)), ("[NO-KEY]", e["auth"] == "none"),
+                                                ("[MCP]", m.get("type") == "official")) if on)
+            o.append(f"- {tags + ' ' if tags else ''}{e['name']} | {e['desc_en']} | auth:{e['auth']}{hint} | {mcp} | "
+                     f"{e.get('free_tier') or '?'} | {e['docs']}{note}")
         o.append("")
     return "\n".join(o)
 
@@ -561,6 +586,7 @@ def main():
         # Derived fields agents asked for in the discovery interviews.
         x["no_auth"] = e["auth"] == "none"
         x["has_free_tier"] = is_free(e)
+        x["has_trial"] = is_trial(e)
         x["stale"] = bool(e.get("verified")) and (today - date.fromisoformat(e["verified"])).days > STALE_DAYS
         if e["id"] in links:
             x["link_check"] = links[e["id"]]

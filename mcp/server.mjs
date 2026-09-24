@@ -75,6 +75,8 @@ const summary = (e) => ({
   no_auth: e.no_auth,
   mcp: e.mcp,
   free_tier: e.free_tier,
+  has_free_tier: e.has_free_tier,
+  has_trial: e.has_trial,
   docs: e.docs,
 });
 
