@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.eater2/ai-agents-api-library",
+  "title": "AI Agents API Library",
+  "description": "Find verified APIs and MCP servers for AI agents: auth, free tier, MCP endpoint, docs.",
+  "websiteUrl": "https://eater2.github.io/ai_agents_api_library/",
+  "repository": {
+    "url": "https://github.com/eater2/ai_agents_api_library",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ai-agents-api-library.vercel.app/mcp"
+    }
+  ]
+}
