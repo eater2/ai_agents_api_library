@@ -249,7 +249,6 @@ Apply to data/catalog.json after checking the source.
 - `languagetool-api`: auth_hint: Premium credentials (username, apiKey) are form-data parameters on api.languagetoolplus.com/v2; public endpoint is api.languagetool.org/v2
 - `languagetool-api`: free_tier: public limit is 75KB text per minute per IP plus 20KB per request
 - `luma-ai-dream-machine-api`: free_tier: pricing now lists Ray 3.2 at $0.15 (540p) to $1.20 (1080p) per 5s T2V/I2V clip; API output has no watermark
-- `modernmt-api`: notes: ModernMT is transitioning to Lara (Lara Translate) and will sunset by end of 2026; pricing page now only shows migration guidance
 - `murf-ai-api`: mcp: vendor publishes a local MCP server (github.com/murf-ai/murf-mcp, uvx), not none
 - `murf-ai-api`: free_tier: free API plan gives 100,000 characters with no time limit
 - `murf-ai-api`: auth_hint: send the key in the api-key request header (https://api.murf.ai/v1)

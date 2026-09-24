@@ -1056,47 +1056,6 @@
   },
   "corrections": []
  },
- "modernmt-api": {
-  "free_plan": {
-   "kind": null,
-   "requires_card": null,
-   "quota": null,
-   "period": null,
-   "watermark": null,
-   "source_url": null,
-   "checked_at": "2026-09-24"
-  },
-  "auth_scheme": {
-   "type": "apiKey",
-   "in": "header",
-   "name": "MMT-ApiKey",
-   "scheme": null,
-   "format": "MMT-ApiKey: <API_KEY>",
-   "source_url": "https://www.modernmt.com/api/",
-   "checked_at": "2026-09-24"
-  },
-  "base_url": "https://api.modernmt.com",
-  "rate_limits": null,
-  "oauth_scopes": null,
-  "async_jobs": {
-   "value": true,
-   "how": "Batch translation delivers results to a webhook callback",
-   "source_url": "https://www.modernmt.com/api/"
-  },
-  "data_policy": null,
-  "mcp": {
-   "maintainer": "none",
-   "remote_url": null,
-   "repo": null,
-   "tools": null,
-   "covers_full_api": null,
-   "source_url": null,
-   "checked_at": "2026-09-24"
-  },
-  "corrections": [
-   "notes: ModernMT is transitioning to Lara (Lara Translate) and will sunset by end of 2026; pricing page now only shows migration guidance"
-  ]
- },
  "murf-ai-api": {
   "free_plan": {
    "kind": "trial",

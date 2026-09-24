@@ -1,7 +1,7 @@
 name: Release
 
 # On a version tag (v0.2.0 ...): publish a GitHub release with the agent-facing files and the npm
-# tarball, plus SLSA build provenance signed through Sigstore. Verify a download with:
+# tarball, update the MCP Registry entry, and sign SLSA build provenance through Sigstore. Verify a download with:
 #   gh attestation verify <file> --repo eater2/ai_agents_api_library
 on:
   push:
@@ -66,3 +66,10 @@ jobs:
           if [ -z "$NODE_AUTH_TOKEN" ]; then echo "NPM_TOKEN not set, skipping npm publish"; exit 0; fi
           echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
           npm publish --provenance --access public
+
+      - name: Publish server.json to the MCP Registry (GitHub OIDC, no stored token)
+        run: |
+          test "$(jq -r .version server.json)" = "${TAG#v}" || { echo "server.json version != $TAG"; exit 1; }
+          curl -sL https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz | tar xz mcp-publisher
+          ./mcp-publisher login github-oidc
+          ./mcp-publisher publish 2>&1 | tee publish.log || grep -qi "already exists\|duplicate" publish.log

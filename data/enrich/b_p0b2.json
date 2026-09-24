@@ -1,0 +1,150 @@
+{
+ "unstructured-api": {
+  "base_url": "https://transform.unstructured.io/api/v2"
+ },
+ "nocodb-cloud": {
+  "base_url": "https://app.nocodb.com"
+ },
+ "speckle-api": {
+  "base_url": "https://app.speckle.systems/graphql"
+ },
+ "v0-platform-api-vercel": {
+  "base_url": "https://api.v0.dev/v2"
+ },
+ "pipedrive-api": {
+  "base_url": "https://api.pipedrive.com/api/v2"
+ },
+ "postman-api": {
+  "base_url": "https://api.postman.com"
+ },
+ "atlassian-jira-confluence": {
+  "base_url": "https://your-domain.atlassian.net/rest/api/3"
+ },
+ "scrapegraphai-api": {
+  "free_plan": {
+   "kind": "trial",
+   "requires_card": false,
+   "quota": "500 API credits one-time (10 requests/min)",
+   "period": "one_time",
+   "source_url": "https://scrapegraphai.com/pricing",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "stable-audio-api-stability-ai": {
+  "free_plan": {
+   "kind": "trial",
+   "quota": "25 free credits for new accounts (Stable Audio 2.5 costs 20 credits per generation)",
+   "period": "one_time",
+   "source_url": "https://kb.stability.ai/knowledge-base/where-can-i-find-my-api-key",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "spider-cloud": {
+  "free_plan": {
+   "kind": "no_key",
+   "requires_card": false,
+   "quota": "keyless /scrape, rate-limited (quota not published)",
+   "period": null,
+   "source_url": "https://spider.cloud/llms.txt",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "google-cloud-translation": {
+  "auth_scheme": {
+   "type": "cloud_iam",
+   "scheme": "bearer",
+   "format": "Authorization: Bearer $(gcloud auth print-access-token) + x-goog-user-project (v3); the Basic v2 edition also accepts ?key=<API_KEY>",
+   "source_url": "https://docs.cloud.google.com/translate/docs/basic/translating-text",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "you-com-api": {
+  "free_plan": {
+   "kind": "no_key",
+   "requires_card": false,
+   "quota": "100 queries/day keyless (you-search, you-discover via MCP ?profile=free); plus $100 one-time credit for API-key accounts",
+   "period": "day",
+   "source_url": "https://you.com/docs/build-with-agents/mcp-server",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "reducto-api": {
+  "free_plan": {
+   "kind": "trial",
+   "quota": "15,000 free credits (~$150) for Standard accounts; card requirement not stated on the pricing page",
+   "period": "one_time",
+   "source_url": "https://reducto.ai/pricing",
+   "checked_at": "2026-09-24"
+  }
+ },
+ "zendesk-api": {
+  "free_plan": {
+   "kind": "trial",
+   "quota": "14-day trial of Customer Service Suite Professional",
+   "period": "one_time",
+   "source_url": "https://www.zendesk.com/free-trial/",
+   "checked_at": "2026-09-24",
+   "requires_card": false
+  }
+ },
+ "aws-textract": {
+  "free_plan": {
+   "kind": "trial",
+   "quota": "per month for 3 months: DetectDocumentText 1,000 pages; AnalyzeDocument forms/tables/layout 100 pages; AnalyzeExpense/AnalyzeID 100 pages; AnalyzeLending 2,000 pages",
+   "period": "month",
+   "source_url": "https://aws.amazon.com/textract/pricing/",
+   "checked_at": "2026-09-24",
+   "requires_card": true
+  }
+ },
+ "lara-translate-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "requires_card": false,
+   "quota": "10,000 API characters (translation and language detection combined)",
+   "period": "month",
+   "source_url": "https://laratranslate.com/pricing",
+   "checked_at": "2026-09-24"
+  },
+  "auth_scheme": {
+   "type": "api_key",
+   "scheme": "HMAC-SHA256 signed key exchange for a JWT bearer token",
+   "format": "POST /v2/auth/ with {\"id\":\"<access-key-id>\"}, headers X-Lara-Date and Authorization: Lara:<base64 HMAC-SHA256 signature keyed with the secret>; then Authorization: Bearer <jwt>",
+   "source_url": "https://developers.laratranslate.com/docs/switch-from-modernmt",
+   "checked_at": "2026-09-24"
+  },
+  "base_url": "https://api.laratranslate.com",
+  "mcp": {
+   "maintainer": "vendor",
+   "remote_url": "https://mcp-v2.laratranslate.com/v1",
+   "repo": "https://github.com/translated/lara-mcp",
+   "tools": [
+    "translate",
+    "detect_language",
+    "list_languages",
+    "list_memories",
+    "create_memory",
+    "update_memory",
+    "delete_memory",
+    "add_translation",
+    "delete_translation",
+    "import_tmx",
+    "check_import_status",
+    "list_glossaries",
+    "get_glossary",
+    "create_glossary",
+    "update_glossary",
+    "delete_glossary",
+    "add_glossary_entry",
+    "delete_glossary_entry",
+    "import_glossary_csv",
+    "export_glossary",
+    "check_glossary_import_status",
+    "get_glossary_counts"
+   ],
+   "covers_full_api": true,
+   "source_url": "https://developers.laratranslate.com/docs/getting-started-with-mcp",
+   "checked_at": "2026-09-24"
+  }
+ }
+}

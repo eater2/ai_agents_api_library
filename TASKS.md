@@ -36,6 +36,8 @@ Na koniec
 - [ ] Powtórzyć test produktu (`python scripts/interview_product_test.py`) i porównać z 2026-09-24 (bf)
   - Porównanie mechaniczne zrobione: `research/agent-interviews/2026-09-24-product-test-retest/comparison.md` (szum w wynikach zniknął we wszystkich 3 zadaniach). Wywiady zablokowane: OpenRouter 402 (brak środków); po doładowaniu `--suffix=retest --missing`.
 - [x] `call` (przykładowe wywołanie) ma tylko 31/330 wpisów, `unit_price` 25/330 — uzupełnić przynajmniej dla wpisów z `free_plan` (3b): teraz `call` 251/330, `unit_price` 140/330; brak `call` tylko tam, gdzie dostawca nie publikuje odwołania HTTP (SDK/WebSocket/za logowaniem) lub strona blokuje dostęp; korekty: `research/p0b-3b/corrections-2026-09-24-round2.md`
+- [x] Korekty rundy 2 od 3b (39 wpisów) i wątpliwości `free_plan` (You.com → `no_key`, Zendesk bez karty, Reducto: karta niepotwierdzona, Textract + AnalyzeLending, Kling → `none`) przez `fix_p0b2.json` + `b_p0b2.json`; ModernMT usunięty (rejestracja zamknięta, wygaszany w 2026), dodany następca Lara Translate (bf)
+- [x] Pliki kategorii w zwartym JSON (wpis na linię): wszystkie < 60 KB po dodaniu `call` (bf)
 
 ## P0c — oceny i opinie: wywiady z 7 agentami (2026-09-24)
 
@@ -63,6 +65,7 @@ Na koniec
 - [x] Zgłoszenie pluginu do katalogu Anthropic (2026-09-24, Claude Code, kontakt: airenovationcalculator@gmail.com) — status: pending review, https://platform.claude.com/plugins/submissions
 - [ ] Publikacja paczki npm (wymaga tokenu npm)
 - [x] Oficjalny rejestr MCP: `io.github.eater2/ai-agents-api-library` 0.1.0 (`server.json`, `mcp-publisher`, 2026-09-24)
+- [x] Rejestr MCP aktualizowany automatycznie przy każdym tagu `v*` (krok w `release.yml`, GitHub OIDC, bez przechowywanego tokenu); rejestr pokazywał 0.1.0 przy wersji 0.3.3
 - [x] Smithery: https://smithery.ai/servers/eater2/ai-agents-api-library (namespace `eater2`, zdalny URL, 2026-09-24)
 - [x] Glama: `glama.json` z właścicielem `eater2` w repo
 - [ ] **(ręcznie)** Glama: dodać serwer na https://glama.ai/mcp/servers (przycisk „Add server”, logowanie GitHubem) — API wymaga konta

@@ -168,12 +168,6 @@
    "https://lumalabs.ai/api/pricing"
   ]
  },
- "modernmt-api": {
-  "notes": "ModernMT is evolving into Lara (Lara Translate) and will sunset by the end of 2026; plan migration to the Lara API (developers.laratranslate.com).",
-  "sources": [
-   "https://www.modernmt.com/api/"
-  ]
- },
  "murf-ai-api": {
   "mcp": {
    "type": "official",

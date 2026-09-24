@@ -844,7 +844,7 @@
     "openapi": "https://docs.parallel.ai/public-openapi.json",
     "llms_txt": "https://docs.parallel.ai/llms.txt",
     "desc_en": "Lets an agent run Parallel's low-latency Search API for web research, content extraction, and entity discovery.",
-    "notes": "The remote MCP server works without an account/API key at lower rate limits; an Authorization: Bearer key raises them. The main REST API requires an API key from the dashboard.",
+    "notes": "The remote MCP server works without an account/API key at lower rate limits; an Authorization: Bearer key raises them. The main REST API requires an API key from the dashboard. Search defaults to mode advanced ($5 per 1,000 requests); set mode fast for $1 per 1,000",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -1710,7 +1710,7 @@
         "checked_at": "2026-09-24"
       }
     },
-    "free_tier": "Free tier: Web Search API free without an API key at 100 queries/day; new accounts also get a $100 one-time credit on signup for Search, Contents, Answer and Research APIs",
+    "free_tier": "Free: 100 queries/day with no API key or sign-up through the MCP free profile (search and discover only); new API-key accounts also get $100 in one-time credit",
     "sdk": [
       "python",
       "typescript"
@@ -1721,10 +1721,11 @@
     "notes": "Current endpoint is POST https://ydc-index.io/v1/search (recommended); legacy GET still works but won't get new features; also offers a separate keyless Docs MCP server at you.com/docs/_mcp/server for searching You.com's own docs.",
     "verified": "2026-09-24",
     "free_plan": {
-      "kind": "free_tier",
-      "quota": "$100 one-time credit for new accounts; keyless MCP free profile 100 queries/day",
-      "period": "one_time",
-      "source_url": "https://you.com/pricing",
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": "100 queries/day keyless (you-search, you-discover via MCP ?profile=free); plus $100 one-time credit for API-key accounts",
+      "period": "day",
+      "source_url": "https://you.com/docs/build-with-agents/mcp-server",
       "checked_at": "2026-09-24"
     },
     "auth_scheme": {
@@ -1771,7 +1772,7 @@
     },
     "has_free_tier": true,
     "has_trial": false,
-    "no_card": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -1992,7 +1993,7 @@
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Run web scraping/automation 'Actors' from a marketplace of thousands, and manage datasets, via REST API or MCP server.",
-    "notes": "MCP search/docs tools work unauthenticated; running paid Actors consumes platform usage credit.",
+    "notes": "MCP search/docs tools work unauthenticated; running paid Actors consumes platform usage credit. Actor endpoints use /v2/actors/{actorId}/... (e.g. run-sync-get-dataset-items)",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -2367,7 +2368,7 @@
     "openapi": null,
     "llms_txt": "https://docs.browser-use.com/llms.txt",
     "desc_en": "Launch cloud browser sessions and run AI browser-automation agent tasks via REST API or Python/TypeScript SDK.",
-    "notes": "Pay-as-you-go pricing: browser-hours + per-task fee + token markup; no ongoing free tier beyond signup credit.",
+    "notes": "Pay-as-you-go: model cost + 20% and browsers at $0.02/hour, no per-run fees; no ongoing free tier beyond the signup credit.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -3233,7 +3234,7 @@
         "derived": true
       }
     },
-    "free_tier": "Free: 500 API credits per month, no card required",
+    "free_tier": "Trial: 500 API credits one-time on the Free plan (10 requests/min), no card required",
     "sdk": [
       "python",
       "javascript"
@@ -3244,11 +3245,11 @@
     "notes": "Also offers the open-source scrapegraph-ai library with LangChain/LlamaIndex integrations.",
     "verified": "2026-09-24",
     "free_plan": {
-      "kind": "free_tier",
+      "kind": "trial",
       "requires_card": false,
-      "quota": "500 API credits",
-      "period": "month",
-      "source_url": "https://docs.scrapegraphai.com/knowledge-base/account/pricing.md",
+      "quota": "500 API credits one-time (10 requests/min)",
+      "period": "one_time",
+      "source_url": "https://scrapegraphai.com/pricing",
       "checked_at": "2026-09-24"
     },
     "auth_scheme": {
@@ -3298,8 +3299,8 @@
       "source_url": "https://scrapegraphai.com/pricing",
       "checked_at": "2026-09-24"
     },
-    "has_free_tier": true,
-    "has_trial": false,
+    "has_free_tier": false,
+    "has_trial": true,
     "no_card": true,
     "stale": false,
     "link_check": {
@@ -3765,7 +3766,7 @@
         "checked_at": "2026-09-24"
       }
     },
-    "free_tier": "keyless trial: 25 free runs/day, no account required",
+    "free_tier": "Free: keyless /scrape endpoint, rate-limited (quota not published); other endpoints return 402 without a key",
     "sdk": [
       "python",
       "javascript",
@@ -3779,9 +3780,8 @@
     "free_plan": {
       "kind": "no_key",
       "requires_card": false,
-      "quota": "25 keyless requests",
-      "period": "day",
-      "source_url": "https://spider.cloud/docs/api",
+      "quota": "keyless /scrape, rate-limited (quota not published)",
+      "source_url": "https://spider.cloud/llms.txt",
       "checked_at": "2026-09-24"
     },
     "auth_scheme": {
@@ -3985,7 +3985,7 @@
     "name": "Zyte API",
     "category": "web-scraping-browser",
     "homepage": "https://www.zyte.com",
-    "docs": "https://docs.zyte.com/zyte-api/get-started.html",
+    "docs": "https://docs.zyte.com/zyte-api/usage/http.html",
     "auth": "api_key",
     "auth_hint": "HTTP Basic Auth: API key as username, blank password",
     "mcp": {
@@ -4751,7 +4751,7 @@
     "openapi": "https://gitingest.com/openapi.json",
     "llms_txt": "https://gitingest.com/llms.txt",
     "desc_en": "Lets an agent turn any public Git repository into a single text digest (summary, directory tree and file contents) sized for an LLM prompt.",
-    "notes": "GET /api/{user}/{repo} or POST /api/ingest (include/exclude patterns); digest returned as a download URL. For heavy use the vendor recommends the open-source CLI (pip install gitingest).",
+    "notes": "GET /api/{user}/{repo} or POST /api/ingest (include/exclude patterns); digest returned inline (summary, tree, content) plus a download URL. For heavy use the vendor recommends the open-source CLI (pip install gitingest).",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "no_key",
@@ -6293,7 +6293,7 @@
     "sdk": [],
     "openapi": null,
     "llms_txt": null,
-    "desc_en": "Generate and edit images programmatically via REST API, plus access Freepik's stock asset library.",
+    "desc_en": "Generate and edit images, and generate video, music and sound effects via REST API, plus access the Freepik stock asset library.",
     "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com. The official remote MCP uses OAuth sign-in, no API key.",
     "verified": "2026-09-24",
     "auth_scheme": {
@@ -7377,7 +7377,7 @@
         "checked_at": "2026-09-24"
       }
     },
-    "free_tier": "14-day trial with 3 minutes of video credits, then paid only (~$5.90/min API)",
+    "free_tier": "Trial: 14 days with 3 minutes of video credits, then paid plans only (API price per minute not published in machine-readable form)",
     "sdk": [],
     "openapi": null,
     "llms_txt": null,
@@ -7798,7 +7798,7 @@
     "notes": "New versioned endpoints (e.g. /text-to-video/kling-2.6) take a plain API key; the older Access/Secret key pair with a client-built JWT is legacy (model_name-parameter endpoints).",
     "verified": "2026-09-24",
     "free_plan": {
-      "kind": "trial",
+      "kind": "none",
       "period": "one_time",
       "source_url": "https://kling.ai/document-api/guides/get-started/quick-start.md",
       "checked_at": "2026-09-24"
@@ -7847,7 +7847,7 @@
       "checked_at": "2026-09-24"
     },
     "has_free_tier": false,
-    "has_trial": true,
+    "has_trial": false,
     "no_card": false,
     "stale": false,
     "link_check": {
@@ -9717,7 +9717,7 @@
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Generate AI voiceovers, clone voices and dub audio in 35+ languages via REST API.",
-    "notes": "Two models are offered: Falcon (low latency, for streaming) and Gen2 (studio quality).",
+    "notes": "Two model families: Falcon 2 (low latency, for streaming; $0.01/min) and Gen2 (studio quality).",
     "verified": "2026-09-24",
     "operations": [
       "text-to-speech",
@@ -10652,12 +10652,12 @@
     ],
     "openapi": null,
     "llms_txt": null,
-    "desc_en": "Generate music and sound effects from text prompts via REST API (Stable Audio 2.0 models), up to 3 minutes.",
-    "notes": "Audio endpoint lives under the same platform.stability.ai API and credit system as Stability's image API; exact endpoint path not independently re-verified this pass.",
+    "desc_en": "Generate music and sound effects from text prompts via REST API (Stable Audio 2.5, or Stable Audio 3.0 for tracks up to 6 minutes).",
+    "notes": "Endpoint POST /v2beta/audio/stable-audio-2/text-to-audio; default model 2.5 costs 20 credits per generation; Stable Audio 3.0 (up to 6 min, async) costs 26 credits. Shares the platform.stability.ai credit system with Stability's image API.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
-      "quota": "25 free credits for new accounts (Stable Audio costs 20 credits/generation)",
+      "quota": "25 free credits for new accounts (Stable Audio 2.5 costs 20 credits per generation)",
       "period": "one_time",
       "source_url": "https://kb.stability.ai/knowledge-base/where-can-i-find-my-api-key",
       "checked_at": "2026-09-24"
@@ -11880,7 +11880,7 @@
       "source_url": "https://docs.speckle.systems/developers/authentication/pats.md",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://app.speckle.systems/api/graphql",
+    "base_url": "https://app.speckle.systems/graphql",
     "oauth_scopes": {
       "scopes": [
         "streams:read"
@@ -13296,7 +13296,7 @@
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Read, create, and modify Penpot design files, comments, and webhooks via a token-authenticated RPC/REST API, or via the official MCP server.",
-    "notes": "API is RPC-style (e.g. /api/rpc/command/get-profile), no OpenAPI file; open source, self-hostable. Remote MCP takes ?userToken=<MCP key> and needs the MCP plugin open in a Penpot browser tab; local: npx @penpot/mcp@stable.",
+    "notes": "API is RPC-style; methods are listed at https://design.penpot.app/api/main/methods/<name>, no OpenAPI file; open source, self-hostable. Remote MCP takes ?userToken=<MCP key> and needs the MCP plugin open in a Penpot browser tab; local: npx @penpot/mcp@stable.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -13433,7 +13433,7 @@
       "source_url": "https://v0.app/docs/api/platform/reference/chats/create",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.v0.dev/v1",
+    "base_url": "https://api.v0.dev/v2",
     "rate_limits": {
       "summary": "10,000 API requests/day, 1,000 chat messages/day, 100 deployments/day",
       "source_url": "https://v0.app/docs/api/platform/overview",
@@ -13742,7 +13742,7 @@
         "checked_at": "2026-09-24"
       }
     },
-    "free_tier": "Trial: new AWS customers get 3 months free, per month 1,000 pages DetectDocumentText, 100 pages AnalyzeDocument forms/tables/layout/queries, 100 AnalyzeExpense/AnalyzeID",
+    "free_tier": "Trial: new AWS customers get 3 months free, per month 1,000 pages DetectDocumentText, 100 pages AnalyzeDocument forms/tables/layout/queries, 100 AnalyzeExpense/AnalyzeID, 2,000 pages AnalyzeLending; card required",
     "sdk": [
       "python",
       "java",
@@ -13759,10 +13759,11 @@
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
-      "quota": "per month for 3 months: DetectDocumentText 1,000 pages; AnalyzeDocument forms/tables/layout 100 pages; AnalyzeExpense/AnalyzeID 100 pages",
+      "quota": "per month for 3 months: DetectDocumentText 1,000 pages; AnalyzeDocument forms/tables/layout 100 pages; AnalyzeExpense/AnalyzeID 100 pages; AnalyzeLending 2,000 pages",
       "period": "month",
       "source_url": "https://aws.amazon.com/textract/pricing/",
-      "checked_at": "2026-09-24"
+      "checked_at": "2026-09-24",
+      "requires_card": true
     },
     "auth_scheme": {
       "type": "cloud_iam",
@@ -14728,7 +14729,7 @@
     "openapi": null,
     "llms_txt": "https://docs.mistral.ai/llms.txt",
     "desc_en": "Extract text, tables, and layout structure from PDFs and images as structured Markdown/JSON via REST API.",
-    "notes": "Fixed model id e.g. mistral-ocr-2512; block/table/bounding-box extraction requires OCR 4+/2512+; no official Mistral-maintained MCP server, only community implementations.",
+    "notes": "Current model: Mistral OCR 4; block/table/bounding-box extraction requires OCR 4+/2512+; no official Mistral-maintained MCP server, only community implementations.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -15023,8 +15024,7 @@
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
-      "requires_card": true,
-      "quota": "15,000 free credits (~$150) for Standard accounts",
+      "quota": "15,000 free credits (~$150) for Standard accounts; card requirement not stated on the pricing page",
       "period": "one_time",
       "source_url": "https://reducto.ai/pricing",
       "checked_at": "2026-09-24"
@@ -15282,7 +15282,7 @@
     "openapi": null,
     "llms_txt": "https://docs.unstructured.io/llms.txt",
     "desc_en": "Partition and extract structured elements (text, tables, layout) from PDFs, docs, and images for RAG pipelines via API.",
-    "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Workflow API. Hosted Transform MCP parses documents; the UNS-MCP repo only manages connectors/workflows and is no longer maintained.",
+    "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Workflow API. Hosted Transform MCP parses documents; the UNS-MCP repo only manages connectors/workflows and is no longer maintained. Current parse endpoint: POST https://transform.unstructured.io/api/v2/parse with header unstructured-api-key",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -15313,6 +15313,7 @@
     "operations": [
       "document-parsing"
     ],
+    "base_url": "https://transform.unstructured.io/api/v2",
     "no_auth": false,
     "call": {
       "operation": "parse a document into elements (Transform Parse API)",
@@ -15409,7 +15410,7 @@
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Translate text and documents in real time or batch across 75+ languages via the AWS SDK/API.",
-    "notes": "Requires an AWS account and IAM credentials; missing from the candidate list despite being a major agent-callable translation API. The generic AWS API MCP Server (awslabs) can call Translate via AWS CLI commands.",
+    "notes": "Requires an AWS account and IAM credentials. The generic AWS API MCP Server (awslabs) can call Translate via AWS CLI commands.",
     "verified": "2026-09-24",
     "operations": [
       "translation"
@@ -15748,8 +15749,8 @@
     "auth_scheme": {
       "type": "cloud_iam",
       "scheme": "bearer",
-      "format": "Authorization: Bearer $(gcloud auth print-access-token) + x-goog-user-project; Basic v2 also accepts ?key=<API_KEY>",
-      "source_url": "https://cloud.google.com/translate/docs/basic/translating-text",
+      "format": "Authorization: Bearer $(gcloud auth print-access-token) + x-goog-user-project (v3); the Basic v2 edition also accepts ?key=<API_KEY>",
+      "source_url": "https://docs.cloud.google.com/translate/docs/basic/translating-text",
       "checked_at": "2026-09-24"
     },
     "base_url": "https://translation.googleapis.com",
@@ -15819,7 +15820,7 @@
     "openapi": "https://languagetool.org/http-api/swagger-ui/",
     "llms_txt": null,
     "desc_en": "Check grammar, style, and spelling in 30+ languages via a public HTTP API, with an optional Premium key for higher limits.",
-    "notes": "This is a proofreading/grammar API, not machine translation.",
+    "notes": "This is a proofreading/grammar API, not machine translation. The keyless host api.languagetool.org is documented only on dev.languagetool.org/public-http-api; the OpenAPI spec lists only the Premium host",
     "verified": "2026-09-24",
     "operations": [
       "grammar-check"
@@ -15901,71 +15902,94 @@
     "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/languagetool-api.json"
   },
   {
-    "id": "modernmt-api",
-    "name": "ModernMT API",
+    "id": "lara-translate-api",
+    "name": "Lara Translate API",
     "category": "translation-language",
-    "homepage": "https://www.modernmt.com",
-    "docs": "https://www.modernmt.com/api",
+    "homepage": "https://laratranslate.com",
+    "docs": "https://developers.laratranslate.com/docs/introduction",
     "auth": "api_key",
-    "auth_hint": "MMT-ApiKey header",
+    "auth_hint": "An Access Key ID plus an Access Key Secret, created under 'API credentials' in the Lara Translate account dashboard after signing up for any plan, including Free; the secret cannot be recovered if lost.",
     "mcp": {
-      "type": "none",
-      "url": null,
-      "domain_verified": null,
-      "kind": "none",
-      "config": null
+      "type": "official",
+      "url": "https://mcp-v2.laratranslate.com/v1",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp-v2.laratranslate.com/v1",
+      "repo": "https://github.com/translated/lara-mcp",
+      "tools": [
+        "translate",
+        "detect_language",
+        "list_languages",
+        "list_memories",
+        "create_memory",
+        "update_memory",
+        "delete_memory",
+        "add_translation",
+        "delete_translation",
+        "import_tmx",
+        "check_import_status",
+        "list_glossaries",
+        "get_glossary",
+        "create_glossary",
+        "update_glossary",
+        "delete_glossary",
+        "add_glossary_entry",
+        "delete_glossary_entry",
+        "import_glossary_csv",
+        "export_glossary",
+        "check_glossary_import_status",
+        "get_glossary_counts"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://developers.laratranslate.com/docs/getting-started-with-mcp",
+      "checked_at": "2026-09-24",
+      "domain_verified": true,
+      "kind": "vendor-hosted",
+      "config": {
+        "transport": "streamable-http",
+        "url": "https://mcp-v2.laratranslate.com/v1",
+        "derived": true
+      }
     },
-    "free_tier": "free trial (no credit card); no permanent free tier, paid plans from $8/M characters",
+    "free_tier": "Free: 10,000 API characters/month (shared by translation and language detection), no credit card required",
     "sdk": [
       "python",
+      "javascript",
       "java",
-      "node"
+      "php",
+      "go",
+      "csharp",
+      "swift"
     ],
     "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Send adaptive neural machine translation requests with in-context learning via a REST API.",
-    "notes": "ModernMT is evolving into Lara (Lara Translate) and will sunset by the end of 2026; plan migration to the Lara API (developers.laratranslate.com).",
+    "llms_txt": "https://developers.laratranslate.com/llms.txt",
+    "desc_en": "Translate text, documents, images and audio with context, style, glossaries and translation memories, and detect the language of text.",
+    "notes": "Successor to ModernMT, which closed new sign-ups. Raw REST auth: POST /v2/auth/ signed with HMAC-SHA256 (Authorization: Lara:<base64-signature> plus X-Lara-Date) returns a JWT valid 10 minutes, sent as Authorization: Bearer <token> and refreshed via POST /v2/auth/refresh; the SDKs do the signing. Hosted MCP uses OAuth by default and also accepts access keys; npm @translated/lara-mcp runs locally over stdio. Pay-as-you-go: EUR 20 per 1M characters (Pro), EUR 15 (Team).",
     "verified": "2026-09-24",
     "operations": [
-      "translation"
+      "translation",
+      "language-detection"
     ],
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "MMT-ApiKey",
-      "format": "MMT-ApiKey: <API_KEY>",
-      "source_url": "https://www.modernmt.com/api/",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "10,000 API characters (translation and language detection combined)",
+      "period": "month",
+      "source_url": "https://laratranslate.com/pricing",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.modernmt.com",
-    "async_jobs": {
-      "value": true,
-      "how": "Batch translation delivers results to a webhook callback",
-      "source_url": "https://www.modernmt.com/api/"
+    "auth_scheme": {
+      "type": "api_key",
+      "scheme": "HMAC-SHA256 signed key exchange for a JWT bearer token",
+      "format": "POST /v2/auth/ with {\"id\":\"<access-key-id>\"}, headers X-Lara-Date and Authorization: Lara:<base64 HMAC-SHA256 signature keyed with the secret>; then Authorization: Bearer <jwt>",
+      "source_url": "https://developers.laratranslate.com/docs/switch-from-modernmt",
+      "checked_at": "2026-09-24"
     },
+    "base_url": "https://api.laratranslate.com",
     "no_auth": false,
-    "has_free_tier": false,
-    "has_trial": true,
-    "no_card": false,
-    "stale": false,
-    "link_check": {
-      "checked_at": "2026-09-24",
-      "docs": "ok"
-    },
-    "uptime": {
-      "window_days": 30,
-      "api": {
-        "url": "https://api.modernmt.com",
-        "probes": 1,
-        "up": 1,
-        "median_ms": 618,
-        "last": {
-          "at": "2026-09-24T18:26Z",
-          "up": true,
-          "detail": 200
-        }
-      }
-    }
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": true,
+    "stale": false
   },
   {
     "id": "cloudflare-sandbox-sdk",
@@ -16870,7 +16894,7 @@
     "openapi": "https://openapi.vercel.sh/",
     "llms_txt": null,
     "desc_en": "Boot ephemeral Firecracker microVMs via SDK/REST to run agent- or AI-generated code and shell commands.",
-    "notes": "Pricing = active CPU + provisioned memory + per Sandbox.create() call + data transfer; 32GB ephemeral NVMe per sandbox.",
+    "notes": "Pricing = active CPU + provisioned memory + per Sandbox.create() call + data transfer; 64 GB ephemeral NVMe per sandbox (SDK 3.0.0+ and custom images).",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -18103,7 +18127,7 @@
     "openapi": "https://learning.postman.com/openapi.json",
     "llms_txt": "https://learning.postman.com/llms.txt",
     "desc_en": "An agent can manage Postman collections, workspaces, environments, mocks, monitors, and API specs via REST.",
-    "notes": "Reference docs are at learning.postman.com. Remote MCP modes: /minimal (default), /code, /mcp (full, 100+ tools); US host supports OAuth, EU host mcp.eu.postman.com needs an API key. Docs-search MCP at learning.postman.com/_mcp/server.",
+    "notes": "Reference docs are at learning.postman.com. Remote MCP modes: /minimal (default), /code, /mcp (full, 100+ tools); US host supports OAuth, EU host mcp.eu.postman.com needs an API key. Docs-search MCP at learning.postman.com/_mcp/server. API host https://api.postman.com (EU: api.eu.postman.com); api.getpostman.com is legacy",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -18120,7 +18144,7 @@
       "source_url": "https://learning.postman.com/docs/developer/postman-api/authentication/",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.getpostman.com",
+    "base_url": "https://api.postman.com",
     "rate_limits": {
       "summary": "300 requests/min per API key; monthly call quota by plan (10,000 on Free)",
       "source_url": "https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/",
@@ -19350,7 +19374,7 @@
     "name": "Netlify API",
     "category": "cloud-hosting",
     "homepage": "https://docs.netlify.com/api/get-started/",
-    "docs": "https://docs.netlify.com/api/get-started/",
+    "docs": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
     "auth": "api_key+oauth2",
     "auth_hint": "Authorization: Bearer <PERSONAL_ACCESS_TOKEN>",
     "mcp": {
@@ -23988,7 +24012,7 @@
         "checked_at": "2026-09-24"
       }
     },
-    "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited and never counted. Free quotas vary by region",
+    "free_tier": "Free Communication plan (Japan): 200 push/broadcast messages/month; reply messages are unlimited. Beyond that only paid plans (Light JPY 5,000 for 5,000 messages, Standard JPY 15,000 for 30,000). Free quotas vary by region",
     "sdk": [
       "java",
       "php",
@@ -26153,7 +26177,7 @@
       "source_url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://your-domain.atlassian.net/rest/api/2",
+    "base_url": "https://your-domain.atlassian.net/rest/api/3",
     "rate_limits": {
       "summary": "Points-based: 65,000 points/hour global pool for apps (API-token traffic not affected); 429 with Retry-After",
       "source_url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
@@ -26473,7 +26497,7 @@
         "derived": true
       }
     },
-    "free_tier": "Free: API GET/POST works on every plan incl. Free (except 3 Enterprise-only endpoints); webhooks need a Standard, Teams or Enterprise plan",
+    "free_tier": "Free: API reads and most writes work on every plan incl. Free (except 3 Enterprise-only endpoints); booking through the Scheduling API (POST /invitees) and webhooks need a paid plan",
     "sdk": [],
     "openapi": null,
     "llms_txt": null,
@@ -26719,7 +26743,7 @@
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Read and write Coda (now 'Superhuman Docs') documents, tables, and rows via REST API or an MCP server.",
-    "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL (coda.io/apis/v1) still works. The official MCP server uses OAuth via id.superhuman.com (scope mcp:all).",
+    "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL coda.io/apis/v1 still works, and the OpenAPI spec now names https://docs.superhuman.com/apis/v1. The official MCP server uses OAuth via id.superhuman.com (scope mcp:all).",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -27433,7 +27457,7 @@
     "openapi": null,
     "llms_txt": "https://nocodb.com/llms.txt",
     "desc_en": "Lets an agent read, create and update records, tables and views in NocoDB spreadsheet-style databases.",
-    "notes": "Free plan API quota is very small (1,000 calls/month). v3 Data API reference at https://data-apis-v3.nocodb.com/ and Meta API at https://meta-apis-v3.nocodb.com/. Remote MCP over Streamable HTTP; tools follow the token owner's base role and plan-gated features.",
+    "notes": "Free plan API quota is very small (1,000 calls/month). v3 Data API reference at https://nocodb.com/apis/v3/data/ (base https://app.nocodb.com; xc-token or Authorization: Bearer) and Meta API at https://meta-apis-v3.nocodb.com/. Remote MCP over Streamable HTTP; tools follow the token owner's base role and plan-gated features.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -27454,6 +27478,7 @@
     "operations": [
       "no-code-database"
     ],
+    "base_url": "https://app.nocodb.com",
     "no_auth": false,
     "call": {
       "operation": "list records in a table (Data API v3)",
@@ -28589,7 +28614,7 @@
     "openapi": "https://developers.pipedrive.com/docs/api/v1/openapi.yaml",
     "llms_txt": null,
     "desc_en": "Create and update deals, contacts (persons/organizations), and activities in a Pipedrive CRM pipeline via REST API.",
-    "notes": "Official hosted MCP at mcp.pipedrive.ai/mcp uses Pipedrive account sign-in (OAuth). Offers a free Sandbox account for development/testing separate from production pricing.",
+    "notes": "Official hosted MCP at mcp.pipedrive.ai/mcp uses Pipedrive account sign-in (OAuth). Offers a free Sandbox account for development/testing separate from production pricing. Core endpoints (e.g. POST /deals) are v2 only: https://api.pipedrive.com/api/v2/deals; v1 remains for the rest",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -28605,7 +28630,7 @@
       "source_url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://{company}.pipedrive.com/api/v1",
+    "base_url": "https://api.pipedrive.com/api/v2",
     "rate_limits": {
       "summary": "Daily token budget 30,000 x plan multiplier x seats; burst per 2s (API token) Lite 20, Growth 40, Premium 100, Ultimate 120; search 10/2s",
       "source_url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting",
@@ -28840,7 +28865,7 @@
         "checked_at": "2026-09-24"
       }
     },
-    "free_tier": "Trial: 14-day free trial of Suite Professional, one-time; no free plan, paid plans from $19/agent/mo (Support Team, annual)",
+    "free_tier": "Trial: 14-day free trial of Suite Professional, one-time, no credit card required; no free plan, paid plans from $19/agent/mo (Support Team, annual)",
     "sdk": [],
     "openapi": null,
     "llms_txt": null,
@@ -28851,8 +28876,9 @@
       "kind": "trial",
       "quota": "14-day trial of Customer Service Suite Professional",
       "period": "one_time",
-      "source_url": "https://www.zendesk.com/pricing/",
-      "checked_at": "2026-09-24"
+      "source_url": "https://www.zendesk.com/free-trial/",
+      "checked_at": "2026-09-24",
+      "requires_card": false
     },
     "auth_scheme": {
       "type": "http",
@@ -28896,7 +28922,7 @@
     },
     "has_free_tier": false,
     "has_trial": true,
-    "no_card": false,
+    "no_card": true,
     "stale": false,
     "link_check": {
       "checked_at": "2026-09-24",
@@ -28929,7 +28955,7 @@
     "name": "Ayrshare",
     "category": "social-media",
     "homepage": "https://www.ayrshare.com",
-    "docs": "https://www.ayrshare.com",
+    "docs": "https://www.ayrshare.com/docs/apis/overview",
     "auth": "api_key",
     "auth_hint": "Authorization: Bearer <API_KEY>; since 2026-03-31 X/Twitter requests also need X-Twitter-OAuth1-Api-Key and X-Twitter-OAuth1-Api-Secret headers",
     "mcp": {
@@ -29713,7 +29739,7 @@
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Search videos, manage playlists/comments, and upload videos to YouTube via REST API.",
-    "notes": "Daily quota shared across all calls; different operations cost different quota amounts (e.g. search is expensive).",
+    "notes": "Daily quota of 10,000 units shared across most calls; search.list costs 1 unit from a separate Search Queries bucket capped at 100 calls/day.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -33566,7 +33592,7 @@
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Send international transfers, check exchange rates, and manage multi-currency balances via REST API.",
-    "notes": "Personal tokens cover only quotes, recipients, transfers, batch groups and transfer events; funding and balance statements only for US/CA/AU/NZ/SG/MY accounts. Full access needs a partnership agreement.",
+    "notes": "Personal tokens cover only quotes, recipients, transfers, batch groups and transfer events; funding and balance statements only for US/CA/AU/NZ/SG/MY accounts. Full access needs a partnership agreement. Docs use versioned paths, e.g. https://api.wise.com/2026Q3/profiles/{profileId}/quotes",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -33661,7 +33687,7 @@
     "openapi": "https://github.com/amzn/selling-partner-api-models",
     "llms_txt": null,
     "desc_en": "Manage listings, orders, inventory, and reports for an Amazon seller/vendor account via REST API.",
-    "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review. Official MCP uses Seller Central OAuth consent.",
+    "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review. Official MCP uses Seller Central OAuth consent. Orders v0 getOrders is deprecated; use searchOrders (v2026-01-01). Planned SP-API fees were cancelled",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -34692,7 +34718,7 @@
     "openapi": null,
     "llms_txt": "https://docs.gumloop.com/llms.txt",
     "desc_en": "Create AI agents, start chat sessions, and trigger no-code automations via REST API, SDKs, or the Gumloop MCP server.",
-    "notes": "Added: widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled. The MCP server authenticates via OAuth sign-in, not a pasted key.",
+    "notes": "Added: widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled. The MCP server authenticates via OAuth sign-in, not a pasted key. Personal API keys also need the header x-auth-key: <user_id>, and API keys require the Pro plan or higher",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "trial",
@@ -34922,7 +34948,7 @@
     "openapi": null,
     "llms_txt": "https://help.keboola.com/llms.txt",
     "desc_en": "Lets an agent load and query tables, create SQL and Python transformations, and trigger data pipeline jobs in a Keboola project.",
-    "notes": "Remote MCP URL is per stack: mcp.keboola.com is US Virginia (AWS) only; others e.g. mcp.eu-central-1.keboola.com; local server at github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months.",
+    "notes": "Remote MCP URL is per stack: mcp.keboola.com is US Virginia (AWS) only; others e.g. mcp.eu-central-1.keboola.com; local server at github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months. Storage API reference: https://api.keboola.com/?service=storage (the Apiary docs are retired)",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -35133,7 +35159,7 @@
     "openapi": null,
     "llms_txt": "https://docs.merge.dev/llms.txt",
     "desc_en": "Give an agent governed, audited tool access to Salesforce, Slack, Jira and 100+ enterprise apps via API or MCP.",
-    "notes": "Separate product from Merge's classic Unified API (HRIS/ATS/CRM sync); Agent Handler is the AI-agent-facing tool-calling layer. All plans include unlimited registered users and tool packs.",
+    "notes": "Separate product from Merge's classic Unified API (HRIS/ATS/CRM sync); Agent Handler is the AI-agent-facing tool-calling layer. All plans include unlimited registered users and tool packs. An agent can sign up without a human: POST https://ah-api.merge.dev/api/v1/agent/signup/ (no auth) creates an organization and returns an API key",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -35624,8 +35650,8 @@
     ],
     "openapi": null,
     "llms_txt": "https://docs.stackone.com/llms.txt",
-    "desc_en": "Call 500+ SaaS integrations (HRIS, ATS, CRM, documents) through one unified API or MCP gateway covering 27,000+ actions.",
-    "notes": "Beyond the free 1,000 credits/seat, Starter bills $0.003/extra call; Core and Enterprise tiers are quote-based (contact sales).",
+    "desc_en": "Call 520+ SaaS connectors (HRIS, ATS, CRM, documents) through one unified API or MCP gateway covering 32,000+ actions.",
+    "notes": "Plans: Starter free (1,000 credits per seat per month), Team $600/month, Enterprise quote-based.",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -36022,7 +36048,7 @@
     "openapi": null,
     "llms_txt": "https://docs.cohere.com/llms.txt",
     "desc_en": "Call chat, embed, rerank and classify endpoints for text generation, semantic search and RAG.",
-    "notes": "Vendor MCP at https://docs.cohere.com/_mcp/server only searches the docs. Trial keys are not for production use. v2 API is current; v1 is legacy.",
+    "notes": "Vendor MCP at https://docs.cohere.com/_mcp/server only searches the docs. Trial keys are not for production use. v2 API is current; v1 is legacy. Flagship chat model: command-a-plus-05-2026",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -36605,7 +36631,7 @@
     "openapi": null,
     "llms_txt": "https://ai.google.dev/gemini-api/docs/llms.txt",
     "desc_en": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
-    "notes": "Vendor MCP at https://gemini-api-docs-mcp.dev only searches the docs. Free-tier content may be used to improve Google products. Unrestricted standard API keys are rejected in 2026; use a current key type. Google publishes a Discovery document, not OpenAPI.",
+    "notes": "Vendor MCP at https://gemini-api-docs-mcp.dev only searches the docs. Free-tier content may be used to improve Google products. Unrestricted standard API keys are rejected in 2026; use a current key type. Google publishes a Discovery document, not OpenAPI. The quickstart now uses POST /v1beta/interactions (header Api-Revision: 2026-05-20) rather than generateContent",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
@@ -36724,7 +36750,7 @@
     "openapi": null,
     "llms_txt": "https://console.groq.com/llms.txt",
     "desc_en": "Run fast LLM chat, tool use and speech-to-text on hosted open models via an OpenAI-compatible API.",
-    "notes": "Free-tier limits vary by model (e.g. 30 RPM / 1K RPD); see console.groq.com/settings/limits. Not to be confused with xAI Grok.",
+    "notes": "Free-tier limits vary by model (e.g. 30 RPM / 1K RPD); see console.groq.com/settings/limits. Not to be confused with xAI Grok. Llama 3.x models (llama-3.3-70b-versatile, llama-3.1-8b-instant) are now contact-sales, not self-serve per-token",
     "verified": "2026-09-24",
     "free_plan": {
       "kind": "free_tier",
