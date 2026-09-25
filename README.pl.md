@@ -11,22 +11,22 @@
 <table align="right" width="300">
 <tr><th colspan="2" align="center">AI Agents Accessible APIs</th></tr>
 <tr><td><b>Typ</b></td><td>katalog API i MCP</td></tr>
-<tr><td><b>Wpisy</b></td><td>330</td></tr>
+<tr><td><b>Wpisy</b></td><td>328</td></tr>
 <tr><td><b>Kategorie</b></td><td>29</td></tr>
-<tr><td><b>Oficjalne serwery MCP</b></td><td>230</td></tr>
+<tr><td><b>Oficjalne serwery MCP</b></td><td>229</td></tr>
 <tr><td><b>Języki</b></td><td>angielski, polski</td></tr>
 <tr><td><b>Format</b></td><td>JSON, Markdown, HTML, llms.txt</td></tr>
-<tr><td><b>Ostatnie sprawdzenie</b></td><td>2026-09-24</td></tr>
+<tr><td><b>Ostatnie sprawdzenie</b></td><td>2026-09-25</td></tr>
 <tr><td><b>Licencja</b></td><td>CC BY 4.0 (dane), MIT (kod)</td></tr>
 </table>
 
-**AI Agents Accessible APIs** (pol. *API dostępne dla agentów AI*) to otwarty, dwujęzyczny (angielski/polski) katalog **330 usług** (każda z datą ostatniego sprawdzenia) w **29 kategoriach**, z których autonomiczny agent AI — np. Claude, ChatGPT, Gemini lub własny agent LLM — może korzystać **bez udziału człowieka**, po jednorazowym kroku wykonanym przez człowieka: rejestracji konta i przekazaniu agentowi **klucza API**, **tokenu OAuth** lub połączenia z **serwerem MCP (Model Context Protocol)**. Każdy wpis zawiera adres dokumentacji, metodę uwierzytelniania, dostępność oficjalnego lub społecznościowego serwera MCP oraz darmowy limit. Nie jest to spis produktów z „AI” w nazwie — kryterium jest możliwość obsługi przez agenta, a nie marketing.
+**AI Agents Accessible APIs** (pol. *API dostępne dla agentów AI*) to otwarty, dwujęzyczny (angielski/polski) katalog **328 usług** (każda z datą ostatniego sprawdzenia) w **29 kategoriach**, z których autonomiczny agent AI — np. Claude, ChatGPT, Gemini lub własny agent LLM — może korzystać **bez udziału człowieka**, po jednorazowym kroku wykonanym przez człowieka: rejestracji konta i przekazaniu agentowi **klucza API**, **tokenu OAuth** lub połączenia z **serwerem MCP (Model Context Protocol)**. Każdy wpis zawiera adres dokumentacji, metodę uwierzytelniania, dostępność oficjalnego lub społecznościowego serwera MCP oraz darmowy limit. Nie jest to spis produktów z „AI” w nazwie — kryterium jest możliwość obsługi przez agenta, a nie marketing.
 
 ## Spis treści
 
 1. [Kryteria włączenia](#kryteria-włączenia)
 2. [Legenda](#legenda)
-3. [Wyszukiwanie w sieci](#wyszukiwanie-w-sieci) (14) · [Scraping i automatyzacja przeglądarki](#scraping-i-automatyzacja-przeglądarki) (18) · [Wiedza i dane naukowe](#wiedza-i-dane-naukowe) (16) · [Generowanie i edycja obrazów](#generowanie-i-edycja-obrazów) (10) · [Generowanie i edycja wideo](#generowanie-i-edycja-wideo) (14) · [Mowa i audio](#mowa-i-audio) (13) · [Generowanie muzyki](#generowanie-muzyki) (6) · [Generowanie 3D i modele](#generowanie-3d-i-modele) (7) · [Architektura, CAD i BIM](#architektura-cad-i-bim) (8) · [Diagramy i architektura oprogramowania](#diagramy-i-architektura-oprogramowania) (9) · [Projektowanie i UI](#projektowanie-i-ui) (6) · [Dokumenty, OCR i prezentacje](#dokumenty-ocr-i-prezentacje) (14) · [Tłumaczenie i język](#tłumaczenie-i-język) (6) · [Piaskownice do uruchamiania kodu](#piaskownice-do-uruchamiania-kodu) (10) · [Platformy deweloperskie i DevOps](#platformy-deweloperskie-i-devops) (12) · [Chmura i hosting](#chmura-i-hosting) (10) · [Bazy danych](#bazy-danych) (12) · [Wyszukiwanie wektorowe, pamięć i RAG](#wyszukiwanie-wektorowe-pamięć-i-rag) (9) · [E-mail, czat zespołowy i powiadomienia](#e-mail-czat-zespołowy-i-powiadomienia) (10) · [SMS i komunikatory](#sms-i-komunikatory) (10) · [Agenci głosowi i telefonia](#agenci-głosowi-i-telefonia) (8) · [Produktywność i praca zespołowa](#produktywność-i-praca-zespołowa) (17) · [CRM, obsługa klienta i marketing](#crm-obsługa-klienta-i-marketing) (8) · [Media społecznościowe](#media-społecznościowe) (10) · [Mapy, geolokalizacja i pogoda](#mapy-geolokalizacja-i-pogoda) (16) · [Finanse, płatności i dane rynkowe](#finanse-płatności-i-dane-rynkowe) (16) · [E-commerce](#e-commerce) (8) · [Platformy automatyzacji i integracji](#platformy-automatyzacji-i-integracji) (15) · [API modeli i inferencja](#api-modeli-i-inferencja) (18)
+3. [Wyszukiwanie w sieci](#wyszukiwanie-w-sieci) (14) · [Scraping i automatyzacja przeglądarki](#scraping-i-automatyzacja-przeglądarki) (18) · [Wiedza i dane naukowe](#wiedza-i-dane-naukowe) (16) · [Generowanie i edycja obrazów](#generowanie-i-edycja-obrazów) (10) · [Generowanie i edycja wideo](#generowanie-i-edycja-wideo) (14) · [Mowa i audio](#mowa-i-audio) (13) · [Generowanie muzyki](#generowanie-muzyki) (6) · [Generowanie 3D i modele](#generowanie-3d-i-modele) (6) · [Architektura, CAD i BIM](#architektura-cad-i-bim) (8) · [Diagramy i architektura oprogramowania](#diagramy-i-architektura-oprogramowania) (8) · [Projektowanie i UI](#projektowanie-i-ui) (6) · [Dokumenty, OCR i prezentacje](#dokumenty-ocr-i-prezentacje) (14) · [Tłumaczenie i język](#tłumaczenie-i-język) (6) · [Piaskownice do uruchamiania kodu](#piaskownice-do-uruchamiania-kodu) (10) · [Platformy deweloperskie i DevOps](#platformy-deweloperskie-i-devops) (12) · [Chmura i hosting](#chmura-i-hosting) (10) · [Bazy danych](#bazy-danych) (12) · [Wyszukiwanie wektorowe, pamięć i RAG](#wyszukiwanie-wektorowe-pamięć-i-rag) (9) · [E-mail, czat zespołowy i powiadomienia](#e-mail-czat-zespołowy-i-powiadomienia) (10) · [SMS i komunikatory](#sms-i-komunikatory) (10) · [Agenci głosowi i telefonia](#agenci-głosowi-i-telefonia) (8) · [Produktywność i praca zespołowa](#produktywność-i-praca-zespołowa) (17) · [CRM, obsługa klienta i marketing](#crm-obsługa-klienta-i-marketing) (8) · [Media społecznościowe](#media-społecznościowe) (10) · [Mapy, geolokalizacja i pogoda](#mapy-geolokalizacja-i-pogoda) (16) · [Finanse, płatności i dane rynkowe](#finanse-płatności-i-dane-rynkowe) (16) · [E-commerce](#e-commerce) (8) · [Platformy automatyzacji i integracji](#platformy-automatyzacji-i-integracji) (15) · [API modeli i inferencja](#api-modeli-i-inferencja) (18)
 4. [Powiązane katalogi i rejestry](#powiązane-katalogi-i-rejestry)
 5. [Współtworzenie](#współtworzenie)
 6. [Zobacz też](#zobacz-też)
@@ -189,11 +189,10 @@
 
 ## Generowanie 3D i modele
 
-*Generowanie siatek 3D z tekstu lub obrazu, teksturowanie i biblioteki modeli 3D.* — 7 usług. JSON: [`catalog/3d-generation.json`](catalog/3d-generation.json)
+*Generowanie siatek 3D z tekstu lub obrazu, teksturowanie i biblioteki modeli 3D.* — 6 usług. JSON: [`catalog/3d-generation.json`](catalog/3d-generation.json)
 
 | Usługa | Co agent może zrobić | Autoryzacja | MCP | Darmowy limit | Dokumentacja |
 |---|---|---|:-:|---|---|
-| [CSM (Common Sense Machines) API](https://www.csm.ai) | Twórz zasoby 3D i wieloczęściowe zestawy z obrazów przez asynchroniczne sesje REST (obraz-do-3D, retopologia). | klucz API | — | Unavailable: service appears discontinued | [dokumentacja](https://docs.csm.ai/quick-start) |
 | [Hyper3D Rodin API](https://hyper3d.ai) | Generuj siatki 3D z tekstu lub obrazów (tryby sketch/regular/detail) przez asynchroniczne REST API z zadaniami. | klucz API | — | Paid only: API access requires the Business plan ($120/mo, $96/mo billed annually) or Enterprise; direct credits $1.5 each | [dokumentacja](https://docs.hyper3d.ai/) |
 | [Meshy API](https://www.meshy.ai) | Generuj, teksturuj, riguj i animuj modele 3D z tekstu lub obrazów przez REST API lub oficjalny serwer MCP. | klucz API | [✅](https://github.com/meshy-dev/meshy-mcp-server) | Paid only: creating API keys requires a paid plan (Pro $20/mo+); Free accounts get only a built-in test key for the Playground (free web plan 100 credits/mo) | [dokumentacja](https://docs.meshy.ai/en/api/quick-start) |
 | [Sketchfab Data API](https://sketchfab.com/developers) | Wyszukuj, pobieraj i przesyłaj modele 3D na Sketchfabie programistycznie przez REST Data API v3. | klucz API / OAuth | [◐](https://github.com/gregkop/sketchfab-mcp-server) | 🆓 Free: no key needed for search and model listing (GET /v3/search, /v3/models); downloads (/v3/models/{uid}/download) need a free account token | [dokumentacja](https://sketchfab.com/developers/data-api/v3) |
@@ -214,11 +213,11 @@
 | [Rhino.Compute (McNeel)](https://www.rhino3d.com/compute) | Uruchamiaj operacje geometryczne Rhino/Grasshopper bezgłowo przez bezstanowe REST API, które samodzielnie wdrażasz. | klucz API | — | Paid only: self-hosted, requires a Rhino license; core-hour billing at $0.10 per core per hour of Rhino uptime on Windows Server, no free allowance | [dokumentacja](https://developer.rhino3d.com/guides/compute/) |
 | [Speckle API](https://speckle.systems) | Wysyłaj, odbieraj i przeszukuj dane modeli 3D/BIM między narzędziami CAD (Revit, Rhino, Grasshopper, Tekla) przez GraphQL API i SDK. | klucz API / OAuth | [◐](https://github.com/bimgeek/speckle-mcp) | 🆓 free Explore plan (1 project, 3 users), unlimited API calls | [dokumentacja](https://docs.speckle.systems/dev/) |
 | [Trimble Connect API](https://developer.trimble.com) | Zarządzaj projektami, plikami, modelami BIM oraz zgłoszeniami w Trimble Connect przez REST API (Core, Model, Organizer). | OAuth 2.0 | — | check pricing | [dokumentacja](https://developer.trimble.com/docs/connect) |
-| [Zoo Text-to-CAD API (KittyCAD)](https://zoo.dev) | Generuj modele CAD 3D z opisów tekstowych oraz wykonuj operacje modelowania i konwersji plików przez REST API. | klucz API | [✅](https://github.com/KittyCAD/mcp) | start free trial credits, then usage-based pay-as-you-go | [dokumentacja](https://zoo.dev/docs/api) |
+| [Zoo Text-to-CAD API (KittyCAD)](https://zoo.dev) | Konwertuj pliki CAD i wykonuj operacje modelowania przez REST API; generowanie CAD z tekstu działa przez copilota WebSocket i serwer MCP. | klucz API | [✅](https://github.com/KittyCAD/mcp) | start free trial credits, then usage-based pay-as-you-go | [dokumentacja](https://zoo.dev/docs/api) |
 
 ## Diagramy i architektura oprogramowania
 
-*Renderowanie i edycja diagramów (Mermaid, PlantUML, C4), tablic i modeli architektury.* — 9 usług. JSON: [`catalog/diagrams-software-architecture.json`](catalog/diagrams-software-architecture.json)
+*Renderowanie i edycja diagramów (Mermaid, PlantUML, C4), tablic i modeli architektury.* — 8 usług. JSON: [`catalog/diagrams-software-architecture.json`](catalog/diagrams-software-architecture.json)
 
 | Usługa | Co agent może zrobić | Autoryzacja | MCP | Darmowy limit | Dokumentacja |
 |---|---|---|:-:|---|---|
@@ -230,7 +229,6 @@
 | [Miro REST API](https://developers.miro.com) | Twórz i odczytuj tablice oraz elementy przez REST API lub użyj oficjalnego serwera MCP Miro do wyszukiwania, budowania i podsumowywania tablic. | OAuth 2.0 | [✅](https://mcp.miro.com/) | 🆓 Free tier: up to 3 editable team boards; MCP on all plans, capped per day at 100 tool calls on Free (Starter 500, Business 2,000, Enterprise 10,000) | [dokumentacja](https://developers.miro.com/docs) |
 | [Napkin AI API](https://www.napkin.ai) | Generuj diagramy, schematy blokowe, mapy myśli i wykresy z tekstu przez REST API, eksportując do SVG, PNG lub PPT. | klucz API | — | 🆓 included on every plan; any account can create a token and call the API, limited by credits | [dokumentacja](https://api.napkin.ai/) |
 | [PlantUML Server API](https://plantuml.com) | Renderuj diagramy UML i architektury jako kod do PNG/SVG/ASCII przez darmowe publiczne API HTTP GET z zakodowanym tekstem diagramu. | brak | — | 🆓 free, no key; public hosted server at plantuml.com/plantuml | [dokumentacja](https://plantuml.com/server) |
-| [Structurizr](https://structurizr.com) | Twórz i aktualizuj przestrzenie robocze diagramów architektury oprogramowania w modelu C4 jako JSON przez podpisane API HTTPS. | klucz API | [✅](https://mcp.structurizr.com/mcp) | 🆓 free tier: workspaces up to 0.5MB; paid plans raise the limit to 5MB | [dokumentacja](https://docs.structurizr.com/cloud/workspace-api) |
 
 ## Projektowanie i UI
 
@@ -291,7 +289,7 @@
 | [E2B](https://e2b.dev) | Uruchamiaj izolowane sandboksy Firecracker w chmurze przez SDK/REST, by wykonać kod wygenerowany przez AI i zwrócić wyniki. | klucz API | [✅](https://github.com/e2b-dev/mcp-server) | Trial: one-time $100 usage credit on signup (Hobby, no card); up to 1 h per sandbox, 20 concurrent; then pay-as-you-go | [dokumentacja](https://e2b.dev/docs) |
 | [Judge0](https://judge0.com) | Wyślij kod źródłowy i stdin przez REST, by skompilować/uruchomić go w ponad 60 językach i odebrać wynik. | klucz API | — | Paid only on Judge0 Cloud (Pro EUR 27/mo for 2,000 submissions/day and up); self-host free & open-source (GPLv3) | [dokumentacja](https://ce.judge0.com/) |
 | [Modal](https://modal.com) | Uruchamiaj programowo bezserwerowe sandboksy, opcjonalnie z GPU, by wykonywać niezaufany kod lub kod agenta. | klucz API | [◐](https://github.com/milkymap/mcp4modal_sandbox) | 🆓 Starter plan: $0 base + $30/mo free credits | [dokumentacja](https://modal.com/docs/guide/sandboxes) |
-| [Piston](https://github.com/engineer-man/piston) | Wywołaj darmowe publiczne REST API, by kompilować i uruchamiać kod w ponad 70 językach w izolowanych kontenerach. | klucz API | — | 🆓 Free: self-host (open source); public emkc.org API no longer open since 2026-02-15, token only for non-commercial educational projects | [dokumentacja](https://piston.readthedocs.io/en/latest/api-v2/) |
+| [Piston](https://github.com/engineer-man/piston) | Kompiluj i uruchamiaj kod w ponad 70 językach w izolowanych kontenerach przez samodzielnie hostowane REST API (publiczna instancja wymaga przyznanego tokenu). | klucz API | — | 🆓 Free: self-host (open source); public emkc.org API no longer open since 2026-02-15, token only for non-commercial educational projects | [dokumentacja](https://piston.readthedocs.io/en/latest/api-v2/) |
 | [Riza](https://riza.io) | Wywołuj REST API, by wykonać niezaufany kod Python/JS/Ruby/PHP w sandboksach startujących w mniej niż 10ms. | klucz API | [✅](https://mcp.riza.io/code-interpreter) | 🆓 Free tier: Hobby plan free forever, 100,000 requests/month, 30 s execution limit; then usage-based pricing | [dokumentacja](https://docs.riza.io/api-reference/command/execute-code) |
 | [Runloop](https://www.runloop.ai) | Twórz, migawkuj, zawieszaj/wznawiaj i uruchamiaj polecenia w Linuksowych Devboksach przez API/SDK do zadań agentów kodujących. | klucz API | [✅](https://github.com/runloopai/api-client-ts/tree/main/packages/mcp-server) | $50 free credits on signup, then usage-based ($0.108/CPU-hr, $0.0252/GB-hr) | [dokumentacja](https://docs.runloop.ai/docs/devboxes/overview) |
 | [Vercel Sandbox](https://vercel.com/docs/vercel-sandbox) | Uruchamiaj efemeryczne mikro-VM Firecracker przez SDK/REST, by wykonywać kod i polecenia wygenerowane przez agenta lub AI. | klucz API / OAuth | [✅](https://vercel.com/docs/mcp) | 🆓 usage included on Hobby plan, otherwise usage-based on Pro/Enterprise | [dokumentacja](https://vercel.com/docs/sandbox) |
@@ -616,6 +614,6 @@ Początkowa lista kandydatów została zebrana z:
 4. [abitwise — AI-tools](https://github.com/abitwise/AI-tools)
 5. [Sylus — Top-rated connectors for AI tool integrations](https://www.sylus.ai/feeds/blog/top-rated-connectors-ai-tool-integrations)
 
-<sub>Wygenerowano z data/catalog.json dnia 2026-09-24.</sub>
+<sub>Wygenerowano z data/catalog.json dnia 2026-09-25.</sub>
 
 <!-- keywords: AI agent tools, agent-accessible APIs, MCP servers list, Model Context Protocol directory, tool calling APIs, LLM tools catalog, API keys for agents, Claude tools, ChatGPT actions, function calling, katalog API dla agentów AI, serwery MCP -->

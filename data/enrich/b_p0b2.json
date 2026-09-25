@@ -146,5 +146,22 @@
    "source_url": "https://developers.laratranslate.com/docs/getting-started-with-mcp",
    "checked_at": "2026-09-24"
   }
+ },
+ "etsy-open-api-v3": {
+  "base_url": "https://openapi.etsy.com/v3"
+ },
+ "trimble-connect-api": {
+  "base_url": "https://app.connect.trimble.com/tc/api/2.0"
+ },
+ "anthropic-claude-api": {
+  "auth_scheme": {
+   "type": "apiKey",
+   "scheme": "bearer",
+   "format": "x-api-key: <ANTHROPIC_API_KEY> + anthropic-version: 2023-06-01 (the API overview also documents Authorization: Bearer)",
+   "source_url": "https://platform.claude.com/docs/en/api/messages",
+   "checked_at": "2026-09-25",
+   "in": "header",
+   "name": "x-api-key"
+  }
  }
 }

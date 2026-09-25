@@ -1,26 +1,4 @@
 {
-  "csm-common-sense-machines-api": {
-    "free_plan": null,
-    "auth_scheme": null,
-    "base_url": null,
-    "rate_limits": null,
-    "oauth_scopes": null,
-    "async_jobs": null,
-    "data_policy": null,
-    "mcp": {
-      "maintainer": "none",
-      "remote_url": null,
-      "repo": null,
-      "tools": null,
-      "covers_full_api": null,
-      "source_url": null,
-      "checked_at": "2026-09-24"
-    },
-    "corrections": [
-      "homepage/docs: csm.ai, www.csm.ai, docs.csm.ai and api.csm.ai do not resolve in DNS on 2026-09-24; service may be discontinued - re-verify or remove",
-      "mcp: github.com/CommonSenseMachines org and blender-mcp repo return 404 on GitHub; lobehub listing is an aggregator, not a vendor source"
-    ]
-  },
   "hyper3d-rodin-api": {
     "free_plan": {
       "kind": "none",
@@ -660,48 +638,6 @@
     },
     "corrections": [
       "mcp: official github.com/plantuml/plantuml-mcp exists but is an MVP exposing only 'plantuml_version' (no rendering yet)"
-    ]
-  },
-  "structurizr": {
-    "free_plan": null,
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "X-Authorization",
-      "scheme": null,
-      "format": "X-Authorization: <apiKey>:<base64(HMAC-SHA256(apiSecret, digest))> + Nonce + Content-MD5 headers",
-      "source_url": "https://docs.structurizr.com/cloud/workspace-api",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.structurizr.com",
-    "rate_limits": {
-      "summary": "Rate limiting enforced on all workspace API calls (GET and PUT); no number published",
-      "source_url": "https://docs.structurizr.com/cloud/workspace-api",
-      "checked_at": "2026-09-24"
-    },
-    "oauth_scopes": null,
-    "async_jobs": null,
-    "data_policy": null,
-    "mcp": {
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.structurizr.com/mcp",
-      "repo": null,
-      "tools": [
-        "inspect",
-        "parse",
-        "validate",
-        "export-mermaid",
-        "export-c4plantuml",
-        "export-plantuml"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://docs.structurizr.com/ai/mcp",
-      "checked_at": "2026-09-24"
-    },
-    "corrections": [
-      "status: structurizr.com announces cloud service end of life with a migration guide (docs.structurizr.com/cloud) to playground, local or self-hosted server; the cloud workspace API should be treated as deprecated",
-      "mcp: official Structurizr MCP server (free, open source; docker structurizr/mcp); hosted instance https://mcp.structurizr.com/mcp exposes DSL validate/parse/inspect and Mermaid/PlantUML export without auth",
-      "sdk: github.com/structurizr/java is archived; code moved to github.com/structurizr/structurizr"
     ]
   },
   "anthropic-claude-api": {

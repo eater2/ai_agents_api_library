@@ -273,16 +273,6 @@
    "https://github.com/postmanlabs/postman-mcp-server"
   ]
  },
- "csm-common-sense-machines-api": {
-  "mcp": {
-   "type": "none",
-   "url": null
-  },
-  "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. The vendor's Blender MCP repo (github.com/CommonSenseMachines/blender-mcp) now returns 404; no maintained MCP server found.",
-  "sources": [
-   "https://github.com/CommonSenseMachines/blender-mcp"
-  ]
- },
  "webflow-data-api": {
   "mcp": {
    "type": "official",

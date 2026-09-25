@@ -38,6 +38,7 @@ Na koniec
 - [x] `call` (przykładowe wywołanie) ma tylko 31/330 wpisów, `unit_price` 25/330 — uzupełnić przynajmniej dla wpisów z `free_plan` (3b): teraz `call` 251/330, `unit_price` 140/330; brak `call` tylko tam, gdzie dostawca nie publikuje odwołania HTTP (SDK/WebSocket/za logowaniem) lub strona blokuje dostęp; korekty: `research/p0b-3b/corrections-2026-09-24-round2.md`
 - [x] Korekty rundy 2 od 3b (39 wpisów) i wątpliwości `free_plan` (You.com → `no_key`, Zendesk bez karty, Reducto: karta niepotwierdzona, Textract + AnalyzeLending, Kling → `none`) przez `fix_p0b2.json` + `b_p0b2.json`; ModernMT usunięty (rejestracja zamknięta, wygaszany w 2026), dodany następca Lara Translate (bf)
 - [x] Pliki kategorii w zwartym JSON (wpis na linię): wszystkie < 60 KB po dodaniu `call` (bf)
+- [x] `call` dla pozostałych 78 wpisów tylko z oficjalnej specyfikacji/dokumentacji: +64, razem 316/328 (2026-09-25, bf). Bez `call` (brak oficjalnego źródła albo brak REST): serper, framer, tencent-edgeone-pages, deepgram-voice-agent-api, mermaid-chart-api, playwright-mcp-microsoft, soundraw-api, modal, cloudflare-sandbox-sdk, piston, ebay-apis, zapier-mcp-ai-actions. Przy okazji: usunięte structurizr (chmura wyłączona) i csm (domena nie działa); poprawione zoo (brak REST text-to-CAD), piston (publiczna instancja za tokenem), base_url etsy/trimble, auth anthropic
 
 ## P0c — oceny i opinie: wywiady z 7 agentami (2026-09-24)
 

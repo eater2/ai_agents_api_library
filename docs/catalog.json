@@ -362,7 +362,7 @@
     "llms_txt": "https://jina.ai/models/llms.txt",
     "desc_en": "Search the web or convert any URL into clean LLM-ready markdown via simple HTTP GET requests.",
     "notes": "Reader is usable without an API key at a low rate limit; Search needs a key. Interactive docs/playground at https://api.jina.ai/scalar. Official remote MCP server at https://mcp.jina.ai/v1 (github.com/jina-ai/MCP).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "10M free tokens per new API key; Reader also usable without key at 20 RPM",
@@ -519,6 +519,24 @@
       "web-scraping"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://kagi.com/api/v1/search -H \"Authorization: Bearer $KAGI_API_KEY\" -H 'Content-Type: application/json' -d '{\"query\": \"steve jobs\"}'",
+      "method": "POST",
+      "operation": "run a web search",
+      "response_fields": [
+        "meta",
+        "data.search[].url",
+        "data.search[].title",
+        "data.search[].snippet",
+        "data.news",
+        "data.image",
+        "data.video"
+      ],
+      "source_url": "https://kagi.com/api/docs/_spec/openapi.yaml",
+      "url": "https://kagi.com/api/v1/search"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -845,7 +863,7 @@
     "llms_txt": "https://docs.parallel.ai/llms.txt",
     "desc_en": "Lets an agent run Parallel's low-latency Search API for web research, content extraction, and entity discovery.",
     "notes": "The remote MCP server works without an account/API key at lower rate limits; an Authorization: Bearer key raises them. The main REST API requires an API key from the dashboard. Search defaults to mode advanced ($5 per 1,000 requests); set mode fast for $1 per 1,000",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "up to 5,000 requests/month, plus up to $80 signup and $5/month credits",
@@ -1719,7 +1737,7 @@
     "llms_txt": "https://you.com/docs/llms.txt",
     "desc_en": "Lets an agent call You.com's Search/Answer/Research API or MCP server for LLM-ready web search and grounded answers.",
     "notes": "Current endpoint is POST https://ydc-index.io/v1/search (recommended); legacy GET still works but won't get new features; also offers a separate keyless Docs MCP server at you.com/docs/_mcp/server for searching You.com's own docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "no_key",
       "requires_card": false,
@@ -2502,7 +2520,7 @@
     "llms_txt": null,
     "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
     "notes": "Billed by browser-hours; Stagehand SDK is open source but needs a browser backend such as Browserbase. Hosted MCP takes the key as ?browserbaseApiKey=; the mcp-server-browserbase repo is archived since 2026-07-20.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "1 browser hour, 3 concurrent browsers, 15 min/session",
@@ -2923,6 +2941,23 @@
       "structured-extraction"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.hyperbrowser.ai/api/session -H \"x-api-key: $HYPERBROWSER_API_KEY\" -H \"Content-Type: application/json\" -d '{\"useStealth\": true}'",
+      "method": "POST",
+      "operation": "create a cloud browser session",
+      "response_fields": [
+        "id",
+        "status",
+        "sessionUrl",
+        "liveUrl",
+        "wsEndpoint",
+        "token"
+      ],
+      "source_url": "https://hyperbrowser.ai/docs/api-reference/create-new-session.md",
+      "url": "https://api.hyperbrowser.ai/api/session"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -3243,7 +3278,7 @@
     "llms_txt": "https://docs.scrapegraphai.com/llms.txt",
     "desc_en": "Use AI-driven prompts to scrape and extract structured data from webpages via REST API or Python/JS SDK.",
     "notes": "Also offers the open-source scrapegraph-ai library with LangChain/LlamaIndex integrations.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -6106,6 +6141,20 @@
       "text-to-video"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Returns 202 with jobId/statusUrl; poll GET https://firefly-api.adobe.io/v3/status/{jobId} (same headers) until status is 'succeeded', then read result.outputs[].image.url",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://firefly-api.adobe.io/v3/images/generate-async -H \"Authorization: Bearer $FIREFLY_ACCESS_TOKEN\" -H \"x-api-key: $FIREFLY_SERVICES_CLIENT_ID\" -H 'Content-Type: application/json' -d '{\"prompt\": \"a lighthouse at sunset\"}'",
+      "method": "POST",
+      "operation": "generate images from a text prompt (async)",
+      "response_fields": [
+        "jobId",
+        "statusUrl",
+        "cancelUrl"
+      ],
+      "source_url": "https://raw.githubusercontent.com/AdobeDocs/ffs-firefly-api/main/static/firefly-api.json",
+      "url": "https://firefly-api.adobe.io/v3/images/generate-async"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -6444,6 +6493,16 @@
       "image-editing"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -s -X POST \"https://generativelanguage.googleapis.com/v1beta/interactions\" -H \"x-goog-api-key: $GEMINI_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model\": \"gemini-3.1-flash-image\", \"input\": [{\"type\": \"text\", \"text\": \"<PROMPT>\"}]}'",
+      "method": "POST",
+      "operation": "generate an image from a text prompt",
+      "response_fields": [],
+      "source_url": "https://ai.google.dev/gemini-api/docs/image-generation",
+      "url": "https://generativelanguage.googleapis.com/v1beta/interactions"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -6543,6 +6602,23 @@
       "image-upscaling"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.ideogram.ai/v1/ideogram-v4/generate -H \"Api-Key: $IDEOGRAM_API_KEY\" -F 'text_prompt=A photo of a cat'",
+      "method": "POST",
+      "operation": "generate an image from a text prompt (Ideogram 4.0)",
+      "response_fields": [
+        "created",
+        "data[].url",
+        "data[].prompt",
+        "data[].resolution",
+        "data[].is_image_safe",
+        "data[].seed"
+      ],
+      "source_url": "https://developer.ideogram.ai/api-reference/generate-images/generate-v4.md",
+      "url": "https://api.ideogram.ai/v1/ideogram-v4/generate"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -6616,8 +6692,8 @@
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Generate images and videos from text via REST or the official MCP server, with model selection and job status polling.",
-    "notes": "API credit is bought separately from web app subscriptions. The official MCP (https://mcp.leonardo.ai/v1/mcp) authenticates with an 'API-Key' header, not OAuth.",
-    "verified": "2026-09-24",
+    "notes": "API credit is bought separately from web app subscriptions. The official MCP (https://mcp.leonardo.ai/v1/mcp) authenticates with an 'API-Key' header, not OAuth. Image generation is documented on v2: POST https://cloud.leonardo.ai/api/rest/v2/generations (model + parameters.prompt).",
+    "verified": "2026-09-25",
     "auth_scheme": {
       "type": "http",
       "scheme": "bearer",
@@ -6641,6 +6717,19 @@
       "text-to-video"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Async: the response only has generationId; fetch the images with the 'Get a Single Generation' endpoint (https://docs.leonardo.ai/reference/getgenerationbyid) or receive them via the webhook callback URL set on the API key (https://docs.leonardo.ai/docs/guide-to-the-webhook-callback-feature)",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://cloud.leonardo.ai/api/rest/v2/generations -H \"authorization: Bearer $LEONARDO_API_KEY\" -H 'accept: application/json' -H 'content-type: application/json' -d '{\"model\": \"phoenix-v1.0\", \"parameters\": {\"prompt\": \"<PROMPT>\"}}'",
+      "method": "POST",
+      "operation": "generate images from a text prompt",
+      "response_fields": [
+        "generationId",
+        "apiCreditCost"
+      ],
+      "source_url": "https://docs.leonardo.ai/reference/creategeneration.md",
+      "url": "https://cloud.leonardo.ai/api/rest/v2/generations"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -6889,6 +6978,18 @@
       "image-upscaling"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://external.api.recraft.ai/v1/images/generations -H \"Authorization: Bearer $RECRAFT_API_TOKEN\" -H 'Content-Type: application/json' -d '{\"prompt\": \"race car on a track\"}'",
+      "method": "POST",
+      "operation": "generate an image from a text prompt",
+      "response_fields": [
+        "data[].url"
+      ],
+      "source_url": "https://www.recraft.ai/docs/api-reference/endpoints.md",
+      "url": "https://external.api.recraft.ai/v1/images/generations"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -7263,7 +7364,7 @@
     "llms_txt": null,
     "desc_en": "Programmatically generate and render videos/images from templates via REST API.",
     "notes": "Per-project API keys; ~14 credits per minute of 720p video. The hosted MCP accepts OAuth or a Bearer project API key.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -7539,6 +7640,18 @@
       "image-to-video"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Response returns an operation `name`; poll GET https://generativelanguage.googleapis.com/v1beta/{name} (x-goog-api-key header) until `done` is true, then download response.generateVideoResponse.generatedSamples[0].video.uri with the same header.",
+      "checked_at": "2026-09-25",
+      "example": "curl -s -X POST \"https://generativelanguage.googleapis.com/v1beta/models/veo-3.1-generate-preview:predictLongRunning\" -H \"x-goog-api-key: $GEMINI_API_KEY\" -H \"Content-Type: application/json\" -d '{\"instances\": [{\"prompt\": \"<PROMPT>\"}]}'",
+      "method": "POST",
+      "operation": "start a text-to-video generation job",
+      "response_fields": [
+        "name"
+      ],
+      "source_url": "https://ai.google.dev/gemini-api/docs/veo",
+      "url": "https://generativelanguage.googleapis.com/v1beta/models/veo-3.1-generate-preview:predictLongRunning"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -7646,6 +7759,20 @@
       "lip-sync"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Poll GET https://api.heygen.com/v3/video-agents/{session_id} until data.video_id is set, then GET https://api.heygen.com/v3/videos/{video_id} until status is completed and read video_url; or pass callback_url for a webhook.",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.heygen.com/v3/video-agents -H \"X-Api-Key: $HEYGEN_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\": \"<PROMPT>\"}'",
+      "method": "POST",
+      "operation": "create an avatar video from a prompt (Video Agent)",
+      "response_fields": [
+        "data.session_id",
+        "data.status",
+        "data.video_id"
+      ],
+      "source_url": "https://developers.heygen.com/docs/quick-start.md",
+      "url": "https://api.heygen.com/v3/video-agents"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -7731,6 +7858,23 @@
       "video-editing"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Async: poll GET https://api.klap.app/v2/tasks/{task_id} while status == 'processing'; when done, output_id is the folder: list clips with GET /v2/projects/{folder_id}, export with POST /v2/projects/{folder_id}/{project_id}/exports and poll GET /v2/projects/{folder_id}/{project_id}/exports/{export_id} until src_url is ready",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.klap.app/v2/tasks/video-to-shorts -H \"Authorization: Bearer $KLAP_API_KEY\" -H 'Content-Type: application/json' -d '{\"source_video_url\": \"<VIDEO_URL>\"}'",
+      "method": "POST",
+      "operation": "submit a long video to be cut into short clips",
+      "response_fields": [
+        "id",
+        "type",
+        "status",
+        "created_at",
+        "output_type",
+        "output_id"
+      ],
+      "source_url": "https://docs.klap.app/endpoints/tasks",
+      "url": "https://api.klap.app/v2/tasks/video-to-shorts"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -7807,7 +7951,7 @@
     "llms_txt": "https://kling.ai/document-api/llms.txt",
     "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API with a Bearer API key.",
     "notes": "New versioned endpoints (e.g. /text-to-video/kling-2.6) take a plain API key; the older Access/Secret key pair with a client-built JWT is legacy (model_name-parameter endpoints).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "none",
       "period": "one_time",
@@ -7940,7 +8084,7 @@
     "llms_txt": null,
     "desc_en": "Generate and extend AI videos from text or start/end keyframe images via async REST API (Ray 3.2).",
     "notes": "The Luma Agents API (https://agents.lumalabs.ai/v1) supersedes the older Dream Machine API. API credits are separate from Dream Machine subscription credits; failed generations are refunded.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "none",
       "watermark": false,
@@ -8102,6 +8246,20 @@
       "text-to-image"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Poll GET https://api.minimax.io/v1/query/video_generation?task_id={task_id} until status is 'Success' (gives file_id), then GET https://api.minimax.io/v1/files/retrieve?file_id={file_id} for file.download_url; or pass callback_url to receive status pushes",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.minimax.io/v1/video_generation -H \"Authorization: Bearer $MINIMAX_API_KEY\" -H 'Content-Type: application/json' -d '{\"model\": \"MiniMax-Hailuo-2.3\", \"prompt\": \"A cat walking on a beach at sunset\"}'",
+      "method": "POST",
+      "operation": "create a text-to-video generation task",
+      "response_fields": [
+        "task_id",
+        "base_resp.status_code",
+        "base_resp.status_msg"
+      ],
+      "source_url": "https://platform.minimax.io/docs/api-reference/video-generation-t2v.md",
+      "url": "https://api.minimax.io/v1/video_generation"
+    },
     "has_free_tier": false,
     "has_trial": true,
     "no_card": false,
@@ -8200,6 +8358,20 @@
       "image-to-video"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Poll GET https://app-api.pixverse.ai/openapi/v2/video/result/{video_id} (API-KEY + a new Ai-trace-id header) until Resp.status = 1 (5 = generating, 7 = moderation failed, 8 = failed), then read Resp.url. Webhooks are also supported.",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://app-api.pixverse.ai/openapi/v2/video/text/generate\" -H \"API-KEY: $PIXVERSE_API_KEY\" -H \"Ai-trace-id: $(uuidgen)\" -H \"Content-Type: application/json\" -d '{\"aspect_ratio\": \"16:9\", \"duration\": 5, \"model\": \"v6\", \"prompt\": \"<PROMPT>\", \"quality\": \"720p\"}'",
+      "method": "POST",
+      "operation": "create a text-to-video task",
+      "response_fields": [
+        "ErrCode",
+        "ErrMsg",
+        "Resp.video_id"
+      ],
+      "source_url": "https://docs.platform.pixverse.ai/text-to-video-generation-13016634e0.md",
+      "url": "https://app-api.pixverse.ai/openapi/v2/video/text/generate"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -8273,7 +8445,7 @@
     "llms_txt": null,
     "desc_en": "Generate and edit images/video (Gen-4.5) via async task-based REST API: submit, poll, download.",
     "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Generation MCP is mcp.runwayml.com/mcp; a separate dev.runwayml.com/mcp (OAuth) only covers Developer Portal tasks, model routers and docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "none",
       "source_url": "https://docs.dev.runwayml.com/llms-small.txt",
@@ -8546,6 +8718,22 @@
       "avatar-video"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Poll GET https://api.synthesia.io/v2/videos/{id} until status is complete, then download from the time-limited `download` URL; or configure a webhook.",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.synthesia.io/v2/videos -H \"Authorization: $SYNTHESIA_API_KEY\" -H \"Content-Type: application/json\" -d '{\"test\": true, \"input\": [{\"scriptText\": \"<SCRIPT_TEXT>\", \"avatar\": \"anna_costume1_cameraA\", \"background\": \"green_screen\"}]}'",
+      "method": "POST",
+      "operation": "create an avatar video from a script",
+      "response_fields": [
+        "id",
+        "status",
+        "download",
+        "title",
+        "createdAt"
+      ],
+      "source_url": "https://docs.synthesia.io/reference/create-video.md",
+      "url": "https://api.synthesia.io/v2/videos"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -8640,7 +8828,7 @@
     "llms_txt": "https://docs.tavus.io/llms-full.txt",
     "desc_en": "Create AI video replicas and real-time conversational video agents (CVI) via REST API.",
     "notes": "llms_txt found at /llms-full.txt rather than /llms.txt exactly. The hosted MCP uses OAuth via the PAL Maker; never put a Tavus API key in the MCP client config.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "25 min conversational video + 5 min video generation",
@@ -8840,7 +9028,7 @@
     "llms_txt": "https://www.assemblyai.com/docs/llms.txt",
     "desc_en": "Transcribe recorded or streaming audio with speaker diarization, sentiment analysis and LLM-based audio insights via REST.",
     "notes": "Vendor MCP at https://assemblyai.com/docs/mcp only searches the docs. To run transcriptions, call the REST API or an SDK.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -9225,7 +9413,7 @@
     "llms_txt": "https://developers.deepgram.com/llms.txt",
     "desc_en": "Transcribe batch or streaming audio with diarization, synthesize speech, and run real-time voice agents via REST/WebSocket.",
     "notes": "Hosted MCP at https://developers.deepgram.com/_mcp/server only searches the docs; the API-calling server is local `dg mcp` (Deepgram CLI) or pip deepgram-mcp.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -9350,7 +9538,7 @@
     "llms_txt": "https://elevenlabs.io/docs/llms.txt",
     "desc_en": "Generate, clone and stream text-to-speech voices and transcribe audio via REST/WebSocket API.",
     "notes": "Official hosted MCP https://api.elevenlabs.io/v1/mcp uses OAuth; the local stdio repo elevenlabs/elevenlabs-mcp is archived since 2026-08-20.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "text-to-speech",
       "voice-cloning",
@@ -9603,7 +9791,7 @@
     "llms_txt": null,
     "desc_en": "Generate expressive text-to-speech and run real-time empathic voice conversations (EVI) via REST/WebSocket.",
     "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans. The API MCP is local `npx @humeai/mcp-server` (HUME_API_KEY); dev.hume.ai/_mcp/server only searches the docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "text-to-speech",
       "voice-agent"
@@ -9838,6 +10026,16 @@
       "checked_at": "2026-09-24"
     },
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl https://api.openai.com/v1/audio/speech -H \"Authorization: Bearer $OPENAI_API_KEY\" -H 'Content-Type: application/json' -d '{\"model\": \"gpt-4o-mini-tts\", \"input\": \"<TEXT>\", \"voice\": \"alloy\"}' --output speech.mp3",
+      "method": "POST",
+      "operation": "synthesize speech from text",
+      "response_fields": [],
+      "source_url": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
+      "url": "https://api.openai.com/v1/audio/speech"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -9899,7 +10097,7 @@
     "llms_txt": null,
     "desc_en": "Synthesize speech, clone voices, convert speech-to-speech and detect deepfake audio via REST API.",
     "notes": "Enterprise plans are available for on-prem deployment and custom model training. Vendor MCP at https://docs.resemble.ai/_mcp/server only searches the docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "text-to-speech",
       "voice-cloning"
@@ -9923,6 +10121,23 @@
       "checked_at": "2026-09-24"
     },
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://f.cluster.resemble.ai/synthesize -H \"Authorization: Bearer $RESEMBLE_API_KEY\" -H 'Content-Type: application/json' -d '{\"voice_uuid\": \"<VOICE_UUID>\", \"data\": \"Hello from Resemble!\"}'",
+      "method": "POST",
+      "operation": "synthesize speech from text (synchronous)",
+      "response_fields": [
+        "success",
+        "audio_content",
+        "audio_timestamps",
+        "duration",
+        "output_format",
+        "sample_rate"
+      ],
+      "source_url": "https://docs.resemble.ai/api-reference/text-to-speech/synthesize.md",
+      "url": "https://f.cluster.resemble.ai/synthesize"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -9971,7 +10186,7 @@
     "llms_txt": null,
     "desc_en": "Submit audio for asynchronous or streaming speech-to-text transcription, plus sentiment and topic extraction, via REST.",
     "notes": "Vendor MCP at https://docs.rev.ai/mcp only searches the docs. Human transcription is sold separately as a paid option.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "speech-to-text"
     ],
@@ -10220,6 +10435,19 @@
       "sound-effects"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Poll GET https://public-api.beatoven.ai/api/v1/tasks/{task_id} until status = composed; the track URL is meta.track_url (stems in meta.stems_url).",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://public-api.beatoven.ai/api/v1/tracks/compose\" -H \"Authorization: Bearer $BEATOVEN_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\": {\"text\": \"<PROMPT>\"}}'",
+      "method": "POST",
+      "operation": "compose a music track from a text prompt",
+      "response_fields": [
+        "status",
+        "task_id"
+      ],
+      "source_url": "https://github.com/Beatoven/public-api/blob/main/docs/api-spec.md",
+      "url": "https://public-api.beatoven.ai/api/v1/tracks/compose"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -10290,7 +10518,7 @@
     "llms_txt": null,
     "desc_en": "Generate original music tracks from text prompts or detailed composition plans via REST API, with commercial licensing.",
     "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS. Hosted OAuth MCP at api.elevenlabs.io/v1/mcp; the elevenlabs-mcp repo is archived since 2026-08-20.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "10k credits (music included, no commercial use on free plan)",
@@ -10526,6 +10754,22 @@
       "music-generation"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Generation is asynchronous: poll GET https://music-api.mubert.com/api/v3/public/tracks/{TRACK_ID} until generations[].url is set (URLs expire), or enable a webhook on the license.",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://music-api.mubert.com/api/v3/public/tracks -H \"customer-id: $MUBERT_CUSTOMER_ID\" -H \"access-token: $MUBERT_ACCESS_TOKEN\" -H \"Content-Type: application/json\" -d '{\"playlist_index\": \"1.0.0\", \"duration\": 60}'",
+      "method": "POST",
+      "operation": "generate a music track",
+      "response_fields": [
+        "data.id",
+        "data.session_id",
+        "data.generations[].status",
+        "data.generations[].url",
+        "data.generations[].expired_at"
+      ],
+      "source_url": "https://mubert.com/api/docs",
+      "url": "https://music-api.mubert.com/api/v3/public/tracks"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -10704,47 +10948,6 @@
     }
   },
   {
-    "id": "csm-common-sense-machines-api",
-    "name": "CSM (Common Sense Machines) API",
-    "category": "3d-generation",
-    "homepage": "https://www.csm.ai",
-    "docs": "https://docs.csm.ai/quick-start",
-    "auth": "api_key",
-    "auth_hint": "API key created from Cube webapp user profile, sent as bearer/header token",
-    "mcp": {
-      "type": "none",
-      "url": null,
-      "maintainer": "none",
-      "source_url": "https://github.com/CommonSenseMachines/blender-mcp",
-      "checked_at": "2026-09-24",
-      "domain_verified": null,
-      "kind": "none",
-      "config": null,
-      "issue": "source repo github.com/CommonSenseMachines/blender-mcp returns 404; entry links only a lobehub listing (403)"
-    },
-    "free_tier": "Unavailable: service appears discontinued",
-    "sdk": [],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Create 3D assets and multi-part kits from images via async REST sessions (image-to-3D, retopology).",
-    "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. The vendor's Blender MCP repo (github.com/CommonSenseMachines/blender-mcp) now returns 404; no maintained MCP server found.",
-    "verified": "2026-09-24",
-    "operations": [
-      "image-to-3d"
-    ],
-    "no_auth": false,
-    "has_free_tier": false,
-    "has_trial": false,
-    "no_card": false,
-    "stale": false,
-    "link_check": {
-      "checked_at": "2026-09-24",
-      "docs": "broken",
-      "docs_detail": "[Errno 11001] getaddrinfo failed",
-      "mcp": "ok"
-    }
-  },
-  {
     "id": "hyper3d-rodin-api",
     "name": "Hyper3D Rodin API",
     "category": "3d-generation",
@@ -10789,6 +10992,20 @@
       "image-to-3d"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Poll POST https://api.hyper3d.com/api/v2/status with {\"subscription_key\": jobs.subscription_key} until every job is Done, then POST https://api.hyper3d.com/api/v2/download with {\"task_uuid\": uuid} to get list[].url.",
+      "checked_at": "2026-09-25",
+      "example": "curl --fail-with-body -X POST \"https://api.hyper3d.com/api/v2/rodin\" -H \"Authorization: Bearer $RODIN_API_KEY\" --form 'prompt=<PROMPT>' --form 'tier=Gen-2.5-Medium'",
+      "method": "POST",
+      "operation": "submit a text-to-3D generation job",
+      "response_fields": [
+        "uuid",
+        "jobs.uuids",
+        "jobs.subscription_key"
+      ],
+      "source_url": "https://docs.hyper3d.ai/en/api-specification/rodin-gen2-5",
+      "url": "https://api.hyper3d.com/api/v2/rodin"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -10876,8 +11093,8 @@
     "openapi": "https://docs.meshy.ai/openapi.yaml",
     "llms_txt": "https://docs.meshy.ai/llms.txt",
     "desc_en": "Generate, retexture, rig, and animate 3D models from text or images via REST API or official MCP server.",
-    "notes": "Free web accounts get only a limited built-in Playground key; creating/managing your own API keys requires a paid subscription.",
-    "verified": "2026-09-24",
+    "notes": "Free web accounts get only a limited built-in Playground key; creating/managing your own API keys requires a paid subscription. Text-to-3D is on /openapi/v2/text-to-3d (other endpoints stay on /openapi/v1).",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "none",
       "source_url": "https://docs.meshy.ai/en/api/quick-start",
@@ -10914,6 +11131,18 @@
       "image-to-image"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Returns 202 with `result` (task id). Poll GET https://api.meshy.ai/openapi/v2/text-to-3d/{id} (or stream GET .../{id}/stream) until status is SUCCEEDED; then read model_urls, thumbnail_url, texture_urls.",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.meshy.ai/openapi/v2/text-to-3d -H \"Authorization: Bearer $MESHY_API_KEY\" -H \"Content-Type: application/json\" -d '{\"mode\": \"preview\", \"prompt\": \"<PROMPT>\"}'",
+      "method": "POST",
+      "operation": "create a text-to-3D task",
+      "response_fields": [
+        "result"
+      ],
+      "source_url": "https://docs.meshy.ai/openapi.yaml",
+      "url": "https://api.meshy.ai/openapi/v2/text-to-3d"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -11117,6 +11346,16 @@
       "image-to-3d"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.stability.ai/v2beta/3d/stable-fast-3d -H \"authorization: Bearer $STABILITY_API_KEY\" -F image=@./image.png -o model.glb",
+      "method": "POST",
+      "operation": "convert one image into a 3D GLB model",
+      "response_fields": [],
+      "source_url": "https://api.stability.ai/v2alpha/openapi",
+      "url": "https://api.stability.ai/v2beta/3d/stable-fast-3d"
+    },
     "has_free_tier": false,
     "has_trial": true,
     "no_card": false,
@@ -11268,7 +11507,7 @@
     "llms_txt": null,
     "desc_en": "Generate textured 3D meshes from text or images via REST API, with an official MCP server for agents.",
     "notes": "Maintained by VAST AI Research (Tripo's developer). Free-credit amounts vary by promotion. The MCP server is alpha (last commit 2025-04) and needs Blender with the Tripo addon.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "auth_scheme": {
       "type": "http",
       "scheme": "bearer",
@@ -11292,6 +11531,19 @@
       "image-to-3d"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Poll GET https://openapi.tripo3d.ai/v3/tasks/{task_id} until data.status is 'success', then download data.output.model_url (webhooks also available)",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://openapi.tripo3d.ai/v3/generation/text-to-model -H 'Content-Type: application/json' -H \"Authorization: Bearer $TRIPO_API_KEY\" -d '{\"prompt\": \"a cute cat\", \"model\": \"v3.1-20260211\"}'",
+      "method": "POST",
+      "operation": "create a text-to-3D model task",
+      "response_fields": [
+        "code",
+        "data.task_id"
+      ],
+      "source_url": "https://developers.tripo3d.ai/en/docs/generation-text-to-model/standard.md",
+      "url": "https://openapi.tripo3d.ai/v3/generation/text-to-model"
+    },
     "has_free_tier": false,
     "has_trial": true,
     "no_card": false,
@@ -11801,6 +12053,16 @@
       "cad-modeling"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"$RHINO_COMPUTE_URL/rhino/geometry/curve/getlength-curve\" -H \"RhinoComputeKey: $RHINO_COMPUTE_KEY\" -d '[<RHINO3DM_ENCODED_CURVE_JSON>]'",
+      "method": "POST",
+      "operation": "run a Rhino geometry operation (curve length)",
+      "response_fields": [],
+      "source_url": "https://github.com/mcneel/computeclient_py/blob/master/compute_rhino3d/Curve.py",
+      "url": "{compute_url}/rhino/geometry/curve/getlength-curve"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -11944,7 +12206,24 @@
     "operations": [
       "bim-data"
     ],
+    "base_url": "https://app.connect.trimble.com/tc/api/2.0",
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl https://app.connect.trimble.com/tc/api/2.0/projects -H \"Authorization: Bearer $TRIMBLE_ACCESS_TOKEN\"",
+      "method": "GET",
+      "operation": "list projects",
+      "response_fields": [
+        "[].id",
+        "[].name",
+        "[].rootId",
+        "[].location",
+        "[].modifiedOn"
+      ],
+      "source_url": "https://developer.trimble.com/docs/connect/reference/openapi/core",
+      "url": "https://app.connect.trimble.com/tc/api/2.0/projects"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -11995,9 +12274,9 @@
     ],
     "openapi": "https://api.zoo.dev",
     "llms_txt": null,
-    "desc_en": "Generate 3D CAD models from text prompts and run modeling/file-conversion operations via REST API.",
-    "notes": "ML endpoints handle text-to-CAD generation; base API URL is api.zoo.dev, OpenAPI schema served from there.",
-    "verified": "2026-09-24",
+    "desc_en": "Convert CAD files and run modeling operations via REST API; text-to-CAD generation runs through the WebSocket copilot and the MCP server.",
+    "notes": "The current OpenAPI spec at api.zoo.dev has no REST endpoint that creates a text-to-CAD model (only list/get of past results); generation runs over WebSocket copilot endpoints or the MCP server.",
+    "verified": "2026-09-25",
     "free_plan": {
       "quota": "Start free, then pay-as-you-go; some plans include monthly API usage",
       "source_url": "https://zoo.dev/api-pricing",
@@ -12016,6 +12295,23 @@
       "cad-modeling"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Files over 25 MB are converted asynchronously: take the returned id and poll GET https://api.zoo.dev/async/operations/{id}; smaller files return the result base64-encoded in outputs",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.zoo.dev/file/conversion/<SRC_FORMAT>/<OUTPUT_FORMAT> -H \"Authorization: Bearer $ZOO_API_TOKEN\" -H 'Content-Type: application/octet-stream' --data-binary @./model.step",
+      "method": "POST",
+      "operation": "convert a CAD file to another format",
+      "response_fields": [
+        "id",
+        "status",
+        "outputs",
+        "output_format",
+        "src_format",
+        "error"
+      ],
+      "source_url": "https://api.zoo.dev",
+      "url": "https://api.zoo.dev/file/conversion/{src_format}/{output_format}"
+    },
     "has_free_tier": false,
     "has_trial": true,
     "no_card": false,
@@ -12088,6 +12384,22 @@
       "diagram-rendering"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://app.eraser.io/api/render/prompt -H \"Authorization: Bearer $ERASER_API_TOKEN\" -H 'Content-Type: application/json' -d '{\"text\": \"3-tier web application architecture using Azure.\"}'",
+      "method": "POST",
+      "operation": "generate a diagram from a text prompt",
+      "response_fields": [
+        "requestId",
+        "imageUrl",
+        "createEraserFileUrl",
+        "diagrams[].diagramType",
+        "diagrams[].code"
+      ],
+      "source_url": "https://docs.eraser.io/reference/generate-diagram-from-prompt",
+      "url": "https://app.eraser.io/api/render/prompt"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -12372,6 +12684,21 @@
       "diagram-rendering"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://api.lucid.co/v1/documents\" -H \"Authorization: Bearer $LUCID_API_KEY\" -H \"Content-Type: application/json\" -d '{\"title\": \"<TITLE>\", \"product\": \"lucidchart\"}'",
+      "method": "POST",
+      "operation": "create a Lucidchart document",
+      "response_fields": [
+        "documentId",
+        "title",
+        "editUrl",
+        "viewUrl"
+      ],
+      "source_url": "https://lucid.readme.io/reference/createdocument.md",
+      "url": "https://api.lucid.co/v1/documents"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -12817,99 +13144,6 @@
     }
   },
   {
-    "id": "structurizr",
-    "name": "Structurizr",
-    "category": "diagrams-software-architecture",
-    "homepage": "https://structurizr.com",
-    "docs": "https://docs.structurizr.com/cloud/workspace-api",
-    "auth": "api_key",
-    "auth_hint": "X-Authorization header: apiKey:base64(HMAC-SHA256(apiSecret, digest)) plus Nonce header",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.structurizr.com/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.structurizr.com/mcp",
-      "tools": [
-        "inspect",
-        "parse",
-        "validate",
-        "export-mermaid",
-        "export-c4plantuml",
-        "export-plantuml"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://docs.structurizr.com/ai/mcp",
-      "checked_at": "2026-09-24",
-      "domain_verified": true,
-      "kind": "vendor-hosted",
-      "config": {
-        "transport": "streamable-http",
-        "url": "https://mcp.structurizr.com/mcp",
-        "derived": true
-      }
-    },
-    "free_tier": "free tier: workspaces up to 0.5MB; paid plans raise the limit to 5MB",
-    "sdk": [
-      "java"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Create and update C4-model software architecture diagram workspaces as JSON via a signed HTTPS API.",
-    "notes": "Cloud service is end-of-life (migrate to playground, local or self-hosted server per docs.structurizr.com/cloud). Uses a nonstandard HMAC signing scheme rather than a bearer token; docs recommend the Structurizr CLI or client libraries over the raw API.",
-    "verified": "2026-09-24",
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "X-Authorization",
-      "format": "X-Authorization: <apiKey>:<base64(HMAC-SHA256(apiSecret, digest))> + Nonce + Content-MD5 headers",
-      "source_url": "https://docs.structurizr.com/cloud/workspace-api",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.structurizr.com",
-    "rate_limits": {
-      "summary": "Rate limiting enforced on all workspace API calls (GET and PUT); no number published",
-      "source_url": "https://docs.structurizr.com/cloud/workspace-api",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "diagram-rendering"
-    ],
-    "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
-    "no_card": false,
-    "stale": false,
-    "link_check": {
-      "checked_at": "2026-09-24",
-      "docs": "ok"
-    },
-    "uptime": {
-      "window_days": 30,
-      "api": {
-        "url": "https://api.structurizr.com",
-        "probes": 2,
-        "up": 2,
-        "median_ms": 1220,
-        "last": {
-          "at": "2026-09-25T09:46Z",
-          "up": true,
-          "detail": 200
-        }
-      },
-      "mcp_remote": {
-        "url": "https://mcp.structurizr.com/mcp",
-        "probes": 2,
-        "up": 2,
-        "median_ms": 786,
-        "last": {
-          "at": "2026-09-25T09:46Z",
-          "up": true,
-          "detail": 200
-        }
-      }
-    }
-  },
-  {
     "id": "canva-connect-api",
     "name": "Canva Connect API",
     "category": "design-ui",
@@ -12990,6 +13224,22 @@
       "design-file-access"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.canva.com/rest/v1/designs -H \"Authorization: Bearer $CANVA_ACCESS_TOKEN\" -H 'Content-Type: application/json' -d '{\"type\": \"type_and_asset\", \"design_type\": {\"type\": \"preset\", \"name\": \"presentation\"}, \"title\": \"My Holiday Presentation\"}'",
+      "method": "POST",
+      "operation": "create a new design",
+      "response_fields": [
+        "design.id",
+        "design.title",
+        "design.urls.edit_url",
+        "design.urls.view_url",
+        "design.thumbnail"
+      ],
+      "source_url": "https://www.canva.dev/sources/connect/api/latest/api.yml",
+      "url": "https://api.canva.com/rest/v1/designs"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -13272,7 +13522,7 @@
     "llms_txt": null,
     "desc_en": "Read, create, and modify Penpot design files, comments, and webhooks via a token-authenticated RPC/REST API, or via the official MCP server.",
     "notes": "API is RPC-style; methods are listed at https://design.penpot.app/api/main/methods/<name>, no OpenAPI file; open source, self-hostable. Remote MCP takes ?userToken=<MCP key> and needs the MCP plugin open in a Penpot browser tab; local: npx @penpot/mcp@stable.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -13555,6 +13805,24 @@
       "static-site-hosting"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.webflow.com/v2/collections/<COLLECTION_ID>/items -H \"Authorization: Bearer $WEBFLOW_API_TOKEN\" -H \"Content-Type: application/json\" -d '{\"fieldData\": {\"name\": \"<NAME>\", \"slug\": \"<SLUG>\"}}'",
+      "method": "POST",
+      "operation": "create a CMS collection item",
+      "response_fields": [
+        "id",
+        "fieldData",
+        "isDraft",
+        "isArchived",
+        "createdOn",
+        "lastUpdated",
+        "lastPublished"
+      ],
+      "source_url": "https://developers.webflow.com/data/reference/cms/collection-items/staged-items/create-item.md",
+      "url": "https://api.webflow.com/v2/collections/{collection_id}/items"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -13742,7 +14010,7 @@
     "llms_txt": null,
     "desc_en": "Detect and extract text, forms, tables, and data from scanned documents and images via API calls.",
     "notes": "Requires an AWS account and IAM credentials; region-specific; free tier applies only for the first 3 months after the first Textract request. No dedicated Textract MCP; the official AWS MCP Server can call Textract via aws___run_script.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "quota": "per month for 3 months: DetectDocumentText 1,000 pages; AnalyzeDocument forms/tables/layout 100 pages; AnalyzeExpense/AnalyzeID 100 pages; AnalyzeLending 2,000 pages",
@@ -14115,7 +14383,7 @@
     "llms_txt": null,
     "desc_en": "Send, sign, track, and manage electronic signature envelopes and agreement workflows via REST API.",
     "notes": "Official Docusign MCP Server (Open Beta, OAuth) covers eSignature plus Navigator/Maestro/Workspaces: production https://mcp.docusign.com/mcp, developer accounts https://mcp-d.docusign.com/mcp. JWT grant needs one-time user consent.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "non-expiring developer (demo) account; envelopes not legally valid; production from $50/mo Starter (40 envelopes/mo)",
@@ -14284,6 +14552,19 @@
       "document-generation"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Async: poll GET https://public-api.gamma.app/v1.0/generations/{generationId} until status is 'completed' or 'failed'; the result has gammaUrl and (with exportAs) exportUrl",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://public-api.gamma.app/v1.0/generations -H \"X-API-KEY: $GAMMA_API_KEY\" -H 'Content-Type: application/json' -d '{\"inputText\": \"<TOPIC_OR_OUTLINE>\"}'",
+      "method": "POST",
+      "operation": "generate a presentation or document from text",
+      "response_fields": [
+        "generationId",
+        "warnings"
+      ],
+      "source_url": "https://developers.gamma.app/generations/create-generation.md",
+      "url": "https://public-api.gamma.app/v1.0/generations"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -15291,7 +15572,7 @@
     "llms_txt": "https://docs.unstructured.io/llms.txt",
     "desc_en": "Partition and extract structured elements (text, tables, layout) from PDFs, docs, and images for RAG pipelines via API.",
     "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Workflow API. Hosted Transform MCP parses documents; the UNS-MCP repo only manages connectors/workflows and is no longer maintained. Current parse endpoint: POST https://transform.unstructured.io/api/v2/parse with header unstructured-api-key",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -15430,7 +15711,7 @@
     "llms_txt": null,
     "desc_en": "Translate text and documents in real time or batch across 75+ languages via the AWS SDK/API.",
     "notes": "Requires an AWS account and IAM credentials. The generic AWS API MCP Server (awslabs) can call Translate via AWS CLI commands.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "translation"
     ],
@@ -16191,6 +16472,20 @@
       "code-execution"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://api.codesandbox.io/sandbox/<TEMPLATE_ID>/fork\" -H \"Authorization: Bearer $CSB_API_KEY\" -H \"Content-Type: application/json\" -d '{}'",
+      "method": "POST",
+      "operation": "create a sandbox by forking a template",
+      "response_fields": [
+        "data.id",
+        "data.alias",
+        "data.start_response"
+      ],
+      "source_url": "https://api.codesandbox.io/meta/openapi",
+      "url": "https://api.codesandbox.io/sandbox/{id}/fork"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -16485,6 +16780,18 @@
       "code-execution"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Returns a submission token; poll GET https://ce.judge0.com/submissions/{token} for stdout, stderr, status (language IDs from GET /languages; wait=true is not enabled on the official instance).",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://ce.judge0.com/submissions?base64_encoded=false&wait=false\" -H \"X-Auth-Token: $JUDGE0_AUTH_TOKEN\" -H \"Content-Type: application/json\" -d '{\"source_code\": \"<SOURCE_CODE>\", \"language_id\": 4, \"stdin\": \"world\"}'",
+      "method": "POST",
+      "operation": "create a code submission",
+      "response_fields": [
+        "token"
+      ],
+      "source_url": "https://ce.judge0.com/",
+      "url": "https://ce.judge0.com/submissions"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -16638,9 +16945,9 @@
     "sdk": [],
     "openapi": null,
     "llms_txt": null,
-    "desc_en": "Call a free public REST API to compile and run code in 70+ languages inside isolated containers.",
+    "desc_en": "Compile and run code in 70+ languages inside isolated containers via a self-hostable REST API (the public instance needs a granted token).",
     "notes": "Public emkc.org instance closed to open use on 2026-02-15; self-host via Docker for agent workloads. Widely used by Discord/Slack bots.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "base_url": "https://emkc.org/api/v2/piston",
     "operations": [
       "code-execution"
@@ -17095,7 +17402,7 @@
     "llms_txt": "https://circleci.com/docs/llms.txt",
     "desc_en": "An agent can trigger pipelines, rerun workflows, fetch logs/test results, and validate CI/CD configuration via REST.",
     "notes": "Use the v3 API for new work (v2 still supported). CircleCI's hosted MCP is at https://mcp.circleci.com/v1/mcp (OAuth2 sign-in, 24 tools); the mcp-server-circleci npm package is deprecated.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -18059,7 +18366,7 @@
     "llms_txt": null,
     "desc_en": "An agent can create/manage incidents, on-call schedules, escalation policies, and services via REST.",
     "notes": "The self-hosted pagerduty-mcp-server repo is deprecated and archived; use the hosted MCP https://mcp.pagerduty.com/mcp (EU: https://mcp.eu.pagerduty.com/mcp) with an API token or OAuth.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "Free plan: up to 5 users, 100 SMS/phone notifications, 1 on-call schedule, 1 escalation policy",
@@ -18198,7 +18505,7 @@
     "llms_txt": "https://learning.postman.com/llms.txt",
     "desc_en": "An agent can manage Postman collections, workspaces, environments, mocks, monitors, and API specs via REST.",
     "notes": "Reference docs are at learning.postman.com. Remote MCP modes: /minimal (default), /code, /mcp (full, 100+ tools); US host supports OAuth, EU host mcp.eu.postman.com needs an API key. Docs-search MCP at learning.postman.com/_mcp/server. API host https://api.postman.com (EU: api.eu.postman.com); api.getpostman.com is legacy",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "10,000 Postman API calls, 1 user",
@@ -20743,6 +21050,24 @@
       "sql-database"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl https://api.planetscale.com/v1/organizations/<ORGANIZATION>/databases -H \"Authorization: $PLANETSCALE_SERVICE_TOKEN_ID:$PLANETSCALE_SERVICE_TOKEN\"",
+      "method": "GET",
+      "operation": "list databases in an organization",
+      "response_fields": [
+        "current_page",
+        "next_page",
+        "data[].id",
+        "data[].name",
+        "data[].state",
+        "data[].region",
+        "data[].html_url"
+      ],
+      "source_url": "https://planetscale.com/docs/api/reference/list_databases.md",
+      "url": "https://api.planetscale.com/v1/organizations/{organization}/databases"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -23898,6 +24223,18 @@
     "async_jobs": null,
     "data_policy": null,
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://sms-voice.<REGION>.amazonaws.com/ --aws-sigv4 \"aws:amz:<REGION>:sms-voice\" --user \"$AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY\" -H 'X-Amz-Target: PinpointSMSVoiceV2.SendTextMessage' -H 'Content-Type: application/x-amz-json-1.0' -d '{\"DestinationPhoneNumber\": \"<E164_PHONE_NUMBER>\", \"MessageBody\": \"<TEXT>\"}'",
+      "method": "POST",
+      "operation": "send an SMS text message",
+      "response_fields": [
+        "MessageId"
+      ],
+      "source_url": "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_SendTextMessage.html",
+      "url": "https://sms-voice.{region}.amazonaws.com/"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -24015,6 +24352,24 @@
     },
     "data_policy": null,
     "no_auth": false,
+    "call": {
+      "async": "Returns 202 Accepted; track delivery via GET https://{region}.platform.bird.com/v1/sms/messages/{message_id} (or /events) or webhooks",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://us1.platform.bird.com/v1/sms/messages -H \"Authorization: Bearer $BIRD_API_KEY\" -H 'Content-Type: application/json' -d '{\"to\": \"+14155550100\", \"text\": \"Your order shipped\"}'",
+      "method": "POST",
+      "operation": "send an SMS message",
+      "response_fields": [
+        "id",
+        "status",
+        "direction",
+        "to",
+        "from",
+        "segments",
+        "created_at"
+      ],
+      "source_url": "https://bird.com/openapi.json",
+      "url": "https://{region}.platform.bird.com/v1/sms/messages"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -24419,7 +24774,7 @@
     "llms_txt": null,
     "desc_en": "Send/receive messages, media, and inline interactions via a simple HTTPS bot API.",
     "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits. Listed MCP server uses a user account via Telethon/MTProto (API_ID/API_HASH + session string from my.telegram.org), not the bot token.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -24648,7 +25003,7 @@
     "llms_txt": null,
     "desc_en": "Send/receive SMS, WhatsApp messages, and voice calls programmatically via REST API.",
     "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Hosted MCP is read-only docs/API-spec search; the executing server is Twilio Labs' npm @twilio-alpha/mcp (alpha).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -25577,6 +25932,21 @@
       "checked_at": "2026-09-24"
     },
     "no_auth": false,
+    "call": {
+      "async": "The call runs asynchronously: GET https://api.synthflow.ai/v2/calls/{call_id} for the call record, or receive the post-call webhook.",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.synthflow.ai/v2/calls -H \"Authorization: Bearer $SYNTHFLOW_API_KEY\" -H \"Content-Type: application/json\" -d '{\"model_id\": \"<AGENT_ID>\", \"phone\": \"<PHONE_E164>\", \"name\": \"<RECIPIENT_NAME>\"}'",
+      "method": "POST",
+      "operation": "make an outbound AI phone call",
+      "response_fields": [
+        "status",
+        "response.call_id",
+        "response.answer",
+        "eta"
+      ],
+      "source_url": "https://docs.synthflow.ai/api-reference/platform-api/calls/voice-call.md",
+      "url": "https://api.synthflow.ai/v2/calls"
+    },
     "has_free_tier": false,
     "has_trial": true,
     "no_card": false,
@@ -25667,7 +26037,7 @@
     "llms_txt": null,
     "desc_en": "Programmatically make, receive, and control phone calls (IVR, recording, conferencing) via REST API.",
     "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage. Twilio's own MCP (npm @twilio-alpha/mcp) is alpha.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "phone-calls"
     ],
@@ -26512,6 +26882,23 @@
       "calendar"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.cal.com/v2/bookings -H 'Content-Type: application/json' -H 'cal-api-version: 2024-08-13' -d '{\"eventTypeSlug\": \"<EVENT_SLUG>\", \"username\": \"<USERNAME>\", \"start\": \"<ISO8601_UTC_START>\", \"attendee\": {\"name\": \"<NAME>\", \"email\": \"<EMAIL>\", \"timeZone\": \"<IANA_TIMEZONE>\"}}'",
+      "method": "POST",
+      "operation": "create a booking",
+      "response_fields": [
+        "status",
+        "data.id",
+        "data.uid",
+        "data.status",
+        "data.start",
+        "data.end"
+      ],
+      "source_url": "https://cal.com/docs/agents",
+      "url": "https://api.cal.com/v2/bookings"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -26584,7 +26971,7 @@
     "llms_txt": null,
     "desc_en": "Programmatically book meetings and read/write scheduling, event, and contact data via REST API v2.",
     "notes": "",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "source_url": "https://developer.calendly.com/frequently-asked-questions",
@@ -26825,7 +27212,7 @@
     "llms_txt": null,
     "desc_en": "Read and write Coda (now 'Superhuman Docs') documents, tables, and rows via REST API or an MCP server.",
     "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL coda.io/apis/v1 still works, and the OpenAPI spec now names https://docs.superhuman.com/apis/v1. The official MCP server uses OAuth via id.superhuman.com (scope mcp:all).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "source_url": "https://docs.superhuman.com/developers/apis/v1",
@@ -26967,6 +27354,24 @@
       "file-storage"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://content.dropboxapi.com/2/files/upload --header \"Authorization: Bearer $DROPBOX_ACCESS_TOKEN\" --header 'Content-Type: application/octet-stream' --header 'Dropbox-API-Arg: {\"path\": \"/Homework/math/Matrices.txt\"}' --data-binary @'Matrices.txt'",
+      "method": "POST",
+      "operation": "upload a file",
+      "response_fields": [
+        "name",
+        "id",
+        "path_display",
+        "rev",
+        "size",
+        "server_modified",
+        "content_hash"
+      ],
+      "source_url": "https://github.com/dropbox/dropbox-api-spec/blob/master/files.stone",
+      "url": "https://content.dropboxapi.com/2/files/upload"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -27333,6 +27738,22 @@
       "file-storage"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl \"https://graph.microsoft.com/v1.0/me/messages\" -H \"Authorization: Bearer $GRAPH_ACCESS_TOKEN\"",
+      "method": "GET",
+      "operation": "list messages in the signed-in user's mailbox",
+      "response_fields": [
+        "value",
+        "value[].id",
+        "value[].subject",
+        "value[].sender",
+        "@odata.nextLink"
+      ],
+      "source_url": "https://learn.microsoft.com/en-us/graph/api/user-list-messages?view=graph-rest-1.0",
+      "url": "https://graph.microsoft.com/v1.0/me/messages"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -27815,6 +28236,24 @@
       "task-management"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.todoist.com/api/v1/tasks -H \"Authorization: Bearer $TODOIST_API_TOKEN\" -H \"Content-Type: application/json\" -d '{\"content\": \"<TASK_CONTENT>\"}'",
+      "method": "POST",
+      "operation": "create a task",
+      "response_fields": [
+        "id",
+        "content",
+        "project_id",
+        "due",
+        "priority",
+        "checked",
+        "added_at"
+      ],
+      "source_url": "https://developer.todoist.com/api/v1/#tag/Tasks/operation/create_task_api_v1_tasks_post",
+      "url": "https://api.todoist.com/api/v1/tasks"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -27918,6 +28357,23 @@
       "task-management"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://api.trello.com/1/cards?idList=<LIST_ID>&key=$TRELLO_API_KEY&token=$TRELLO_API_TOKEN\" -H 'Accept: application/json'",
+      "method": "POST",
+      "operation": "create a card in a list",
+      "response_fields": [
+        "id",
+        "name",
+        "idList",
+        "idBoard",
+        "url",
+        "shortUrl"
+      ],
+      "source_url": "https://developer.atlassian.com/cloud/trello/swagger.v3.json",
+      "url": "https://api.trello.com/1/cards"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -28707,7 +29163,7 @@
     "llms_txt": null,
     "desc_en": "Create and update deals, contacts (persons/organizations), and activities in a Pipedrive CRM pipeline via REST API.",
     "notes": "Official hosted MCP at mcp.pipedrive.ai/mcp uses Pipedrive account sign-in (OAuth). Offers a free Sandbox account for development/testing separate from production pricing. Core endpoints (e.g. POST /deals) are v2 only: https://api.pipedrive.com/api/v2/deals; v1 remains for the rest",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "quota": "Developer Sandbox account (5 seats) for building apps; deleted if inactive (no app in 45 days)",
@@ -28879,6 +29335,20 @@
       "crm"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST $SALESFORCE_INSTANCE_URL/services/data/v68.0/sobjects/Account/ -H \"Authorization: Bearer $SALESFORCE_ACCESS_TOKEN\" -H 'Content-Type: application/json' -d '{\"Name\": \"Express Logistics and Transport\"}'",
+      "method": "POST",
+      "operation": "create a record (e.g. Account)",
+      "response_fields": [
+        "id",
+        "errors",
+        "success"
+      ],
+      "source_url": "https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/api_rest.pdf",
+      "url": "{instance_url}/services/data/v68.0/sobjects/Account/"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -28974,7 +29444,7 @@
     "llms_txt": null,
     "desc_en": "Create, update, and search support tickets, users, and Help Center articles via Zendesk's REST API.",
     "notes": "No official Zendesk-maintained MCP server found as of research date; several community MCP servers exist. API tokens can impersonate any account user, including admins.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "quota": "14-day trial of Customer Service Suite Professional",
@@ -29092,7 +29562,7 @@
     "llms_txt": null,
     "desc_en": "Unified API to post, schedule, and analyze content across 14+ social networks (X, Instagram, LinkedIn, TikTok, etc.) with one API key.",
     "notes": "Ayrshare itself holds the underlying per-platform app approvals, so agents avoid individually applying for X/Meta/TikTok developer access. Hosted MCP action server at https://api.ayrshare.com/mcp (Streamable HTTP, 27 tools).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -29319,6 +29789,16 @@
       "social-posting"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://api.linkedin.com/v2/ugcPosts\" -H \"Authorization: Bearer $LINKEDIN_ACCESS_TOKEN\" -H \"X-Restli-Protocol-Version: 2.0.0\" -H \"Content-Type: application/json\" -d '{\"author\": \"urn:li:person:<PERSON_ID>\", \"lifecycleState\": \"PUBLISHED\", \"specificContent\": {\"com.linkedin.ugc.ShareContent\": {\"shareCommentary\": {\"text\": \"<TEXT>\"}, \"shareMediaCategory\": \"NONE\"}}, \"visibility\": {\"com.linkedin.ugc.MemberNetworkVisibility\": \"PUBLIC\"}}'",
+      "method": "POST",
+      "operation": "create a text share (post) as the member",
+      "response_fields": [],
+      "source_url": "https://learn.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/share-on-linkedin",
+      "url": "https://api.linkedin.com/v2/ugcPosts"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -29391,6 +29871,20 @@
       "social-data"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://mastodon.example/api/v1/statuses -H \"Authorization: Bearer $MASTODON_ACCESS_TOKEN\" --data-urlencode 'status=<TEXT>'",
+      "method": "POST",
+      "operation": "post a new status",
+      "response_fields": [
+        "id",
+        "created_at",
+        "content"
+      ],
+      "source_url": "https://docs.joinmastodon.org/methods/statuses/#create",
+      "url": "{instance}/api/v1/statuses"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -29462,6 +29956,18 @@
       "social-data"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://graph.facebook.com/v25.0/<PAGE_ID>/feed?access_token=$META_PAGE_ACCESS_TOKEN\" -H 'Content-Type: application/json' -d '{\"message\": \"<TEXT>\"}'",
+      "method": "POST",
+      "operation": "publish a post to a Facebook Page",
+      "response_fields": [
+        "id"
+      ],
+      "source_url": "https://developers.facebook.com/documentation/pages-api/getting-started.md",
+      "url": "https://graph.facebook.com/v25.0/{page_id}/feed"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -29534,6 +30040,23 @@
       "social-data"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.pinterest.com/v5/pins -H \"Authorization: Bearer $PINTEREST_ACCESS_TOKEN\" -H 'Content-Type: application/json' -d '{\"board_id\": \"<BOARD_ID>\", \"media_source\": {\"source_type\": \"image_url\", \"url\": \"<IMAGE_URL>\"}}'",
+      "method": "POST",
+      "operation": "create a pin on a board",
+      "response_fields": [
+        "id",
+        "board_id",
+        "created_at",
+        "link",
+        "title",
+        "media"
+      ],
+      "source_url": "https://raw.githubusercontent.com/pinterest/api-description/main/v5/openapi.json",
+      "url": "https://api.pinterest.com/v5/pins"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -29614,6 +30137,16 @@
       "social-data"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://oauth.reddit.com/api/submit\" -H \"Authorization: bearer $REDDIT_ACCESS_TOKEN\" -A '<APP_NAME>/0.1 by <REDDIT_USERNAME>' -d 'sr=<SUBREDDIT>&kind=self&title=<TITLE>&text=<TEXT>'",
+      "method": "POST",
+      "operation": "submit a self (text) post to a subreddit",
+      "response_fields": [],
+      "source_url": "https://github.com/reddit-archive/reddit/blob/master/r2/r2/controllers/api.py",
+      "url": "https://oauth.reddit.com/api/submit"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -29698,6 +30231,21 @@
       "social-data"
     ],
     "no_auth": false,
+    "call": {
+      "async": "Poll POST https://open.tiktokapis.com/v2/post/publish/status/fetch/ with {\"publish_id\": \"...\"}. privacy_level must be one of the options returned by the creator_info/query API.",
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://open.tiktokapis.com/v2/post/publish/video/init/ -H \"Authorization: Bearer $TIKTOK_ACCESS_TOKEN\" -H \"Content-Type: application/json; charset=UTF-8\" -d '{\"post_info\": {\"privacy_level\": \"SELF_ONLY\"}, \"source_info\": {\"source\": \"PULL_FROM_URL\", \"video_url\": \"<PUBLIC_VIDEO_URL>\"}}'",
+      "method": "POST",
+      "operation": "initialize a direct video post",
+      "response_fields": [
+        "data.publish_id",
+        "data.upload_url",
+        "error.code",
+        "error.message"
+      ],
+      "source_url": "https://developers.tiktok.com/doc/content-posting-api-reference-direct-post",
+      "url": "https://open.tiktokapis.com/v2/post/publish/video/init/"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -29784,6 +30332,19 @@
       "social-data"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.x.com/2/tweets -H \"Authorization: Bearer $X_USER_ACCESS_TOKEN\" -H 'Content-Type: application/json' -d '{\"text\": \"<TEXT>\"}'",
+      "method": "POST",
+      "operation": "create a post",
+      "response_fields": [
+        "data.id",
+        "data.text"
+      ],
+      "source_url": "https://docs.x.com/x-api/posts/manage-tweets/quickstart.md",
+      "url": "https://api.x.com/2/tweets"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -30347,6 +30908,24 @@
       "map-tiles"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl \"https://geocode.search.hereapi.com/v1/geocode?q=240+Washington+St.%2C+Boston&apiKey=$HERE_API_KEY\"",
+      "method": "GET",
+      "operation": "geocode a free-form address",
+      "response_fields": [
+        "items[].title",
+        "items[].id",
+        "items[].resultType",
+        "items[].address",
+        "items[].position.lat",
+        "items[].position.lng",
+        "items[].scoring"
+      ],
+      "source_url": "https://docs.here.com/geocoding-and-search/docs/code-geocode-address",
+      "url": "https://geocode.search.hereapi.com/v1/geocode?q={query}&apiKey={API_KEY}"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -31877,6 +32456,22 @@
       "payments"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://checkout-test.adyen.com/v71/payments\" -H \"X-API-Key: $ADYEN_API_KEY\" -H \"Content-Type: application/json\" -d '{\"amount\": {\"currency\": \"USD\", \"value\": 1000}, \"reference\": \"<ORDER_REFERENCE>\", \"paymentMethod\": {\"type\": \"scheme\", \"encryptedCardNumber\": \"test_4111111111111111\", \"encryptedExpiryMonth\": \"test_03\", \"encryptedExpiryYear\": \"test_2030\", \"encryptedSecurityCode\": \"test_737\"}, \"returnUrl\": \"<RETURN_URL>\", \"merchantAccount\": \"<MERCHANT_ACCOUNT>\"}'",
+      "method": "POST",
+      "operation": "make a card payment",
+      "response_fields": [
+        "pspReference",
+        "resultCode",
+        "action",
+        "refusalReason",
+        "merchantReference"
+      ],
+      "source_url": "https://github.com/Adyen/adyen-openapi/blob/main/json/CheckoutService-v71.json",
+      "url": "https://checkout-test.adyen.com/v71/payments"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -32190,7 +32785,7 @@
     "llms_txt": null,
     "desc_en": "Create wallets, send crypto, and pay per-API-call with stablecoins over HTTP (x402) via the Coinbase Developer Platform SDK.",
     "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API. Official local Payments MCP (npx @coinbase/payments-mcp) signs in with an email-based browser wallet, not the CDP API key.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "1,000 onchain transactions via CDP x402 Facilitator, then $0.001/tx",
@@ -32701,6 +33296,16 @@
       "stock-market-data"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl \"https://financialmodelingprep.com/stable/quote?symbol=AAPL\" -H \"apikey: $FMP_API_KEY\"",
+      "method": "GET",
+      "operation": "get a real-time stock quote",
+      "response_fields": [],
+      "source_url": "https://site.financialmodelingprep.com/developer/docs",
+      "url": "https://financialmodelingprep.com/stable/quote?symbol={symbol}"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -33011,7 +33616,7 @@
     "llms_txt": null,
     "desc_en": "Process payments, payouts, invoices, and subscriptions via REST API or PayPal's official MCP server.",
     "notes": "Remote MCP: https://mcp.paypal.com/mcp (Streamable HTTP, OAuth login) or /sse; docs still list /http, which returns 404. Sandbox MCP at https://mcp.sandbox.paypal.com for testing.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "Sandbox test environment with virtual accounts; live usage billed per transaction",
@@ -33156,7 +33761,7 @@
     "llms_txt": null,
     "desc_en": "Link bank accounts and fetch balances, transactions, and identity data via REST API/SDKs.",
     "notes": "Dashboard MCP (OAuth client_credentials, scope mcp:dashboard) needs Production access; a local Sandbox MCP is in plaid/ai-coding-toolkit. Production requires a Plaid approval/compliance review.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "quota": "Free Sandbox; Trial plan (new US/Canada teams since 2026-04-15): 10 Production Items, unlimited calls on them",
@@ -33718,7 +34323,7 @@
     "llms_txt": null,
     "desc_en": "Send international transfers, check exchange rates, and manage multi-currency balances via REST API.",
     "notes": "Personal tokens cover only quotes, recipients, transfers, batch groups and transfer events; funding and balance statements only for US/CA/AU/NZ/SG/MY accounts. Full access needs a partnership agreement. Docs use versioned paths, e.g. https://api.wise.com/2026Q3/profiles/{profileId}/quotes",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "Personal API token created from a Wise business account; limited endpoints",
@@ -33813,7 +34418,7 @@
     "llms_txt": null,
     "desc_en": "Manage listings, orders, inventory, and reports for an Amazon seller/vendor account via REST API.",
     "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review. Official MCP uses Seller Central OAuth consent. Orders v0 getOrders is deprecated; use searchOrders (v2026-01-01). Planned SP-API fees were cancelled",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -33947,7 +34552,7 @@
     "llms_txt": null,
     "desc_en": "Manage catalog, orders, customers, and carts on a BigCommerce store via REST/GraphQL APIs.",
     "notes": "Official Storefront MCP (early access; per-storefront URL, POST /api/mcp) searches the catalog, edits carts and creates checkout links. Vendor MCP at https://docs.bigcommerce.com/_mcp/server only searches the docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "auth_scheme": {
       "type": "apiKey",
       "in": "header",
@@ -33978,6 +34583,19 @@
       "product-search"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl https://api.bigcommerce.com/stores/<STORE_HASH>/v3/catalog/products -H \"X-Auth-Token: $BIGCOMMERCE_ACCESS_TOKEN\" -H 'Accept: application/json'",
+      "method": "GET",
+      "operation": "list catalog products",
+      "response_fields": [
+        "data",
+        "meta.pagination"
+      ],
+      "source_url": "https://docs.bigcommerce.com/developer/api-reference/rest/admin/catalog/products/get-products.md",
+      "url": "https://api.bigcommerce.com/stores/{store_hash}/v3/catalog/products"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -34115,7 +34733,7 @@
       "source_url": "https://developer.etsy.com/documentation/essentials/authentication",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.etsy.com/v3",
+    "base_url": "https://openapi.etsy.com/v3",
     "rate_limits": {
       "summary": "Per API key; current QPS/QPD limits shown in the Developer Portal and response headers (no fixed default published)",
       "source_url": "https://developer.etsy.com/documentation/essentials/rate-limits",
@@ -34137,6 +34755,21 @@
       "checked_at": "2026-09-24"
     },
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://openapi.etsy.com/v3/application/shops/<SHOP_ID>/listings\" -H \"x-api-key: $ETSY_KEYSTRING:$ETSY_SHARED_SECRET\" -H \"Authorization: Bearer $ETSY_ACCESS_TOKEN\" -d 'quantity=1&title=<TITLE>&description=<DESCRIPTION>&price=<PRICE>&who_made=i_did&when_made=made_to_order&taxonomy_id=<TAXONOMY_ID>'",
+      "method": "POST",
+      "operation": "create a draft listing in a shop",
+      "response_fields": [
+        "listing_id",
+        "state",
+        "title",
+        "url"
+      ],
+      "source_url": "https://www.etsy.com/openapi/generated/oas/3.0.0.json",
+      "url": "https://openapi.etsy.com/v3/application/shops/{shop_id}/listings"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -34211,6 +34844,20 @@
     },
     "base_url": "https://api.mercadolibre.com",
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl https://api.mercadolibre.com/users/<USER_ID>/items/search -H \"Authorization: Bearer $MELI_ACCESS_TOKEN\"",
+      "method": "GET",
+      "operation": "list a seller's item IDs",
+      "response_fields": [
+        "seller_id",
+        "paging",
+        "results"
+      ],
+      "source_url": "https://developers.mercadolibre.com.ar/en_us/items-and-searches",
+      "url": "https://api.mercadolibre.com/users/{user_id}/items/search"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -34289,6 +34936,21 @@
       "source_url": "https://developers.printful.com/docs/"
     },
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.printful.com/orders -H \"Authorization: Bearer $PRINTFUL_TOKEN\" -H 'Content-Type: application/json' -d '{\"recipient\": {\"name\": \"<NAME>\", \"address1\": \"<ADDRESS>\", \"city\": \"<CITY>\", \"state_code\": \"<STATE>\", \"country_code\": \"<COUNTRY>\", \"zip\": \"<ZIP>\"}, \"items\": [{\"variant_id\": 1, \"quantity\": 1, \"files\": [{\"url\": \"<PRINT_FILE_URL>\"}]}]}'",
+      "method": "POST",
+      "operation": "create a print-on-demand order",
+      "response_fields": [
+        "code",
+        "result.id",
+        "result.status",
+        "result.costs"
+      ],
+      "source_url": "https://developers.printful.com/docs/openapi.json",
+      "url": "https://api.printful.com/orders"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -34371,7 +35033,7 @@
     "llms_txt": null,
     "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
     "notes": "Official Storefront MCP per store (https://{shop}.myshopify.com/api/mcp, no auth) handles cart and policies, catalog tools at /api/ucp/mcp; Admin operations need an Admin API token. Dev MCP only searches docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "store-management",
       "product-search"
@@ -34391,6 +35053,19 @@
       "checked_at": "2026-09-24"
     },
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://{store_name}.myshopify.com/admin/api/2026-07/graphql.json -H 'Content-Type: application/json' -H \"X-Shopify-Access-Token: $SHOPIFY_ACCESS_TOKEN\" -d '{\"query\": \"{ products(first: 3) { edges { node { id title } } } }\"}'",
+      "method": "POST",
+      "operation": "query store data via Admin GraphQL (e.g. list products)",
+      "response_fields": [
+        "data.products.edges[].node.id",
+        "data.products.edges[].node.title"
+      ],
+      "source_url": "https://shopify.dev/docs/api/admin-graphql.md",
+      "url": "https://{store_name}.myshopify.com/admin/api/2026-07/graphql.json"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -34443,6 +35118,22 @@
     },
     "base_url": "https://{your-store}/wp-json/wc/v3",
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl \"https://<YOUR_STORE>/wp-json/wc/v3/products\" -u \"$WC_CONSUMER_KEY:$WC_CONSUMER_SECRET\"",
+      "method": "GET",
+      "operation": "list products in the store",
+      "response_fields": [
+        "id",
+        "name",
+        "status",
+        "price",
+        "stock_status"
+      ],
+      "source_url": "https://woocommerce.github.io/woocommerce-rest-api-docs/#list-all-products",
+      "url": "https://{your-store}/wp-json/wc/v3/products"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": false,
@@ -34833,7 +35524,7 @@
     "llms_txt": "https://docs.gumloop.com/llms.txt",
     "desc_en": "Create AI agents, start chat sessions, and trigger no-code automations via REST API, SDKs, or the Gumloop MCP server.",
     "notes": "Added: widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled. The MCP server authenticates via OAuth sign-in, not a pasted key. Personal API keys also need the header x-auth-key: <user_id>, and API keys require the Pro plan or higher",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": true,
@@ -34962,6 +35653,16 @@
       "workflow-automation"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST \"https://maker.ifttt.com/trigger/<EVENT>/with/key/$IFTTT_WEBHOOKS_KEY\" -H \"Content-Type: application/json\" -d '{\"value1\": \"<VALUE1>\"}'",
+      "method": "POST",
+      "operation": "fire a Webhooks event to trigger an Applet",
+      "response_fields": [],
+      "source_url": "https://help.ifttt.com/hc/en-us/articles/115010230347-Webhooks-service-FAQ",
+      "url": "https://maker.ifttt.com/trigger/{event}/with/key/{webhooks_key}"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -35063,7 +35764,7 @@
     "llms_txt": "https://help.keboola.com/llms.txt",
     "desc_en": "Lets an agent load and query tables, create SQL and Python transformations, and trigger data pipeline jobs in a Keboola project.",
     "notes": "Remote MCP URL is per stack: mcp.keboola.com is US Virginia (AWS) only; others e.g. mcp.eu-central-1.keboola.com; local server at github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months. Storage API reference: https://api.keboola.com/?service=storage (the Apiary docs are retired)",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -35274,7 +35975,7 @@
     "llms_txt": "https://docs.merge.dev/llms.txt",
     "desc_en": "Give an agent governed, audited tool access to Salesforce, Slack, Jira and 100+ enterprise apps via API or MCP.",
     "notes": "Separate product from Merge's classic Unified API (HRIS/ATS/CRM sync); Agent Handler is the AI-agent-facing tool-calling layer. All plans include unlimited registered users and tool packs. An agent can sign up without a human: POST https://ah-api.merge.dev/api/v1/agent/signup/ (no auth) creates an organization and returns an API key",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "2,000 credits, unlimited registered users and tool packs (prototyping/testing)",
@@ -35579,7 +36280,7 @@
     "llms_txt": "https://docs.useparagon.com/llms.txt",
     "desc_en": "Call thousands of pre-built Tools and Triggers across 130+ SaaS apps (Slack, Salesforce, Gmail) via API or MCP.",
     "notes": "ActionKit has a self-serve free tier for experimentation; Paragon's broader embedded-iPaaS platform is contract/sales-only. ActionKit MCP is self-hosted only (repo useparagon/paragon-mcp, SSE transport); no vendor-hosted endpoint.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "auth_scheme": {
       "type": "http",
       "scheme": "bearer",
@@ -35592,6 +36293,16 @@
       "app-connectors"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://actionkit.useparagon.com/projects/<PROJECT_ID>/tools -H \"Authorization: Bearer $PARAGON_USER_TOKEN\" -H 'Content-Type: application/json' -d '{\"tool\": \"SLACK_SEND_MESSAGE\", \"parameters\": {\"channel\": \"<CHANNEL_ID>\", \"message\": \"<TEXT>\"}}'",
+      "method": "POST",
+      "operation": "run a pre-built integration tool (e.g. send a Slack message)",
+      "response_fields": [],
+      "source_url": "https://docs.useparagon.com/tutorials/actionkit-guide/first-action.md",
+      "url": "https://actionkit.useparagon.com/projects/{project_id}/tools"
+    },
     "has_free_tier": false,
     "has_trial": true,
     "no_card": false,
@@ -36082,11 +36793,13 @@
     "notes": "docs.anthropic.com and docs.claude.com redirect to platform.claude.com. Rate limits depend on usage tier. The API's MCP connector lets Claude call remote MCP servers; there is no MCP server that wraps the API itself.",
     "verified": "2026-09-24",
     "auth_scheme": {
-      "type": "http",
+      "type": "apiKey",
       "scheme": "bearer",
-      "format": "Authorization: Bearer <ANTHROPIC_API_KEY> + anthropic-version: 2023-06-01 (x-api-key still supported as legacy fallback)",
-      "source_url": "https://platform.claude.com/docs/en/api/overview",
-      "checked_at": "2026-09-24"
+      "format": "x-api-key: <ANTHROPIC_API_KEY> + anthropic-version: 2023-06-01 (the API overview also documents Authorization: Bearer)",
+      "source_url": "https://platform.claude.com/docs/en/api/messages",
+      "checked_at": "2026-09-25",
+      "in": "header",
+      "name": "x-api-key"
     },
     "base_url": "https://api.anthropic.com",
     "rate_limits": {
@@ -36110,6 +36823,21 @@
       "document-parsing"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl https://api.anthropic.com/v1/messages -H 'Content-Type: application/json' -H 'anthropic-version: 2023-06-01' -H \"X-Api-Key: $ANTHROPIC_API_KEY\" -d '{\"max_tokens\": 1024, \"messages\": [{\"content\": \"<PROMPT>\", \"role\": \"user\"}], \"model\": \"claude-opus-5\"}'",
+      "method": "POST",
+      "operation": "send a message to a Claude model",
+      "response_fields": [
+        "id",
+        "content",
+        "stop_reason",
+        "usage"
+      ],
+      "source_url": "https://platform.claude.com/docs/en/api/messages",
+      "url": "https://api.anthropic.com/v1/messages"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -36163,7 +36891,7 @@
     "llms_txt": "https://docs.cohere.com/llms.txt",
     "desc_en": "Call chat, embed, rerank and classify endpoints for text generation, semantic search and RAG.",
     "notes": "Vendor MCP at https://docs.cohere.com/_mcp/server only searches the docs. Trial keys are not for production use. v2 API is current; v1 is legacy. Flagship chat model: command-a-plus-05-2026",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "1,000 API calls (trial/evaluation key)",
@@ -36410,6 +37138,22 @@
       "llm-inference"
     ],
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl https://api.deepseek.com/chat/completions -H \"Content-Type: application/json\" -H \"Authorization: Bearer $DEEPSEEK_API_KEY\" -d '{\"model\": \"deepseek-flash\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello!\"}]}'",
+      "method": "POST",
+      "operation": "create a chat completion",
+      "response_fields": [
+        "id",
+        "model",
+        "choices[].message.content",
+        "choices[].message.reasoning_content",
+        "usage"
+      ],
+      "source_url": "https://api-docs.deepseek.com/api/create-chat-completion",
+      "url": "https://api.deepseek.com/chat/completions"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -36496,7 +37240,7 @@
     "llms_txt": "https://fal.ai/docs/llms.txt",
     "desc_en": "Generate images, video, audio and 3D with 1,000+ hosted models via queued REST or real-time WebSocket.",
     "notes": "REST auth header prefix is 'Key', not 'Bearer'; the MCP server takes 'Authorization: Bearer <FAL_KEY>' or OAuth. Long jobs use the queue API (submit, status, result).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "none",
       "source_url": "https://fal.ai/docs/documentation/model-apis/pricing",
@@ -36724,7 +37468,7 @@
     "llms_txt": "https://ai.google.dev/gemini-api/docs/llms.txt",
     "desc_en": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
     "notes": "Vendor MCP at https://gemini-api-docs-mcp.dev only searches the docs. Free-tier content may be used to improve Google products. Unrestricted standard API keys are rejected in 2026; use a current key type. Google publishes a Discovery document, not OpenAPI. The quickstart now uses POST /v1beta/interactions (header Api-Revision: 2026-05-20) rather than generateContent",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "free input and output tokens on supported models, rate-limited per project",
@@ -37250,6 +37994,22 @@
       "checked_at": "2026-09-24"
     },
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl https://api.openai.com/v1/responses -H \"Authorization: Bearer $OPENAI_API_KEY\" -H 'Content-Type: application/json' -d '{\"model\": \"<MODEL>\", \"input\": \"<PROMPT>\"}'",
+      "method": "POST",
+      "operation": "generate a model response (Responses API)",
+      "response_fields": [
+        "id",
+        "status",
+        "output",
+        "output_text",
+        "usage"
+      ],
+      "source_url": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
+      "url": "https://api.openai.com/v1/responses"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -37763,6 +38523,23 @@
       "checked_at": "2026-09-24"
     },
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl -X POST https://api.together.ai/v1/chat/completions -H \"Authorization: Bearer $TOGETHER_API_KEY\" -H 'Content-Type: application/json' -d '{\"model\": \"Qwen/Qwen3.5-9B\", \"messages\": [{\"role\": \"user\", \"content\": \"What are some fun things to do in New York?\"}]}'",
+      "method": "POST",
+      "operation": "create a chat completion",
+      "response_fields": [
+        "id",
+        "choices[].message.content",
+        "usage",
+        "model",
+        "created",
+        "object"
+      ],
+      "source_url": "https://docs.together.ai/openapi.yaml",
+      "url": "https://api.together.ai/v1/chat/completions"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -38048,6 +38825,21 @@
       "source_url": "https://docs.x.ai/developers/advanced-api-usage/batch-api"
     },
     "no_auth": false,
+    "call": {
+      "async": null,
+      "checked_at": "2026-09-25",
+      "example": "curl https://api.x.ai/v1/responses -H \"Content-Type: application/json\" -H \"Authorization: Bearer $XAI_API_KEY\" -d '{\"model\": \"grok-4.7\", \"input\": \"<PROMPT>\"}'",
+      "method": "POST",
+      "operation": "generate a text response with Grok",
+      "response_fields": [
+        "id",
+        "output",
+        "status",
+        "usage"
+      ],
+      "source_url": "https://docs.x.ai/developers/grok-4-7.md",
+      "url": "https://api.x.ai/v1/responses"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,

@@ -180,7 +180,7 @@
     "desc_en": "Search the web or convert any URL into clean LLM-ready markdown via simple HTTP GET requests.",
     "desc_pl": "Przeszukuj sieć lub konwertuj dowolny URL na czysty markdown gotowy dla LLM przez proste zapytania HTTP GET.",
     "notes": "Reader is usable without an API key at a low rate limit; Search needs a key. Interactive docs/playground at https://api.jina.ai/scalar. Official remote MCP server at https://mcp.jina.ai/v1 (github.com/jina-ai/MCP).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "10M free tokens per new API key; Reader also usable without key at 20 RPM",
@@ -415,7 +415,7 @@
     "desc_en": "Lets an agent run Parallel's low-latency Search API for web research, content extraction, and entity discovery.",
     "desc_pl": "Pozwala agentowi korzystać z niskoopóźnieniowego Search API Parallel do badań w sieci, ekstrakcji treści i wykrywania encji.",
     "notes": "The remote MCP server works without an account/API key at lower rate limits; an Authorization: Bearer key raises them. The main REST API requires an API key from the dashboard. Search defaults to mode advanced ($5 per 1,000 requests); set mode fast for $1 per 1,000",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "up to 5,000 requests/month, plus up to $80 signup and $5/month credits",
@@ -834,7 +834,7 @@
     "desc_en": "Lets an agent call You.com's Search/Answer/Research API or MCP server for LLM-ready web search and grounded answers.",
     "desc_pl": "Pozwala agentowi korzystać z API Search/Answer/Research You.com lub serwera MCP, aby uzyskać wyniki wyszukiwania gotowe dla LLM i uzasadnione odpowiedzi.",
     "notes": "Current endpoint is POST https://ydc-index.io/v1/search (recommended); legacy GET still works but won't get new features; also offers a separate keyless Docs MCP server at you.com/docs/_mcp/server for searching You.com's own docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "no_key",
       "requires_card": false,
@@ -1198,7 +1198,7 @@
     "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
     "desc_pl": "Uruchamiaj i steruj przeglądarkami headless w chmurze programistycznie, korzystając ze Stagehand do sterowania stroną językiem naturalnym.",
     "notes": "Billed by browser-hours; Stagehand SDK is open source but needs a browser backend such as Browserbase. Hosted MCP takes the key as ?browserbaseApiKey=; the mcp-server-browserbase repo is archived since 2026-07-20.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "1 browser hour, 3 concurrent browsers, 15 min/session",
@@ -1583,7 +1583,7 @@
     "desc_en": "Use AI-driven prompts to scrape and extract structured data from webpages via REST API or Python/JS SDK.",
     "desc_pl": "Wykorzystuj prompty AI do scrapowania i wyodrębniania ustrukturyzowanych danych ze stron przez REST API lub SDK w Pythonie/JS.",
     "notes": "Also offers the open-source scrapegraph-ai library with LangChain/LlamaIndex integrations.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -3317,8 +3317,8 @@
     "llms_txt": null,
     "desc_en": "Generate images and videos from text via REST or the official MCP server, with model selection and job status polling.",
     "desc_pl": "Generuj obrazy i wideo z tekstu przez REST lub oficjalny serwer MCP, z wyborem modelu i sprawdzaniem statusu zadania.",
-    "notes": "API credit is bought separately from web app subscriptions. The official MCP (https://mcp.leonardo.ai/v1/mcp) authenticates with an 'API-Key' header, not OAuth.",
-    "verified": "2026-09-24",
+    "notes": "API credit is bought separately from web app subscriptions. The official MCP (https://mcp.leonardo.ai/v1/mcp) authenticates with an 'API-Key' header, not OAuth. Image generation is documented on v2: POST https://cloud.leonardo.ai/api/rest/v2/generations (model + parameters.prompt).",
+    "verified": "2026-09-25",
     "auth_scheme": {
       "type": "http",
       "scheme": "bearer",
@@ -3663,7 +3663,7 @@
     "desc_en": "Programmatically generate and render videos/images from templates via REST API.",
     "desc_pl": "Programistycznie generuje i renderuje filmy oraz obrazy z szablonów przez REST API.",
     "notes": "Per-project API keys; ~14 credits per minute of 720p video. The hosted MCP accepts OAuth or a Bearer project API key.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -3971,7 +3971,7 @@
     "desc_en": "Generate text-to-video, image-to-video, lip-sync and video effects via REST API with a Bearer API key.",
     "desc_pl": "Generuj wideo z tekstu i obrazu, lip-sync oraz efekty wideo przez REST API z żądaniami podpisywanymi JWT.",
     "notes": "New versioned endpoints (e.g. /text-to-video/kling-2.6) take a plain API key; the older Access/Secret key pair with a client-built JWT is legacy (model_name-parameter endpoints).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "none",
       "period": "one_time",
@@ -4029,7 +4029,7 @@
     "desc_en": "Generate and extend AI videos from text or start/end keyframe images via async REST API (Ray 3.2).",
     "desc_pl": "Generuj i przedłużaj wideo AI z tekstu lub obrazów kluczowych (początek/koniec) przez asynchroniczne REST API (Ray 2).",
     "notes": "The Luma Agents API (https://agents.lumalabs.ai/v1) supersedes the older Dream Machine API. API credits are separate from Dream Machine subscription credits; failed generations are refunded.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "none",
       "watermark": false,
@@ -4199,7 +4199,7 @@
     "desc_en": "Generate and edit images/video (Gen-4.5) via async task-based REST API: submit, poll, download.",
     "desc_pl": "Generuj i edytuj obrazy oraz wideo (Gen-4.5) przez asynchroniczne REST API: zleć zadanie, sprawdzaj status, pobierz wynik.",
     "notes": "Docs site also offers /llms-small.txt and /llms-full.txt (not a plain llms.txt). Generation MCP is mcp.runwayml.com/mcp; a separate dev.runwayml.com/mcp (OAuth) only covers Developer Portal tasks, model routers and docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "none",
       "source_url": "https://docs.dev.runwayml.com/llms-small.txt",
@@ -4385,7 +4385,7 @@
     "desc_en": "Create AI video replicas and real-time conversational video agents (CVI) via REST API.",
     "desc_pl": "Tworzy cyfrowe replikas wideo AI i agentów wideo w rozmowie w czasie rzeczywistym (CVI) przez REST API.",
     "notes": "llms_txt found at /llms-full.txt rather than /llms.txt exactly. The hosted MCP uses OAuth via the PAL Maker; never put a Tavus API key in the MCP client config.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "25 min conversational video + 5 min video generation",
@@ -4497,7 +4497,7 @@
     "desc_en": "Transcribe recorded or streaming audio with speaker diarization, sentiment analysis and LLM-based audio insights via REST.",
     "desc_pl": "Transkrybuj nagrane lub strumieniowane audio z diaryzacją mówców, analizą sentymentu i analizą opartą na LLM przez REST.",
     "notes": "Vendor MCP at https://assemblyai.com/docs/mcp only searches the docs. To run transcriptions, call the REST API or an SDK.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -4703,7 +4703,7 @@
     "desc_en": "Transcribe batch or streaming audio with diarization, synthesize speech, and run real-time voice agents via REST/WebSocket.",
     "desc_pl": "Transkrybuj audio wsadowo lub strumieniowo z diaryzacją, syntezuj mowę i uruchamiaj agentów głosowych w czasie rzeczywistym przez REST/WebSocket.",
     "notes": "Hosted MCP at https://developers.deepgram.com/_mcp/server only searches the docs; the API-calling server is local `dg mcp` (Deepgram CLI) or pip deepgram-mcp.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -4767,7 +4767,7 @@
     "desc_en": "Generate, clone and stream text-to-speech voices and transcribe audio via REST/WebSocket API.",
     "desc_pl": "Generuj, klonuj i strumieniuj głosy text-to-speech oraz transkrybuj audio przez API REST/WebSocket.",
     "notes": "Official hosted MCP https://api.elevenlabs.io/v1/mcp uses OAuth; the local stdio repo elevenlabs/elevenlabs-mcp is archived since 2026-08-20.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "text-to-speech",
       "voice-cloning",
@@ -4890,7 +4890,7 @@
     "desc_en": "Generate expressive text-to-speech and run real-time empathic voice conversations (EVI) via REST/WebSocket.",
     "desc_pl": "Generuj ekspresyjną mowę z tekstu i prowadź rozmowy głosowe w czasie rzeczywistym (EVI) przez REST/WebSocket.",
     "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans. The API MCP is local `npx @humeai/mcp-server` (HUME_API_KEY); dev.hume.ai/_mcp/server only searches the docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "text-to-speech",
       "voice-agent"
@@ -5046,7 +5046,7 @@
     "desc_en": "Synthesize speech, clone voices, convert speech-to-speech and detect deepfake audio via REST API.",
     "desc_pl": "Syntezuj mowę, klonuj głosy, konwertuj mowę na mowę i wykrywaj deepfake audio przez REST API.",
     "notes": "Enterprise plans are available for on-prem deployment and custom model training. Vendor MCP at https://docs.resemble.ai/_mcp/server only searches the docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "text-to-speech",
       "voice-cloning"
@@ -5096,7 +5096,7 @@
     "desc_en": "Submit audio for asynchronous or streaming speech-to-text transcription, plus sentiment and topic extraction, via REST.",
     "desc_pl": "Przesyłaj audio do asynchronicznej lub strumieniowej transkrypcji mowy na tekst oraz analizy sentymentu i tematów przez REST.",
     "notes": "Vendor MCP at https://docs.rev.ai/mcp only searches the docs. Human transcription is sold separately as a paid option.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "speech-to-text"
     ],
@@ -5265,7 +5265,7 @@
     "desc_en": "Generate original music tracks from text prompts or detailed composition plans via REST API, with commercial licensing.",
     "desc_pl": "Generuj oryginalne utwory muzyczne z promptów tekstowych lub szczegółowych planów kompozycji przez REST API, z licencją komercyjną.",
     "notes": "Endpoint POST /v1/music; models music_v1/v2/v2.5; billed from the same ElevenLabs credit pool as TTS. Hosted OAuth MCP at api.elevenlabs.io/v1/mcp; the elevenlabs-mcp repo is archived since 2026-08-20.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "10k credits (music included, no commercial use on free plan)",
@@ -5468,33 +5468,6 @@
     ]
   },
   {
-    "id": "csm-common-sense-machines-api",
-    "name": "CSM (Common Sense Machines) API",
-    "category": "3d-generation",
-    "homepage": "https://www.csm.ai",
-    "docs": "https://docs.csm.ai/quick-start",
-    "auth": "api_key",
-    "auth_hint": "API key created from Cube webapp user profile, sent as bearer/header token",
-    "mcp": {
-      "type": "none",
-      "url": null,
-      "maintainer": "none",
-      "source_url": "https://github.com/CommonSenseMachines/blender-mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Unavailable: service appears discontinued",
-    "sdk": [],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Create 3D assets and multi-part kits from images via async REST sessions (image-to-3D, retopology).",
-    "desc_pl": "Twórz zasoby 3D i wieloczęściowe zestawy z obrazów przez asynchroniczne sesje REST (obraz-do-3D, retopologia).",
-    "notes": "Async session-based API; monitor completion via webhook (recommended) or polling. The vendor's Blender MCP repo (github.com/CommonSenseMachines/blender-mcp) now returns 404; no maintained MCP server found.",
-    "verified": "2026-09-24",
-    "operations": [
-      "image-to-3d"
-    ]
-  },
-  {
     "id": "hyper3d-rodin-api",
     "name": "Hyper3D Rodin API",
     "category": "3d-generation",
@@ -5586,8 +5559,8 @@
     "llms_txt": "https://docs.meshy.ai/llms.txt",
     "desc_en": "Generate, retexture, rig, and animate 3D models from text or images via REST API or official MCP server.",
     "desc_pl": "Generuj, teksturuj, riguj i animuj modele 3D z tekstu lub obrazów przez REST API lub oficjalny serwer MCP.",
-    "notes": "Free web accounts get only a limited built-in Playground key; creating/managing your own API keys requires a paid subscription.",
-    "verified": "2026-09-24",
+    "notes": "Free web accounts get only a limited built-in Playground key; creating/managing your own API keys requires a paid subscription. Text-to-3D is on /openapi/v2/text-to-3d (other endpoints stay on /openapi/v1).",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "none",
       "source_url": "https://docs.meshy.ai/en/api/quick-start",
@@ -5793,7 +5766,7 @@
     "desc_en": "Generate textured 3D meshes from text or images via REST API, with an official MCP server for agents.",
     "desc_pl": "Generuj teksturowane modele 3D z tekstu lub obrazów przez REST API, z oficjalnym serwerem MCP dla agentów.",
     "notes": "Maintained by VAST AI Research (Tripo's developer). Free-credit amounts vary by promotion. The MCP server is alpha (last commit 2025-04) and needs Blender with the Tripo addon.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "auth_scheme": {
       "type": "http",
       "scheme": "bearer",
@@ -6178,7 +6151,8 @@
     },
     "operations": [
       "bim-data"
-    ]
+    ],
+    "base_url": "https://app.connect.trimble.com/tc/api/2.0"
   },
   {
     "id": "zoo-text-to-cad-api-kittycad",
@@ -6218,10 +6192,10 @@
     ],
     "openapi": "https://api.zoo.dev",
     "llms_txt": null,
-    "desc_en": "Generate 3D CAD models from text prompts and run modeling/file-conversion operations via REST API.",
-    "desc_pl": "Generuj modele CAD 3D z opisów tekstowych oraz wykonuj operacje modelowania i konwersji plików przez REST API.",
-    "notes": "ML endpoints handle text-to-CAD generation; base API URL is api.zoo.dev, OpenAPI schema served from there.",
-    "verified": "2026-09-24",
+    "desc_en": "Convert CAD files and run modeling operations via REST API; text-to-CAD generation runs through the WebSocket copilot and the MCP server.",
+    "desc_pl": "Konwertuj pliki CAD i wykonuj operacje modelowania przez REST API; generowanie CAD z tekstu działa przez copilota WebSocket i serwer MCP.",
+    "notes": "The current OpenAPI spec at api.zoo.dev has no REST endpoint that creates a text-to-CAD model (only list/get of past results); generation runs over WebSocket copilot endpoints or the MCP server.",
+    "verified": "2026-09-25",
     "free_plan": {
       "quota": "Start free, then pay-as-you-go; some plans include monthly API usage",
       "source_url": "https://zoo.dev/api-pricing",
@@ -6659,59 +6633,6 @@
     ]
   },
   {
-    "id": "structurizr",
-    "name": "Structurizr",
-    "category": "diagrams-software-architecture",
-    "homepage": "https://structurizr.com",
-    "docs": "https://docs.structurizr.com/cloud/workspace-api",
-    "auth": "api_key",
-    "auth_hint": "X-Authorization header: apiKey:base64(HMAC-SHA256(apiSecret, digest)) plus Nonce header",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.structurizr.com/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.structurizr.com/mcp",
-      "tools": [
-        "inspect",
-        "parse",
-        "validate",
-        "export-mermaid",
-        "export-c4plantuml",
-        "export-plantuml"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://docs.structurizr.com/ai/mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "free tier: workspaces up to 0.5MB; paid plans raise the limit to 5MB",
-    "sdk": [
-      "java"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Create and update C4-model software architecture diagram workspaces as JSON via a signed HTTPS API.",
-    "desc_pl": "Twórz i aktualizuj przestrzenie robocze diagramów architektury oprogramowania w modelu C4 jako JSON przez podpisane API HTTPS.",
-    "notes": "Cloud service is end-of-life (migrate to playground, local or self-hosted server per docs.structurizr.com/cloud). Uses a nonstandard HMAC signing scheme rather than a bearer token; docs recommend the Structurizr CLI or client libraries over the raw API.",
-    "verified": "2026-09-24",
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "X-Authorization",
-      "format": "X-Authorization: <apiKey>:<base64(HMAC-SHA256(apiSecret, digest))> + Nonce + Content-MD5 headers",
-      "source_url": "https://docs.structurizr.com/cloud/workspace-api",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.structurizr.com",
-    "rate_limits": {
-      "summary": "Rate limiting enforced on all workspace API calls (GET and PUT); no number published",
-      "source_url": "https://docs.structurizr.com/cloud/workspace-api",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "diagram-rendering"
-    ]
-  },
-  {
     "id": "canva-connect-api",
     "name": "Canva Connect API",
     "category": "design-ui",
@@ -6927,7 +6848,7 @@
     "desc_en": "Read, create, and modify Penpot design files, comments, and webhooks via a token-authenticated RPC/REST API, or via the official MCP server.",
     "desc_pl": "Umożliwia odczyt, tworzenie i modyfikację plików projektowych, komentarzy i webhooków Penpot przez API RPC/REST z tokenem lub przez oficjalny serwer MCP.",
     "notes": "API is RPC-style; methods are listed at https://design.penpot.app/api/main/methods/<name>, no OpenAPI file; open source, self-hostable. Remote MCP takes ?userToken=<MCP key> and needs the MCP plugin open in a Penpot browser tab; local: npx @penpot/mcp@stable.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -7179,7 +7100,7 @@
     "desc_en": "Detect and extract text, forms, tables, and data from scanned documents and images via API calls.",
     "desc_pl": "Wykrywaj i wydobywaj tekst, formularze, tabele i dane ze skanów oraz obrazów za pomocą wywołań API.",
     "notes": "Requires an AWS account and IAM credentials; region-specific; free tier applies only for the first 3 months after the first Textract request. No dedicated Textract MCP; the official AWS MCP Server can call Textract via aws___run_script.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "quota": "per month for 3 months: DetectDocumentText 1,000 pages; AnalyzeDocument forms/tables/layout 100 pages; AnalyzeExpense/AnalyzeID 100 pages; AnalyzeLending 2,000 pages",
@@ -7372,7 +7293,7 @@
     "desc_en": "Send, sign, track, and manage electronic signature envelopes and agreement workflows via REST API.",
     "desc_pl": "Wysyłaj, podpisuj, śledź i zarządzaj kopertami podpisów elektronicznych oraz przepływami umów przez REST API.",
     "notes": "Official Docusign MCP Server (Open Beta, OAuth) covers eSignature plus Navigator/Maestro/Workspaces: production https://mcp.docusign.com/mcp, developer accounts https://mcp-d.docusign.com/mcp. JWT grant needs one-time user consent.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "non-expiring developer (demo) account; envelopes not legally valid; production from $50/mo Starter (40 envelopes/mo)",
@@ -7989,7 +7910,7 @@
     "desc_en": "Partition and extract structured elements (text, tables, layout) from PDFs, docs, and images for RAG pipelines via API.",
     "desc_pl": "Podział i wyodrębnianie ustrukturyzowanych elementów (tekst, tabele, układ) z PDF-ów, dokumentów i obrazów do pipeline'ów RAG przez API.",
     "notes": "Legacy /general/v0/general Partition endpoint is for prototyping single files; production use should use the Workflow API. Hosted Transform MCP parses documents; the UNS-MCP repo only manages connectors/workflows and is no longer maintained. Current parse endpoint: POST https://transform.unstructured.io/api/v2/parse with header unstructured-api-key",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -8056,7 +7977,7 @@
     "desc_en": "Translate text and documents in real time or batch across 75+ languages via the AWS SDK/API.",
     "desc_pl": "Tłumacz tekst i dokumenty w czasie rzeczywistym lub wsadowo w ponad 75 językach przez AWS SDK/API.",
     "notes": "Requires an AWS account and IAM credentials. The generic AWS API MCP Server (awslabs) can call Translate via AWS CLI commands.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "translation"
     ],
@@ -8701,10 +8622,10 @@
     "sdk": [],
     "openapi": null,
     "llms_txt": null,
-    "desc_en": "Call a free public REST API to compile and run code in 70+ languages inside isolated containers.",
-    "desc_pl": "Wywołaj darmowe publiczne REST API, by kompilować i uruchamiać kod w ponad 70 językach w izolowanych kontenerach.",
+    "desc_en": "Compile and run code in 70+ languages inside isolated containers via a self-hostable REST API (the public instance needs a granted token).",
+    "desc_pl": "Kompiluj i uruchamiaj kod w ponad 70 językach w izolowanych kontenerach przez samodzielnie hostowane REST API (publiczna instancja wymaga przyznanego tokenu).",
     "notes": "Public emkc.org instance closed to open use on 2026-02-15; self-host via Docker for agent workloads. Widely used by Discord/Slack bots.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "base_url": "https://emkc.org/api/v2/piston",
     "operations": [
       "code-execution"
@@ -8925,7 +8846,7 @@
     "desc_en": "An agent can trigger pipelines, rerun workflows, fetch logs/test results, and validate CI/CD configuration via REST.",
     "desc_pl": "Agent może uruchamiać pipeline'y, ponawiać workflow, pobierać logi/wyniki testów i walidować konfigurację CI/CD przez REST.",
     "notes": "Use the v3 API for new work (v2 still supported). CircleCI's hosted MCP is at https://mcp.circleci.com/v1/mcp (OAuth2 sign-in, 24 tools); the mcp-server-circleci npm package is deprecated.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -9387,7 +9308,7 @@
     "desc_en": "An agent can create/manage incidents, on-call schedules, escalation policies, and services via REST.",
     "desc_pl": "Agent może tworzyć i zarządzać incydentami, harmonogramami dyżurów, politykami eskalacji i usługami przez REST.",
     "notes": "The self-hosted pagerduty-mcp-server repo is deprecated and archived; use the hosted MCP https://mcp.pagerduty.com/mcp (EU: https://mcp.eu.pagerduty.com/mcp) with an API token or OAuth.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "Free plan: up to 5 users, 100 SMS/phone notifications, 1 on-call schedule, 1 escalation policy",
@@ -9433,7 +9354,7 @@
     "desc_en": "An agent can manage Postman collections, workspaces, environments, mocks, monitors, and API specs via REST.",
     "desc_pl": "Agent może zarządzać kolekcjami, przestrzeniami roboczymi, środowiskami, mockami, monitorami i specyfikacjami API w Postmanie przez REST.",
     "notes": "Reference docs are at learning.postman.com. Remote MCP modes: /minimal (default), /code, /mcp (full, 100+ tools); US host supports OAuth, EU host mcp.eu.postman.com needs an API key. Docs-search MCP at learning.postman.com/_mcp/server. API host https://api.postman.com (EU: api.eu.postman.com); api.getpostman.com is legacy",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "10,000 Postman API calls, 1 user",
@@ -12651,7 +12572,7 @@
     "desc_en": "Send/receive messages, media, and inline interactions via a simple HTTPS bot API.",
     "desc_pl": "Wysyłaj i odbieraj wiadomości, media oraz interakcje inline przez proste HTTPS API bota.",
     "notes": "No single official SDK (community libraries only); a self-hosted local Bot API server option removes some file-size limits. Listed MCP server uses a user account via Telethon/MTProto (API_ID/API_HASH + session string from my.telegram.org), not the bot token.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -12779,7 +12700,7 @@
     "desc_en": "Send/receive SMS, WhatsApp messages, and voice calls programmatically via REST API.",
     "desc_pl": "Wysyłaj i odbieraj SMS-y, wiadomości WhatsApp oraz połączenia głosowe programistycznie przez REST API.",
     "notes": "Trial accounts can only message verified numbers; US SMS at scale requires A2P 10DLC registration. Hosted MCP is read-only docs/API-spec search; the executing server is Twilio Labs' npm @twilio-alpha/mcp (alpha).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -13314,7 +13235,7 @@
     "desc_en": "Programmatically make, receive, and control phone calls (IVR, recording, conferencing) via REST API.",
     "desc_pl": "Programowo wykonuj, odbieraj i kontroluj połączenia telefoniczne (IVR, nagrywanie, konferencje) przez REST API.",
     "notes": "Widely used as the underlying telephony carrier beneath voice-agent platforms (Vapi, Retell, ElevenLabs, LiveKit) for actual call carriage. Twilio's own MCP (npm @twilio-alpha/mcp) is alpha.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "phone-calls"
     ],
@@ -13785,7 +13706,7 @@
     "desc_en": "Programmatically book meetings and read/write scheduling, event, and contact data via REST API v2.",
     "desc_pl": "Programistyczne rezerwowanie spotkań oraz odczyt/zapis danych o wydarzeniach i kontaktach przez REST API v2.",
     "notes": "",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "source_url": "https://developer.calendly.com/frequently-asked-questions",
@@ -13876,7 +13797,7 @@
     "desc_en": "Read and write Coda (now 'Superhuman Docs') documents, tables, and rows via REST API or an MCP server.",
     "desc_pl": "Odczyt i zapis dokumentów, tabel i wierszy Coda (obecnie 'Superhuman Docs') przez REST API lub serwer MCP.",
     "notes": "Coda was rebranded to 'Superhuman Docs' after Grammarly's acquisition; the API base URL coda.io/apis/v1 still works, and the OpenAPI spec now names https://docs.superhuman.com/apis/v1. The official MCP server uses OAuth via id.superhuman.com (scope mcp:all).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "source_url": "https://docs.superhuman.com/developers/apis/v1",
@@ -14866,7 +14787,7 @@
     "desc_en": "Create and update deals, contacts (persons/organizations), and activities in a Pipedrive CRM pipeline via REST API.",
     "desc_pl": "Tworzenie i aktualizacja transakcji, kontaktów (osób/organizacji) i aktywności w pipeline CRM Pipedrive przez REST API.",
     "notes": "Official hosted MCP at mcp.pipedrive.ai/mcp uses Pipedrive account sign-in (OAuth). Offers a free Sandbox account for development/testing separate from production pricing. Core endpoints (e.g. POST /deals) are v2 only: https://api.pipedrive.com/api/v2/deals; v1 remains for the rest",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "quota": "Developer Sandbox account (5 seats) for building apps; deleted if inactive (no app in 45 days)",
@@ -15000,7 +14921,7 @@
     "desc_en": "Create, update, and search support tickets, users, and Help Center articles via Zendesk's REST API.",
     "desc_pl": "Tworzenie, aktualizacja i wyszukiwanie zgłoszeń, użytkowników i artykułów Centrum pomocy przez REST API Zendesk.",
     "notes": "No official Zendesk-maintained MCP server found as of research date; several community MCP servers exist. API tokens can impersonate any account user, including admins.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "quota": "14-day trial of Customer Service Suite Professional",
@@ -15062,7 +14983,7 @@
     "desc_en": "Unified API to post, schedule, and analyze content across 14+ social networks (X, Instagram, LinkedIn, TikTok, etc.) with one API key.",
     "desc_pl": "Ujednolicone API do publikowania, planowania i analizowania treści na ponad 14 sieciach społecznościowych (X, Instagram, LinkedIn, TikTok itd.) za pomocą jednego klucza API.",
     "notes": "Ayrshare itself holds the underlying per-platform app approvals, so agents avoid individually applying for X/Meta/TikTok developer access. Hosted MCP action server at https://api.ayrshare.com/mcp (Streamable HTTP, 27 tools).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
@@ -16703,7 +16624,7 @@
     "desc_en": "Create wallets, send crypto, and pay per-API-call with stablecoins over HTTP (x402) via the Coinbase Developer Platform SDK.",
     "desc_pl": "Twórz portfele, wysyłaj kryptowaluty i płać za wywołania API stablecoinami przez HTTP (x402) za pomocą Coinbase Developer Platform SDK.",
     "notes": "x402 is an open HTTP-402 payment protocol Coinbase champions, not a single vendor API. Official local Payments MCP (npx @coinbase/payments-mcp) signs in with an email-based browser wallet, not the CDP API key.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "1,000 onchain transactions via CDP x402 Facilitator, then $0.001/tx",
@@ -17124,7 +17045,7 @@
     "desc_en": "Process payments, payouts, invoices, and subscriptions via REST API or PayPal's official MCP server.",
     "desc_pl": "Przetwarzaj płatności, wypłaty, faktury i subskrypcje przez REST API lub oficjalny serwer MCP PayPal.",
     "notes": "Remote MCP: https://mcp.paypal.com/mcp (Streamable HTTP, OAuth login) or /sse; docs still list /http, which returns 404. Sandbox MCP at https://mcp.sandbox.paypal.com for testing.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "Sandbox test environment with virtual accounts; live usage billed per transaction",
@@ -17187,7 +17108,7 @@
     "desc_en": "Link bank accounts and fetch balances, transactions, and identity data via REST API/SDKs.",
     "desc_pl": "Łącz konta bankowe i pobieraj salda, transakcje oraz dane tożsamości przez REST API/SDK.",
     "notes": "Dashboard MCP (OAuth client_credentials, scope mcp:dashboard) needs Production access; a local Sandbox MCP is in plaid/ai-coding-toolkit. Production requires a Plaid approval/compliance review.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "quota": "Free Sandbox; Trial plan (new US/Canada teams since 2026-04-15): 10 Production Items, unlimited calls on them",
@@ -17439,7 +17360,7 @@
     "desc_en": "Send international transfers, check exchange rates, and manage multi-currency balances via REST API.",
     "desc_pl": "Wysyłaj przelewy międzynarodowe, sprawdzaj kursy walut i zarządzaj saldami wielowalutowymi przez REST API.",
     "notes": "Personal tokens cover only quotes, recipients, transfers, batch groups and transfer events; funding and balance statements only for US/CA/AU/NZ/SG/MY accounts. Full access needs a partnership agreement. Docs use versioned paths, e.g. https://api.wise.com/2026Q3/profiles/{profileId}/quotes",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "Personal API token created from a Wise business account; limited endpoints",
@@ -17490,7 +17411,7 @@
     "desc_en": "Manage listings, orders, inventory, and reports for an Amazon seller/vendor account via REST API.",
     "desc_pl": "Zarządzaj ofertami, zamówieniami, magazynem i raportami konta sprzedawcy Amazon przez REST API.",
     "notes": "Self-authorized (private) apps for your own seller account are relatively quick to set up; public apps serving other sellers require Amazon's app-approval review. Official MCP uses Seller Central OAuth consent. Orders v0 getOrders is deprecated; use searchOrders (v2026-01-01). Planned SP-API fees were cancelled",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -17551,7 +17472,7 @@
     "desc_en": "Manage catalog, orders, customers, and carts on a BigCommerce store via REST/GraphQL APIs.",
     "desc_pl": "Zarządzaj katalogiem, zamówieniami, klientami i koszykami w sklepie BigCommerce przez REST/GraphQL API.",
     "notes": "Official Storefront MCP (early access; per-storefront URL, POST /api/mcp) searches the catalog, edits carts and creates checkout links. Vendor MCP at https://docs.bigcommerce.com/_mcp/server only searches the docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "auth_scheme": {
       "type": "apiKey",
       "in": "header",
@@ -17672,7 +17593,7 @@
       "source_url": "https://developer.etsy.com/documentation/essentials/authentication",
       "checked_at": "2026-09-24"
     },
-    "base_url": "https://api.etsy.com/v3",
+    "base_url": "https://openapi.etsy.com/v3",
     "rate_limits": {
       "summary": "Per API key; current QPS/QPD limits shown in the Developer Portal and response headers (no fixed default published)",
       "source_url": "https://developer.etsy.com/documentation/essentials/rate-limits",
@@ -17824,7 +17745,7 @@
     "desc_en": "Manage products, orders, customers, and inventory (Admin API) or build storefronts (Storefront API) via REST/GraphQL.",
     "desc_pl": "Zarządzaj produktami, zamówieniami, klientami i magazynem (Admin API) lub buduj sklepy (Storefront API) przez REST/GraphQL.",
     "notes": "Official Storefront MCP per store (https://{shop}.myshopify.com/api/mcp, no auth) handles cart and policies, catalog tools at /api/ucp/mcp; Admin operations need an Admin API token. Dev MCP only searches docs.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "operations": [
       "store-management",
       "product-search"
@@ -18077,7 +17998,7 @@
     "desc_en": "Create AI agents, start chat sessions, and trigger no-code automations via REST API, SDKs, or the Gumloop MCP server.",
     "desc_pl": "Tworzy agentów AI, uruchamia sesje czatu i wyzwala automatyzacje no-code przez REST API, SDK lub serwer MCP Gumloop.",
     "notes": "Added: widely used AI-native automation builder with an official API, SDKs, and hosted MCP server. Trial converts to paid Pro ($37/mo) unless cancelled. The MCP server authenticates via OAuth sign-in, not a pasted key. Personal API keys also need the header x-auth-key: <user_id>, and API keys require the Pro plan or higher",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "trial",
       "requires_card": true,
@@ -18190,7 +18111,7 @@
     "desc_en": "Lets an agent load and query tables, create SQL and Python transformations, and trigger data pipeline jobs in a Keboola project.",
     "desc_pl": "Pozwala agentowi ładować i odpytywać tabele, tworzyć transformacje SQL i Python oraz uruchamiać zadania potoków danych w projekcie Keboola.",
     "notes": "Remote MCP URL is per stack: mcp.keboola.com is US Virginia (AWS) only; others e.g. mcp.eu-central-1.keboola.com; local server at github.com/keboola/mcp-server. Jobs consume the monthly compute minutes; inactive accounts out of credits are suspended after 2 months. Storage API reference: https://api.keboola.com/?service=storage (the Apiary docs are retired)",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -18307,7 +18228,7 @@
     "desc_en": "Give an agent governed, audited tool access to Salesforce, Slack, Jira and 100+ enterprise apps via API or MCP.",
     "desc_pl": "Daje agentowi kontrolowany, audytowany dostęp do narzędzi Salesforce, Slack, Jira i ponad 100 aplikacji firmowych przez API lub MCP.",
     "notes": "Separate product from Merge's classic Unified API (HRIS/ATS/CRM sync); Agent Handler is the AI-agent-facing tool-calling layer. All plans include unlimited registered users and tool packs. An agent can sign up without a human: POST https://ah-api.merge.dev/api/v1/agent/signup/ (no auth) creates an organization and returns an API key",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "2,000 credits, unlimited registered users and tool packs (prototyping/testing)",
@@ -18462,7 +18383,7 @@
     "desc_en": "Call thousands of pre-built Tools and Triggers across 130+ SaaS apps (Slack, Salesforce, Gmail) via API or MCP.",
     "desc_pl": "Wywołuje tysiące gotowych narzędzi i wyzwalaczy w ponad 130 aplikacjach SaaS (Slack, Salesforce, Gmail) przez API lub MCP.",
     "notes": "ActionKit has a self-serve free tier for experimentation; Paragon's broader embedded-iPaaS platform is contract/sales-only. ActionKit MCP is self-hosted only (repo useparagon/paragon-mcp, SSE transport); no vendor-hosted endpoint.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "auth_scheme": {
       "type": "http",
       "scheme": "bearer",
@@ -18706,11 +18627,13 @@
     "notes": "docs.anthropic.com and docs.claude.com redirect to platform.claude.com. Rate limits depend on usage tier. The API's MCP connector lets Claude call remote MCP servers; there is no MCP server that wraps the API itself.",
     "verified": "2026-09-24",
     "auth_scheme": {
-      "type": "http",
+      "type": "apiKey",
       "scheme": "bearer",
-      "format": "Authorization: Bearer <ANTHROPIC_API_KEY> + anthropic-version: 2023-06-01 (x-api-key still supported as legacy fallback)",
-      "source_url": "https://platform.claude.com/docs/en/api/overview",
-      "checked_at": "2026-09-24"
+      "format": "x-api-key: <ANTHROPIC_API_KEY> + anthropic-version: 2023-06-01 (the API overview also documents Authorization: Bearer)",
+      "source_url": "https://platform.claude.com/docs/en/api/messages",
+      "checked_at": "2026-09-25",
+      "in": "header",
+      "name": "x-api-key"
     },
     "base_url": "https://api.anthropic.com",
     "rate_limits": {
@@ -18761,7 +18684,7 @@
     "desc_en": "Call chat, embed, rerank and classify endpoints for text generation, semantic search and RAG.",
     "desc_pl": "Wywołuj endpointy czatu, embeddingów, rerankingu i klasyfikacji do generowania tekstu, wyszukiwania semantycznego i RAG.",
     "notes": "Vendor MCP at https://docs.cohere.com/_mcp/server only searches the docs. Trial keys are not for production use. v2 API is current; v1 is legacy. Flagship chat model: command-a-plus-05-2026",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "1,000 API calls (trial/evaluation key)",
@@ -18930,7 +18853,7 @@
     "desc_en": "Generate images, video, audio and 3D with 1,000+ hosted models via queued REST or real-time WebSocket.",
     "desc_pl": "Generuj obrazy, wideo, audio i 3D ponad 1000 hostowanymi modelami przez kolejkowe REST lub WebSocket w czasie rzeczywistym.",
     "notes": "REST auth header prefix is 'Key', not 'Bearer'; the MCP server takes 'Authorization: Bearer <FAL_KEY>' or OAuth. Long jobs use the queue API (submit, status, result).",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "none",
       "source_url": "https://fal.ai/docs/documentation/model-apis/pricing",
@@ -19054,7 +18977,7 @@
     "desc_en": "Generate text and images, analyze multimodal input (video, audio, PDFs), and run code execution with Gemini models.",
     "desc_pl": "Generuj tekst i obrazy, analizuj dane multimodalne (wideo, audio, PDF) i uruchamiaj wykonywanie kodu modelami Gemini.",
     "notes": "Vendor MCP at https://gemini-api-docs-mcp.dev only searches the docs. Free-tier content may be used to improve Google products. Unrestricted standard API keys are rejected in 2026; use a current key type. Google publishes a Discovery document, not OpenAPI. The quickstart now uses POST /v1beta/interactions (header Api-Revision: 2026-05-20) rather than generateContent",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
       "kind": "free_tier",
       "quota": "free input and output tokens on supported models, rate-limited per project",
