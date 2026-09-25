@@ -273,7 +273,9 @@
   "desc_en": "Compile and run code in 70+ languages inside isolated containers via a self-hostable REST API (the public instance needs a granted token).",
   "sources": [
    "https://github.com/engineer-man/piston"
-  ]
+  ],
+  "free_tier": "Free: self-host (open source, Docker); public emkc.org API closed to open use since 2026-02-15, tokens only for approved non-commercial educational projects",
+  "free_plan_kind": "free_tier"
  },
  "leonardo-ai-api": {
   "notes": "API credit is bought separately from web app subscriptions. The official MCP (https://mcp.leonardo.ai/v1/mcp) authenticates with an 'API-Key' header, not OAuth. Image generation is documented on v2: POST https://cloud.leonardo.ai/api/rest/v2/generations (model + parameters.prompt).",
@@ -293,5 +295,194 @@
    "https://akool.com/pricing"
   ],
   "note": "the Free plan is web-app only; API access starts at Pro Max"
+ },
+ "plivo": {
+  "desc_en": "Make and receive voice calls, SIP trunking and AI voice agents via REST API; SMS is available only on the Enterprise plan.",
+  "free_tier": "Trial: free credits for the first 3 weeks on the self-serve Professional plan (voice and SIP only); SMS, MMS and WhatsApp need Enterprise (from $1,000/month)",
+  "notes": "Self-serve onboarding covers voice and SIP only: \"Self-service onboarding for SMS is not currently available\"; SMS needs the Enterprise plan (from $1,000/month). Professional plan usage is capped at $2,500/month. Signup needs a business email and phone verification. The MCP at plivo.com/docs/mcp only searches docs.",
+  "sources": [
+   "https://www.plivo.com/docs/faq/account/plans",
+   "https://www.plivo.com/docs/messaging/sms-availability"
+  ]
+ },
+ "telnyx": {
+  "free_tier": "Trial: $5 test credit, 1 verified number, 100 messages/day; then paid (US 10DLC $0.004/SMS part + carrier fees)",
+  "sources": [
+   "https://developers.telnyx.com/docs/account-setup/levels-and-capabilities/trial"
+  ]
+ },
+ "twilio": {
+  "free_tier": "Trial: 100 SMS, 100 WhatsApp, 3,000 emails, 75 voice minutes; no card; one-time, expires after 30 days; SMS only to verified numbers within the signup country, using predefined templates",
+  "sources": [
+   "https://www.twilio.com/docs/usage/trials"
+  ]
+ },
+ "hyperbrowser": {
+  "free_tier": "Free: Free plan with 5,000 credits (1 credit = $0.001), 1 concurrent browser, 7-day data retention; no credit card required",
+  "sources": [
+   "https://www.hyperbrowser.ai/pricing"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "stability-ai-3d-stable-fast-3d-spar3d-api": {
+  "free_tier": "Trial: 25 free credits on signup (1 credit = $0.01), then pay-as-you-go",
+  "sources": [
+   "https://platform.stability.ai/pricing"
+  ],
+  "free_plan_kind": "trial"
+ },
+ "tripo-api": {
+  "free_tier": "Trial: starter free credits (Tripo docs: 300 free credits; amount varies by signup path), then pay-as-you-go at $0.01/credit",
+  "sources": [
+   "https://docs.tripo3d.ai/get-started/pricing.html"
+  ],
+  "free_plan_kind": "trial"
+ },
+ "deepl-api": {
+  "free_tier": "Free: API Developer plan ('Test out the API for free', EUR 0 base price, 1,000,000 characters/month in the pricing data); legacy API Free keys (:fx) use api-free.deepl.com",
+  "sources": [
+   "https://www.deepl.com/en/pro-api"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "codesandbox-sdk": {
+  "free_tier": "Free: Build (free) plan with 400 VM credits/month (~40 Nano-VM hours) and up to 10 concurrent VMs",
+  "sources": [
+   "https://github.com/codesandbox/docs/blob/main/packages/projects-docs/pages/sdk/pricing.mdx"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "vonage-api": {
+  "free_tier": "Trial: free credit on signup, no credit card required; then pay-as-you-go per request",
+  "sources": [
+   "https://www.vonage.com/communications-apis/pricing/"
+  ],
+  "free_plan_kind": "trial"
+ },
+ "synthflow-api": {
+  "free_tier": "Paid only: Enterprise contracts from $30,000/year; no free plan or self-serve trial listed",
+  "sources": [
+   "https://synthflow.ai/pricing"
+  ],
+  "free_plan_kind": "none"
+ },
+ "cal-com-api": {
+  "free_tier": "Free: API keys on any account incl. the free-forever Individuals plan, 120 req/min per key (higher on request); Teams/Orgs endpoints need paid plans",
+  "sources": [
+   "https://cal.com/docs/api-reference/v2/introduction"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "microsoft-graph-outlook-teams-onedrive": {
+  "free_tier": "Free: standard Graph APIs cost nothing beyond the user's Microsoft 365/Entra license (metered APIs are billed); the free M365 E5 developer sandbox is only for qualifying members (Visual Studio Pro/Enterprise subscribers, ISV Success/partners, Premier/Unified support)",
+  "sources": [
+   "https://learn.microsoft.com/en-us/graph/metered-api-overview"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "todoist-api": {
+  "free_tier": "Free: API usable with any Todoist account; 1,000 partial / 100 full sync requests per 15 min per user; some features follow the user's Todoist plan",
+  "sources": [
+   "https://developer.todoist.com/api/v1/"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "trello-api": {
+  "free_tier": "Free: free API key + user token; rate limits 300 req/10 s per API key and 100 req/10 s per token",
+  "sources": [
+   "https://developer.atlassian.com/cloud/trello/guides/rest-api/rate-limits/"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "mastodon-api": {
+  "free_tier": "Free: register an app per instance at no cost; default limit 300 requests per 5 minutes per account",
+  "sources": [
+   "https://docs.joinmastodon.org/api/rate-limits/"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "meta-graph-api-facebook-instagram": {
+  "free_tier": "Free: no fee; platform rate limit 200 calls/hour x app users; most non-trivial permissions need Meta App Review and business verification",
+  "sources": [
+   "https://developers.facebook.com/docs/graph-api/overview/rate-limiting/"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "pinterest-api": {
+  "free_tier": "Free: new apps get Trial access (1,000 requests/day); Standard access (100 req/s per user per app) requires app review",
+  "sources": [
+   "https://developers.pinterest.com/docs/reference/rate-limits/"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "reddit-api": {
+  "free_tier": "Free: Data API usable within Reddit's rate limits under the Data API Terms; commercial use or research above rate limits needs a separate agreement with Reddit",
+  "sources": [
+   "https://redditinc.com/policies/data-api-terms"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "tiktok-api": {
+  "free_tier": "Free: no fee; default 600 requests/min per endpoint; app review needed for production, unaudited clients post private-only",
+  "sources": [
+   "https://developers.tiktok.com/doc/tiktok-api-v2-rate-limit"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "here-location-services": {
+  "free_tier": "Free: Base plan includes free monthly transactions per service (pay-as-you-grow above); credit card required at signup",
+  "sources": [
+   "https://www.here.com/learn/blog/how-to-get-started-with-here-platform"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "bigcommerce-api": {
+  "free_tier": "Trial: free 15-day trial store to test the API (partners can create sandbox stores); ongoing use needs a paid BigCommerce plan",
+  "sources": [
+   "https://docs.bigcommerce.com/developer/docs/overview/quick-start"
+  ],
+  "free_plan_kind": "trial"
+ },
+ "etsy-open-api-v3": {
+  "free_tier": "Free: developer keystring at no cost; per-app QPS/QPD rate limits shown in the Developer Portal",
+  "sources": [
+   "https://developer.etsy.com/documentation/essentials/rate-limits"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "mercado-libre-api": {
+  "free_tier": "Free: create an app in DevCenter with a Mercado Libre account (no API fee); rate limited (HTTP 429); marketplace selling fees still apply",
+  "sources": [
+   "https://developers.mercadolibre.com.ar/en_us/register-your-application"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "printful-api": {
+  "free_tier": "Free: no monthly fee for API/store connection (pay only for fulfillment); 120 API calls/min general rate limit",
+  "sources": [
+   "https://developers.printful.com/docs/"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "shopify-admin-storefront-api": {
+  "free_tier": "Free: unlimited free dev stores via a free Partner account/Dev Dashboard for building and testing (no real transactions); live merchant stores need a paid Shopify plan",
+  "sources": [
+   "https://help.shopify.com/en/partners/partner-program/getting-started"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "woocommerce-rest-api": {
+  "free_tier": "Free: open-source WordPress plugin, free to download and use; no platform fees, only your own hosting costs",
+  "sources": [
+   "https://woocommerce.com/pricing/"
+  ],
+  "free_plan_kind": "free_tier"
+ },
+ "paragon-actionkit": {
+  "free_tier": "Trial: free trial ('Start free trial'); no lasting free tier; pricing by custom quote based on Connected Users",
+  "sources": [
+   "https://www.useparagon.com/pricing"
+  ],
+  "free_plan_kind": "trial"
  }
 }

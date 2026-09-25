@@ -51,7 +51,7 @@ Wyszukiwanie i skill (54)
 
 Dane (bf)
 - [x] Konfiguracje MCP `derived` (37): handshake `initialize`; zostają tylko odpowiadające jak serwer MCP, z informacją o wymaganym logowaniu (OAuth/klucz); strony dokumentacji usunięte — `scripts/probe_mcp.py` → `data/mcp-handshake.json` (174 endpointy: 42 ok, 100 OAuth, 22 klucz, 7 strona WWW, 2 zablokowane, 1 nie działa), pole `mcp.handshake`; zostały 34 z 37 wyprowadzonych, z polem `auth`
-- [ ] `free_plan` ze źródłem dla 28 wpisów, gdzie darmowy plan/trial pochodzi tylko z tekstu (m.in. Freepik: jednorazowe ~5 EUR = trial)
+- [x] `free_plan` ze źródłem dla 28 wpisów, gdzie darmowy plan/trial pochodzi tylko z tekstu (m.in. Freepik: jednorazowe ~5 EUR = trial) — 25 potwierdzonych (7 z błędnym tekstem: DeepL, Microsoft Graph, Pinterest, Shopify, HERE, Trello, Synthflow); niepotwierdzone: Freepik, MiniMax, eBay (strony blokują); `free_plan` 313/331. Plivo: SMS nie jest już samoobsługowy → telefonia; triale SMS Telnyx/Twilio doprecyzowane
 - [x] Uptime: definicja „reachable” (host odpowiada, HTTP < 500) jawnie w JSON, żeby 404 nie wyglądało na „API działa” — pole `uptime.up_means`
 - [x] Brakujący dostawcy: GUGiK (oficjalny polski geokoder), Photon, Textbelt — jeśli spełniają kryteria: dodane wszystkie trzy z `call` (GUGiK: bez klucza, tylko Polska; Photon: bez klucza, nie do pracy wsadowej; Textbelt: 1 SMS/dzień za darmo)
 
