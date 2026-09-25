@@ -322,6 +322,7 @@ const summary = (e) => ({
   free_plan: e.free_plan, // structured: kind, requires_card, quota, period, source_url
   base_url: e.base_url,
   ratings: ratingsBrief(e), // shown for context only; not used in ranking
+  ...(e.sms ? { sms: e.sms } : {}), // price to Poland, sender registration, trial limits, countries
 });
 
 // Aspect tags for review texts, so an agent can pick API-relevant complaints over dashboard or billing ones.
@@ -350,7 +351,7 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.3.5" },
+    { name: "ai-agents-api-library", version: "0.3.6" },
     {
       instructions:
         "Catalog of third-party APIs and MCP servers (entries with a last-checked date) an agent can call after a one-time human setup " +
