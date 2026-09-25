@@ -437,8 +437,8 @@ def readme(lang, cats, items, dirs):
         o.append("### MCP server\n\nThe catalog is also an MCP server with four tools: `search_apis` (filters: `query`, `category`, "
                  "`mcp` (official/remote/any), `no_auth`, `free_tier`, `no_card`, `auth`), `get_api`, `get_reviews` (user reviews with pros and cons) and `list_categories`. No key needed. Add it to your MCP client:\n")
         o.append('```json\n{\n  "mcpServers": {\n    "ai-agents-api-library": {\n      "command": "npx",\n'
-                 f'      "args": ["-y", "github:{REPO}"]\n    }}\n  }}\n}}\n```\n')
-        o.append(f"Claude Code: `claude mcp add ai-agents-api-library -- npx -y github:{REPO}`\n")
+                 f'      "args": ["-y", "ai-agents-api-library"]\n    }}\n  }}\n}}\n```\n')
+        o.append(f"Claude Code: `claude mcp add ai-agents-api-library -- npx -y ai-agents-api-library`\n")
         o.append(f"No install: remote endpoint (Streamable HTTP, no key) `{MCP_URL}`, e.g. "
                  f"`claude mcp add --transport http ai-agents-api-library {MCP_URL}`. "
                  "Listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ai-agents-api-library) "
@@ -517,7 +517,7 @@ def llms(cats, items, dirs):
          "30-day window; up = any HTTP status below 500 (MCP: POST initialize); `probes`, `up`, `median_ms` and the last result",
          f"- [Operations]({RAW}catalog/operations.json): vocabulary of the `operations` field (what an agent can do with a service, e.g. text-to-video, sms, street-geocoding); match your task to these ids",
          f"- [SHA256SUMS]({RAW}SHA256SUMS): checksums of llms.txt, llms-full.txt, schema and catalog/*.json (`sha256sum -c SHA256SUMS`)",
-         f"- [MCP server]({GH}#mcp-server): `npx -y github:{REPO}` or remote {MCP_URL} (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories",
+         f"- [MCP server]({GH}#mcp-server): `npx -y ai-agents-api-library` (npm) or remote {MCP_URL} (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories",
          "", "## Start free", "",
          f"{sum(map(is_free, items))} of {len(items)} services have a lasting free tier or free usage (JSON field `has_free_tier`; "
          f"exact limits in `free_tier`), and {sum(map(is_trial, items))} more give one-off free trial credits (`has_trial`). "

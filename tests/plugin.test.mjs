@@ -41,13 +41,15 @@ test("names line up across manifests", () => {
   assert.ok(pkg.bin[pkg.name], "npm bin named like the package, so `npx -y github:...` runs it");
 });
 
-test("plugin MCP server points at this repo and a file that exists", async () => {
+test("plugin MCP server runs the npm package, which has a bin and an MCP Registry name", async () => {
   // Kept in .mcp.json, not inline in plugin.json: `claude plugin details` only counts servers from .mcp.json.
   assert.equal(plugin.mcpServers, undefined, "declare MCP servers in .mcp.json, not plugin.json");
   const [srv] = Object.values((await json(".mcp.json")).mcpServers);
   assert.equal(srv.command, "npx");
-  const repo = new URL(plugin.repository).pathname.slice(1);
-  assert.deepEqual(srv.args, ["-y", `github:${repo}`]);
+  assert.deepEqual(srv.args, ["-y", pkg.name], "npx runs the published npm package");
+  const server = await json("server.json");
+  assert.equal(pkg.mcpName, server.name, "package.json mcpName lets the MCP Registry verify the npm package");
+  assert.deepEqual(server.packages?.map((x) => [x.identifier, x.version]), [[pkg.name, pkg.version]]);
   const bin = await read(pkg.bin[pkg.name]);
   assert.match(bin, /^#!\/usr\/bin\/env node/, "bin has a node shebang");
 });

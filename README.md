@@ -56,13 +56,13 @@ The catalog is also an MCP server with four tools: `search_apis` (filters: `quer
   "mcpServers": {
     "ai-agents-api-library": {
       "command": "npx",
-      "args": ["-y", "github:eater2/ai_agents_api_library"]
+      "args": ["-y", "ai-agents-api-library"]
     }
   }
 }
 ```
 
-Claude Code: `claude mcp add ai-agents-api-library -- npx -y github:eater2/ai_agents_api_library`
+Claude Code: `claude mcp add ai-agents-api-library -- npx -y ai-agents-api-library`
 
 No install: remote endpoint (Streamable HTTP, no key) `https://ai-agents-api-library.vercel.app/mcp`, e.g. `claude mcp add --transport http ai-agents-api-library https://ai-agents-api-library.vercel.app/mcp`. Listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ai-agents-api-library) as `io.github.eater2/ai-agents-api-library`.
 
