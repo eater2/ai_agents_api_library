@@ -1,6 +1,7 @@
 {
   "name": "ai-agents-api-library",
-  "version": "0.3.6",
+  "version": "0.3.7",
+  "mcpName": "io.github.eater2/ai-agents-api-library",
   "description": "MCP server: search a catalog of 300+ APIs and MCP servers that AI agents can call (auth, free tier, MCP endpoint, docs).",
   "type": "module",
   "bin": {

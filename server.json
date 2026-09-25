@@ -8,11 +8,21 @@
     "url": "https://github.com/eater2/ai_agents_api_library",
     "source": "github"
   },
-  "version": "0.3.6",
+  "version": "0.3.7",
   "remotes": [
     {
       "type": "streamable-http",
       "url": "https://ai-agents-api-library.vercel.app/mcp"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "ai-agents-api-library",
+      "version": "0.3.7",
+      "transport": {
+        "type": "stdio"
+      }
     }
   ]
 }

@@ -12,7 +12,7 @@ Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint,
 - Uptime (`uptime` in JSON): our own daily probe of each `base_url` and hosted MCP endpoint from GitHub Actions (US), 30-day window; up = any HTTP status below 500 (MCP: POST initialize); `probes`, `up`, `median_ms` and the last result
 - [Operations](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/operations.json): vocabulary of the `operations` field (what an agent can do with a service, e.g. text-to-video, sms, street-geocoding); match your task to these ids
 - [SHA256SUMS](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/SHA256SUMS): checksums of llms.txt, llms-full.txt, schema and catalog/*.json (`sha256sum -c SHA256SUMS`)
-- [MCP server](https://github.com/eater2/ai_agents_api_library#mcp-server): `npx -y github:eater2/ai_agents_api_library` or remote https://ai-agents-api-library.vercel.app/mcp (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories
+- [MCP server](https://github.com/eater2/ai_agents_api_library#mcp-server): `npx -y ai-agents-api-library` (npm) or remote https://ai-agents-api-library.vercel.app/mcp (Streamable HTTP) — tools search_apis, get_api, get_reviews, list_categories
 
 ## Start free
 
