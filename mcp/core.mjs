@@ -213,8 +213,27 @@ function evidence(e, op) {
   const tool = mcpTool(e, op);
   return tool ? `MCP tool ${tool}` : null;
 }
+// Hosted endpoints get a real MCP initialize (scripts/probe_mcp.py): ok, auth_oauth, auth_required answer as MCP servers.
+const HOSTED_OK = new Set(["ok", "auth_oauth", "auth_required"]);
+const HANDSHAKE_NOTE = {
+  auth_oauth: "hosted, answers MCP; needs an OAuth login",
+  auth_required: "hosted, answers MCP; needs a key or token",
+  not_mcp: "the MCP URL is a docs page, not a server",
+  blocked: "the MCP URL blocked our check",
+  down: "the MCP endpoint did not respond at the last check",
+};
+// A catalogued MCP server that exists: not a docs page or dead endpoint without an installable repo.
+const mcpUsable = (e) => e.mcp?.type !== "none" && !e.mcp?.config?.docs_only
+  && (!e.mcp?.handshake || HOSTED_OK.has(e.mcp.handshake.status) || Boolean(e.mcp.repo));
+const mcpHosted = (e) => HOSTED_OK.has(e.mcp?.handshake?.status);
+
 // What the MCP server can do for this operation, when we know its tools.
 function mcpFit(e, op) {
+  const fit = mcpToolFit(e, op);
+  const hs = HANDSHAKE_NOTE[e.mcp?.handshake?.status];
+  return fit && hs ? `${fit}; ${hs}` : fit || hs;
+}
+function mcpToolFit(e, op) {
   if (!e.mcp || e.mcp.type === "none" || !op) return undefined;
   if (e.mcp.config?.docs_only) return "docs-only: the server searches documentation and does not perform the operation";
   if (!e.mcp.tools?.length) return undefined;
@@ -331,7 +350,7 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.3.4" },
+    { name: "ai-agents-api-library", version: "0.3.5" },
     {
       instructions:
         "Catalog of third-party APIs and MCP servers (entries with a last-checked date) an agent can call after a one-time human setup " +
@@ -378,7 +397,7 @@ export function createServer() {
         query: z.string().optional().describe("The operation you need, e.g. 'text to video', 'geocode street addresses', 'send sms'"),
         category: z.string().optional().describe("Category id from list_categories, e.g. 'video-generation'"),
         mcp: z.enum(["official", "remote", "any"]).optional()
-          .describe("official: MCP server by the vendor; remote: hosted MCP endpoint (no install); any: any MCP server"),
+          .describe("official: MCP server by the vendor; remote: hosted endpoint that answered an MCP handshake (no install); any: any MCP server. Docs-only servers never count"),
         no_auth: z.boolean().optional().describe("Only services usable without any key"),
         free_tier: z.boolean().optional().describe("Only services with lasting free usage (not one-off trial credits)"),
         include_trials: z.boolean().optional().describe("With free_tier: also accept one-off trial or signup credits"),
@@ -396,9 +415,9 @@ export function createServer() {
       const bulk = bulkIntent(query, volume);
       const filters = { category, mcp, no_auth, free_tier, include_trials, no_card, auth };
       const passes = (e) => (!category || e.category === category)
-        // A docs-only MCP server searches documentation and does not perform the operation, so it does not count.
-        && (!mcp || (!e.mcp?.config?.docs_only && (mcp === "official" ? e.mcp?.type === "official"
-          : mcp === "remote" ? Boolean(e.mcp?.remote_url || e.mcp?.kind === "vendor-hosted") : e.mcp?.type !== "none")))
+        // Docs-only servers, docs pages and dead endpoints don't count; remote = a hosted endpoint that answered MCP.
+        && (!mcp || (mcpUsable(e) && (mcp === "official" ? e.mcp.type === "official"
+          : mcp === "remote" ? mcpHosted(e) : true)))
         && (no_auth === undefined || e.no_auth === no_auth)
         && (!free_tier || e.has_free_tier || (include_trials && e.has_trial))
         && (!no_card || (e.no_card ?? (e.no_auth || (e.has_free_tier && e.free_plan?.requires_card === false))))
