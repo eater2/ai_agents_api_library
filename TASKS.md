@@ -56,9 +56,9 @@ Dane (bf)
 - [x] Brakujący dostawcy: GUGiK (oficjalny polski geokoder), Photon, Textbelt — jeśli spełniają kryteria: dodane wszystkie trzy z `call` (GUGiK: bez klucza, tylko Polska; Photon: bez klucza, nie do pracy wsadowej; Textbelt: 1 SMS/dzień za darmo)
 
 Wywołania i MCP (3b)
-- [ ] Freepik: `call` dla czynności z `operations` (text-to-image albo potwierdzone text-to-video), nie image-to-video
-- [ ] Twilio: `mcp.config` wskazuje serwer tylko z dokumentacją, a `mcp.url` działający twilio-labs/mcp — uzgodnić
-- [ ] Pola SMS: rejestracja nadawcy (10DLC), ograniczenia trialu (np. Twilio tylko zweryfikowane numery), kraje; cena SMS do PL tam, gdzie publikowana
+- [x] Freepik: `call` dla czynności z `operations` (text-to-image albo potwierdzone text-to-video), nie image-to-video: text-to-video LTX Video 2.0 Pro (tylko prompt), host api.magnific.com
+- [x] Twilio: `mcp.config` wskazuje serwer tylko z dokumentacją, a `mcp.url` działający twilio-labs/mcp — uzgodnić: config = stdio `npx -y @twilio-alpha/mcp`, serwer dokumentacji w `mcp.config.note`
+- [x] Pola SMS: rejestracja nadawcy (10DLC), ograniczenia trialu (np. Twilio tylko zweryfikowane numery), kraje; cena SMS do PL tam, gdzie publikowana: pole `sms` dla 7 dostawców (Twilio, Vonage, Plivo, Telnyx, Sinch, AWS, Bird); cena do PL u 6 (bez Sinch)
 
 ## P0c — oceny i opinie: wywiady z 7 agentami (2026-09-24)
 

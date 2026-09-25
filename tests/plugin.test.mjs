@@ -147,6 +147,11 @@ test("usage data: examples are safe and match the entry", async () => {
       assert.doesNotMatch(quoted, /\$[A-Z][A-Z0-9_]{2,}/, `${e.id}: $VAR inside single quotes is not expanded`);
     }
   }
+  for (const e of all.filter((x) => x.sms)) {
+    for (const k of ["price_pl", "sender_registration", "trial_limits", "countries"]) {
+      if (e.sms[k]) assert.match(e.sms[`${k}_source`] || "", /^https:\/\//, `${e.id}: sms.${k} needs ${k}_source`);
+    }
+  }
   for (const e of all.filter((x) => x.mcp.config && !x.mcp.config.derived)) {
     const c = e.mcp.config;
     assert.ok(c.source_url?.startsWith("http"), `${e.id}: mcp.config.source_url`);

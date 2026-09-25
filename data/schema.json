@@ -120,6 +120,7 @@
             "env": {"type": "array", "items": {"type": "string"}, "description": "Environment variable names the server needs"},
             "docs_only": {"type": "boolean", "description": "The server only searches documentation and cannot call the API"},
             "derived": {"type": "boolean"},
+            "note": {"type": "string", "description": "Caveats, e.g. another server by the same vendor that only searches docs"},
             "source_url": {"type": "string", "format": "uri"},
             "checked_at": {"type": "string", "format": "date"}
           }
@@ -203,6 +204,21 @@
         "checked_at": {"type": "string", "format": "date"}
       },
       "required": ["method", "url", "example", "source_url"]
+    },
+    "sms": {
+      "type": "object",
+      "description": "Agent-facing JSON only (source: data/usage.json). SMS providers: facts agents need before sending.",
+      "properties": {
+        "price_pl": {"type": ["string", "null"], "description": "Price of one SMS to Poland as published"},
+        "price_pl_source": {"type": ["string", "null"]},
+        "sender_registration": {"type": ["string", "null"], "description": "Sender ID / 10DLC / toll-free registration rules"},
+        "sender_registration_source": {"type": ["string", "null"]},
+        "trial_limits": {"type": ["string", "null"], "description": "What cannot be done before upgrading (e.g. verified numbers only)"},
+        "trial_limits_source": {"type": ["string", "null"]},
+        "countries": {"type": ["string", "null"]},
+        "countries_source": {"type": ["string", "null"]},
+        "checked_at": {"type": "string", "format": "date"}
+      }
     },
     "unit_price": {
       "type": "object",
