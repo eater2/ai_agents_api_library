@@ -148,7 +148,12 @@
   }
  },
  "etsy-open-api-v3": {
-  "base_url": "https://openapi.etsy.com/v3"
+  "base_url": "https://openapi.etsy.com/v3",
+  "free_plan": {
+   "kind": "free_tier",
+   "source_url": "https://developer.etsy.com/documentation/essentials/rate-limits",
+   "checked_at": "2026-09-25"
+  }
  },
  "trimble-connect-api": {
   "base_url": "https://app.connect.trimble.com/tc/api/2.0"
@@ -202,6 +207,231 @@
   "rate_limits": {
    "summary": "Free key: 1 SMS/day; paid keys limited by purchased credits",
    "source_url": "https://docs.textbelt.com/",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "plivo": {
+  "free_plan": {
+   "kind": "trial",
+   "requires_card": false,
+   "quota": "free credits for the first 3 weeks (Professional plan: voice and SIP)",
+   "period": "one_time",
+   "source_url": "https://www.plivo.com/docs/faq/account/plans",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "telnyx": {
+  "free_plan": {
+   "kind": "trial",
+   "requires_card": null,
+   "quota": "$5 test credit, 1 verified number, 100 messages/day",
+   "period": "one_time",
+   "source_url": "https://developers.telnyx.com/docs/account-setup/levels-and-capabilities/trial",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "twilio": {
+  "free_plan": {
+   "kind": "trial",
+   "requires_card": false,
+   "quota": "100 SMS, 100 WhatsApp messages, 3,000 emails, 75 voice minutes; 30 days; verified numbers in the signup country only, predefined templates",
+   "period": "one_time",
+   "source_url": "https://www.twilio.com/docs/usage/trials",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "hyperbrowser": {
+  "free_plan": {
+   "kind": "free_tier",
+   "requires_card": false,
+   "quota": "5,000 credits, 1 concurrent browser, 7-day data retention",
+   "source_url": "https://www.hyperbrowser.ai/pricing",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "stability-ai-3d-stable-fast-3d-spar3d-api": {
+  "free_plan": {
+   "kind": "trial",
+   "quota": "25 free credits (1 credit = $0.01)",
+   "period": "one_time",
+   "source_url": "https://platform.stability.ai/pricing",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "tripo-api": {
+  "free_plan": {
+   "kind": "trial",
+   "quota": "300 free credits (1 credit = $0.01)",
+   "period": "one_time",
+   "source_url": "https://docs.tripo3d.ai/get-started/pricing.html",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "deepl-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "1,000,000 characters/month (API Developer plan, EUR 0 base price)",
+   "period": "month",
+   "source_url": "https://www.deepl.com/en/pro-api",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "codesandbox-sdk": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "400 VM credits/month (~40 Nano VM hours), 10 concurrent VMs",
+   "period": "month",
+   "source_url": "https://github.com/codesandbox/docs/blob/main/packages/projects-docs/pages/sdk/pricing.mdx",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "piston": {
+  "free_plan": {
+   "kind": "free_tier",
+   "source_url": "https://github.com/engineer-man/piston",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "vonage-api": {
+  "free_plan": {
+   "kind": "trial",
+   "requires_card": false,
+   "period": "one_time",
+   "source_url": "https://www.vonage.com/communications-apis/pricing/",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "synthflow-api": {
+  "free_plan": {
+   "kind": "none",
+   "source_url": "https://synthflow.ai/pricing",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "cal-com-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "120 requests/minute per API key",
+   "source_url": "https://cal.com/docs/api-reference/v2/introduction",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "microsoft-graph-outlook-teams-onedrive": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "standard APIs at no extra cost with user licenses; metered APIs billed per use",
+   "source_url": "https://learn.microsoft.com/en-us/graph/metered-api-overview",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "todoist-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "1,000 partial sync + 100 full sync requests per 15 min per user",
+   "source_url": "https://developer.todoist.com/api/v1/",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "trello-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "300 requests/10 s per API key, 100 requests/10 s per token",
+   "source_url": "https://developer.atlassian.com/cloud/trello/guides/rest-api/rate-limits/",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "mastodon-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "300 requests/5 min per account (default)",
+   "source_url": "https://docs.joinmastodon.org/api/rate-limits/",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "meta-graph-api-facebook-instagram": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "200 calls/hour x number of app users (app-token platform limit)",
+   "source_url": "https://developers.facebook.com/docs/graph-api/overview/rate-limiting/",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "pinterest-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "Trial access: 1,000 requests/day; Standard access (after review): 100 requests/s per user per app",
+   "period": "day",
+   "source_url": "https://developers.pinterest.com/docs/reference/rate-limits/",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "reddit-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "source_url": "https://redditinc.com/policies/data-api-terms",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "tiktok-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "600 requests/min per endpoint (user info, video query/list)",
+   "source_url": "https://developers.tiktok.com/doc/tiktok-api-v2-rate-limit",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "here-location-services": {
+  "free_plan": {
+   "kind": "free_tier",
+   "requires_card": true,
+   "period": "month",
+   "source_url": "https://www.here.com/learn/blog/how-to-get-started-with-here-platform",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "bigcommerce-api": {
+  "free_plan": {
+   "kind": "trial",
+   "quota": "15-day free trial store",
+   "period": "one_time",
+   "source_url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "mercado-libre-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "source_url": "https://developers.mercadolibre.com.ar/en_us/register-your-application",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "printful-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "quota": "120 API calls/minute",
+   "source_url": "https://developers.printful.com/docs/",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "shopify-admin-storefront-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "source_url": "https://help.shopify.com/en/partners/partner-program/getting-started",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "woocommerce-rest-api": {
+  "free_plan": {
+   "kind": "free_tier",
+   "source_url": "https://woocommerce.com/pricing/",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "paragon-actionkit": {
+  "free_plan": {
+   "kind": "trial",
+   "period": "one_time",
+   "source_url": "https://www.useparagon.com/pricing",
    "checked_at": "2026-09-25"
   }
  }
