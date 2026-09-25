@@ -318,7 +318,7 @@ def load_usage(ids):
     usage = json.loads(f.read_text("utf-8")) if f.exists() else {}
     for eid, u in usage.items():
         assert eid in ids, f"data/usage.json: unknown id {eid}"
-        assert set(u) <= {"call", "unit_price", "mcp_config", "mcp_issue"}, f"data/usage.json {eid}: {set(u)}"
+        assert set(u) <= {"call", "unit_price", "mcp_config", "mcp_issue", "sms"}, f"data/usage.json {eid}: {set(u)}"
         c = u.get("call")
         if c:
             assert c.get("method") and re.match(r"https?://|\{", c.get("url", "")) and c.get("example") and c.get("source_url"), f"usage {eid}: call"
@@ -356,6 +356,13 @@ def details_items(e):
     u = USAGE.get(e.get("id"), {})
     if u.get("call"):
         out.append(("Example call", f"{u['call'].get('operation', '')}: {u['call']['method']} {u['call']['url']}".lstrip(": "), u["call"].get("source_url")))
+    sms = u.get("sms") or {}
+    if sms.get("price_pl"):
+        out.append(("SMS to Poland", sms["price_pl"], sms.get("price_pl_source")))
+    if sms.get("sender_registration"):
+        out.append(("Sender registration", sms["sender_registration"], sms.get("sender_registration_source")))
+    if sms.get("trial_limits"):
+        out.append(("Trial limits", sms["trial_limits"], sms.get("trial_limits_source")))
     if u.get("unit_price"):
         out.append(("Unit price", u["unit_price"]["summary"], u["unit_price"].get("source_url")))
     if (u.get("mcp_config") or {}).get("docs_only"):
@@ -500,7 +507,8 @@ def llms(cats, items, dirs):
          "mcp{maintainer, remote_url, repo, tools, covers_full_api} plus derived mcp.kind (vendor-hosted/official/community/none) "
          "and mcp.domain_verified, mcp.config (connection snippet: transport, url or command/args, headers, env, oauth, docs_only; "
          "derived: true when built from the endpoint URL alone), mcp.issue. "
-         "For popular services also call{operation, method, url, example (curl), response_fields, async} and unit_price{summary}, each with source_url and checked_at.",
+         "For popular services also call{operation, method, url, example (curl), response_fields, async} and unit_price{summary}, each with source_url and checked_at. "
+         "SMS providers: sms{price_pl, sender_registration, trial_limits, countries}, each with its *_source URL.",
          "", "## Data", "",
          f"- [Full catalog (JSON)]({RAW}catalog/all.json): all entries in one array",
          f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
@@ -837,7 +845,7 @@ def main():
             x["mcp"]["handshake"] = {"url": hs["url"], "status": hs["status"], "checked_at": hs["checked_at"]}
         if u.get("mcp_issue"):
             x["mcp"]["issue"] = u["mcp_issue"]
-        for k in ("call", "unit_price"):
+        for k in ("call", "unit_price", "sms"):
             if u.get(k):
                 x[k] = u[k]
         x["has_free_tier"] = is_free(e)
