@@ -65,6 +65,9 @@ jobs:
         run: |
           if [ -z "$NODE_AUTH_TOKEN" ]; then echo "NPM_TOKEN not set, skipping npm publish"; exit 0; fi
           echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
+          if npm view "$(jq -r .name package.json)@${TAG#v}" version >/dev/null 2>&1; then
+            echo "${TAG#v} is already on npm, skipping"; exit 0
+          fi
           npm publish --provenance --access public
 
       - name: Publish server.json to the MCP Registry (GitHub OIDC, no stored token)
@@ -72,4 +75,8 @@ jobs:
           test "$(jq -r .version server.json)" = "${TAG#v}" || { echo "server.json version != $TAG"; exit 1; }
           curl -sL https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz | tar xz mcp-publisher
           ./mcp-publisher login github-oidc
-          ./mcp-publisher publish 2>&1 | tee publish.log || grep -qi "already exists\|duplicate" publish.log
+          # The registry checks that the npm version exists; a fresh npm release can take a minute to show up.
+          for i in $(seq 1 20); do npm view "$(jq -r .name package.json)@${TAG#v}" version >/dev/null 2>&1 && break; sleep 15; done
+          if ./mcp-publisher publish > publish.log 2>&1; then cat publish.log
+          elif grep -qi "cannot publish duplicate\|already exists" publish.log; then cat publish.log; echo "version already in the registry"
+          else cat publish.log; exit 1; fi
