@@ -8525,5 +8525,65 @@
    "source_url": "https://api.zoo.dev",
    "url": "https://api.zoo.dev/file/conversion/{src_format}/{output_format}"
   }
+ },
+ "gugik-geocoding": {
+  "call": {
+   "operation": "geocode a Polish street address",
+   "method": "GET",
+   "url": "https://services.gugik.gov.pl/uug/?request=GetAddress&address={city}, {street} {number}&srid=4326",
+   "example": "curl -s 'https://services.gugik.gov.pl/uug/?request=GetAddress&address=Warszawa,%20Marsza%C5%82kowska%201&srid=4326'",
+   "response_fields": [
+    "found objects",
+    "returned objects",
+    "results.1.city",
+    "results.1.street",
+    "results.1.number",
+    "results.1.code",
+    "results.1.teryt",
+    "results.1.x",
+    "results.1.y",
+    "results.1.accuracy"
+   ],
+   "async": null,
+   "source_url": "https://services.gugik.gov.pl/uug/opis.html",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "photon-komoot": {
+  "call": {
+   "operation": "geocode an address",
+   "method": "GET",
+   "url": "https://photon.komoot.io/api/?q={query}&limit={n}&lang={lang}",
+   "example": "curl -s 'https://photon.komoot.io/api/?q=Marsza%C5%82kowska%201%20Warszawa&limit=1&lang=en'",
+   "response_fields": [
+    "features[].geometry.coordinates",
+    "features[].properties.name",
+    "features[].properties.street",
+    "features[].properties.housenumber",
+    "features[].properties.postcode",
+    "features[].properties.city",
+    "features[].properties.countrycode"
+   ],
+   "async": null,
+   "source_url": "https://photon.komoot.io/",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "textbelt": {
+  "call": {
+   "operation": "send an SMS",
+   "method": "POST",
+   "url": "https://textbelt.com/text",
+   "example": "curl -X POST https://textbelt.com/text --data-urlencode phone=\"$PHONE_E164\" --data-urlencode message=\"Hello from my agent\" -d key=\"$TEXTBELT_KEY\"",
+   "response_fields": [
+    "success",
+    "textId",
+    "quotaRemaining",
+    "error"
+   ],
+   "async": null,
+   "source_url": "https://docs.textbelt.com/",
+   "checked_at": "2026-09-25"
+  }
  }
 }

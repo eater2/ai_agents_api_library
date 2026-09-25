@@ -50,10 +50,10 @@ Wyszukiwanie i skill (54)
 - [x] Skill i opisy narzędzi według sekcji 5 raportu: „currently connected tools”, zawężona klauzula 403, nowa definicja `exact`, wyzwalacz `get_api`, gdy użytkownik sam wskazuje usługę („znany dostawca to nie sprawdzony dostawca”), zawężone „confirm in docs”, bez „web search or scraping” we frontmatterze
 
 Dane (bf)
-- [ ] Konfiguracje MCP `derived` (37): handshake `initialize`; zostają tylko odpowiadające jak serwer MCP, z informacją o wymaganym logowaniu (OAuth/klucz); strony dokumentacji usunięte
+- [x] Konfiguracje MCP `derived` (37): handshake `initialize`; zostają tylko odpowiadające jak serwer MCP, z informacją o wymaganym logowaniu (OAuth/klucz); strony dokumentacji usunięte — `scripts/probe_mcp.py` → `data/mcp-handshake.json` (174 endpointy: 42 ok, 100 OAuth, 22 klucz, 7 strona WWW, 2 zablokowane, 1 nie działa), pole `mcp.handshake`; zostały 34 z 37 wyprowadzonych, z polem `auth`
 - [ ] `free_plan` ze źródłem dla 28 wpisów, gdzie darmowy plan/trial pochodzi tylko z tekstu (m.in. Freepik: jednorazowe ~5 EUR = trial)
-- [ ] Uptime: definicja „reachable” (host odpowiada, HTTP < 500) jawnie w JSON, żeby 404 nie wyglądało na „API działa”
-- [ ] Brakujący dostawcy: GUGiK (oficjalny polski geokoder), Photon, Textbelt — jeśli spełniają kryteria
+- [x] Uptime: definicja „reachable” (host odpowiada, HTTP < 500) jawnie w JSON, żeby 404 nie wyglądało na „API działa” — pole `uptime.up_means`
+- [x] Brakujący dostawcy: GUGiK (oficjalny polski geokoder), Photon, Textbelt — jeśli spełniają kryteria: dodane wszystkie trzy z `call` (GUGiK: bez klucza, tylko Polska; Photon: bez klucza, nie do pracy wsadowej; Textbelt: 1 SMS/dzień za darmo)
 
 Wywołania i MCP (3b)
 - [ ] Freepik: `call` dla czynności z `operations` (text-to-image albo potwierdzone text-to-video), nie image-to-video

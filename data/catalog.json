@@ -12670,6 +12670,44 @@
     "data_policy": null
   },
   {
+    "id": "textbelt",
+    "name": "Textbelt",
+    "category": "sms-messaging",
+    "homepage": "https://textbelt.com/",
+    "docs": "https://docs.textbelt.com/",
+    "auth": "api_key",
+    "auth_hint": "A key sent in the 'key' form field: the shared free key 'textbelt' (1 SMS/day, no signup) or a paid key bought with a one-time card payment at https://textbelt.com/purchase/; appending '_test' to a key validates a request without sending.",
+    "mcp": {
+      "type": "none",
+      "url": null
+    },
+    "free_tier": "Free: shared key 'textbelt' sends 1 SMS per day; paid credits are a one-time purchase",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "notes": "SMS containing URLs need extra permission. Senders must identify their business; recurring messages need opt-out text (added by Textbelt). Reply webhooks for US numbers only. Use E.164 numbers. Delivery status for 1 week at /status/{textId}; remaining credits at /quota/{key}. Not for bulk or unsolicited messaging.",
+    "desc_en": "Send an SMS to a phone number (US or international) with one HTTP POST, and check delivery status and remaining credits.",
+    "desc_pl": "Wysyła SMS na numer telefonu (w USA lub za granicą) jednym żądaniem HTTP POST oraz sprawdza status doręczenia i pozostałe kredyty.",
+    "operations": [
+      "sms"
+    ],
+    "verified": "2026-09-25",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "1 SMS with the shared 'textbelt' key",
+      "period": "day",
+      "source_url": "https://textbelt.com/",
+      "checked_at": "2026-09-25"
+    },
+    "base_url": "https://textbelt.com",
+    "rate_limits": {
+      "summary": "Free key: 1 SMS/day; paid keys limited by purchased credits",
+      "source_url": "https://docs.textbelt.com/",
+      "checked_at": "2026-09-25"
+    }
+  },
+  {
     "id": "twilio",
     "name": "Twilio",
     "category": "sms-messaging",
@@ -15639,6 +15677,39 @@
     ]
   },
   {
+    "id": "gugik-geocoding",
+    "name": "GUGiK Universal Geocoding Service (UUG)",
+    "category": "maps-geo-weather",
+    "homepage": "https://services.gugik.gov.pl/uug/",
+    "docs": "https://services.gugik.gov.pl/uug/opis.html",
+    "auth": "none",
+    "auth_hint": "No credential is needed; the service is a public government endpoint.",
+    "mcp": {
+      "type": "none",
+      "url": null
+    },
+    "free_tier": "Free, no key: public government geocoding service for Polish addresses, streets, towns, road markers and level crossings",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "notes": "Covers Poland only. Requests: GetAddress, GetAddressReverse, GetCity, GetStreet, GetAddresses, GetRoadMarker, GetLevelCrossing, GetLocation, GetRoads. Without srid the coordinates are PUWG 1992 (EPSG:2180); pass srid=4326 for WGS84. No published rate limits or terms of use, so keep request volume moderate. Results are a numbered object ('1', '2', ...), not an array.",
+    "desc_en": "Geocode a Polish street address to coordinates with official TERYT/SIMC/ULIC codes and postcode, or reverse-geocode a point to the nearest address, via Poland's national geodesy office.",
+    "desc_pl": "Zamienia polski adres na współrzędne z oficjalnymi kodami TERYT/SIMC/ULIC i kodem pocztowym albo znajduje najbliższy adres dla punktu, korzystając z usługi Głównego Urzędu Geodezji i Kartografii.",
+    "operations": [
+      "street-geocoding",
+      "reverse-geocoding"
+    ],
+    "verified": "2026-09-25",
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": "no published quota",
+      "source_url": "https://services.gugik.gov.pl/uug/opis.html",
+      "checked_at": "2026-09-25"
+    },
+    "base_url": "https://services.gugik.gov.pl/uug/"
+  },
+  {
     "id": "here-location-services",
     "name": "HERE Location Services",
     "category": "maps-geo-weather",
@@ -16367,6 +16438,44 @@
     "operations": [
       "places-search"
     ]
+  },
+  {
+    "id": "photon-komoot",
+    "name": "Photon (komoot)",
+    "category": "maps-geo-weather",
+    "homepage": "https://photon.komoot.io/",
+    "docs": "https://github.com/komoot/photon",
+    "auth": "none",
+    "auth_hint": "No credential is needed for the public instance at photon.komoot.io.",
+    "mcp": {
+      "type": "none",
+      "url": null
+    },
+    "free_tier": "Free, no key: public demo instance under fair use; heavy usage is throttled or banned",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "notes": "Not for bulk geocoding on the public instance: extensive usage is throttled or banned and availability is not guaranteed; self-host (Apache 2.0) for volume. OpenStreetMap data: attribution required. Typo-tolerant, multilingual (lang), location bias (lat/lon). A house-number query may return a street-level match.",
+    "desc_en": "Geocode addresses and place names worldwide from OpenStreetMap data with typo-tolerant search-as-you-type, or reverse-geocode coordinates to the nearest address.",
+    "desc_pl": "Geokoduje adresy i nazwy miejsc na całym świecie na podstawie danych OpenStreetMap, z wyszukiwaniem odpornym na literówki i podpowiedziami w trakcie pisania, albo zamienia współrzędne na najbliższy adres.",
+    "operations": [
+      "street-geocoding",
+      "reverse-geocoding"
+    ],
+    "verified": "2026-09-25",
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "quota": "no fixed quota; fair use, extensive usage throttled",
+      "source_url": "https://github.com/komoot/photon",
+      "checked_at": "2026-09-25"
+    },
+    "base_url": "https://photon.komoot.io",
+    "rate_limits": {
+      "summary": "No numeric limit; fair use required, extensive usage throttled or banned; self-host for large volumes",
+      "source_url": "https://github.com/komoot/photon",
+      "checked_at": "2026-09-25"
+    }
   },
   {
     "id": "tomorrow-io-api",

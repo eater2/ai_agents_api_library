@@ -45,7 +45,8 @@ test("task 1: text-to-video returns generators only, or an explicit gap", { skip
 test("task 2: geocoding 200 street addresses", { skip }, async () => {
   const res = await search({ query: "geocode 200 street addresses in Poland" });
   const top = names(res, 5);
-  assert.ok(has(top, /geoapify|mapbox|here/i), `expected Geoapify/Mapbox/HERE in ${top}`);
+  // GUGiK is the official Polish geocoder (added after the retest), so it counts as a right answer too.
+  assert.ok(has(top, /geoapify|mapbox|here|gugik/i), `expected Geoapify/Mapbox/HERE/GUGiK in ${top}`);
   assert.ok(!has(top, /ip2location/i), `IP geolocation in street geocoding results: ${top}`);
   const nominatim = res.results.findIndex((r) => /nominatim/i.test(r.name));
   if (nominatim >= 0) {
@@ -58,7 +59,7 @@ test("task 3: SMS reminder", { skip }, async () => {
   const res = await search({ query: "send an SMS reminder" });
   const top3 = names(res, 3);
   // Any dedicated SMS provider counts; the catalog has several since the product test.
-  const smsProviders = /twilio|vonage|plivo|sinch|telnyx|aws end user messaging|bird/i;
+  const smsProviders = /twilio|vonage|plivo|sinch|telnyx|aws end user messaging|bird|textbelt/i;
   assert.ok(top3.every((n) => smsProviders.test(n)), `expected only SMS providers in top 3: ${top3}`);
   const top5 = names(res, 5);
   assert.ok(!has(top5, /line messaging|discord|whatsapp/i), `chat apps in SMS results: ${top5}`);

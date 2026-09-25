@@ -163,5 +163,46 @@
    "in": "header",
    "name": "x-api-key"
   }
+ },
+ "gugik-geocoding": {
+  "free_plan": {
+   "kind": "no_key",
+   "requires_card": false,
+   "quota": "no published quota",
+   "source_url": "https://services.gugik.gov.pl/uug/opis.html",
+   "checked_at": "2026-09-25"
+  },
+  "base_url": "https://services.gugik.gov.pl/uug/"
+ },
+ "photon-komoot": {
+  "free_plan": {
+   "kind": "no_key",
+   "requires_card": false,
+   "quota": "no fixed quota; fair use, extensive usage throttled",
+   "source_url": "https://github.com/komoot/photon",
+   "checked_at": "2026-09-25"
+  },
+  "base_url": "https://photon.komoot.io",
+  "rate_limits": {
+   "summary": "No numeric limit; fair use required, extensive usage throttled or banned; self-host for large volumes",
+   "source_url": "https://github.com/komoot/photon",
+   "checked_at": "2026-09-25"
+  }
+ },
+ "textbelt": {
+  "free_plan": {
+   "kind": "free_tier",
+   "requires_card": false,
+   "quota": "1 SMS with the shared 'textbelt' key",
+   "period": "day",
+   "source_url": "https://textbelt.com/",
+   "checked_at": "2026-09-25"
+  },
+  "base_url": "https://textbelt.com",
+  "rate_limits": {
+   "summary": "Free key: 1 SMS/day; paid keys limited by purchased credits",
+   "source_url": "https://docs.textbelt.com/",
+   "checked_at": "2026-09-25"
+  }
  }
 }
