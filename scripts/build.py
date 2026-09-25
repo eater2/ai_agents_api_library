@@ -293,15 +293,23 @@ def mcp_details(e):
     return m
 
 
-def mcp_config(e, m, usage):
-    """Connection snippet for the MCP server: researched (data/usage.json) or derived from a hosted endpoint."""
+HANDSHAKE_AUTH = {"ok": "none", "auth_oauth": "oauth", "auth_required": "header"}
+
+
+HANDSHAKE = {}
+
+
+def mcp_config(e, m, usage, hs=None):
+    """Connection snippet for the MCP server: researched (data/usage.json) or derived from a hosted endpoint.
+    A derived snippet is published only when a real `initialize` handshake (scripts/probe_mcp.py) found an
+    MCP server at that URL; the handshake also tells how the client authenticates."""
     if "mcp_config" in usage:
         return usage["mcp_config"]
     remote = m.get("remote_url") or (m.get("url") if m.get("domain_verified") is not None else None)
-    if not remote:
+    if not remote or not hs or hs.get("url") != remote or hs.get("status") not in HANDSHAKE_AUTH:
         return None
     return {"transport": "sse" if re.search(r"/sse/?$", remote) else "streamable-http", "url": remote,
-            "derived": True}  # from the endpoint URL only: auth (OAuth or header) not researched yet
+            "auth": HANDSHAKE_AUTH[hs["status"]], "derived": True, "handshake_at": hs["checked_at"]}
 
 
 def load_usage(ids):
@@ -767,7 +775,8 @@ def write(path, text):
 
 def uptime_summary(rec):
     """Rolling availability from scripts/probe_uptime.py: probes, how many answered, median latency, last result."""
-    out = {"window_days": 30}  # method: see llms.txt and scripts/probe_uptime.py
+    out = {"window_days": 30,  # method: see llms.txt and scripts/probe_uptime.py
+           "up_means": "host reachable: HTTP < 500, even 401/404; not a test of any endpoint"}
     for kind, name in (("api", "api"), ("mcp", "mcp_remote")):
         h = (rec.get(kind) or {}).get("history") or []
         if not h:
@@ -786,6 +795,9 @@ def main():
     USAGE = load_usage({e.get("id") for e in items})
     uptime_file = DATA / "uptime.json"
     uptime = json.loads(uptime_file.read_text("utf-8")) if uptime_file.exists() else {}
+    global HANDSHAKE
+    hs_file = DATA / "mcp-handshake.json"
+    HANDSHAKE = json.loads(hs_file.read_text("utf-8")) if hs_file.exists() else {}
     ratings_file = DATA / "ratings.json"
     RATINGS = json.loads(ratings_file.read_text("utf-8")) if ratings_file.exists() else {}
     VERIFIED = max((e.get("verified") or "" for e in items), default="") or date.today().isoformat()
@@ -817,7 +829,12 @@ def main():
         x["no_auth"] = e["auth"] == "none"
         x["mcp"] = mcp_details(e)
         u = USAGE.get(e["id"], {})
-        x["mcp"]["config"] = mcp_config(e, x["mcp"], u) if x["mcp"]["kind"] != "none" else None
+        hs = HANDSHAKE.get(e["id"])
+        x["mcp"]["config"] = mcp_config(e, x["mcp"], u, hs) if x["mcp"]["kind"] != "none" else None
+        if hs and x["mcp"]["kind"] != "none":
+            # Result of a real MCP `initialize` against the hosted endpoint: ok | auth_oauth | auth_required |
+            # blocked (bot protection, unknown) | not_mcp (a web page, not a server) | down
+            x["mcp"]["handshake"] = {"url": hs["url"], "status": hs["status"], "checked_at": hs["checked_at"]}
         if u.get("mcp_issue"):
             x["mcp"]["issue"] = u["mcp_issue"]
         for k in ("call", "unit_price"):
