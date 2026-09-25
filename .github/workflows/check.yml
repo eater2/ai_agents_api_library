@@ -57,7 +57,7 @@ jobs:
         if: github.event_name != 'pull_request'
         continue-on-error: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TRAFFIC_TOKEN || secrets.GITHUB_TOKEN }}  # TRAFFIC_TOKEN: fine-grained PAT with Administration: read (views, clones)
         run: python scripts/stats.py
 
       - name: Rebuild with fresh link status
