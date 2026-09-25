@@ -40,6 +40,26 @@ Na koniec
 - [x] Pliki kategorii w zwartym JSON (wpis na linię): wszystkie < 60 KB po dodaniu `call` (bf)
 - [x] `call` dla pozostałych 78 wpisów tylko z oficjalnej specyfikacji/dokumentacji: +64, razem 316/328 (2026-09-25, bf). Bez `call` (brak oficjalnego źródła albo brak REST): serper, framer, tencent-edgeone-pages, deepgram-voice-agent-api, mermaid-chart-api, playwright-mcp-microsoft, soundraw-api, modal, cloudflare-sandbox-sdk, piston, ebay-apis, zapier-mcp-ai-actions. Przy okazji: usunięte structurizr (chmura wyłączona) i csm (domena nie działa); poprawione zoo (brak REST text-to-CAD), piston (publiczna instancja za tokenem), base_url etsy/trimble, auth anthropic
 
+## P0d — retest z 7 agentami (2026-09-25)
+
+Źródło: `research/agent-interviews/2026-09-25-product-test-retest/report.md`. Wynik: 0× tak, 7× warunkowo. Jedyna wspólna blokada: zaufanie do pól decyzyjnych (`match`, `free_tier`, MCP). Wydatki OpenRouter: limit 20 USD (`OPENROUTER_BUDGET_USD`).
+
+Wyszukiwanie i skill (54)
+- [ ] `match: exact` tylko gdy `call.operation` lub narzędzie MCP realizuje żądaną czynność (Freepik: przykład image-to-video przy text-to-video; Google Maps MCP bez narzędzia geokodowania; HF bez generowania wideo); MCP `docs_only` bez narzędzia dla czynności → niżej / oznaczone
+- [ ] Ranking pod zadanie: `requires_card` przy `no_card`, trial ≠ free (`include_trials`), wolumen/bulk, uwierzytelnianie `cloud_iam` niżej (AWS SMS był 1., Esri z kartą 1. przy geokodowaniu); Vonage/Telnyx/HERE/Geoapify/Mapbox są w katalogu, a nie trafiły do top 5
+- [ ] Skill i opisy narzędzi według sekcji 5 raportu: „currently connected tools”, zawężona klauzula 403, nowa definicja `exact`, wyzwalacz `get_api`, gdy użytkownik sam wskazuje usługę („znany dostawca to nie sprawdzony dostawca”), zawężone „confirm in docs”, bez „web search or scraping” we frontmatterze
+
+Dane (bf)
+- [ ] Konfiguracje MCP `derived` (37): handshake `initialize`; zostają tylko odpowiadające jak serwer MCP, z informacją o wymaganym logowaniu (OAuth/klucz); strony dokumentacji usunięte
+- [ ] `free_plan` ze źródłem dla 28 wpisów, gdzie darmowy plan/trial pochodzi tylko z tekstu (m.in. Freepik: jednorazowe ~5 EUR = trial)
+- [ ] Uptime: definicja „reachable” (host odpowiada, HTTP < 500) jawnie w JSON, żeby 404 nie wyglądało na „API działa”
+- [ ] Brakujący dostawcy: GUGiK (oficjalny polski geokoder), Photon, Textbelt — jeśli spełniają kryteria
+
+Wywołania i MCP (3b)
+- [ ] Freepik: `call` dla czynności z `operations` (text-to-image albo potwierdzone text-to-video), nie image-to-video
+- [ ] Twilio: `mcp.config` wskazuje serwer tylko z dokumentacją, a `mcp.url` działający twilio-labs/mcp — uzgodnić
+- [ ] Pola SMS: rejestracja nadawcy (10DLC), ograniczenia trialu (np. Twilio tylko zweryfikowane numery), kraje; cena SMS do PL tam, gdzie publikowana
+
 ## P0c — oceny i opinie: wywiady z 7 agentami (2026-09-24)
 
 Źródło: `research/agent-interviews/2026-09-24-ratings/report.md`. Wniosek: średnia gwiazdek i liczba opinii to dla 6/7 agentów szum, zaufania do katalogu nie zwiększają (0/7 wyraźnie). Liczą się: niezależny uptime (7/7), aktywność repo MCP (`archived`, `pushed_at`; 5/7) i opinie o konkretnych awariach API (tylko przy remisie).
