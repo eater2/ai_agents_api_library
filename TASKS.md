@@ -84,7 +84,7 @@ Wywołania i MCP (3b)
 - [x] Skill Claude (`skills/ai-agents-api-library/SKILL.md`) + ZIP do wgrania w claude.ai (`docs/ai-agents-api-library-skill.zip`)
 - [x] Plugin Claude Code z marketplace w repo: `/plugin marketplace add eater2/ai_agents_api_library`, `/plugin install ai-agents-api-library@eater2`
 - [x] Zgłoszenie pluginu do katalogu Anthropic (2026-09-24, Claude Code, kontakt: airenovationcalculator@gmail.com) — status: pending review, https://platform.claude.com/plugins/submissions
-- [ ] Publikacja paczki npm (wymaga tokenu npm)
+- [x] Publikacja paczki npm: https://www.npmjs.com/package/ai-agents-api-library (0.3.6, 2026-09-25, z podpisem provenance); kolejne wersje publikuje `release.yml` przy tagu `v*` (sekret `NPM_TOKEN`)
 - [x] Oficjalny rejestr MCP: `io.github.eater2/ai-agents-api-library` 0.1.0 (`server.json`, `mcp-publisher`, 2026-09-24)
 - [x] Rejestr MCP aktualizowany automatycznie przy każdym tagu `v*` (krok w `release.yml`, GitHub OIDC, bez przechowywanego tokenu); rejestr pokazywał 0.1.0 przy wersji 0.3.3
 - [x] Smithery: https://smithery.ai/servers/eater2/ai-agents-api-library (namespace `eater2`, zdalny URL, 2026-09-24)
