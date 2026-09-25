@@ -48,7 +48,21 @@ def token():
 TOKEN = token()
 
 
+def usage_usd():
+    req = urllib.request.Request("https://openrouter.ai/api/v1/credits", headers={"Authorization": f"Bearer {TOKEN}"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)["data"]["total_usage"]
+
+
+# Spending cap for one research session: OPENROUTER_BUDGET_USD (e.g. 20) stops new calls once the account's
+# total usage has grown by that much since this process started.
+BUDGET = float(os.environ.get("OPENROUTER_BUDGET_USD") or 0)
+START_USAGE = usage_usd() if BUDGET else 0.0
+
+
 def chat(model, messages, max_tokens=1200):
+    if BUDGET and usage_usd() - START_USAGE >= BUDGET:
+        raise RuntimeError(f"budget of ${BUDGET:.2f} reached; not calling {model}")
     body = json.dumps({"model": model, "messages": messages, "max_tokens": max_tokens, "temperature": 0.7}).encode()
     req = urllib.request.Request("https://openrouter.ai/api/v1/chat/completions", data=body, headers={
         "Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json",
