@@ -45,9 +45,9 @@ Na koniec
 Źródło: `research/agent-interviews/2026-09-25-product-test-retest/report.md`. Wynik: 0× tak, 7× warunkowo. Jedyna wspólna blokada: zaufanie do pól decyzyjnych (`match`, `free_tier`, MCP). Wydatki OpenRouter: limit 20 USD (`OPENROUTER_BUDGET_USD`).
 
 Wyszukiwanie i skill (54)
-- [ ] `match: exact` tylko gdy `call.operation` lub narzędzie MCP realizuje żądaną czynność (Freepik: przykład image-to-video przy text-to-video; Google Maps MCP bez narzędzia geokodowania; HF bez generowania wideo); MCP `docs_only` bez narzędzia dla czynności → niżej / oznaczone
-- [ ] Ranking pod zadanie: `requires_card` przy `no_card`, trial ≠ free (`include_trials`), wolumen/bulk, uwierzytelnianie `cloud_iam` niżej (AWS SMS był 1., Esri z kartą 1. przy geokodowaniu); Vonage/Telnyx/HERE/Geoapify/Mapbox są w katalogu, a nie trafiły do top 5
-- [ ] Skill i opisy narzędzi według sekcji 5 raportu: „currently connected tools”, zawężona klauzula 403, nowa definicja `exact`, wyzwalacz `get_api`, gdy użytkownik sam wskazuje usługę („znany dostawca to nie sprawdzony dostawca”), zawężone „confirm in docs”, bez „web search or scraping” we frontmatterze
+- [x] `match: exact` tylko gdy `call.operation` lub narzędzie MCP realizuje żądaną czynność (Freepik: przykład image-to-video przy text-to-video; Google Maps MCP bez narzędzia geokodowania; HF bez generowania wideo); MCP `docs_only` bez narzędzia dla czynności → niżej / oznaczone
+- [x] Ranking pod zadanie: `requires_card` przy `no_card`, trial ≠ free (`include_trials`), wolumen/bulk, uwierzytelnianie `cloud_iam` niżej (AWS SMS był 1., Esri z kartą 1. przy geokodowaniu); Vonage/Telnyx/HERE/Geoapify/Mapbox są w katalogu, a nie trafiły do top 5
+- [x] Skill i opisy narzędzi według sekcji 5 raportu: „currently connected tools”, zawężona klauzula 403, nowa definicja `exact`, wyzwalacz `get_api`, gdy użytkownik sam wskazuje usługę („znany dostawca to nie sprawdzony dostawca”), zawężone „confirm in docs”, bez „web search or scraping” we frontmatterze
 
 Dane (bf)
 - [ ] Konfiguracje MCP `derived` (37): handshake `initialize`; zostają tylko odpowiadające jak serwer MCP, z informacją o wymaganym logowaniu (OAuth/klucz); strony dokumentacji usunięte
