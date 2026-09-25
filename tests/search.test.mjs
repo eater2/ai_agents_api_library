@@ -76,11 +76,16 @@ test("direction and verb forms: transcribe, text to speech, translate", { skip }
 
 test("evidence: example call for another operation is not exact; docs-only MCP flagged", { skip }, async () => {
   const video = await search({ query: "generate video from text prompt", limit: 30 });
+  // Every "exact" result proves the operation: its example call or an MCP tool performs it.
+  for (const r of video.results.filter((x) => x.match === "exact")) assert.match(r.reason, /^does /, `${r.name}: ${r.reason}`);
   const freepik = video.results.find((r) => /freepik/i.test(r.name));
-  if (freepik) assert.equal(freepik.match, "listed", "Freepik's example call is image-to-video");
+  if (freepik) assert.equal(freepik.match, "exact", "Freepik's example call is text-to-video (LTX 2 Pro)");
+  const audio = await search({ query: "transcribe audio", limit: 30 });
+  const deepgram = audio.results.find((r) => /^deepgram api$/i.test(r.name));
+  assert.match(deepgram.mcp_fit, /docs-only/, "Deepgram's hosted MCP only searches docs");
   const sms = await search({ query: "send sms", limit: 30 });
   const twilio = sms.results.find((r) => /^twilio$/i.test(r.name));
-  assert.match(twilio.mcp_fit, /docs-only/);
+  assert.doesNotMatch(twilio.mcp_fit || "", /docs-only/, "Twilio's MCP config is the executing twilio-labs server");
   const aws = sms.results.findIndex((r) => /end user messaging/i.test(r.name));
   assert.ok(aws === -1 || aws >= 3, `cloud IAM SMS ranked ${aws + 1}`);
 });

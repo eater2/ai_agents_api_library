@@ -437,7 +437,8 @@ export function createServer() {
         .map((h) => ({ ...h, rank: (byOperation ? Math.sqrt(h.s + 1) : h.s + 1) * (1 + 2 * h.fit.frac)
           * (1 - 0.1 * Math.min(h.fit.pos, 3)) * (h.fit.frac === 1 && !h.proof ? 0.75 : 1)
           * (byOperation ? taskFactor(h.e) : 1) * (h.warn ? 0.2 : 1) }))
-        .sort((a, b) => b.rank - a.rank);
+        // Proven matches (example call or MCP tool) without a volume warning always come first.
+        .sort((a, b) => (Number(Boolean(b.proof && !b.warn)) - Number(Boolean(a.proof && !a.warn))) || b.rank - a.rank);
       // Word matches only: judge relevance against the best entry before filters, so a filter that removes
       // every relevant service yields an empty result instead of whatever else matches a word.
       const topAll = Math.max(0, ...pool.map((h) => h.s));

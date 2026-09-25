@@ -6583,18 +6583,17 @@
     ],
     "no_auth": false,
     "call": {
-      "operation": "generate a video from an image (Kling 2.1 Pro)",
+      "operation": "text-to-video (LTX Video 2.0 Pro, prompt only, no input image)",
       "method": "POST",
-      "url": "https://api.magnific.com/v1/ai/image-to-video/kling-v2-1-pro",
-      "example": "curl -X POST https://api.magnific.com/v1/ai/image-to-video/kling-v2-1-pro -H \"x-magnific-api-key: $MAGNIFIC_API_KEY\" -H \"Content-Type: application/json\" -d '{\"image\": \"https://example.com/photo.jpg\", \"prompt\": \"slow camera pan\", \"duration\": \"5\"}'",
+      "url": "https://api.magnific.com/v1/ai/text-to-video/ltx-2-pro",
+      "example": "curl -X POST https://api.magnific.com/v1/ai/text-to-video/ltx-2-pro -H \"x-magnific-api-key: $MAGNIFIC_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\":\"A majestic eagle soaring through mountain valleys at sunset, camera slowly panning to follow the flight\",\"duration\":6,\"resolution\":\"1080p\"}'",
       "response_fields": [
         "data.task_id",
-        "data.status",
-        "data.generated[0]"
+        "data.status"
       ],
-      "async": "poll GET https://api.magnific.com/v1/ai/image-to-video/kling-v2-1/{task-id} until data.status is COMPLETED (or pass webhook_url)",
-      "source_url": "https://docs.magnific.com/api-reference/image-to-video/kling-v2.1-pro/post-kling-v2-1-pro",
-      "checked_at": "2026-09-24"
+      "async": "poll GET https://api.magnific.com/v1/ai/text-to-video/ltx-2-pro/{task-id} until data.status is COMPLETED, then data.generated[0] (or pass webhook_url)",
+      "source_url": "https://docs.magnific.com/api-reference/text-to-video/ltx-2-pro",
+      "checked_at": "2026-09-25"
     },
     "has_free_tier": true,
     "has_trial": false,
@@ -24961,6 +24960,17 @@
       "source_url": "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_SendTextMessage.html",
       "url": "https://sms-voice.{region}.amazonaws.com/"
     },
+    "sms": {
+      "price_pl": "$0.03222 per outbound SMS to Poland (USD, all networks, all number types)",
+      "price_pl_source": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/business-applications/approved/documents/End-User-Messaging-SMS-Prices.ebc340b4d416d90832dd59629c4792b0deb6f8bc.csv",
+      "sender_registration": "US: no sender IDs; you must request and register a US number (10DLC, toll-free or short code). Poland: sender IDs and long codes supported, no registration flagged. UK, Spain, India etc. require sender ID registration",
+      "sender_registration_source": "https://docs.aws.amazon.com/sms-voice/latest/userguide/phone-numbers-sms-by-country.html",
+      "trial_limits": "Sandbox: only to verified destination numbers (max 10), $1.00/month SMS spend limit (and $1 MMS); production access via AWS Support case per Region (first response within 24 h)",
+      "trial_limits_source": "https://docs.aws.amazon.com/sms-voice/latest/userguide/sandbox.html",
+      "countries": "full list: https://docs.aws.amazon.com/sms-voice/latest/userguide/phone-numbers-sms-by-country.html (price CSV covers 246 destinations)",
+      "countries_source": "https://docs.aws.amazon.com/sms-voice/latest/userguide/phone-numbers-sms-by-country.html",
+      "checked_at": "2026-09-25"
+    },
     "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
@@ -25103,6 +25113,17 @@
       ],
       "source_url": "https://bird.com/openapi.json",
       "url": "https://{region}.platform.bird.com/v1/sms/messages"
+    },
+    "sms": {
+      "price_pl": "$0.035 per message segment to Poland (USD; alphanumeric, long code or short code; toll-free not published)",
+      "price_pl_source": "https://bird.com/sms-api/pricing/pl",
+      "sender_registration": "US long codes need 10DLC brand + campaign registration; toll-free needs verification; US accepts no alphanumeric senders. Poland: alphanumeric, long code and short code need no registration",
+      "sender_registration_source": "https://bird.com/sms-api/features/destinations/poland",
+      "trial_limits": null,
+      "trial_limits_source": null,
+      "countries": "full list (245 destinations): https://bird.com/sms-api/features/destinations",
+      "countries_source": "https://bird.com/sms-api/features/destinations",
+      "checked_at": "2026-09-25"
     },
     "has_free_tier": false,
     "has_trial": false,
@@ -25348,6 +25369,17 @@
       "source_url": "https://www.plivo.com/sms/pricing/us/",
       "checked_at": "2026-09-24"
     },
+    "sms": {
+      "price_pl": "From $0.0285 to $0.0683 per outbound SMS to Poland, depending on carrier (e.g. Orange $0.0447, T-Mobile $0.0360)",
+      "price_pl_source": "https://www.plivo.com/sms/pricing/pl/",
+      "sender_registration": "SMS only via sales with a min. monthly commitment ($1,000/mo; $10,000/mo for pre-registration countries). US 10DLC required. Poland: alphanumeric supported, instant provisioning",
+      "sender_registration_source": "https://www.plivo.com/docs/messaging/sms-availability",
+      "trial_limits": "Self-serve accounts ($10 free credit, no card) cannot send SMS: SMS, MMS and custom sender IDs are Enterprise-only (from $1,000/month); self-serve covers voice in the US only",
+      "trial_limits_source": "https://www.plivo.com/docs/faq/account/plans",
+      "countries": "200+ countries (outbound)",
+      "countries_source": "https://www.plivo.com/docs/faq/messaging/messaging-api",
+      "checked_at": "2026-09-25"
+    },
     "has_free_tier": false,
     "has_trial": true,
     "no_card": true,
@@ -25449,6 +25481,17 @@
       "summary": "US SMS (10DLC or toll-free): $0.0078 per outbound message, plus carrier fees",
       "source_url": "https://sinch.com/pricing/sms/",
       "checked_at": "2026-09-24"
+    },
+    "sms": {
+      "price_pl": null,
+      "price_pl_source": null,
+      "sender_registration": "US 10DLC needs a registered brand and a 10DLC campaign; toll-free numbers need TFN verification. Sender ID registration is recommended/required per country (details in dashboard Country Information)",
+      "sender_registration_source": "https://developers.sinch.com/docs/10dlc-registration/api-reference/10dlc-registration",
+      "trial_limits": "Trial credit on signup, no card; one free test number (buy numbers after testing); sandbox sends are simulated and only to phone numbers you have already verified",
+      "trial_limits_source": "https://sinch.com/build-dashboard-overview/",
+      "countries": "190+ countries",
+      "countries_source": "https://sinch.com/messaging/sms-api/send-sms/",
+      "checked_at": "2026-09-25"
     },
     "has_free_tier": false,
     "has_trial": true,
@@ -25674,6 +25717,17 @@
       "source_url": "https://developers.telnyx.com/api-reference/messages/send-a-message",
       "checked_at": "2026-09-24"
     },
+    "sms": {
+      "price_pl": "$0.037 per outbound SMS part to Poland (same rate for all listed Polish operators)",
+      "price_pl_source": "https://telnyx.com/pricing.md",
+      "sender_registration": "US: 10DLC needs brand + campaign (TCR) registration; toll-free needs verification; alphanumeric not supported in US/CA. Poland: alphanumeric sender ID supported and preserved, no registration",
+      "sender_registration_source": "https://support.telnyx.com/en/articles/6545167-poland-sms-guidelines",
+      "trial_limits": "Trial: $5 testing credit; SMS only to 1 verified number, long code only, max 100 messages/day, 1 messaging profile",
+      "trial_limits_source": "https://developers.telnyx.com/docs/account-setup/levels-and-capabilities/trial",
+      "countries": "full list: https://telnyx.com/pricing.md (Messaging Outbound rate deck, 227 country codes)",
+      "countries_source": "https://telnyx.com/pricing.md",
+      "checked_at": "2026-09-25"
+    },
     "has_free_tier": false,
     "has_trial": true,
     "no_card": false,
@@ -25784,14 +25838,19 @@
       "domain_verified": null,
       "kind": "official",
       "config": {
-        "transport": "streamable-http",
-        "url": "https://mcp.twilio.com/docs",
-        "headers": null,
-        "oauth": false,
+        "transport": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@twilio-alpha/mcp",
+          "$TWILIO_ACCOUNT_SID/$TWILIO_API_KEY:$TWILIO_API_SECRET"
+        ],
         "env": [],
-        "docs_only": true,
-        "source_url": "https://www.twilio.com/docs/ai/mcp",
-        "checked_at": "2026-09-24"
+        "oauth": false,
+        "docs_only": false,
+        "note": "Alpha server from Twilio Labs that calls the Twilio API (e.g. send SMS); credentials are passed as the last argument. Twilio also hosts https://mcp.twilio.com/docs, which only searches documentation and cannot send messages.",
+        "source_url": "https://github.com/twilio-labs/mcp",
+        "checked_at": "2026-09-25"
       }
     },
     "free_tier": "Trial: 100 SMS, 100 WhatsApp, 3,000 emails, 75 voice minutes; no card; one-time on signup, expires after 30 days",
@@ -25848,6 +25907,17 @@
       "summary": "SMS to Poland: $0.0457 per outbound segment (mobile numbers and alphanumeric sender IDs); $0.001 fee per failed message",
       "source_url": "https://www.twilio.com/en-us/sms/pricing/pl",
       "checked_at": "2026-09-24"
+    },
+    "sms": {
+      "price_pl": "$0.0457 per outbound SMS segment to Poland (mobile numbers); inbound $0.0075/segment; $0.001 fee per failed message",
+      "price_pl_source": "https://www.twilio.com/en-us/sms/pricing/pl",
+      "sender_registration": "US: 10DLC needs A2P brand + campaign registration; toll-free numbers cannot send to US/CA until verified. Poland: alphanumeric sender ID supported, no pre-registration; numeric IDs overwritten",
+      "sender_registration_source": "https://www.twilio.com/en-us/guidelines/pl/sms",
+      "trial_limits": "Trial: only to up to 5 verified numbers, only within sign-up country, pre-defined templates only (no custom bodies), trial number as sender, 100 free SMS, expires after 30 days",
+      "trial_limits_source": "https://www.twilio.com/docs/usage/trials",
+      "countries": "180+ countries",
+      "countries_source": "https://www.twilio.com/en-us/messaging/channels/sms",
+      "checked_at": "2026-09-25"
     },
     "has_free_tier": false,
     "has_trial": true,
@@ -25974,6 +26044,17 @@
       "summary": "SMS to Poland: $0.04843 per outbound message",
       "source_url": "https://www.vonage.com/communications-apis/sms/pricing/",
       "checked_at": "2026-09-24"
+    },
+    "sms": {
+      "price_pl": "$0.04843 per outbound SMS to Poland (per message); inbound $0.01091",
+      "price_pl_source": "https://www.vonage.com/communications-apis/sms/pricing/",
+      "sender_registration": "US: alphanumeric not allowed; use registered 10DLC, toll-free or short code (10DLC mandatory once account leaves trial). Poland: alphanumeric generally supported, no registration stated; generic IDs (INFO, SMS) prohibited",
+      "sender_registration_source": "https://api.support.vonage.com/hc/en-us/articles/204017553-Poland-SMS-Features-and-Restrictions",
+      "trial_limits": "Trial: EUR 2 free credit; SMS only to your registered number + 4 verified test numbers; '[FREE SMS DEMO, TEST MESSAGE]' appended; trial credit cannot buy virtual numbers",
+      "trial_limits_source": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account",
+      "countries": "full list: https://api.support.vonage.com/hc/en-us/sections/200622473-Country-Specific-Features-and-Restrictions",
+      "countries_source": "https://developer.vonage.com/en/messaging/sms/guides/country-specific-features",
+      "checked_at": "2026-09-25"
     },
     "has_free_tier": false,
     "has_trial": true,
