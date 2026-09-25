@@ -6807,42 +6807,6 @@
    "url": "https://mcp.stripe.com"
   }
  },
- "structurizr": {
-  "api": {
-   "history": [
-    {
-     "at": "2026-09-24T18:26Z",
-     "detail": 200,
-     "ms": 1062,
-     "up": true
-    },
-    {
-     "at": "2026-09-25T09:46Z",
-     "detail": 200,
-     "ms": 1220,
-     "up": true
-    }
-   ],
-   "url": "https://api.structurizr.com"
-  },
-  "mcp": {
-   "history": [
-    {
-     "at": "2026-09-24T18:26Z",
-     "detail": 200,
-     "ms": 621,
-     "up": true
-    },
-    {
-     "at": "2026-09-25T09:46Z",
-     "detail": 200,
-     "ms": 786,
-     "up": true
-    }
-   ],
-   "url": "https://mcp.structurizr.com/mcp"
-  }
- },
  "supabase": {
   "api": {
    "history": [

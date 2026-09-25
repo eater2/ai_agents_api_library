@@ -447,12 +447,6 @@
   "checked_at": "2026-09-24",
   "docs": "ok"
  },
- "csm-common-sense-machines-api": {
-  "checked_at": "2026-09-24",
-  "docs": "broken",
-  "docs_detail": "[Errno 11001] getaddrinfo failed",
-  "mcp": "ok"
- },
  "hyper3d-rodin-api": {
   "checked_at": "2026-09-24",
   "docs": "ok"
@@ -555,10 +549,6 @@
   "docs": "ok"
  },
  "plantuml-server-api": {
-  "checked_at": "2026-09-24",
-  "docs": "ok"
- },
- "structurizr": {
   "checked_at": "2026-09-24",
   "docs": "ok"
  },

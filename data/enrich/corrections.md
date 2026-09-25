@@ -90,8 +90,6 @@ Apply to data/catalog.json after checking the source.
 - `shopify-admin-storefront-api`: docs: REST Admin API is legacy since 2024-10-01 and new public apps must use the GraphQL Admin API; docs link should point to https://shopify.dev/docs/api/admin-graphql
 - `shopify-admin-storefront-api`: mcp: Dev MCP (npx @shopify/dev-mcp) serves docs/schemas only, not store data; per-store Storefront MCP at https://{shop}.myshopify.com/api/mcp needs no auth (catalog, cart, policies)
 - `woocommerce-rest-api`: mcp: WooCommerce has an official MCP integration (developer preview) via the WordPress MCP Adapter at /wp-json/mcp/mcp-adapter-default-server, auth with WordPress Application Passwords; entry marks it community
-- `csm-common-sense-machines-api`: homepage/docs: csm.ai, www.csm.ai, docs.csm.ai and api.csm.ai do not resolve in DNS on 2026-09-24; service may be discontinued - re-verify or remove
-- `csm-common-sense-machines-api`: mcp: github.com/CommonSenseMachines org and blender-mcp repo return 404 on GitHub; lobehub listing is an aggregator, not a vendor source
 - `hyper3d-rodin-api`: free_tier: pricing page says full API access is only on the Business plan ($120/mo, $96/mo annual); direct credits $1.5 each; the '10 starter credits' claim was not confirmed
 - `hyper3d-rodin-api`: docs: developer.hyper3d.ai now redirects (301) to https://docs.hyper3d.ai/
 - `hyper3d-rodin-api`: auth_hint: exact header is 'Authorization: Bearer <RODIN_API_KEY>'
@@ -108,9 +106,6 @@ Apply to data/catalog.json after checking the source.
 - `mermaid-chart-api`: llms_txt: https://mermaid.ai/llms.txt returns HTTP 401 on 2026-09-24
 - `miro-rest-api`: mcp: MCP tool calls are capped per day by plan (Free 100, Starter 500, Business 2,000, Enterprise 10,000)
 - `plantuml-server-api`: mcp: official github.com/plantuml/plantuml-mcp exists but is an MVP exposing only 'plantuml_version' (no rendering yet)
-- `structurizr`: status: structurizr.com announces cloud service end of life with a migration guide (docs.structurizr.com/cloud) to playground, local or self-hosted server; the cloud workspace API should be treated as deprecated
-- `structurizr`: mcp: official Structurizr MCP server (free, open source; docker structurizr/mcp); hosted instance https://mcp.structurizr.com/mcp exposes DSL validate/parse/inspect and Mermaid/PlantUML export without auth
-- `structurizr`: sdk: github.com/structurizr/java is archived; code moved to github.com/structurizr/structurizr
 - `anthropic-claude-api`: auth_hint: API overview now lists 'Authorization: Bearer <key>' as the primary auth header; x-api-key is a legacy fallback that is still supported
 - `deepseek-api`: llms_txt: https://api-docs.deepseek.com/llms.txt returns an HTML docs page (text/html), not an llms.txt file
 - `deepseek-api`: notes: off-peak discount is 50%; peak hours are 01:00-04:00 and 06:00-10:00 UTC Mon-Fri; fees are deducted from a topped-up or granted balance

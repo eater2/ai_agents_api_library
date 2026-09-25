@@ -11,23 +11,23 @@
 <table align="right" width="300">
 <tr><th colspan="2" align="center">AI Agents Accessible APIs</th></tr>
 <tr><td><b>Type</b></td><td>API & MCP catalog</td></tr>
-<tr><td><b>Entries</b></td><td>330</td></tr>
+<tr><td><b>Entries</b></td><td>328</td></tr>
 <tr><td><b>Categories</b></td><td>29</td></tr>
-<tr><td><b>Official MCP servers</b></td><td>230</td></tr>
+<tr><td><b>Official MCP servers</b></td><td>229</td></tr>
 <tr><td><b>Languages</b></td><td>English, Polish</td></tr>
 <tr><td><b>Format</b></td><td>JSON, Markdown, HTML, llms.txt</td></tr>
-<tr><td><b>Last checked</b></td><td>2026-09-24</td></tr>
+<tr><td><b>Last checked</b></td><td>2026-09-25</td></tr>
 <tr><td><b>License</b></td><td>CC BY 4.0 (data), MIT (code)</td></tr>
 </table>
 
-**AI Agents Accessible APIs** is an open, bilingual (English/Polish) catalog of **330 services** (each with a last-checked date) in **29 categories** that an autonomous AI agent — such as Claude, ChatGPT, Gemini or a custom LLM agent — can use **without a human in the loop**, after a one-time human step: registering an account and handing the agent an **API key**, an **OAuth token**, or a connection to an **MCP (Model Context Protocol) server**. Every entry records the documentation URL, the authentication method, the availability of an official or community MCP server, and the free tier. The list is not a directory of products with “AI” in their name; the criterion is agent operability, not branding.
+**AI Agents Accessible APIs** is an open, bilingual (English/Polish) catalog of **328 services** (each with a last-checked date) in **29 categories** that an autonomous AI agent — such as Claude, ChatGPT, Gemini or a custom LLM agent — can use **without a human in the loop**, after a one-time human step: registering an account and handing the agent an **API key**, an **OAuth token**, or a connection to an **MCP (Model Context Protocol) server**. Every entry records the documentation URL, the authentication method, the availability of an official or community MCP server, and the free tier. The list is not a directory of products with “AI” in their name; the criterion is agent operability, not branding.
 
 ## Contents
 
 1. [Machine-readable access (for AI agents)](#machine-readable-access-for-ai-agents)
 2. [Inclusion criteria](#inclusion-criteria)
 3. [Legend](#legend)
-4. [Web search](#web-search) (14) · [Web scraping and browser automation](#web-scraping-and-browser-automation) (18) · [Knowledge and research data](#knowledge-and-research-data) (16) · [Image generation and editing](#image-generation-and-editing) (10) · [Video generation and editing](#video-generation-and-editing) (14) · [Speech and audio](#speech-and-audio) (13) · [Music generation](#music-generation) (6) · [3D generation and assets](#3d-generation-and-assets) (7) · [Architecture, CAD and BIM](#architecture-cad-and-bim) (8) · [Diagrams and software architecture](#diagrams-and-software-architecture) (9) · [Design and UI](#design-and-ui) (6) · [Documents, OCR and presentations](#documents-ocr-and-presentations) (14) · [Translation and language](#translation-and-language) (6) · [Code execution sandboxes](#code-execution-sandboxes) (10) · [Developer platforms and DevOps](#developer-platforms-and-devops) (12) · [Cloud and hosting](#cloud-and-hosting) (10) · [Databases](#databases) (12) · [Vector search, memory and RAG](#vector-search-memory-and-rag) (9) · [Email, team chat and notifications](#email-team-chat-and-notifications) (10) · [SMS and messaging apps](#sms-and-messaging-apps) (10) · [Voice agents and telephony](#voice-agents-and-telephony) (8) · [Productivity and workspace](#productivity-and-workspace) (17) · [CRM, support and marketing](#crm-support-and-marketing) (8) · [Social media](#social-media) (10) · [Maps, geolocation and weather](#maps-geolocation-and-weather) (16) · [Finance, payments and market data](#finance-payments-and-market-data) (16) · [E-commerce](#e-commerce) (8) · [Automation and integration platforms](#automation-and-integration-platforms) (15) · [Model APIs and inference](#model-apis-and-inference) (18)
+4. [Web search](#web-search) (14) · [Web scraping and browser automation](#web-scraping-and-browser-automation) (18) · [Knowledge and research data](#knowledge-and-research-data) (16) · [Image generation and editing](#image-generation-and-editing) (10) · [Video generation and editing](#video-generation-and-editing) (14) · [Speech and audio](#speech-and-audio) (13) · [Music generation](#music-generation) (6) · [3D generation and assets](#3d-generation-and-assets) (6) · [Architecture, CAD and BIM](#architecture-cad-and-bim) (8) · [Diagrams and software architecture](#diagrams-and-software-architecture) (8) · [Design and UI](#design-and-ui) (6) · [Documents, OCR and presentations](#documents-ocr-and-presentations) (14) · [Translation and language](#translation-and-language) (6) · [Code execution sandboxes](#code-execution-sandboxes) (10) · [Developer platforms and DevOps](#developer-platforms-and-devops) (12) · [Cloud and hosting](#cloud-and-hosting) (10) · [Databases](#databases) (12) · [Vector search, memory and RAG](#vector-search-memory-and-rag) (9) · [Email, team chat and notifications](#email-team-chat-and-notifications) (10) · [SMS and messaging apps](#sms-and-messaging-apps) (10) · [Voice agents and telephony](#voice-agents-and-telephony) (8) · [Productivity and workspace](#productivity-and-workspace) (17) · [CRM, support and marketing](#crm-support-and-marketing) (8) · [Social media](#social-media) (10) · [Maps, geolocation and weather](#maps-geolocation-and-weather) (16) · [Finance, payments and market data](#finance-payments-and-market-data) (16) · [E-commerce](#e-commerce) (8) · [Automation and integration platforms](#automation-and-integration-platforms) (15) · [Model APIs and inference](#model-apis-and-inference) (18)
 5. [Related directories and registries](#related-directories-and-registries)
 6. [Contributing](#contributing)
 7. [See also](#see-also)
@@ -235,11 +235,10 @@ The skill tells Claude when to reach for the catalog and how to pick a service. 
 
 ## 3D generation and assets
 
-*Text/image-to-3D mesh generation, texturing and 3D asset libraries.* — 7 services. JSON: [`catalog/3d-generation.json`](catalog/3d-generation.json)
+*Text/image-to-3D mesh generation, texturing and 3D asset libraries.* — 6 services. JSON: [`catalog/3d-generation.json`](catalog/3d-generation.json)
 
 | Service | What an agent can do | Auth | MCP | Free tier | Docs |
 |---|---|---|:-:|---|---|
-| [CSM (Common Sense Machines) API](https://www.csm.ai) | Create 3D assets and multi-part kits from images via async REST sessions (image-to-3D, retopology). | API key | — | Unavailable: service appears discontinued | [docs](https://docs.csm.ai/quick-start) |
 | [Hyper3D Rodin API](https://hyper3d.ai) | Generate 3D meshes from text or images (sketch/regular/detail quality tiers) via an async REST job API. | API key | — | Paid only: API access requires the Business plan ($120/mo, $96/mo billed annually) or Enterprise; direct credits $1.5 each | [docs](https://docs.hyper3d.ai/) |
 | [Meshy API](https://www.meshy.ai) | Generate, retexture, rig, and animate 3D models from text or images via REST API or official MCP server. | API key | [✅](https://github.com/meshy-dev/meshy-mcp-server) | Paid only: creating API keys requires a paid plan (Pro $20/mo+); Free accounts get only a built-in test key for the Playground (free web plan 100 credits/mo) | [docs](https://docs.meshy.ai/en/api/quick-start) |
 | [Sketchfab Data API](https://sketchfab.com/developers) | Search, download, and upload 3D models on Sketchfab programmatically via the REST Data API v3. | API key / OAuth | [◐](https://github.com/gregkop/sketchfab-mcp-server) | 🆓 Free: no key needed for search and model listing (GET /v3/search, /v3/models); downloads (/v3/models/{uid}/download) need a free account token | [docs](https://sketchfab.com/developers/data-api/v3) |
@@ -260,11 +259,11 @@ The skill tells Claude when to reach for the catalog and how to pick a service. 
 | [Rhino.Compute (McNeel)](https://www.rhino3d.com/compute) | Run Rhino/Grasshopper geometry operations headlessly via a stateless REST API you deploy yourself. | API key | — | Paid only: self-hosted, requires a Rhino license; core-hour billing at $0.10 per core per hour of Rhino uptime on Windows Server, no free allowance | [docs](https://developer.rhino3d.com/guides/compute/) |
 | [Speckle API](https://speckle.systems) | Send, receive and query 3D/BIM model data across CAD tools (Revit, Rhino, Grasshopper, Tekla) via GraphQL API and SDKs. | API key / OAuth | [◐](https://github.com/bimgeek/speckle-mcp) | 🆓 free Explore plan (1 project, 3 users), unlimited API calls | [docs](https://docs.speckle.systems/dev/) |
 | [Trimble Connect API](https://developer.trimble.com) | Manage Trimble Connect projects, files, BIM models, issues/topics and metadata via REST APIs (Core, Model, Organizer). | OAuth 2.0 | — | check pricing | [docs](https://developer.trimble.com/docs/connect) |
-| [Zoo Text-to-CAD API (KittyCAD)](https://zoo.dev) | Generate 3D CAD models from text prompts and run modeling/file-conversion operations via REST API. | API key | [✅](https://github.com/KittyCAD/mcp) | start free trial credits, then usage-based pay-as-you-go | [docs](https://zoo.dev/docs/api) |
+| [Zoo Text-to-CAD API (KittyCAD)](https://zoo.dev) | Convert CAD files and run modeling operations via REST API; text-to-CAD generation runs through the WebSocket copilot and the MCP server. | API key | [✅](https://github.com/KittyCAD/mcp) | start free trial credits, then usage-based pay-as-you-go | [docs](https://zoo.dev/docs/api) |
 
 ## Diagrams and software architecture
 
-*Render or edit diagrams (Mermaid, PlantUML, C4), whiteboards and architecture models.* — 9 services. JSON: [`catalog/diagrams-software-architecture.json`](catalog/diagrams-software-architecture.json)
+*Render or edit diagrams (Mermaid, PlantUML, C4), whiteboards and architecture models.* — 8 services. JSON: [`catalog/diagrams-software-architecture.json`](catalog/diagrams-software-architecture.json)
 
 | Service | What an agent can do | Auth | MCP | Free tier | Docs |
 |---|---|---|:-:|---|---|
@@ -276,7 +275,6 @@ The skill tells Claude when to reach for the catalog and how to pick a service. 
 | [Miro REST API](https://developers.miro.com) | Create/read boards and items via REST API, or use Miro's official MCP server to search, build, and summarize boards. | OAuth 2.0 | [✅](https://mcp.miro.com/) | 🆓 Free tier: up to 3 editable team boards; MCP on all plans, capped per day at 100 tool calls on Free (Starter 500, Business 2,000, Enterprise 10,000) | [docs](https://developers.miro.com/docs) |
 | [Napkin AI API](https://www.napkin.ai) | Generate diagrams, flowcharts, mind maps, and charts from text via REST API, exporting to SVG, PNG, or PPT. | API key | — | 🆓 included on every plan; any account can create a token and call the API, limited by credits | [docs](https://api.napkin.ai/) |
 | [PlantUML Server API](https://plantuml.com) | Render UML and architecture-as-code diagrams to PNG/SVG/ASCII via a free public HTTP GET API using encoded diagram text. | none | — | 🆓 free, no key; public hosted server at plantuml.com/plantuml | [docs](https://plantuml.com/server) |
-| [Structurizr](https://structurizr.com) | Create and update C4-model software architecture diagram workspaces as JSON via a signed HTTPS API. | API key | [✅](https://mcp.structurizr.com/mcp) | 🆓 free tier: workspaces up to 0.5MB; paid plans raise the limit to 5MB | [docs](https://docs.structurizr.com/cloud/workspace-api) |
 
 ## Design and UI
 
@@ -337,7 +335,7 @@ The skill tells Claude when to reach for the catalog and how to pick a service. 
 | [E2B](https://e2b.dev) | Spin up isolated Firecracker cloud sandboxes via SDK/REST to execute AI-generated code and return results. | API key | [✅](https://github.com/e2b-dev/mcp-server) | Trial: one-time $100 usage credit on signup (Hobby, no card); up to 1 h per sandbox, 20 concurrent; then pay-as-you-go | [docs](https://e2b.dev/docs) |
 | [Judge0](https://judge0.com) | Submit source code and stdin via REST to compile/run it in 60+ languages and poll for the result. | API key | — | Paid only on Judge0 Cloud (Pro EUR 27/mo for 2,000 submissions/day and up); self-host free & open-source (GPLv3) | [docs](https://ce.judge0.com/) |
 | [Modal](https://modal.com) | Programmatically launch serverless sandboxes, optionally with GPUs, to execute untrusted or agent code. | API key | [◐](https://github.com/milkymap/mcp4modal_sandbox) | 🆓 Starter plan: $0 base + $30/mo free credits | [docs](https://modal.com/docs/guide/sandboxes) |
-| [Piston](https://github.com/engineer-man/piston) | Call a free public REST API to compile and run code in 70+ languages inside isolated containers. | API key | — | 🆓 Free: self-host (open source); public emkc.org API no longer open since 2026-02-15, token only for non-commercial educational projects | [docs](https://piston.readthedocs.io/en/latest/api-v2/) |
+| [Piston](https://github.com/engineer-man/piston) | Compile and run code in 70+ languages inside isolated containers via a self-hostable REST API (the public instance needs a granted token). | API key | — | 🆓 Free: self-host (open source); public emkc.org API no longer open since 2026-02-15, token only for non-commercial educational projects | [docs](https://piston.readthedocs.io/en/latest/api-v2/) |
 | [Riza](https://riza.io) | Call a REST API to execute untrusted Python/JS/Ruby/PHP code in sandboxes that start in under 10ms. | API key | [✅](https://mcp.riza.io/code-interpreter) | 🆓 Free tier: Hobby plan free forever, 100,000 requests/month, 30 s execution limit; then usage-based pricing | [docs](https://docs.riza.io/api-reference/command/execute-code) |
 | [Runloop](https://www.runloop.ai) | Create, snapshot, suspend/resume, and run commands in Linux Devboxes via API/SDK for agent coding tasks. | API key | [✅](https://github.com/runloopai/api-client-ts/tree/main/packages/mcp-server) | $50 free credits on signup, then usage-based ($0.108/CPU-hr, $0.0252/GB-hr) | [docs](https://docs.runloop.ai/docs/devboxes/overview) |
 | [Vercel Sandbox](https://vercel.com/docs/vercel-sandbox) | Boot ephemeral Firecracker microVMs via SDK/REST to run agent- or AI-generated code and shell commands. | API key / OAuth | [✅](https://vercel.com/docs/mcp) | 🆓 usage included on Hobby plan, otherwise usage-based on Pro/Enterprise | [docs](https://vercel.com/docs/sandbox) |
@@ -662,6 +660,6 @@ The initial candidate list was compiled from:
 4. [abitwise — AI-tools](https://github.com/abitwise/AI-tools)
 5. [Sylus — Top-rated connectors for AI tool integrations](https://www.sylus.ai/feeds/blog/top-rated-connectors-ai-tool-integrations)
 
-<sub>Generated from data/catalog.json on 2026-09-24.</sub>
+<sub>Generated from data/catalog.json on 2026-09-25.</sub>
 
 <!-- keywords: AI agent tools, agent-accessible APIs, MCP servers list, Model Context Protocol directory, tool calling APIs, LLM tools catalog, API keys for agents, Claude tools, ChatGPT actions, function calling, katalog API dla agentów AI, serwery MCP -->

@@ -261,5 +261,30 @@
   "sources": [
    "https://kling.ai/dev/pricing"
   ]
+ },
+ "zoo-text-to-cad-api-kittycad": {
+  "desc_en": "Convert CAD files and run modeling operations via REST API; text-to-CAD generation runs through the WebSocket copilot and the MCP server.",
+  "notes": "The current OpenAPI spec at api.zoo.dev has no REST endpoint that creates a text-to-CAD model (only list/get of past results); generation runs over WebSocket copilot endpoints or the MCP server.",
+  "sources": [
+   "https://api.zoo.dev"
+  ]
+ },
+ "piston": {
+  "desc_en": "Compile and run code in 70+ languages inside isolated containers via a self-hostable REST API (the public instance needs a granted token).",
+  "sources": [
+   "https://github.com/engineer-man/piston"
+  ]
+ },
+ "leonardo-ai-api": {
+  "notes": "API credit is bought separately from web app subscriptions. The official MCP (https://mcp.leonardo.ai/v1/mcp) authenticates with an 'API-Key' header, not OAuth. Image generation is documented on v2: POST https://cloud.leonardo.ai/api/rest/v2/generations (model + parameters.prompt).",
+  "sources": [
+   "https://docs.leonardo.ai"
+  ]
+ },
+ "meshy-api": {
+  "notes": "Free web accounts get only a limited built-in Playground key; creating/managing your own API keys requires a paid subscription. Text-to-3D is on /openapi/v2/text-to-3d (other endpoints stay on /openapi/v1).",
+  "sources": [
+   "https://docs.meshy.ai"
+  ]
  }
 }

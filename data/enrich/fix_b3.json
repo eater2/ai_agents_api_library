@@ -1,19 +1,4 @@
 {
- "csm-common-sense-machines-api": {
-  "notes": "Service appears discontinued: csm.ai domains do not resolve (checked 2026-09-24).",
-  "free_tier": "Unavailable: service appears discontinued",
-  "mcp": {
-   "type": "none",
-   "url": null
-  },
-  "sources": [
-   "https://csm.ai",
-   "https://www.csm.ai",
-   "https://docs.csm.ai",
-   "https://github.com/CommonSenseMachines",
-   "https://github.com/CommonSenseMachines/blender-mcp"
-  ]
- },
  "hyper3d-rodin-api": {
   "docs": "https://docs.hyper3d.ai/",
   "auth_hint": "Authorization: Bearer <RODIN_API_KEY>",
@@ -116,31 +101,6 @@
   "notes": "Extremely widely used for UML/C4/architecture-as-code; no signup; self-hostable via plantuml.war for privacy or rate-limit control. The official plantuml/plantuml-mcp is an MVP exposing only plantuml_version (no rendering yet).",
   "sources": [
    "https://github.com/plantuml/plantuml-mcp"
-  ]
- },
- "structurizr": {
-  "mcp": {
-   "type": "official",
-   "url": "https://mcp.structurizr.com/mcp",
-   "maintainer": "vendor",
-   "remote_url": "https://mcp.structurizr.com/mcp",
-   "tools": [
-    "inspect",
-    "parse",
-    "validate",
-    "export-mermaid",
-    "export-c4plantuml",
-    "export-plantuml"
-   ],
-   "covers_full_api": false,
-   "source_url": "https://docs.structurizr.com/ai/mcp",
-   "checked_at": "2026-09-24"
-  },
-  "notes": "Cloud service is end-of-life (migrate to playground, local or self-hosted server per docs.structurizr.com/cloud). Uses a nonstandard HMAC signing scheme rather than a bearer token; docs recommend the Structurizr CLI or client libraries over the raw API.",
-  "sources": [
-   "https://structurizr.com/",
-   "https://docs.structurizr.com/cloud",
-   "https://docs.structurizr.com/ai/mcp"
   ]
  },
  "anthropic-claude-api": {
