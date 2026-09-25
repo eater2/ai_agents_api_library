@@ -7488,9 +7488,9 @@
     "llms_txt": null,
     "desc_en": "Generate face-swap, talking avatar, and video-translation content programmatically via REST API.",
     "notes": "Credit-based usage across face swap, avatar video, image generation, video translation endpoints.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
-      "kind": "free_tier",
+      "kind": "none",
       "watermark": true,
       "source_url": "https://akool.com/pricing",
       "checked_at": "2026-09-24"
@@ -7524,7 +7524,7 @@
       "source_url": "https://docs.akool.com/ai-tools-suite/talking-avatar",
       "checked_at": "2026-09-24"
     },
-    "has_free_tier": true,
+    "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
     "stale": false,
@@ -16424,7 +16424,7 @@
       "checked_at": "2026-09-24"
     },
     "has_free_tier": false,
-    "has_trial": true,
+    "has_trial": false,
     "no_card": false,
     "stale": false,
     "link_check": {
@@ -26778,7 +26778,7 @@
       "url": "https://api.synthflow.ai/v2/calls"
     },
     "has_free_tier": false,
-    "has_trial": true,
+    "has_trial": false,
     "no_card": false,
     "stale": false,
     "link_check": {

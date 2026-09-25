@@ -212,7 +212,7 @@ def is_trial(e):
     if kind:
         return kind == "trial"
     f = (e.get("free_tier") or "").lower()
-    if f.startswith("unavailable"):
+    if f.startswith(("unavailable", "paid only", "no free")):  # "Paid only: ... no self-serve free trial" is not a trial
         return False
     one_off = re.search(r"trial|sign[- ]?up|on sign|one[- ]time|valid \d+ days|after account verification", f)
     return not is_free(e) and bool(one_off) and "no free-plan" not in f
@@ -843,6 +843,8 @@ def main():
         x["has_free_tier"] = is_free(e)
         x["has_trial"] = is_trial(e)
         # Usable for free without a payment card: no key at all, or a free/trial plan confirmed card-free.
+        # A free/trial flag next to text that says the API is paid is the contradiction agents cite to drop the catalog.
+        assert not ((is_free(e) or is_trial(e)) and (e.get("free_tier") or "").lower().startswith(("paid only", "unavailable"))),             f"{e['id']}: free_plan.kind says free/trial but free_tier says {e['free_tier'][:60]!r}"
         x["no_card"] = e["auth"] == "none" or ((is_free(e) or is_trial(e)) and (e.get("free_plan") or {}).get("requires_card") is False)
         x["stale"] = bool(e.get("verified")) and (today - date.fromisoformat(e["verified"])).days > STALE_DAYS
         if e["id"] in links:

@@ -286,5 +286,12 @@
   "sources": [
    "https://docs.meshy.ai"
   ]
+ },
+ "akool-api": {
+  "free_plan_kind": "none",
+  "sources": [
+   "https://akool.com/pricing"
+  ],
+  "note": "the Free plan is web-app only; API access starts at Pro Max"
  }
 }
