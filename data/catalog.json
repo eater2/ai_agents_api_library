@@ -3609,9 +3609,9 @@
     "desc_en": "Generate face-swap, talking avatar, and video-translation content programmatically via REST API.",
     "desc_pl": "Generuje zamianę twarzy, mówiące awatary i tłumaczenie wideo programistycznie przez REST API.",
     "notes": "Credit-based usage across face swap, avatar video, image generation, video translation endpoints.",
-    "verified": "2026-09-24",
+    "verified": "2026-09-25",
     "free_plan": {
-      "kind": "free_tier",
+      "kind": "none",
       "watermark": true,
       "source_url": "https://akool.com/pricing",
       "checked_at": "2026-09-24"
