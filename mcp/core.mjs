@@ -192,6 +192,49 @@ function opFit(e, q, order) {
   return best;
 }
 
+// ---- evidence -----------------------------------------------------------------------------
+// A listed operation is a claim; the example call (`call.operation`) or an MCP tool name is evidence.
+// Freepik lists text-to-video but its example is image-to-video; Google Maps MCP has no geocoding tool.
+function textDoes(op, text) {
+  const t = words((text || "").replace(/([a-z])([A-Z])/g, "$1 $2"));
+  const q = queryStems(t);
+  if ((ALIAS_STEMS[op] || []).some((ph) => ph.every((x) => q.has(x)))) return true;
+  const toks = opTokens(op);
+  if (new Set(toks).size < toks.length) return false; // image-to-image: only an alias proves it
+  return toks.every((x) => q.has(x)) && forward(op, queryOrder(text));
+}
+const toolName = (t) => (typeof t === "string" ? t : t?.name || "");
+function mcpTool(e, op) {
+  if (!e.mcp || e.mcp.type === "none" || e.mcp.config?.docs_only) return null;
+  return (e.mcp.tools || []).map(toolName).find((t) => textDoes(op, t)) || null;
+}
+function evidence(e, op) {
+  if (e.call?.operation && textDoes(op, e.call.operation)) return `example call: ${e.call.operation}`;
+  const tool = mcpTool(e, op);
+  return tool ? `MCP tool ${tool}` : null;
+}
+// What the MCP server can do for this operation, when we know its tools.
+function mcpFit(e, op) {
+  if (!e.mcp || e.mcp.type === "none" || !op) return undefined;
+  if (e.mcp.config?.docs_only) return "docs-only: the server searches documentation and does not perform the operation";
+  if (!e.mcp.tools?.length) return undefined;
+  const tool = mcpTool(e, op);
+  return tool ? `tool ${tool}` : "no MCP tool named for this operation; check its tool list or use the REST API";
+}
+
+// ---- task fit -------------------------------------------------------------------------------
+// After operation fit, prefer what an agent can use now: lasting free usage over one-off trials,
+// no card, plain API keys over cloud IAM (account, policy, request signing).
+function taskFactor(e) {
+  let f = 1;
+  if (e.auth === "cloud_iam") f *= 0.6;
+  const kind = e.free_plan?.kind;
+  if (kind === "free_tier" || kind === "no_key") f *= 1.25;
+  else if (kind === "trial") f *= 1.1;
+  if (e.free_plan?.requires_card) f *= 0.7;
+  return f;
+}
+
 // ---- volume ---------------------------------------------------------------------------------
 // Bulk intent: an explicit volume, a count of 100+ items, or words like "bulk", "batch", "thousands".
 const BULK_WORDS = /\b(bulk|batch|batches|mass|thousands?|millions?|hundreds|many|all of|every)\b/i;
@@ -288,13 +331,15 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.3.3" },
+    { name: "ai-agents-api-library", version: "0.3.4" },
     {
       instructions:
         "Catalog of third-party APIs and MCP servers (entries with a last-checked date) an agent can call after a one-time human setup " +
-        "(API key, OAuth or MCP connection). Use search_apis when the user needs a capability you do not have " +
-        "(e.g. generate video, geocode, send SMS), then get_api for auth details. Always confirm pricing and limits " +
-        "in the vendor docs; ask the user to configure credentials through their platform's secret store.",
+        "(API key, OAuth or MCP connection). Use search_apis when the task needs an operation that your model, built-in " +
+        "tools and currently connected tools cannot do (e.g. generate video, geocode, send SMS), then get_api for auth " +
+        "and the example call. Call get_api also when the user names a service: a known vendor is not a checked one. " +
+        "Confirm pricing beyond the free quota and terms for batch or commercial use; ask the user to configure " +
+        "credentials through their platform's secret store.",
     },
   );
 
@@ -317,14 +362,18 @@ export function createServer() {
     {
       title: "Search APIs and MCP servers",
       description:
-        "Find a third-party API or MCP server for a capability you lack, among 300+ catalog entries with a " +
-        "last-checked date: auth method, free plan, MCP endpoint, docs. Use it after checking your built-in and " +
-        "connected tools and your own model; skip it if they already do the job (e.g. translating or drawing a " +
-        "diagram yourself). Also use it when your own direct attempt failed (403, rate limit, unsupported format). " +
-        "Each result has `match`: exact means one of its `operations` is the requested operation, adjacent means " +
-        "related. Ranking is not proof of fit: compare each result's `what` with the requested operation and volume. " +
-        "An empty result means the catalog has no fit; then retry with `category` or without filters, or use web " +
-        "search. Services work only once a human has provisioned credentials.",
+        "Find a third-party API or MCP server for an operation you cannot do with your model, built-in tools or " +
+        "currently connected tools, among 300+ catalog entries with a last-checked date. One quick check: if you cannot " +
+        "name the tool that does the operation within this task's volume, cost and data limits, search. Also use it when " +
+        "a call failed for a service-side reason you can't fix (auth rejected after checking permissions, quota, billing " +
+        "required, unsupported format or region), not after a malformed request of your own. " +
+        "`match`: exact = the entry lists the operation and its example call or an MCP tool performs it; listed = the " +
+        "entry lists it without that evidence; adjacent = a related operation; topic = word match only. Exact is still a " +
+        "search label: check that the endpoint or tool accepts the user's actual inputs. `mcp_fit` says whether the MCP " +
+        "server has a tool for the operation. Ranking weighs operation fit, evidence, lasting free plan, card and auth " +
+        "effort, and bulk limits, not budget or region: read free_plan.kind (free_tier lasts, trial is one-off) and notes. " +
+        "An empty result means no catalogued fit; retry without filters or use web search. " +
+        "Services work only once a human has provisioned credentials.",
       inputSchema: {
         query: z.string().optional().describe("The operation you need, e.g. 'text to video', 'geocode street addresses', 'send sms'"),
         category: z.string().optional().describe("Category id from list_categories, e.g. 'video-generation'"),
@@ -332,6 +381,7 @@ export function createServer() {
           .describe("official: MCP server by the vendor; remote: hosted MCP endpoint (no install); any: any MCP server"),
         no_auth: z.boolean().optional().describe("Only services usable without any key"),
         free_tier: z.boolean().optional().describe("Only services with lasting free usage (not one-off trial credits)"),
+        include_trials: z.boolean().optional().describe("With free_tier: also accept one-off trial or signup credits"),
         no_card: z.boolean().optional().describe("Only services whose free plan needs no payment card (or no account at all)"),
         auth: z.enum(["api_key", "oauth2", "api_key+oauth2", "none", "cloud_iam"]).optional(),
         volume: z.enum(["single", "bulk"]).optional()
@@ -339,31 +389,35 @@ export function createServer() {
         limit: z.number().int().min(1).max(50).optional().describe("Max results, default 10"),
       },
     },
-    async ({ query, category, mcp, no_auth, free_tier, no_card, auth, volume, limit = 10 }) => {
+    async ({ query, category, mcp, no_auth, free_tier, include_trials, no_card, auth, volume, limit = 10 }) => {
       const terms = words(query);
       const q = queryStems(terms);
       const order = queryOrder(query);
       const bulk = bulkIntent(query, volume);
-      const filters = { category, mcp, no_auth, free_tier, no_card, auth };
+      const filters = { category, mcp, no_auth, free_tier, include_trials, no_card, auth };
       const passes = (e) => (!category || e.category === category)
         // A docs-only MCP server searches documentation and does not perform the operation, so it does not count.
         && (!mcp || (!e.mcp?.config?.docs_only && (mcp === "official" ? e.mcp?.type === "official"
           : mcp === "remote" ? Boolean(e.mcp?.remote_url || e.mcp?.kind === "vendor-hosted") : e.mcp?.type !== "none")))
         && (no_auth === undefined || e.no_auth === no_auth)
-        && (!free_tier || e.has_free_tier)
-        && (!no_card || e.no_auth || (e.has_free_tier && e.free_plan?.requires_card === false))
+        && (!free_tier || e.has_free_tier || (include_trials && e.has_trial))
+        && (!no_card || (e.no_card ?? (e.no_auth || (e.has_free_tier && e.free_plan?.requires_card === false))))
         && (!auth || e.auth === auth);
 
       // Score every entry, then decide by operation fit.
       const all = catalog.map((e) => ({ e, s: score(e, terms), fit: opFit(e, q, order), warn: bulk ? bulkWarning(e) : null }))
-        .filter((h) => h.s > 0 || h.fit.frac > 0);
+        .filter((h) => h.s > 0 || h.fit.frac > 0)
+        .map((h) => ({ ...h, proof: h.fit.frac === 1 ? evidence(h.e, h.fit.op) : null }));
       const exactAll = all.filter((h) => h.fit.frac === 1);
       // With exact operation matches only those count; otherwise the best partial ones; otherwise topic words.
       let pool = exactAll.length ? exactAll : all.filter((h) => h.fit.frac >= 0.5);
       const byOperation = pool.length > 0;
       if (!byOperation) pool = all.filter((h) => h.s > 0);
       const ranked = pool.filter((h) => passes(h.e))
-        .map((h) => ({ ...h, rank: (h.s + 1) * (1 + 2 * h.fit.frac) * (1 - 0.1 * Math.min(h.fit.pos, 3)) * (h.warn ? 0.2 : 1) }))
+        // Among operation matches, words in the description matter less than evidence and task fit.
+        .map((h) => ({ ...h, rank: (byOperation ? Math.sqrt(h.s + 1) : h.s + 1) * (1 + 2 * h.fit.frac)
+          * (1 - 0.1 * Math.min(h.fit.pos, 3)) * (h.fit.frac === 1 && !h.proof ? 0.75 : 1)
+          * (byOperation ? taskFactor(h.e) : 1) * (h.warn ? 0.2 : 1) }))
         .sort((a, b) => b.rank - a.rank);
       // Word matches only: judge relevance against the best entry before filters, so a filter that removes
       // every relevant service yields an empty result instead of whatever else matches a word.
@@ -372,10 +426,12 @@ export function createServer() {
 
       const results = kept.map((h) => ({
         ...summary(h.e),
-        match: h.fit.frac === 1 ? "exact" : h.fit.frac > 0 ? "adjacent" : "topic",
-        reason: h.fit.frac === 1 ? `does ${h.fit.op}`
+        match: h.fit.frac === 1 ? (h.proof ? "exact" : "listed") : h.fit.frac > 0 ? "adjacent" : "topic",
+        reason: h.fit.frac === 1 && h.proof ? `does ${h.fit.op} (${h.proof})`
+          : h.fit.frac === 1 ? `lists ${h.fit.op}, but ${h.e.call?.operation ? `the example call is "${h.e.call.operation}"` : "there is no example call"} and no MCP tool shows it; check the endpoint in docs`
           : h.fit.frac > 0 ? `related operation ${h.fit.op}; check it does what you need`
           : "matched words in the description; no operation match, check fit",
+        ...(mcpFit(h.e, h.fit.op) ? { mcp_fit: mcpFit(h.e, h.fit.op) } : {}),
         ...(h.warn ? { volume_warning: h.warn } : {}),
       }));
 
@@ -412,7 +468,10 @@ export function createServer() {
         "MCP endpoint or repository (check which: a repository must be installed, a docs-only server does not call the API), " +
         "free plan vs trial, rate limits, data policy, notes, last-checked dates, link check, and separate signals: " +
         "uptime (our availability probes of base URL and MCP endpoint), mcp_repo (archived, last push), mcp_registry (installs) and product_reviews (rating, count, date range), each with its fetch date. " +
-        "Values come with the vendor page they were read from; confirm pricing and terms there before real use.",
+        "Call it also when the user names a service, or before you use one for a batch job, a message, a payment or " +
+        "another third-party action: a vendor you already know is not a checked vendor (bulk bans, docs-only MCP, " +
+        "trial limits change). Values carry the vendor page they were read from and a check date; use them for a " +
+        "first cheap call, and confirm pricing only beyond the free quota and terms for batch or commercial use.",
       inputSchema: { id: z.string().describe("Service id from search_apis") },
     },
     async ({ id }) => {

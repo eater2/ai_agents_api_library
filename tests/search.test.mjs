@@ -31,7 +31,10 @@ test("task 1: text-to-video returns generators only, or an explicit gap", { skip
     const top = names(res, 5);
     assert.ok(!has(top, /voyage|mux|gemini api$|akool|creatomate/i), `${JSON.stringify(args)}: noise in ${top}`);
     if (res.results.length) {
-      assert.ok(res.results.every((r) => r.match === "exact"), `${JSON.stringify(args)}: non-exact results ${top}`);
+      // exact needs evidence (example call or MCP tool); listed = operation claimed without it, never adjacent noise.
+      assert.ok(res.results.every((r) => ["exact", "listed"].includes(r.match)), `${JSON.stringify(args)}: adjacent results ${top}`);
+      const firstListed = res.results.findIndex((r) => r.match === "listed");
+      if (firstListed >= 0) assert.ok(res.results.slice(firstListed).every((r) => r.match === "listed" || r.volume_warning), "exact ranks above listed");
     } else {
       assert.match(res.message, /no catalogued service/i);
       assert.ok(res.hint, "empty result carries a hint");
@@ -68,4 +71,15 @@ test("direction and verb forms: transcribe, text to speech, translate", { skip }
   assert.ok(tts.results.slice(0, 5).every((r) => /text-to-speech/.test(r.reason)), `tts: ${tts.results.slice(0, 5).map((r) => r.reason)}`);
   const tr = await search({ query: "translate text" });
   assert.ok(names(tr, 3).every((n) => /translat|deepl/i.test(n)), `translate: ${names(tr, 3)}`);
+});
+
+test("evidence: example call for another operation is not exact; docs-only MCP flagged", { skip }, async () => {
+  const video = await search({ query: "generate video from text prompt", limit: 30 });
+  const freepik = video.results.find((r) => /freepik/i.test(r.name));
+  if (freepik) assert.equal(freepik.match, "listed", "Freepik's example call is image-to-video");
+  const sms = await search({ query: "send sms", limit: 30 });
+  const twilio = sms.results.find((r) => /^twilio$/i.test(r.name));
+  assert.match(twilio.mcp_fit, /docs-only/);
+  const aws = sms.results.findIndex((r) => /end user messaging/i.test(r.name));
+  assert.ok(aws === -1 || aws >= 3, `cloud IAM SMS ranked ${aws + 1}`);
 });
