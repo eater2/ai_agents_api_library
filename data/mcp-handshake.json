@@ -1,1044 +1,1044 @@
 {
  "activepieces": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "200 html",
   "status": "not_mcp",
   "url": "https://www.activepieces.com/docs/mcp/overview"
  },
  "agentmail": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.agentmail.to/mcp"
  },
  "agentset": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "405 other",
   "status": "not_mcp",
   "url": "https://docs.agentset.ai/production/mcp-server"
  },
  "airtable-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.airtable.com/mcp"
  },
  "alpha-vantage": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.alphavantage.co/mcp"
  },
  "amazon-selling-partner-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://sellingpartner-ai.amazon.com/mcp"
  },
  "anchor-browser": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.anchorbrowser.io/mcp"
  },
  "apify": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.apify.com"
  },
  "asana-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.asana.com/v2/mcp"
  },
  "atlassian-jira-confluence": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.atlassian.com/v2/mcp"
  },
  "attio-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.attio.com/mcp"
  },
  "aws-apis": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://aws-mcp.us-east-1.api.aws/mcp"
  },
  "aws-end-user-messaging-sms": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://aws-mcp.us-east-1.api.aws/mcp"
  },
  "aws-textract": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://aws-mcp.us-east-1.api.aws/mcp"
  },
  "ayrshare": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://api.ayrshare.com/mcp"
  },
  "bigcommerce-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "405 other",
   "status": "not_mcp",
   "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview"
  },
  "bird": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.bird.com"
  },
  "black-forest-labs-flux-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.bfl.ai"
  },
  "bland-ai": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://api.bland.ai/v1/mcp"
  },
  "box-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.box.com"
  },
  "browser-use-cloud-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://api.browser-use.com/v3/mcp"
  },
  "browserbase-stagehand": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.browserbase.com/mcp"
  },
  "cal-com-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.cal.com/mcp"
  },
  "calendly-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.calendly.com"
  },
  "canva-connect-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.canva.com/mcp"
  },
  "cartesia-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.cartesia.ai/mcp"
  },
  "circleci-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.circleci.com/v1/mcp"
  },
  "clickhouse-cloud": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.clickhouse.cloud/mcp"
  },
  "clickup-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.clickup.com/mcp"
  },
  "cloudconvert-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.cloudconvert.com"
  },
  "cloudflare-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.cloudflare.com/mcp"
  },
  "cloudflare-sandbox-sdk": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://containers.mcp.cloudflare.com/mcp"
  },
  "coda-api-superhuman-docs": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://docs.superhuman.com/apis/mcp"
  },
  "coingecko-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.api.coingecko.com/mcp"
  },
  "coinmarketcap-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.coinmarketcap.com/mcp"
  },
  "comet-opik": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://www.comet.com/opik/api/v1/mcp"
  },
  "composio": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://connect.composio.dev/mcp"
  },
  "congress-gov": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://congressgov.caseyjhand.com/mcp"
  },
  "context7-library-docs-for-agents": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.context7.com/mcp"
  },
  "creatomate-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.creatomate.com/mcp"
  },
  "d-id-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://docs.d-id.com/mcp"
  },
  "datadog-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.datadoghq.com/v1/mcp"
  },
  "daytona": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "404 other",
   "status": "not_mcp",
   "url": "https://www.daytona.io/docs/en/mcp/"
  },
  "deepgram-voice-agent-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "405 other",
   "status": "not_mcp",
   "url": "https://developers.deepgram.com/developer-tools/cli/mcp-server"
  },
  "dexpaprika": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.dexpaprika.com/streamable-http"
  },
  "docusign-esignature-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "403 html",
   "status": "blocked",
   "url": "https://mcp.docusign.com/mcp"
  },
  "dropbox-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.dropbox.com/mcp"
  },
  "elevenlabs-agents-platform": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.elevenlabs.io/v1/mcp"
  },
  "elevenlabs-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.elevenlabs.io/v1/mcp"
  },
  "elevenlabs-music-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.elevenlabs.io/v1/mcp"
  },
  "eraser-api-diagramgpt": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://app.eraser.io/api/mcp"
  },
  "esri-arcgis-location-platform": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "403 html",
   "status": "blocked",
   "url": "https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/"
  },
  "etsy-open-api-v3": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.api.etsycloud.com/mcp"
  },
  "exa": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.exa.ai/mcp"
  },
  "fal-ai": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.fal.ai/mcp"
  },
  "figma-rest-api-dev-mode-mcp": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.figma.com/mcp"
  },
  "firecrawl": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.firecrawl.dev/v2/mcp"
  },
  "freepik-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.magnific.com"
  },
  "gamma-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.gamma.app/mcp"
  },
  "gdelt-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://gdelt.caseyjhand.com/mcp"
  },
  "github-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.githubcopilot.com/mcp/"
  },
  "gitlab-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://gitlab.com/api/v4/mcp"
  },
  "globalping": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.globalping.dev/mcp"
  },
  "google-bigquery": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://bigquery.googleapis.com/mcp"
  },
  "google-cloud-apis": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://compute.googleapis.com/mcp"
  },
  "google-maps-platform": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mapstools.googleapis.com/mcp"
  },
  "google-slides-docs-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://slidesmcp.googleapis.com/mcp/v1"
  },
  "google-workspace-apis-gmail-calendar-drive": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://gmailmcp.googleapis.com/mcp/v1"
  },
  "gumloop": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.gumloop.com/gumloop/mcp"
  },
  "heygen-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.heygen.com/mcp/v1/"
  },
  "hubspot-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.hubspot.com"
  },
  "hugging-face-inference-providers": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://huggingface.co/mcp"
  },
  "icepanel-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.icepanel.io/mcp"
  },
  "ideogram-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.ideogram.ai/mcp"
  },
  "ifttt-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://ifttt.com/mcp"
  },
  "intercom-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.intercom.com/mcp"
  },
  "ip2location-io": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.ip2location.io/"
  },
  "jina-ai-search-reader": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.jina.ai/v1"
  },
  "kagi-search-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.kagi.com/mcp"
  },
  "keboola": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.keboola.com/mcp"
  },
  "klaviyo-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.klaviyo.com/mcp"
  },
  "lara-translate-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp-v2.laratranslate.com/v1"
  },
  "leonardo-ai-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.leonardo.ai/v1/mcp"
  },
  "letta": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://api.letta.com/mcp"
  },
  "linear-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.linear.app/mcp"
  },
  "linkup": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "200 jsonrpc error",
   "status": "ok",
   "url": "https://mcp.linkup.so/mcp"
  },
  "llamaparse-llamacloud": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.llamaindex.ai/mcp"
  },
  "lucid-lucidchart-rest-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.lucid.app/mcp"
  },
  "make-api-mcp": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.make.com"
  },
  "mapbox": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.mapbox.com/mcp"
  },
  "mem0": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.mem0.ai/mcp"
  },
  "mercado-pago-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.mercadopago.com/mcp"
  },
  "mermaid-chart-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.mermaid.ai/mcp"
  },
  "meta-graph-api-facebook-instagram": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.facebook.com/ads"
  },
  "microsoft-graph-outlook-teams-onedrive": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.svc.cloud.microsoft/enterprise"
  },
  "miro-rest-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.miro.com/"
  },
  "mistral-ai-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://api.mistral.ai/mcp"
  },
  "monday-com-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.monday.com/mcp"
  },
  "mux-video-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.mux.com"
  },
  "nango": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "405 other",
   "status": "not_mcp",
   "url": "https://nango.dev/docs/implementation-guides/use-cases/tool-calling/implement-mcp-server"
  },
  "neon-postgres": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.neon.tech/mcp"
  },
  "netlify-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://netlify-mcp.netlify.app/mcp"
  },
  "nocodb-cloud": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://app.nocodb.com/mcp"
  },
  "notion-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.notion.com/mcp"
  },
  "onshape-rest-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://fs-mcp.labs.onshape.app/mcp"
  },
  "openai-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://developers.openai.com/mcp"
  },
  "openrouter": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.openrouter.ai/mcp"
  },
  "openstreetmap-nominatim": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://openstreetmap.caseyjhand.com/mcp"
  },
  "openweathermap-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.openweathermap.org/mcp"
  },
  "overpass-api-osm": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://openstreetmap.caseyjhand.com/mcp"
  },
  "oxylabs": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.oxylabs.io/mcp"
  },
  "pagerduty-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.pagerduty.com/mcp"
  },
  "parallel-web-systems-search-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://search.parallel.ai/mcp"
  },
  "paypal-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.paypal.com/mcp"
  },
  "penpot-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://design.penpot.app/mcp/stream"
  },
  "perplexity-sonar-search-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.perplexity.ai/mcp"
  },
  "pipedream-connect": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://remote.mcp.pipedream.net/v3"
  },
  "pipedrive-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.pipedrive.ai/mcp"
  },
  "plaid-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://api.dashboard.plaid.com/mcp/"
  },
  "planetscale": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.pscale.dev/mcp/planetscale"
  },
  "postman-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.postman.com/mcp"
  },
  "procore-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://app.procore.com/rest/v1.0/mcp"
  },
  "recraft-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.recraft.ai/mcp"
  },
  "reducto-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.reducto.ai/mcp"
  },
  "reflag": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://app.reflag.com/api/mcp"
  },
  "render-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.render.com/mcp"
  },
  "replicate": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.replicate.com/sse"
  },
  "resend": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.resend.com/mcp"
  },
  "retell-ai": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.retellai.com"
  },
  "riza": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "URLError",
   "status": "down",
   "url": "https://mcp.riza.io/code-interpreter"
  },
  "runway-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.runwayml.com/mcp"
  },
  "salesforce-apis": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://api.salesforce.com/platform/mcp/v1/platform/sobject-all"
  },
  "scrapegraphai-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.scrapegraphai.com/mcp"
  },
  "scraperapi": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.scraperapi.com/mcp"
  },
  "scrapfly": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.scrapfly.io/mcp"
  },
  "scrapingbee": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.scrapingbee.com/mcp"
  },
  "searchapi-io": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://www.searchapi.io/mcp"
  },
  "sentry-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.sentry.dev/mcp"
  },
  "serpapi": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.serpapi.com/mcp"
  },
  "shotstack-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.shotstack.io/"
  },
  "slack-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.slack.com/mcp"
  },
  "slidespeak-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.slidespeak.co/mcp"
  },
  "spider-cloud": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.spider.cloud/mcp"
  },
  "square-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.squareup.com/mcp"
  },
  "stackone": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.stackone.com/mcp"
  },
  "stripe-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.stripe.com"
  },
  "supabase": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.supabase.com/mcp"
  },
  "supabase-management-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.supabase.com/mcp"
  },
  "superglue": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": "200 html",
   "status": "not_mcp",
   "url": "https://superglue.ai/docs/mcp/using-the-mcp/"
  },
  "synthesia-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.synthesia.io/mcp"
  },
  "synthflow-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.synthflow.ai/mcp"
  },
  "tavily": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.tavily.com/mcp"
  },
  "tavus-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.tavus.io/mcp"
  },
  "telnyx": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://api.telnyx.com/v2/mcp"
  },
  "tencent-edgeone-pages": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp-on-edge.edgeone.app/mcp-server"
  },
  "tinybird": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN"
  },
  "todoist-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://ai.todoist.net/mcp"
  },
  "tomorrow-io-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp"
  },
  "trello-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.trello.com/v1"
  },
  "turso": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.turso.ai/mcp"
  },
  "unstructured-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.transform.unstructured.io"
  },
  "upstash-redis-vector": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.upstash.com/mcp"
  },
  "v0-platform-api-vercel": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://v0.app/api/mcp"
  },
  "vapi": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_required",
   "url": "https://mcp.vapi.ai/mcp"
  },
  "vercel-api": {
-  "checked_at": "2026-09-25T15:04Z",
-  "detail": 200,
-  "status": "ok",
+  "checked_at": "2026-09-26T09:31Z",
+  "detail": 401,
+  "status": "auth_oauth",
   "url": "https://mcp.vercel.com"
  },
  "vercel-sandbox": {
-  "checked_at": "2026-09-25T15:04Z",
-  "detail": 200,
-  "status": "ok",
+  "checked_at": "2026-09-26T09:31Z",
+  "detail": 401,
+  "status": "auth_oauth",
   "url": "https://mcp.vercel.com"
  },
  "webflow-data-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.webflow.com/mcp"
  },
  "wikidata": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://wd-mcp.wmcloud.org/mcp"
  },
  "wolfram-alpha-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 200,
   "status": "ok",
   "url": "https://agenttools.wolfram.com/mcp"
  },
  "x-twitter-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.x.com/mcp"
  },
  "you-com-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.you.com/mcp"
  },
  "zapier-mcp-ai-actions": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.zapier.com/api/v1/connect"
  },
  "zep": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://api.getzep.com/mcp"
  },
  "zoom-api": {
-  "checked_at": "2026-09-25T15:04Z",
+  "checked_at": "2026-09-26T09:31Z",
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://mcp.zoom.us/mcp/zoom/streamable"
