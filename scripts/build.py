@@ -511,7 +511,7 @@ def llms(cats, items, dirs):
          "SMS providers: sms{price_pl, sender_registration, trial_limits, countries}, each with its *_source URL.",
          "", "## Data", "",
          f"- [Full catalog (JSON)]({RAW}catalog/all.json): all entries in one array",
-         f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service",
+         f"- [Full catalog (text)]({RAW}llms-full.txt): one line per service, plus an example curl request where the vendor documents one",
          f"- [JSON Schema]({RAW}data/schema.json): entry schema",
          "- Uptime (`uptime` in JSON): our own daily probe of each `base_url` and hosted MCP endpoint from GitHub Actions (US), "
          "30-day window; up = any HTTP status below 500 (MCP: POST initialize); `probes`, `up`, `median_ms` and the last result",
@@ -542,7 +542,8 @@ def llms(cats, items, dirs):
 
 def llms_full(cats, items):
     o = [f"# {TITLE} — full list ({len(items)} services, last checked {VERIFIED})",
-         "# format: [tags] name | what it does | auth (hint) | mcp | free tier | docs",
+         "# format: [tags] name | what it does | auth (hint) | mcp | free tier | docs; then `example:` one curl request "
+         "(secrets as $ENV_VAR or <PLACEHOLDER>) and `result:` how to fetch an async result",
          "# tags: [FREE] lasting free tier or free usage, [TRIAL] one-off free trial credits, "
          "[NO-KEY] callable without any credential, [MCP] official MCP server",
          "# proof: public ratings and usage (SourceForge rating/reviews, GitHub stars, Smithery uses), date = when fetched",
@@ -562,6 +563,11 @@ def llms_full(cats, items):
             extra = "".join(f" | {label.lower()}: {text}" for label, text, _ in details_items(e) if label != "MCP tools")
             o.append(f"- {tags + ' ' if tags else ''}{e['name']} | {e['desc_en']} | auth:{e['auth']}{hint} | {mcp} | "
                      f"{e.get('free_tier') or '?'} | {e['docs']}{extra}{proof}{note}")
+            call = (USAGE.get(e.get("id")) or {}).get("call")
+            if call:  # the full request, so an agent reading only this file can make the first call
+                o.append("  example: " + " ".join(call["example"].split()))
+                if call.get("async"):
+                    o.append("  result: " + " ".join(call["async"].split()))
         o.append("")
     return "\n".join(o)
 

@@ -7,7 +7,7 @@ Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint,
 ## Data
 
 - [Full catalog (JSON)](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/all.json): all entries in one array
-- [Full catalog (text)](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/llms-full.txt): one line per service
+- [Full catalog (text)](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/llms-full.txt): one line per service, plus an example curl request where the vendor documents one
 - [JSON Schema](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/data/schema.json): entry schema
 - Uptime (`uptime` in JSON): our own daily probe of each `base_url` and hosted MCP endpoint from GitHub Actions (US), 30-day window; up = any HTTP status below 500 (MCP: POST initialize); `probes`, `up`, `median_ms` and the last result
 - [Operations](https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/operations.json): vocabulary of the `operations` field (what an agent can do with a service, e.g. text-to-video, sms, street-geocoding); match your task to these ids
