@@ -1,5 +1,33 @@
 [
   {
+    "id": "court-rules",
+    "name": "Court Rules",
+    "category": "developer-devops",
+    "homepage": "https://www.courtrules.app/",
+    "docs": "https://www.courtrules.app/api",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <COURT_RULES_API_KEY>",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.courtrules.app/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.courtrules.app/mcp",
+      "source_url": "https://www.courtrules.app/mcp",
+      "checked_at": "2026-10-03"
+    },
+    "free_tier": "free tier: Developer plan at $0/month with full API access, rate limited to 10 requests/minute",
+    "sdk": [
+      "typescript",
+      "python"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Lets an agent read U.S. federal and local court rules, judge standing orders, court holidays and filing deadlines, and compute a filing deadline for any federal district.",
+    "desc_pl": "Pozwala agentowi czytać federalne i lokalne przepisy sądowe USA, stałe polecenia sędziów, dni świąteczne sądów i terminy składania wniosków oraz wyliczyć termin dla dowolnego okręgu sądowego.",
+    "notes": "Vendor-hosted MCP server at https://mcp.courtrules.app/mcp takes the same API key in the Authorization: Bearer header; TypeScript and Python SDKs are offered.",
+    "verified": "2026-10-03"
+  },
+  {
     "id": "brave-search-api",
     "name": "Brave Search API",
     "category": "web-search",
