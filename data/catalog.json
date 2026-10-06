@@ -1,33 +1,5 @@
 [
   {
-    "id": "court-rules",
-    "name": "Court Rules",
-    "category": "developer-devops",
-    "homepage": "https://www.courtrules.app/",
-    "docs": "https://www.courtrules.app/api",
-    "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <COURT_RULES_API_KEY>",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.courtrules.app/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.courtrules.app/mcp",
-      "source_url": "https://www.courtrules.app/mcp",
-      "checked_at": "2026-10-03"
-    },
-    "free_tier": "free tier: Developer plan at $0/month with full API access, rate limited to 10 requests/minute",
-    "sdk": [
-      "typescript",
-      "python"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Lets an agent read U.S. federal and local court rules, judge standing orders, court holidays and filing deadlines, and compute a filing deadline for any federal district.",
-    "desc_pl": "Pozwala agentowi czytać federalne i lokalne przepisy sądowe USA, stałe polecenia sędziów, dni świąteczne sądów i terminy składania wniosków oraz wyliczyć termin dla dowolnego okręgu sądowego.",
-    "notes": "Vendor-hosted MCP server at https://mcp.courtrules.app/mcp takes the same API key in the Authorization: Bearer header; TypeScript and Python SDKs are offered.",
-    "verified": "2026-10-03"
-  },
-  {
     "id": "brave-search-api",
     "name": "Brave Search API",
     "category": "web-search",
@@ -2236,6 +2208,55 @@
     "operations": [
       "library-docs"
     ]
+  },
+  {
+    "id": "court-rules",
+    "name": "Court Rules",
+    "category": "knowledge-research",
+    "homepage": "https://www.courtrules.app/",
+    "docs": "https://www.courtrules.app/api",
+    "auth": "api_key",
+    "auth_hint": "API key from your Court Rules account (sign up at courtrules.app; Developer plan is $0), sent as Authorization: Bearer <COURT_RULES_API_KEY>; the hosted MCP server also accepts OAuth sign-in from the MCP client.",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.courtrules.app/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.courtrules.app/mcp",
+      "source_url": "https://www.courtrules.app/mcp",
+      "checked_at": "2026-10-03"
+    },
+    "free_tier": "free tier: Developer plan at $0/month with full API access, rate limited to 10 requests/minute",
+    "sdk": [
+      "typescript",
+      "python"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Lets an agent read U.S. federal and local court rules, judge standing orders, court holidays and filing deadlines, and compute a filing deadline for any federal district.",
+    "desc_pl": "Pozwala agentowi czytać federalne i lokalne przepisy sądowe USA, stałe polecenia sędziów, dni świąteczne sądów i terminy składania wniosków oraz wyliczyć termin dla dowolnego okręgu sądowego.",
+    "notes": "Vendor-hosted MCP server at https://mcp.courtrules.app/mcp takes the same API key in the Authorization: Bearer header; TypeScript and Python SDKs are offered.",
+    "verified": "2026-10-06",
+    "operations": [
+      "legal-research"
+    ],
+    "free_plan": {
+      "kind": "free_tier",
+      "quota": "Developer plan $0/month, full API access, 10 requests/minute",
+      "source_url": "https://www.courtrules.app/api",
+      "checked_at": "2026-10-06"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <COURT_RULES_API_KEY>",
+      "source_url": "https://www.courtrules.app/api",
+      "checked_at": "2026-10-06"
+    },
+    "rate_limits": {
+      "summary": "10 requests per minute on the free Developer plan",
+      "source_url": "https://www.courtrules.app/api",
+      "checked_at": "2026-10-06"
+    }
   },
   {
     "id": "crossref-rest-api",
@@ -9822,7 +9843,7 @@
     "homepage": "https://easypanel.io/",
     "docs": "https://easypanel.io/docs/mcp",
     "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <EASYPANEL_USER_API_KEY>",
+    "auth_hint": "User API key generated in your own Easypanel installation (Settings > Server > Users > Generate API Key), sent as Authorization: Bearer <EASYPANEL_USER_API_KEY> to https://YOUR_SERVER_DOMAIN/api/mcp; the agent gets that user's permissions.",
     "mcp": {
       "type": "official",
       "url": null,
@@ -9858,7 +9879,11 @@
       "format": "Authorization: Bearer <EASYPANEL_USER_API_KEY>",
       "source_url": "https://easypanel.io/docs/mcp",
       "checked_at": "2026-10-06"
-    }
+    },
+    "operations": [
+      "container-hosting",
+      "cloud-infrastructure"
+    ]
   },
   {
     "id": "fly-io-machines-api",
