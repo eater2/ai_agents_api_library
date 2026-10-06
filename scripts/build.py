@@ -262,36 +262,26 @@ def proof_signals(e):
     return sorted(RATINGS.get(e["id"], []), key=lambda r: PROOF_ORDER.get(r["source"], 9))
 
 
-def star_text(rating):
-    """4.4 -> '★★★★☆' (rounded half up to whole stars; the exact number is shown next to it)."""
-    full = max(0, min(5, int(rating + 0.5)))
-    return "★" * full + "☆" * (5 - full)
-
-
 def shield(label, message, color, logo=""):
     esc = lambda x: quote(str(x).replace("-", "--").replace("_", "__"), safe="")
     return f"https://img.shields.io/badge/{esc(label)}-{esc(message)}-{color}" + (f"?logo={logo}&logoColor=white" if logo else "")
 
 
 def proof_md(e, lang):
-    """Ratings and usage as shields.io badges under the service name in README tables."""
-    out = []
+    """Under the service name in README tables: the review rating as text stars at normal size, then badges for stars and uses."""
+    rating, out = "", []
     for r in proof_signals(e):
         if r["source"] == "sourceforge" and r.get("reviews"):
-            word = review_word(r["reviews"], lang)
-            color = "brightgreen" if r["rating"] >= 4.5 else "green" if r["rating"] >= 4 else "yellow" if r["rating"] >= 3 else "orange"
-            alt = f"SourceForge {r['rating']}/5, {r['reviews']} {word}"
-            img = shield("SourceForge", f"{star_text(r['rating'])} {r['rating']} · {short_count(r['reviews'])} {word}", color)
+            full = max(1, min(5, int(r["rating"] + 0.5)))
+            rating = (f"<br>{'⭐' * full} **{r['rating']}**/5 · "
+                      f"[{short_count(r['reviews'])} {review_word(r['reviews'], lang)}]({r['url']} \"SourceForge\")")
         elif r["source"] == "github":
-            alt = f"GitHub {r['stars']} stars {r['repo']}"
             img = shield("★", short_count(r["stars"]), "24292f", "github")
+            out.append(f'[![{md_cell(f"GitHub {r["stars"]} stars {r["repo"]}")}]({img})]({r["url"]})')
         elif r["source"] == "smithery" and r.get("uses"):
-            alt = f"Smithery {r['uses']} uses"
             img = shield("Smithery", f"{short_count(r['uses'])} {'uses' if lang == 'en' else 'użyć'}", "FF5601")
-        else:
-            continue
-        out.append(f'[![{md_cell(alt)}]({img})]({r["url"]})')
-    return ("<br>" + " ".join(out)) if out else ""
+            out.append(f'[![Smithery {r["uses"]} uses]({img})]({r["url"]})')
+    return rating + (("<br>" + " ".join(out)) if out else "")
 
 
 def proof_html(e, lang="en"):
