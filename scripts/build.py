@@ -249,9 +249,67 @@ def stamp(ts):
     return ts.replace("T", " ").replace("Z", " UTC")
 
 
-def proof_html(e):
-    return "".join(f'<br><small class="proof"><a href="{html.escape(u)}">{html.escape(l)}</a> '
-                   f'<time datetime="{d}">({stamp(d)})</time></small>' for l, u, d in proof_items(e))
+def review_word(n, lang):
+    if lang == "en":
+        return "review" if n == 1 else "reviews"
+    return "opinia" if n == 1 else "opinie" if n % 10 in (2, 3, 4) and n % 100 not in (12, 13, 14) else "opinii"
+
+
+PROOF_ORDER = {"sourceforge": 0, "github": 1, "smithery": 2}  # the review rating first
+
+
+def proof_signals(e):
+    return sorted(RATINGS.get(e["id"], []), key=lambda r: PROOF_ORDER.get(r["source"], 9))
+
+
+def star_text(rating):
+    """4.4 -> '★★★★☆' (rounded half up to whole stars; the exact number is shown next to it)."""
+    full = max(0, min(5, int(rating + 0.5)))
+    return "★" * full + "☆" * (5 - full)
+
+
+def shield(label, message, color, logo=""):
+    esc = lambda x: quote(str(x).replace("-", "--").replace("_", "__"), safe="")
+    return f"https://img.shields.io/badge/{esc(label)}-{esc(message)}-{color}" + (f"?logo={logo}&logoColor=white" if logo else "")
+
+
+def proof_md(e, lang):
+    """Ratings and usage as shields.io badges under the service name in README tables."""
+    out = []
+    for r in proof_signals(e):
+        if r["source"] == "sourceforge" and r.get("reviews"):
+            word = review_word(r["reviews"], lang)
+            color = "brightgreen" if r["rating"] >= 4.5 else "green" if r["rating"] >= 4 else "yellow" if r["rating"] >= 3 else "orange"
+            alt = f"SourceForge {r['rating']}/5, {r['reviews']} {word}"
+            img = shield("SourceForge", f"{star_text(r['rating'])} {r['rating']} · {short_count(r['reviews'])} {word}", color)
+        elif r["source"] == "github":
+            alt = f"GitHub {r['stars']} stars {r['repo']}"
+            img = shield("★", short_count(r["stars"]), "24292f", "github")
+        elif r["source"] == "smithery" and r.get("uses"):
+            alt = f"Smithery {r['uses']} uses"
+            img = shield("Smithery", f"{short_count(r['uses'])} {'uses' if lang == 'en' else 'użyć'}", "FF5601")
+        else:
+            continue
+        out.append(f'[![{md_cell(alt)}]({img})]({r["url"]})')
+    return ("<br>" + " ".join(out)) if out else ""
+
+
+def proof_html(e, lang="en"):
+    """Ratings and usage under the service name: a filled star bar for review ratings, chips for stars and uses."""
+    out = []
+    for r in proof_signals(e):
+        d = f' title="{stamp(r["fetched_at"])}"'
+        u = html.escape(r["url"])
+        if r["source"] == "sourceforge" and r.get("reviews"):
+            word = review_word(r["reviews"], lang)
+            out.append(f'<a class="rate" href="{u}"{d} aria-label="SourceForge {r["rating"]}/5, {r["reviews"]} {word}">'
+                       f'<span class="stars" style="--r:{r["rating"]}">★★★★★</span> <b>{r["rating"]}</b> '
+                       f'<span class="n">({short_count(r["reviews"])} {word} · SourceForge)</span></a>')
+        elif r["source"] == "github":
+            out.append(f'<a class="chip" href="{u}"{d}>★ {short_count(r["stars"])} <span class="n">GitHub</span></a>')
+        elif r["source"] == "smithery" and r.get("uses"):
+            out.append(f'<a class="chip" href="{u}"{d}>{short_count(r["uses"])} <span class="n">{"uses" if lang == "en" else "użyć"} · Smithery</span></a>')
+    return f'<div class="proof">{"".join(out)}</div>' if out else ""
 
 
 def ratings_note(lang):
@@ -471,7 +529,7 @@ def readme(lang, cats, items, dirs):
         for e in rows:
             free = ("🆓 " if is_free(e) else "") + md_cell(e.get("free_tier"))
             name = f"[{md_cell(e['name'])}]({e['homepage']})" if e.get("homepage") else md_cell(e["name"])
-            name += "".join(f"<br><sub>[{md_cell(l)}]({u})</sub>" for l, u, _ in proof_items(e))
+            name += proof_md(e, lang)
             o.append(f"| {name} | {md_cell(e['desc_' + lang])} | {t['auth'].get(e['auth'], e['auth'])} | "
                      f"{mcp_mark(e)} | {free} | [{t['docs']}]({e['docs']}) |")
         o.append("")
@@ -579,9 +637,9 @@ def llms_full(cats, items):
 # ---------------------------------------------------------------- HTML
 
 CSS = """
-:root{--bg:#f8f9fa;--page:#fff;--text:#202122;--muted:#54595d;--link:#3366cc;--visited:#795cb2;--border:#a2a9b1;--soft:#eaecf0;--head:#eaecf0;--hat:#f8f9fa;--accent:#36c}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101418;--page:#16191d;--text:#eaecf0;--muted:#a2a9b1;--link:#88a3e8;--visited:#b79ce0;--border:#54595d;--soft:#27292d;--head:#202326;--hat:#1b1e22;--accent:#88a3e8}}
-:root[data-theme="dark"]{--bg:#101418;--page:#16191d;--text:#eaecf0;--muted:#a2a9b1;--link:#88a3e8;--visited:#b79ce0;--border:#54595d;--soft:#27292d;--head:#202326;--hat:#1b1e22;--accent:#88a3e8}
+:root{--bg:#f8f9fa;--page:#fff;--text:#202122;--muted:#54595d;--link:#3366cc;--visited:#795cb2;--border:#a2a9b1;--soft:#eaecf0;--head:#eaecf0;--hat:#f8f9fa;--accent:#36c;--star:#f5a623;--star-off:#d0d4d9}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101418;--page:#16191d;--text:#eaecf0;--muted:#a2a9b1;--link:#88a3e8;--visited:#b79ce0;--border:#54595d;--soft:#27292d;--head:#202326;--hat:#1b1e22;--accent:#88a3e8;--star:#f7b733;--star-off:#3c4046}}
+:root[data-theme="dark"]{--bg:#101418;--page:#16191d;--text:#eaecf0;--muted:#a2a9b1;--link:#88a3e8;--visited:#b79ce0;--border:#54595d;--soft:#27292d;--head:#202326;--hat:#1b1e22;--accent:#88a3e8;--star:#f7b733;--star-off:#3c4046}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
@@ -612,7 +670,9 @@ code{background:var(--soft);padding:1px 4px;border-radius:2px;font-size:13px}
 .cat-desc{font-style:italic;color:var(--muted)}
 .refs{font-size:13px}
 .det{font-size:13px;min-width:260px}
-.proof{color:var(--muted);white-space:nowrap}.proof time{font-size:11px}.proof-note{color:var(--muted);font-size:13px}
+.proof{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;font-size:12px}.proof a{text-decoration:none;white-space:nowrap}.proof .n{color:var(--muted)}
+.rate{color:var(--text)}.stars{--r:0;font-size:14px;letter-spacing:1px;background:linear-gradient(90deg,var(--star) calc(var(--r)/5*100%),var(--star-off) 0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.chip{border:1px solid var(--soft);border-radius:10px;padding:0 7px;color:var(--text)}.proof-note{color:var(--muted);font-size:13px}
 footer{color:var(--muted);font-size:12px;margin-top:2em;border-top:1px solid var(--soft);padding-top:8px}
 @media (max-width:720px){.infobox{float:none;width:100%;margin:0 0 1em}.toc ol ol{columns:1}.tabs a{margin:0 12px 0 0}}
 """
@@ -719,7 +779,7 @@ def page(lang, cats, items, dirs):
         for e in rows:
             mtype = (e.get("mcp") or {}).get("type", "none")
             free = is_free(e)
-            name = (f'<a href="{e_(e["homepage"])}">{e_(e["name"])}</a>' if e.get("homepage") else e_(e["name"])) + proof_html(e)
+            name = (f'<a href="{e_(e["homepage"])}">{e_(e["name"])}</a>' if e.get("homepage") else e_(e["name"])) + proof_html(e, lang)
             o.append(f'<tr id="{e["id"]}" data-mcp="{mtype}" data-free="{int(free)}"><td>{name}</td><td>{e_(e["desc_" + lang])}</td>'
                      f'<td>{e_(t["auth"].get(e["auth"], e["auth"]))}</td><td class="c">{mcp_mark(e, "html")}</td>'
                      f'<td>{"🆓 " if free else ""}{e_(e.get("free_tier") or "")}</td><td><a href="{e_(e["docs"])}">{t["docs"]}</a></td></tr>')
