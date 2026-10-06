@@ -456,6 +456,9 @@ def readme(lang, cats, items, dirs):
     o.append("\n".join(f"- {x}" for x in t["criteria"]) + "\n")
     o.append(f"## {t['h_legend']}\n")
     o.append("\n".join(f"- **{a}** — {b}" for a, b in t["legend"]) + "\n")
+    note = re.sub(r"<[^>]+>", "", ratings_note(lang))  # same line as on the website, as plain text
+    if note:
+        o.append(f"*{note}*\n")
 
     for c in cats:
         rows = by[c["id"]]
@@ -468,6 +471,7 @@ def readme(lang, cats, items, dirs):
         for e in rows:
             free = ("🆓 " if is_free(e) else "") + md_cell(e.get("free_tier"))
             name = f"[{md_cell(e['name'])}]({e['homepage']})" if e.get("homepage") else md_cell(e["name"])
+            name += "".join(f"<br><sub>[{md_cell(l)}]({u})</sub>" for l, u, _ in proof_items(e))
             o.append(f"| {name} | {md_cell(e['desc_' + lang])} | {t['auth'].get(e['auth'], e['auth'])} | "
                      f"{mcp_mark(e)} | {free} | [{t['docs']}]({e['docs']}) |")
         o.append("")
