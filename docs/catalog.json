@@ -20202,6 +20202,58 @@
     "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/cloudflare-api.json"
   },
   {
+    "id": "easypanel",
+    "name": "Easypanel",
+    "category": "cloud-hosting",
+    "homepage": "https://easypanel.io/",
+    "docs": "https://easypanel.io/docs/mcp",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <EASYPANEL_USER_API_KEY>",
+    "mcp": {
+      "type": "official",
+      "url": null,
+      "maintainer": "vendor",
+      "remote_url": null,
+      "repo": null,
+      "tools": [
+        "search_procedures",
+        "execute_query",
+        "execute_mutation",
+        "execute_destructive"
+      ],
+      "source_url": "https://easypanel.io/docs/mcp",
+      "checked_at": "2026-10-06",
+      "domain_verified": null,
+      "kind": "official",
+      "config": null
+    },
+    "free_tier": "free tier: 3 projects with unlimited services and deployments; self-hosted server costs are separate",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Lets an agent discover Easypanel server-management procedures and execute queries, mutations and destructive operations using the selected user’s permissions.",
+    "notes": "Proprietary, self-hosted deployment panel with a built-in Streamable HTTP MCP server. Requires an existing Easypanel installation and a user-generated API key (Settings > Server > Users > Generate API Key > Connect > MCP). Endpoint is https://YOUR_SERVER_DOMAIN/api/mcp on the user’s installation, not a shared public vendor endpoint; remote_url is intentionally null. Permissions are those of the selected user. Destructive operations can remove infrastructure or data. Documentation checked; no live MCP session or named-client compatibility tested.",
+    "verified": "2026-10-06",
+    "free_plan": {
+      "kind": "free_tier",
+      "quota": "3 projects; unlimited services and deployments; own-server hosting costs separate",
+      "source_url": "https://easypanel.io/pricing",
+      "checked_at": "2026-10-06"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <EASYPANEL_USER_API_KEY>",
+      "source_url": "https://easypanel.io/docs/mcp",
+      "checked_at": "2026-10-06"
+    },
+    "no_auth": false,
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": false,
+    "stale": false
+  },
+  {
     "id": "fly-io-machines-api",
     "name": "Fly.io Machines API",
     "category": "cloud-hosting",

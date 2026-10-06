@@ -11,23 +11,23 @@
 <table align="right" width="300">
 <tr><th colspan="2" align="center">AI Agents Accessible APIs</th></tr>
 <tr><td><b>Type</b></td><td>API & MCP catalog</td></tr>
-<tr><td><b>Entries</b></td><td>331</td></tr>
+<tr><td><b>Entries</b></td><td>332</td></tr>
 <tr><td><b>Categories</b></td><td>29</td></tr>
-<tr><td><b>Official MCP servers</b></td><td>229</td></tr>
+<tr><td><b>Official MCP servers</b></td><td>230</td></tr>
 <tr><td><b>Languages</b></td><td>English, Polish</td></tr>
 <tr><td><b>Format</b></td><td>JSON, Markdown, HTML, llms.txt</td></tr>
-<tr><td><b>Last checked</b></td><td>2026-09-25</td></tr>
+<tr><td><b>Last checked</b></td><td>2026-10-06</td></tr>
 <tr><td><b>License</b></td><td>CC BY 4.0 (data), MIT (code)</td></tr>
 </table>
 
-**AI Agents Accessible APIs** is an open, bilingual (English/Polish) catalog of **331 services** (each with a last-checked date) in **29 categories** that an autonomous AI agent — such as Claude, ChatGPT, Gemini or a custom LLM agent — can use **without a human in the loop**, after a one-time human step: registering an account and handing the agent an **API key**, an **OAuth token**, or a connection to an **MCP (Model Context Protocol) server**. Every entry records the documentation URL, the authentication method, the availability of an official or community MCP server, and the free tier. The list is not a directory of products with “AI” in their name; the criterion is agent operability, not branding.
+**AI Agents Accessible APIs** is an open, bilingual (English/Polish) catalog of **332 services** (each with a last-checked date) in **29 categories** that an autonomous AI agent — such as Claude, ChatGPT, Gemini or a custom LLM agent — can use **without a human in the loop**, after a one-time human step: registering an account and handing the agent an **API key**, an **OAuth token**, or a connection to an **MCP (Model Context Protocol) server**. Every entry records the documentation URL, the authentication method, the availability of an official or community MCP server, and the free tier. The list is not a directory of products with “AI” in their name; the criterion is agent operability, not branding.
 
 ## Contents
 
 1. [Machine-readable access (for AI agents)](#machine-readable-access-for-ai-agents)
 2. [Inclusion criteria](#inclusion-criteria)
 3. [Legend](#legend)
-4. [Web search](#web-search) (14) · [Web scraping and browser automation](#web-scraping-and-browser-automation) (18) · [Knowledge and research data](#knowledge-and-research-data) (16) · [Image generation and editing](#image-generation-and-editing) (10) · [Video generation and editing](#video-generation-and-editing) (14) · [Speech and audio](#speech-and-audio) (13) · [Music generation](#music-generation) (6) · [3D generation and assets](#3d-generation-and-assets) (6) · [Architecture, CAD and BIM](#architecture-cad-and-bim) (8) · [Diagrams and software architecture](#diagrams-and-software-architecture) (8) · [Design and UI](#design-and-ui) (6) · [Documents, OCR and presentations](#documents-ocr-and-presentations) (14) · [Translation and language](#translation-and-language) (6) · [Code execution sandboxes](#code-execution-sandboxes) (10) · [Developer platforms and DevOps](#developer-platforms-and-devops) (12) · [Cloud and hosting](#cloud-and-hosting) (10) · [Databases](#databases) (12) · [Vector search, memory and RAG](#vector-search-memory-and-rag) (9) · [Email, team chat and notifications](#email-team-chat-and-notifications) (10) · [SMS and messaging apps](#sms-and-messaging-apps) (10) · [Voice agents and telephony](#voice-agents-and-telephony) (9) · [Productivity and workspace](#productivity-and-workspace) (17) · [CRM, support and marketing](#crm-support-and-marketing) (8) · [Social media](#social-media) (10) · [Maps, geolocation and weather](#maps-geolocation-and-weather) (18) · [Finance, payments and market data](#finance-payments-and-market-data) (16) · [E-commerce](#e-commerce) (8) · [Automation and integration platforms](#automation-and-integration-platforms) (15) · [Model APIs and inference](#model-apis-and-inference) (18)
+4. [Web search](#web-search) (14) · [Web scraping and browser automation](#web-scraping-and-browser-automation) (18) · [Knowledge and research data](#knowledge-and-research-data) (16) · [Image generation and editing](#image-generation-and-editing) (10) · [Video generation and editing](#video-generation-and-editing) (14) · [Speech and audio](#speech-and-audio) (13) · [Music generation](#music-generation) (6) · [3D generation and assets](#3d-generation-and-assets) (6) · [Architecture, CAD and BIM](#architecture-cad-and-bim) (8) · [Diagrams and software architecture](#diagrams-and-software-architecture) (8) · [Design and UI](#design-and-ui) (6) · [Documents, OCR and presentations](#documents-ocr-and-presentations) (14) · [Translation and language](#translation-and-language) (6) · [Code execution sandboxes](#code-execution-sandboxes) (10) · [Developer platforms and DevOps](#developer-platforms-and-devops) (12) · [Cloud and hosting](#cloud-and-hosting) (11) · [Databases](#databases) (12) · [Vector search, memory and RAG](#vector-search-memory-and-rag) (9) · [Email, team chat and notifications](#email-team-chat-and-notifications) (10) · [SMS and messaging apps](#sms-and-messaging-apps) (10) · [Voice agents and telephony](#voice-agents-and-telephony) (9) · [Productivity and workspace](#productivity-and-workspace) (17) · [CRM, support and marketing](#crm-support-and-marketing) (8) · [Social media](#social-media) (10) · [Maps, geolocation and weather](#maps-geolocation-and-weather) (18) · [Finance, payments and market data](#finance-payments-and-market-data) (16) · [E-commerce](#e-commerce) (8) · [Automation and integration platforms](#automation-and-integration-platforms) (15) · [Model APIs and inference](#model-apis-and-inference) (18)
 5. [Related directories and registries](#related-directories-and-registries)
 6. [Contributing](#contributing)
 7. [See also](#see-also)
@@ -361,13 +361,14 @@ The skill tells Claude when to reach for the catalog and how to pick a service. 
 
 ## Cloud and hosting
 
-*Cloud providers, serverless and edge platforms, and site hosting an agent can deploy to and manage.* — 10 services. JSON: [`catalog/cloud-hosting.json`](catalog/cloud-hosting.json)
+*Cloud providers, serverless and edge platforms, and site hosting an agent can deploy to and manage.* — 11 services. JSON: [`catalog/cloud-hosting.json`](catalog/cloud-hosting.json)
 
 | Service | What an agent can do | Auth | MCP | Free tier | Docs |
 |---|---|---|:-:|---|---|
 | [AWS APIs](https://aws.amazon.com) | An agent can provision and control thousands of AWS resources (compute, storage, databases, ML) via SDKs/CLI/REST. | cloud IAM | [✅](https://aws-mcp.us-east-1.api.aws/mcp) | 🆓 Free tier: 30+ services always free within monthly limits; new accounts also get up to $200 one-time credits ($100 on signup + up to $100 earned) usable over 6 months | [docs](https://docs.aws.amazon.com/general/latest/gr/aws-apis-references.html) |
 | [Azure APIs](https://learn.microsoft.com/rest/api/azure/) | An agent can deploy and manage Azure resources (compute, storage, databases, AI) across resource-provider REST APIs. | cloud IAM | [✅](https://github.com/microsoft/mcp) | 🆓 12 months of select free services plus $200 credit for 30 days for new accounts; many services also have a permanent always-free monthly amount | [docs](https://learn.microsoft.com/rest/api/azure/) |
 | [Cloudflare API](https://developers.cloudflare.com/api/) | An agent can manage DNS, Workers, zones, WAF/security rules, and caching for Cloudflare accounts programmatically. | API key / OAuth | [✅](https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/) | 🆓 free with any Cloudflare account; API access itself is free, manages both free and paid Cloudflare products | [docs](https://developers.cloudflare.com/api/) |
+| [Easypanel](https://easypanel.io/) | Lets an agent discover Easypanel server-management procedures and execute queries, mutations and destructive operations using the selected user’s permissions. | API key | ✅ | 🆓 free tier: 3 projects with unlimited services and deployments; self-hosted server costs are separate | [docs](https://easypanel.io/docs/mcp) |
 | [Fly.io Machines API](https://fly.io/docs/machines/api/) | An agent can create, start, stop, and destroy Fly.io Machines (lightweight VMs) programmatically via REST. | API key | [✅](https://docs.fly.io/model-context-protocol/flyctl-server) | Trial: 2 machine-hours or 7 days, whichever comes first, no card needed to start (adding a card ends the trial); then pay-as-you-go, no perpetual free tier | [docs](https://fly.io/docs/machines/api/) |
 | [Google Cloud APIs](https://cloud.google.com/apis) | An agent can create and manage Google Cloud resources (compute, storage, data, AI/ML) via REST, gRPC, or client libraries. | cloud IAM | [✅](https://docs.cloud.google.com/mcp/supported-products) | 🆓 free trial credit for new customers plus an Always Free tier with perpetual no-cost limits on select products | [docs](https://cloud.google.com/apis/docs/overview) |
 | [Mux Video API](https://www.mux.com) | Upload, encode, stream and analyse video; get playback URLs, thumbnails and captions via REST. | API key | [✅](https://mcp.mux.com) | 🆓 first 100,000 delivered minutes/month free, then usage-based | [docs](https://www.mux.com/docs) |
@@ -663,6 +664,6 @@ The initial candidate list was compiled from:
 4. [abitwise — AI-tools](https://github.com/abitwise/AI-tools)
 5. [Sylus — Top-rated connectors for AI tool integrations](https://www.sylus.ai/feeds/blog/top-rated-connectors-ai-tool-integrations)
 
-<sub>Generated from data/catalog.json on 2026-09-25.</sub>
+<sub>Generated from data/catalog.json on 2026-10-06.</sub>
 
 <!-- keywords: AI agent tools, agent-accessible APIs, MCP servers list, Model Context Protocol directory, tool calling APIs, LLM tools catalog, API keys for agents, Claude tools, ChatGPT actions, function calling, katalog API dla agentów AI, serwery MCP -->
