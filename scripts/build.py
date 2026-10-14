@@ -38,7 +38,7 @@ def badges():
         ("Official MCP Registry", sh + "MCP_Registry-io.github.eater2%2Fai--agents--api--library-0A66C2?logo=modelcontextprotocol&logoColor=white", REGISTRY),
         ("Smithery", sh + "Smithery-eater2%2Fai--agents--api--library-FF5601?logo=data:image/svg%2bxml;base64," + quote(sm), SMITHERY),
         ("Claude Code plugin", sh + "Claude_Code-plugin-D97757?logo=claude&logoColor=white", GH + "#claude-skill-and-plugin"),
-        ("Remote MCP endpoint", sh + "remote_MCP-no_key-000000?logo=vercel&logoColor=white", GH + "#mcp-server"),
+        ("Remote MCP endpoint", sh + "remote_MCP-free%2C_no_API_key-2EA44F?logo=vercel&logoColor=white", GH + "#mcp-server"),
     ]
 STALE_DAYS = 90
 MAX_CATEGORY_BYTES = 60 * 1024  # ~15k tokens; compact JSON (one entry per line) since call/unit_price were added
