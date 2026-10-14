@@ -483,7 +483,8 @@ def readme(lang, cats, items, dirs):
             o.append(f"| `{path}` — {d} | {url} |")
         o.append(f"\n{t['agents_recipe']}\n")
         o.append("### MCP server\n\nThe catalog is also an MCP server with four tools: `search_apis` (filters: `query`, `category`, "
-                 "`mcp` (official/remote/any), `no_auth`, `free_tier`, `no_card`, `auth`), `get_api`, `get_reviews` (user reviews with pros and cons) and `list_categories`. No key needed. Add it to your MCP client:\n")
+                 "`mcp` (official/remote/any), `no_auth`, `free_tier`, `no_card`, `auth`, `min_rating`, `min_reviews`; `sort` by fit, rating or review count; "
+                 "results carry a `reviews_summary` of praised and criticised aspects), `get_api`, `get_reviews` (user reviews with pros and cons) and `list_categories`. No key needed. Add it to your MCP client:\n")
         o.append('```json\n{\n  "mcpServers": {\n    "ai-agents-api-library": {\n      "command": "npx",\n'
                  f'      "args": ["-y", "ai-agents-api-library"]\n    }}\n  }}\n}}\n```\n')
         o.append(f"Claude Code: `claude mcp add ai-agents-api-library -- npx -y ai-agents-api-library`\n")

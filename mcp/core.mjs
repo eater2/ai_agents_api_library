@@ -3,7 +3,7 @@
 //
 // Data: the bundled catalog/all.json, refreshed from GitHub by load() unless
 // AGENTS_API_LIBRARY_OFFLINE=1 is set.
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 
@@ -271,8 +271,8 @@ function bulkWarning(e) {
 }
 
 // ---- ratings ------------------------------------------------------------------------------
-// Signals are shown, never ranked on: agents in the 2026-09-24 interviews read star averages as noise,
-// and MCP repo activity (archived, last push) as useful. Missing data is explicit, not a zero.
+// Signals are shown, not used in the default ranking: agents in the 2026-09-24 interviews read star averages as noise,
+// and MCP repo activity (archived, last push) as useful. Ordering by reviews is opt-in (search_apis sort). Missing data is explicit, not a zero.
 const UNAVAILABLE = { status: "unavailable" };
 const bySource = (e, src) => (e.ratings || []).find((r) => r.source === src);
 function productReviews(e) {
@@ -321,7 +321,7 @@ const summary = (e) => ({
   docs: e.docs,
   free_plan: e.free_plan, // structured: kind, requires_card, quota, period, source_url
   base_url: e.base_url,
-  ratings: ratingsBrief(e), // shown for context only; not used in ranking
+  ratings: ratingsBrief(e), // context only; not used in the default ranking
   ...(e.sms ? { sms: e.sms } : {}), // price to Poland, sender registration, trial limits, countries
 });
 
@@ -340,6 +340,52 @@ const ASPECTS = {
 const API_ASPECTS = ["api", "reliability", "auth", "limits", "breaking_changes", "docs"];
 const reviewText = (r) => [r.title, r.pros, r.cons, r.overall].filter(Boolean).join(" ");
 const tagsOf = (r) => Object.keys(ASPECTS).filter((a) => ASPECTS[a].test(reviewText(r)));
+// How often each aspect comes up in the given reviews, and how often in low ratings or cons.
+function topicsOf(reviews) {
+  return Object.keys(ASPECTS).map((a) => {
+    const hit = reviews.filter((r) => r.aspects.includes(a));
+    const negative = hit.filter((r) => (r.rating ?? 5) <= 3 || ASPECTS[a].test(r.cons || ""));
+    const positive = hit.filter((r) => (r.rating ?? 0) >= 4 && ASPECTS[a].test(r.pros || ""));
+    return { aspect: a, reviews: hit.length, negative: negative.length, positive: positive.length, examples: negative.slice(0, 2).map((r) => r.url) };
+  }).filter((t) => t.reviews).sort((a, b) => b.negative - a.negative || b.reviews - a.reviews);
+}
+
+// Short opinion summary per service for search results, from the bundled review texts (read once).
+let reviewSummaries = null;
+async function loadReviewSummaries() {
+  if (reviewSummaries) return reviewSummaries;
+  const out = {};
+  const dir = new URL("../catalog/reviews/", import.meta.url);
+  let files = [];
+  try { files = (await readdir(dir)).filter((f) => f.endsWith(".json")); } catch { /* no review files */ }
+  for (const f of files) {
+    try {
+      const data = JSON.parse(await readFile(new URL(f, dir), "utf8"));
+      const reviews = (data.reviews || []).map((r) => ({ ...r, aspects: tagsOf(r) }));
+      if (!reviews.length) continue;
+      const dates = reviews.map((r) => r.date).filter(Boolean).sort();
+      const topics = topicsOf(reviews);
+      out[data.id] = {
+        sampled: reviews.length,
+        ...(dates.length ? { date_range: [dates[0], dates[dates.length - 1]] } : {}),
+        low_rated: reviews.filter((r) => (r.rating ?? 5) <= 2).length,
+        praised: topics.filter((t) => t.positive).sort((a, b) => b.positive - a.positive).slice(0, 3)
+          .map((t) => `${t.aspect} (${t.positive}/${t.reviews})`),
+        complaints: topics.filter((t) => t.negative).slice(0, 3).map((t) => `${t.aspect} (${t.negative}/${t.reviews})`),
+        texts: "get_reviews",
+      };
+    } catch { /* skip a broken file */ }
+  }
+  return (reviewSummaries = out);
+}
+// Rating weighted by review count (Bayesian average toward a neutral prior), so 5/5 from one review does not lead.
+const RATING_PRIOR = 3.5, RATING_WEIGHT = 5;
+function weightedRating(e) {
+  const r = bySource(e, "sourceforge");
+  if (!r || typeof r.rating !== "number") return null;
+  const n = r.reviews || 0;
+  return (r.rating * n + RATING_PRIOR * RATING_WEIGHT) / (n + RATING_WEIGHT);
+}
 
 
 // Load the freshest catalog available and build the search index. Call once before createServer().
@@ -351,7 +397,7 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.3.7" },
+    { name: "ai-agents-api-library", version: "0.3.8" },
     {
       instructions:
         "Catalog of third-party APIs and MCP servers (entries with a last-checked date) an agent can call after a one-time human setup " +
@@ -392,6 +438,9 @@ export function createServer() {
         "search label: check that the endpoint or tool accepts the user's actual inputs. `mcp_fit` says whether the MCP " +
         "server has a tool for the operation. Ranking weighs operation fit, evidence, lasting free plan, card and auth " +
         "effort, and bulk limits, not budget or region: read free_plan.kind (free_tier lasts, trial is one-off) and notes. " +
+        "User opinions (SourceForge product reviews): filter with min_rating / min_reviews, order with sort=rating or " +
+        "sort=reviews; results with stored review texts carry reviews_summary (praised and complained-about aspects). " +
+        "Reviews rate the product, not whether the API fits the task. " +
         "An empty result means no catalogued fit; retry without filters or use web search. " +
         "Services work only once a human has provisioned credentials.",
       inputSchema: {
@@ -406,15 +455,22 @@ export function createServer() {
         auth: z.enum(["api_key", "oauth2", "api_key+oauth2", "none", "cloud_iam"]).optional(),
         volume: z.enum(["single", "bulk"]).optional()
           .describe("bulk: many calls (batch jobs, 100+ items); services whose terms forbid bulk use are ranked last. Inferred from the query if omitted"),
+        min_rating: z.number().min(1).max(5).optional()
+          .describe("Only services whose user reviews (SourceForge) average at least this, e.g. 4. Services without reviews are excluded"),
+        min_reviews: z.number().int().min(1).optional()
+          .describe("Only services with at least this many user reviews, e.g. 10. Services without reviews are excluded"),
+        sort: z.enum(["fit", "rating", "reviews"]).optional()
+          .describe("fit (default): operation fit and task factors; rating: user rating weighted by review count, so 5/5 from one review does not lead; reviews: most reviewed first. Services without reviews go last; ties keep fit order"),
         limit: z.number().int().min(1).max(50).optional().describe("Max results, default 10"),
       },
     },
-    async ({ query, category, mcp, no_auth, free_tier, include_trials, no_card, auth, volume, limit = 10 }) => {
+    async ({ query, category, mcp, no_auth, free_tier, include_trials, no_card, auth, volume, min_rating, min_reviews, sort = "fit", limit = 10 }) => {
       const terms = words(query);
       const q = queryStems(terms);
       const order = queryOrder(query);
       const bulk = bulkIntent(query, volume);
-      const filters = { category, mcp, no_auth, free_tier, include_trials, no_card, auth };
+      const filters = { category, mcp, no_auth, free_tier, include_trials, no_card, auth, min_rating, min_reviews };
+      const pr = (e) => bySource(e, "sourceforge");
       const passes = (e) => (!category || e.category === category)
         // Docs-only servers, docs pages and dead endpoints don't count; remote = a hosted endpoint that answered MCP.
         && (!mcp || (mcpUsable(e) && (mcp === "official" ? e.mcp.type === "official"
@@ -422,7 +478,9 @@ export function createServer() {
         && (no_auth === undefined || e.no_auth === no_auth)
         && (!free_tier || e.has_free_tier || (include_trials && e.has_trial))
         && (!no_card || (e.no_card ?? (e.no_auth || (e.has_free_tier && e.free_plan?.requires_card === false))))
-        && (!auth || e.auth === auth);
+        && (!auth || e.auth === auth)
+        && (min_rating === undefined || (pr(e)?.rating ?? 0) >= min_rating)
+        && (min_reviews === undefined || (pr(e)?.reviews ?? 0) >= min_reviews);
 
       // Score every entry, then decide by operation fit.
       const all = catalog.map((e) => ({ e, s: score(e, terms), fit: opFit(e, q, order), warn: bulk ? bulkWarning(e) : null }))
@@ -443,7 +501,12 @@ export function createServer() {
       // Word matches only: judge relevance against the best entry before filters, so a filter that removes
       // every relevant service yields an empty result instead of whatever else matches a word.
       const topAll = Math.max(0, ...pool.map((h) => h.s));
-      const kept = ranked.filter((h) => byOperation || h.s >= topAll * TOPIC_MIN_SHARE).slice(0, limit);
+      const relevant = ranked.filter((h) => byOperation || h.s >= topAll * TOPIC_MIN_SHARE);
+      // Opt-in opinion order; Array.sort is stable, so equal keys keep the fit order.
+      const key = sort === "rating" ? (h) => weightedRating(h.e) : sort === "reviews" ? (h) => pr(h.e)?.reviews ?? null : null;
+      if (key) relevant.sort((a, b) => (key(b) ?? -1) - (key(a) ?? -1));
+      const kept = relevant.slice(0, limit);
+      const opinions = await loadReviewSummaries();
 
       const results = kept.map((h) => ({
         ...summary(h.e),
@@ -454,6 +517,7 @@ export function createServer() {
           : "matched words in the description; no operation match, check fit",
         ...(mcpFit(h.e, h.fit.op) ? { mcp_fit: mcpFit(h.e, h.fit.op) } : {}),
         ...(h.warn ? { volume_warning: h.warn } : {}),
+        ...(opinions[h.e.id] ? { reviews_summary: opinions[h.e.id] } : {}),
       }));
 
       if (!results.length) {
@@ -471,8 +535,9 @@ export function createServer() {
         };
         return { content: [{ type: "text", text: JSON.stringify(gap, null, 1) }] };
       }
-      const out = { source, results };
+      const out = { source, ...(sort !== "fit" ? { sort } : {}), results };
       const notes = [];
+      if (sort !== "fit") notes.push(`Sorted by user ${sort} (SourceForge reviews of the product, not proof the API fits the task); check match and reason.`);
       if (bulk && results.some((r) => r.volume_warning)) notes.push("Bulk use detected; results with volume_warning forbid or limit it.");
       if (!byOperation && terms.length) notes.push("No entry lists this operation; results match words only. Check each `what`.");
       if (notes.length) out.note = notes.join(" ");
@@ -506,6 +571,8 @@ export function createServer() {
         const dates = (data?.reviews || []).map((r) => r.date).filter(Boolean).sort();
         if (dates.length) reviews.date_range = [dates[0], dates[dates.length - 1]];
         if (data) reviews.texts = "get_reviews";
+        const sum = (await loadReviewSummaries())[id];
+        if (sum) Object.assign(reviews, { praised: sum.praised, complaints: sum.complaints, low_rated: sum.low_rated });
       }
       const { uptime, ...other } = rest;
       const out = { ...other, uptime: uptime || { ...UNAVAILABLE }, mcp_repo: mcpRepo(e), mcp_registry: mcpRegistry(e), product_reviews: reviews };
@@ -546,11 +613,7 @@ export function createServer() {
         .filter((r) => !aspect || r.aspects.includes(aspect))
         .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
       // Topic summary over the matching reviews: how often each aspect comes up, and how often in low ratings or cons.
-      const topics = Object.keys(ASPECTS).map((a) => {
-        const hit = reviews.filter((r) => r.aspects.includes(a));
-        const negative = hit.filter((r) => (r.rating ?? 5) <= 3 || ASPECTS[a].test(r.cons || ""));
-        return { aspect: a, reviews: hit.length, negative: negative.length, examples: negative.slice(0, 2).map((r) => r.url) };
-      }).filter((t) => t.reviews).sort((a, b) => b.negative - a.negative || b.reviews - a.reviews);
+      const topics = topicsOf(reviews);
       const { reviews: _all, ...meta } = data;
       const out = {
         ...meta,
