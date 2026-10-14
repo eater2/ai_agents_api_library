@@ -59,6 +59,15 @@ jobs:
             || gh release create "$TAG" dist/* --title "$TAG" --generate-notes \
                  --notes "Verify any file: \`gh attestation verify <file> --repo ${{ github.repository }}\`"
 
+      - name: Rescan on Smithery (when the SMITHERY_API_KEY secret is set)
+        # Smithery keeps the tool list from its last scan of the remote endpoint; republish so the listing matches this release.
+        env:
+          SMITHERY_API_KEY: ${{ secrets.SMITHERY_API_KEY }}
+        run: |
+          if [ -z "$SMITHERY_API_KEY" ]; then echo "SMITHERY_API_KEY not set, skipping"; exit 0; fi
+          sleep 60  # give Vercel time to deploy this commit
+          npx -y @smithery/cli@4 mcp publish https://ai-agents-api-library.vercel.app/mcp -n eater2/ai-agents-api-library             || echo "::warning::Smithery publish failed"
+
       - name: Publish to npm (when the NPM_TOKEN secret is set)
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

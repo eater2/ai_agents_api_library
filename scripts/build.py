@@ -736,6 +736,7 @@ def page(lang, cats, items, dirs):
     }
     o = [f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8">',
          '<meta name="viewport" content="width=device-width,initial-scale=1">',
+         f'<link rel="icon" type="image/png" href="{PAGES}favicon.png"><link rel="apple-touch-icon" href="{PAGES}icon.png">',
          f"<title>{e_(TITLE)}</title>",
          f'<meta name="description" content="{e_(desc)}">',
          f'<link rel="canonical" href="{self_url}">']
@@ -834,6 +835,7 @@ def category_page(c, rows, cats):
           "itemListElement": [{"@type": "ListItem", "position": i, "name": e["name"], "url": e["docs"]} for i, e in enumerate(rows, 1)]}
     o = [f'<!doctype html><html lang="en"><head><meta charset="utf-8">',
          '<meta name="viewport" content="width=device-width,initial-scale=1">',
+         f'<link rel="icon" type="image/png" href="{PAGES}favicon.png"><link rel="apple-touch-icon" href="{PAGES}icon.png">',
          f"<title>{e_(title)}</title>", f'<meta name="description" content="{e_(desc)}">',
          f'<link rel="canonical" href="{url}">',
          f'<link rel="alternate" type="application/json" href="{RAW}catalog/{c["id"]}.json">',

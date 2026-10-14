@@ -428,7 +428,9 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.3.9" },
+    { name: "ai-agents-api-library", version: "0.3.10", title: "AI Agents API Library",
+      websiteUrl: "https://eater2.github.io/ai_agents_api_library/",
+      icons: [{ src: "https://eater2.github.io/ai_agents_api_library/icon.png", mimeType: "image/png", sizes: ["512x512"] }] },
     {
       instructions:
         "Catalog of third-party APIs and MCP servers (entries with a last-checked date) an agent can call after a one-time human setup " +
