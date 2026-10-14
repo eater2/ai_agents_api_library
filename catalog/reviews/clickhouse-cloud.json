@@ -1,0 +1,22 @@
+{
+ "id": "clickhouse-cloud",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/ClickHouse/",
+ "fetched_at": "2026-10-14T06:13Z",
+ "rating": 5.0,
+ "reviews_total": 1,
+ "reviews": [
+  {
+   "id": "61d9f19d644b91fd1082fd3b",
+   "date": "2022-01-08",
+   "rating": 5,
+   "title": "Best in class",
+   "pros": "ClickHouse is really really fast. I can say that it is THE fastest I've came across. It has lots of native integration options S3, Kafka, SQLite, PostgreSQL and so on. Its SQL capabilities are top notch. And it is 100% free!",
+   "cons": "- Updates and deletes are eventual.\n\n- Hard to setup a cluster.\n\n- Does not have ACID.",
+   "overall": "ClickHouse is my go to database for all my projects. Although it does not support ACID, you can fire a PostgreSQL and create a link to it, then use it like a local database.",
+   "reviewer_role": "Solution Architect",
+   "company_size": "20,000 or More",
+   "url": "https://sourceforge.net/software/product/ClickHouse/#review-61d9f19d644b91fd1082fd3b"
+  }
+ ]
+}

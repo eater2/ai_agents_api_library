@@ -65,3 +65,18 @@ test("a rating filter nobody passes gives an explicit gap", async () => {
   assert.equal(res.results.length, 0);
   assert.match(res.message, /min_rating=4\.9/);
 });
+
+test("usage: sort=usage orders by monthly SDK downloads; get_api has the usage signals", async () => {
+  const res = await call("search_apis", { query: "text to speech", sort: "usage", limit: 20 });
+  // "SDK 1.2M downloads/month (...)" -> 1200000
+  const dl = (r) => { const m = /SDK ([\d.]+)([kM]?) downloads/.exec(r.ratings.usage); return m ? Number(m[1]) * ({ k: 1e3, M: 1e6 }[m[2]] || 1) : -1; };
+  const n = res.results.map(dl);
+  assert.ok(n[0] > 0, "the first result has SDK downloads");
+  for (let i = 1; i < n.length; i++) assert.ok(n[i] < 0 || n[i - 1] >= n[i] * 0.95, `order broken at ${res.results[i].id}`);
+  const filtered = await call("search_apis", { query: "text to speech", min_downloads: 100000, limit: 50 });
+  assert.ok(filtered.results.every((r) => dl(r) >= 100000 * 0.95), "min_downloads keeps only popular SDKs");
+  const api = await call("get_api", { id: "twilio" });
+  assert.ok(api.sdk_downloads.per_month > 0 && api.sdk_downloads.packages.length, "sdk_downloads");
+  assert.ok(api.stackoverflow.questions > 0, "stackoverflow");
+  assert.ok("app_store" in api, "app_store signal present (may be unavailable)");
+});

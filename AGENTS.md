@@ -16,7 +16,7 @@ Instructions for AI agents (Claude, GPT, Gemini, Copilot, …) that read or edit
 
 Full guide for humans and agents: `CONTRIBUTING.md`.
 
-1. Edit only `data/catalog.json`, `data/usage.json`, `data/categories.json` or `data/directories.json`.
+1. Edit only `data/catalog.json`, `data/usage.json`, `data/categories.json`, `data/directories.json` or `data/popularity-ids.json` (official SDK package names, Stack Overflow tag and iOS app id per entry, used by `scripts/fetch_ratings.py`).
 2. An entry must follow `data/schema.json`, link to the vendor's **official** API docs, and pass the inclusion criteria in the README (public self-serve API or MCP server; at most one human setup step).
 3. Write both `desc_en` and `desc_pl` (one sentence, what the agent can *do*).
 4. Set `verified` to today's date (YYYY-MM-DD).

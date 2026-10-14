@@ -9,6 +9,29 @@
    "archived": false,
    "url": "https://github.com/Focus-GTS/firefly-services-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@adobe/firefly-apis",
+   "downloads_month": 5061,
+   "url": "https://www.npmjs.com/package/@adobe/firefly-apis",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "adobe-pdf-services-api": [
+  {
+   "source": "npm",
+   "package": "@adobe/pdfservices-node-sdk",
+   "downloads_month": 253880,
+   "url": "https://www.npmjs.com/package/@adobe/pdfservices-node-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "pdfservices-sdk",
+   "downloads_month": 242423,
+   "url": "https://pypi.org/project/pdfservices-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "adyen-api": [
@@ -38,6 +61,59 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Adyen/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "adyen",
+   "questions": 167,
+   "url": "https://stackoverflow.com/questions/tagged/adyen",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@adyen/api-library",
+   "downloads_month": 1165573,
+   "url": "https://www.npmjs.com/package/@adyen/api-library",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "Adyen",
+   "downloads_month": 732351,
+   "url": "https://pypi.org/project/Adyen/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "agentmail": [
+  {
+   "source": "npm",
+   "package": "agentmail",
+   "downloads_month": 1018190,
+   "url": "https://www.npmjs.com/package/agentmail",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "agentmail",
+   "downloads_month": 1406613,
+   "url": "https://pypi.org/project/agentmail/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "agentset": [
+  {
+   "source": "npm",
+   "package": "agentset",
+   "downloads_month": 2217,
+   "url": "https://www.npmjs.com/package/agentset",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "agentset",
+   "downloads_month": 164,
+   "url": "https://pypi.org/project/agentset/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "airtable-api": [
@@ -53,6 +129,28 @@
    "reviews": 28,
    "url": "https://sourceforge.net/software/product/Airtable/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "airtable",
+   "questions": 263,
+   "url": "https://stackoverflow.com/questions/tagged/airtable",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Airtable",
+   "rating": 4.8,
+   "ratings": 25035,
+   "url": "https://apps.apple.com/us/app/airtable/id914172636",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "airtable",
+   "downloads_month": 2272592,
+   "url": "https://www.npmjs.com/package/airtable",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "alpaca-trading-api": [
@@ -65,6 +163,36 @@
    "archived": false,
    "url": "https://github.com/alpacahq/alpaca-mcp-server",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 1.0,
+   "reviews": 3,
+   "url": "https://sourceforge.net/software/product/Alpaca/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@alpacahq/alpaca-trade-api",
+   "downloads_month": 76758,
+   "url": "https://www.npmjs.com/package/@alpacahq/alpaca-trade-api",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "alpaca-py",
+   "downloads_month": 1066689,
+   "url": "https://pypi.org/project/alpaca-py/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "alpha-vantage": [
+  {
+   "source": "stackoverflow",
+   "tag": "alpha-vantage",
+   "questions": 232,
+   "url": "https://stackoverflow.com/questions/tagged/alpha-vantage",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "amazon-polly-amazon-transcribe-aws": [
@@ -77,6 +205,27 @@
    "archived": false,
    "url": "https://github.com/awslabs/mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "amazon-polly",
+   "questions": 169,
+   "url": "https://stackoverflow.com/questions/tagged/amazon-polly",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@aws-sdk/client-polly",
+   "downloads_month": 2951247,
+   "url": "https://www.npmjs.com/package/@aws-sdk/client-polly",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "npm",
+   "package": "@aws-sdk/client-transcribe",
+   "downloads_month": 2260474,
+   "url": "https://www.npmjs.com/package/@aws-sdk/client-transcribe",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "amazon-selling-partner-api": [
@@ -89,6 +238,13 @@
    "archived": false,
    "url": "https://github.com/amzn/selling-partner-api-models",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "amazon-selling-partner-api",
+   "questions": 256,
+   "url": "https://stackoverflow.com/questions/tagged/amazon-selling-partner-api",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "amazon-translate": [
@@ -108,6 +264,20 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Amazon-Translate/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "amazon-translate",
+   "questions": 16,
+   "url": "https://stackoverflow.com/questions/tagged/amazon-translate",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@aws-sdk/client-translate",
+   "downloads_month": 2500646,
+   "url": "https://www.npmjs.com/package/@aws-sdk/client-translate",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "anchor-browser": [
@@ -117,6 +287,51 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Anchor-Browser/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "anchorbrowser",
+   "downloads_month": 144818,
+   "url": "https://www.npmjs.com/package/anchorbrowser",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "anchorbrowser",
+   "downloads_month": 38575,
+   "url": "https://pypi.org/project/anchorbrowser/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "anthropic-claude-api": [
+  {
+   "source": "appstore",
+   "app": "Claude by Anthropic",
+   "rating": 4.72,
+   "ratings": 278820,
+   "url": "https://apps.apple.com/us/app/claude-by-anthropic/id6473753684",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Anthropic/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@anthropic-ai/sdk",
+   "downloads_month": 194133245,
+   "url": "https://www.npmjs.com/package/@anthropic-ai/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "anthropic",
+   "downloads_month": 150199657,
+   "url": "https://pypi.org/project/anthropic/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "apify": [
@@ -132,6 +347,43 @@
    "reviews": 1800,
    "url": "https://sourceforge.net/software/product/Apify/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "apify",
+   "questions": 207,
+   "url": "https://stackoverflow.com/questions/tagged/apify",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "apify-client",
+   "downloads_month": 1864326,
+   "url": "https://www.npmjs.com/package/apify-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "apify-client",
+   "downloads_month": 2274981,
+   "url": "https://pypi.org/project/apify-client/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "arcade-dev": [
+  {
+   "source": "npm",
+   "package": "@arcadeai/arcadejs",
+   "downloads_month": 649746,
+   "url": "https://www.npmjs.com/package/@arcadeai/arcadejs",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "arcadepy",
+   "downloads_month": 301474,
+   "url": "https://pypi.org/project/arcadepy/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "arxiv-api": [
@@ -165,6 +417,51 @@
    "reviews": 97,
    "url": "https://sourceforge.net/software/product/Asana/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "asana-api",
+   "questions": 189,
+   "url": "https://stackoverflow.com/questions/tagged/asana-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Asana: Work Management",
+   "rating": 4.67,
+   "ratings": 15653,
+   "url": "https://apps.apple.com/us/app/asana-work-management/id489969512",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "asana",
+   "downloads_month": 1277805,
+   "url": "https://www.npmjs.com/package/asana",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "asana",
+   "downloads_month": 2932186,
+   "url": "https://pypi.org/project/asana/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "assemblyai-api": [
+  {
+   "source": "npm",
+   "package": "assemblyai",
+   "downloads_month": 2439754,
+   "url": "https://www.npmjs.com/package/assemblyai",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "assemblyai",
+   "downloads_month": 2797588,
+   "url": "https://pypi.org/project/assemblyai/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "attio-api": [
@@ -180,6 +477,14 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Attio/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Attio",
+   "rating": 3.52,
+   "ratings": 29,
+   "url": "https://apps.apple.com/us/app/attio/id1511545395",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "autodesk-platform-services-aps": [
@@ -192,6 +497,68 @@
    "archived": false,
    "url": "https://github.com/autodesk-platform-services/aps-mcp-server-python",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "autodesk-forge",
+   "questions": 4584,
+   "url": "https://stackoverflow.com/questions/tagged/autodesk-forge",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@aps_sdk/authentication",
+   "downloads_month": 81796,
+   "url": "https://www.npmjs.com/package/@aps_sdk/authentication",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "npm",
+   "package": "@aps_sdk/model-derivative",
+   "downloads_month": 65441,
+   "url": "https://www.npmjs.com/package/@aps_sdk/model-derivative",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "aws-apis": [
+  {
+   "source": "stackoverflow",
+   "tag": "amazon-web-services",
+   "questions": 158599,
+   "url": "https://stackoverflow.com/questions/tagged/amazon-web-services",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@aws-sdk/client-s3",
+   "downloads_month": 212317112,
+   "url": "https://www.npmjs.com/package/@aws-sdk/client-s3",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "aws-end-user-messaging-sms": [
+  {
+   "source": "npm",
+   "package": "@aws-sdk/client-pinpoint-sms-voice-v2",
+   "downloads_month": 1431847,
+   "url": "https://www.npmjs.com/package/@aws-sdk/client-pinpoint-sms-voice-v2",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "aws-textract": [
+  {
+   "source": "stackoverflow",
+   "tag": "amazon-textract",
+   "questions": 236,
+   "url": "https://stackoverflow.com/questions/tagged/amazon-textract",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@aws-sdk/client-textract",
+   "downloads_month": 7049606,
+   "url": "https://www.npmjs.com/package/@aws-sdk/client-textract",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "ayrshare": [
@@ -201,6 +568,43 @@
    "reviews": 5,
    "url": "https://sourceforge.net/software/product/Ayrshare/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "social-post-api",
+   "downloads_month": 629,
+   "url": "https://www.npmjs.com/package/social-post-api",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "social-post-api",
+   "downloads_month": 6591,
+   "url": "https://pypi.org/project/social-post-api/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "azure-ai-document-intelligence": [
+  {
+   "source": "stackoverflow",
+   "tag": "azure-form-recognizer",
+   "questions": 301,
+   "url": "https://stackoverflow.com/questions/tagged/azure-form-recognizer",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@azure-rest/ai-document-intelligence",
+   "downloads_month": 1287019,
+   "url": "https://www.npmjs.com/package/@azure-rest/ai-document-intelligence",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "azure-ai-documentintelligence",
+   "downloads_month": 11022329,
+   "url": "https://pypi.org/project/azure-ai-documentintelligence/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "azure-ai-speech": [
@@ -213,6 +617,43 @@
    "archived": false,
    "url": "https://github.com/microsoft/mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "azure-speech",
+   "questions": 209,
+   "url": "https://stackoverflow.com/questions/tagged/azure-speech",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "microsoft-cognitiveservices-speech-sdk",
+   "downloads_month": 1993677,
+   "url": "https://www.npmjs.com/package/microsoft-cognitiveservices-speech-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "azure-cognitiveservices-speech",
+   "downloads_month": 2520663,
+   "url": "https://pypi.org/project/azure-cognitiveservices-speech/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "azure-ai-translator": [
+  {
+   "source": "npm",
+   "package": "@azure-rest/ai-translation-text",
+   "downloads_month": 557348,
+   "url": "https://www.npmjs.com/package/@azure-rest/ai-translation-text",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "azure-ai-translation-text",
+   "downloads_month": 166524,
+   "url": "https://pypi.org/project/azure-ai-translation-text/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "azure-apis": [
@@ -246,6 +687,15 @@
    "fetched_at": "2026-10-12T13:09Z"
   }
  ],
+ "bentley-itwin-platform-apis": [
+  {
+   "source": "npm",
+   "package": "@itwin/itwins-client",
+   "downloads_month": 133343,
+   "url": "https://www.npmjs.com/package/@itwin/itwins-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
  "bigcommerce-api": [
   {
    "source": "sourceforge",
@@ -253,6 +703,99 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Bigcommerce/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "bigcommerce",
+   "questions": 1667,
+   "url": "https://stackoverflow.com/questions/tagged/bigcommerce",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "BigCommerce",
+   "rating": 4.51,
+   "ratings": 638,
+   "url": "https://apps.apple.com/us/app/bigcommerce/id1418570678",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "pypi",
+   "package": "bigcommerce",
+   "downloads_month": 28958,
+   "url": "https://pypi.org/project/bigcommerce/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "bird": [
+  {
+   "source": "npm",
+   "package": "messagebird",
+   "downloads_month": 162075,
+   "url": "https://www.npmjs.com/package/messagebird",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "messagebird",
+   "downloads_month": 188964,
+   "url": "https://pypi.org/project/messagebird/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "bluesky-at-protocol": [
+  {
+   "source": "appstore",
+   "app": "Bluesky Social",
+   "rating": 3.87,
+   "ratings": 13753,
+   "url": "https://apps.apple.com/us/app/bluesky-social/id6444370199",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@atproto/api",
+   "downloads_month": 747932,
+   "url": "https://www.npmjs.com/package/@atproto/api",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "box-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "box-api",
+   "questions": 1087,
+   "url": "https://stackoverflow.com/questions/tagged/box-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Box: The power of Content + AI",
+   "rating": 4.76,
+   "ratings": 190561,
+   "url": "https://apps.apple.com/us/app/box-the-power-of-content-ai/id290853822",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "box-node-sdk",
+   "downloads_month": 805081,
+   "url": "https://www.npmjs.com/package/box-node-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "boxsdk",
+   "downloads_month": 2803009,
+   "url": "https://pypi.org/project/boxsdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "box-sdk-gen",
+   "downloads_month": 993149,
+   "url": "https://pypi.org/project/box-sdk-gen/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "brave-search-api": [
@@ -303,6 +846,43 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Bright-Data/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@brightdata/sdk",
+   "downloads_month": 59280,
+   "url": "https://www.npmjs.com/package/@brightdata/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "brightdata-sdk",
+   "downloads_month": 122921,
+   "url": "https://pypi.org/project/brightdata-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "browser-use-cloud-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Browser-Use/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "browser-use-sdk",
+   "downloads_month": 416575,
+   "url": "https://www.npmjs.com/package/browser-use-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "browser-use-sdk",
+   "downloads_month": 7757803,
+   "url": "https://pypi.org/project/browser-use-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "browserbase-stagehand": [
@@ -318,6 +898,44 @@
    "reviews": 2,
    "url": "https://sourceforge.net/software/product/Browserbase/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@browserbasehq/sdk",
+   "downloads_month": 10828212,
+   "url": "https://www.npmjs.com/package/@browserbasehq/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "npm",
+   "package": "@browserbasehq/stagehand",
+   "downloads_month": 7436204,
+   "url": "https://www.npmjs.com/package/@browserbasehq/stagehand",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "browserbase",
+   "downloads_month": 3109554,
+   "url": "https://pypi.org/project/browserbase/",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "stagehand",
+   "downloads_month": 1271610,
+   "url": "https://pypi.org/project/stagehand/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "cal-com-api": [
+  {
+   "source": "appstore",
+   "app": "Cal.com",
+   "rating": 4.84,
+   "ratings": 200,
+   "url": "https://apps.apple.com/us/app/cal-com/id6757157271",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "calendly-api": [
@@ -335,6 +953,32 @@
    "fetched_at": "2026-10-12T13:09Z"
   }
  ],
+ "canva-connect-api": [
+  {
+   "source": "appstore",
+   "app": "Canva AI Photo & Video Editor",
+   "rating": 4.87,
+   "ratings": 3573382,
+   "url": "https://apps.apple.com/us/app/canva-ai-photo-video-editor/id897446215",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "cartesia-api": [
+  {
+   "source": "npm",
+   "package": "@cartesia/cartesia-js",
+   "downloads_month": 488859,
+   "url": "https://www.npmjs.com/package/@cartesia/cartesia-js",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "cartesia",
+   "downloads_month": 707919,
+   "url": "https://pypi.org/project/cartesia/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
  "chroma-cloud": [
   {
    "source": "github",
@@ -345,6 +989,20 @@
    "archived": false,
    "url": "https://github.com/chroma-core/chroma-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "chromadb",
+   "downloads_month": 1168504,
+   "url": "https://www.npmjs.com/package/chromadb",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "chromadb",
+   "downloads_month": 6525454,
+   "url": "https://pypi.org/project/chromadb/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "circleci-api": [
@@ -366,6 +1024,34 @@
    "archived": false,
    "url": "https://github.com/ClickHouse/mcp-clickhouse",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "clickhouse",
+   "questions": 2214,
+   "url": "https://stackoverflow.com/questions/tagged/clickhouse",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/ClickHouse/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@clickhouse/client",
+   "downloads_month": 15898910,
+   "url": "https://www.npmjs.com/package/@clickhouse/client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "clickhouse-connect",
+   "downloads_month": 27470709,
+   "url": "https://pypi.org/project/clickhouse-connect/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "clickup-api": [
@@ -381,6 +1067,13 @@
    "reviews": 122,
    "url": "https://sourceforge.net/software/product/ClickUp/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "clickup-api",
+   "questions": 21,
+   "url": "https://stackoverflow.com/questions/tagged/clickup-api",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "cloudconvert-api": [
@@ -390,6 +1083,27 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/CloudConvert/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "cloudconvert",
+   "questions": 40,
+   "url": "https://stackoverflow.com/questions/tagged/cloudconvert",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "cloudconvert",
+   "downloads_month": 514942,
+   "url": "https://www.npmjs.com/package/cloudconvert",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "cloudconvert",
+   "downloads_month": 478385,
+   "url": "https://pypi.org/project/cloudconvert/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "cloudflare-api": [
@@ -405,6 +1119,68 @@
    "reviews": 12,
    "url": "https://sourceforge.net/software/product/Cloudflare/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "cloudflare",
+   "questions": 3313,
+   "url": "https://stackoverflow.com/questions/tagged/cloudflare",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "cloudflare",
+   "downloads_month": 14215895,
+   "url": "https://www.npmjs.com/package/cloudflare",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "cloudflare",
+   "downloads_month": 2012441,
+   "url": "https://pypi.org/project/cloudflare/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "cloudflare-sandbox-sdk": [
+  {
+   "source": "sourceforge",
+   "rating": 4.5,
+   "reviews": 12,
+   "url": "https://sourceforge.net/software/product/Cloudflare/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@cloudflare/sandbox",
+   "downloads_month": 2905374,
+   "url": "https://www.npmjs.com/package/@cloudflare/sandbox",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "coda-api-superhuman-docs": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Coda/",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "codesandbox-sdk": [
+  {
+   "source": "stackoverflow",
+   "tag": "codesandbox",
+   "questions": 270,
+   "url": "https://stackoverflow.com/questions/tagged/codesandbox",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@codesandbox/sdk",
+   "downloads_month": 396397,
+   "url": "https://www.npmjs.com/package/@codesandbox/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "cohere-api": [
@@ -414,6 +1190,20 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Cohere/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "cohere-ai",
+   "downloads_month": 2182534,
+   "url": "https://www.npmjs.com/package/cohere-ai",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "cohere",
+   "downloads_month": 10340762,
+   "url": "https://pypi.org/project/cohere/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "coinbase-cdp-x402": [
@@ -433,6 +1223,28 @@
    "reviews": 10,
    "url": "https://sourceforge.net/software/product/Coinbase/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Coinbase: Buy Crypto & Stocks",
+   "rating": 4.68,
+   "ratings": 1797818,
+   "url": "https://apps.apple.com/us/app/coinbase-buy-crypto-stocks/id886427730",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@coinbase/cdp-sdk",
+   "downloads_month": 4653110,
+   "url": "https://www.npmjs.com/package/@coinbase/cdp-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "cdp-sdk",
+   "downloads_month": 107008,
+   "url": "https://pypi.org/project/cdp-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "coingecko-api": [
@@ -442,6 +1254,28 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/CoinGecko/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "appstore",
+   "app": "CoinGecko: Crypto Tracker",
+   "rating": 4.81,
+   "ratings": 27140,
+   "url": "https://apps.apple.com/us/app/coingecko-crypto-tracker/id1390323960",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@coingecko/coingecko-typescript",
+   "downloads_month": 81035,
+   "url": "https://www.npmjs.com/package/@coingecko/coingecko-typescript",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "coingecko-sdk",
+   "downloads_month": 14015,
+   "url": "https://pypi.org/project/coingecko-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "coinmarketcap-api": [
@@ -451,6 +1285,46 @@
    "reviews": 16,
    "url": "https://sourceforge.net/software/product/CoinMarketCap/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "appstore",
+   "app": "CoinMarketCap: Crypto Tracker",
+   "rating": 4.81,
+   "ratings": 172965,
+   "url": "https://apps.apple.com/us/app/coinmarketcap-crypto-tracker/id1282107098",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "comet-opik": [
+  {
+   "source": "npm",
+   "package": "opik",
+   "downloads_month": 169991,
+   "url": "https://www.npmjs.com/package/opik",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "opik",
+   "downloads_month": 1741711,
+   "url": "https://pypi.org/project/opik/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "composio": [
+  {
+   "source": "npm",
+   "package": "@composio/core",
+   "downloads_month": 4725902,
+   "url": "https://www.npmjs.com/package/@composio/core",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "composio",
+   "downloads_month": 1726025,
+   "url": "https://pypi.org/project/composio/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "congress-gov": [
@@ -471,6 +1345,13 @@
    "uses": 5563,
    "url": "https://smithery.ai/servers/upstash/context7-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@upstash/context7-sdk",
+   "downloads_month": 44626,
+   "url": "https://www.npmjs.com/package/@upstash/context7-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "convex": [
@@ -483,6 +1364,36 @@
    "archived": false,
    "url": "https://github.com/get-convex/convex-backend",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "convex",
+   "questions": 144,
+   "url": "https://stackoverflow.com/questions/tagged/convex",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "convex",
+   "downloads_month": 6980583,
+   "url": "https://www.npmjs.com/package/convex",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "convex",
+   "downloads_month": 78287,
+   "url": "https://pypi.org/project/convex/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "creatomate-api": [
+  {
+   "source": "npm",
+   "package": "creatomate",
+   "downloads_month": 46297,
+   "url": "https://www.npmjs.com/package/creatomate",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "crossref-rest-api": [
@@ -504,6 +1415,43 @@
    "reviews": 7,
    "url": "https://sourceforge.net/software/product/Datadog/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "datadog",
+   "questions": 1102,
+   "url": "https://stackoverflow.com/questions/tagged/datadog",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@datadog/datadog-api-client",
+   "downloads_month": 14147795,
+   "url": "https://www.npmjs.com/package/@datadog/datadog-api-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "datadog-api-client",
+   "downloads_month": 18438013,
+   "url": "https://pypi.org/project/datadog-api-client/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "daytona": [
+  {
+   "source": "npm",
+   "package": "@daytonaio/sdk",
+   "downloads_month": 2910014,
+   "url": "https://www.npmjs.com/package/@daytonaio/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "daytona",
+   "downloads_month": 8365992,
+   "url": "https://pypi.org/project/daytona/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "deepgram-api": [
@@ -516,6 +1464,62 @@
    "archived": false,
    "url": "https://github.com/deepgram/mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "deepgram",
+   "questions": 6,
+   "url": "https://stackoverflow.com/questions/tagged/deepgram",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@deepgram/sdk",
+   "downloads_month": 4340039,
+   "url": "https://www.npmjs.com/package/@deepgram/sdk",
+   "shared_with": [
+    "deepgram-voice-agent-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "deepgram-sdk",
+   "downloads_month": 3166523,
+   "url": "https://pypi.org/project/deepgram-sdk/",
+   "shared_with": [
+    "deepgram-voice-agent-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "deepgram-voice-agent-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "deepgram",
+   "questions": 6,
+   "url": "https://stackoverflow.com/questions/tagged/deepgram",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@deepgram/sdk",
+   "downloads_month": 4340039,
+   "url": "https://www.npmjs.com/package/@deepgram/sdk",
+   "shared_with": [
+    "deepgram-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "deepgram-sdk",
+   "downloads_month": 3166523,
+   "url": "https://pypi.org/project/deepgram-sdk/",
+   "shared_with": [
+    "deepgram-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "deepl-api": [
@@ -535,6 +1539,35 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/DeepL/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "deepl",
+   "questions": 84,
+   "url": "https://stackoverflow.com/questions/tagged/deepl",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "DeepL Translate",
+   "rating": 4.77,
+   "ratings": 13278,
+   "url": "https://apps.apple.com/us/app/deepl-translate/id1552407475",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "deepl-node",
+   "downloads_month": 1265130,
+   "url": "https://www.npmjs.com/package/deepl-node",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "deepl",
+   "downloads_month": 1229932,
+   "url": "https://pypi.org/project/deepl/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "deepseek-api": [
@@ -544,6 +1577,31 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/DeepSeek/",
    "fetched_at": "2026-10-12T13:09Z"
+  }
+ ],
+ "dexpaprika": [
+  {
+   "source": "npm",
+   "package": "dexpaprika-sdk",
+   "downloads_month": 957,
+   "url": "https://www.npmjs.com/package/dexpaprika-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "dexpaprika-sdk",
+   "downloads_month": 678,
+   "url": "https://pypi.org/project/dexpaprika-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "diffbot": [
+  {
+   "source": "stackoverflow",
+   "tag": "diffbot",
+   "questions": 16,
+   "url": "https://stackoverflow.com/questions/tagged/diffbot",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "discord-api": [
@@ -562,6 +1620,21 @@
    "uses": 82,
    "url": "https://smithery.ai/servers/discord",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "discord",
+   "questions": 20665,
+   "url": "https://stackoverflow.com/questions/tagged/discord",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Discord - Talk, Play, Hang Out",
+   "rating": 4.7,
+   "ratings": 3567523,
+   "url": "https://apps.apple.com/us/app/discord-talk-play-hang-out/id985746746",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "docker-hub-api": [
@@ -574,6 +1647,13 @@
    "archived": false,
    "url": "https://github.com/docker/hub-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 3,
+   "url": "https://sourceforge.net/software/product/Docker/",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "docusign-esignature-api": [
@@ -586,6 +1666,42 @@
    "archived": false,
    "url": "https://github.com/docusign/OpenAPI-Specifications",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "docusignapi",
+   "questions": 6268,
+   "url": "https://stackoverflow.com/questions/tagged/docusignapi",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Docusign - Upload & Sign Docs",
+   "rating": 4.87,
+   "ratings": 829908,
+   "url": "https://apps.apple.com/us/app/docusign-upload-sign-docs/id474990205",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.3,
+   "reviews": 43,
+   "url": "https://sourceforge.net/software/product/DocuSign/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "docusign-esign",
+   "downloads_month": 1862422,
+   "url": "https://www.npmjs.com/package/docusign-esign",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "docusign-esign",
+   "downloads_month": 1634525,
+   "url": "https://pypi.org/project/docusign-esign/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "dropbox-api": [
@@ -595,6 +1711,35 @@
    "reviews": 226,
    "url": "https://sourceforge.net/software/product/Dropbox/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "dropbox-api",
+   "questions": 2370,
+   "url": "https://stackoverflow.com/questions/tagged/dropbox-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Dropbox: Cloud Storage Backup",
+   "rating": 4.8,
+   "ratings": 917107,
+   "url": "https://apps.apple.com/us/app/dropbox-cloud-storage-backup/id327630330",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "dropbox",
+   "downloads_month": 1055616,
+   "url": "https://www.npmjs.com/package/dropbox",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "dropbox",
+   "downloads_month": 1542245,
+   "url": "https://pypi.org/project/dropbox/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "e2b": [
@@ -607,6 +1752,20 @@
    "archived": true,
    "url": "https://github.com/e2b-dev/mcp-server",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "e2b",
+   "downloads_month": 8614119,
+   "url": "https://www.npmjs.com/package/e2b",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "e2b",
+   "downloads_month": 5857504,
+   "url": "https://pypi.org/project/e2b/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "ebay-apis": [
@@ -626,6 +1785,59 @@
    "reviews": 10,
    "url": "https://sourceforge.net/software/product/eBay/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "ebay-api",
+   "questions": 1104,
+   "url": "https://stackoverflow.com/questions/tagged/ebay-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "eBay online shopping & selling",
+   "rating": 4.82,
+   "ratings": 4969390,
+   "url": "https://apps.apple.com/us/app/ebay-online-shopping-selling/id282614216",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "elevenlabs-agents-platform": [
+  {
+   "source": "stackoverflow",
+   "tag": "elevenlabs",
+   "questions": 22,
+   "url": "https://stackoverflow.com/questions/tagged/elevenlabs",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.0,
+   "reviews": 4,
+   "url": "https://sourceforge.net/software/product/ElevenLabs/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@elevenlabs/elevenlabs-js",
+   "downloads_month": 4177848,
+   "url": "https://www.npmjs.com/package/@elevenlabs/elevenlabs-js",
+   "shared_with": [
+    "elevenlabs-api",
+    "elevenlabs-music-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "elevenlabs",
+   "downloads_month": 9073441,
+   "url": "https://pypi.org/project/elevenlabs/",
+   "shared_with": [
+    "elevenlabs-api",
+    "elevenlabs-music-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "elevenlabs-api": [
@@ -635,6 +1847,99 @@
    "reviews": 4,
    "url": "https://sourceforge.net/software/product/ElevenLabs/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@elevenlabs/elevenlabs-js",
+   "downloads_month": 4177848,
+   "url": "https://www.npmjs.com/package/@elevenlabs/elevenlabs-js",
+   "shared_with": [
+    "elevenlabs-music-api",
+    "elevenlabs-agents-platform"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "elevenlabs",
+   "downloads_month": 9073441,
+   "url": "https://pypi.org/project/elevenlabs/",
+   "shared_with": [
+    "elevenlabs-music-api",
+    "elevenlabs-agents-platform"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "elevenlabs-music-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.0,
+   "reviews": 4,
+   "url": "https://sourceforge.net/software/product/ElevenLabs/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@elevenlabs/elevenlabs-js",
+   "downloads_month": 4177848,
+   "url": "https://www.npmjs.com/package/@elevenlabs/elevenlabs-js",
+   "shared_with": [
+    "elevenlabs-api",
+    "elevenlabs-agents-platform"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "elevenlabs",
+   "downloads_month": 9073441,
+   "url": "https://pypi.org/project/elevenlabs/",
+   "shared_with": [
+    "elevenlabs-api",
+    "elevenlabs-agents-platform"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "esri-arcgis-location-platform": [
+  {
+   "source": "stackoverflow",
+   "tag": "arcgis",
+   "questions": 2749,
+   "url": "https://stackoverflow.com/questions/tagged/arcgis",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "pypi",
+   "package": "arcgis",
+   "downloads_month": 138222,
+   "url": "https://pypi.org/project/arcgis/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "etsy-open-api-v3": [
+  {
+   "source": "stackoverflow",
+   "tag": "etsy",
+   "questions": 139,
+   "url": "https://stackoverflow.com/questions/tagged/etsy",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Etsy: Shop from Real People",
+   "rating": 4.92,
+   "ratings": 7326910,
+   "url": "https://apps.apple.com/us/app/etsy-shop-from-real-people/id477128284",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.5,
+   "reviews": 4,
+   "url": "https://sourceforge.net/software/product/Etsy/",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "exa": [
@@ -644,6 +1949,36 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Exa/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "exa-js",
+   "downloads_month": 4261957,
+   "url": "https://www.npmjs.com/package/exa-js",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "exa-py",
+   "downloads_month": 5406331,
+   "url": "https://pypi.org/project/exa-py/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "fal-ai": [
+  {
+   "source": "npm",
+   "package": "@fal-ai/client",
+   "downloads_month": 7152204,
+   "url": "https://www.npmjs.com/package/@fal-ai/client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "fal-client",
+   "downloads_month": 2886801,
+   "url": "https://pypi.org/project/fal-client/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "figma-rest-api-dev-mode-mcp": [
@@ -656,6 +1991,35 @@
    "archived": false,
    "url": "https://github.com/figma/rest-api-spec",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "figma",
+   "questions": 354,
+   "url": "https://stackoverflow.com/questions/tagged/figma",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Figma",
+   "rating": 4.62,
+   "ratings": 20962,
+   "url": "https://apps.apple.com/us/app/figma/id1152747299",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 15,
+   "url": "https://sourceforge.net/software/product/Figma/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@figma/rest-api-spec",
+   "downloads_month": 1915111,
+   "url": "https://www.npmjs.com/package/@figma/rest-api-spec",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "financial-modeling-prep": [
@@ -674,6 +2038,36 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Firecrawl/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "firecrawl",
+   "questions": 5,
+   "url": "https://stackoverflow.com/questions/tagged/firecrawl",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@mendable/firecrawl-js",
+   "downloads_month": 5518404,
+   "url": "https://www.npmjs.com/package/@mendable/firecrawl-js",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "firecrawl-py",
+   "downloads_month": 5339910,
+   "url": "https://pypi.org/project/firecrawl-py/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "fireworks-ai": [
+  {
+   "source": "pypi",
+   "package": "fireworks-ai",
+   "downloads_month": 1157786,
+   "url": "https://pypi.org/project/fireworks-ai/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "framer": [
@@ -683,6 +2077,23 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Framer/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "framer-api",
+   "downloads_month": 1209346,
+   "url": "https://www.npmjs.com/package/framer-api",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "gamma-api": [
+  {
+   "source": "appstore",
+   "app": "Gamma: AI Slides & Design",
+   "rating": 4.77,
+   "ratings": 1099,
+   "url": "https://apps.apple.com/us/app/gamma-ai-slides-design/id6768404578",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "gdelt-api": [
@@ -697,7 +2108,23 @@
    "fetched_at": "2026-10-12T13:09Z"
   }
  ],
+ "geoapify": [
+  {
+   "source": "npm",
+   "package": "@geoapify/geocoder-autocomplete",
+   "downloads_month": 45694,
+   "url": "https://www.npmjs.com/package/@geoapify/geocoder-autocomplete",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
  "github-api": [
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 21,
+   "url": "https://sourceforge.net/software/product/GitHub/",
+   "fetched_at": "2026-10-12T13:09Z"
+  },
   {
    "source": "smithery",
    "uses": 6059,
@@ -705,11 +2132,25 @@
    "fetched_at": "2026-10-12T13:09Z"
   },
   {
-   "source": "sourceforge",
-   "rating": 4.7,
-   "reviews": 21,
-   "url": "https://sourceforge.net/software/product/GitHub/",
-   "fetched_at": "2026-10-12T13:09Z"
+   "source": "stackoverflow",
+   "tag": "github-api",
+   "questions": 3762,
+   "url": "https://stackoverflow.com/questions/tagged/github-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "octokit",
+   "downloads_month": 21607942,
+   "url": "https://www.npmjs.com/package/octokit",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "npm",
+   "package": "@octokit/rest",
+   "downloads_month": 92655426,
+   "url": "https://www.npmjs.com/package/@octokit/rest",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "gitingest": [
@@ -722,6 +2163,13 @@
    "archived": false,
    "url": "https://github.com/narumiruna/gitingest-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "pypi",
+   "package": "gitingest",
+   "downloads_month": 163295,
+   "url": "https://pypi.org/project/gitingest/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "gitlab-api": [
@@ -731,6 +2179,22 @@
    "reviews": 14,
    "url": "https://sourceforge.net/software/product/GitLab/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "gitlab",
+   "questions": 18299,
+   "url": "https://stackoverflow.com/questions/tagged/gitlab",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "globalping": [
+  {
+   "source": "npm",
+   "package": "globalping",
+   "downloads_month": 36033,
+   "url": "https://www.npmjs.com/package/globalping",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "google-bigquery": [
@@ -739,6 +2203,27 @@
    "uses": 6986,
    "url": "https://smithery.ai/servers/bigquery",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "google-bigquery",
+   "questions": 26141,
+   "url": "https://stackoverflow.com/questions/tagged/google-bigquery",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@google-cloud/bigquery",
+   "downloads_month": 21444693,
+   "url": "https://www.npmjs.com/package/@google-cloud/bigquery",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "google-cloud-bigquery",
+   "downloads_month": 147410761,
+   "url": "https://pypi.org/project/google-cloud-bigquery/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "google-cloud-text-to-speech-speech-to-text": [
@@ -751,6 +2236,151 @@
    "archived": false,
    "url": "https://github.com/GoogleCloudPlatform/genmedia-creative-studio",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "google-cloud-speech",
+   "questions": 594,
+   "url": "https://stackoverflow.com/questions/tagged/google-cloud-speech",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@google-cloud/text-to-speech",
+   "downloads_month": 1617541,
+   "url": "https://www.npmjs.com/package/@google-cloud/text-to-speech",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "npm",
+   "package": "@google-cloud/speech",
+   "downloads_month": 2952028,
+   "url": "https://www.npmjs.com/package/@google-cloud/speech",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "google-cloud-texttospeech",
+   "downloads_month": 9767005,
+   "url": "https://pypi.org/project/google-cloud-texttospeech/",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "google-cloud-speech",
+   "downloads_month": 15131032,
+   "url": "https://pypi.org/project/google-cloud-speech/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "google-cloud-translation": [
+  {
+   "source": "stackoverflow",
+   "tag": "google-cloud-translate",
+   "questions": 56,
+   "url": "https://stackoverflow.com/questions/tagged/google-cloud-translate",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@google-cloud/translate",
+   "downloads_month": 2219280,
+   "url": "https://www.npmjs.com/package/@google-cloud/translate",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "google-cloud-translate",
+   "downloads_month": 9817700,
+   "url": "https://pypi.org/project/google-cloud-translate/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "google-document-ai": [
+  {
+   "source": "npm",
+   "package": "@google-cloud/documentai",
+   "downloads_month": 2170775,
+   "url": "https://www.npmjs.com/package/@google-cloud/documentai",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "google-cloud-documentai",
+   "downloads_month": 3153802,
+   "url": "https://pypi.org/project/google-cloud-documentai/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "google-gemini-api": [
+  {
+   "source": "appstore",
+   "app": "Google Gemini",
+   "rating": 4.72,
+   "ratings": 2338474,
+   "url": "https://apps.apple.com/us/app/google-gemini/id6477489729",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@google/genai",
+   "downloads_month": 109044623,
+   "url": "https://www.npmjs.com/package/@google/genai",
+   "shared_with": [
+    "google-gemini-imagen-image-api",
+    "google-veo-gemini-api-vertex-ai"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "google-genai",
+   "downloads_month": 137607856,
+   "url": "https://pypi.org/project/google-genai/",
+   "shared_with": [
+    "google-gemini-imagen-image-api",
+    "google-veo-gemini-api-vertex-ai"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "google-gemini-imagen-image-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "google-gemini",
+   "questions": 377,
+   "url": "https://stackoverflow.com/questions/tagged/google-gemini",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Google Gemini",
+   "rating": 4.72,
+   "ratings": 2338474,
+   "url": "https://apps.apple.com/us/app/google-gemini/id6477489729",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@google/genai",
+   "downloads_month": 109044623,
+   "url": "https://www.npmjs.com/package/@google/genai",
+   "shared_with": [
+    "google-veo-gemini-api-vertex-ai",
+    "google-gemini-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "google-genai",
+   "downloads_month": 137607856,
+   "url": "https://pypi.org/project/google-genai/",
+   "shared_with": [
+    "google-veo-gemini-api-vertex-ai",
+    "google-gemini-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "google-maps-platform": [
@@ -760,6 +2390,44 @@
    "reviews": 6,
    "url": "https://sourceforge.net/software/product/Google-Maps/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "google-maps-api-3",
+   "questions": 24983,
+   "url": "https://stackoverflow.com/questions/tagged/google-maps-api-3",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Google Maps",
+   "rating": 4.67,
+   "ratings": 7407365,
+   "url": "https://apps.apple.com/us/app/google-maps/id585027354",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@googlemaps/google-maps-services-js",
+   "downloads_month": 4455606,
+   "url": "https://www.npmjs.com/package/@googlemaps/google-maps-services-js",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "googlemaps",
+   "downloads_month": 3144295,
+   "url": "https://pypi.org/project/googlemaps/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "google-slides-docs-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "google-slides-api",
+   "questions": 459,
+   "url": "https://stackoverflow.com/questions/tagged/google-slides-api",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "google-veo-gemini-api-vertex-ai": [
@@ -772,6 +2440,62 @@
    "archived": false,
    "url": "https://github.com/GoogleCloudPlatform/genmedia-creative-studio",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@google/genai",
+   "downloads_month": 109044623,
+   "url": "https://www.npmjs.com/package/@google/genai",
+   "shared_with": [
+    "google-gemini-imagen-image-api",
+    "google-gemini-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "google-genai",
+   "downloads_month": 137607856,
+   "url": "https://pypi.org/project/google-genai/",
+   "shared_with": [
+    "google-gemini-imagen-image-api",
+    "google-gemini-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "google-workspace-apis-gmail-calendar-drive": [
+  {
+   "source": "stackoverflow",
+   "tag": "google-api",
+   "questions": 19830,
+   "url": "https://stackoverflow.com/questions/tagged/google-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "groq-api": [
+  {
+   "source": "npm",
+   "package": "groq-sdk",
+   "downloads_month": 4040695,
+   "url": "https://www.npmjs.com/package/groq-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "groq",
+   "downloads_month": 16795477,
+   "url": "https://pypi.org/project/groq/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "gumloop": [
+  {
+   "source": "pypi",
+   "package": "gumloop",
+   "downloads_month": 13306,
+   "url": "https://pypi.org/project/gumloop/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "hacker-news-api": [
@@ -794,6 +2518,37 @@
    "archived": false,
    "url": "https://github.com/devrelopers/hackernews-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "hacker-news-api",
+   "questions": 32,
+   "url": "https://stackoverflow.com/questions/tagged/hacker-news-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "here-location-services": [
+  {
+   "source": "stackoverflow",
+   "tag": "here-api",
+   "questions": 3313,
+   "url": "https://stackoverflow.com/questions/tagged/here-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "HERE WeGo Maps & Navigation",
+   "rating": 3.67,
+   "ratings": 1567,
+   "url": "https://apps.apple.com/us/app/here-wego-maps-navigation/id955837609",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "pypi",
+   "package": "here-location-services",
+   "downloads_month": 1315,
+   "url": "https://pypi.org/project/here-location-services/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "heygen-api": [
@@ -811,6 +2566,51 @@
    "uses": 1166,
    "url": "https://smithery.ai/servers/hubspot",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "hubspot",
+   "questions": 449,
+   "url": "https://stackoverflow.com/questions/tagged/hubspot",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "HubSpot",
+   "rating": 4.74,
+   "ratings": 15731,
+   "url": "https://apps.apple.com/us/app/hubspot/id1107711722",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@hubspot/api-client",
+   "downloads_month": 7062856,
+   "url": "https://www.npmjs.com/package/@hubspot/api-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "hubspot-api-client",
+   "downloads_month": 3544086,
+   "url": "https://pypi.org/project/hubspot-api-client/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "hugging-face-inference-providers": [
+  {
+   "source": "npm",
+   "package": "@huggingface/inference",
+   "downloads_month": 1792543,
+   "url": "https://www.npmjs.com/package/@huggingface/inference",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "huggingface_hub",
+   "downloads_month": 232552563,
+   "url": "https://pypi.org/project/huggingface_hub/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "hume-ai-api": [
@@ -823,6 +2623,20 @@
    "archived": false,
    "url": "https://github.com/HumeAI/mcp-server-hume",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "hume",
+   "downloads_month": 303974,
+   "url": "https://www.npmjs.com/package/hume",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "hume",
+   "downloads_month": 73136,
+   "url": "https://pypi.org/project/hume/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "hyperbrowser": [
@@ -835,6 +2649,20 @@
    "archived": false,
    "url": "https://github.com/hyperbrowserai/mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@hyperbrowser/sdk",
+   "downloads_month": 305227,
+   "url": "https://www.npmjs.com/package/@hyperbrowser/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "hyperbrowser",
+   "downloads_month": 303557,
+   "url": "https://pypi.org/project/hyperbrowser/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "icepanel-api": [
@@ -853,6 +2681,21 @@
    "reviews": 4,
    "url": "https://sourceforge.net/software/product/IFTTT/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "ifttt",
+   "questions": 212,
+   "url": "https://stackoverflow.com/questions/tagged/ifttt",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "IFTTT - Automate work and home",
+   "rating": 4.61,
+   "ratings": 59666,
+   "url": "https://apps.apple.com/us/app/ifttt-automate-work-and-home/id660944635",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "intercom-api": [
@@ -862,6 +2705,51 @@
    "reviews": 9,
    "url": "https://sourceforge.net/software/product/Intercom/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "intercom",
+   "questions": 177,
+   "url": "https://stackoverflow.com/questions/tagged/intercom",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Intercom Conversations",
+   "rating": 2.13,
+   "ratings": 172,
+   "url": "https://apps.apple.com/us/app/intercom-conversations/id739927601",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "intercom-client",
+   "downloads_month": 2021473,
+   "url": "https://www.npmjs.com/package/intercom-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "python-intercom",
+   "downloads_month": 248819,
+   "url": "https://pypi.org/project/python-intercom/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "ip2location-io": [
+  {
+   "source": "npm",
+   "package": "ip2location-io-nodejs",
+   "downloads_month": 15759,
+   "url": "https://www.npmjs.com/package/ip2location-io-nodejs",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "IP2Location-io",
+   "downloads_month": 74,
+   "url": "https://pypi.org/project/IP2Location-io/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "iplocate": [
@@ -874,6 +2762,13 @@
    "archived": false,
    "url": "https://github.com/iplocate/mcp-server-iplocate",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "node-iplocate",
+   "downloads_month": 76779,
+   "url": "https://www.npmjs.com/package/node-iplocate",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "kagi-search-api": [
@@ -886,6 +2781,13 @@
    "archived": false,
    "url": "https://github.com/kagisearch/kagimcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Kagi/",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "klaviyo-api": [
@@ -901,6 +2803,27 @@
    "reviews": 8,
    "url": "https://sourceforge.net/software/product/Klaviyo/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "klaviyo",
+   "questions": 15,
+   "url": "https://stackoverflow.com/questions/tagged/klaviyo",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "klaviyo-api",
+   "downloads_month": 548881,
+   "url": "https://www.npmjs.com/package/klaviyo-api",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "klaviyo-api",
+   "downloads_month": 253129,
+   "url": "https://pypi.org/project/klaviyo-api/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "kling-ai-api": [
@@ -922,6 +2845,13 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/LanguageTool/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "languagetool",
+   "questions": 84,
+   "url": "https://stackoverflow.com/questions/tagged/languagetool",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "lara-translate-api": [
@@ -931,6 +2861,20 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Lara-Translate/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@translated/lara",
+   "downloads_month": 613625,
+   "url": "https://www.npmjs.com/package/@translated/lara",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "lara-sdk",
+   "downloads_month": 6346,
+   "url": "https://pypi.org/project/lara-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "leonardo-ai-api": [
@@ -940,6 +2884,36 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Leonardo.ai/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@leonardo-ai/sdk",
+   "downloads_month": 68825,
+   "url": "https://www.npmjs.com/package/@leonardo-ai/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "leonardo-ai-sdk",
+   "downloads_month": 194,
+   "url": "https://pypi.org/project/leonardo-ai-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "letta": [
+  {
+   "source": "npm",
+   "package": "@letta-ai/letta-client",
+   "downloads_month": 536916,
+   "url": "https://www.npmjs.com/package/@letta-ai/letta-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "letta-client",
+   "downloads_month": 161915,
+   "url": "https://pypi.org/project/letta-client/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "line-messaging-api": [
@@ -952,6 +2926,35 @@
    "archived": false,
    "url": "https://github.com/line/line-bot-mcp-server",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "line-api",
+   "questions": 31,
+   "url": "https://stackoverflow.com/questions/tagged/line-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "LINE",
+   "rating": 3.2,
+   "ratings": 18458,
+   "url": "https://apps.apple.com/us/app/line/id443904275",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@line/bot-sdk",
+   "downloads_month": 4287594,
+   "url": "https://www.npmjs.com/package/@line/bot-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "line-bot-sdk",
+   "downloads_month": 11357375,
+   "url": "https://pypi.org/project/line-bot-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "linear-api": [
@@ -967,6 +2970,30 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Linear/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@linear/sdk",
+   "downloads_month": 12316806,
+   "url": "https://www.npmjs.com/package/@linear/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "linkedin-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "linkedin-api",
+   "questions": 5222,
+   "url": "https://stackoverflow.com/questions/tagged/linkedin-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "LinkedIn: Community & Network",
+   "rating": 4.77,
+   "ratings": 644859,
+   "url": "https://apps.apple.com/us/app/linkedin-community-network/id288429040",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "linkup": [
@@ -975,6 +3002,73 @@
    "uses": 213,
    "url": "https://smithery.ai/servers/LinkupPlatform/linkup-mcp-server",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "linkup-sdk",
+   "downloads_month": 224291,
+   "url": "https://www.npmjs.com/package/linkup-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "linkup-sdk",
+   "downloads_month": 294228,
+   "url": "https://pypi.org/project/linkup-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "livekit-cloud": [
+  {
+   "source": "stackoverflow",
+   "tag": "livekit",
+   "questions": 40,
+   "url": "https://stackoverflow.com/questions/tagged/livekit",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "livekit-server-sdk",
+   "downloads_month": 10276529,
+   "url": "https://www.npmjs.com/package/livekit-server-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "livekit-api",
+   "downloads_month": 6123157,
+   "url": "https://pypi.org/project/livekit-api/",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "livekit",
+   "downloads_month": 5645409,
+   "url": "https://pypi.org/project/livekit/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "llamaparse-llamacloud": [
+  {
+   "source": "stackoverflow",
+   "tag": "llama-parse",
+   "questions": 3,
+   "url": "https://stackoverflow.com/questions/tagged/llama-parse",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "llama-cloud-services",
+   "downloads_month": 681463,
+   "url": "https://www.npmjs.com/package/llama-cloud-services",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "llama-cloud-services",
+   "downloads_month": 2344929,
+   "url": "https://pypi.org/project/llama-cloud-services/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "loudly-api": [
@@ -984,6 +3078,23 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Loudly/",
    "fetched_at": "2026-10-12T13:09Z"
+  }
+ ],
+ "lucid-lucidchart-rest-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "lucidchart",
+   "questions": 22,
+   "url": "https://stackoverflow.com/questions/tagged/lucidchart",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Lucidchart",
+   "rating": 4.59,
+   "ratings": 5322,
+   "url": "https://apps.apple.com/us/app/lucidchart/id611543423",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "luma-ai-dream-machine-api": [
@@ -996,6 +3107,20 @@
    "archived": false,
    "url": "https://github.com/lumalabs/luma-api-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "lumaai",
+   "downloads_month": 65723,
+   "url": "https://www.npmjs.com/package/lumaai",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "lumaai",
+   "downloads_month": 39706,
+   "url": "https://pypi.org/project/lumaai/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "mailchimp-marketing-api": [
@@ -1008,6 +3133,42 @@
    "archived": false,
    "url": "https://github.com/damientilman/mailchimp-mcp-server",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "mailchimp-api-v3.0",
+   "questions": 576,
+   "url": "https://stackoverflow.com/questions/tagged/mailchimp-api-v3.0",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Mailchimp Email Marketing",
+   "rating": 4.85,
+   "ratings": 51667,
+   "url": "https://apps.apple.com/us/app/mailchimp-email-marketing/id366794783",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.5,
+   "reviews": 130,
+   "url": "https://sourceforge.net/software/product/MailChimp/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@mailchimp/mailchimp_marketing",
+   "downloads_month": 947288,
+   "url": "https://www.npmjs.com/package/@mailchimp/mailchimp_marketing",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "mailchimp-marketing",
+   "downloads_month": 516454,
+   "url": "https://pypi.org/project/mailchimp-marketing/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "mailgun": [
@@ -1027,6 +3188,36 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Mailgun/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "mailgun",
+   "questions": 1555,
+   "url": "https://stackoverflow.com/questions/tagged/mailgun",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "mailgun.js",
+   "downloads_month": 4978803,
+   "url": "https://www.npmjs.com/package/mailgun.js",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "mailgun",
+   "downloads_month": 287119,
+   "url": "https://pypi.org/project/mailgun/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "make-api-mcp": [
+  {
+   "source": "sourceforge",
+   "rating": 4.9,
+   "reviews": 10,
+   "url": "https://sourceforge.net/software/product/Make/",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "mapbox": [
@@ -1035,6 +3226,34 @@
    "uses": 0,
    "url": "https://smithery.ai/servers/mapbox",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "mapbox",
+   "questions": 6490,
+   "url": "https://stackoverflow.com/questions/tagged/mapbox",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "mapbox-gl",
+   "downloads_month": 19017573,
+   "url": "https://www.npmjs.com/package/mapbox-gl",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "npm",
+   "package": "@mapbox/mapbox-sdk",
+   "downloads_month": 1667122,
+   "url": "https://www.npmjs.com/package/@mapbox/mapbox-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "mapbox",
+   "downloads_month": 150163,
+   "url": "https://pypi.org/project/mapbox/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "mastodon-api": [
@@ -1044,6 +3263,21 @@
    "reviews": 11,
    "url": "https://sourceforge.net/software/product/Mastodon/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "mastodon",
+   "questions": 67,
+   "url": "https://stackoverflow.com/questions/tagged/mastodon",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Mastodon",
+   "rating": 4.55,
+   "ratings": 13480,
+   "url": "https://apps.apple.com/us/app/mastodon/id1571998974",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "maven-central-search": [
@@ -1058,6 +3292,62 @@
    "fetched_at": "2026-10-12T13:09Z"
   }
  ],
+ "mem0": [
+  {
+   "source": "npm",
+   "package": "mem0ai",
+   "downloads_month": 657480,
+   "url": "https://www.npmjs.com/package/mem0ai",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "mercado-pago-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "mercadopago",
+   "questions": 46,
+   "url": "https://stackoverflow.com/questions/tagged/mercadopago",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Mercado Pago: cuenta digital",
+   "rating": 4.82,
+   "ratings": 76876,
+   "url": "https://apps.apple.com/us/app/mercado-pago-cuenta-digital/id925436649",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "mercadopago",
+   "downloads_month": 1065298,
+   "url": "https://www.npmjs.com/package/mercadopago",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "mercadopago",
+   "downloads_month": 276423,
+   "url": "https://pypi.org/project/mercadopago/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "mermaid-chart-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "mermaid",
+   "questions": 363,
+   "url": "https://stackoverflow.com/questions/tagged/mermaid",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@mermaidchart/sdk",
+   "downloads_month": 1478,
+   "url": "https://www.npmjs.com/package/@mermaidchart/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
  "meshy-api": [
   {
    "source": "github",
@@ -1068,6 +3358,53 @@
    "archived": false,
    "url": "https://github.com/meshy-dev/meshy-mcp-server",
    "fetched_at": "2026-10-12T13:09Z"
+  }
+ ],
+ "meta-graph-api-facebook-instagram": [
+  {
+   "source": "stackoverflow",
+   "tag": "facebook-graph-api",
+   "questions": 34972,
+   "url": "https://stackoverflow.com/questions/tagged/facebook-graph-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Facebook",
+   "rating": 4.53,
+   "ratings": 28741653,
+   "url": "https://apps.apple.com/us/app/facebook/id284882215",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.1,
+   "reviews": 22,
+   "url": "https://sourceforge.net/software/product/Facebook/",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "microsoft-graph-outlook-teams-onedrive": [
+  {
+   "source": "stackoverflow",
+   "tag": "microsoft-graph-api",
+   "questions": 14366,
+   "url": "https://stackoverflow.com/questions/tagged/microsoft-graph-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@microsoft/microsoft-graph-client",
+   "downloads_month": 10517317,
+   "url": "https://www.npmjs.com/package/@microsoft/microsoft-graph-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "msgraph-sdk",
+   "downloads_month": 5816938,
+   "url": "https://pypi.org/project/msgraph-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "minimax-hailuo-api": [
@@ -1082,6 +3419,37 @@
    "fetched_at": "2026-10-12T13:09Z"
   }
  ],
+ "miro-rest-api": [
+  {
+   "source": "appstore",
+   "app": "Miro: your visual workspace",
+   "rating": 4.69,
+   "ratings": 5825,
+   "url": "https://apps.apple.com/us/app/miro-your-visual-workspace/id1180074773",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 121,
+   "url": "https://sourceforge.net/software/product/Miro/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@mirohq/miro-api",
+   "downloads_month": 77293,
+   "url": "https://www.npmjs.com/package/@mirohq/miro-api",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "miro-api",
+   "downloads_month": 691,
+   "url": "https://pypi.org/project/miro-api/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
  "mistral-ai-api": [
   {
    "source": "sourceforge",
@@ -1089,6 +3457,34 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Mistral-AI/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Vibe by Mistral (ex-Le Chat)",
+   "rating": 4.76,
+   "ratings": 1311,
+   "url": "https://apps.apple.com/us/app/vibe-by-mistral-ex-le-chat/id6740410176",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@mistralai/mistralai",
+   "downloads_month": 35399422,
+   "url": "https://www.npmjs.com/package/@mistralai/mistralai",
+   "shared_with": [
+    "mistral-ocr-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "mistralai",
+   "downloads_month": 16185864,
+   "url": "https://pypi.org/project/mistralai/",
+   "shared_with": [
+    "mistral-ocr-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "mistral-ocr-api": [
@@ -1101,6 +3497,33 @@
    "archived": false,
    "url": "https://github.com/D-Diaa/mistral-ocr-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "mistral-ai",
+   "questions": 12,
+   "url": "https://stackoverflow.com/questions/tagged/mistral-ai",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@mistralai/mistralai",
+   "downloads_month": 35399422,
+   "url": "https://www.npmjs.com/package/@mistralai/mistralai",
+   "shared_with": [
+    "mistral-ai-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "mistralai",
+   "downloads_month": 16185864,
+   "url": "https://pypi.org/project/mistralai/",
+   "shared_with": [
+    "mistral-ai-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "modal": [
@@ -1113,6 +3536,29 @@
    "archived": false,
    "url": "https://github.com/milkymap/mcp4modal_sandbox",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "modal",
+   "downloads_month": 3470259,
+   "url": "https://www.npmjs.com/package/modal",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "modal",
+   "downloads_month": 47839937,
+   "url": "https://pypi.org/project/modal/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "mojeek-search-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Mojeek/",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "monday-com-api": [
@@ -1122,6 +3568,20 @@
    "reviews": 98,
    "url": "https://sourceforge.net/software/product/monday.com/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "monday.com",
+   "questions": 45,
+   "url": "https://stackoverflow.com/questions/tagged/monday.com",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "monday-sdk-js",
+   "downloads_month": 538571,
+   "url": "https://www.npmjs.com/package/monday-sdk-js",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "mongodb-atlas": [
@@ -1141,6 +3601,27 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/MongoDB-Atlas/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "mongodb-atlas",
+   "questions": 1526,
+   "url": "https://stackoverflow.com/questions/tagged/mongodb-atlas",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "mongodb",
+   "downloads_month": 68387702,
+   "url": "https://www.npmjs.com/package/mongodb",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "pymongo",
+   "downloads_month": 64665876,
+   "url": "https://pypi.org/project/pymongo/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "murf-ai-api": [
@@ -1162,6 +3643,22 @@
    "fetched_at": "2026-10-12T13:09Z"
   }
  ],
+ "mux-video-api": [
+  {
+   "source": "npm",
+   "package": "@mux/mux-node",
+   "downloads_month": 2059332,
+   "url": "https://www.npmjs.com/package/@mux/mux-node",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "mux_python",
+   "downloads_month": 1037312,
+   "url": "https://pypi.org/project/mux_python/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
  "n8n-api": [
   {
    "source": "sourceforge",
@@ -1169,6 +3666,31 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/n8n/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "n8n",
+   "questions": 77,
+   "url": "https://stackoverflow.com/questions/tagged/n8n",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "nango": [
+  {
+   "source": "npm",
+   "package": "@nangohq/node",
+   "downloads_month": 2285928,
+   "url": "https://www.npmjs.com/package/@nangohq/node",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "napkin-ai-api": [
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 1,
+   "url": "https://sourceforge.net/software/product/Napkin/",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "neon-postgres": [
@@ -1181,6 +3703,13 @@
    "archived": false,
    "url": "https://github.com/neondatabase/mcp-server-neon",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@neondatabase/api-client",
+   "downloads_month": 1861759,
+   "url": "https://www.npmjs.com/package/@neondatabase/api-client",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "netlify-api": [
@@ -1208,6 +3737,22 @@
    "archived": false,
    "url": "https://github.com/matteoantoci/mcp-newsapi",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "newsapi",
+   "questions": 24,
+   "url": "https://stackoverflow.com/questions/tagged/newsapi",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "nocodb-cloud": [
+  {
+   "source": "npm",
+   "package": "nocodb-sdk",
+   "downloads_month": 17448,
+   "url": "https://www.npmjs.com/package/nocodb-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "notion-api": [
@@ -1223,6 +3768,28 @@
    "reviews": 26,
    "url": "https://sourceforge.net/software/product/Notion/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "notion-api",
+   "questions": 298,
+   "url": "https://stackoverflow.com/questions/tagged/notion-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Notion: Notes, Tasks, AI",
+   "rating": 4.78,
+   "ratings": 90380,
+   "url": "https://apps.apple.com/us/app/notion-notes-tasks-ai/id1232780281",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@notionhq/client",
+   "downloads_month": 8625086,
+   "url": "https://www.npmjs.com/package/@notionhq/client",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "ntfy": [
@@ -1235,6 +3802,14 @@
    "archived": false,
    "url": "https://github.com/gitmotion/ntfy-me-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "appstore",
+   "app": "ntfy",
+   "rating": 4.76,
+   "ratings": 458,
+   "url": "https://apps.apple.com/us/app/ntfy/id1625396347",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "nytimes": [
@@ -1249,6 +3824,16 @@
    "fetched_at": "2026-10-12T13:09Z"
   }
  ],
+ "onshape-rest-api": [
+  {
+   "source": "appstore",
+   "app": "Onshape 3D CAD",
+   "rating": 3.53,
+   "ratings": 412,
+   "url": "https://apps.apple.com/us/app/onshape-3d-cad/id923421284",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
  "open-library": [
   {
    "source": "github",
@@ -1261,6 +3846,22 @@
    "fetched_at": "2026-10-12T13:09Z"
   }
  ],
+ "open-meteo": [
+  {
+   "source": "npm",
+   "package": "openmeteo",
+   "downloads_month": 173126,
+   "url": "https://www.npmjs.com/package/openmeteo",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "openmeteo-requests",
+   "downloads_month": 243825,
+   "url": "https://pypi.org/project/openmeteo-requests/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
  "openai-api": [
   {
    "source": "sourceforge",
@@ -1268,6 +3869,43 @@
    "reviews": 3,
    "url": "https://sourceforge.net/software/product/OpenAI/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "openai-api",
+   "questions": 2538,
+   "url": "https://stackoverflow.com/questions/tagged/openai-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "ChatGPT",
+   "rating": 4.83,
+   "ratings": 11258711,
+   "url": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "openai",
+   "downloads_month": 186084693,
+   "url": "https://www.npmjs.com/package/openai",
+   "shared_with": [
+    "openai-images-api-gpt-image",
+    "openai-audio-api-tts-transcription"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "openai",
+   "downloads_month": 295856631,
+   "url": "https://pypi.org/project/openai/",
+   "shared_with": [
+    "openai-images-api-gpt-image",
+    "openai-audio-api-tts-transcription"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "openai-audio-api-tts-transcription": [
@@ -1280,6 +3918,42 @@
    "archived": false,
    "url": "https://github.com/openai/openai-openapi",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "openai-api",
+   "questions": 2538,
+   "url": "https://stackoverflow.com/questions/tagged/openai-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 3,
+   "url": "https://sourceforge.net/software/product/OpenAI/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "openai",
+   "downloads_month": 186084693,
+   "url": "https://www.npmjs.com/package/openai",
+   "shared_with": [
+    "openai-images-api-gpt-image",
+    "openai-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "openai",
+   "downloads_month": 295856631,
+   "url": "https://pypi.org/project/openai/",
+   "shared_with": [
+    "openai-images-api-gpt-image",
+    "openai-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "openai-images-api-gpt-image": [
@@ -1292,6 +3966,50 @@
    "archived": false,
    "url": "https://github.com/SureScaleAI/openai-gpt-image-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "openai-api",
+   "questions": 2538,
+   "url": "https://stackoverflow.com/questions/tagged/openai-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "ChatGPT",
+   "rating": 4.83,
+   "ratings": 11258711,
+   "url": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 5.0,
+   "reviews": 3,
+   "url": "https://sourceforge.net/software/product/OpenAI/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "openai",
+   "downloads_month": 186084693,
+   "url": "https://www.npmjs.com/package/openai",
+   "shared_with": [
+    "openai-audio-api-tts-transcription",
+    "openai-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "openai",
+   "downloads_month": 295856631,
+   "url": "https://pypi.org/project/openai/",
+   "shared_with": [
+    "openai-audio-api-tts-transcription",
+    "openai-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "openalex-api": [
@@ -1316,6 +4034,13 @@
    "archived": false,
    "url": "https://github.com/OpenCageData/opencage-geocoding-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "pypi",
+   "package": "opencage",
+   "downloads_month": 562337,
+   "url": "https://pypi.org/project/opencage/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "openrouter": [
@@ -1325,6 +4050,63 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/OpenRouter/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@openrouter/sdk",
+   "downloads_month": 3935034,
+   "url": "https://www.npmjs.com/package/@openrouter/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "openrouter",
+   "downloads_month": 1643554,
+   "url": "https://pypi.org/project/openrouter/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "openrouteservice": [
+  {
+   "source": "npm",
+   "package": "openrouteservice-js",
+   "downloads_month": 4349,
+   "url": "https://www.npmjs.com/package/openrouteservice-js",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "openrouteservice",
+   "downloads_month": 47494,
+   "url": "https://pypi.org/project/openrouteservice/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "openstreetmap-nominatim": [
+  {
+   "source": "stackoverflow",
+   "tag": "nominatim",
+   "questions": 261,
+   "url": "https://stackoverflow.com/questions/tagged/nominatim",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "openweathermap-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "openweathermap",
+   "questions": 837,
+   "url": "https://stackoverflow.com/questions/tagged/openweathermap",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "overpass-api-osm": [
+  {
+   "source": "stackoverflow",
+   "tag": "overpass-api",
+   "questions": 376,
+   "url": "https://stackoverflow.com/questions/tagged/overpass-api",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "oxylabs": [
@@ -1334,6 +4116,13 @@
    "reviews": 1216,
    "url": "https://sourceforge.net/software/product/Oxylabs/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "pypi",
+   "package": "oxylabs",
+   "downloads_month": 74280,
+   "url": "https://pypi.org/project/oxylabs/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "pagerduty-api": [
@@ -1353,6 +4142,27 @@
    "reviews": 44,
    "url": "https://sourceforge.net/software/product/PagerDuty/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "pagerduty",
+   "questions": 63,
+   "url": "https://stackoverflow.com/questions/tagged/pagerduty",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@pagerduty/pdjs",
+   "downloads_month": 797432,
+   "url": "https://www.npmjs.com/package/@pagerduty/pdjs",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "pagerduty",
+   "downloads_month": 2201298,
+   "url": "https://pypi.org/project/pagerduty/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "paragon-actionkit": [
@@ -1365,6 +4175,29 @@
    "archived": false,
    "url": "https://github.com/useparagon/paragon-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@useparagon/connect",
+   "downloads_month": 715054,
+   "url": "https://www.npmjs.com/package/@useparagon/connect",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "parallel-web-systems-search-api": [
+  {
+   "source": "npm",
+   "package": "parallel-web",
+   "downloads_month": 1007751,
+   "url": "https://www.npmjs.com/package/parallel-web",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "parallel-web",
+   "downloads_month": 3214271,
+   "url": "https://pypi.org/project/parallel-web/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "paypal-api": [
@@ -1380,6 +4213,35 @@
    "reviews": 22,
    "url": "https://sourceforge.net/software/product/PayPal/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "paypal",
+   "questions": 21030,
+   "url": "https://stackoverflow.com/questions/tagged/paypal",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "PayPal - Pay, Send, Save",
+   "rating": 4.78,
+   "ratings": 6298934,
+   "url": "https://apps.apple.com/us/app/paypal-pay-send-save/id283646709",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@paypal/paypal-server-sdk",
+   "downloads_month": 623364,
+   "url": "https://www.npmjs.com/package/@paypal/paypal-server-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "paypal-server-sdk",
+   "downloads_month": 30749,
+   "url": "https://pypi.org/project/paypal-server-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "pdf-co-api": [
@@ -1401,6 +4263,22 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/penpot/",
    "fetched_at": "2026-10-12T13:09Z"
+  }
+ ],
+ "perplexity-sonar-search-api": [
+  {
+   "source": "npm",
+   "package": "@perplexity-ai/perplexity_ai",
+   "downloads_month": 304861,
+   "url": "https://www.npmjs.com/package/@perplexity-ai/perplexity_ai",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "perplexityai",
+   "downloads_month": 1043965,
+   "url": "https://pypi.org/project/perplexityai/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "photon-komoot": [
@@ -1437,6 +4315,27 @@
    "archived": false,
    "url": "https://github.com/pinecone-io/pinecone-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "pinecone",
+   "questions": 116,
+   "url": "https://stackoverflow.com/questions/tagged/pinecone",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@pinecone-database/pinecone",
+   "downloads_month": 3712446,
+   "url": "https://www.npmjs.com/package/@pinecone-database/pinecone",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "pinecone",
+   "downloads_month": 3879257,
+   "url": "https://pypi.org/project/pinecone/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "pinterest-api": [
@@ -1446,6 +4345,30 @@
    "reviews": 14,
    "url": "https://sourceforge.net/software/product/Pinterest/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "pinterest",
+   "questions": 862,
+   "url": "https://stackoverflow.com/questions/tagged/pinterest",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Pinterest",
+   "rating": 4.78,
+   "ratings": 5794712,
+   "url": "https://apps.apple.com/us/app/pinterest/id429047995",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "pipedream-connect": [
+  {
+   "source": "npm",
+   "package": "@pipedream/sdk",
+   "downloads_month": 1451667,
+   "url": "https://www.npmjs.com/package/@pipedream/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "pipedrive-api": [
@@ -1455,6 +4378,28 @@
    "reviews": 50,
    "url": "https://sourceforge.net/software/product/Pipedrive/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "pipedrive-api",
+   "questions": 61,
+   "url": "https://stackoverflow.com/questions/tagged/pipedrive-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Pipedrive – Sales CRM",
+   "rating": 3.75,
+   "ratings": 675,
+   "url": "https://apps.apple.com/us/app/pipedrive-sales-crm/id921456160",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "pipedrive",
+   "downloads_month": 283579,
+   "url": "https://www.npmjs.com/package/pipedrive",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "piston": [
@@ -1498,6 +4443,27 @@
    "reviews": 5,
    "url": "https://sourceforge.net/software/product/Plaid/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "plaid",
+   "questions": 389,
+   "url": "https://stackoverflow.com/questions/tagged/plaid",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "plaid",
+   "downloads_month": 5252763,
+   "url": "https://www.npmjs.com/package/plaid",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "plaid-python",
+   "downloads_month": 2851165,
+   "url": "https://pypi.org/project/plaid-python/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "planetscale": [
@@ -1506,6 +4472,29 @@
    "uses": 2,
    "url": "https://smithery.ai/servers/planetscale",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "planetscale",
+   "questions": 60,
+   "url": "https://stackoverflow.com/questions/tagged/planetscale",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@planetscale/database",
+   "downloads_month": 1963725,
+   "url": "https://www.npmjs.com/package/@planetscale/database",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "plantuml-server-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "plantuml",
+   "questions": 470,
+   "url": "https://stackoverflow.com/questions/tagged/plantuml",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "playwright-mcp-microsoft": [
@@ -1518,6 +4507,13 @@
    "archived": false,
    "url": "https://github.com/microsoft/playwright-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@playwright/mcp",
+   "downloads_month": 31345222,
+   "url": "https://www.npmjs.com/package/@playwright/mcp",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "plivo": [
@@ -1537,6 +4533,27 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Plivo/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "plivo",
+   "questions": 170,
+   "url": "https://stackoverflow.com/questions/tagged/plivo",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "plivo",
+   "downloads_month": 206477,
+   "url": "https://www.npmjs.com/package/plivo",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "plivo",
+   "downloads_month": 266471,
+   "url": "https://pypi.org/project/plivo/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "polygon-io-massive": [
@@ -1549,6 +4566,20 @@
    "archived": false,
    "url": "https://github.com/massive-com/mcp_massive",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@massive.com/client-js",
+   "downloads_month": 48312,
+   "url": "https://www.npmjs.com/package/@massive.com/client-js",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "massive",
+   "downloads_month": 241194,
+   "url": "https://pypi.org/project/massive/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "postman-api": [
@@ -1576,6 +4607,20 @@
    "archived": false,
    "url": "https://github.com/ActiveCampaign/postmark-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "postmark",
+   "questions": 132,
+   "url": "https://stackoverflow.com/questions/tagged/postmark",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "postmark",
+   "downloads_month": 5193752,
+   "url": "https://www.npmjs.com/package/postmark",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "printful-api": [
@@ -1594,6 +4639,14 @@
    "reviews": 2,
    "url": "https://sourceforge.net/software/product/Procore/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Procore",
+   "rating": 4.65,
+   "ratings": 46428,
+   "url": "https://apps.apple.com/us/app/procore/id374930542",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "pubmed-e-utilities-ncbi": [
@@ -1606,6 +4659,13 @@
    "archived": false,
    "url": "https://github.com/openags/paper-search-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "pubmed",
+   "questions": 199,
+   "url": "https://stackoverflow.com/questions/tagged/pubmed",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "qdrant-cloud": [
@@ -1618,6 +4678,27 @@
    "archived": false,
    "url": "https://github.com/qdrant/mcp-server-qdrant",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "qdrant",
+   "questions": 60,
+   "url": "https://stackoverflow.com/questions/tagged/qdrant",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@qdrant/js-client-rest",
+   "downloads_month": 3951155,
+   "url": "https://www.npmjs.com/package/@qdrant/js-client-rest",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "qdrant-client",
+   "downloads_month": 12034960,
+   "url": "https://pypi.org/project/qdrant-client/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "reddit-api": [
@@ -1627,6 +4708,62 @@
    "reviews": 8,
    "url": "https://sourceforge.net/software/product/Reddit/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "reddit",
+   "questions": 1240,
+   "url": "https://stackoverflow.com/questions/tagged/reddit",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Reddit",
+   "rating": 4.76,
+   "ratings": 3507606,
+   "url": "https://apps.apple.com/us/app/reddit/id1064216828",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "reducto-api": [
+  {
+   "source": "npm",
+   "package": "reductoai",
+   "downloads_month": 1327306,
+   "url": "https://www.npmjs.com/package/reductoai",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "reductoai",
+   "downloads_month": 4298505,
+   "url": "https://pypi.org/project/reductoai/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "reflag": [
+  {
+   "source": "npm",
+   "package": "@reflag/node-sdk",
+   "downloads_month": 157959,
+   "url": "https://www.npmjs.com/package/@reflag/node-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "replicate": [
+  {
+   "source": "npm",
+   "package": "replicate",
+   "downloads_month": 2584564,
+   "url": "https://www.npmjs.com/package/replicate",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "replicate",
+   "downloads_month": 1526037,
+   "url": "https://pypi.org/project/replicate/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "resemble-ai-api": [
@@ -1636,6 +4773,13 @@
    "reviews": 3,
    "url": "https://sourceforge.net/software/product/Resemble-AI/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "pypi",
+   "package": "resemble",
+   "downloads_month": 844,
+   "url": "https://pypi.org/project/resemble/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "resend": [
@@ -1645,6 +4789,13 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Resend/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "pypi",
+   "package": "resend",
+   "downloads_month": 11191987,
+   "url": "https://pypi.org/project/resend/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "retell-ai": [
@@ -1654,6 +4805,75 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/Retell-AI/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "retell-sdk",
+   "downloads_month": 974724,
+   "url": "https://www.npmjs.com/package/retell-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "retell-sdk",
+   "downloads_month": 616442,
+   "url": "https://pypi.org/project/retell-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "rev-ai-api": [
+  {
+   "source": "npm",
+   "package": "revai-node-sdk",
+   "downloads_month": 59271,
+   "url": "https://www.npmjs.com/package/revai-node-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "rev_ai",
+   "downloads_month": 563673,
+   "url": "https://pypi.org/project/rev_ai/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "rhino-compute-mcneel": [
+  {
+   "source": "stackoverflow",
+   "tag": "rhino3d",
+   "questions": 88,
+   "url": "https://stackoverflow.com/questions/tagged/rhino3d",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "compute-rhino3d",
+   "downloads_month": 87935,
+   "url": "https://www.npmjs.com/package/compute-rhino3d",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "compute-rhino3d",
+   "downloads_month": 6666,
+   "url": "https://pypi.org/project/compute-rhino3d/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "riza": [
+  {
+   "source": "npm",
+   "package": "@riza-io/api",
+   "downloads_month": 13402,
+   "url": "https://www.npmjs.com/package/@riza-io/api",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "rizaio",
+   "downloads_month": 891,
+   "url": "https://pypi.org/project/rizaio/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "runloop": [
@@ -1666,6 +4886,36 @@
    "archived": false,
    "url": "https://github.com/runloopai/api-client-ts",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@runloop/api-client",
+   "downloads_month": 147086,
+   "url": "https://www.npmjs.com/package/@runloop/api-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "runloop_api_client",
+   "downloads_month": 473200,
+   "url": "https://pypi.org/project/runloop_api_client/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "runway-api": [
+  {
+   "source": "npm",
+   "package": "@runwayml/sdk",
+   "downloads_month": 238456,
+   "url": "https://www.npmjs.com/package/@runwayml/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "runwayml",
+   "downloads_month": 218204,
+   "url": "https://pypi.org/project/runwayml/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "salesforce-apis": [
@@ -1675,6 +4925,69 @@
    "reviews": 60,
    "url": "https://sourceforge.net/software/product/Salesforce/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "salesforce",
+   "questions": 10302,
+   "url": "https://stackoverflow.com/questions/tagged/salesforce",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Salesforce",
+   "rating": 4.75,
+   "ratings": 353785,
+   "url": "https://apps.apple.com/us/app/salesforce/id404249815",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "scrapegraphai-api": [
+  {
+   "source": "npm",
+   "package": "scrapegraph-js",
+   "downloads_month": 9026,
+   "url": "https://www.npmjs.com/package/scrapegraph-js",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "scrapegraph-py",
+   "downloads_month": 177807,
+   "url": "https://pypi.org/project/scrapegraph-py/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "scrapfly": [
+  {
+   "source": "npm",
+   "package": "scrapfly-sdk",
+   "downloads_month": 68423,
+   "url": "https://www.npmjs.com/package/scrapfly-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "scrapfly-sdk",
+   "downloads_month": 231252,
+   "url": "https://pypi.org/project/scrapfly-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "scrapingbee": [
+  {
+   "source": "npm",
+   "package": "scrapingbee",
+   "downloads_month": 158351,
+   "url": "https://www.npmjs.com/package/scrapingbee",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "scrapingbee",
+   "downloads_month": 307324,
+   "url": "https://pypi.org/project/scrapingbee/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "searxng-self-hosted-json-api": [
@@ -1708,6 +5021,27 @@
    "reviews": 8,
    "url": "https://sourceforge.net/software/product/SendGrid/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "sendgrid",
+   "questions": 3352,
+   "url": "https://stackoverflow.com/questions/tagged/sendgrid",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@sendgrid/mail",
+   "downloads_month": 21245646,
+   "url": "https://www.npmjs.com/package/@sendgrid/mail",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "sendgrid",
+   "downloads_month": 19478339,
+   "url": "https://pypi.org/project/sendgrid/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "sentry-api": [
@@ -1716,6 +5050,43 @@
    "uses": 35,
    "url": "https://smithery.ai/servers/sentry",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "sentry",
+   "questions": 1549,
+   "url": "https://stackoverflow.com/questions/tagged/sentry",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "pypi",
+   "package": "sentry-sdk",
+   "downloads_month": 127673427,
+   "url": "https://pypi.org/project/sentry-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "serpapi": [
+  {
+   "source": "stackoverflow",
+   "tag": "serpapi",
+   "questions": 17,
+   "url": "https://stackoverflow.com/questions/tagged/serpapi",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "serpapi",
+   "downloads_month": 688156,
+   "url": "https://www.npmjs.com/package/serpapi",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "serpapi",
+   "downloads_month": 447227,
+   "url": "https://pypi.org/project/serpapi/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "serper": [
@@ -1728,6 +5099,37 @@
    "archived": false,
    "url": "https://github.com/marcopesani/mcp-server-serper",
    "fetched_at": "2026-10-12T13:09Z"
+  }
+ ],
+ "shopify-admin-storefront-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "shopify",
+   "questions": 8770,
+   "url": "https://stackoverflow.com/questions/tagged/shopify",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Shopify: Sell. Run a business.",
+   "rating": 4.7,
+   "ratings": 42551,
+   "url": "https://apps.apple.com/us/app/shopify-sell-run-a-business/id371294472",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@shopify/shopify-api",
+   "downloads_month": 2746326,
+   "url": "https://www.npmjs.com/package/@shopify/shopify-api",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "ShopifyAPI",
+   "downloads_month": 776012,
+   "url": "https://pypi.org/project/ShopifyAPI/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "sinch": [
@@ -1747,6 +5149,27 @@
    "reviews": 2,
    "url": "https://sourceforge.net/software/product/Sinch/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "sinch",
+   "questions": 560,
+   "url": "https://stackoverflow.com/questions/tagged/sinch",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@sinch/sdk-core",
+   "downloads_month": 67182,
+   "url": "https://www.npmjs.com/package/@sinch/sdk-core",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "sinch",
+   "downloads_month": 39907,
+   "url": "https://pypi.org/project/sinch/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "sketchfab-data-api": [
@@ -1774,6 +5197,35 @@
    "reviews": 250,
    "url": "https://sourceforge.net/software/product/Slack/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "slack-api",
+   "questions": 2903,
+   "url": "https://stackoverflow.com/questions/tagged/slack-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Slack",
+   "rating": 4.14,
+   "ratings": 53578,
+   "url": "https://apps.apple.com/us/app/slack/id618783545",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@slack/web-api",
+   "downloads_month": 61665621,
+   "url": "https://www.npmjs.com/package/@slack/web-api",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "slack_sdk",
+   "downloads_month": 73939872,
+   "url": "https://pypi.org/project/slack_sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "slidespeak-api": [
@@ -1802,6 +5254,27 @@
    "reviews": 4,
    "url": "https://sourceforge.net/software/product/Snowflake/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "snowflake-cloud-data-platform",
+   "questions": 12237,
+   "url": "https://stackoverflow.com/questions/tagged/snowflake-cloud-data-platform",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "snowflake-sdk",
+   "downloads_month": 11303540,
+   "url": "https://www.npmjs.com/package/snowflake-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "snowflake-connector-python",
+   "downloads_month": 99504889,
+   "url": "https://pypi.org/project/snowflake-connector-python/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "soundraw-api": [
@@ -1823,6 +5296,20 @@
    "archived": false,
    "url": "https://github.com/bimgeek/speckle-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@speckle/objectloader2",
+   "downloads_month": 82781,
+   "url": "https://www.npmjs.com/package/@speckle/objectloader2",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "specklepy",
+   "downloads_month": 6537,
+   "url": "https://pypi.org/project/specklepy/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "speechmatics-api": [
@@ -1835,6 +5322,36 @@
    "archived": false,
    "url": "https://github.com/ArchieMcM234/speechmatics_claude_code_mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@speechmatics/batch-client",
+   "downloads_month": 128971,
+   "url": "https://www.npmjs.com/package/@speechmatics/batch-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "speechmatics-batch",
+   "downloads_month": 61951,
+   "url": "https://pypi.org/project/speechmatics-batch/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "spider-cloud": [
+  {
+   "source": "npm",
+   "package": "@spider-cloud/spider-client",
+   "downloads_month": 14728,
+   "url": "https://www.npmjs.com/package/@spider-cloud/spider-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "spider-client",
+   "downloads_month": 438520,
+   "url": "https://pypi.org/project/spider-client/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "square-api": [
@@ -1847,6 +5364,35 @@
    "archived": false,
    "url": "https://github.com/square/connect-api-specification",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "square-connect",
+   "questions": 616,
+   "url": "https://stackoverflow.com/questions/tagged/square-connect",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Square Point of Sale (POS)",
+   "rating": 4.81,
+   "ratings": 606079,
+   "url": "https://apps.apple.com/us/app/square-point-of-sale-pos/id335393788",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "square",
+   "downloads_month": 1608240,
+   "url": "https://www.npmjs.com/package/square",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "squareup",
+   "downloads_month": 256685,
+   "url": "https://pypi.org/project/squareup/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "stability-ai-platform-api": [
@@ -1859,6 +5405,37 @@
    "archived": false,
    "url": "https://github.com/tadasant/mcp-server-stability-ai",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "pypi",
+   "package": "stability-sdk",
+   "downloads_month": 7144,
+   "url": "https://pypi.org/project/stability-sdk/",
+   "shared_with": [
+    "stable-audio-api-stability-ai"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "stable-audio-api-stability-ai": [
+  {
+   "source": "pypi",
+   "package": "stability-sdk",
+   "downloads_month": 7144,
+   "url": "https://pypi.org/project/stability-sdk/",
+   "shared_with": [
+    "stability-ai-platform-api"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "stackone": [
+  {
+   "source": "npm",
+   "package": "@stackone/ai",
+   "downloads_month": 847,
+   "url": "https://www.npmjs.com/package/@stackone/ai",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "steel": [
@@ -1871,6 +5448,57 @@
    "archived": false,
    "url": "https://github.com/steel-dev/steel-mcp-server",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "steel-sdk",
+   "downloads_month": 191740,
+   "url": "https://www.npmjs.com/package/steel-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "steel-sdk",
+   "downloads_month": 219857,
+   "url": "https://pypi.org/project/steel-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "stream-getstream-chat-video-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "getstream-io",
+   "questions": 701,
+   "url": "https://stackoverflow.com/questions/tagged/getstream-io",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "stream-chat",
+   "downloads_month": 2556355,
+   "url": "https://www.npmjs.com/package/stream-chat",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "npm",
+   "package": "@stream-io/node-sdk",
+   "downloads_month": 417258,
+   "url": "https://www.npmjs.com/package/@stream-io/node-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "stream-chat",
+   "downloads_month": 377503,
+   "url": "https://pypi.org/project/stream-chat/",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "getstream",
+   "downloads_month": 78494,
+   "url": "https://pypi.org/project/getstream/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "stripe-api": [
@@ -1886,6 +5514,35 @@
    "reviews": 17,
    "url": "https://sourceforge.net/software/product/Stripe/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "stripe-payments",
+   "questions": 12545,
+   "url": "https://stackoverflow.com/questions/tagged/stripe-payments",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Stripe Dashboard",
+   "rating": 4.7,
+   "ratings": 68563,
+   "url": "https://apps.apple.com/us/app/stripe-dashboard/id978516833",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "stripe",
+   "downloads_month": 100694944,
+   "url": "https://www.npmjs.com/package/stripe",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "stripe",
+   "downloads_month": 37229330,
+   "url": "https://pypi.org/project/stripe/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "supabase": [
@@ -1894,6 +5551,36 @@
    "uses": 189,
    "url": "https://smithery.ai/servers/Supabase",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "supabase",
+   "questions": 2135,
+   "url": "https://stackoverflow.com/questions/tagged/supabase",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@supabase/supabase-js",
+   "downloads_month": 129631561,
+   "url": "https://www.npmjs.com/package/@supabase/supabase-js",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "supabase",
+   "downloads_month": 22924804,
+   "url": "https://pypi.org/project/supabase/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "superglue": [
+  {
+   "source": "npm",
+   "package": "@superglue/client",
+   "downloads_month": 8323,
+   "url": "https://www.npmjs.com/package/@superglue/client",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "synthesia-api": [
@@ -1920,6 +5607,29 @@
    "uses": 1575,
    "url": "https://smithery.ai/servers/Tavily",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@tavily/core",
+   "downloads_month": 1727494,
+   "url": "https://www.npmjs.com/package/@tavily/core",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "tavily-python",
+   "downloads_month": 9588826,
+   "url": "https://pypi.org/project/tavily-python/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "tavus-api": [
+  {
+   "source": "npm",
+   "package": "tavus",
+   "downloads_month": 374,
+   "url": "https://www.npmjs.com/package/tavus",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "telegram-bot-api": [
@@ -1932,6 +5642,28 @@
    "archived": false,
    "url": "https://github.com/chigwell/telegram-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "telegram-bot",
+   "questions": 5033,
+   "url": "https://stackoverflow.com/questions/tagged/telegram-bot",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Telegram Messenger",
+   "rating": 4.0,
+   "ratings": 283038,
+   "url": "https://apps.apple.com/us/app/telegram-messenger/id686449807",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.7,
+   "reviews": 19,
+   "url": "https://sourceforge.net/software/product/Telegram/",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "telnyx": [
@@ -1947,6 +5679,20 @@
    "reviews": 8,
    "url": "https://sourceforge.net/software/product/Telnyx/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "telnyx",
+   "downloads_month": 1619193,
+   "url": "https://www.npmjs.com/package/telnyx",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "telnyx",
+   "downloads_month": 682274,
+   "url": "https://pypi.org/project/telnyx/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "tidb-cloud": [
@@ -1959,6 +5705,13 @@
    "archived": false,
    "url": "https://github.com/pingcap/pytidb",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "tidb",
+   "questions": 102,
+   "url": "https://stackoverflow.com/questions/tagged/tidb",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "tiktok-api": [
@@ -1968,6 +5721,14 @@
    "reviews": 7,
    "url": "https://sourceforge.net/software/product/TikTok/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "appstore",
+   "app": "TikTok - Videos, Shop & LIVE",
+   "rating": 4.72,
+   "ratings": 18391863,
+   "url": "https://apps.apple.com/us/app/tiktok-videos-shop-live/id835599320",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "tinybird": [
@@ -1985,6 +5746,95 @@
    "reviews": 14,
    "url": "https://sourceforge.net/software/product/Todoist/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "todoist",
+   "questions": 39,
+   "url": "https://stackoverflow.com/questions/tagged/todoist",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Todoist: To Do List & Calendar",
+   "rating": 4.8,
+   "ratings": 129757,
+   "url": "https://apps.apple.com/us/app/todoist-to-do-list-calendar/id572688855",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@doist/todoist-api-typescript",
+   "downloads_month": 186281,
+   "url": "https://www.npmjs.com/package/@doist/todoist-api-typescript",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "todoist-api-python",
+   "downloads_month": 150862,
+   "url": "https://pypi.org/project/todoist-api-python/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "together-ai": [
+  {
+   "source": "npm",
+   "package": "together-ai",
+   "downloads_month": 451753,
+   "url": "https://www.npmjs.com/package/together-ai",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "together",
+   "downloads_month": 1503145,
+   "url": "https://pypi.org/project/together/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "tomorrow-io-api": [
+  {
+   "source": "appstore",
+   "app": "Tomorrow.io: Weather Forecast",
+   "rating": 4.63,
+   "ratings": 27801,
+   "url": "https://apps.apple.com/us/app/tomorrow-io-weather-forecast/id1443325509",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "trello-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "trello",
+   "questions": 571,
+   "url": "https://stackoverflow.com/questions/tagged/trello",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Trello: Daily Task Tracker",
+   "rating": 4.34,
+   "ratings": 7009,
+   "url": "https://apps.apple.com/us/app/trello-daily-task-tracker/id461504587",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "trimble-connect-api": [
+  {
+   "source": "appstore",
+   "app": "Trimble-Connect",
+   "rating": 3.38,
+   "ratings": 29,
+   "url": "https://apps.apple.com/us/app/trimble-connect/id1076606537",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "trimble-connect-workspace-api",
+   "downloads_month": 68365,
+   "url": "https://www.npmjs.com/package/trimble-connect-workspace-api",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "tripo-api": [
@@ -1997,6 +5847,29 @@
    "archived": false,
    "url": "https://github.com/VAST-AI-Research/tripo-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "pypi",
+   "package": "tripo3d",
+   "downloads_month": 10211,
+   "url": "https://pypi.org/project/tripo3d/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "turso": [
+  {
+   "source": "npm",
+   "package": "@tursodatabase/api",
+   "downloads_month": 217243,
+   "url": "https://www.npmjs.com/package/@tursodatabase/api",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "npm",
+   "package": "@libsql/client",
+   "downloads_month": 14771992,
+   "url": "https://www.npmjs.com/package/@libsql/client",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "twilio": [
@@ -2016,6 +5889,33 @@
    "reviews": 13,
    "url": "https://sourceforge.net/software/product/Twilio/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "twilio",
+   "questions": 10514,
+   "url": "https://stackoverflow.com/questions/tagged/twilio",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "twilio",
+   "downloads_month": 28525965,
+   "url": "https://www.npmjs.com/package/twilio",
+   "shared_with": [
+    "twilio-programmable-voice"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "twilio",
+   "downloads_month": 19597269,
+   "url": "https://pypi.org/project/twilio/",
+   "shared_with": [
+    "twilio-programmable-voice"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "twilio-programmable-voice": [
@@ -2038,6 +5938,127 @@
    "archived": false,
    "url": "https://github.com/twilio-labs/mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "twilio",
+   "questions": 10514,
+   "url": "https://stackoverflow.com/questions/tagged/twilio",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.8,
+   "reviews": 13,
+   "url": "https://sourceforge.net/software/product/Twilio/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "twilio",
+   "downloads_month": 28525965,
+   "url": "https://www.npmjs.com/package/twilio",
+   "shared_with": [
+    "twilio"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "twilio",
+   "downloads_month": 19597269,
+   "url": "https://pypi.org/project/twilio/",
+   "shared_with": [
+    "twilio"
+   ],
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "unstructured-api": [
+  {
+   "source": "npm",
+   "package": "unstructured-client",
+   "downloads_month": 241449,
+   "url": "https://www.npmjs.com/package/unstructured-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "unstructured-client",
+   "downloads_month": 3231764,
+   "url": "https://pypi.org/project/unstructured-client/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "upstash-redis-vector": [
+  {
+   "source": "npm",
+   "package": "@upstash/redis",
+   "downloads_month": 23273685,
+   "url": "https://www.npmjs.com/package/@upstash/redis",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "npm",
+   "package": "@upstash/vector",
+   "downloads_month": 689611,
+   "url": "https://www.npmjs.com/package/@upstash/vector",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "upstash-redis",
+   "downloads_month": 898412,
+   "url": "https://pypi.org/project/upstash-redis/",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "upstash-vector",
+   "downloads_month": 161297,
+   "url": "https://pypi.org/project/upstash-vector/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "v0-platform-api-vercel": [
+  {
+   "source": "npm",
+   "package": "v0-sdk",
+   "downloads_month": 204522,
+   "url": "https://www.npmjs.com/package/v0-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "vapi": [
+  {
+   "source": "npm",
+   "package": "@vapi-ai/server-sdk",
+   "downloads_month": 678200,
+   "url": "https://www.npmjs.com/package/@vapi-ai/server-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "vapi_server_sdk",
+   "downloads_month": 171652,
+   "url": "https://pypi.org/project/vapi_server_sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "vercel-ai-gateway": [
+  {
+   "source": "npm",
+   "package": "ai",
+   "downloads_month": 126450236,
+   "url": "https://www.npmjs.com/package/ai",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "npm",
+   "package": "@ai-sdk/gateway",
+   "downloads_month": 120263594,
+   "url": "https://www.npmjs.com/package/@ai-sdk/gateway",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "vercel-api": [
@@ -2053,6 +6074,29 @@
    "reviews": 2,
    "url": "https://sourceforge.net/software/product/Vercel/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@vercel/sdk",
+   "downloads_month": 2189873,
+   "url": "https://www.npmjs.com/package/@vercel/sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "vercel-sandbox": [
+  {
+   "source": "sourceforge",
+   "rating": 4.5,
+   "reviews": 2,
+   "url": "https://sourceforge.net/software/product/Vercel/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@vercel/sandbox",
+   "downloads_month": 24556599,
+   "url": "https://www.npmjs.com/package/@vercel/sandbox",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "vonage-api": [
@@ -2065,6 +6109,43 @@
    "archived": false,
    "url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "vonage",
+   "questions": 322,
+   "url": "https://stackoverflow.com/questions/tagged/vonage",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@vonage/server-sdk",
+   "downloads_month": 600921,
+   "url": "https://www.npmjs.com/package/@vonage/server-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "vonage",
+   "downloads_month": 264731,
+   "url": "https://pypi.org/project/vonage/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "voyage-ai-embeddings-rerank": [
+  {
+   "source": "npm",
+   "package": "voyageai",
+   "downloads_month": 1195098,
+   "url": "https://www.npmjs.com/package/voyageai",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "voyageai",
+   "downloads_month": 3736436,
+   "url": "https://pypi.org/project/voyageai/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "weaviate-cloud": [
@@ -2077,6 +6158,57 @@
    "archived": false,
    "url": "https://github.com/weaviate/mcp-server-weaviate",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "weaviate",
+   "questions": 160,
+   "url": "https://stackoverflow.com/questions/tagged/weaviate",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "weaviate-client",
+   "downloads_month": 1626317,
+   "url": "https://www.npmjs.com/package/weaviate-client",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "weaviate-client",
+   "downloads_month": 9835248,
+   "url": "https://pypi.org/project/weaviate-client/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "webflow-data-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "webflow",
+   "questions": 243,
+   "url": "https://stackoverflow.com/questions/tagged/webflow",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 3.3,
+   "reviews": 3,
+   "url": "https://sourceforge.net/software/product/Webflow/",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "webflow-api",
+   "downloads_month": 318646,
+   "url": "https://www.npmjs.com/package/webflow-api",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "webflow",
+   "downloads_month": 635856,
+   "url": "https://pypi.org/project/webflow/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "whatsapp-business-cloud-api": [
@@ -2089,6 +6221,29 @@
    "archived": false,
    "url": "https://github.com/networkerman/whatsapp-cloud-api-mcp-server",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "whatsapp-cloud-api",
+   "questions": 232,
+   "url": "https://stackoverflow.com/questions/tagged/whatsapp-cloud-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.6,
+   "reviews": 22,
+   "url": "https://sourceforge.net/software/product/WhatsApp/",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "wikidata": [
+  {
+   "source": "stackoverflow",
+   "tag": "wikidata",
+   "questions": 931,
+   "url": "https://stackoverflow.com/questions/tagged/wikidata",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "wikipedia-wikimedia-api": [
@@ -2101,6 +6256,13 @@
    "archived": false,
    "url": "https://github.com/Rudra-ravi/wikipedia-mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "mediawiki-api",
+   "questions": 647,
+   "url": "https://stackoverflow.com/questions/tagged/mediawiki-api",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "wise-api": [
@@ -2113,6 +6275,87 @@
    "archived": false,
    "url": "https://github.com/2060-io/mcp-wise",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Wise: Global Money Transfer",
+   "rating": 4.64,
+   "ratings": 111974,
+   "url": "https://apps.apple.com/us/app/wise-global-money-transfer/id612261027",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "wolfram-alpha-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "wolframalpha",
+   "questions": 256,
+   "url": "https://stackoverflow.com/questions/tagged/wolframalpha",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "woocommerce-rest-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "woocommerce",
+   "questions": 32809,
+   "url": "https://stackoverflow.com/questions/tagged/woocommerce",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "WooCommerce: Store & POS",
+   "rating": 4.75,
+   "ratings": 7788,
+   "url": "https://apps.apple.com/us/app/woocommerce-store-pos/id1389130815",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@woocommerce/woocommerce-rest-api",
+   "downloads_month": 264737,
+   "url": "https://www.npmjs.com/package/@woocommerce/woocommerce-rest-api",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "WooCommerce",
+   "downloads_month": 105595,
+   "url": "https://pypi.org/project/WooCommerce/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "x-twitter-api": [
+  {
+   "source": "npm",
+   "package": "twitter-api-sdk",
+   "downloads_month": 190994,
+   "url": "https://www.npmjs.com/package/twitter-api-sdk",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "xdk",
+   "downloads_month": 197657,
+   "url": "https://pypi.org/project/xdk/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "xai-grok-api": [
+  {
+   "source": "appstore",
+   "app": "Grok AI",
+   "rating": 4.87,
+   "ratings": 1504785,
+   "url": "https://apps.apple.com/us/app/grok-ai/id6670324846",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "pypi",
+   "package": "xai-sdk",
+   "downloads_month": 4773444,
+   "url": "https://pypi.org/project/xai-sdk/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "you-com-api": [
@@ -2122,6 +6365,39 @@
    "reviews": 1,
    "url": "https://sourceforge.net/software/product/You.com/",
    "fetched_at": "2026-10-12T13:09Z"
+  }
+ ],
+ "youtube-data-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "youtube-api",
+   "questions": 11536,
+   "url": "https://stackoverflow.com/questions/tagged/youtube-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "YouTube",
+   "rating": 4.67,
+   "ratings": 49407918,
+   "url": "https://apps.apple.com/us/app/youtube/id544007664",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "zapier-mcp-ai-actions": [
+  {
+   "source": "stackoverflow",
+   "tag": "zapier",
+   "questions": 1140,
+   "url": "https://stackoverflow.com/questions/tagged/zapier",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "sourceforge",
+   "rating": 4.8,
+   "reviews": 22,
+   "url": "https://sourceforge.net/software/product/Zapier/",
+   "fetched_at": "2026-10-14T06:13Z"
   }
  ],
  "zendesk-api": [
@@ -2141,6 +6417,37 @@
    "reviews": 20,
    "url": "https://sourceforge.net/software/product/Zendesk/",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "zendesk-api",
+   "questions": 184,
+   "url": "https://stackoverflow.com/questions/tagged/zendesk-api",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Zendesk Support",
+   "rating": 4.52,
+   "ratings": 4217,
+   "url": "https://apps.apple.com/us/app/zendesk-support/id1174276185",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "zep": [
+  {
+   "source": "npm",
+   "package": "@getzep/zep-cloud",
+   "downloads_month": 598872,
+   "url": "https://www.npmjs.com/package/@getzep/zep-cloud",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "zep-cloud",
+   "downloads_month": 292185,
+   "url": "https://pypi.org/project/zep-cloud/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "zilliz-cloud-milvus": [
@@ -2153,6 +6460,27 @@
    "archived": false,
    "url": "https://github.com/zilliztech/zilliz-mcp-server",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "stackoverflow",
+   "tag": "milvus",
+   "questions": 208,
+   "url": "https://stackoverflow.com/questions/tagged/milvus",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "npm",
+   "package": "@zilliz/milvus2-sdk-node",
+   "downloads_month": 717441,
+   "url": "https://www.npmjs.com/package/@zilliz/milvus2-sdk-node",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "pymilvus",
+   "downloads_month": 3698902,
+   "url": "https://pypi.org/project/pymilvus/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ],
  "zoo-text-to-cad-api-kittycad": [
@@ -2165,6 +6493,53 @@
    "archived": false,
    "url": "https://github.com/KittyCAD/mcp",
    "fetched_at": "2026-10-12T13:09Z"
+  },
+  {
+   "source": "npm",
+   "package": "@kittycad/lib",
+   "downloads_month": 29228,
+   "url": "https://www.npmjs.com/package/@kittycad/lib",
+   "fetched_at": "2026-10-14T06:27Z"
+  },
+  {
+   "source": "pypi",
+   "package": "kittycad",
+   "downloads_month": 32382,
+   "url": "https://pypi.org/project/kittycad/",
+   "fetched_at": "2026-10-14T06:27Z"
+  }
+ ],
+ "zoom-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "zoom-sdk",
+   "questions": 338,
+   "url": "https://stackoverflow.com/questions/tagged/zoom-sdk",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "appstore",
+   "app": "Zoom Workplace",
+   "rating": 4.66,
+   "ratings": 3248804,
+   "url": "https://apps.apple.com/us/app/zoom-workplace/id546505307",
+   "fetched_at": "2026-10-14T06:13Z"
+  }
+ ],
+ "zyte-api": [
+  {
+   "source": "stackoverflow",
+   "tag": "zyte",
+   "questions": 18,
+   "url": "https://stackoverflow.com/questions/tagged/zyte",
+   "fetched_at": "2026-10-14T06:13Z"
+  },
+  {
+   "source": "pypi",
+   "package": "zyte-api",
+   "downloads_month": 154194,
+   "url": "https://pypi.org/project/zyte-api/",
+   "fetched_at": "2026-10-14T06:27Z"
   }
  ]
 }

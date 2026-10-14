@@ -1,0 +1,46 @@
+{
+ "id": "docker-hub-api",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Docker/",
+ "fetched_at": "2026-10-14T06:13Z",
+ "rating": 4.7,
+ "reviews_total": 3,
+ "reviews": [
+  {
+   "id": "60c0eeec34091dd35c6b492b",
+   "date": "2021-06-09",
+   "rating": 4,
+   "title": "Docker your Apps!",
+   "pros": "-Allows instances of apps to run in their own memory space\n\n-Quick to install\n\n-Large repository of apps available\n\n-Tools to manage apps available\n\n-Available for Win10, Linux, NAS",
+   "cons": "-While its easy to install a lot of Docker apps, installing tools to manage them is more challenging.\n\n-Linux based vs. Windows based Docker can be confusing.",
+   "overall": "Docker opens up a new world of ease-of-installing and using to Windows, Linux and NAS users. Securely running in their own memory spaces it makes installing and utilizing many apps much more manageable. However, while it is easy to install a lot of apps, one will get to the point where it will impact peformance and then managing all the apps can get difficult.",
+   "reviewer_role": "Consultant",
+   "company_size": "1,000 - 4,999",
+   "url": "https://sourceforge.net/software/product/Docker/#review-60c0eeec34091dd35c6b492b"
+  },
+  {
+   "id": "5fad4aaaef012c6e4f17a0ef",
+   "date": "2020-11-12",
+   "rating": 5,
+   "title": "Simple and powerful",
+   "pros": "Cross platform\n\nRepo to publish images which are not out there\n\nPart of open source project\n\nHigh performance for finding and sharing containers images",
+   "cons": "Documentation is not that descriptive and In linux its find difficult to start and on windows virtualisation needs to be on and some changes in BIOS.\n\nAnd will not work on Windows home.",
+   "overall": "Other than all of this It is a pretty powerful software that not only saves a lot of time but also helps in Web development.",
+   "reviewer_role": "Student",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Docker/#review-5fad4aaaef012c6e4f17a0ef"
+  },
+  {
+   "id": "5ecbe52839389f02d4bd4aeb",
+   "date": "2020-05-25",
+   "rating": 5,
+   "title": "Go-to software for Containers",
+   "pros": "Easy to setup and get started with.\n\nPortability.\n\nAvailable across all platforms - Windows, Linux and MacOS.\n\nLarge number of pre-built images.\n\nSimplifies deployment pipeline.",
+   "cons": "CLI takes time to learn.\n\nResource intensive.\n\nDocumentation is not beginner friendly.",
+   "overall": "Docker has become the standard tool for utilizing container technology. It simplifies development and deployment of applications and removes the limitations of 'platform'.",
+   "reviewer_role": "Software Developer",
+   "company_size": "100 - 499",
+   "url": "https://sourceforge.net/software/product/Docker/#review-5ecbe52839389f02d4bd4aeb"
+  }
+ ]
+}

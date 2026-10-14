@@ -15,6 +15,7 @@ Thanks for helping. This guide shows how to add, change or remove a service with
 | Add an example request, unit price or MCP connection snippet | `data/usage.json` (keyed by entry `id`) | `call` / `unit_price` / `mcp_config`, each with `source_url` and `checked_at`; see `data/schema.json` |
 | Add a category | `data/categories.json` | `id`, `en`, `pl`, `desc_en`, `desc_pl` |
 | Add a related directory or registry | `data/directories.json` | `name`, `url`, `machine_readable_url`, `desc_en`, `desc_pl` |
+| Name a service's official SDK package, Stack Overflow tag or iOS app (usage signals) | `data/popularity-ids.json` | `npm`, `pypi`, `stackoverflow_tag`, `ios_app_id`, `checked_at`; vendor-published only |
 
 Running `python scripts/build.py` regenerates these files from `data/`:
 

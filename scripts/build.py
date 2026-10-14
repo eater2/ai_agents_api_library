@@ -220,7 +220,14 @@ def is_trial(e):
 
 RATINGS = {}  # id -> list of signals from data/ratings.json (scripts/fetch_ratings.py)
 OPERATIONS = json.loads((DATA / "operations.json").read_text("utf-8"))  # id -> definition; vocabulary of the operations field
-SOURCE_NAMES = {"sourceforge": "SourceForge", "github": "GitHub", "smithery": "Smithery"}
+SOURCE_NAMES = {"sourceforge": "SourceForge", "github": "GitHub", "smithery": "Smithery", "npm": "npm", "pypi": "PyPI",
+                "stackoverflow": "Stack Overflow", "appstore": "App Store"}
+
+
+def sdk_downloads(e):
+    """Monthly downloads of the official SDKs (npm + PyPI) and the packages counted."""
+    rs = [r for r in RATINGS.get(e["id"], []) if r["source"] in ("npm", "pypi")]
+    return sum(r["downloads_month"] for r in rs), rs
 
 
 def short_count(n):
@@ -238,6 +245,12 @@ def proof_items(e):
             label = f"{src} {short_count(r['stars'])}★ {r['repo']}"
         elif r["source"] == "smithery" and r.get("uses"):
             label = f"{src} {short_count(r['uses'])} uses"
+        elif r["source"] in ("npm", "pypi"):
+            label = f"{src} {r['package']} {short_count(r['downloads_month'])}/month"
+        elif r["source"] == "stackoverflow":
+            label = f"{src} [{r['tag']}] {short_count(r['questions'])} questions"
+        elif r["source"] == "appstore":
+            label = f"{src} {r['rating']}★/{short_count(r['ratings'])} ratings ({r['app']})"
         else:
             continue
         out.append((label, r["url"], r["fetched_at"]))
@@ -255,7 +268,7 @@ def review_word(n, lang):
     return "opinia" if n == 1 else "opinie" if n % 10 in (2, 3, 4) and n % 100 not in (12, 13, 14) else "opinii"
 
 
-PROOF_ORDER = {"sourceforge": 0, "github": 1, "smithery": 2}  # the review rating first
+PROOF_ORDER = {"sourceforge": 0, "appstore": 1, "npm": 2, "pypi": 3, "stackoverflow": 4, "github": 5, "smithery": 6}  # the review rating first
 
 
 def proof_signals(e):
@@ -281,6 +294,15 @@ def proof_md(e, lang):
         elif r["source"] == "smithery" and r.get("uses"):
             img = shield("Smithery", f"{short_count(r['uses'])} {'uses' if lang == 'en' else 'użyć'}", "FF5601")
             out.append(f'[![Smithery {r["uses"]} uses]({img})]({r["url"]})')
+        elif r["source"] in ("npm", "pypi"):
+            img = shield(SOURCE_NAMES[r["source"]], f"{short_count(r['downloads_month'])}/{'month' if lang == 'en' else 'mies.'}", "CB3837" if r["source"] == "npm" else "3775A9", r["source"])
+            out.append(f'[![{SOURCE_NAMES[r["source"]]} {r["package"]} {r["downloads_month"]} downloads per month]({img})]({r["url"]})')
+        elif r["source"] == "stackoverflow":
+            img = shield("Stack Overflow", f"{short_count(r['questions'])} {'questions' if lang == 'en' else 'pytań'}", "F58025", "stackoverflow")
+            out.append(f'[![Stack Overflow {r["questions"]} questions]({img})]({r["url"]})')
+        elif r["source"] == "appstore":
+            img = shield("iOS app", f"{r['rating']}★ {short_count(r['ratings'])}", "0D96F6", "appstore")
+            out.append(f'[![App Store {r["rating"]} from {r["ratings"]} ratings, {md_cell(r["app"])}]({img})]({r["url"]})')
     return rating + (("<br>" + " ".join(out)) if out else "")
 
 
@@ -299,6 +321,14 @@ def proof_html(e, lang="en"):
             out.append(f'<a class="chip" href="{u}"{d}>★ {short_count(r["stars"])} <span class="n">GitHub</span></a>')
         elif r["source"] == "smithery" and r.get("uses"):
             out.append(f'<a class="chip" href="{u}"{d}>{short_count(r["uses"])} <span class="n">{"uses" if lang == "en" else "użyć"} · Smithery</span></a>')
+        elif r["source"] in ("npm", "pypi"):
+            per = "downloads/month" if lang == "en" else "pobrań/mies."
+            out.append(f'<a class="chip" href="{u}" title="{html.escape(r["package"])} · {stamp(r["fetched_at"])}">{short_count(r["downloads_month"])} <span class="n">{per} · {SOURCE_NAMES[r["source"]]}</span></a>')
+        elif r["source"] == "stackoverflow":
+            out.append(f'<a class="chip" href="{u}"{d}>{short_count(r["questions"])} <span class="n">{"questions" if lang == "en" else "pytań"} · Stack Overflow</span></a>')
+        elif r["source"] == "appstore":
+            app = "iOS app" if lang == "en" else "aplikacja iOS"
+            out.append(f'<a class="chip" href="{u}" title="{html.escape(r["app"])} · {stamp(r["fetched_at"])}">★ {r["rating"]} <span class="n">({short_count(r["ratings"])}) {app}</span></a>')
     return f'<div class="proof">{"".join(out)}</div>' if out else ""
 
 
@@ -553,7 +583,7 @@ def llms(cats, items, dirs):
          "Each entry: docs URL, auth method + header hint, MCP server (official/community), free tier, SDKs, OpenAPI and llms.txt links.",
          "", "Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, "
          "plus derived booleans has_free_tier, has_trial, no_auth, stale, link_check{checked_at, docs, mcp} and "
-         "ratings[] (proof of use: SourceForge rating and review count, GitHub stars, Smithery uses; each with url and fetched_at) "
+         "ratings[] (proof of use: SourceForge rating and review count, monthly downloads of the official npm/PyPI SDK, Stack Overflow question count, rating of the vendor's own iOS app, GitHub stars, Smithery uses; each with url and fetched_at) "
          "and reviews_url (up to 100 user reviews with pros/cons, reviewer names removed; also via the MCP tool get_reviews). "
          "Researched on vendor pages, each with source_url and checked_at: free_plan{kind, requires_card, quota, period, watermark}, "
          "auth_scheme (OpenAPI securityScheme: type, in, name, scheme, format), base_url, rate_limits, oauth_scopes, async_jobs, data_policy, "
@@ -599,7 +629,7 @@ def llms_full(cats, items):
          "(secrets as $ENV_VAR or <PLACEHOLDER>) and `result:` how to fetch an async result",
          "# tags: [FREE] lasting free tier or free usage, [TRIAL] one-off free trial credits, "
          "[NO-KEY] callable without any credential, [MCP] official MCP server",
-         "# proof: public ratings and usage (SourceForge rating/reviews, GitHub stars, Smithery uses), date = when fetched",
+         "# proof: public ratings and usage (SourceForge rating/reviews, SDK downloads/month on npm and PyPI, Stack Overflow questions, vendor iOS app rating, GitHub stars, Smithery uses), date = when fetched",
          "# base url, free plan, rate limits, data policy, async jobs, oauth scopes: researched on vendor pages; sources in the JSON", ""]
     for c in cats:
         rows = [e for e in items if e["category"] == c["id"]]
@@ -930,8 +960,14 @@ def main():
     write("catalog/operations.json", json.dumps(OPERATIONS, ensure_ascii=False, indent=1) + "\n")
     write("docs/catalog.json", dump)
     for c in cats:
-        rows = [{k: v for k, v in e.items() if k != "category"} for e in en if e["category"] == c["id"]]
-        cat = {"id": c["id"], "name": c["en"], "description": c["desc_en"]}
+        # Ratings without url, fetched_at and shared_with keep each category file under the size limit; all.json has them.
+        slim = lambda rs: [{k: v for k, v in r.items() if k not in ("url", "fetched_at", "shared_with")} for r in rs]  # noqa: E731
+        # uptime.up_means is the same text everywhere: once in the header instead of in every entry.
+        trim = lambda u: {k: v for k, v in u.items() if k != "up_means"}  # noqa: E731
+        rows = [{k: (slim(v) if k == "ratings" else trim(v) if k == "uptime" else v) for k, v in e.items() if k != "category"}
+                for e in en if e["category"] == c["id"]]
+        means = next((e["uptime"]["up_means"] for e in en if (e.get("uptime") or {}).get("up_means")), None)
+        cat = {"id": c["id"], "name": c["en"], "description": c["desc_en"], **({"uptime_up_means": means} if means else {})}
         # Compact, one entry per line: indentation costs an agent tokens, one line per entry keeps diffs readable
         compact = lambda v: json.dumps(v, ensure_ascii=False, separators=(",", ":"))  # noqa: E731
         text = ('{"category":' + compact(cat) + ',"entries":[\n' + ",\n".join(compact(r) for r in rows) + "\n]}\n")

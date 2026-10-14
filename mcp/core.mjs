@@ -284,6 +284,36 @@ function mcpRepo(e) {
   if (!r) return e.mcp?.type === "none" ? { status: "no MCP server" } : { ...UNAVAILABLE };
   return { repo: r.repo, archived: r.archived, pushed_at: r.pushed_at, stars: r.stars, url: r.url, fetched_at: r.fetched_at };
 }
+// Usage: monthly downloads of the official SDKs, Stack Overflow questions, the vendor's own iOS app.
+const fmt = (n) => (n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : n >= 1e4 ? `${(n / 1e3).toFixed(1)}k` : String(n));
+function sdkDownloads(e) {
+  const pk = (e.ratings || []).filter((r) => r.source === "npm" || r.source === "pypi");
+  if (!pk.length) return { ...UNAVAILABLE };
+  return { per_month: pk.reduce((a, r) => a + r.downloads_month, 0),
+    packages: pk.map((r) => ({ registry: r.source, package: r.package, per_month: r.downloads_month, url: r.url,
+      ...(r.shared_with ? { shared_with: r.shared_with } : {}) })), fetched_at: pk[0].fetched_at };
+}
+const monthlyDownloads = (e) => (e.ratings || []).filter((r) => r.source === "npm" || r.source === "pypi").reduce((a, r) => a + r.downloads_month, 0);
+function stackOverflow(e) {
+  const r = bySource(e, "stackoverflow");
+  return r ? { tag: r.tag, questions: r.questions, url: r.url, fetched_at: r.fetched_at } : { ...UNAVAILABLE };
+}
+function appStore(e) {
+  const r = bySource(e, "appstore");
+  return r ? { app: r.app, rating: r.rating, ratings: r.ratings, url: r.url, fetched_at: r.fetched_at,
+    note: "the vendor's iOS app for the same product; it rates the app, not the API" } : { ...UNAVAILABLE };
+}
+function usageBrief(e) {
+  const parts = [];
+  const pk = (e.ratings || []).filter((r) => r.source === "npm" || r.source === "pypi");
+  if (pk.length) parts.push(`SDK ${fmt(monthlyDownloads(e))} downloads/month (${pk.map((r) => `${r.source} ${r.package}`).join(", ")}` +
+    `${pk.some((r) => r.shared_with) ? "; SDK shared with other catalog entries" : ""})`);
+  const so = bySource(e, "stackoverflow");
+  if (so) parts.push(`Stack Overflow ${fmt(so.questions)} questions [${so.tag}]`);
+  const app = bySource(e, "appstore");
+  if (app) parts.push(`iOS app ${app.rating}/5 from ${fmt(app.ratings)}`);
+  return parts.length ? parts.join("; ") : "unavailable";
+}
 function mcpRegistry(e) {
   const r = bySource(e, "smithery");
   return r ? { source: r.source, uses: r.uses, url: r.url, fetched_at: r.fetched_at } : { ...UNAVAILABLE };
@@ -304,6 +334,7 @@ function ratingsBrief(e) {
     uptime: uptimeBrief(e),
     reviews: pr.status || `${pr.rating}/5 from ${pr.count} (${pr.source})`,
     mcp_repo: repo.status || `${repo.archived ? "ARCHIVED, " : ""}last push ${repo.pushed_at}`,
+    usage: usageBrief(e),
   };
 }
 
@@ -397,7 +428,7 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.3.8" },
+    { name: "ai-agents-api-library", version: "0.3.9" },
     {
       instructions:
         "Catalog of third-party APIs and MCP servers (entries with a last-checked date) an agent can call after a one-time human setup " +
@@ -440,6 +471,8 @@ export function createServer() {
         "effort, and bulk limits, not budget or region: read free_plan.kind (free_tier lasts, trial is one-off) and notes. " +
         "User opinions (SourceForge product reviews): filter with min_rating / min_reviews, order with sort=rating or " +
         "sort=reviews; results with stored review texts carry reviews_summary (praised and complained-about aspects). " +
+        "Usage: ratings.usage gives monthly downloads of the official SDKs, Stack Overflow questions and the vendor's iOS app rating; " +
+        "filter with min_downloads, order with sort=usage. " +
         "Reviews rate the product, not whether the API fits the task. " +
         "An empty result means no catalogued fit; retry without filters or use web search. " +
         "Services work only once a human has provisioned credentials.",
@@ -459,17 +492,19 @@ export function createServer() {
           .describe("Only services whose user reviews (SourceForge) average at least this, e.g. 4. Services without reviews are excluded"),
         min_reviews: z.number().int().min(1).optional()
           .describe("Only services with at least this many user reviews, e.g. 10. Services without reviews are excluded"),
-        sort: z.enum(["fit", "rating", "reviews"]).optional()
-          .describe("fit (default): operation fit and task factors; rating: user rating weighted by review count, so 5/5 from one review does not lead; reviews: most reviewed first. Services without reviews go last; ties keep fit order"),
+        min_downloads: z.number().int().min(1).optional()
+          .describe("Only services whose official SDKs (npm + PyPI) have at least this many downloads per month, e.g. 100000. Services without a known SDK are excluded"),
+        sort: z.enum(["fit", "rating", "reviews", "usage"]).optional()
+          .describe("fit (default): operation fit and task factors; rating: user rating weighted by review count, so 5/5 from one review does not lead; reviews: most reviewed first; usage: most monthly SDK downloads (npm + PyPI) first. Services without the signal go last; ties keep fit order"),
         limit: z.number().int().min(1).max(50).optional().describe("Max results, default 10"),
       },
     },
-    async ({ query, category, mcp, no_auth, free_tier, include_trials, no_card, auth, volume, min_rating, min_reviews, sort = "fit", limit = 10 }) => {
+    async ({ query, category, mcp, no_auth, free_tier, include_trials, no_card, auth, volume, min_rating, min_reviews, min_downloads, sort = "fit", limit = 10 }) => {
       const terms = words(query);
       const q = queryStems(terms);
       const order = queryOrder(query);
       const bulk = bulkIntent(query, volume);
-      const filters = { category, mcp, no_auth, free_tier, include_trials, no_card, auth, min_rating, min_reviews };
+      const filters = { category, mcp, no_auth, free_tier, include_trials, no_card, auth, min_rating, min_reviews, min_downloads };
       const pr = (e) => bySource(e, "sourceforge");
       const passes = (e) => (!category || e.category === category)
         // Docs-only servers, docs pages and dead endpoints don't count; remote = a hosted endpoint that answered MCP.
@@ -480,7 +515,8 @@ export function createServer() {
         && (!no_card || (e.no_card ?? (e.no_auth || (e.has_free_tier && e.free_plan?.requires_card === false))))
         && (!auth || e.auth === auth)
         && (min_rating === undefined || (pr(e)?.rating ?? 0) >= min_rating)
-        && (min_reviews === undefined || (pr(e)?.reviews ?? 0) >= min_reviews);
+        && (min_reviews === undefined || (pr(e)?.reviews ?? 0) >= min_reviews)
+        && (min_downloads === undefined || monthlyDownloads(e) >= min_downloads);
 
       // Score every entry, then decide by operation fit.
       const all = catalog.map((e) => ({ e, s: score(e, terms), fit: opFit(e, q, order), warn: bulk ? bulkWarning(e) : null }))
@@ -503,7 +539,8 @@ export function createServer() {
       const topAll = Math.max(0, ...pool.map((h) => h.s));
       const relevant = ranked.filter((h) => byOperation || h.s >= topAll * TOPIC_MIN_SHARE);
       // Opt-in opinion order; Array.sort is stable, so equal keys keep the fit order.
-      const key = sort === "rating" ? (h) => weightedRating(h.e) : sort === "reviews" ? (h) => pr(h.e)?.reviews ?? null : null;
+      const key = sort === "rating" ? (h) => weightedRating(h.e) : sort === "reviews" ? (h) => pr(h.e)?.reviews ?? null
+        : sort === "usage" ? (h) => monthlyDownloads(h.e) || null : null;
       if (key) relevant.sort((a, b) => (key(b) ?? -1) - (key(a) ?? -1));
       const kept = relevant.slice(0, limit);
       const opinions = await loadReviewSummaries();
@@ -537,7 +574,8 @@ export function createServer() {
       }
       const out = { source, ...(sort !== "fit" ? { sort } : {}), results };
       const notes = [];
-      if (sort !== "fit") notes.push(`Sorted by user ${sort} (SourceForge reviews of the product, not proof the API fits the task); check match and reason.`);
+      if (sort === "usage") notes.push("Sorted by monthly downloads of the official SDKs (popularity, not proof the API fits the task); check match and reason.");
+      else if (sort !== "fit") notes.push(`Sorted by user ${sort} (SourceForge reviews of the product, not proof the API fits the task); check match and reason.`);
       if (bulk && results.some((r) => r.volume_warning)) notes.push("Bulk use detected; results with volume_warning forbid or limit it.");
       if (!byOperation && terms.length) notes.push("No entry lists this operation; results match words only. Check each `what`.");
       if (notes.length) out.note = notes.join(" ");
@@ -553,7 +591,8 @@ export function createServer() {
         "Full entry for one service: docs, auth scheme and how the credential is sent, base URL, operations, " +
         "MCP endpoint or repository (check which: a repository must be installed, a docs-only server does not call the API), " +
         "free plan vs trial, rate limits, data policy, notes, last-checked dates, link check, and separate signals: " +
-        "uptime (our availability probes of base URL and MCP endpoint), mcp_repo (archived, last push), mcp_registry (installs) and product_reviews (rating, count, date range), each with its fetch date. " +
+        "uptime (our availability probes of base URL and MCP endpoint), mcp_repo (archived, last push), mcp_registry (installs), product_reviews (rating, count, date range), " +
+        "sdk_downloads (official npm/PyPI SDKs per month), stackoverflow (question count) and app_store (the vendor's iOS app), each with its fetch date. " +
         "Call it also when the user names a service, or before you use one for a batch job, a message, a payment or " +
         "another third-party action: a vendor you already know is not a checked vendor (bulk bans, docs-only MCP, " +
         "trial limits change). Values carry the vendor page they were read from and a check date; use them for a " +
@@ -575,7 +614,8 @@ export function createServer() {
         if (sum) Object.assign(reviews, { praised: sum.praised, complaints: sum.complaints, low_rated: sum.low_rated });
       }
       const { uptime, ...other } = rest;
-      const out = { ...other, uptime: uptime || { ...UNAVAILABLE }, mcp_repo: mcpRepo(e), mcp_registry: mcpRegistry(e), product_reviews: reviews };
+      const out = { ...other, uptime: uptime || { ...UNAVAILABLE }, mcp_repo: mcpRepo(e), mcp_registry: mcpRegistry(e), product_reviews: reviews,
+        sdk_downloads: sdkDownloads(e), stackoverflow: stackOverflow(e), app_store: appStore(e) };
       return { content: [{ type: "text", text: JSON.stringify(out, null, 1) }] };
     },
   );

@@ -7,7 +7,16 @@ Sources (only ones that allow automated access):
                (allowed by robots.txt; product slugs come from its sitemap; a match must link the
                entry's homepage domain)
 
-G2, Capterra, GetApp and Product Hunt block automated clients, so they are not fetched.
+  npm          monthly downloads of the vendor's official JS/TS SDK (api.npmjs.org)
+  pypi         monthly downloads of the vendor's official Python SDK (pypistats.org API)
+  stackoverflow  question count of the product's tag (Stack Exchange API)
+  appstore     rating and rating count of the vendor's own iOS app for the same product (Apple iTunes Lookup API)
+
+Package names, tags and app ids come from data/popularity-ids.json, researched from vendor docs (not guessed:
+registry search returns third-party wrappers). It can also name a SourceForge product page the sitemap match misses.
+
+G2, Capterra, GetApp and Product Hunt block automated clients, and Google Play has no public API and its terms
+forbid automated access, so they are not fetched.
 
 Writes data/ratings.json (aggregates) and catalog/reviews/<id>.json (review texts, reviewer names
 dropped; served to agents via GitHub raw and the MCP tool get_reviews, not shown on the website). Usage: python scripts/fetch_ratings.py [--only id,id] [--reviews N]
@@ -127,8 +136,12 @@ def norm(s):
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
 
+SF_TOO_BROAD = {"google", "amazon", "aws", "microsoft", "azure", "github", "gitlab", "meta", "apple"}
+
+
 def sf_candidates(e, by_norm):
-    names = [e["name"], short_name(e)]
+    # Vendor words widen the match, but not to a page for a whole company or a code host (Google, Amazon, GitHub).
+    names = [e["name"], short_name(e), *(vendor_terms(e) - SF_TOO_BROAD)]
     out = []
     for n in names:
         for url in by_norm.get(norm(n), []):
@@ -199,13 +212,82 @@ def sourceforge(e, candidates, max_reviews):
     return None, []
 
 
+# ---------- SDK downloads, Stack Overflow, App Store ----------
+
+def vendor_terms(e):
+    """Words that name the vendor: first word of the name, words in brackets, homepage domain stem (3+ letters)."""
+    words = [short_name(e).split()[0], *re.findall(r"\(([^)]+)\)", e["name"]), base_domain(e["homepage"]).split(".")[0]]
+    return {norm(w) for w in words if len(norm(w)) >= 3}
+
+
+def jget(url, tries=3):
+    for n in range(tries):
+        try:
+            return json.loads(get(url))
+        except urllib.error.HTTPError as ex:
+            if ex.code == 404:
+                return None
+            if ex.code == 429 and n + 1 < tries:
+                time.sleep(10 * (n + 1))
+                continue
+            return None
+        except (urllib.error.URLError, ValueError, TimeoutError):
+            return None
+
+
+def npm(pkg):
+    d = jget(f"https://api.npmjs.org/downloads/point/last-month/{urllib.parse.quote(pkg, safe='@')}")
+    if not d or "downloads" not in d:
+        return None
+    return {"source": "npm", "package": pkg, "downloads_month": d["downloads"], "url": f"https://www.npmjs.com/package/{pkg}"}
+
+
+def pypi(pkg):
+    time.sleep(1)  # pypistats asks for gentle use
+    d = jget(f"https://pypistats.org/api/packages/{pkg.lower()}/recent")
+    if not d or "data" not in d:
+        return None
+    return {"source": "pypi", "package": pkg, "downloads_month": d["data"]["last_month"], "url": f"https://pypi.org/project/{pkg}/"}
+
+
+def stackoverflow(tags):
+    """tag -> question count, 20 tags per request (Stack Exchange API, 300 requests/day without a key)."""
+    out = {}
+    for i in range(0, len(tags), 20):
+        part = ";".join(urllib.parse.quote(t) for t in tags[i:i + 20])
+        d = jget(f"https://api.stackexchange.com/2.3/tags/{part}/info?site=stackoverflow&pagesize=100")
+        for it in (d or {}).get("items", []):
+            out[it["name"]] = {"count": it["count"]}
+        time.sleep(1)
+        w = jget(f"https://api.stackexchange.com/2.3/tags/{part}/wikis?site=stackoverflow&pagesize=100")
+        for it in (w or {}).get("items", []):
+            if it["tag_name"] in out:
+                out[it["tag_name"]]["excerpt"] = it.get("excerpt") or ""
+        time.sleep(1)
+    return out
+
+
+def appstore(ids):
+    """app id -> rating summary (Apple iTunes Lookup API, many ids per request)."""
+    out = {}
+    for i in range(0, len(ids), 50):
+        d = jget("https://itunes.apple.com/lookup?id=" + ",".join(str(x) for x in ids[i:i + 50]))
+        for a in (d or {}).get("results", []):
+            if a.get("userRatingCount"):
+                out[str(a["trackId"])] = {"seller": (a.get("sellerUrl") or "") + " " + (a.get("artistName") or ""),
+                                          "source": "appstore", "app": a["trackName"], "rating": round(a["averageUserRating"], 2),
+                                          "ratings": a["userRatingCount"], "url": a["trackViewUrl"].split("?")[0]}
+        time.sleep(1)
+    return out
+
+
 # ---------- main ----------
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", help="comma-separated entry ids")
     ap.add_argument("--reviews", type=int, default=100, help="max review texts per entry")
-    ap.add_argument("--skip", default="", help="comma-separated sources to skip: github,smithery,sourceforge")
+    ap.add_argument("--skip", default="", help="comma-separated sources to skip: github,smithery,sourceforge,npm,pypi,stackoverflow,appstore")
     args = ap.parse_args()
     skip = set(filter(None, args.skip.split(",")))
 
@@ -217,6 +299,8 @@ def main():
     ratings = json.loads(out_file.read_text(encoding="utf-8")) if out_file.exists() else {}
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")  # fetched_at: UTC timestamp
     fresh = {e["id"]: [] for e in catalog}
+    ids_file = DATA / "popularity-ids.json"
+    pop = json.loads(ids_file.read_text(encoding="utf-8")) if ids_file.exists() else {}
 
     if "github" not in skip:
         token = github_token()
@@ -242,7 +326,8 @@ def main():
         reviews_dir.mkdir(parents=True, exist_ok=True)
         found = 0
         for i, e in enumerate(catalog, 1):
-            res, reviews = sourceforge(e, sf_candidates(e, by_norm), args.reviews)
+            known = (pop.get(e["id"]) or {}).get("sourceforge_url")
+            res, reviews = sourceforge(e, ([known] if known else []) + sf_candidates(e, by_norm), args.reviews)
             if res and res["rating"]:  # a listing without any rating proves nothing
                 found += 1
                 fresh[e["id"]].append(res)
@@ -253,6 +338,51 @@ def main():
                         ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
                 print(f"  [{i}/{len(catalog)}] {e['id']}: {res['rating']} / {res['reviews']} reviews, {len(reviews)} texts", flush=True)
         print(f"sourceforge: {found} products", flush=True)
+
+    for src, fetch in (("npm", npm), ("pypi", pypi)):
+        if src in skip:
+            continue
+        jobs = [(e["id"], p) for e in catalog for p in (pop.get(e["id"]) or {}).get(src) or []]
+        with ThreadPoolExecutor(4 if src == "npm" else 1) as pool:
+            for (eid, _), res in zip(jobs, pool.map(lambda j: fetch(j[1]), jobs)):
+                if res:
+                    fresh[eid].append(res)
+        print(f"{src}: {sum(1 for v in fresh.values() for x in v if x['source'] == src)} of {len(jobs)} packages", flush=True)
+
+    # One SDK can serve several entries (openai for chat, images and audio): name the others, so a count is not read as per-entry.
+    users = {}
+    for eid, items in fresh.items():
+        for x in items:
+            if x["source"] in ("npm", "pypi"):
+                users.setdefault((x["source"], x["package"]), []).append(eid)
+    for eid, items in fresh.items():
+        for x in items:
+            if x["source"] in ("npm", "pypi") and len(users[(x["source"], x["package"])]) > 1:
+                x["shared_with"] = [i for i in users[(x["source"], x["package"])] if i != eid]
+
+    if "stackoverflow" not in skip:
+        tags = {e["id"]: pop[e["id"]]["stackoverflow_tag"] for e in catalog if (pop.get(e["id"]) or {}).get("stackoverflow_tag")}
+        counts = stackoverflow(sorted(set(tags.values())))
+        for eid, tag in tags.items():
+            e = next(x for x in catalog if x["id"] == eid)
+            c = counts.get(tag) or {}
+            # The tag wiki must name the product, so a generic tag (playwright, rest) does not count.
+            if c.get("count") and any(t in norm(c.get("excerpt", "")) or t in norm(tag) for t in vendor_terms(e)):
+                fresh[eid].append({"source": "stackoverflow", "tag": tag, "questions": c["count"],
+                                   "url": f"https://stackoverflow.com/questions/tagged/{urllib.parse.quote(tag)}"})
+        print(f"stackoverflow: {sum(1 for v in fresh.values() for x in v if x['source'] == 'stackoverflow')} of {len(tags)} tags", flush=True)
+
+    if "appstore" not in skip:
+        apps = {e["id"]: str(pop[e["id"]]["ios_app_id"]) for e in catalog if (pop.get(e["id"]) or {}).get("ios_app_id")}
+        found = appstore(sorted(set(apps.values())))
+        for eid, app in apps.items():
+            e = next(x for x in catalog if x["id"] == eid)
+            hit = dict(found.get(app) or {})
+            seller = hit.pop("seller", "").lower()
+            # The app must be published by the vendor: seller URL on its domain, or seller name = vendor name.
+            if hit and (base_domain(e["homepage"]) in seller or any(t in norm(seller) for t in vendor_terms(e))):
+                fresh[eid].append(hit)
+        print(f"appstore: {sum(1 for v in fresh.values() for x in v if x['source'] == 'appstore')} of {len(apps)} apps", flush=True)
 
     for eid, items in fresh.items():
         kept = [x for x in ratings.get(eid, []) if x["source"] in skip]

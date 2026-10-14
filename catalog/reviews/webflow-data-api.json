@@ -1,0 +1,46 @@
+{
+ "id": "webflow-data-api",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Webflow/",
+ "fetched_at": "2026-10-14T06:13Z",
+ "rating": 3.3,
+ "reviews_total": 3,
+ "reviews": [
+  {
+   "id": "65c6c80d9a7922f1b9923217",
+   "date": "2024-02-10",
+   "rating": 1,
+   "title": "Not SOC-2 Compliant",
+   "pros": "Once we set it up, it was incredibly easy to update text on our website.  We wanted our marketing team to be able to make updates instead of having to go through a developer.  We are a small business o we value efficiency.",
+   "cons": "We have our site on Webflow and are undergoing a SOC-2 audit accreditation process for our company. We have hit a snag because SOC-2 requirements state we need certain headers on our website but Webflow is actually blocking us from being able to add the required headers. Their rationale is that we have to upgrade to \"enterprise lite\" for $15k annually in order to add the standard headers. For context, we added these headers to our product websites within minutes and achieved A+ ratings. Webflow is actually blocking us from being SOC-2 compliant unless we shell out $15k additional every year for the ability to add \"custom\" headers -- what they call \"custom\" are industry standard headers that any SOC-2 compliant website needs to have in place. Our website is a 9 page static website with just text. I would not say Webflow is secure or SOC-2 compliant given this experience, I would call them \"SOC-2 optional\" - and only an option if you pay 49x the regular price for a basic website.",
+   "overall": "I would not recommend this to anyone looking for a CMS given their posture on standard security headers for websites.",
+   "reviewer_role": "CEO",
+   "company_size": "100 - 499",
+   "url": "https://sourceforge.net/software/product/Webflow/#review-65c6c80d9a7922f1b9923217"
+  },
+  {
+   "id": "63e81748dc3d6590079e8214",
+   "date": "2023-02-11",
+   "rating": 4,
+   "title": "Designing easily",
+   "pros": "The best thing about Webflow is the fact that it is able to design everything without spending all the time coding everything, it is a robust software that helps with the design aspect of beautiful websites and provide a structure that helps slowly build the website, with things like HTML and JavaScript, it also integrates fully responsive and helpful data that helps create with professionalism in mind, it helps understand the motives of each design and what it helps with in terms of engagement with the users, and the styles are very creative and can be customized to help with the branding of the business, it has a helpful drag and drop tool to help build faster and delete anything in case it is necessary, this tool is very useful because it makes everything so much easier and the designing of the page becomes more entertaining and intuitive, the information can be included with this feature and the results are done way faster.",
+   "cons": "It has its great limitations which is very understandable because it actually works without coding, and there is only so much one can do without having to use code. But overall, I think that Webflow is very good and it is constantly providing new tools in the new versions that they release, I would like to see more editing options to the different addition of multimedia in the websites, and I would like to be able to edit simultaneously with other coworkers or even just one more team member, which helps build faster, it would be really nice to be able to do this because it would increase collaboration between the members in the business, I don't want to just be able to edit myself at the same time, but other people too and help each other communicating what has to be done.",
+   "overall": "I would say that my experience with Webflow has been very positive as of now, it is not only a website design tool but it also provides helpful data that helps design responsively, with the users in mind and helps understand better the way that they interact with the areas of the website. It is a tool that has helped me many times. When trying to design something that requires coding, I can achieve this with Webflow without needing the knowledge of coding and still get the same result, or even better, with this tool. It also gets everything done way faster than having to spend the time doing it all from scratch, which is extremely helpful, because I want to focus on more important part of the business but I still want to be able to complete other tasks that are also influential to the company and the engagement that it receives, so that is why it is necessary a tool that will help me achieve this.",
+   "reviewer_role": "Chief Executive Officer",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Webflow/#review-63e81748dc3d6590079e8214"
+  },
+  {
+   "id": "5f02e63deb3e9a816198c068",
+   "date": "2020-07-06",
+   "rating": 5,
+   "title": "No coding development ",
+   "pros": "It the easiest tool to build business and blog websites. It doesn't need coding to develop, so it's easy for anyone to use. Forms and surveys can also be developed. Simple drag and drop steps required for the development.",
+   "cons": "In my experience, Webflow is an outstanding tool to develop.",
+   "overall": "Webflow is a very simple website builder. Overall I used Webflow for developing the website and in my opinion, it's the easiest way to develop a website with few drag and drop steps. Not only website development it can also help you develop surveys and forms.",
+   "reviewer_role": "Data analyst",
+   "company_size": "26 - 99",
+   "url": "https://sourceforge.net/software/product/Webflow/#review-5f02e63deb3e9a816198c068"
+  }
+ ]
+}

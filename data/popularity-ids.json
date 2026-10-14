@@ -1,0 +1,1981 @@
+{
+ "adobe-firefly-services-api": {
+  "npm": [
+   "@adobe/firefly-apis"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "adobe-pdf-services-api": {
+  "npm": [
+   "@adobe/pdfservices-node-sdk"
+  ],
+  "pypi": [
+   "pdfservices-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "adyen-api": {
+  "npm": [
+   "@adyen/api-library"
+  ],
+  "pypi": [
+   "Adyen"
+  ],
+  "stackoverflow_tag": "adyen",
+  "checked_at": "2026-10-14"
+ },
+ "agentmail": {
+  "npm": [
+   "agentmail"
+  ],
+  "pypi": [
+   "agentmail"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "agentset": {
+  "npm": [
+   "agentset"
+  ],
+  "pypi": [
+   "agentset"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "airtable-api": {
+  "npm": [
+   "airtable"
+  ],
+  "stackoverflow_tag": "airtable",
+  "ios_app_id": "914172636",
+  "checked_at": "2026-10-14"
+ },
+ "alpaca-trading-api": {
+  "npm": [
+   "@alpacahq/alpaca-trade-api"
+  ],
+  "pypi": [
+   "alpaca-py"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "alpha-vantage": {
+  "stackoverflow_tag": "alpha-vantage",
+  "checked_at": "2026-10-14"
+ },
+ "amazon-polly-amazon-transcribe-aws": {
+  "npm": [
+   "@aws-sdk/client-polly",
+   "@aws-sdk/client-transcribe"
+  ],
+  "stackoverflow_tag": "amazon-polly",
+  "checked_at": "2026-10-14"
+ },
+ "amazon-selling-partner-api": {
+  "stackoverflow_tag": "amazon-selling-partner-api",
+  "ios_app_id": "794141485",
+  "checked_at": "2026-10-14"
+ },
+ "amazon-translate": {
+  "npm": [
+   "@aws-sdk/client-translate"
+  ],
+  "stackoverflow_tag": "amazon-translate",
+  "checked_at": "2026-10-14"
+ },
+ "anchor-browser": {
+  "npm": [
+   "anchorbrowser"
+  ],
+  "pypi": [
+   "anchorbrowser"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "anthropic-claude-api": {
+  "npm": [
+   "@anthropic-ai/sdk"
+  ],
+  "pypi": [
+   "anthropic"
+  ],
+  "ios_app_id": "6473753684",
+  "checked_at": "2026-10-14"
+ },
+ "apify": {
+  "npm": [
+   "apify-client"
+  ],
+  "pypi": [
+   "apify-client"
+  ],
+  "stackoverflow_tag": "apify",
+  "checked_at": "2026-10-14"
+ },
+ "arcade-dev": {
+  "npm": [
+   "@arcadeai/arcadejs"
+  ],
+  "pypi": [
+   "arcadepy"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "asana-api": {
+  "npm": [
+   "asana"
+  ],
+  "pypi": [
+   "asana"
+  ],
+  "stackoverflow_tag": "asana-api",
+  "ios_app_id": "489969512",
+  "checked_at": "2026-10-14"
+ },
+ "assemblyai-api": {
+  "npm": [
+   "assemblyai"
+  ],
+  "pypi": [
+   "assemblyai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "attio-api": {
+  "ios_app_id": "1511545395",
+  "checked_at": "2026-10-14"
+ },
+ "autodesk-platform-services-aps": {
+  "npm": [
+   "@aps_sdk/authentication",
+   "@aps_sdk/model-derivative"
+  ],
+  "stackoverflow_tag": "autodesk-forge",
+  "checked_at": "2026-10-14"
+ },
+ "aws-apis": {
+  "npm": [
+   "@aws-sdk/client-s3"
+  ],
+  "stackoverflow_tag": "amazon-web-services",
+  "checked_at": "2026-10-14"
+ },
+ "aws-end-user-messaging-sms": {
+  "npm": [
+   "@aws-sdk/client-pinpoint-sms-voice-v2"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "aws-textract": {
+  "npm": [
+   "@aws-sdk/client-textract"
+  ],
+  "stackoverflow_tag": "amazon-textract",
+  "checked_at": "2026-10-14"
+ },
+ "ayrshare": {
+  "npm": [
+   "social-post-api"
+  ],
+  "pypi": [
+   "social-post-api"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "azure-ai-document-intelligence": {
+  "npm": [
+   "@azure-rest/ai-document-intelligence"
+  ],
+  "pypi": [
+   "azure-ai-documentintelligence"
+  ],
+  "stackoverflow_tag": "azure-form-recognizer",
+  "checked_at": "2026-10-14"
+ },
+ "azure-ai-speech": {
+  "npm": [
+   "microsoft-cognitiveservices-speech-sdk"
+  ],
+  "pypi": [
+   "azure-cognitiveservices-speech"
+  ],
+  "stackoverflow_tag": "azure-speech",
+  "checked_at": "2026-10-14"
+ },
+ "azure-ai-translator": {
+  "npm": [
+   "@azure-rest/ai-translation-text"
+  ],
+  "pypi": [
+   "azure-ai-translation-text"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "bentley-itwin-platform-apis": {
+  "npm": [
+   "@itwin/itwins-client"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "bigcommerce-api": {
+  "pypi": [
+   "bigcommerce"
+  ],
+  "stackoverflow_tag": "bigcommerce",
+  "ios_app_id": "1418570678",
+  "checked_at": "2026-10-14"
+ },
+ "bird": {
+  "npm": [
+   "messagebird"
+  ],
+  "pypi": [
+   "messagebird"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "bluesky-at-protocol": {
+  "npm": [
+   "@atproto/api"
+  ],
+  "ios_app_id": "6444370199",
+  "checked_at": "2026-10-14"
+ },
+ "box-api": {
+  "npm": [
+   "box-node-sdk"
+  ],
+  "pypi": [
+   "boxsdk",
+   "box-sdk-gen"
+  ],
+  "stackoverflow_tag": "box-api",
+  "ios_app_id": "290853822",
+  "checked_at": "2026-10-14"
+ },
+ "bright-data": {
+  "npm": [
+   "@brightdata/sdk"
+  ],
+  "pypi": [
+   "brightdata-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "browser-use-cloud-api": {
+  "npm": [
+   "browser-use-sdk"
+  ],
+  "pypi": [
+   "browser-use-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "browserbase-stagehand": {
+  "npm": [
+   "@browserbasehq/sdk",
+   "@browserbasehq/stagehand"
+  ],
+  "pypi": [
+   "browserbase",
+   "stagehand"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "cal-com-api": {
+  "ios_app_id": "6757157271",
+  "checked_at": "2026-10-14"
+ },
+ "canva-connect-api": {
+  "ios_app_id": "897446215",
+  "checked_at": "2026-10-14"
+ },
+ "cartesia-api": {
+  "npm": [
+   "@cartesia/cartesia-js"
+  ],
+  "pypi": [
+   "cartesia"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "chroma-cloud": {
+  "npm": [
+   "chromadb"
+  ],
+  "pypi": [
+   "chromadb"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "clickhouse-cloud": {
+  "npm": [
+   "@clickhouse/client"
+  ],
+  "pypi": [
+   "clickhouse-connect"
+  ],
+  "stackoverflow_tag": "clickhouse",
+  "checked_at": "2026-10-14"
+ },
+ "clickup-api": {
+  "stackoverflow_tag": "clickup-api",
+  "checked_at": "2026-10-14"
+ },
+ "cloudconvert-api": {
+  "npm": [
+   "cloudconvert"
+  ],
+  "pypi": [
+   "cloudconvert"
+  ],
+  "stackoverflow_tag": "cloudconvert",
+  "checked_at": "2026-10-14"
+ },
+ "cloudflare-api": {
+  "npm": [
+   "cloudflare"
+  ],
+  "pypi": [
+   "cloudflare"
+  ],
+  "stackoverflow_tag": "cloudflare",
+  "checked_at": "2026-10-14"
+ },
+ "cloudflare-sandbox-sdk": {
+  "npm": [
+   "@cloudflare/sandbox"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "codesandbox-sdk": {
+  "npm": [
+   "@codesandbox/sdk"
+  ],
+  "stackoverflow_tag": "codesandbox",
+  "checked_at": "2026-10-14"
+ },
+ "cohere-api": {
+  "npm": [
+   "cohere-ai"
+  ],
+  "pypi": [
+   "cohere"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "coinbase-cdp-x402": {
+  "npm": [
+   "@coinbase/cdp-sdk"
+  ],
+  "pypi": [
+   "cdp-sdk"
+  ],
+  "ios_app_id": "886427730",
+  "checked_at": "2026-10-14"
+ },
+ "coingecko-api": {
+  "npm": [
+   "@coingecko/coingecko-typescript"
+  ],
+  "pypi": [
+   "coingecko-sdk"
+  ],
+  "ios_app_id": "1390323960",
+  "checked_at": "2026-10-14"
+ },
+ "coinmarketcap-api": {
+  "ios_app_id": "1282107098",
+  "checked_at": "2026-10-14"
+ },
+ "comet-opik": {
+  "npm": [
+   "opik"
+  ],
+  "pypi": [
+   "opik"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "composio": {
+  "npm": [
+   "@composio/core"
+  ],
+  "pypi": [
+   "composio"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "context7-library-docs-for-agents": {
+  "npm": [
+   "@upstash/context7-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "convex": {
+  "npm": [
+   "convex"
+  ],
+  "pypi": [
+   "convex"
+  ],
+  "stackoverflow_tag": "convex",
+  "checked_at": "2026-10-14"
+ },
+ "creatomate-api": {
+  "npm": [
+   "creatomate"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "datadog-api": {
+  "npm": [
+   "@datadog/datadog-api-client"
+  ],
+  "pypi": [
+   "datadog-api-client"
+  ],
+  "stackoverflow_tag": "datadog",
+  "checked_at": "2026-10-14"
+ },
+ "daytona": {
+  "npm": [
+   "@daytonaio/sdk"
+  ],
+  "pypi": [
+   "daytona"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "deepgram-api": {
+  "npm": [
+   "@deepgram/sdk"
+  ],
+  "pypi": [
+   "deepgram-sdk"
+  ],
+  "stackoverflow_tag": "deepgram",
+  "checked_at": "2026-10-14"
+ },
+ "deepgram-voice-agent-api": {
+  "npm": [
+   "@deepgram/sdk"
+  ],
+  "pypi": [
+   "deepgram-sdk"
+  ],
+  "stackoverflow_tag": "deepgram",
+  "checked_at": "2026-10-14"
+ },
+ "deepl-api": {
+  "npm": [
+   "deepl-node"
+  ],
+  "pypi": [
+   "deepl"
+  ],
+  "stackoverflow_tag": "deepl",
+  "ios_app_id": "1552407475",
+  "checked_at": "2026-10-14"
+ },
+ "deepseek-api": {
+  "ios_app_id": "6737597349",
+  "checked_at": "2026-10-14"
+ },
+ "dexpaprika": {
+  "npm": [
+   "dexpaprika-sdk"
+  ],
+  "pypi": [
+   "dexpaprika-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "diffbot": {
+  "stackoverflow_tag": "diffbot",
+  "checked_at": "2026-10-14"
+ },
+ "discord-api": {
+  "stackoverflow_tag": "discord",
+  "ios_app_id": "985746746",
+  "checked_at": "2026-10-14"
+ },
+ "docusign-esignature-api": {
+  "npm": [
+   "docusign-esign"
+  ],
+  "pypi": [
+   "docusign-esign"
+  ],
+  "stackoverflow_tag": "docusignapi",
+  "ios_app_id": "474990205",
+  "checked_at": "2026-10-14"
+ },
+ "dropbox-api": {
+  "npm": [
+   "dropbox"
+  ],
+  "pypi": [
+   "dropbox"
+  ],
+  "stackoverflow_tag": "dropbox-api",
+  "ios_app_id": "327630330",
+  "checked_at": "2026-10-14"
+ },
+ "e2b": {
+  "npm": [
+   "e2b"
+  ],
+  "pypi": [
+   "e2b"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "ebay-apis": {
+  "stackoverflow_tag": "ebay-api",
+  "ios_app_id": "282614216",
+  "checked_at": "2026-10-14"
+ },
+ "elevenlabs-agents-platform": {
+  "npm": [
+   "@elevenlabs/elevenlabs-js"
+  ],
+  "pypi": [
+   "elevenlabs"
+  ],
+  "stackoverflow_tag": "elevenlabs",
+  "checked_at": "2026-10-14"
+ },
+ "elevenlabs-api": {
+  "npm": [
+   "@elevenlabs/elevenlabs-js"
+  ],
+  "pypi": [
+   "elevenlabs"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "elevenlabs-music-api": {
+  "npm": [
+   "@elevenlabs/elevenlabs-js"
+  ],
+  "pypi": [
+   "elevenlabs"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "esri-arcgis-location-platform": {
+  "pypi": [
+   "arcgis"
+  ],
+  "stackoverflow_tag": "arcgis",
+  "checked_at": "2026-10-14"
+ },
+ "etsy-open-api-v3": {
+  "stackoverflow_tag": "etsy",
+  "ios_app_id": "477128284",
+  "checked_at": "2026-10-14"
+ },
+ "exa": {
+  "npm": [
+   "exa-js"
+  ],
+  "pypi": [
+   "exa-py"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "fal-ai": {
+  "npm": [
+   "@fal-ai/client"
+  ],
+  "pypi": [
+   "fal-client"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "figma-rest-api-dev-mode-mcp": {
+  "npm": [
+   "@figma/rest-api-spec"
+  ],
+  "stackoverflow_tag": "figma",
+  "ios_app_id": "1152747299",
+  "checked_at": "2026-10-14"
+ },
+ "firecrawl": {
+  "npm": [
+   "@mendable/firecrawl-js"
+  ],
+  "pypi": [
+   "firecrawl-py"
+  ],
+  "stackoverflow_tag": "firecrawl",
+  "checked_at": "2026-10-14"
+ },
+ "fireworks-ai": {
+  "pypi": [
+   "fireworks-ai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "framer": {
+  "npm": [
+   "framer-api"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "gamma-api": {
+  "ios_app_id": "6768404578",
+  "checked_at": "2026-10-14"
+ },
+ "geoapify": {
+  "npm": [
+   "@geoapify/geocoder-autocomplete"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "github-api": {
+  "npm": [
+   "octokit",
+   "@octokit/rest"
+  ],
+  "stackoverflow_tag": "github-api",
+  "checked_at": "2026-10-14"
+ },
+ "gitingest": {
+  "pypi": [
+   "gitingest"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "gitlab-api": {
+  "stackoverflow_tag": "gitlab",
+  "checked_at": "2026-10-14"
+ },
+ "globalping": {
+  "npm": [
+   "globalping"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "google-bigquery": {
+  "npm": [
+   "@google-cloud/bigquery"
+  ],
+  "pypi": [
+   "google-cloud-bigquery"
+  ],
+  "stackoverflow_tag": "google-bigquery",
+  "checked_at": "2026-10-14"
+ },
+ "google-cloud-text-to-speech-speech-to-text": {
+  "npm": [
+   "@google-cloud/text-to-speech",
+   "@google-cloud/speech"
+  ],
+  "pypi": [
+   "google-cloud-texttospeech",
+   "google-cloud-speech"
+  ],
+  "stackoverflow_tag": "google-cloud-speech",
+  "checked_at": "2026-10-14"
+ },
+ "google-cloud-translation": {
+  "npm": [
+   "@google-cloud/translate"
+  ],
+  "pypi": [
+   "google-cloud-translate"
+  ],
+  "stackoverflow_tag": "google-cloud-translate",
+  "checked_at": "2026-10-14"
+ },
+ "google-document-ai": {
+  "npm": [
+   "@google-cloud/documentai"
+  ],
+  "pypi": [
+   "google-cloud-documentai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "google-gemini-api": {
+  "npm": [
+   "@google/genai"
+  ],
+  "pypi": [
+   "google-genai"
+  ],
+  "ios_app_id": "6477489729",
+  "checked_at": "2026-10-14"
+ },
+ "google-gemini-imagen-image-api": {
+  "npm": [
+   "@google/genai"
+  ],
+  "pypi": [
+   "google-genai"
+  ],
+  "stackoverflow_tag": "google-gemini",
+  "ios_app_id": "6477489729",
+  "checked_at": "2026-10-14"
+ },
+ "google-maps-platform": {
+  "npm": [
+   "@googlemaps/google-maps-services-js"
+  ],
+  "pypi": [
+   "googlemaps"
+  ],
+  "stackoverflow_tag": "google-maps-api-3",
+  "ios_app_id": "585027354",
+  "checked_at": "2026-10-14"
+ },
+ "google-slides-docs-api": {
+  "stackoverflow_tag": "google-slides-api",
+  "checked_at": "2026-10-14"
+ },
+ "google-veo-gemini-api-vertex-ai": {
+  "npm": [
+   "@google/genai"
+  ],
+  "pypi": [
+   "google-genai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "google-workspace-apis-gmail-calendar-drive": {
+  "stackoverflow_tag": "google-api",
+  "checked_at": "2026-10-14"
+ },
+ "groq-api": {
+  "npm": [
+   "groq-sdk"
+  ],
+  "pypi": [
+   "groq"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "gumloop": {
+  "pypi": [
+   "gumloop"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "hacker-news-api": {
+  "stackoverflow_tag": "hacker-news-api",
+  "checked_at": "2026-10-14"
+ },
+ "here-location-services": {
+  "pypi": [
+   "here-location-services"
+  ],
+  "stackoverflow_tag": "here-api",
+  "ios_app_id": "955837609",
+  "checked_at": "2026-10-14"
+ },
+ "hubspot-api": {
+  "npm": [
+   "@hubspot/api-client"
+  ],
+  "pypi": [
+   "hubspot-api-client"
+  ],
+  "stackoverflow_tag": "hubspot",
+  "ios_app_id": "1107711722",
+  "checked_at": "2026-10-14"
+ },
+ "hugging-face-inference-providers": {
+  "npm": [
+   "@huggingface/inference"
+  ],
+  "pypi": [
+   "huggingface_hub"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "hume-ai-api": {
+  "npm": [
+   "hume"
+  ],
+  "pypi": [
+   "hume"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "hyperbrowser": {
+  "npm": [
+   "@hyperbrowser/sdk"
+  ],
+  "pypi": [
+   "hyperbrowser"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "ifttt-api": {
+  "stackoverflow_tag": "ifttt",
+  "ios_app_id": "660944635",
+  "checked_at": "2026-10-14"
+ },
+ "intercom-api": {
+  "npm": [
+   "intercom-client"
+  ],
+  "pypi": [
+   "python-intercom"
+  ],
+  "stackoverflow_tag": "intercom",
+  "ios_app_id": "739927601",
+  "checked_at": "2026-10-14"
+ },
+ "ip2location-io": {
+  "npm": [
+   "ip2location-io-nodejs"
+  ],
+  "pypi": [
+   "IP2Location-io"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "iplocate": {
+  "npm": [
+   "node-iplocate"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "klaviyo-api": {
+  "npm": [
+   "klaviyo-api"
+  ],
+  "pypi": [
+   "klaviyo-api"
+  ],
+  "stackoverflow_tag": "klaviyo",
+  "checked_at": "2026-10-14"
+ },
+ "languagetool-api": {
+  "stackoverflow_tag": "languagetool",
+  "checked_at": "2026-10-14"
+ },
+ "lara-translate-api": {
+  "npm": [
+   "@translated/lara"
+  ],
+  "pypi": [
+   "lara-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "leonardo-ai-api": {
+  "npm": [
+   "@leonardo-ai/sdk"
+  ],
+  "pypi": [
+   "leonardo-ai-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "letta": {
+  "npm": [
+   "@letta-ai/letta-client"
+  ],
+  "pypi": [
+   "letta-client"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "line-messaging-api": {
+  "npm": [
+   "@line/bot-sdk"
+  ],
+  "pypi": [
+   "line-bot-sdk"
+  ],
+  "stackoverflow_tag": "line-api",
+  "ios_app_id": "443904275",
+  "checked_at": "2026-10-14"
+ },
+ "linear-api": {
+  "npm": [
+   "@linear/sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "linkedin-api": {
+  "stackoverflow_tag": "linkedin-api",
+  "ios_app_id": "288429040",
+  "checked_at": "2026-10-14"
+ },
+ "linkup": {
+  "npm": [
+   "linkup-sdk"
+  ],
+  "pypi": [
+   "linkup-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "livekit-cloud": {
+  "npm": [
+   "livekit-server-sdk"
+  ],
+  "pypi": [
+   "livekit-api",
+   "livekit"
+  ],
+  "stackoverflow_tag": "livekit",
+  "checked_at": "2026-10-14"
+ },
+ "llamaparse-llamacloud": {
+  "npm": [
+   "llama-cloud-services"
+  ],
+  "pypi": [
+   "llama-cloud-services"
+  ],
+  "stackoverflow_tag": "llama-parse",
+  "checked_at": "2026-10-14"
+ },
+ "lucid-lucidchart-rest-api": {
+  "stackoverflow_tag": "lucidchart",
+  "ios_app_id": "611543423",
+  "checked_at": "2026-10-14"
+ },
+ "luma-ai-dream-machine-api": {
+  "npm": [
+   "lumaai"
+  ],
+  "pypi": [
+   "lumaai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "mailchimp-marketing-api": {
+  "npm": [
+   "@mailchimp/mailchimp_marketing"
+  ],
+  "pypi": [
+   "mailchimp-marketing"
+  ],
+  "stackoverflow_tag": "mailchimp-api-v3.0",
+  "ios_app_id": "366794783",
+  "checked_at": "2026-10-14"
+ },
+ "mailgun": {
+  "npm": [
+   "mailgun.js"
+  ],
+  "pypi": [
+   "mailgun"
+  ],
+  "stackoverflow_tag": "mailgun",
+  "checked_at": "2026-10-14"
+ },
+ "mapbox": {
+  "npm": [
+   "mapbox-gl",
+   "@mapbox/mapbox-sdk"
+  ],
+  "pypi": [
+   "mapbox"
+  ],
+  "stackoverflow_tag": "mapbox",
+  "checked_at": "2026-10-14"
+ },
+ "mastodon-api": {
+  "stackoverflow_tag": "mastodon",
+  "ios_app_id": "1571998974",
+  "checked_at": "2026-10-14"
+ },
+ "mem0": {
+  "npm": [
+   "mem0ai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "mercado-libre-api": {
+  "stackoverflow_tag": "mercadolibre",
+  "checked_at": "2026-10-14"
+ },
+ "mercado-pago-api": {
+  "npm": [
+   "mercadopago"
+  ],
+  "pypi": [
+   "mercadopago"
+  ],
+  "stackoverflow_tag": "mercadopago",
+  "ios_app_id": "925436649",
+  "checked_at": "2026-10-14"
+ },
+ "mermaid-chart-api": {
+  "npm": [
+   "@mermaidchart/sdk"
+  ],
+  "stackoverflow_tag": "mermaid",
+  "checked_at": "2026-10-14"
+ },
+ "meta-graph-api-facebook-instagram": {
+  "stackoverflow_tag": "facebook-graph-api",
+  "ios_app_id": "284882215",
+  "checked_at": "2026-10-14"
+ },
+ "microsoft-graph-outlook-teams-onedrive": {
+  "npm": [
+   "@microsoft/microsoft-graph-client"
+  ],
+  "pypi": [
+   "msgraph-sdk"
+  ],
+  "stackoverflow_tag": "microsoft-graph-api",
+  "checked_at": "2026-10-14"
+ },
+ "miro-rest-api": {
+  "npm": [
+   "@mirohq/miro-api"
+  ],
+  "pypi": [
+   "miro-api"
+  ],
+  "ios_app_id": "1180074773",
+  "checked_at": "2026-10-14"
+ },
+ "mistral-ai-api": {
+  "npm": [
+   "@mistralai/mistralai"
+  ],
+  "pypi": [
+   "mistralai"
+  ],
+  "ios_app_id": "6740410176",
+  "checked_at": "2026-10-14"
+ },
+ "mistral-ocr-api": {
+  "npm": [
+   "@mistralai/mistralai"
+  ],
+  "pypi": [
+   "mistralai"
+  ],
+  "stackoverflow_tag": "mistral-ai",
+  "checked_at": "2026-10-14"
+ },
+ "modal": {
+  "npm": [
+   "modal"
+  ],
+  "pypi": [
+   "modal"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "monday-com-api": {
+  "npm": [
+   "monday-sdk-js"
+  ],
+  "stackoverflow_tag": "monday.com",
+  "checked_at": "2026-10-14"
+ },
+ "mongodb-atlas": {
+  "npm": [
+   "mongodb"
+  ],
+  "pypi": [
+   "pymongo"
+  ],
+  "stackoverflow_tag": "mongodb-atlas",
+  "checked_at": "2026-10-14"
+ },
+ "mux-video-api": {
+  "npm": [
+   "@mux/mux-node"
+  ],
+  "pypi": [
+   "mux_python"
+  ],
+  "stackoverflow_tag": "mux",
+  "checked_at": "2026-10-14"
+ },
+ "n8n-api": {
+  "stackoverflow_tag": "n8n",
+  "checked_at": "2026-10-14"
+ },
+ "nango": {
+  "npm": [
+   "@nangohq/node"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "neon-postgres": {
+  "npm": [
+   "@neondatabase/api-client"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "newsapi": {
+  "stackoverflow_tag": "newsapi",
+  "checked_at": "2026-10-14"
+ },
+ "nocodb-cloud": {
+  "npm": [
+   "nocodb-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "notion-api": {
+  "npm": [
+   "@notionhq/client"
+  ],
+  "stackoverflow_tag": "notion-api",
+  "ios_app_id": "1232780281",
+  "checked_at": "2026-10-14"
+ },
+ "ntfy": {
+  "ios_app_id": "1625396347",
+  "checked_at": "2026-10-14"
+ },
+ "onshape-rest-api": {
+  "ios_app_id": "923421284",
+  "checked_at": "2026-10-14"
+ },
+ "open-meteo": {
+  "npm": [
+   "openmeteo"
+  ],
+  "pypi": [
+   "openmeteo-requests"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "openai-api": {
+  "npm": [
+   "openai"
+  ],
+  "pypi": [
+   "openai"
+  ],
+  "stackoverflow_tag": "openai-api",
+  "ios_app_id": "6448311069",
+  "checked_at": "2026-10-14"
+ },
+ "openai-audio-api-tts-transcription": {
+  "npm": [
+   "openai"
+  ],
+  "pypi": [
+   "openai"
+  ],
+  "stackoverflow_tag": "openai-api",
+  "checked_at": "2026-10-14"
+ },
+ "openai-images-api-gpt-image": {
+  "npm": [
+   "openai"
+  ],
+  "pypi": [
+   "openai"
+  ],
+  "stackoverflow_tag": "openai-api",
+  "ios_app_id": "6448311069",
+  "checked_at": "2026-10-14"
+ },
+ "opencage": {
+  "pypi": [
+   "opencage"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "openrouter": {
+  "npm": [
+   "@openrouter/sdk"
+  ],
+  "pypi": [
+   "openrouter"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "openrouteservice": {
+  "npm": [
+   "openrouteservice-js"
+  ],
+  "pypi": [
+   "openrouteservice"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "openstreetmap-nominatim": {
+  "stackoverflow_tag": "nominatim",
+  "checked_at": "2026-10-14"
+ },
+ "openweathermap-api": {
+  "stackoverflow_tag": "openweathermap",
+  "ios_app_id": "1535923697",
+  "checked_at": "2026-10-14"
+ },
+ "overpass-api-osm": {
+  "stackoverflow_tag": "overpass-api",
+  "checked_at": "2026-10-14"
+ },
+ "oxylabs": {
+  "pypi": [
+   "oxylabs"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "pagerduty-api": {
+  "npm": [
+   "@pagerduty/pdjs"
+  ],
+  "pypi": [
+   "pagerduty"
+  ],
+  "stackoverflow_tag": "pagerduty",
+  "checked_at": "2026-10-14"
+ },
+ "paragon-actionkit": {
+  "npm": [
+   "@useparagon/connect"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "parallel-web-systems-search-api": {
+  "npm": [
+   "parallel-web"
+  ],
+  "pypi": [
+   "parallel-web"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "paypal-api": {
+  "npm": [
+   "@paypal/paypal-server-sdk"
+  ],
+  "pypi": [
+   "paypal-server-sdk"
+  ],
+  "stackoverflow_tag": "paypal",
+  "ios_app_id": "283646709",
+  "checked_at": "2026-10-14"
+ },
+ "perplexity-sonar-search-api": {
+  "npm": [
+   "@perplexity-ai/perplexity_ai"
+  ],
+  "pypi": [
+   "perplexityai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "pinecone": {
+  "npm": [
+   "@pinecone-database/pinecone"
+  ],
+  "pypi": [
+   "pinecone"
+  ],
+  "stackoverflow_tag": "pinecone",
+  "checked_at": "2026-10-14"
+ },
+ "pinterest-api": {
+  "stackoverflow_tag": "pinterest",
+  "ios_app_id": "429047995",
+  "checked_at": "2026-10-14"
+ },
+ "pipedream-connect": {
+  "npm": [
+   "@pipedream/sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "pipedrive-api": {
+  "npm": [
+   "pipedrive"
+  ],
+  "stackoverflow_tag": "pipedrive-api",
+  "ios_app_id": "921456160",
+  "checked_at": "2026-10-14"
+ },
+ "plaid-api": {
+  "npm": [
+   "plaid"
+  ],
+  "pypi": [
+   "plaid-python"
+  ],
+  "stackoverflow_tag": "plaid",
+  "checked_at": "2026-10-14"
+ },
+ "planetscale": {
+  "npm": [
+   "@planetscale/database"
+  ],
+  "stackoverflow_tag": "planetscale",
+  "checked_at": "2026-10-14"
+ },
+ "plantuml-server-api": {
+  "stackoverflow_tag": "plantuml",
+  "checked_at": "2026-10-14"
+ },
+ "playwright-mcp-microsoft": {
+  "npm": [
+   "@playwright/mcp"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "plivo": {
+  "npm": [
+   "plivo"
+  ],
+  "pypi": [
+   "plivo"
+  ],
+  "stackoverflow_tag": "plivo",
+  "checked_at": "2026-10-14"
+ },
+ "polygon-io-massive": {
+  "npm": [
+   "@massive.com/client-js"
+  ],
+  "pypi": [
+   "massive"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "postmark": {
+  "npm": [
+   "postmark"
+  ],
+  "stackoverflow_tag": "postmark",
+  "checked_at": "2026-10-14"
+ },
+ "procore-api": {
+  "ios_app_id": "374930542",
+  "checked_at": "2026-10-14"
+ },
+ "pubmed-e-utilities-ncbi": {
+  "stackoverflow_tag": "pubmed",
+  "checked_at": "2026-10-14"
+ },
+ "qdrant-cloud": {
+  "npm": [
+   "@qdrant/js-client-rest"
+  ],
+  "pypi": [
+   "qdrant-client"
+  ],
+  "stackoverflow_tag": "qdrant",
+  "checked_at": "2026-10-14"
+ },
+ "reddit-api": {
+  "stackoverflow_tag": "reddit",
+  "ios_app_id": "1064216828",
+  "checked_at": "2026-10-14"
+ },
+ "reducto-api": {
+  "npm": [
+   "reductoai"
+  ],
+  "pypi": [
+   "reductoai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "reflag": {
+  "npm": [
+   "@reflag/node-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "replicate": {
+  "npm": [
+   "replicate"
+  ],
+  "pypi": [
+   "replicate"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "resemble-ai-api": {
+  "pypi": [
+   "resemble"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "resend": {
+  "npm": [
+   "resend"
+  ],
+  "pypi": [
+   "resend"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "retell-ai": {
+  "npm": [
+   "retell-sdk"
+  ],
+  "pypi": [
+   "retell-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "rev-ai-api": {
+  "npm": [
+   "revai-node-sdk"
+  ],
+  "pypi": [
+   "rev_ai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "rhino-compute-mcneel": {
+  "npm": [
+   "compute-rhino3d"
+  ],
+  "pypi": [
+   "compute-rhino3d"
+  ],
+  "stackoverflow_tag": "rhino3d",
+  "checked_at": "2026-10-14"
+ },
+ "riza": {
+  "npm": [
+   "@riza-io/api"
+  ],
+  "pypi": [
+   "rizaio"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "runloop": {
+  "npm": [
+   "@runloop/api-client"
+  ],
+  "pypi": [
+   "runloop_api_client"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "runway-api": {
+  "npm": [
+   "@runwayml/sdk"
+  ],
+  "pypi": [
+   "runwayml"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "salesforce-apis": {
+  "stackoverflow_tag": "salesforce",
+  "ios_app_id": "404249815",
+  "checked_at": "2026-10-14"
+ },
+ "scrapegraphai-api": {
+  "npm": [
+   "scrapegraph-js"
+  ],
+  "pypi": [
+   "scrapegraph-py"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "scrapfly": {
+  "npm": [
+   "scrapfly-sdk"
+  ],
+  "pypi": [
+   "scrapfly-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "scrapingbee": {
+  "npm": [
+   "scrapingbee"
+  ],
+  "pypi": [
+   "scrapingbee"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "sendgrid-twilio": {
+  "npm": [
+   "@sendgrid/mail"
+  ],
+  "pypi": [
+   "sendgrid"
+  ],
+  "stackoverflow_tag": "sendgrid",
+  "checked_at": "2026-10-14"
+ },
+ "sentry-api": {
+  "npm": [
+   "@sentry/node"
+  ],
+  "pypi": [
+   "sentry-sdk"
+  ],
+  "stackoverflow_tag": "sentry",
+  "checked_at": "2026-10-14"
+ },
+ "serpapi": {
+  "npm": [
+   "serpapi"
+  ],
+  "pypi": [
+   "serpapi"
+  ],
+  "stackoverflow_tag": "serpapi",
+  "checked_at": "2026-10-14"
+ },
+ "shopify-admin-storefront-api": {
+  "npm": [
+   "@shopify/shopify-api"
+  ],
+  "pypi": [
+   "ShopifyAPI"
+  ],
+  "stackoverflow_tag": "shopify",
+  "ios_app_id": "371294472",
+  "checked_at": "2026-10-14"
+ },
+ "sinch": {
+  "npm": [
+   "@sinch/sdk-core"
+  ],
+  "pypi": [
+   "sinch"
+  ],
+  "stackoverflow_tag": "sinch",
+  "checked_at": "2026-10-14"
+ },
+ "slack-api": {
+  "npm": [
+   "@slack/web-api"
+  ],
+  "pypi": [
+   "slack_sdk"
+  ],
+  "stackoverflow_tag": "slack-api",
+  "ios_app_id": "618783545",
+  "checked_at": "2026-10-14"
+ },
+ "snowflake": {
+  "npm": [
+   "snowflake-sdk"
+  ],
+  "pypi": [
+   "snowflake-connector-python"
+  ],
+  "stackoverflow_tag": "snowflake-cloud-data-platform",
+  "checked_at": "2026-10-14"
+ },
+ "speckle-api": {
+  "npm": [
+   "@speckle/objectloader2"
+  ],
+  "pypi": [
+   "specklepy"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "speechmatics-api": {
+  "npm": [
+   "@speechmatics/batch-client"
+  ],
+  "pypi": [
+   "speechmatics-batch"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "spider-cloud": {
+  "npm": [
+   "@spider-cloud/spider-client"
+  ],
+  "pypi": [
+   "spider-client"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "square-api": {
+  "npm": [
+   "square"
+  ],
+  "pypi": [
+   "squareup"
+  ],
+  "stackoverflow_tag": "square-connect",
+  "ios_app_id": "335393788",
+  "checked_at": "2026-10-14"
+ },
+ "stability-ai-platform-api": {
+  "pypi": [
+   "stability-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "stable-audio-api-stability-ai": {
+  "pypi": [
+   "stability-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "stackone": {
+  "npm": [
+   "@stackone/ai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "steel": {
+  "npm": [
+   "steel-sdk"
+  ],
+  "pypi": [
+   "steel-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "stream-getstream-chat-video-api": {
+  "npm": [
+   "stream-chat",
+   "@stream-io/node-sdk"
+  ],
+  "pypi": [
+   "stream-chat",
+   "getstream"
+  ],
+  "stackoverflow_tag": "getstream-io",
+  "checked_at": "2026-10-14"
+ },
+ "stripe-api": {
+  "npm": [
+   "stripe"
+  ],
+  "pypi": [
+   "stripe"
+  ],
+  "stackoverflow_tag": "stripe-payments",
+  "ios_app_id": "978516833",
+  "checked_at": "2026-10-14"
+ },
+ "supabase": {
+  "npm": [
+   "@supabase/supabase-js"
+  ],
+  "pypi": [
+   "supabase"
+  ],
+  "stackoverflow_tag": "supabase",
+  "checked_at": "2026-10-14"
+ },
+ "superglue": {
+  "npm": [
+   "@superglue/client"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "tavily": {
+  "npm": [
+   "@tavily/core"
+  ],
+  "pypi": [
+   "tavily-python"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "tavus-api": {
+  "npm": [
+   "tavus"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "telegram-bot-api": {
+  "stackoverflow_tag": "telegram-bot",
+  "ios_app_id": "686449807",
+  "checked_at": "2026-10-14"
+ },
+ "telnyx": {
+  "npm": [
+   "telnyx"
+  ],
+  "pypi": [
+   "telnyx"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "tidb-cloud": {
+  "stackoverflow_tag": "tidb",
+  "checked_at": "2026-10-14"
+ },
+ "tiktok-api": {
+  "ios_app_id": "835599320",
+  "checked_at": "2026-10-14"
+ },
+ "todoist-api": {
+  "npm": [
+   "@doist/todoist-api-typescript"
+  ],
+  "pypi": [
+   "todoist-api-python"
+  ],
+  "stackoverflow_tag": "todoist",
+  "ios_app_id": "572688855",
+  "checked_at": "2026-10-14"
+ },
+ "together-ai": {
+  "npm": [
+   "together-ai"
+  ],
+  "pypi": [
+   "together"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "tomorrow-io-api": {
+  "ios_app_id": "1443325509",
+  "checked_at": "2026-10-14"
+ },
+ "trello-api": {
+  "stackoverflow_tag": "trello",
+  "ios_app_id": "461504587",
+  "checked_at": "2026-10-14"
+ },
+ "trimble-connect-api": {
+  "npm": [
+   "trimble-connect-workspace-api"
+  ],
+  "ios_app_id": "1076606537",
+  "checked_at": "2026-10-14"
+ },
+ "tripo-api": {
+  "pypi": [
+   "tripo3d"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "turso": {
+  "npm": [
+   "@tursodatabase/api",
+   "@libsql/client"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "twilio": {
+  "npm": [
+   "twilio"
+  ],
+  "pypi": [
+   "twilio"
+  ],
+  "stackoverflow_tag": "twilio",
+  "checked_at": "2026-10-14"
+ },
+ "twilio-programmable-voice": {
+  "npm": [
+   "twilio"
+  ],
+  "pypi": [
+   "twilio"
+  ],
+  "stackoverflow_tag": "twilio",
+  "checked_at": "2026-10-14"
+ },
+ "unstructured-api": {
+  "npm": [
+   "unstructured-client"
+  ],
+  "pypi": [
+   "unstructured-client"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "upstash-redis-vector": {
+  "npm": [
+   "@upstash/redis",
+   "@upstash/vector"
+  ],
+  "pypi": [
+   "upstash-redis",
+   "upstash-vector"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "v0-platform-api-vercel": {
+  "npm": [
+   "v0-sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "vapi": {
+  "npm": [
+   "@vapi-ai/server-sdk"
+  ],
+  "pypi": [
+   "vapi_server_sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "vercel-ai-gateway": {
+  "npm": [
+   "ai",
+   "@ai-sdk/gateway"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "vercel-api": {
+  "npm": [
+   "@vercel/sdk"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "vercel-sandbox": {
+  "npm": [
+   "@vercel/sandbox"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "vonage-api": {
+  "npm": [
+   "@vonage/server-sdk"
+  ],
+  "pypi": [
+   "vonage"
+  ],
+  "stackoverflow_tag": "vonage",
+  "checked_at": "2026-10-14"
+ },
+ "voyage-ai-embeddings-rerank": {
+  "npm": [
+   "voyageai"
+  ],
+  "pypi": [
+   "voyageai"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "weaviate-cloud": {
+  "npm": [
+   "weaviate-client"
+  ],
+  "pypi": [
+   "weaviate-client"
+  ],
+  "stackoverflow_tag": "weaviate",
+  "checked_at": "2026-10-14"
+ },
+ "webflow-data-api": {
+  "npm": [
+   "webflow-api"
+  ],
+  "pypi": [
+   "webflow"
+  ],
+  "stackoverflow_tag": "webflow",
+  "checked_at": "2026-10-14"
+ },
+ "whatsapp-business-cloud-api": {
+  "stackoverflow_tag": "whatsapp-cloud-api",
+  "checked_at": "2026-10-14"
+ },
+ "wikidata": {
+  "stackoverflow_tag": "wikidata",
+  "checked_at": "2026-10-14"
+ },
+ "wikipedia-wikimedia-api": {
+  "stackoverflow_tag": "mediawiki-api",
+  "checked_at": "2026-10-14"
+ },
+ "wise-api": {
+  "ios_app_id": "612261027",
+  "checked_at": "2026-10-14"
+ },
+ "wolfram-alpha-api": {
+  "stackoverflow_tag": "wolframalpha",
+  "ios_app_id": "307776022",
+  "checked_at": "2026-10-14"
+ },
+ "woocommerce-rest-api": {
+  "npm": [
+   "@woocommerce/woocommerce-rest-api"
+  ],
+  "pypi": [
+   "WooCommerce"
+  ],
+  "stackoverflow_tag": "woocommerce",
+  "ios_app_id": "1389130815",
+  "checked_at": "2026-10-14"
+ },
+ "x-twitter-api": {
+  "npm": [
+   "twitter-api-sdk"
+  ],
+  "pypi": [
+   "xdk"
+  ],
+  "stackoverflow_tag": "twitter-api",
+  "ios_app_id": "333903271",
+  "checked_at": "2026-10-14"
+ },
+ "xai-grok-api": {
+  "pypi": [
+   "xai-sdk"
+  ],
+  "ios_app_id": "6670324846",
+  "checked_at": "2026-10-14"
+ },
+ "youtube-data-api": {
+  "stackoverflow_tag": "youtube-api",
+  "ios_app_id": "544007664",
+  "checked_at": "2026-10-14"
+ },
+ "zapier-mcp-ai-actions": {
+  "stackoverflow_tag": "zapier",
+  "checked_at": "2026-10-14"
+ },
+ "zendesk-api": {
+  "stackoverflow_tag": "zendesk-api",
+  "ios_app_id": "1174276185",
+  "checked_at": "2026-10-14"
+ },
+ "zep": {
+  "npm": [
+   "@getzep/zep-cloud"
+  ],
+  "pypi": [
+   "zep-cloud"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "zilliz-cloud-milvus": {
+  "npm": [
+   "@zilliz/milvus2-sdk-node"
+  ],
+  "pypi": [
+   "pymilvus"
+  ],
+  "stackoverflow_tag": "milvus",
+  "checked_at": "2026-10-14"
+ },
+ "zoo-text-to-cad-api-kittycad": {
+  "npm": [
+   "@kittycad/lib"
+  ],
+  "pypi": [
+   "kittycad"
+  ],
+  "checked_at": "2026-10-14"
+ },
+ "zoom-api": {
+  "stackoverflow_tag": "zoom-sdk",
+  "ios_app_id": "546505307",
+  "checked_at": "2026-10-14"
+ },
+ "zyte-api": {
+  "pypi": [
+   "zyte-api"
+  ],
+  "stackoverflow_tag": "zyte",
+  "checked_at": "2026-10-14"
+ }
+}

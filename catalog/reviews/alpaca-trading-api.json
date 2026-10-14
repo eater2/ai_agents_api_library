@@ -1,0 +1,46 @@
+{
+ "id": "alpaca-trading-api",
+ "source": "sourceforge",
+ "url": "https://sourceforge.net/software/product/Alpaca/",
+ "fetched_at": "2026-10-14T06:13Z",
+ "rating": 1.0,
+ "reviews_total": 3,
+ "reviews": [
+  {
+   "id": "679ad970a3e9e57a929a8bf3",
+   "date": "2025-01-30",
+   "rating": 1,
+   "title": "DO NOT USE Alpaca if you trade crypto!!!",
+   "pros": "API functionality is strong and they have good knowledge base to find helpful articles. Easy to get started too.",
+   "cons": "Crypto price glitches that cost me thousands and awful customer support.",
+   "overall": "Absolutely DO NOT USE Alpaca if you trade crypto!!!\n\nShort Version: I have experienced multiple instances where I have set stop-limit orders 20-30% below the current market price and a price glitch on their end caused those stop-limit orders to execute despite being 20-30% below the current market price. I have reached out to their support to work with them to get this resolved, but they have been absolutely terrible to work with and left me out to dry for THOUSANDS of dollars.\n\nLong Version: \n\nIssue 1: Orders executed at the incorrect price\n\nYFIUSD: My stop limit was set to $10,115. Looking at the minute chart on Alpaca’s website on 12/12/24 05:37, you can see that the price experienced an obvious pricing glitch where it opened at $11,469, dipped 14.25% down to $9,835, then rose back up 16.36% to close at $11,444, all in the span of 60 seconds. This was an obvious pricing glitch that triggered my stop limit order 14% below the current market price and caused my position to get incorrectly liquidated.\n\nSUSHIUSD: My stop limit was set to $1.88. Looking at the minute chart on Alpaca’s website on 12/11/24 19:19, you can see that the price experienced an obvious pricing glitch where it opened at $2.5, dipped 24.8% down to $1.88, then rose back up 34.57% to close at $2.53, all in the span of 60 seconds. This was an obvious pricing glitch that triggered my stop limit order 25% below the current market price and caused my position to get incorrectly liquidated.\n\nIssue 2: Incorrect positions reissued for both SUSHIUSD and YFISUD\n\nAfter a week of continuously reaching out to their support team, they finally replied and reissued me shares of both SUSHIUSD and YFIUSD but this was not the resolution I asked for. I had asked that they honor the sale as if it had been executed at market price when the glitch occurred. And on top of that they were reissued at the incorrect sale price, which doesn't make any sense. Reissuing them a week later also doesn't make any sense as I was denied the opportunity to mange my position, and in the case of YFIUSD I was reissued ABOVE the current market price! Meaning that I was already down money when they appeared in my account. I would have been better off just placing a market order at the current price. I lost $1,391.73 due to the pricing glitch and their attempt to resolve it just made it worse.\n\nAfter they acknowledged that they should not have reissued the shares in the manner they did, they went silent for another week before just reopening new positions in my account on Christmas Eve without telling me again at the incorrect price. Do you know how insane it is to open crypto positions in someone's account for thousands of dollars without telling them on Christmas Eve? I lost more money from them doing this because the price had dropped again by the time I had realized that they reissued these shares. \n\nAgain, I reached out to them, bringing up flagging that they clean up this mess and cover my losses for these reissued shares that I never asked for, but they refused and went silent again. After about another week of me reaching out to them, I got escalated to someone higher up who then opened SHORT positions in my account without telling me, which to me is even MORE DIABOLICAL. Luckily, I caught those pretty quickly and closed them. But it has been an absolute nightmare to deal with them for errors that they are 100% at fault for. \n\nFinally, they credited my account $400, despite me losing upwards of $3,000 total between the error of the stop losses being executed way below market price, and the losses incurred from them reopening positions in my account without telling me, and the price plummeting before I realized what's going on and closed them out. \n\nAbsolutely DO NOT USE ALPACA IF YOU TRADE CRYPTO. This has happened multiple times, and there's not a doubt in my mind that it will happen again with them. You will lose money in the long run if you plan to use them.",
+   "reviewer_role": "Trader",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Alpaca/#review-679ad970a3e9e57a929a8bf3"
+  },
+  {
+   "id": "652d1b9ead090fecb190edc3",
+   "date": "2023-10-16",
+   "rating": 1,
+   "title": "Stole my money",
+   "pros": "API is very simple and easy to use, not only is their REST API intuitive, but they also have a good Python wrapper.",
+   "cons": "API documentation is lacking when it comes to more advanced and programmer-based tasks. Also, retrieving historical prices mostly just returns 0.",
+   "overall": "Everything was good until I deposited money.\n\nFirstly, I had two issues with their API while using a paper-trading account, both of which were solved by their support in one way or another.\n\nAfter depositing my money, my account was banned without any explanation. I had to contact support again, where I was told that my ID was fake, which made zero sense since I had been approved by their KYC protocol three weeks before.\n\nIt has been a month since then and they are still telling me that my money is on its way, without any confirmation such as a bank statement. They have also failed to provide me with a GTI Tracker.\n\nDon't use this! Just as the sole other review of this broker that I could find (the one on this page) they are pure scammers!",
+   "reviewer_role": "Professional Programmer and Algotrader",
+   "company_size": "1 - 25",
+   "url": "https://sourceforge.net/software/product/Alpaca/#review-652d1b9ead090fecb190edc3"
+  },
+  {
+   "id": "6286908c6c95a5d4b5a2cdea",
+   "date": "2022-05-19",
+   "rating": 1,
+   "title": "Scam",
+   "pros": "Was good until they locked up my money. The user interface is ok, API integrations are good. Support was responsive until, it seems, they started collapsing.",
+   "cons": "They are flat out refusing to withdraw funds. No apology, no explanation. \n\nI tried calling during business hours - no one picks up. \n\nThen I realized there are no reviews of this company anywhere. \n\nSeems they're likely having liquidity problems. \n\nNotice, there are no reviews of them anywhere. \n\nThis is Sketch Central, not a legitimate brokerage.",
+   "overall": "This is a scam. This is not a brokerage. It's a startup that's unable to meet its obligations. It seems I need to call a lawyer.",
+   "reviewer_role": "Principal",
+   "company_size": "20,000 or More",
+   "url": "https://sourceforge.net/software/product/Alpaca/#review-6286908c6c95a5d4b5a2cdea"
+  }
+ ]
+}
