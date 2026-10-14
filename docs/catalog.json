@@ -142,6 +142,23 @@
         "reviews": 2,
         "url": "https://sourceforge.net/software/product/Brave-Search/",
         "fetched_at": "2026-10-12T13:09Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "brave/brave-search-mcp-server",
+        "role": "mcp",
+        "open": 23,
+        "resolved": 27,
+        "not_planned": 3,
+        "resolved_pct": 54,
+        "median_days_to_fix": 15.6,
+        "fix_sample": 15,
+        "opened_90d": 5,
+        "closed_90d": 1,
+        "issue_health": 45,
+        "archived": false,
+        "url": "https://github.com/brave/brave-search-mcp-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -299,6 +316,23 @@
         "downloads_month": 5406331,
         "url": "https://pypi.org/project/exa-py/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "exa-labs/exa-js",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 8,
+        "not_planned": 0,
+        "resolved_pct": 53,
+        "median_days_to_fix": 40.4,
+        "fix_sample": 1,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 32,
+        "archived": false,
+        "url": "https://github.com/exa-labs/exa-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -596,6 +630,23 @@
         "reviews": 1,
         "url": "https://sourceforge.net/software/product/Kagi/",
         "fetched_at": "2026-10-14T06:13Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "kagisearch/kagimcp",
+        "role": "mcp",
+        "open": 5,
+        "resolved": 11,
+        "not_planned": 2,
+        "resolved_pct": 69,
+        "median_days_to_fix": 7.5,
+        "fix_sample": 6,
+        "opened_90d": 4,
+        "closed_90d": 1,
+        "issue_health": 59,
+        "archived": false,
+        "url": "https://github.com/kagisearch/kagimcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -1162,6 +1213,23 @@
         "downloads_month": 1043965,
         "url": "https://pypi.org/project/perplexityai/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "perplexityai/perplexity-py",
+        "role": "sdk",
+        "open": 6,
+        "resolved": 6,
+        "not_planned": 2,
+        "resolved_pct": 50,
+        "median_days_to_fix": 18.1,
+        "fix_sample": 6,
+        "opened_90d": 3,
+        "closed_90d": 0,
+        "issue_health": 37,
+        "archived": false,
+        "url": "https://github.com/perplexityai/perplexity-py/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -1419,6 +1487,23 @@
         "archived": false,
         "url": "https://github.com/ihor-sokoliuk/mcp-searxng",
         "fetched_at": "2026-10-12T13:09Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "ihor-sokoliuk/mcp-searxng",
+        "role": "mcp",
+        "open": 0,
+        "resolved": 64,
+        "not_planned": 4,
+        "resolved_pct": 100,
+        "median_days_to_fix": 11.1,
+        "fix_sample": 53,
+        "opened_90d": 12,
+        "closed_90d": 14,
+        "issue_health": 82,
+        "archived": false,
+        "url": "https://github.com/ihor-sokoliuk/mcp-searxng/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -1569,6 +1654,40 @@
         "downloads_month": 447227,
         "url": "https://pypi.org/project/serpapi/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "serpapi/serpapi-javascript",
+        "role": "sdk",
+        "open": 9,
+        "resolved": 12,
+        "not_planned": 7,
+        "resolved_pct": 57,
+        "median_days_to_fix": 251.0,
+        "fix_sample": 1,
+        "opened_90d": 3,
+        "closed_90d": 1,
+        "issue_health": 32,
+        "archived": false,
+        "url": "https://github.com/serpapi/serpapi-javascript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "serpapi/serpapi-python",
+        "role": "sdk",
+        "open": 2,
+        "resolved": 11,
+        "not_planned": 4,
+        "resolved_pct": 85,
+        "median_days_to_fix": 0.1,
+        "fix_sample": 4,
+        "opened_90d": 0,
+        "closed_90d": 1,
+        "issue_health": 94,
+        "archived": false,
+        "url": "https://github.com/serpapi/serpapi-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -1822,6 +1941,40 @@
         "downloads_month": 9588826,
         "url": "https://pypi.org/project/tavily-python/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "tavily-ai/tavily-js",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 7,
+        "not_planned": 1,
+        "resolved_pct": 50,
+        "median_days_to_fix": 57.8,
+        "fix_sample": 4,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 48,
+        "archived": false,
+        "url": "https://github.com/tavily-ai/tavily-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "tavily-ai/tavily-python",
+        "role": "sdk",
+        "open": 13,
+        "resolved": 58,
+        "not_planned": 2,
+        "resolved_pct": 82,
+        "median_days_to_fix": 161.7,
+        "fix_sample": 20,
+        "opened_90d": 4,
+        "closed_90d": 0,
+        "issue_health": 36,
+        "archived": false,
+        "url": "https://github.com/tavily-ai/tavily-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -2299,6 +2452,40 @@
         "downloads_month": 2274981,
         "url": "https://pypi.org/project/apify-client/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "apify/apify-client-js",
+        "role": "sdk",
+        "open": 10,
+        "resolved": 184,
+        "not_planned": 6,
+        "resolved_pct": 95,
+        "median_days_to_fix": 14.4,
+        "fix_sample": 69,
+        "opened_90d": 42,
+        "closed_90d": 58,
+        "issue_health": 78,
+        "archived": false,
+        "url": "https://github.com/apify/apify-client-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "apify/apify-client-python",
+        "role": "sdk",
+        "open": 6,
+        "resolved": 131,
+        "not_planned": 4,
+        "resolved_pct": 96,
+        "median_days_to_fix": 12.9,
+        "fix_sample": 52,
+        "opened_90d": 21,
+        "closed_90d": 16,
+        "issue_health": 74,
+        "archived": false,
+        "url": "https://github.com/apify/apify-client-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -2459,6 +2646,57 @@
         "downloads_month": 122921,
         "url": "https://pypi.org/project/brightdata-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "brightdata/brightdata-mcp",
+        "role": "mcp",
+        "open": 13,
+        "resolved": 42,
+        "not_planned": 0,
+        "resolved_pct": 76,
+        "median_days_to_fix": 19.7,
+        "fix_sample": 20,
+        "opened_90d": 5,
+        "closed_90d": 0,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/brightdata/brightdata-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "brightdata/sdk-js",
+        "role": "sdk",
+        "open": 11,
+        "resolved": 1,
+        "not_planned": 0,
+        "resolved_pct": 8,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 4,
+        "closed_90d": 0,
+        "issue_health": 3,
+        "archived": false,
+        "url": "https://github.com/brightdata/sdk-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "brightdata/sdk-python",
+        "role": "sdk",
+        "open": 12,
+        "resolved": 8,
+        "not_planned": 0,
+        "resolved_pct": 40,
+        "median_days_to_fix": 156.6,
+        "fix_sample": 4,
+        "opened_90d": 10,
+        "closed_90d": 0,
+        "issue_health": 19,
+        "archived": false,
+        "url": "https://github.com/brightdata/sdk-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -2891,6 +3129,57 @@
         "downloads_month": 1271610,
         "url": "https://pypi.org/project/stagehand/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "browserbase/sdk-node",
+        "role": "sdk",
+        "open": 15,
+        "resolved": 4,
+        "not_planned": 1,
+        "resolved_pct": 21,
+        "median_days_to_fix": 0.0,
+        "fix_sample": 1,
+        "opened_90d": 8,
+        "closed_90d": 1,
+        "issue_health": 51,
+        "archived": false,
+        "url": "https://github.com/browserbase/sdk-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "browserbase/stagehand",
+        "role": "sdk",
+        "open": 104,
+        "resolved": 283,
+        "not_planned": 15,
+        "resolved_pct": 73,
+        "median_days_to_fix": 18.3,
+        "fix_sample": 100,
+        "opened_90d": 35,
+        "closed_90d": 22,
+        "issue_health": 59,
+        "archived": false,
+        "url": "https://github.com/browserbase/stagehand/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "browserbase/sdk-python",
+        "role": "sdk",
+        "open": 16,
+        "resolved": 3,
+        "not_planned": 0,
+        "resolved_pct": 16,
+        "median_days_to_fix": 0.0,
+        "fix_sample": 1,
+        "opened_90d": 12,
+        "closed_90d": 0,
+        "issue_health": 46,
+        "archived": false,
+        "url": "https://github.com/browserbase/sdk-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -3175,6 +3464,23 @@
         "downloads_month": 5339910,
         "url": "https://pypi.org/project/firecrawl-py/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "firecrawl/firecrawl",
+        "role": "sdk",
+        "open": 93,
+        "resolved": 659,
+        "not_planned": 249,
+        "resolved_pct": 88,
+        "median_days_to_fix": 9.5,
+        "fix_sample": 100,
+        "opened_90d": 89,
+        "closed_90d": 40,
+        "issue_health": 68,
+        "archived": false,
+        "url": "https://github.com/firecrawl/firecrawl/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -3600,6 +3906,23 @@
         "downloads_month": 31345222,
         "url": "https://www.npmjs.com/package/@playwright/mcp",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "microsoft/playwright-mcp",
+        "role": "mcp",
+        "open": 0,
+        "resolved": 835,
+        "not_planned": 73,
+        "resolved_pct": 100,
+        "median_days_to_fix": 2.6,
+        "fix_sample": 100,
+        "opened_90d": 41,
+        "closed_90d": 42,
+        "issue_health": 94,
+        "archived": false,
+        "url": "https://github.com/microsoft/playwright-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -3745,6 +4068,23 @@
         "downloads_month": 177807,
         "url": "https://pypi.org/project/scrapegraph-py/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "ScrapeGraphAI/scrapegraph-py",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 9,
+        "not_planned": 0,
+        "resolved_pct": 90,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 56,
+        "archived": false,
+        "url": "https://github.com/ScrapeGraphAI/scrapegraph-py/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -4026,6 +4366,23 @@
         "downloads_month": 231252,
         "url": "https://pypi.org/project/scrapfly-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "scrapfly/python-scrapfly",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 21,
+        "not_planned": 0,
+        "resolved_pct": 100,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 80,
+        "archived": false,
+        "url": "https://github.com/scrapfly/python-scrapfly/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -4344,6 +4701,23 @@
         "downloads_month": 438520,
         "url": "https://pypi.org/project/spider-client/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "spider-rs/spider-clients",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 11,
+        "not_planned": 0,
+        "resolved_pct": 100,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 80,
+        "archived": false,
+        "url": "https://github.com/spider-rs/spider-clients/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -4508,6 +4882,23 @@
         "downloads_month": 219857,
         "url": "https://pypi.org/project/steel-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "steel-dev/steel-mcp-server",
+        "role": "mcp",
+        "open": 7,
+        "resolved": 5,
+        "not_planned": 0,
+        "resolved_pct": 42,
+        "median_days_to_fix": 471.1,
+        "fix_sample": 5,
+        "opened_90d": 7,
+        "closed_90d": 5,
+        "issue_health": 32,
+        "archived": false,
+        "url": "https://github.com/steel-dev/steel-mcp-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -4617,6 +5008,23 @@
         "downloads_month": 154194,
         "url": "https://pypi.org/project/zyte-api/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "zytedata/python-zyte-api",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 24,
+        "not_planned": 0,
+        "resolved_pct": 96,
+        "median_days_to_fix": 1023.0,
+        "fix_sample": 9,
+        "opened_90d": 2,
+        "closed_90d": 8,
+        "issue_health": 59,
+        "archived": false,
+        "url": "https://github.com/zytedata/python-zyte-api/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -4753,6 +5161,23 @@
         "uses": 5142,
         "url": "https://smithery.ai/servers/arxiv",
         "fetched_at": "2026-10-12T13:09Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "blazickjp/arxiv-mcp-server",
+        "role": "mcp",
+        "open": 3,
+        "resolved": 110,
+        "not_planned": 11,
+        "resolved_pct": 97,
+        "median_days_to_fix": 0.6,
+        "fix_sample": 100,
+        "opened_90d": 72,
+        "closed_90d": 75,
+        "issue_health": 97,
+        "archived": false,
+        "url": "https://github.com/blazickjp/arxiv-mcp-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -4885,6 +5310,23 @@
         "archived": false,
         "url": "https://github.com/cyanheads/congressgov-mcp-server",
         "fetched_at": "2026-10-12T13:09Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cyanheads/congressgov-mcp-server",
+        "role": "mcp",
+        "open": 2,
+        "resolved": 71,
+        "not_planned": 2,
+        "resolved_pct": 97,
+        "median_days_to_fix": 2.8,
+        "fix_sample": 71,
+        "opened_90d": 32,
+        "closed_90d": 33,
+        "issue_health": 92,
+        "archived": false,
+        "url": "https://github.com/cyanheads/congressgov-mcp-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -5029,6 +5471,23 @@
         "downloads_month": 44626,
         "url": "https://www.npmjs.com/package/@upstash/context7-sdk",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "upstash/context7",
+        "role": "sdk",
+        "open": 18,
+        "resolved": 2295,
+        "not_planned": 86,
+        "resolved_pct": 99,
+        "median_days_to_fix": 1.6,
+        "fix_sample": 100,
+        "opened_90d": 228,
+        "closed_90d": 227,
+        "issue_health": 95,
+        "archived": false,
+        "url": "https://github.com/upstash/context7/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -5376,6 +5835,23 @@
         "archived": false,
         "url": "https://github.com/cyanheads/gdelt-mcp-server",
         "fetched_at": "2026-10-12T13:09Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cyanheads/gdelt-mcp-server",
+        "role": "mcp",
+        "open": 7,
+        "resolved": 44,
+        "not_planned": 1,
+        "resolved_pct": 86,
+        "median_days_to_fix": 8.8,
+        "fix_sample": 44,
+        "opened_90d": 31,
+        "closed_90d": 32,
+        "issue_health": 79,
+        "archived": false,
+        "url": "https://github.com/cyanheads/gdelt-mcp-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -5512,6 +5988,23 @@
         "downloads_month": 163295,
         "url": "https://pypi.org/project/gitingest/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "coderamp-labs/gitingest",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 146,
+        "not_planned": 88,
+        "resolved_pct": 95,
+        "median_days_to_fix": 0.0,
+        "fix_sample": 2,
+        "opened_90d": 7,
+        "closed_90d": 9,
+        "issue_health": 98,
+        "archived": false,
+        "url": "https://github.com/coderamp-labs/gitingest/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -6306,6 +6799,23 @@
         "questions": 199,
         "url": "https://stackoverflow.com/questions/tagged/pubmed",
         "fetched_at": "2026-10-14T06:13Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "openags/paper-search-mcp",
+        "role": "mcp",
+        "open": 10,
+        "resolved": 32,
+        "not_planned": 2,
+        "resolved_pct": 76,
+        "median_days_to_fix": 138.7,
+        "fix_sample": 30,
+        "opened_90d": 10,
+        "closed_90d": 18,
+        "issue_health": 54,
+        "archived": false,
+        "url": "https://github.com/openags/paper-search-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -6703,6 +7213,23 @@
         "questions": 647,
         "url": "https://stackoverflow.com/questions/tagged/mediawiki-api",
         "fetched_at": "2026-10-14T06:13Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Rudra-ravi/wikipedia-mcp",
+        "role": "mcp",
+        "open": 0,
+        "resolved": 30,
+        "not_planned": 1,
+        "resolved_pct": 100,
+        "median_days_to_fix": 26.3,
+        "fix_sample": 15,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 74,
+        "archived": false,
+        "url": "https://github.com/Rudra-ravi/wikipedia-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -7369,6 +7896,48 @@
           "google-gemini-api"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/js-genai",
+        "role": "sdk",
+        "open": 116,
+        "resolved": 178,
+        "not_planned": 91,
+        "resolved_pct": 61,
+        "median_days_to_fix": 8.1,
+        "fix_sample": 55,
+        "opened_90d": 24,
+        "closed_90d": 19,
+        "issue_health": 65,
+        "archived": false,
+        "url": "https://github.com/googleapis/js-genai/issues",
+        "shared_with": [
+          "google-veo-gemini-api-vertex-ai",
+          "google-gemini-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/python-genai",
+        "role": "sdk",
+        "open": 227,
+        "resolved": 482,
+        "not_planned": 256,
+        "resolved_pct": 68,
+        "median_days_to_fix": 10.8,
+        "fix_sample": 100,
+        "opened_90d": 64,
+        "closed_90d": 26,
+        "issue_health": 58,
+        "archived": false,
+        "url": "https://github.com/googleapis/python-genai/issues",
+        "shared_with": [
+          "google-veo-gemini-api-vertex-ai",
+          "google-gemini-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -7632,6 +8201,23 @@
         "downloads_month": 194,
         "url": "https://pypi.org/project/leonardo-ai-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Leonardo-Interactive/leonardo-ts-sdk",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 23,
+        "not_planned": 0,
+        "resolved_pct": 96,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 58,
+        "archived": false,
+        "url": "https://github.com/Leonardo-Interactive/leonardo-ts-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -7810,6 +8396,48 @@
           "openai-api"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "openai/openai-node",
+        "role": "sdk",
+        "open": 2,
+        "resolved": 530,
+        "not_planned": 190,
+        "resolved_pct": 100,
+        "median_days_to_fix": 324.3,
+        "fix_sample": 100,
+        "opened_90d": 22,
+        "closed_90d": 92,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/openai/openai-node/issues",
+        "shared_with": [
+          "openai-audio-api-tts-transcription",
+          "openai-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "openai/openai-python",
+        "role": "sdk",
+        "open": 61,
+        "resolved": 831,
+        "not_planned": 436,
+        "resolved_pct": 93,
+        "median_days_to_fix": 345.4,
+        "fix_sample": 100,
+        "opened_90d": 48,
+        "closed_90d": 197,
+        "issue_health": 59,
+        "archived": false,
+        "url": "https://github.com/openai/openai-python/issues",
+        "shared_with": [
+          "openai-audio-api-tts-transcription",
+          "openai-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -8179,6 +8807,43 @@
           "stable-audio-api-stability-ai"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "tadasant/mcp-server-stability-ai",
+        "role": "mcp",
+        "open": 8,
+        "resolved": 4,
+        "not_planned": 0,
+        "resolved_pct": 33,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 33,
+        "archived": false,
+        "url": "https://github.com/tadasant/mcp-server-stability-ai/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Stability-AI/stability-sdk",
+        "role": "sdk",
+        "open": 37,
+        "resolved": 77,
+        "not_planned": 2,
+        "resolved_pct": 68,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/Stability-AI/stability-sdk/issues",
+        "shared_with": [
+          "stable-audio-api-stability-ai"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -8670,6 +9335,68 @@
           "google-gemini-api"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "GoogleCloudPlatform/genmedia-creative-studio",
+        "role": "mcp",
+        "open": 20,
+        "resolved": 147,
+        "not_planned": 9,
+        "resolved_pct": 88,
+        "median_days_to_fix": 0.4,
+        "fix_sample": 90,
+        "opened_90d": 50,
+        "closed_90d": 48,
+        "issue_health": 93,
+        "archived": false,
+        "url": "https://github.com/GoogleCloudPlatform/genmedia-creative-studio/issues",
+        "shared_with": [
+          "google-cloud-text-to-speech-speech-to-text"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/js-genai",
+        "role": "sdk",
+        "open": 116,
+        "resolved": 178,
+        "not_planned": 91,
+        "resolved_pct": 61,
+        "median_days_to_fix": 8.1,
+        "fix_sample": 55,
+        "opened_90d": 24,
+        "closed_90d": 19,
+        "issue_health": 65,
+        "archived": false,
+        "url": "https://github.com/googleapis/js-genai/issues",
+        "shared_with": [
+          "google-gemini-imagen-image-api",
+          "google-gemini-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/python-genai",
+        "role": "sdk",
+        "open": 227,
+        "resolved": 482,
+        "not_planned": 256,
+        "resolved_pct": 68,
+        "median_days_to_fix": 10.8,
+        "fix_sample": 100,
+        "opened_90d": 64,
+        "closed_90d": 26,
+        "issue_health": 58,
+        "archived": false,
+        "url": "https://github.com/googleapis/python-genai/issues",
+        "shared_with": [
+          "google-gemini-imagen-image-api",
+          "google-gemini-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -9316,6 +10043,23 @@
         "archived": false,
         "url": "https://github.com/MiniMax-AI/MiniMax-MCP",
         "fetched_at": "2026-10-12T13:09Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "MiniMax-AI/MiniMax-MCP",
+        "role": "mcp",
+        "open": 21,
+        "resolved": 27,
+        "not_planned": 8,
+        "resolved_pct": 56,
+        "median_days_to_fix": 22.2,
+        "fix_sample": 17,
+        "opened_90d": 5,
+        "closed_90d": 2,
+        "issue_health": 46,
+        "archived": false,
+        "url": "https://github.com/MiniMax-AI/MiniMax-MCP/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -9563,6 +10307,40 @@
         "downloads_month": 218204,
         "url": "https://pypi.org/project/runwayml/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "runwayml/sdk-node",
+        "role": "sdk",
+        "open": 18,
+        "resolved": 13,
+        "not_planned": 3,
+        "resolved_pct": 42,
+        "median_days_to_fix": 3.9,
+        "fix_sample": 1,
+        "opened_90d": 18,
+        "closed_90d": 0,
+        "issue_health": 48,
+        "archived": false,
+        "url": "https://github.com/runwayml/sdk-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "runwayml/sdk-python",
+        "role": "sdk",
+        "open": 22,
+        "resolved": 12,
+        "not_planned": 5,
+        "resolved_pct": 35,
+        "median_days_to_fix": 23.4,
+        "fix_sample": 3,
+        "opened_90d": 22,
+        "closed_90d": 1,
+        "issue_health": 30,
+        "archived": false,
+        "url": "https://github.com/runwayml/sdk-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -10123,6 +10901,49 @@
         "downloads_month": 2260474,
         "url": "https://www.npmjs.com/package/@aws-sdk/client-transcribe",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "awslabs/mcp",
+        "role": "mcp",
+        "open": 142,
+        "resolved": 286,
+        "not_planned": 279,
+        "resolved_pct": 67,
+        "median_days_to_fix": 28.1,
+        "fix_sample": 100,
+        "opened_90d": 63,
+        "closed_90d": 116,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/awslabs/mcp/issues",
+        "shared_with": [
+          "amazon-translate"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "aws/aws-sdk-js-v3",
+        "role": "sdk",
+        "open": 101,
+        "resolved": 2812,
+        "not_planned": 195,
+        "resolved_pct": 97,
+        "median_days_to_fix": 15.1,
+        "fix_sample": 100,
+        "opened_90d": 29,
+        "closed_90d": 34,
+        "issue_health": 78,
+        "archived": false,
+        "url": "https://github.com/aws/aws-sdk-js-v3/issues",
+        "shared_with": [
+          "aws-textract",
+          "amazon-translate",
+          "aws-apis",
+          "aws-end-user-messaging-sms"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -10234,6 +11055,40 @@
         "downloads_month": 2797588,
         "url": "https://pypi.org/project/assemblyai/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "AssemblyAI/assemblyai-node-sdk",
+        "role": "sdk",
+        "open": 18,
+        "resolved": 21,
+        "not_planned": 0,
+        "resolved_pct": 54,
+        "median_days_to_fix": 9.0,
+        "fix_sample": 6,
+        "opened_90d": 4,
+        "closed_90d": 5,
+        "issue_health": 66,
+        "archived": false,
+        "url": "https://github.com/AssemblyAI/assemblyai-node-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "AssemblyAI/assemblyai-python-sdk",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 36,
+        "not_planned": 2,
+        "resolved_pct": 97,
+        "median_days_to_fix": 553.7,
+        "fix_sample": 12,
+        "opened_90d": 0,
+        "closed_90d": 11,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/AssemblyAI/assemblyai-python-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -10390,6 +11245,43 @@
         "downloads_month": 2520663,
         "url": "https://pypi.org/project/azure-cognitiveservices-speech/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "microsoft/mcp",
+        "role": "mcp",
+        "open": 217,
+        "resolved": 888,
+        "not_planned": 51,
+        "resolved_pct": 80,
+        "median_days_to_fix": 55.4,
+        "fix_sample": 100,
+        "opened_90d": 195,
+        "closed_90d": 224,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/microsoft/mcp/issues",
+        "shared_with": [
+          "azure-apis"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "microsoft/cognitive-services-speech-sdk-js",
+        "role": "sdk",
+        "open": 99,
+        "resolved": 338,
+        "not_planned": 1,
+        "resolved_pct": 77,
+        "median_days_to_fix": 56.1,
+        "fix_sample": 4,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 39,
+        "archived": false,
+        "url": "https://github.com/microsoft/cognitive-services-speech-sdk-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -10528,6 +11420,40 @@
         "downloads_month": 707919,
         "url": "https://pypi.org/project/cartesia/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cartesia-ai/cartesia-js",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 29,
+        "not_planned": 1,
+        "resolved_pct": 97,
+        "median_days_to_fix": 359.3,
+        "fix_sample": 15,
+        "opened_90d": 0,
+        "closed_90d": 2,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/cartesia-ai/cartesia-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cartesia-ai/cartesia-python",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 13,
+        "not_planned": 0,
+        "resolved_pct": 93,
+        "median_days_to_fix": 92.5,
+        "fix_sample": 11,
+        "opened_90d": 1,
+        "closed_90d": 2,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/cartesia-ai/cartesia-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -10699,6 +11625,46 @@
           "deepgram-voice-agent-api"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "deepgram/deepgram-js-sdk",
+        "role": "sdk",
+        "open": 14,
+        "resolved": 184,
+        "not_planned": 16,
+        "resolved_pct": 93,
+        "median_days_to_fix": 157.7,
+        "fix_sample": 32,
+        "opened_90d": 16,
+        "closed_90d": 27,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/deepgram/deepgram-js-sdk/issues",
+        "shared_with": [
+          "deepgram-voice-agent-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "deepgram/deepgram-python-sdk",
+        "role": "sdk",
+        "open": 14,
+        "resolved": 278,
+        "not_planned": 3,
+        "resolved_pct": 95,
+        "median_days_to_fix": 99.1,
+        "fix_sample": 68,
+        "opened_90d": 23,
+        "closed_90d": 25,
+        "issue_health": 63,
+        "archived": false,
+        "url": "https://github.com/deepgram/deepgram-python-sdk/issues",
+        "shared_with": [
+          "deepgram-voice-agent-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -10841,6 +11807,48 @@
           "elevenlabs-agents-platform"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "elevenlabs/elevenlabs-js",
+        "role": "sdk",
+        "open": 13,
+        "resolved": 121,
+        "not_planned": 13,
+        "resolved_pct": 90,
+        "median_days_to_fix": 2.2,
+        "fix_sample": 37,
+        "opened_90d": 8,
+        "closed_90d": 5,
+        "issue_health": 83,
+        "archived": false,
+        "url": "https://github.com/elevenlabs/elevenlabs-js/issues",
+        "shared_with": [
+          "elevenlabs-music-api",
+          "elevenlabs-agents-platform"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "elevenlabs/elevenlabs-python",
+        "role": "sdk",
+        "open": 20,
+        "resolved": 349,
+        "not_planned": 21,
+        "resolved_pct": 95,
+        "median_days_to_fix": 9.1,
+        "fix_sample": 45,
+        "opened_90d": 16,
+        "closed_90d": 9,
+        "issue_health": 73,
+        "archived": false,
+        "url": "https://github.com/elevenlabs/elevenlabs-python/issues",
+        "shared_with": [
+          "elevenlabs-music-api",
+          "elevenlabs-agents-platform"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -11007,6 +12015,70 @@
         "downloads_month": 15131032,
         "url": "https://pypi.org/project/google-cloud-speech/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "GoogleCloudPlatform/genmedia-creative-studio",
+        "role": "mcp",
+        "open": 20,
+        "resolved": 147,
+        "not_planned": 9,
+        "resolved_pct": 88,
+        "median_days_to_fix": 0.4,
+        "fix_sample": 90,
+        "opened_90d": 50,
+        "closed_90d": 48,
+        "issue_health": 93,
+        "archived": false,
+        "url": "https://github.com/GoogleCloudPlatform/genmedia-creative-studio/issues",
+        "shared_with": [
+          "google-veo-gemini-api-vertex-ai"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/google-cloud-node",
+        "role": "sdk",
+        "open": 489,
+        "resolved": 2206,
+        "not_planned": 96,
+        "resolved_pct": 82,
+        "median_days_to_fix": 40.8,
+        "fix_sample": 100,
+        "opened_90d": 64,
+        "closed_90d": 62,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/googleapis/google-cloud-node/issues",
+        "shared_with": [
+          "google-document-ai",
+          "google-cloud-translation",
+          "google-bigquery"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/google-cloud-python",
+        "role": "sdk",
+        "open": 450,
+        "resolved": 4365,
+        "not_planned": 637,
+        "resolved_pct": 91,
+        "median_days_to_fix": 30.2,
+        "fix_sample": 100,
+        "opened_90d": 162,
+        "closed_90d": 170,
+        "issue_health": 69,
+        "archived": false,
+        "url": "https://github.com/googleapis/google-cloud-python/issues",
+        "shared_with": [
+          "google-document-ai",
+          "google-cloud-translation",
+          "google-bigquery"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -11156,6 +12228,23 @@
         "downloads_month": 73136,
         "url": "https://pypi.org/project/hume/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "HumeAI/hume-python-sdk",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 24,
+        "not_planned": 3,
+        "resolved_pct": 96,
+        "median_days_to_fix": 7.7,
+        "fix_sample": 5,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 64,
+        "archived": false,
+        "url": "https://github.com/HumeAI/hume-python-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -11411,6 +12500,65 @@
           "openai-api"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "openai/openai-openapi",
+        "role": "spec",
+        "open": 51,
+        "resolved": 164,
+        "not_planned": 23,
+        "resolved_pct": 76,
+        "median_days_to_fix": 349.1,
+        "fix_sample": 98,
+        "opened_90d": 23,
+        "closed_90d": 65,
+        "issue_health": 52,
+        "archived": false,
+        "url": "https://github.com/openai/openai-openapi/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "openai/openai-node",
+        "role": "sdk",
+        "open": 2,
+        "resolved": 530,
+        "not_planned": 190,
+        "resolved_pct": 100,
+        "median_days_to_fix": 324.3,
+        "fix_sample": 100,
+        "opened_90d": 22,
+        "closed_90d": 92,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/openai/openai-node/issues",
+        "shared_with": [
+          "openai-images-api-gpt-image",
+          "openai-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "openai/openai-python",
+        "role": "sdk",
+        "open": 61,
+        "resolved": 831,
+        "not_planned": 436,
+        "resolved_pct": 93,
+        "median_days_to_fix": 345.4,
+        "fix_sample": 100,
+        "opened_90d": 48,
+        "closed_90d": 197,
+        "issue_health": 59,
+        "archived": false,
+        "url": "https://github.com/openai/openai-python/issues",
+        "shared_with": [
+          "openai-images-api-gpt-image",
+          "openai-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -11625,6 +12773,40 @@
         "downloads_month": 563673,
         "url": "https://pypi.org/project/rev_ai/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "revdotcom/revai-node-sdk",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 12,
+        "not_planned": 3,
+        "resolved_pct": 100,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 80,
+        "archived": false,
+        "url": "https://github.com/revdotcom/revai-node-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "revdotcom/revai-python-sdk",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 17,
+        "not_planned": 0,
+        "resolved_pct": 71,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 48,
+        "archived": false,
+        "url": "https://github.com/revdotcom/revai-python-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -11778,6 +12960,40 @@
         "downloads_month": 61951,
         "url": "https://pypi.org/project/speechmatics-batch/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "speechmatics/speechmatics-js-sdk",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 37,
+        "not_planned": 0,
+        "resolved_pct": 84,
+        "median_days_to_fix": 34.8,
+        "fix_sample": 8,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 65,
+        "archived": false,
+        "url": "https://github.com/speechmatics/speechmatics-js-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "speechmatics/speechmatics-python-sdk",
+        "role": "sdk",
+        "open": 8,
+        "resolved": 9,
+        "not_planned": 1,
+        "resolved_pct": 53,
+        "median_days_to_fix": 7.6,
+        "fix_sample": 5,
+        "opened_90d": 3,
+        "closed_90d": 0,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/speechmatics/speechmatics-python-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -12016,6 +13232,48 @@
           "elevenlabs-agents-platform"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "elevenlabs/elevenlabs-js",
+        "role": "sdk",
+        "open": 13,
+        "resolved": 121,
+        "not_planned": 13,
+        "resolved_pct": 90,
+        "median_days_to_fix": 2.2,
+        "fix_sample": 37,
+        "opened_90d": 8,
+        "closed_90d": 5,
+        "issue_health": 83,
+        "archived": false,
+        "url": "https://github.com/elevenlabs/elevenlabs-js/issues",
+        "shared_with": [
+          "elevenlabs-api",
+          "elevenlabs-agents-platform"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "elevenlabs/elevenlabs-python",
+        "role": "sdk",
+        "open": 20,
+        "resolved": 349,
+        "not_planned": 21,
+        "resolved_pct": 95,
+        "median_days_to_fix": 9.1,
+        "fix_sample": 45,
+        "opened_90d": 16,
+        "closed_90d": 9,
+        "issue_health": 73,
+        "archived": false,
+        "url": "https://github.com/elevenlabs/elevenlabs-python/issues",
+        "shared_with": [
+          "elevenlabs-api",
+          "elevenlabs-agents-platform"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -12377,6 +13635,26 @@
           "stability-ai-platform-api"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Stability-AI/stability-sdk",
+        "role": "sdk",
+        "open": 37,
+        "resolved": 77,
+        "not_planned": 2,
+        "resolved_pct": 68,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/Stability-AI/stability-sdk/issues",
+        "shared_with": [
+          "stability-ai-platform-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -13285,6 +14563,23 @@
         "downloads_month": 133343,
         "url": "https://www.npmjs.com/package/@itwin/itwins-client",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "iTwin/itwins-client",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 25,
+        "not_planned": 0,
+        "resolved_pct": 100,
+        "median_days_to_fix": 8.4,
+        "fix_sample": 12,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 85,
+        "archived": false,
+        "url": "https://github.com/iTwin/itwins-client/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -13648,6 +14943,23 @@
         "downloads_month": 6666,
         "url": "https://pypi.org/project/compute-rhino3d/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mcneel/compute.rhino3d",
+        "role": "sdk",
+        "open": 80,
+        "resolved": 109,
+        "not_planned": 0,
+        "resolved_pct": 58,
+        "median_days_to_fix": 1050.3,
+        "fix_sample": 4,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 44,
+        "archived": false,
+        "url": "https://github.com/mcneel/compute.rhino3d/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -13758,6 +15070,40 @@
         "downloads_month": 6537,
         "url": "https://pypi.org/project/specklepy/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "specklesystems/speckle-server",
+        "role": "sdk",
+        "open": 52,
+        "resolved": 566,
+        "not_planned": 41,
+        "resolved_pct": 92,
+        "median_days_to_fix": 902.2,
+        "fix_sample": 16,
+        "opened_90d": 5,
+        "closed_90d": 0,
+        "issue_health": 37,
+        "archived": false,
+        "url": "https://github.com/specklesystems/speckle-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "specklesystems/specklepy",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 85,
+        "not_planned": 22,
+        "resolved_pct": 100,
+        "median_days_to_fix": 26.0,
+        "fix_sample": 1,
+        "opened_90d": 1,
+        "closed_90d": 1,
+        "issue_health": 74,
+        "archived": false,
+        "url": "https://github.com/specklesystems/specklepy/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -13985,6 +15331,40 @@
         "downloads_month": 32382,
         "url": "https://pypi.org/project/kittycad/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "KittyCAD/mcp",
+        "role": "mcp",
+        "open": 6,
+        "resolved": 28,
+        "not_planned": 3,
+        "resolved_pct": 82,
+        "median_days_to_fix": 0.9,
+        "fix_sample": 18,
+        "opened_90d": 12,
+        "closed_90d": 9,
+        "issue_health": 86,
+        "archived": false,
+        "url": "https://github.com/KittyCAD/mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "KittyCAD/kittycad.ts",
+        "role": "sdk",
+        "open": 5,
+        "resolved": 17,
+        "not_planned": 2,
+        "resolved_pct": 77,
+        "median_days_to_fix": 54.3,
+        "fix_sample": 5,
+        "opened_90d": 7,
+        "closed_90d": 4,
+        "issue_health": 51,
+        "archived": false,
+        "url": "https://github.com/KittyCAD/kittycad.ts/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -14707,6 +16087,23 @@
         "downloads_month": 691,
         "url": "https://pypi.org/project/miro-api/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "miroapp/api-clients",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 8,
+        "not_planned": 1,
+        "resolved_pct": 53,
+        "median_days_to_fix": 492.4,
+        "fix_sample": 2,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 42,
+        "archived": false,
+        "url": "https://github.com/miroapp/api-clients/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -15247,6 +16644,23 @@
         "downloads_month": 1915111,
         "url": "https://www.npmjs.com/package/@figma/rest-api-spec",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "figma/rest-api-spec",
+        "role": "spec",
+        "open": 16,
+        "resolved": 18,
+        "not_planned": 2,
+        "resolved_pct": 53,
+        "median_days_to_fix": 4.1,
+        "fix_sample": 5,
+        "opened_90d": 5,
+        "closed_90d": 1,
+        "issue_health": 56,
+        "archived": false,
+        "url": "https://github.com/figma/rest-api-spec/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -15588,6 +17002,23 @@
         "downloads_month": 204522,
         "url": "https://www.npmjs.com/package/v0-sdk",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "vercel/v0-sdk",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 41,
+        "not_planned": 2,
+        "resolved_pct": 100,
+        "median_days_to_fix": 172.2,
+        "fix_sample": 27,
+        "opened_90d": 2,
+        "closed_90d": 2,
+        "issue_health": 63,
+        "archived": false,
+        "url": "https://github.com/vercel/v0-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -15745,6 +17176,40 @@
         "downloads_month": 635856,
         "url": "https://pypi.org/project/webflow/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "webflow/js-webflow-api",
+        "role": "sdk",
+        "open": 19,
+        "resolved": 75,
+        "not_planned": 0,
+        "resolved_pct": 80,
+        "median_days_to_fix": 82.9,
+        "fix_sample": 5,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 58,
+        "archived": false,
+        "url": "https://github.com/webflow/js-webflow-api/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "webflow/webflow-python",
+        "role": "sdk",
+        "open": 9,
+        "resolved": 1,
+        "not_planned": 0,
+        "resolved_pct": 10,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 24,
+        "archived": false,
+        "url": "https://github.com/webflow/webflow-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -16021,6 +17486,29 @@
         "downloads_month": 7049606,
         "url": "https://www.npmjs.com/package/@aws-sdk/client-textract",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "aws/aws-sdk-js-v3",
+        "role": "sdk",
+        "open": 101,
+        "resolved": 2812,
+        "not_planned": 195,
+        "resolved_pct": 97,
+        "median_days_to_fix": 15.1,
+        "fix_sample": 100,
+        "opened_90d": 29,
+        "closed_90d": 34,
+        "issue_health": 78,
+        "archived": false,
+        "url": "https://github.com/aws/aws-sdk-js-v3/issues",
+        "shared_with": [
+          "amazon-polly-amazon-transcribe-aws",
+          "amazon-translate",
+          "aws-apis",
+          "aws-end-user-messaging-sms"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -16157,6 +17645,46 @@
         "downloads_month": 11022329,
         "url": "https://pypi.org/project/azure-ai-documentintelligence/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Azure/azure-sdk-for-js",
+        "role": "sdk",
+        "open": 478,
+        "resolved": 8405,
+        "not_planned": 1639,
+        "resolved_pct": 95,
+        "median_days_to_fix": 78.2,
+        "fix_sample": 100,
+        "opened_90d": 222,
+        "closed_90d": 294,
+        "issue_health": 64,
+        "archived": false,
+        "url": "https://github.com/Azure/azure-sdk-for-js/issues",
+        "shared_with": [
+          "azure-ai-translator"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Azure/azure-sdk-for-python",
+        "role": "sdk",
+        "open": 764,
+        "resolved": 10530,
+        "not_planned": 1261,
+        "resolved_pct": 93,
+        "median_days_to_fix": 9.5,
+        "fix_sample": 100,
+        "opened_90d": 211,
+        "closed_90d": 256,
+        "issue_health": 81,
+        "archived": false,
+        "url": "https://github.com/Azure/azure-sdk-for-python/issues",
+        "shared_with": [
+          "azure-ai-translator"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -16304,6 +17832,40 @@
         "downloads_month": 478385,
         "url": "https://pypi.org/project/cloudconvert/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cloudconvert/cloudconvert-node",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 85,
+        "not_planned": 0,
+        "resolved_pct": 92,
+        "median_days_to_fix": 0.3,
+        "fix_sample": 2,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 96,
+        "archived": false,
+        "url": "https://github.com/cloudconvert/cloudconvert-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cloudconvert/cloudconvert-python",
+        "role": "sdk",
+        "open": 2,
+        "resolved": 21,
+        "not_planned": 0,
+        "resolved_pct": 91,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 57,
+        "archived": false,
+        "url": "https://github.com/cloudconvert/cloudconvert-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -16478,6 +18040,40 @@
         "downloads_month": 1634525,
         "url": "https://pypi.org/project/docusign-esign/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "docusign/OpenAPI-Specifications",
+        "role": "spec",
+        "open": 15,
+        "resolved": 7,
+        "not_planned": 1,
+        "resolved_pct": 32,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 33,
+        "archived": false,
+        "url": "https://github.com/docusign/OpenAPI-Specifications/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "docusign/docusign-esign-node-client",
+        "role": "sdk",
+        "open": 31,
+        "resolved": 146,
+        "not_planned": 0,
+        "resolved_pct": 82,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 53,
+        "archived": false,
+        "url": "https://github.com/docusign/docusign-esign-node-client/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -16761,6 +18357,50 @@
         "downloads_month": 3153802,
         "url": "https://pypi.org/project/google-cloud-documentai/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/google-cloud-node",
+        "role": "sdk",
+        "open": 489,
+        "resolved": 2206,
+        "not_planned": 96,
+        "resolved_pct": 82,
+        "median_days_to_fix": 40.8,
+        "fix_sample": 100,
+        "opened_90d": 64,
+        "closed_90d": 62,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/googleapis/google-cloud-node/issues",
+        "shared_with": [
+          "google-cloud-text-to-speech-speech-to-text",
+          "google-cloud-translation",
+          "google-bigquery"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/google-cloud-python",
+        "role": "sdk",
+        "open": 450,
+        "resolved": 4365,
+        "not_planned": 637,
+        "resolved_pct": 91,
+        "median_days_to_fix": 30.2,
+        "fix_sample": 100,
+        "opened_90d": 162,
+        "closed_90d": 170,
+        "issue_health": 69,
+        "archived": false,
+        "url": "https://github.com/googleapis/google-cloud-python/issues",
+        "shared_with": [
+          "google-cloud-text-to-speech-speech-to-text",
+          "google-cloud-translation",
+          "google-bigquery"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -17057,6 +18697,23 @@
         "downloads_month": 2344929,
         "url": "https://pypi.org/project/llama-cloud-services/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "run-llama/llama_cloud_services",
+        "role": "sdk",
+        "open": 349,
+        "resolved": 267,
+        "not_planned": 2,
+        "resolved_pct": 43,
+        "median_days_to_fix": 1.6,
+        "fix_sample": 13,
+        "opened_90d": 0,
+        "closed_90d": 3,
+        "issue_health": 73,
+        "archived": false,
+        "url": "https://github.com/run-llama/llama_cloud_services/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -17219,6 +18876,46 @@
           "mistral-ai-api"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mistralai/client-ts",
+        "role": "sdk",
+        "open": 14,
+        "resolved": 54,
+        "not_planned": 0,
+        "resolved_pct": 79,
+        "median_days_to_fix": 195.8,
+        "fix_sample": 39,
+        "opened_90d": 2,
+        "closed_90d": 1,
+        "issue_health": 44,
+        "archived": false,
+        "url": "https://github.com/mistralai/client-ts/issues",
+        "shared_with": [
+          "mistral-ai-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mistralai/client-python",
+        "role": "sdk",
+        "open": 34,
+        "resolved": 132,
+        "not_planned": 0,
+        "resolved_pct": 80,
+        "median_days_to_fix": 63.2,
+        "fix_sample": 52,
+        "opened_90d": 16,
+        "closed_90d": 2,
+        "issue_health": 42,
+        "archived": false,
+        "url": "https://github.com/mistralai/client-python/issues",
+        "shared_with": [
+          "mistral-ai-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -17837,6 +19534,40 @@
         "downloads_month": 3231764,
         "url": "https://pypi.org/project/unstructured-client/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Unstructured-IO/unstructured-js-client",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 16,
+        "not_planned": 0,
+        "resolved_pct": 70,
+        "median_days_to_fix": 64.2,
+        "fix_sample": 1,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 55,
+        "archived": false,
+        "url": "https://github.com/Unstructured-IO/unstructured-js-client/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Unstructured-IO/unstructured-python-client",
+        "role": "sdk",
+        "open": 14,
+        "resolved": 28,
+        "not_planned": 0,
+        "resolved_pct": 67,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/Unstructured-IO/unstructured-python-client/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -17988,6 +19719,49 @@
         "downloads_month": 2500646,
         "url": "https://www.npmjs.com/package/@aws-sdk/client-translate",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "awslabs/mcp",
+        "role": "mcp",
+        "open": 142,
+        "resolved": 286,
+        "not_planned": 279,
+        "resolved_pct": 67,
+        "median_days_to_fix": 28.1,
+        "fix_sample": 100,
+        "opened_90d": 63,
+        "closed_90d": 116,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/awslabs/mcp/issues",
+        "shared_with": [
+          "amazon-polly-amazon-transcribe-aws"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "aws/aws-sdk-js-v3",
+        "role": "sdk",
+        "open": 101,
+        "resolved": 2812,
+        "not_planned": 195,
+        "resolved_pct": 97,
+        "median_days_to_fix": 15.1,
+        "fix_sample": 100,
+        "opened_90d": 29,
+        "closed_90d": 34,
+        "issue_health": 78,
+        "archived": false,
+        "url": "https://github.com/aws/aws-sdk-js-v3/issues",
+        "shared_with": [
+          "amazon-polly-amazon-transcribe-aws",
+          "aws-textract",
+          "aws-apis",
+          "aws-end-user-messaging-sms"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/amazon-translate.json"
@@ -18088,6 +19862,46 @@
         "downloads_month": 166524,
         "url": "https://pypi.org/project/azure-ai-translation-text/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Azure/azure-sdk-for-js",
+        "role": "sdk",
+        "open": 478,
+        "resolved": 8405,
+        "not_planned": 1639,
+        "resolved_pct": 95,
+        "median_days_to_fix": 78.2,
+        "fix_sample": 100,
+        "opened_90d": 222,
+        "closed_90d": 294,
+        "issue_health": 64,
+        "archived": false,
+        "url": "https://github.com/Azure/azure-sdk-for-js/issues",
+        "shared_with": [
+          "azure-ai-document-intelligence"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Azure/azure-sdk-for-python",
+        "role": "sdk",
+        "open": 764,
+        "resolved": 10530,
+        "not_planned": 1261,
+        "resolved_pct": 93,
+        "median_days_to_fix": 9.5,
+        "fix_sample": 100,
+        "opened_90d": 211,
+        "closed_90d": 256,
+        "issue_health": 81,
+        "archived": false,
+        "url": "https://github.com/Azure/azure-sdk-for-python/issues",
+        "shared_with": [
+          "azure-ai-document-intelligence"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -18257,6 +20071,57 @@
         "downloads_month": 1229932,
         "url": "https://pypi.org/project/deepl/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "DeepL/deepl-mcp-server",
+        "role": "mcp",
+        "open": 3,
+        "resolved": 9,
+        "not_planned": 0,
+        "resolved_pct": 75,
+        "median_days_to_fix": 234.6,
+        "fix_sample": 9,
+        "opened_90d": 0,
+        "closed_90d": 5,
+        "issue_health": 52,
+        "archived": false,
+        "url": "https://github.com/DeepL/deepl-mcp-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "DeepL/deepl-node",
+        "role": "sdk",
+        "open": 23,
+        "resolved": 45,
+        "not_planned": 0,
+        "resolved_pct": 66,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 46,
+        "archived": false,
+        "url": "https://github.com/DeepL/deepl-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "DeepL/deepl-python",
+        "role": "sdk",
+        "open": 50,
+        "resolved": 88,
+        "not_planned": 0,
+        "resolved_pct": 64,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 46,
+        "archived": false,
+        "url": "https://github.com/DeepL/deepl-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -18373,6 +20238,50 @@
         "downloads_month": 9817700,
         "url": "https://pypi.org/project/google-cloud-translate/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/google-cloud-node",
+        "role": "sdk",
+        "open": 489,
+        "resolved": 2206,
+        "not_planned": 96,
+        "resolved_pct": 82,
+        "median_days_to_fix": 40.8,
+        "fix_sample": 100,
+        "opened_90d": 64,
+        "closed_90d": 62,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/googleapis/google-cloud-node/issues",
+        "shared_with": [
+          "google-cloud-text-to-speech-speech-to-text",
+          "google-document-ai",
+          "google-bigquery"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/google-cloud-python",
+        "role": "sdk",
+        "open": 450,
+        "resolved": 4365,
+        "not_planned": 637,
+        "resolved_pct": 91,
+        "median_days_to_fix": 30.2,
+        "fix_sample": 100,
+        "opened_90d": 162,
+        "closed_90d": 170,
+        "issue_health": 69,
+        "archived": false,
+        "url": "https://github.com/googleapis/google-cloud-python/issues",
+        "shared_with": [
+          "google-cloud-text-to-speech-speech-to-text",
+          "google-document-ai",
+          "google-bigquery"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -18770,6 +20679,23 @@
         "downloads_month": 2905374,
         "url": "https://www.npmjs.com/package/@cloudflare/sandbox",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cloudflare/sandbox-sdk",
+        "role": "sdk",
+        "open": 37,
+        "resolved": 161,
+        "not_planned": 4,
+        "resolved_pct": 81,
+        "median_days_to_fix": 10.2,
+        "fix_sample": 100,
+        "opened_90d": 33,
+        "closed_90d": 10,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/cloudflare/sandbox-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -18880,6 +20806,23 @@
         "downloads_month": 396397,
         "url": "https://www.npmjs.com/package/@codesandbox/sdk",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "codesandbox/codesandbox-sdk",
+        "role": "sdk",
+        "open": 9,
+        "resolved": 48,
+        "not_planned": 0,
+        "resolved_pct": 84,
+        "median_days_to_fix": 61.1,
+        "fix_sample": 6,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 61,
+        "archived": false,
+        "url": "https://github.com/codesandbox/codesandbox-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -19013,6 +20956,23 @@
         "downloads_month": 8365992,
         "url": "https://pypi.org/project/daytona/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "daytona/clients",
+        "role": "sdk",
+        "open": 4,
+        "resolved": 16,
+        "not_planned": 0,
+        "resolved_pct": 80,
+        "median_days_to_fix": 0.9,
+        "fix_sample": 16,
+        "opened_90d": 15,
+        "closed_90d": 12,
+        "issue_health": 86,
+        "archived": false,
+        "url": "https://github.com/daytona/clients/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -19143,6 +21103,23 @@
         "downloads_month": 5857504,
         "url": "https://pypi.org/project/e2b/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "e2b-dev/E2B",
+        "role": "sdk",
+        "open": 34,
+        "resolved": 290,
+        "not_planned": 79,
+        "resolved_pct": 90,
+        "median_days_to_fix": 26.5,
+        "fix_sample": 97,
+        "opened_90d": 41,
+        "closed_90d": 32,
+        "issue_health": 65,
+        "archived": false,
+        "url": "https://github.com/e2b-dev/E2B/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -19364,6 +21341,23 @@
         "downloads_month": 47839937,
         "url": "https://pypi.org/project/modal/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "modal-labs/modal-client",
+        "role": "sdk",
+        "open": 23,
+        "resolved": 125,
+        "not_planned": 1,
+        "resolved_pct": 84,
+        "median_days_to_fix": 1.8,
+        "fix_sample": 18,
+        "opened_90d": 24,
+        "closed_90d": 9,
+        "issue_health": 77,
+        "archived": false,
+        "url": "https://github.com/modal-labs/modal-client/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -19417,6 +21411,23 @@
         "archived": false,
         "url": "https://github.com/engineer-man/piston",
         "fetched_at": "2026-10-12T13:09Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "engineer-man/piston",
+        "role": "repo",
+        "open": 123,
+        "resolved": 239,
+        "not_planned": 4,
+        "resolved_pct": 66,
+        "median_days_to_fix": 2.1,
+        "fix_sample": 5,
+        "opened_90d": 6,
+        "closed_90d": 1,
+        "issue_health": 65,
+        "archived": false,
+        "url": "https://github.com/engineer-man/piston/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -19833,6 +21844,23 @@
         "downloads_month": 24556599,
         "url": "https://www.npmjs.com/package/@vercel/sandbox",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "vercel/sandbox",
+        "role": "sdk",
+        "open": 11,
+        "resolved": 9,
+        "not_planned": 7,
+        "resolved_pct": 45,
+        "median_days_to_fix": 4.3,
+        "fix_sample": 9,
+        "opened_90d": 12,
+        "closed_90d": 3,
+        "issue_health": 54,
+        "archived": false,
+        "url": "https://github.com/vercel/sandbox/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -20158,6 +22186,40 @@
         "downloads_month": 18438013,
         "url": "https://pypi.org/project/datadog-api-client/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "DataDog/datadog-api-client-typescript",
+        "role": "sdk",
+        "open": 22,
+        "resolved": 43,
+        "not_planned": 0,
+        "resolved_pct": 66,
+        "median_days_to_fix": 163.0,
+        "fix_sample": 2,
+        "opened_90d": 5,
+        "closed_90d": 1,
+        "issue_health": 34,
+        "archived": false,
+        "url": "https://github.com/DataDog/datadog-api-client-typescript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "DataDog/datadog-api-client-python",
+        "role": "sdk",
+        "open": 26,
+        "resolved": 61,
+        "not_planned": 7,
+        "resolved_pct": 70,
+        "median_days_to_fix": 100.5,
+        "fix_sample": 5,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 53,
+        "archived": false,
+        "url": "https://github.com/DataDog/datadog-api-client-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -20481,6 +22543,40 @@
         "downloads_month": 92655426,
         "url": "https://www.npmjs.com/package/@octokit/rest",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "octokit/octokit.js",
+        "role": "sdk",
+        "open": 40,
+        "resolved": 936,
+        "not_planned": 58,
+        "resolved_pct": 96,
+        "median_days_to_fix": 0.1,
+        "fix_sample": 4,
+        "opened_90d": 2,
+        "closed_90d": 7,
+        "issue_health": 98,
+        "archived": false,
+        "url": "https://github.com/octokit/octokit.js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "octokit/rest.js",
+        "role": "sdk",
+        "open": 43,
+        "resolved": 95,
+        "not_planned": 21,
+        "resolved_pct": 69,
+        "median_days_to_fix": 3.1,
+        "fix_sample": 3,
+        "opened_90d": 0,
+        "closed_90d": 1,
+        "issue_health": 80,
+        "archived": false,
+        "url": "https://github.com/octokit/rest.js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -21077,6 +23173,40 @@
         "downloads_month": 2201298,
         "url": "https://pypi.org/project/pagerduty/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "PagerDuty/api-schema",
+        "role": "spec",
+        "open": 28,
+        "resolved": 5,
+        "not_planned": 0,
+        "resolved_pct": 15,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 2,
+        "closed_90d": 0,
+        "issue_health": 6,
+        "archived": false,
+        "url": "https://github.com/PagerDuty/api-schema/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "PagerDuty/python-pagerduty",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 23,
+        "not_planned": 2,
+        "resolved_pct": 100,
+        "median_days_to_fix": 29.7,
+        "fix_sample": 8,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 73,
+        "archived": false,
+        "url": "https://github.com/PagerDuty/python-pagerduty/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -21483,6 +23613,40 @@
         "downloads_month": 127673427,
         "url": "https://pypi.org/project/sentry-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "getsentry/sentry-javascript",
+        "role": "sdk",
+        "open": 417,
+        "resolved": 7837,
+        "not_planned": 1356,
+        "resolved_pct": 95,
+        "median_days_to_fix": 8.1,
+        "fix_sample": 100,
+        "opened_90d": 847,
+        "closed_90d": 986,
+        "issue_health": 83,
+        "archived": false,
+        "url": "https://github.com/getsentry/sentry-javascript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "getsentry/sentry-python",
+        "role": "sdk",
+        "open": 332,
+        "resolved": 2276,
+        "not_planned": 328,
+        "resolved_pct": 87,
+        "median_days_to_fix": 7.0,
+        "fix_sample": 100,
+        "opened_90d": 381,
+        "closed_90d": 412,
+        "issue_health": 82,
+        "archived": false,
+        "url": "https://github.com/getsentry/sentry-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -21774,6 +23938,29 @@
         "downloads_month": 212317112,
         "url": "https://www.npmjs.com/package/@aws-sdk/client-s3",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "aws/aws-sdk-js-v3",
+        "role": "sdk",
+        "open": 101,
+        "resolved": 2812,
+        "not_planned": 195,
+        "resolved_pct": 97,
+        "median_days_to_fix": 15.1,
+        "fix_sample": 100,
+        "opened_90d": 29,
+        "closed_90d": 34,
+        "issue_health": 78,
+        "archived": false,
+        "url": "https://github.com/aws/aws-sdk-js-v3/issues",
+        "shared_with": [
+          "amazon-polly-amazon-transcribe-aws",
+          "aws-textract",
+          "amazon-translate",
+          "aws-end-user-messaging-sms"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -21918,6 +24105,43 @@
         "archived": false,
         "url": "https://github.com/microsoft/mcp",
         "fetched_at": "2026-10-12T13:09Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Azure/azure-rest-api-specs",
+        "role": "spec",
+        "open": 1953,
+        "resolved": 2967,
+        "not_planned": 132,
+        "resolved_pct": 60,
+        "median_days_to_fix": 2484.7,
+        "fix_sample": 100,
+        "opened_90d": 210,
+        "closed_90d": 640,
+        "issue_health": 44,
+        "archived": false,
+        "url": "https://github.com/Azure/azure-rest-api-specs/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "microsoft/mcp",
+        "role": "mcp",
+        "open": 217,
+        "resolved": 888,
+        "not_planned": 51,
+        "resolved_pct": 80,
+        "median_days_to_fix": 55.4,
+        "fix_sample": 100,
+        "opened_90d": 195,
+        "closed_90d": 224,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/microsoft/mcp/issues",
+        "shared_with": [
+          "azure-ai-speech"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -22074,6 +24298,40 @@
         "downloads_month": 2012441,
         "url": "https://pypi.org/project/cloudflare/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cloudflare/cloudflare-typescript",
+        "role": "sdk",
+        "open": 12,
+        "resolved": 47,
+        "not_planned": 10,
+        "resolved_pct": 80,
+        "median_days_to_fix": 115.5,
+        "fix_sample": 27,
+        "opened_90d": 3,
+        "closed_90d": 1,
+        "issue_health": 43,
+        "archived": false,
+        "url": "https://github.com/cloudflare/cloudflare-typescript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cloudflare/cloudflare-python",
+        "role": "sdk",
+        "open": 24,
+        "resolved": 6,
+        "not_planned": 3,
+        "resolved_pct": 20,
+        "median_days_to_fix": 118.3,
+        "fix_sample": 4,
+        "opened_90d": 3,
+        "closed_90d": 0,
+        "issue_health": 12,
+        "archived": false,
+        "url": "https://github.com/cloudflare/cloudflare-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -22525,6 +24783,40 @@
         "downloads_month": 1037312,
         "url": "https://pypi.org/project/mux_python/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "muxinc/mux-ts",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 100,
+        "not_planned": 2,
+        "resolved_pct": 100,
+        "median_days_to_fix": 512.1,
+        "fix_sample": 14,
+        "opened_90d": 1,
+        "closed_90d": 12,
+        "issue_health": 61,
+        "archived": false,
+        "url": "https://github.com/muxinc/mux-ts/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "muxinc/mux-python",
+        "role": "sdk",
+        "open": 3,
+        "resolved": 21,
+        "not_planned": 1,
+        "resolved_pct": 88,
+        "median_days_to_fix": 491.3,
+        "fix_sample": 1,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 56,
+        "archived": false,
+        "url": "https://github.com/muxinc/mux-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -23069,6 +25361,23 @@
         "downloads_month": 2189873,
         "url": "https://www.npmjs.com/package/@vercel/sdk",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "vercel/sdk",
+        "role": "sdk",
+        "open": 20,
+        "resolved": 16,
+        "not_planned": 0,
+        "resolved_pct": 44,
+        "median_days_to_fix": 32.0,
+        "fix_sample": 11,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 30,
+        "archived": false,
+        "url": "https://github.com/vercel/sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -23247,6 +25556,57 @@
         "downloads_month": 27470709,
         "url": "https://pypi.org/project/clickhouse-connect/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "ClickHouse/mcp-clickhouse",
+        "role": "mcp",
+        "open": 5,
+        "resolved": 60,
+        "not_planned": 0,
+        "resolved_pct": 92,
+        "median_days_to_fix": 141.4,
+        "fix_sample": 45,
+        "opened_90d": 7,
+        "closed_90d": 27,
+        "issue_health": 61,
+        "archived": false,
+        "url": "https://github.com/ClickHouse/mcp-clickhouse/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "ClickHouse/clickhouse-js",
+        "role": "sdk",
+        "open": 38,
+        "resolved": 169,
+        "not_planned": 19,
+        "resolved_pct": 82,
+        "median_days_to_fix": 203.2,
+        "fix_sample": 22,
+        "opened_90d": 16,
+        "closed_90d": 5,
+        "issue_health": 41,
+        "archived": false,
+        "url": "https://github.com/ClickHouse/clickhouse-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "ClickHouse/clickhouse-connect",
+        "role": "sdk",
+        "open": 20,
+        "resolved": 482,
+        "not_planned": 7,
+        "resolved_pct": 96,
+        "median_days_to_fix": 3.7,
+        "fix_sample": 100,
+        "opened_90d": 72,
+        "closed_90d": 74,
+        "issue_health": 90,
+        "archived": false,
+        "url": "https://github.com/ClickHouse/clickhouse-connect/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -23417,6 +25777,23 @@
         "downloads_month": 78287,
         "url": "https://pypi.org/project/convex/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "get-convex/convex-backend",
+        "role": "mcp",
+        "open": 180,
+        "resolved": 156,
+        "not_planned": 4,
+        "resolved_pct": 46,
+        "median_days_to_fix": 5.3,
+        "fix_sample": 79,
+        "opened_90d": 48,
+        "closed_90d": 8,
+        "issue_health": 51,
+        "archived": false,
+        "url": "https://github.com/get-convex/convex-backend/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -23566,6 +25943,50 @@
         "downloads_month": 147410761,
         "url": "https://pypi.org/project/google-cloud-bigquery/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/google-cloud-node",
+        "role": "sdk",
+        "open": 489,
+        "resolved": 2206,
+        "not_planned": 96,
+        "resolved_pct": 82,
+        "median_days_to_fix": 40.8,
+        "fix_sample": 100,
+        "opened_90d": 64,
+        "closed_90d": 62,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/googleapis/google-cloud-node/issues",
+        "shared_with": [
+          "google-cloud-text-to-speech-speech-to-text",
+          "google-document-ai",
+          "google-cloud-translation"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/google-cloud-python",
+        "role": "sdk",
+        "open": 450,
+        "resolved": 4365,
+        "not_planned": 637,
+        "resolved_pct": 91,
+        "median_days_to_fix": 30.2,
+        "fix_sample": 100,
+        "opened_90d": 162,
+        "closed_90d": 170,
+        "issue_health": 69,
+        "archived": false,
+        "url": "https://github.com/googleapis/google-cloud-python/issues",
+        "shared_with": [
+          "google-cloud-text-to-speech-speech-to-text",
+          "google-document-ai",
+          "google-cloud-translation"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -23757,6 +26178,23 @@
         "downloads_month": 64665876,
         "url": "https://pypi.org/project/pymongo/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mongodb-js/mongodb-mcp-server",
+        "role": "mcp",
+        "open": 8,
+        "resolved": 153,
+        "not_planned": 47,
+        "resolved_pct": 95,
+        "median_days_to_fix": 4.8,
+        "fix_sample": 51,
+        "opened_90d": 20,
+        "closed_90d": 19,
+        "issue_health": 87,
+        "archived": false,
+        "url": "https://github.com/mongodb-js/mongodb-mcp-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -23924,6 +26362,23 @@
         "downloads_month": 1861759,
         "url": "https://www.npmjs.com/package/@neondatabase/api-client",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "neondatabase/mcp-server-neon",
+        "role": "mcp",
+        "open": 16,
+        "resolved": 37,
+        "not_planned": 0,
+        "resolved_pct": 70,
+        "median_days_to_fix": 35.2,
+        "fix_sample": 21,
+        "opened_90d": 10,
+        "closed_90d": 6,
+        "issue_health": 51,
+        "archived": false,
+        "url": "https://github.com/neondatabase/mcp-server-neon/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -24066,6 +26521,23 @@
         "downloads_month": 1963725,
         "url": "https://www.npmjs.com/package/@planetscale/database",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "planetscale/database-js",
+        "role": "sdk",
+        "open": 15,
+        "resolved": 68,
+        "not_planned": 6,
+        "resolved_pct": 82,
+        "median_days_to_fix": 16.9,
+        "fix_sample": 1,
+        "opened_90d": 1,
+        "closed_90d": 1,
+        "issue_health": 71,
+        "archived": false,
+        "url": "https://github.com/planetscale/database-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -24211,6 +26683,40 @@
         "downloads_month": 99504889,
         "url": "https://pypi.org/project/snowflake-connector-python/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "snowflakedb/snowflake-connector-nodejs",
+        "role": "sdk",
+        "open": 19,
+        "resolved": 279,
+        "not_planned": 39,
+        "resolved_pct": 94,
+        "median_days_to_fix": 15.7,
+        "fix_sample": 32,
+        "opened_90d": 5,
+        "closed_90d": 3,
+        "issue_health": 68,
+        "archived": false,
+        "url": "https://github.com/snowflakedb/snowflake-connector-nodejs/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "snowflakedb/snowflake-connector-python",
+        "role": "sdk",
+        "open": 96,
+        "resolved": 683,
+        "not_planned": 101,
+        "resolved_pct": 88,
+        "median_days_to_fix": 25.7,
+        "fix_sample": 65,
+        "opened_90d": 20,
+        "closed_90d": 17,
+        "issue_health": 66,
+        "archived": false,
+        "url": "https://github.com/snowflakedb/snowflake-connector-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/snowflake.json"
@@ -24369,6 +26875,40 @@
         "downloads_month": 22924804,
         "url": "https://pypi.org/project/supabase/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "supabase/supabase-js",
+        "role": "sdk",
+        "open": 33,
+        "resolved": 607,
+        "not_planned": 141,
+        "resolved_pct": 95,
+        "median_days_to_fix": 13.8,
+        "fix_sample": 100,
+        "opened_90d": 42,
+        "closed_90d": 28,
+        "issue_health": 71,
+        "archived": false,
+        "url": "https://github.com/supabase/supabase-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "supabase/supabase-py",
+        "role": "sdk",
+        "open": 30,
+        "resolved": 399,
+        "not_planned": 14,
+        "resolved_pct": 93,
+        "median_days_to_fix": 5.7,
+        "fix_sample": 94,
+        "opened_90d": 62,
+        "closed_90d": 39,
+        "issue_health": 78,
+        "archived": false,
+        "url": "https://github.com/supabase/supabase-py/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -24524,6 +27064,23 @@
         "questions": 102,
         "url": "https://stackoverflow.com/questions/tagged/tidb",
         "fetched_at": "2026-10-14T06:13Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "pingcap/pytidb",
+        "role": "mcp",
+        "open": 30,
+        "resolved": 43,
+        "not_planned": 0,
+        "resolved_pct": 59,
+        "median_days_to_fix": 87.0,
+        "fix_sample": 2,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 49,
+        "archived": false,
+        "url": "https://github.com/pingcap/pytidb/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -24771,6 +27328,23 @@
         "downloads_month": 14771992,
         "url": "https://www.npmjs.com/package/@libsql/client",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "tursodatabase/libsql-client-ts",
+        "role": "sdk",
+        "open": 114,
+        "resolved": 69,
+        "not_planned": 2,
+        "resolved_pct": 38,
+        "median_days_to_fix": 557.9,
+        "fix_sample": 5,
+        "opened_90d": 5,
+        "closed_90d": 2,
+        "issue_health": 24,
+        "archived": false,
+        "url": "https://github.com/tursodatabase/libsql-client-ts/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -24924,6 +27498,40 @@
         "downloads_month": 161297,
         "url": "https://pypi.org/project/upstash-vector/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "upstash/redis-js",
+        "role": "sdk",
+        "open": 9,
+        "resolved": 119,
+        "not_planned": 23,
+        "resolved_pct": 93,
+        "median_days_to_fix": 6.5,
+        "fix_sample": 6,
+        "opened_90d": 3,
+        "closed_90d": 1,
+        "issue_health": 71,
+        "archived": false,
+        "url": "https://github.com/upstash/redis-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "upstash/redis-py",
+        "role": "sdk",
+        "open": 4,
+        "resolved": 14,
+        "not_planned": 0,
+        "resolved_pct": 78,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 51,
+        "archived": false,
+        "url": "https://github.com/upstash/redis-py/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -25194,6 +27802,40 @@
         "downloads_month": 6525454,
         "url": "https://pypi.org/project/chromadb/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "chroma-core/chroma-mcp",
+        "role": "mcp",
+        "open": 20,
+        "resolved": 14,
+        "not_planned": 1,
+        "resolved_pct": 41,
+        "median_days_to_fix": 1.0,
+        "fix_sample": 1,
+        "opened_90d": 6,
+        "closed_90d": 1,
+        "issue_health": 57,
+        "archived": false,
+        "url": "https://github.com/chroma-core/chroma-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "chroma-core/chroma",
+        "role": "sdk",
+        "open": 362,
+        "resolved": 1341,
+        "not_planned": 11,
+        "resolved_pct": 79,
+        "median_days_to_fix": 26.0,
+        "fix_sample": 94,
+        "opened_90d": 48,
+        "closed_90d": 6,
+        "issue_health": 48,
+        "archived": false,
+        "url": "https://github.com/chroma-core/chroma/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -25468,6 +28110,23 @@
         "downloads_month": 657480,
         "url": "https://www.npmjs.com/package/mem0ai",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mem0ai/mem0",
+        "role": "sdk",
+        "open": 390,
+        "resolved": 1613,
+        "not_planned": 287,
+        "resolved_pct": 81,
+        "median_days_to_fix": 15.3,
+        "fix_sample": 100,
+        "opened_90d": 377,
+        "closed_90d": 169,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/mem0ai/mem0/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -25640,6 +28299,57 @@
         "downloads_month": 3879257,
         "url": "https://pypi.org/project/pinecone/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "pinecone-io/pinecone-mcp",
+        "role": "mcp",
+        "open": 11,
+        "resolved": 3,
+        "not_planned": 0,
+        "resolved_pct": 21,
+        "median_days_to_fix": 0.5,
+        "fix_sample": 3,
+        "opened_90d": 2,
+        "closed_90d": 0,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/pinecone-io/pinecone-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "pinecone-io/pinecone-ts-client",
+        "role": "sdk",
+        "open": 15,
+        "resolved": 79,
+        "not_planned": 0,
+        "resolved_pct": 84,
+        "median_days_to_fix": 183.6,
+        "fix_sample": 2,
+        "opened_90d": 0,
+        "closed_90d": 1,
+        "issue_health": 56,
+        "archived": false,
+        "url": "https://github.com/pinecone-io/pinecone-ts-client/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "pinecone-io/python-sdk",
+        "role": "sdk",
+        "open": 31,
+        "resolved": 97,
+        "not_planned": 5,
+        "resolved_pct": 76,
+        "median_days_to_fix": 131.9,
+        "fix_sample": 9,
+        "opened_90d": 5,
+        "closed_90d": 4,
+        "issue_health": 50,
+        "archived": false,
+        "url": "https://github.com/pinecone-io/python-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -25782,6 +28492,57 @@
         "downloads_month": 12034960,
         "url": "https://pypi.org/project/qdrant-client/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "qdrant/mcp-server-qdrant",
+        "role": "mcp",
+        "open": 29,
+        "resolved": 14,
+        "not_planned": 7,
+        "resolved_pct": 33,
+        "median_days_to_fix": 2.8,
+        "fix_sample": 4,
+        "opened_90d": 6,
+        "closed_90d": 0,
+        "issue_health": 46,
+        "archived": false,
+        "url": "https://github.com/qdrant/mcp-server-qdrant/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "qdrant/qdrant-js",
+        "role": "sdk",
+        "open": 22,
+        "resolved": 20,
+        "not_planned": 0,
+        "resolved_pct": 48,
+        "median_days_to_fix": 572.3,
+        "fix_sample": 3,
+        "opened_90d": 0,
+        "closed_90d": 1,
+        "issue_health": 40,
+        "archived": false,
+        "url": "https://github.com/qdrant/qdrant-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "qdrant/qdrant-client",
+        "role": "sdk",
+        "open": 125,
+        "resolved": 418,
+        "not_planned": 13,
+        "resolved_pct": 77,
+        "median_days_to_fix": 10.0,
+        "fix_sample": 84,
+        "opened_90d": 62,
+        "closed_90d": 49,
+        "issue_health": 70,
+        "archived": false,
+        "url": "https://github.com/qdrant/qdrant-client/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -25908,6 +28669,40 @@
         "downloads_month": 9835248,
         "url": "https://pypi.org/project/weaviate-client/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "weaviate/typescript-client",
+        "role": "sdk",
+        "open": 26,
+        "resolved": 156,
+        "not_planned": 6,
+        "resolved_pct": 86,
+        "median_days_to_fix": 60.9,
+        "fix_sample": 47,
+        "opened_90d": 12,
+        "closed_90d": 27,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/weaviate/typescript-client/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "weaviate/weaviate-python-client",
+        "role": "sdk",
+        "open": 32,
+        "resolved": 395,
+        "not_planned": 13,
+        "resolved_pct": 93,
+        "median_days_to_fix": 36.0,
+        "fix_sample": 94,
+        "opened_90d": 23,
+        "closed_90d": 28,
+        "issue_health": 68,
+        "archived": false,
+        "url": "https://github.com/weaviate/weaviate-python-client/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -26033,6 +28828,40 @@
         "downloads_month": 292185,
         "url": "https://pypi.org/project/zep-cloud/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "getzep/zep-js",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 11,
+        "not_planned": 1,
+        "resolved_pct": 92,
+        "median_days_to_fix": 1.5,
+        "fix_sample": 1,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 93,
+        "archived": false,
+        "url": "https://github.com/getzep/zep-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "getzep/zep-python",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 15,
+        "not_planned": 1,
+        "resolved_pct": 68,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/getzep/zep-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -26201,6 +29030,40 @@
         "downloads_month": 3698902,
         "url": "https://pypi.org/project/pymilvus/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "milvus-io/milvus-sdk-node",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 91,
+        "not_planned": 0,
+        "resolved_pct": 100,
+        "median_days_to_fix": 183.5,
+        "fix_sample": 22,
+        "opened_90d": 3,
+        "closed_90d": 3,
+        "issue_health": 63,
+        "archived": false,
+        "url": "https://github.com/milvus-io/milvus-sdk-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "milvus-io/pymilvus",
+        "role": "sdk",
+        "open": 319,
+        "resolved": 896,
+        "not_planned": 20,
+        "resolved_pct": 74,
+        "median_days_to_fix": 410.0,
+        "fix_sample": 100,
+        "opened_90d": 28,
+        "closed_90d": 76,
+        "issue_health": 51,
+        "archived": false,
+        "url": "https://github.com/milvus-io/pymilvus/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -26507,6 +29370,23 @@
         "ratings": 3567523,
         "url": "https://apps.apple.com/us/app/discord-talk-play-hang-out/id985746746",
         "fetched_at": "2026-10-14T06:13Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "SaseQ/discord-mcp",
+        "role": "mcp",
+        "open": 6,
+        "resolved": 6,
+        "not_planned": 0,
+        "resolved_pct": 50,
+        "median_days_to_fix": 6.0,
+        "fix_sample": 6,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 68,
+        "archived": false,
+        "url": "https://github.com/SaseQ/discord-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -26662,6 +29542,23 @@
         "downloads_month": 287119,
         "url": "https://pypi.org/project/mailgun/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mailgun/mailgun.js",
+        "role": "sdk",
+        "open": 6,
+        "resolved": 249,
+        "not_planned": 1,
+        "resolved_pct": 98,
+        "median_days_to_fix": 16.6,
+        "fix_sample": 8,
+        "opened_90d": 1,
+        "closed_90d": 1,
+        "issue_health": 77,
+        "archived": false,
+        "url": "https://github.com/mailgun/mailgun.js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -26793,6 +29690,23 @@
         "ratings": 458,
         "url": "https://apps.apple.com/us/app/ntfy/id1625396347",
         "fetched_at": "2026-10-14T06:13Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "gitmotion/ntfy-me-mcp",
+        "role": "mcp",
+        "open": 7,
+        "resolved": 20,
+        "not_planned": 0,
+        "resolved_pct": 74,
+        "median_days_to_fix": 1.1,
+        "fix_sample": 20,
+        "opened_90d": 23,
+        "closed_90d": 18,
+        "issue_health": 82,
+        "archived": false,
+        "url": "https://github.com/gitmotion/ntfy-me-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -26965,6 +29879,40 @@
         "downloads_month": 5193752,
         "url": "https://www.npmjs.com/package/postmark",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "ActiveCampaign/postmark-mcp",
+        "role": "mcp",
+        "open": 23,
+        "resolved": 0,
+        "not_planned": 0,
+        "resolved_pct": 0,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 3,
+        "closed_90d": 0,
+        "issue_health": 0,
+        "archived": false,
+        "url": "https://github.com/ActiveCampaign/postmark-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "ActiveCampaign/postmark.js",
+        "role": "sdk",
+        "open": 13,
+        "resolved": 103,
+        "not_planned": 0,
+        "resolved_pct": 89,
+        "median_days_to_fix": 106.5,
+        "fix_sample": 3,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/ActiveCampaign/postmark.js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -27099,6 +30047,40 @@
         "downloads_month": 11191987,
         "url": "https://pypi.org/project/resend/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "resend/resend-node",
+        "role": "sdk",
+        "open": 2,
+        "resolved": 149,
+        "not_planned": 26,
+        "resolved_pct": 99,
+        "median_days_to_fix": 15.4,
+        "fix_sample": 22,
+        "opened_90d": 5,
+        "closed_90d": 4,
+        "issue_health": 75,
+        "archived": false,
+        "url": "https://github.com/resend/resend-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "resend/resend-python",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 41,
+        "not_planned": 0,
+        "resolved_pct": 98,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 59,
+        "archived": false,
+        "url": "https://github.com/resend/resend-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -27256,6 +30238,40 @@
         "downloads_month": 19478339,
         "url": "https://pypi.org/project/sendgrid/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "sendgrid/sendgrid-nodejs",
+        "role": "sdk",
+        "open": 54,
+        "resolved": 851,
+        "not_planned": 0,
+        "resolved_pct": 94,
+        "median_days_to_fix": 698.3,
+        "fix_sample": 1,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 38,
+        "archived": false,
+        "url": "https://github.com/sendgrid/sendgrid-nodejs/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "sendgrid/sendgrid-python",
+        "role": "sdk",
+        "open": 50,
+        "resolved": 547,
+        "not_planned": 0,
+        "resolved_pct": 92,
+        "median_days_to_fix": 8.5,
+        "fix_sample": 2,
+        "opened_90d": 1,
+        "closed_90d": 1,
+        "issue_health": 82,
+        "archived": false,
+        "url": "https://github.com/sendgrid/sendgrid-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -27420,6 +30436,40 @@
         "downloads_month": 73939872,
         "url": "https://pypi.org/project/slack_sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "slackapi/node-slack-sdk",
+        "role": "sdk",
+        "open": 39,
+        "resolved": 947,
+        "not_planned": 26,
+        "resolved_pct": 96,
+        "median_days_to_fix": 17.1,
+        "fix_sample": 41,
+        "opened_90d": 17,
+        "closed_90d": 17,
+        "issue_health": 76,
+        "archived": false,
+        "url": "https://github.com/slackapi/node-slack-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "slackapi/python-slack-sdk",
+        "role": "sdk",
+        "open": 38,
+        "resolved": 848,
+        "not_planned": 40,
+        "resolved_pct": 96,
+        "median_days_to_fix": 26.8,
+        "fix_sample": 25,
+        "opened_90d": 9,
+        "closed_90d": 12,
+        "issue_health": 72,
+        "archived": false,
+        "url": "https://github.com/slackapi/python-slack-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -27566,6 +30616,57 @@
         "downloads_month": 78494,
         "url": "https://pypi.org/project/getstream/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "GetStream/stream-chat-js",
+        "role": "sdk",
+        "open": 23,
+        "resolved": 310,
+        "not_planned": 5,
+        "resolved_pct": 93,
+        "median_days_to_fix": 613.2,
+        "fix_sample": 29,
+        "opened_90d": 4,
+        "closed_90d": 4,
+        "issue_health": 58,
+        "archived": false,
+        "url": "https://github.com/GetStream/stream-chat-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "GetStream/stream-node",
+        "role": "sdk",
+        "open": 3,
+        "resolved": 11,
+        "not_planned": 0,
+        "resolved_pct": 79,
+        "median_days_to_fix": 5.3,
+        "fix_sample": 6,
+        "opened_90d": 1,
+        "closed_90d": 1,
+        "issue_health": 80,
+        "archived": false,
+        "url": "https://github.com/GetStream/stream-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "GetStream/stream-chat-python",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 35,
+        "not_planned": 0,
+        "resolved_pct": 83,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 53,
+        "archived": false,
+        "url": "https://github.com/GetStream/stream-chat-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -27839,6 +30940,29 @@
         "downloads_month": 1431847,
         "url": "https://www.npmjs.com/package/@aws-sdk/client-pinpoint-sms-voice-v2",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "aws/aws-sdk-js-v3",
+        "role": "sdk",
+        "open": 101,
+        "resolved": 2812,
+        "not_planned": 195,
+        "resolved_pct": 97,
+        "median_days_to_fix": 15.1,
+        "fix_sample": 100,
+        "opened_90d": 29,
+        "closed_90d": 34,
+        "issue_health": 78,
+        "archived": false,
+        "url": "https://github.com/aws/aws-sdk-js-v3/issues",
+        "shared_with": [
+          "amazon-polly-amazon-transcribe-aws",
+          "aws-textract",
+          "amazon-translate",
+          "aws-apis"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -28016,6 +31140,40 @@
         "downloads_month": 188964,
         "url": "https://pypi.org/project/messagebird/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "messagebird/messagebird-nodejs",
+        "role": "sdk",
+        "open": 22,
+        "resolved": 26,
+        "not_planned": 0,
+        "resolved_pct": 54,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 42,
+        "archived": false,
+        "url": "https://github.com/messagebird/messagebird-nodejs/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "messagebird/python-rest-api",
+        "role": "sdk",
+        "open": 12,
+        "resolved": 15,
+        "not_planned": 0,
+        "resolved_pct": 56,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 42,
+        "archived": false,
+        "url": "https://github.com/messagebird/python-rest-api/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -28195,6 +31353,57 @@
         "downloads_month": 11357375,
         "url": "https://pypi.org/project/line-bot-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "line/line-bot-mcp-server",
+        "role": "mcp",
+        "open": 6,
+        "resolved": 54,
+        "not_planned": 0,
+        "resolved_pct": 90,
+        "median_days_to_fix": 12.6,
+        "fix_sample": 36,
+        "opened_90d": 8,
+        "closed_90d": 8,
+        "issue_health": 77,
+        "archived": false,
+        "url": "https://github.com/line/line-bot-mcp-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "line/line-bot-sdk-nodejs",
+        "role": "sdk",
+        "open": 2,
+        "resolved": 225,
+        "not_planned": 3,
+        "resolved_pct": 99,
+        "median_days_to_fix": 11.2,
+        "fix_sample": 29,
+        "opened_90d": 7,
+        "closed_90d": 7,
+        "issue_health": 82,
+        "archived": false,
+        "url": "https://github.com/line/line-bot-sdk-nodejs/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "line/line-bot-sdk-python",
+        "role": "sdk",
+        "open": 5,
+        "resolved": 244,
+        "not_planned": 16,
+        "resolved_pct": 98,
+        "median_days_to_fix": 27.0,
+        "fix_sample": 8,
+        "opened_90d": 3,
+        "closed_90d": 1,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/line/line-bot-sdk-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -28509,6 +31718,23 @@
         "reviews": 19,
         "url": "https://sourceforge.net/software/product/Telegram/",
         "fetched_at": "2026-10-14T06:13Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "chigwell/telegram-mcp",
+        "role": "mcp",
+        "open": 7,
+        "resolved": 52,
+        "not_planned": 3,
+        "resolved_pct": 88,
+        "median_days_to_fix": 5.8,
+        "fix_sample": 51,
+        "opened_90d": 27,
+        "closed_90d": 32,
+        "issue_health": 84,
+        "archived": false,
+        "url": "https://github.com/chigwell/telegram-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/telegram-bot-api.json"
@@ -28663,6 +31889,40 @@
         "downloads_month": 682274,
         "url": "https://pypi.org/project/telnyx/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "team-telnyx/telnyx-node",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 56,
+        "not_planned": 0,
+        "resolved_pct": 100,
+        "median_days_to_fix": 155.7,
+        "fix_sample": 24,
+        "opened_90d": 1,
+        "closed_90d": 10,
+        "issue_health": 63,
+        "archived": false,
+        "url": "https://github.com/team-telnyx/telnyx-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "team-telnyx/telnyx-python",
+        "role": "sdk",
+        "open": 4,
+        "resolved": 20,
+        "not_planned": 0,
+        "resolved_pct": 83,
+        "median_days_to_fix": 64.8,
+        "fix_sample": 2,
+        "opened_90d": 3,
+        "closed_90d": 1,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/team-telnyx/telnyx-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -28924,6 +32184,66 @@
           "twilio-programmable-voice"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "twilio-labs/mcp",
+        "role": "mcp",
+        "open": 12,
+        "resolved": 0,
+        "not_planned": 0,
+        "resolved_pct": 0,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 20,
+        "archived": false,
+        "url": "https://github.com/twilio-labs/mcp/issues",
+        "shared_with": [
+          "twilio-programmable-voice"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "twilio/twilio-node",
+        "role": "sdk",
+        "open": 29,
+        "resolved": 515,
+        "not_planned": 19,
+        "resolved_pct": 95,
+        "median_days_to_fix": 38.9,
+        "fix_sample": 10,
+        "opened_90d": 5,
+        "closed_90d": 3,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/twilio/twilio-node/issues",
+        "shared_with": [
+          "twilio-programmable-voice"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "twilio/twilio-python",
+        "role": "sdk",
+        "open": 33,
+        "resolved": 313,
+        "not_planned": 2,
+        "resolved_pct": 90,
+        "median_days_to_fix": 37.9,
+        "fix_sample": 2,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/twilio/twilio-python/issues",
+        "shared_with": [
+          "twilio-programmable-voice"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/twilio.json"
@@ -29082,6 +32402,57 @@
         "downloads_month": 264731,
         "url": "https://pypi.org/project/vonage/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Vonage-Community/vonage-mcp-server-api-bindings",
+        "role": "mcp",
+        "open": 6,
+        "resolved": 6,
+        "not_planned": 0,
+        "resolved_pct": 50,
+        "median_days_to_fix": 45.3,
+        "fix_sample": 5,
+        "opened_90d": 3,
+        "closed_90d": 0,
+        "issue_health": 29,
+        "archived": false,
+        "url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Vonage/vonage-node-sdk",
+        "role": "sdk",
+        "open": 6,
+        "resolved": 382,
+        "not_planned": 113,
+        "resolved_pct": 98,
+        "median_days_to_fix": 2.0,
+        "fix_sample": 100,
+        "opened_90d": 3,
+        "closed_90d": 2,
+        "issue_health": 88,
+        "archived": false,
+        "url": "https://github.com/Vonage/vonage-node-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Vonage/vonage-python-sdk",
+        "role": "sdk",
+        "open": 6,
+        "resolved": 124,
+        "not_planned": 0,
+        "resolved_pct": 95,
+        "median_days_to_fix": 30.5,
+        "fix_sample": 7,
+        "opened_90d": 2,
+        "closed_90d": 2,
+        "issue_health": 71,
+        "archived": false,
+        "url": "https://github.com/Vonage/vonage-python-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -29480,6 +32851,46 @@
           "deepgram-api"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "deepgram/deepgram-js-sdk",
+        "role": "sdk",
+        "open": 14,
+        "resolved": 184,
+        "not_planned": 16,
+        "resolved_pct": 93,
+        "median_days_to_fix": 157.7,
+        "fix_sample": 32,
+        "opened_90d": 16,
+        "closed_90d": 27,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/deepgram/deepgram-js-sdk/issues",
+        "shared_with": [
+          "deepgram-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "deepgram/deepgram-python-sdk",
+        "role": "sdk",
+        "open": 14,
+        "resolved": 278,
+        "not_planned": 3,
+        "resolved_pct": 95,
+        "median_days_to_fix": 99.1,
+        "fix_sample": 68,
+        "opened_90d": 23,
+        "closed_90d": 25,
+        "issue_health": 63,
+        "archived": false,
+        "url": "https://github.com/deepgram/deepgram-python-sdk/issues",
+        "shared_with": [
+          "deepgram-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -29619,6 +33030,48 @@
           "elevenlabs-music-api"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "elevenlabs/elevenlabs-js",
+        "role": "sdk",
+        "open": 13,
+        "resolved": 121,
+        "not_planned": 13,
+        "resolved_pct": 90,
+        "median_days_to_fix": 2.2,
+        "fix_sample": 37,
+        "opened_90d": 8,
+        "closed_90d": 5,
+        "issue_health": 83,
+        "archived": false,
+        "url": "https://github.com/elevenlabs/elevenlabs-js/issues",
+        "shared_with": [
+          "elevenlabs-api",
+          "elevenlabs-music-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "elevenlabs/elevenlabs-python",
+        "role": "sdk",
+        "open": 20,
+        "resolved": 349,
+        "not_planned": 21,
+        "resolved_pct": 95,
+        "median_days_to_fix": 9.1,
+        "fix_sample": 45,
+        "opened_90d": 16,
+        "closed_90d": 9,
+        "issue_health": 73,
+        "archived": false,
+        "url": "https://github.com/elevenlabs/elevenlabs-python/issues",
+        "shared_with": [
+          "elevenlabs-api",
+          "elevenlabs-music-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -29764,6 +33217,40 @@
         "downloads_month": 5645409,
         "url": "https://pypi.org/project/livekit/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "livekit/node-sdks",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 63,
+        "not_planned": 35,
+        "resolved_pct": 90,
+        "median_days_to_fix": 7.0,
+        "fix_sample": 11,
+        "opened_90d": 2,
+        "closed_90d": 5,
+        "issue_health": 83,
+        "archived": false,
+        "url": "https://github.com/livekit/node-sdks/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "livekit/python-sdks",
+        "role": "sdk",
+        "open": 20,
+        "resolved": 86,
+        "not_planned": 49,
+        "resolved_pct": 81,
+        "median_days_to_fix": 17.6,
+        "fix_sample": 18,
+        "opened_90d": 15,
+        "closed_90d": 11,
+        "issue_health": 65,
+        "archived": false,
+        "url": "https://github.com/livekit/python-sdks/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -29918,6 +33405,40 @@
         "downloads_month": 266471,
         "url": "https://pypi.org/project/plivo/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "plivo/plivo-node",
+        "role": "sdk",
+        "open": 9,
+        "resolved": 78,
+        "not_planned": 0,
+        "resolved_pct": 90,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 56,
+        "archived": false,
+        "url": "https://github.com/plivo/plivo-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "plivo/plivo-python",
+        "role": "sdk",
+        "open": 10,
+        "resolved": 45,
+        "not_planned": 0,
+        "resolved_pct": 82,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 53,
+        "archived": false,
+        "url": "https://github.com/plivo/plivo-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -30040,6 +33561,40 @@
         "downloads_month": 616442,
         "url": "https://pypi.org/project/retell-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "RetellAI/retell-typescript-sdk",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 15,
+        "not_planned": 0,
+        "resolved_pct": 100,
+        "median_days_to_fix": 163.8,
+        "fix_sample": 9,
+        "opened_90d": 1,
+        "closed_90d": 8,
+        "issue_health": 63,
+        "archived": false,
+        "url": "https://github.com/RetellAI/retell-typescript-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "RetellAI/retell-python-sdk",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 14,
+        "not_planned": 4,
+        "resolved_pct": 100,
+        "median_days_to_fix": 553.4,
+        "fix_sample": 12,
+        "opened_90d": 0,
+        "closed_90d": 14,
+        "issue_health": 61,
+        "archived": false,
+        "url": "https://github.com/RetellAI/retell-python-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -30367,6 +33922,83 @@
           "twilio"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "twilio/twilio-oai",
+        "role": "spec",
+        "open": 27,
+        "resolved": 27,
+        "not_planned": 0,
+        "resolved_pct": 50,
+        "median_days_to_fix": 0.0,
+        "fix_sample": 1,
+        "opened_90d": 6,
+        "closed_90d": 0,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/twilio/twilio-oai/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "twilio-labs/mcp",
+        "role": "mcp",
+        "open": 12,
+        "resolved": 0,
+        "not_planned": 0,
+        "resolved_pct": 0,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 20,
+        "archived": false,
+        "url": "https://github.com/twilio-labs/mcp/issues",
+        "shared_with": [
+          "twilio"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "twilio/twilio-node",
+        "role": "sdk",
+        "open": 29,
+        "resolved": 515,
+        "not_planned": 19,
+        "resolved_pct": 95,
+        "median_days_to_fix": 38.9,
+        "fix_sample": 10,
+        "opened_90d": 5,
+        "closed_90d": 3,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/twilio/twilio-node/issues",
+        "shared_with": [
+          "twilio"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "twilio/twilio-python",
+        "role": "sdk",
+        "open": 33,
+        "resolved": 313,
+        "not_planned": 2,
+        "resolved_pct": 90,
+        "median_days_to_fix": 37.9,
+        "fix_sample": 2,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/twilio/twilio-python/issues",
+        "shared_with": [
+          "twilio"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -30515,6 +34147,40 @@
         "downloads_month": 171652,
         "url": "https://pypi.org/project/vapi_server_sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "VapiAI/server-sdk-typescript",
+        "role": "sdk",
+        "open": 15,
+        "resolved": 11,
+        "not_planned": 0,
+        "resolved_pct": 42,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 37,
+        "archived": false,
+        "url": "https://github.com/VapiAI/server-sdk-typescript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "VapiAI/server-sdk-python",
+        "role": "sdk",
+        "open": 9,
+        "resolved": 8,
+        "not_planned": 0,
+        "resolved_pct": 47,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 39,
+        "archived": false,
+        "url": "https://github.com/VapiAI/server-sdk-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -30677,6 +34343,23 @@
         "downloads_month": 2272592,
         "url": "https://www.npmjs.com/package/airtable",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Airtable/airtable.js",
+        "role": "sdk",
+        "open": 116,
+        "resolved": 83,
+        "not_planned": 2,
+        "resolved_pct": 42,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 6,
+        "closed_90d": 0,
+        "issue_health": 17,
+        "archived": false,
+        "url": "https://github.com/Airtable/airtable.js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -30867,6 +34550,40 @@
         "downloads_month": 2932186,
         "url": "https://pypi.org/project/asana/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Asana/node-asana",
+        "role": "sdk",
+        "open": 51,
+        "resolved": 70,
+        "not_planned": 1,
+        "resolved_pct": 58,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 43,
+        "archived": false,
+        "url": "https://github.com/Asana/node-asana/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Asana/python-asana",
+        "role": "sdk",
+        "open": 10,
+        "resolved": 71,
+        "not_planned": 0,
+        "resolved_pct": 88,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 55,
+        "archived": false,
+        "url": "https://github.com/Asana/python-asana/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -31176,6 +34893,57 @@
         "downloads_month": 993149,
         "url": "https://pypi.org/project/box-sdk-gen/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "box/box-node-sdk",
+        "role": "sdk",
+        "open": 4,
+        "resolved": 173,
+        "not_planned": 1,
+        "resolved_pct": 98,
+        "median_days_to_fix": 7.5,
+        "fix_sample": 7,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 85,
+        "archived": false,
+        "url": "https://github.com/box/box-node-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "box/box-python-sdk",
+        "role": "sdk",
+        "open": 28,
+        "resolved": 327,
+        "not_planned": 1,
+        "resolved_pct": 92,
+        "median_days_to_fix": 9.7,
+        "fix_sample": 3,
+        "opened_90d": 1,
+        "closed_90d": 1,
+        "issue_health": 80,
+        "archived": false,
+        "url": "https://github.com/box/box-python-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "box/box-python-sdk-gen",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 47,
+        "not_planned": 1,
+        "resolved_pct": 100,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 80,
+        "archived": true,
+        "url": "https://github.com/box/box-python-sdk-gen/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -31874,6 +35642,40 @@
         "downloads_month": 1542245,
         "url": "https://pypi.org/project/dropbox/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "dropbox/dropbox-sdk-js",
+        "role": "sdk",
+        "open": 27,
+        "resolved": 270,
+        "not_planned": 1,
+        "resolved_pct": 91,
+        "median_days_to_fix": 1427.7,
+        "fix_sample": 29,
+        "opened_90d": 0,
+        "closed_90d": 30,
+        "issue_health": 57,
+        "archived": false,
+        "url": "https://github.com/dropbox/dropbox-sdk-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "dropbox/dropbox-sdk-python",
+        "role": "sdk",
+        "open": 18,
+        "resolved": 192,
+        "not_planned": 1,
+        "resolved_pct": 91,
+        "median_days_to_fix": 1251.6,
+        "fix_sample": 16,
+        "opened_90d": 1,
+        "closed_90d": 7,
+        "issue_health": 57,
+        "archived": false,
+        "url": "https://github.com/dropbox/dropbox-sdk-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -32158,6 +35960,23 @@
         "downloads_month": 12316806,
         "url": "https://www.npmjs.com/package/@linear/sdk",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "linear/linear",
+        "role": "sdk",
+        "open": 13,
+        "resolved": 207,
+        "not_planned": 132,
+        "resolved_pct": 94,
+        "median_days_to_fix": 4.7,
+        "fix_sample": 47,
+        "opened_90d": 22,
+        "closed_90d": 28,
+        "issue_health": 88,
+        "archived": false,
+        "url": "https://github.com/linear/linear/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -32316,6 +36135,40 @@
         "downloads_month": 5816938,
         "url": "https://pypi.org/project/msgraph-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "microsoftgraph/msgraph-sdk-javascript",
+        "role": "sdk",
+        "open": 78,
+        "resolved": 372,
+        "not_planned": 10,
+        "resolved_pct": 83,
+        "median_days_to_fix": 790.5,
+        "fix_sample": 1,
+        "opened_90d": 2,
+        "closed_90d": 1,
+        "issue_health": 44,
+        "archived": false,
+        "url": "https://github.com/microsoftgraph/msgraph-sdk-javascript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "microsoftgraph/msgraph-sdk-python",
+        "role": "sdk",
+        "open": 93,
+        "resolved": 257,
+        "not_planned": 4,
+        "resolved_pct": 73,
+        "median_days_to_fix": 103.3,
+        "fix_sample": 10,
+        "opened_90d": 5,
+        "closed_90d": 0,
+        "issue_health": 34,
+        "archived": false,
+        "url": "https://github.com/microsoftgraph/msgraph-sdk-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -32473,6 +36326,23 @@
         "downloads_month": 538571,
         "url": "https://www.npmjs.com/package/monday-sdk-js",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mondaycom/monday-sdk-js",
+        "role": "sdk",
+        "open": 11,
+        "resolved": 39,
+        "not_planned": 1,
+        "resolved_pct": 78,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 31,
+        "archived": false,
+        "url": "https://github.com/mondaycom/monday-sdk-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -32596,6 +36466,23 @@
         "downloads_month": 17448,
         "url": "https://www.npmjs.com/package/nocodb-sdk",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "nocodb/nocodb",
+        "role": "sdk",
+        "open": 387,
+        "resolved": 4290,
+        "not_planned": 125,
+        "resolved_pct": 92,
+        "median_days_to_fix": 23.5,
+        "fix_sample": 100,
+        "opened_90d": 78,
+        "closed_90d": 80,
+        "issue_health": 72,
+        "archived": false,
+        "url": "https://github.com/nocodb/nocodb/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -32767,6 +36654,23 @@
         "downloads_month": 8625086,
         "url": "https://www.npmjs.com/package/@notionhq/client",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "makenotion/notion-sdk-js",
+        "role": "sdk",
+        "open": 58,
+        "resolved": 230,
+        "not_planned": 3,
+        "resolved_pct": 80,
+        "median_days_to_fix": 115.8,
+        "fix_sample": 7,
+        "opened_90d": 3,
+        "closed_90d": 0,
+        "issue_health": 36,
+        "archived": false,
+        "url": "https://github.com/makenotion/notion-sdk-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -32937,6 +36841,23 @@
         "downloads_month": 150862,
         "url": "https://pypi.org/project/todoist-api-python/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Doist/todoist-api-python",
+        "role": "sdk",
+        "open": 8,
+        "resolved": 43,
+        "not_planned": 6,
+        "resolved_pct": 84,
+        "median_days_to_fix": 82.1,
+        "fix_sample": 6,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 40,
+        "archived": false,
+        "url": "https://github.com/Doist/todoist-api-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -33449,6 +37370,40 @@
         "downloads_month": 3544086,
         "url": "https://pypi.org/project/hubspot-api-client/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "HubSpot/hubspot-api-nodejs",
+        "role": "sdk",
+        "open": 53,
+        "resolved": 209,
+        "not_planned": 0,
+        "resolved_pct": 80,
+        "median_days_to_fix": 162.1,
+        "fix_sample": 4,
+        "opened_90d": 4,
+        "closed_90d": 0,
+        "issue_health": 35,
+        "archived": false,
+        "url": "https://github.com/HubSpot/hubspot-api-nodejs/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "HubSpot/hubspot-api-python",
+        "role": "sdk",
+        "open": 19,
+        "resolved": 171,
+        "not_planned": 0,
+        "resolved_pct": 90,
+        "median_days_to_fix": 0.0,
+        "fix_sample": 1,
+        "opened_90d": 2,
+        "closed_90d": 0,
+        "issue_health": 76,
+        "archived": false,
+        "url": "https://github.com/HubSpot/hubspot-api-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -33621,6 +37576,40 @@
         "downloads_month": 248819,
         "url": "https://pypi.org/project/python-intercom/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "intercom/intercom-node",
+        "role": "sdk",
+        "open": 17,
+        "resolved": 180,
+        "not_planned": 1,
+        "resolved_pct": 91,
+        "median_days_to_fix": 110.3,
+        "fix_sample": 8,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 41,
+        "archived": false,
+        "url": "https://github.com/intercom/intercom-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "intercom/python-intercom",
+        "role": "sdk",
+        "open": 3,
+        "resolved": 111,
+        "not_planned": 6,
+        "resolved_pct": 97,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 39,
+        "archived": false,
+        "url": "https://github.com/intercom/python-intercom/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -33814,6 +37803,40 @@
         "downloads_month": 253129,
         "url": "https://pypi.org/project/klaviyo-api/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "klaviyo/klaviyo-api-node",
+        "role": "sdk",
+        "open": 14,
+        "resolved": 43,
+        "not_planned": 1,
+        "resolved_pct": 75,
+        "median_days_to_fix": 25.3,
+        "fix_sample": 1,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 44,
+        "archived": false,
+        "url": "https://github.com/klaviyo/klaviyo-api-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "klaviyo/klaviyo-api-python",
+        "role": "sdk",
+        "open": 6,
+        "resolved": 39,
+        "not_planned": 0,
+        "resolved_pct": 87,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 55,
+        "archived": false,
+        "url": "https://github.com/klaviyo/klaviyo-api-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -33990,6 +38013,23 @@
         "downloads_month": 516454,
         "url": "https://pypi.org/project/mailchimp-marketing/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "damientilman/mailchimp-mcp-server",
+        "role": "mcp",
+        "open": 0,
+        "resolved": 27,
+        "not_planned": 0,
+        "resolved_pct": 100,
+        "median_days_to_fix": 10.7,
+        "fix_sample": 27,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 83,
+        "archived": false,
+        "url": "https://github.com/damientilman/mailchimp-mcp-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/mailchimp-marketing-api.json"
@@ -34128,6 +38168,23 @@
         "downloads_month": 283579,
         "url": "https://www.npmjs.com/package/pipedrive",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "pipedrive/client-nodejs",
+        "role": "sdk",
+        "open": 2,
+        "resolved": 171,
+        "not_planned": 2,
+        "resolved_pct": 99,
+        "median_days_to_fix": 60.0,
+        "fix_sample": 9,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 67,
+        "archived": false,
+        "url": "https://github.com/pipedrive/client-nodejs/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -34687,6 +38744,23 @@
         "downloads_month": 747932,
         "url": "https://www.npmjs.com/package/@atproto/api",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "bluesky-social/atproto",
+        "role": "sdk",
+        "open": 542,
+        "resolved": 471,
+        "not_planned": 38,
+        "resolved_pct": 46,
+        "median_days_to_fix": 16.0,
+        "fix_sample": 73,
+        "opened_90d": 30,
+        "closed_90d": 23,
+        "issue_health": 53,
+        "archived": false,
+        "url": "https://github.com/bluesky-social/atproto/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -35474,6 +39548,23 @@
         "downloads_month": 197657,
         "url": "https://pypi.org/project/xdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "xdevplatform/twitter-api-typescript-sdk",
+        "role": "sdk",
+        "open": 49,
+        "resolved": 19,
+        "not_planned": 0,
+        "resolved_pct": 28,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 31,
+        "archived": false,
+        "url": "https://github.com/xdevplatform/twitter-api-typescript-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -35859,6 +39950,23 @@
         "downloads_month": 45694,
         "url": "https://www.npmjs.com/package/@geoapify/geocoder-autocomplete",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "geoapify/geocoder-autocomplete",
+        "role": "sdk",
+        "open": 9,
+        "resolved": 5,
+        "not_planned": 0,
+        "resolved_pct": 36,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 34,
+        "archived": false,
+        "url": "https://github.com/geoapify/geocoder-autocomplete/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -36026,6 +40134,40 @@
         "downloads_month": 3144295,
         "url": "https://pypi.org/project/googlemaps/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googlemaps/google-maps-services-js",
+        "role": "sdk",
+        "open": 41,
+        "resolved": 344,
+        "not_planned": 0,
+        "resolved_pct": 89,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 36,
+        "archived": false,
+        "url": "https://github.com/googlemaps/google-maps-services-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googlemaps/google-maps-services-python",
+        "role": "sdk",
+        "open": 54,
+        "resolved": 234,
+        "not_planned": 0,
+        "resolved_pct": 81,
+        "median_days_to_fix": 0.0,
+        "fix_sample": 1,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 73,
+        "archived": false,
+        "url": "https://github.com/googlemaps/google-maps-services-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -36810,6 +40952,57 @@
         "downloads_month": 150163,
         "url": "https://pypi.org/project/mapbox/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mapbox/mapbox-gl-js",
+        "role": "sdk",
+        "open": 1415,
+        "resolved": 6526,
+        "not_planned": 113,
+        "resolved_pct": 82,
+        "median_days_to_fix": 50.9,
+        "fix_sample": 84,
+        "opened_90d": 19,
+        "closed_90d": 24,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/mapbox/mapbox-gl-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mapbox/mapbox-sdk-js",
+        "role": "sdk",
+        "open": 63,
+        "resolved": 180,
+        "not_planned": 1,
+        "resolved_pct": 74,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 2,
+        "closed_90d": 0,
+        "issue_health": 30,
+        "archived": false,
+        "url": "https://github.com/mapbox/mapbox-sdk-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mapbox/mapbox-sdk-py",
+        "role": "sdk",
+        "open": 13,
+        "resolved": 136,
+        "not_planned": 0,
+        "resolved_pct": 91,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 57,
+        "archived": true,
+        "url": "https://github.com/mapbox/mapbox-sdk-py/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -37071,6 +41264,23 @@
         "downloads_month": 243825,
         "url": "https://pypi.org/project/openmeteo-requests/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "open-meteo/python-requests",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 18,
+        "not_planned": 1,
+        "resolved_pct": 100,
+        "median_days_to_fix": 2.2,
+        "fix_sample": 5,
+        "opened_90d": 0,
+        "closed_90d": 1,
+        "issue_health": 95,
+        "archived": false,
+        "url": "https://github.com/open-meteo/python-requests/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -37212,6 +41422,23 @@
         "downloads_month": 562337,
         "url": "https://pypi.org/project/opencage/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "OpenCageData/python-opencage-geocoder",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 16,
+        "not_planned": 1,
+        "resolved_pct": 94,
+        "median_days_to_fix": 0.0,
+        "fix_sample": 2,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 98,
+        "archived": false,
+        "url": "https://github.com/OpenCageData/python-opencage-geocoder/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -37333,6 +41560,40 @@
         "downloads_month": 47494,
         "url": "https://pypi.org/project/openrouteservice/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "GIScience/openrouteservice-js",
+        "role": "sdk",
+        "open": 2,
+        "resolved": 34,
+        "not_planned": 0,
+        "resolved_pct": 94,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 58,
+        "archived": false,
+        "url": "https://github.com/GIScience/openrouteservice-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "GIScience/openrouteservice-py",
+        "role": "sdk",
+        "open": 12,
+        "resolved": 42,
+        "not_planned": 0,
+        "resolved_pct": 78,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 3,
+        "closed_90d": 0,
+        "issue_health": 31,
+        "archived": false,
+        "url": "https://github.com/GIScience/openrouteservice-py/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -37838,6 +42099,23 @@
         "archived": false,
         "url": "https://github.com/komoot/photon",
         "fetched_at": "2026-10-12T13:09Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "komoot/photon",
+        "role": "repo",
+        "open": 42,
+        "resolved": 464,
+        "not_planned": 38,
+        "resolved_pct": 92,
+        "median_days_to_fix": 14.5,
+        "fix_sample": 31,
+        "opened_90d": 12,
+        "closed_90d": 13,
+        "issue_health": 76,
+        "archived": false,
+        "url": "https://github.com/komoot/photon/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -38139,6 +42417,57 @@
         "downloads_month": 732351,
         "url": "https://pypi.org/project/Adyen/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Adyen/adyen-openapi",
+        "role": "spec",
+        "open": 11,
+        "resolved": 26,
+        "not_planned": 0,
+        "resolved_pct": 70,
+        "median_days_to_fix": 64.5,
+        "fix_sample": 2,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 55,
+        "archived": false,
+        "url": "https://github.com/Adyen/adyen-openapi/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Adyen/adyen-node-api-library",
+        "role": "sdk",
+        "open": 8,
+        "resolved": 146,
+        "not_planned": 5,
+        "resolved_pct": 95,
+        "median_days_to_fix": 12.0,
+        "fix_sample": 14,
+        "opened_90d": 4,
+        "closed_90d": 4,
+        "issue_health": 79,
+        "archived": false,
+        "url": "https://github.com/Adyen/adyen-node-api-library/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Adyen/adyen-python-api-library",
+        "role": "sdk",
+        "open": 10,
+        "resolved": 82,
+        "not_planned": 1,
+        "resolved_pct": 89,
+        "median_days_to_fix": 30.7,
+        "fix_sample": 5,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 68,
+        "archived": false,
+        "url": "https://github.com/Adyen/adyen-python-api-library/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -38283,6 +42612,57 @@
         "downloads_month": 1066689,
         "url": "https://pypi.org/project/alpaca-py/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "alpacahq/alpaca-mcp-server",
+        "role": "mcp",
+        "open": 21,
+        "resolved": 25,
+        "not_planned": 1,
+        "resolved_pct": 54,
+        "median_days_to_fix": 8.5,
+        "fix_sample": 17,
+        "opened_90d": 7,
+        "closed_90d": 10,
+        "issue_health": 67,
+        "archived": false,
+        "url": "https://github.com/alpacahq/alpaca-mcp-server/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "alpacahq/alpaca-trade-api-js",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 148,
+        "not_planned": 0,
+        "resolved_pct": 100,
+        "median_days_to_fix": 1230.0,
+        "fix_sample": 39,
+        "opened_90d": 2,
+        "closed_90d": 38,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/alpacahq/alpaca-trade-api-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "alpacahq/alpaca-py",
+        "role": "sdk",
+        "open": 75,
+        "resolved": 209,
+        "not_planned": 1,
+        "resolved_pct": 74,
+        "median_days_to_fix": 120.0,
+        "fix_sample": 16,
+        "opened_90d": 8,
+        "closed_90d": 8,
+        "issue_health": 54,
+        "archived": false,
+        "url": "https://github.com/alpacahq/alpaca-py/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -38568,6 +42948,40 @@
         "downloads_month": 107008,
         "url": "https://pypi.org/project/cdp-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "coinbase/payments-mcp",
+        "role": "mcp",
+        "open": 16,
+        "resolved": 1,
+        "not_planned": 0,
+        "resolved_pct": 6,
+        "median_days_to_fix": 12.1,
+        "fix_sample": 1,
+        "opened_90d": 4,
+        "closed_90d": 0,
+        "issue_health": 24,
+        "archived": false,
+        "url": "https://github.com/coinbase/payments-mcp/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "coinbase/cdp-sdk",
+        "role": "sdk",
+        "open": 13,
+        "resolved": 65,
+        "not_planned": 36,
+        "resolved_pct": 83,
+        "median_days_to_fix": 7.2,
+        "fix_sample": 60,
+        "opened_90d": 51,
+        "closed_90d": 39,
+        "issue_health": 75,
+        "archived": false,
+        "url": "https://github.com/coinbase/cdp-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -38708,6 +43122,23 @@
         "downloads_month": 14015,
         "url": "https://pypi.org/project/coingecko-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "coingecko/coingecko-typescript",
+        "role": "sdk",
+        "open": 3,
+        "resolved": 10,
+        "not_planned": 2,
+        "resolved_pct": 77,
+        "median_days_to_fix": 67.8,
+        "fix_sample": 3,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 38,
+        "archived": false,
+        "url": "https://github.com/coingecko/coingecko-typescript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -39286,6 +43717,40 @@
         "downloads_month": 276423,
         "url": "https://pypi.org/project/mercadopago/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mercadopago/sdk-nodejs",
+        "role": "sdk",
+        "open": 6,
+        "resolved": 89,
+        "not_planned": 21,
+        "resolved_pct": 94,
+        "median_days_to_fix": 29.8,
+        "fix_sample": 6,
+        "opened_90d": 9,
+        "closed_90d": 4,
+        "issue_health": 59,
+        "archived": false,
+        "url": "https://github.com/mercadopago/sdk-nodejs/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mercadopago/sdk-python",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 19,
+        "not_planned": 0,
+        "resolved_pct": 95,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 58,
+        "archived": false,
+        "url": "https://github.com/mercadopago/sdk-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -39750,6 +44215,57 @@
         "downloads_month": 2851165,
         "url": "https://pypi.org/project/plaid-python/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "plaid/plaid-openapi",
+        "role": "spec",
+        "open": 6,
+        "resolved": 40,
+        "not_planned": 1,
+        "resolved_pct": 87,
+        "median_days_to_fix": 62.3,
+        "fix_sample": 3,
+        "opened_90d": 1,
+        "closed_90d": 1,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/plaid/plaid-openapi/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "plaid/plaid-node",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 216,
+        "not_planned": 5,
+        "resolved_pct": 97,
+        "median_days_to_fix": 47.4,
+        "fix_sample": 7,
+        "opened_90d": 0,
+        "closed_90d": 2,
+        "issue_health": 68,
+        "archived": false,
+        "url": "https://github.com/plaid/plaid-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "plaid/plaid-python",
+        "role": "sdk",
+        "open": 8,
+        "resolved": 152,
+        "not_planned": 2,
+        "resolved_pct": 95,
+        "median_days_to_fix": 16.9,
+        "fix_sample": 1,
+        "opened_90d": 2,
+        "closed_90d": 1,
+        "issue_health": 66,
+        "archived": false,
+        "url": "https://github.com/plaid/plaid-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -39901,6 +44417,57 @@
         "downloads_month": 241194,
         "url": "https://pypi.org/project/massive/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "massive-com/mcp_massive",
+        "role": "mcp",
+        "open": 8,
+        "resolved": 26,
+        "not_planned": 15,
+        "resolved_pct": 76,
+        "median_days_to_fix": 78.1,
+        "fix_sample": 20,
+        "opened_90d": 6,
+        "closed_90d": 1,
+        "issue_health": 40,
+        "archived": false,
+        "url": "https://github.com/massive-com/mcp_massive/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "massive-com/client-js",
+        "role": "sdk",
+        "open": 6,
+        "resolved": 91,
+        "not_planned": 0,
+        "resolved_pct": 94,
+        "median_days_to_fix": 291.5,
+        "fix_sample": 26,
+        "opened_90d": 2,
+        "closed_90d": 1,
+        "issue_health": 49,
+        "archived": false,
+        "url": "https://github.com/massive-com/client-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "massive-com/client-python",
+        "role": "sdk",
+        "open": 15,
+        "resolved": 350,
+        "not_planned": 19,
+        "resolved_pct": 96,
+        "median_days_to_fix": 50.2,
+        "fix_sample": 31,
+        "opened_90d": 4,
+        "closed_90d": 1,
+        "issue_health": 52,
+        "archived": false,
+        "url": "https://github.com/massive-com/client-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -40067,6 +44634,57 @@
         "downloads_month": 256685,
         "url": "https://pypi.org/project/squareup/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "square/connect-api-specification",
+        "role": "spec",
+        "open": 15,
+        "resolved": 23,
+        "not_planned": 0,
+        "resolved_pct": 61,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 2,
+        "closed_90d": 0,
+        "issue_health": 24,
+        "archived": false,
+        "url": "https://github.com/square/connect-api-specification/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "square/square-nodejs-sdk",
+        "role": "sdk",
+        "open": 2,
+        "resolved": 73,
+        "not_planned": 0,
+        "resolved_pct": 97,
+        "median_days_to_fix": 82.9,
+        "fix_sample": 4,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 65,
+        "archived": false,
+        "url": "https://github.com/square/square-nodejs-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "square/square-python-sdk",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 26,
+        "not_planned": 0,
+        "resolved_pct": 100,
+        "median_days_to_fix": 80.7,
+        "fix_sample": 4,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 66,
+        "archived": false,
+        "url": "https://github.com/square/square-python-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -40255,6 +44873,40 @@
         "downloads_month": 37229330,
         "url": "https://pypi.org/project/stripe/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "stripe/stripe-node",
+        "role": "sdk",
+        "open": 36,
+        "resolved": 951,
+        "not_planned": 14,
+        "resolved_pct": 96,
+        "median_days_to_fix": 2.2,
+        "fix_sample": 58,
+        "opened_90d": 7,
+        "closed_90d": 7,
+        "issue_health": 93,
+        "archived": false,
+        "url": "https://github.com/stripe/stripe-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "stripe/stripe-python",
+        "role": "sdk",
+        "open": 17,
+        "resolved": 401,
+        "not_planned": 3,
+        "resolved_pct": 96,
+        "median_days_to_fix": 9.1,
+        "fix_sample": 21,
+        "opened_90d": 5,
+        "closed_90d": 5,
+        "issue_health": 83,
+        "archived": false,
+        "url": "https://github.com/stripe/stripe-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -40536,6 +45188,23 @@
         "questions": 256,
         "url": "https://stackoverflow.com/questions/tagged/amazon-selling-partner-api",
         "fetched_at": "2026-10-14T06:13Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "amzn/selling-partner-api-models",
+        "role": "spec",
+        "open": 234,
+        "resolved": 3215,
+        "not_planned": 471,
+        "resolved_pct": 93,
+        "median_days_to_fix": 55.2,
+        "fix_sample": 100,
+        "opened_90d": 70,
+        "closed_90d": 22,
+        "issue_health": 52,
+        "archived": false,
+        "url": "https://github.com/amzn/selling-partner-api-models/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -40704,6 +45373,23 @@
         "downloads_month": 28958,
         "url": "https://pypi.org/project/bigcommerce/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "bigcommerce/bigcommerce-api-python",
+        "role": "sdk",
+        "open": 21,
+        "resolved": 20,
+        "not_planned": 0,
+        "resolved_pct": 49,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 40,
+        "archived": false,
+        "url": "https://github.com/bigcommerce/bigcommerce-api-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/bigcommerce-api.json"
@@ -41283,6 +45969,40 @@
         "downloads_month": 776012,
         "url": "https://pypi.org/project/ShopifyAPI/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Shopify/shopify-app-js",
+        "role": "sdk",
+        "open": 80,
+        "resolved": 306,
+        "not_planned": 38,
+        "resolved_pct": 79,
+        "median_days_to_fix": 335.9,
+        "fix_sample": 50,
+        "opened_90d": 16,
+        "closed_90d": 8,
+        "issue_health": 43,
+        "archived": false,
+        "url": "https://github.com/Shopify/shopify-app-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "Shopify/shopify_python_api",
+        "role": "sdk",
+        "open": 0,
+        "resolved": 286,
+        "not_planned": 160,
+        "resolved_pct": 100,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 2,
+        "closed_90d": 16,
+        "issue_health": 80,
+        "archived": true,
+        "url": "https://github.com/Shopify/shopify_python_api/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -41387,6 +46107,40 @@
         "downloads_month": 105595,
         "url": "https://pypi.org/project/WooCommerce/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "woocommerce/woocommerce-rest-api-js-lib",
+        "role": "sdk",
+        "open": 51,
+        "resolved": 18,
+        "not_planned": 0,
+        "resolved_pct": 26,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 30,
+        "archived": false,
+        "url": "https://github.com/woocommerce/woocommerce-rest-api-js-lib/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "woocommerce/wc-api-python",
+        "role": "sdk",
+        "open": 25,
+        "resolved": 57,
+        "not_planned": 1,
+        "resolved_pct": 70,
+        "median_days_to_fix": null,
+        "fix_sample": 0,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 48,
+        "archived": false,
+        "url": "https://github.com/woocommerce/wc-api-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ]
   },
@@ -41737,6 +46491,23 @@
         "downloads_month": 1726025,
         "url": "https://pypi.org/project/composio/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "ComposioHQ/composio",
+        "role": "sdk",
+        "open": 50,
+        "resolved": 604,
+        "not_planned": 129,
+        "resolved_pct": 92,
+        "median_days_to_fix": 3.0,
+        "fix_sample": 100,
+        "opened_90d": 129,
+        "closed_90d": 109,
+        "issue_health": 87,
+        "archived": false,
+        "url": "https://github.com/ComposioHQ/composio/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -42599,6 +47370,23 @@
         "downloads_month": 2285928,
         "url": "https://www.npmjs.com/package/@nangohq/node",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "NangoHQ/nango",
+        "role": "sdk",
+        "open": 26,
+        "resolved": 843,
+        "not_planned": 99,
+        "resolved_pct": 97,
+        "median_days_to_fix": 10.8,
+        "fix_sample": 33,
+        "opened_90d": 54,
+        "closed_90d": 53,
+        "issue_health": 81,
+        "archived": false,
+        "url": "https://github.com/NangoHQ/nango/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -42832,6 +47620,23 @@
         "downloads_month": 1451667,
         "url": "https://www.npmjs.com/package/@pipedream/sdk",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "PipedreamHQ/pipedream-sdk-typescript",
+        "role": "sdk",
+        "open": 3,
+        "resolved": 7,
+        "not_planned": 0,
+        "resolved_pct": 70,
+        "median_days_to_fix": 73.0,
+        "fix_sample": 5,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 34,
+        "archived": false,
+        "url": "https://github.com/PipedreamHQ/pipedream-sdk-typescript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -42965,6 +47770,23 @@
         "downloads_month": 847,
         "url": "https://www.npmjs.com/package/@stackone/ai",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "StackOneHQ/stackone-ai-node",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 39,
+        "not_planned": 10,
+        "resolved_pct": 98,
+        "median_days_to_fix": 0.6,
+        "fix_sample": 31,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 77,
+        "archived": false,
+        "url": "https://github.com/StackOneHQ/stackone-ai-node/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -43085,6 +47907,23 @@
         "downloads_month": 8323,
         "url": "https://www.npmjs.com/package/@superglue/client",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "superglue-ai/superglue",
+        "role": "sdk",
+        "open": 5,
+        "resolved": 33,
+        "not_planned": 4,
+        "resolved_pct": 87,
+        "median_days_to_fix": 2.9,
+        "fix_sample": 12,
+        "opened_90d": 4,
+        "closed_90d": 0,
+        "issue_health": 68,
+        "archived": false,
+        "url": "https://github.com/superglue-ai/superglue/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -43349,6 +48188,40 @@
         "downloads_month": 150199657,
         "url": "https://pypi.org/project/anthropic/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "anthropics/anthropic-sdk-typescript",
+        "role": "sdk",
+        "open": 37,
+        "resolved": 215,
+        "not_planned": 61,
+        "resolved_pct": 85,
+        "median_days_to_fix": 88.8,
+        "fix_sample": 100,
+        "opened_90d": 31,
+        "closed_90d": 54,
+        "issue_health": 60,
+        "archived": false,
+        "url": "https://github.com/anthropics/anthropic-sdk-typescript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "anthropics/anthropic-sdk-python",
+        "role": "sdk",
+        "open": 65,
+        "resolved": 333,
+        "not_planned": 115,
+        "resolved_pct": 84,
+        "median_days_to_fix": 103.6,
+        "fix_sample": 100,
+        "opened_90d": 66,
+        "closed_90d": 139,
+        "issue_health": 58,
+        "archived": false,
+        "url": "https://github.com/anthropics/anthropic-sdk-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -43474,6 +48347,40 @@
         "downloads_month": 10340762,
         "url": "https://pypi.org/project/cohere/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cohere-ai/cohere-typescript",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 63,
+        "not_planned": 1,
+        "resolved_pct": 98,
+        "median_days_to_fix": 31.8,
+        "fix_sample": 6,
+        "opened_90d": 1,
+        "closed_90d": 0,
+        "issue_health": 52,
+        "archived": false,
+        "url": "https://github.com/cohere-ai/cohere-typescript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "cohere-ai/cohere-python",
+        "role": "sdk",
+        "open": 3,
+        "resolved": 123,
+        "not_planned": 9,
+        "resolved_pct": 98,
+        "median_days_to_fix": 16.9,
+        "fix_sample": 31,
+        "opened_90d": 9,
+        "closed_90d": 6,
+        "issue_health": 71,
+        "archived": false,
+        "url": "https://github.com/cohere-ai/cohere-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -43613,6 +48520,23 @@
         "downloads_month": 1741711,
         "url": "https://pypi.org/project/opik/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "comet-ml/opik",
+        "role": "sdk",
+        "open": 77,
+        "resolved": 676,
+        "not_planned": 37,
+        "resolved_pct": 90,
+        "median_days_to_fix": 15.4,
+        "fix_sample": 100,
+        "opened_90d": 103,
+        "closed_90d": 116,
+        "issue_health": 75,
+        "archived": false,
+        "url": "https://github.com/comet-ml/opik/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -43873,6 +48797,40 @@
         "downloads_month": 2886801,
         "url": "https://pypi.org/project/fal-client/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "fal-ai/fal-js",
+        "role": "sdk",
+        "open": 7,
+        "resolved": 46,
+        "not_planned": 1,
+        "resolved_pct": 87,
+        "median_days_to_fix": 175.0,
+        "fix_sample": 18,
+        "opened_90d": 1,
+        "closed_90d": 15,
+        "issue_health": 58,
+        "archived": false,
+        "url": "https://github.com/fal-ai/fal-js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "fal-ai/fal",
+        "role": "sdk",
+        "open": 59,
+        "resolved": 46,
+        "not_planned": 15,
+        "resolved_pct": 44,
+        "median_days_to_fix": 3.9,
+        "fix_sample": 9,
+        "opened_90d": 18,
+        "closed_90d": 0,
+        "issue_health": 49,
+        "archived": false,
+        "url": "https://github.com/fal-ai/fal/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -44145,6 +49103,48 @@
           "google-veo-gemini-api-vertex-ai"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/js-genai",
+        "role": "sdk",
+        "open": 116,
+        "resolved": 178,
+        "not_planned": 91,
+        "resolved_pct": 61,
+        "median_days_to_fix": 8.1,
+        "fix_sample": 55,
+        "opened_90d": 24,
+        "closed_90d": 19,
+        "issue_health": 65,
+        "archived": false,
+        "url": "https://github.com/googleapis/js-genai/issues",
+        "shared_with": [
+          "google-gemini-imagen-image-api",
+          "google-veo-gemini-api-vertex-ai"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "googleapis/python-genai",
+        "role": "sdk",
+        "open": 227,
+        "resolved": 482,
+        "not_planned": 256,
+        "resolved_pct": 68,
+        "median_days_to_fix": 10.8,
+        "fix_sample": 100,
+        "opened_90d": 64,
+        "closed_90d": 26,
+        "issue_health": 58,
+        "archived": false,
+        "url": "https://github.com/googleapis/python-genai/issues",
+        "shared_with": [
+          "google-gemini-imagen-image-api",
+          "google-veo-gemini-api-vertex-ai"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -44400,6 +49400,40 @@
         "downloads_month": 232552563,
         "url": "https://pypi.org/project/huggingface_hub/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "huggingface/huggingface.js",
+        "role": "sdk",
+        "open": 144,
+        "resolved": 254,
+        "not_planned": 45,
+        "resolved_pct": 64,
+        "median_days_to_fix": 2.0,
+        "fix_sample": 38,
+        "opened_90d": 43,
+        "closed_90d": 27,
+        "issue_health": 73,
+        "archived": false,
+        "url": "https://github.com/huggingface/huggingface.js/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "huggingface/huggingface_hub",
+        "role": "sdk",
+        "open": 116,
+        "resolved": 1340,
+        "not_planned": 281,
+        "resolved_pct": 92,
+        "median_days_to_fix": 3.1,
+        "fix_sample": 100,
+        "opened_90d": 158,
+        "closed_90d": 209,
+        "issue_health": 90,
+        "archived": false,
+        "url": "https://github.com/huggingface/huggingface_hub/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -44572,6 +49606,46 @@
           "mistral-ocr-api"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mistralai/client-ts",
+        "role": "sdk",
+        "open": 14,
+        "resolved": 54,
+        "not_planned": 0,
+        "resolved_pct": 79,
+        "median_days_to_fix": 195.8,
+        "fix_sample": 39,
+        "opened_90d": 2,
+        "closed_90d": 1,
+        "issue_health": 44,
+        "archived": false,
+        "url": "https://github.com/mistralai/client-ts/issues",
+        "shared_with": [
+          "mistral-ocr-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "mistralai/client-python",
+        "role": "sdk",
+        "open": 34,
+        "resolved": 132,
+        "not_planned": 0,
+        "resolved_pct": 80,
+        "median_days_to_fix": 63.2,
+        "fix_sample": 52,
+        "opened_90d": 16,
+        "closed_90d": 2,
+        "issue_health": 42,
+        "archived": false,
+        "url": "https://github.com/mistralai/client-python/issues",
+        "shared_with": [
+          "mistral-ocr-api"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -44756,6 +49830,48 @@
           "openai-audio-api-tts-transcription"
         ],
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "openai/openai-node",
+        "role": "sdk",
+        "open": 2,
+        "resolved": 530,
+        "not_planned": 190,
+        "resolved_pct": 100,
+        "median_days_to_fix": 324.3,
+        "fix_sample": 100,
+        "opened_90d": 22,
+        "closed_90d": 92,
+        "issue_health": 62,
+        "archived": false,
+        "url": "https://github.com/openai/openai-node/issues",
+        "shared_with": [
+          "openai-images-api-gpt-image",
+          "openai-audio-api-tts-transcription"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "openai/openai-python",
+        "role": "sdk",
+        "open": 61,
+        "resolved": 831,
+        "not_planned": 436,
+        "resolved_pct": 93,
+        "median_days_to_fix": 345.4,
+        "fix_sample": 100,
+        "opened_90d": 48,
+        "closed_90d": 197,
+        "issue_health": 59,
+        "archived": false,
+        "url": "https://github.com/openai/openai-python/issues",
+        "shared_with": [
+          "openai-images-api-gpt-image",
+          "openai-audio-api-tts-transcription"
+        ],
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -44931,6 +50047,40 @@
         "downloads_month": 1643554,
         "url": "https://pypi.org/project/openrouter/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "OpenRouterTeam/typescript-sdk",
+        "role": "sdk",
+        "open": 20,
+        "resolved": 54,
+        "not_planned": 8,
+        "resolved_pct": 73,
+        "median_days_to_fix": 25.8,
+        "fix_sample": 52,
+        "opened_90d": 12,
+        "closed_90d": 2,
+        "issue_health": 47,
+        "archived": false,
+        "url": "https://github.com/OpenRouterTeam/typescript-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "OpenRouterTeam/python-sdk",
+        "role": "sdk",
+        "open": 20,
+        "resolved": 22,
+        "not_planned": 0,
+        "resolved_pct": 52,
+        "median_days_to_fix": 35.1,
+        "fix_sample": 22,
+        "opened_90d": 13,
+        "closed_90d": 1,
+        "issue_health": 34,
+        "archived": false,
+        "url": "https://github.com/OpenRouterTeam/python-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -45206,6 +50356,40 @@
         "downloads_month": 1526037,
         "url": "https://pypi.org/project/replicate/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "replicate/replicate-javascript",
+        "role": "sdk",
+        "open": 12,
+        "resolved": 119,
+        "not_planned": 14,
+        "resolved_pct": 91,
+        "median_days_to_fix": 31.7,
+        "fix_sample": 4,
+        "opened_90d": 2,
+        "closed_90d": 0,
+        "issue_health": 49,
+        "archived": false,
+        "url": "https://github.com/replicate/replicate-javascript/issues",
+        "fetched_at": "2026-10-14T13:08Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "replicate/replicate-python",
+        "role": "sdk",
+        "open": 58,
+        "resolved": 155,
+        "not_planned": 32,
+        "resolved_pct": 73,
+        "median_days_to_fix": 16.9,
+        "fix_sample": 3,
+        "opened_90d": 6,
+        "closed_90d": 3,
+        "issue_health": 57,
+        "archived": false,
+        "url": "https://github.com/replicate/replicate-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -45451,6 +50635,23 @@
         "downloads_month": 120263594,
         "url": "https://www.npmjs.com/package/@ai-sdk/gateway",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "vercel/ai",
+        "role": "sdk",
+        "open": 492,
+        "resolved": 4124,
+        "not_planned": 352,
+        "resolved_pct": 89,
+        "median_days_to_fix": 2.9,
+        "fix_sample": 100,
+        "opened_90d": 1022,
+        "closed_90d": 1414,
+        "issue_health": 89,
+        "archived": false,
+        "url": "https://github.com/vercel/ai/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -45571,6 +50772,23 @@
         "downloads_month": 3736436,
         "url": "https://pypi.org/project/voyageai/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "voyage-ai/typescript-sdk",
+        "role": "sdk",
+        "open": 1,
+        "resolved": 13,
+        "not_planned": 0,
+        "resolved_pct": 93,
+        "median_days_to_fix": 141.8,
+        "fix_sample": 6,
+        "opened_90d": 0,
+        "closed_90d": 0,
+        "issue_health": 61,
+        "archived": false,
+        "url": "https://github.com/voyage-ai/typescript-sdk/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {
@@ -45687,6 +50905,23 @@
         "downloads_month": 4773444,
         "url": "https://pypi.org/project/xai-sdk/",
         "fetched_at": "2026-10-14T06:27Z"
+      },
+      {
+        "source": "github_issues",
+        "repo": "xai-org/xai-sdk-python",
+        "role": "sdk",
+        "open": 18,
+        "resolved": 12,
+        "not_planned": 2,
+        "resolved_pct": 40,
+        "median_days_to_fix": 3.7,
+        "fix_sample": 9,
+        "opened_90d": 10,
+        "closed_90d": 0,
+        "issue_health": 48,
+        "archived": false,
+        "url": "https://github.com/xai-org/xai-sdk-python/issues",
+        "fetched_at": "2026-10-14T13:08Z"
       }
     ],
     "uptime": {

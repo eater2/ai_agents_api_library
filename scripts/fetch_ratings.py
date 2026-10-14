@@ -2,6 +2,8 @@
 
 Sources (only ones that allow automated access):
   github       stars, forks, last push of repos referenced by the entry (REST API, GITHUB_TOKEN)
+  github_issues  open vs resolved issues, median days to fix, last 90 days' intake and closes, issue_health 0-100,
+               for those repos and the official SDK repos named in npm/PyPI package metadata (GraphQL API, GITHUB_TOKEN)
   smithery     use count of the verified Smithery server with the same name (public registry API)
   sourceforge  rating, review count and review texts from sourceforge.net/software/product/<slug>/
                (allowed by robots.txt; product slugs come from its sitemap; a match must link the
@@ -32,7 +34,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -94,6 +96,80 @@ def github(repo, token):
         return None
     return {"source": "github", "repo": r["full_name"], "stars": r["stargazers_count"], "forks": r["forks_count"],
             "pushed_at": r["pushed_at"][:10], "archived": r["archived"], "url": r["html_url"]}
+
+
+# ---------- GitHub issues: how the vendor resolves reported problems ----------
+
+def sdk_repo(registry, pkg):
+    """GitHub repo named in the official package's metadata (npm repository field, PyPI project URLs)."""
+    if registry == "npm":
+        d = jget(f"https://registry.npmjs.org/{urllib.parse.quote(pkg, safe='@')}/latest")
+        rep = (d or {}).get("repository")
+        urls = [rep.get("url") if isinstance(rep, dict) else rep]
+    else:
+        info = (jget(f"https://pypi.org/pypi/{pkg}/json") or {}).get("info") or {}
+        links = info.get("project_urls") or {}
+        # Source/Repository links first; an "Issues" or "Changelog" link names the same repo anyway.
+        urls = sorted(links.values(), key=lambda u: "/issues" in u or "/blob/" in u) + [info.get("home_page")]
+    for u in urls:
+        m = re.search(r"github\.com[/:]([\w.-]+)/([\w.-]+)", u or "")
+        if m:
+            return f"{m[1]}/{m[2].removesuffix('.git')}"
+    return None
+
+
+ISSUES_Q = """query($o:String!,$n:String!,$np:String!,$o90:String!,$c90:String!,$s:String!){
+ repository(owner:$o,name:$n){nameWithOwner hasIssuesEnabled isArchived url
+  open:issues(states:OPEN){totalCount} closed:issues(states:CLOSED){totalCount}}
+ np:search(type:ISSUE,query:$np){issueCount} o90:search(type:ISSUE,query:$o90){issueCount}
+ c90:search(type:ISSUE,query:$c90){issueCount}
+ s:search(type:ISSUE,query:$s,first:100){nodes{... on Issue{createdAt closedAt}}}}"""
+MIN_ISSUES = 10  # fewer reported issues say nothing about how they are handled
+
+
+def issue_health(resolved, median_days, closed_90d, opened_90d, open_now):
+    """0-100: share of issues resolved (40%), speed of fixing (40%, 14-day median = half), keeping up lately (20%).
+    No fix in 12 months scores no speed while issues stay open; a repo with nothing open is neutral."""
+    speed = 1 / (1 + median_days / 14) if median_days is not None else 0.0 if open_now else 0.5
+    flow = min(1.0, closed_90d / opened_90d) if opened_90d else 1.0
+    return round(100 * (0.4 * resolved + 0.4 * speed + 0.2 * flow))
+
+
+def github_issues(repo, role, token):
+    """Open vs resolved issues now, median days from report to fix (last 12 months), last 90 days' intake and closes."""
+    if not token:
+        return None
+    today = datetime.now(timezone.utc).date()
+    d90, d365 = (today - timedelta(days=90)).isoformat(), (today - timedelta(days=365)).isoformat()
+    q = f"repo:{repo} is:issue"
+    owner, name = repo.split("/", 1)
+    body = json.dumps({"query": ISSUES_Q, "variables": {
+        "o": owner, "n": name, "np": f'{q} is:closed reason:"not planned"', "o90": f"{q} created:>={d90}",
+        "c90": f"{q} closed:>={d90}", "s": f"{q} is:closed reason:completed closed:>={d365} sort:updated-desc"}}).encode()
+    req = urllib.request.Request("https://api.github.com/graphql", body,
+                                 {"Authorization": f"Bearer {token}", "Content-Type": "application/json", "User-Agent": UA})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            d = json.loads(r.read()).get("data") or {}
+    except (urllib.error.URLError, ValueError, TimeoutError):
+        return None
+    rp = d.get("repository")
+    if not rp or not rp["hasIssuesEnabled"]:
+        return None
+    open_, closed = rp["open"]["totalCount"], rp["closed"]["totalCount"]
+    # Closed as "not planned" (wontfix, duplicate, stale bot) is not a fix; the reason exists only since 2022.
+    fixed = max(0, closed - d["np"]["issueCount"])
+    if open_ + fixed < MIN_ISSUES:
+        return None
+    days = sorted((datetime.fromisoformat(n["closedAt"][:19]) - datetime.fromisoformat(n["createdAt"][:19])).total_seconds() / 86400
+                  for n in d["s"]["nodes"] if n.get("closedAt"))
+    median = round(days[len(days) // 2] if len(days) % 2 else (days[len(days) // 2 - 1] + days[len(days) // 2]) / 2, 1) if days else None
+    resolved = fixed / (fixed + open_)
+    o90, c90 = d["o90"]["issueCount"], d["c90"]["issueCount"]
+    return {"source": "github_issues", "repo": rp["nameWithOwner"], "role": role, "open": open_, "resolved": fixed,
+            "not_planned": closed - fixed, "resolved_pct": round(100 * resolved), "median_days_to_fix": median,
+            "fix_sample": len(days), "opened_90d": o90, "closed_90d": c90,
+            "issue_health": issue_health(resolved, median, c90, o90, open_), "archived": rp["isArchived"], "url": rp["url"] + "/issues"}
 
 
 # ---------- Smithery ----------
@@ -287,7 +363,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", help="comma-separated entry ids")
     ap.add_argument("--reviews", type=int, default=100, help="max review texts per entry")
-    ap.add_argument("--skip", default="", help="comma-separated sources to skip: github,smithery,sourceforge,npm,pypi,stackoverflow,appstore")
+    ap.add_argument("--skip", default="", help="comma-separated sources to skip: github,github_issues,smithery,sourceforge,npm,pypi,stackoverflow,appstore")
     args = ap.parse_args()
     skip = set(filter(None, args.skip.split(",")))
 
@@ -349,16 +425,44 @@ def main():
                     fresh[eid].append(res)
         print(f"{src}: {sum(1 for v in fresh.values() for x in v if x['source'] == src)} of {len(jobs)} packages", flush=True)
 
-    # One SDK can serve several entries (openai for chat, images and audio): name the others, so a count is not read as per-entry.
+    if "github_issues" not in skip:
+        token = github_token()
+        jobs, seen = [], {}
+        for e in catalog:
+            mcp_url = (e.get("mcp") or {}).get("url") or ""
+            mine = [(r, "mcp" if r.lower() in mcp_url.lower() else "spec" if r.lower() in (e.get("openapi") or "").lower() else "repo")
+                    for r in repos_of(e)]
+            for reg in ("npm", "pypi"):
+                for pkg in (pop.get(e["id"]) or {}).get(reg) or []:
+                    if (reg, pkg) not in seen:
+                        seen[(reg, pkg)] = sdk_repo(reg, pkg)
+                    r = seen[(reg, pkg)]
+                    if r and all(r.lower() != m[0].lower() for m in mine):
+                        mine.append((r, "sdk"))
+            jobs += [(e["id"], r, role) for r, role in mine]
+        stats = {}
+        for _, r, role in jobs:  # sequential: GraphQL search has a secondary rate limit
+            if r.lower() not in stats:
+                stats[r.lower()] = github_issues(r, role, token)
+                time.sleep(0.5)
+        for eid, r, role in jobs:
+            if stats[r.lower()]:
+                fresh[eid].append({**stats[r.lower()], "role": role})
+        print(f"github_issues: {sum(1 for v in fresh.values() for x in v if x['source'] == 'github_issues')} repos "
+              f"({sum(1 for v in stats.values() if v)} distinct of {len(stats)})", flush=True)
+
+    # One SDK or repo can serve several entries (openai for chat, images and audio; awslabs/mcp for many AWS services):
+    # name the others, so a count is not read as per-entry.
+    key = lambda x: (x["source"], x["package"]) if x["source"] in ("npm", "pypi") else (x["source"], x["repo"].lower())  # noqa: E731
     users = {}
     for eid, items in fresh.items():
         for x in items:
-            if x["source"] in ("npm", "pypi"):
-                users.setdefault((x["source"], x["package"]), []).append(eid)
+            if x["source"] in ("npm", "pypi", "github_issues"):
+                users.setdefault(key(x), []).append(eid)
     for eid, items in fresh.items():
         for x in items:
-            if x["source"] in ("npm", "pypi") and len(users[(x["source"], x["package"])]) > 1:
-                x["shared_with"] = [i for i in users[(x["source"], x["package"])] if i != eid]
+            if x["source"] in ("npm", "pypi", "github_issues") and len(users[key(x)]) > 1:
+                x["shared_with"] = [i for i in users[key(x)] if i != eid]
 
     if "stackoverflow" not in skip:
         tags = {e["id"]: pop[e["id"]]["stackoverflow_tag"] for e in catalog if (pop.get(e["id"]) or {}).get("stackoverflow_tag")}

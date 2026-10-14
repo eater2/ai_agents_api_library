@@ -41,7 +41,7 @@ def badges():
         ("Remote MCP endpoint", sh + "remote_MCP-free%2C_no_API_key-2EA44F?logo=vercel&logoColor=white", GH + "#mcp-server"),
     ]
 STALE_DAYS = 90
-MAX_CATEGORY_BYTES = 60 * 1024  # ~15k tokens; compact JSON (one entry per line) since call/unit_price were added
+MAX_CATEGORY_BYTES = 61 * 1024  # ~15k tokens; compact JSON (one entry per line) since call/unit_price were added; +1 KB for GitHub issue stats
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -92,7 +92,7 @@ T = {
         "h_legend": "Legend",
         "legend": [("MCP ✅", "official MCP server maintained by the vendor"), ("MCP ◐", "community-maintained MCP server"),
                    ("MCP —", "no MCP server known; use the REST API"), ("🆓", "free tier or free usage without payment"),
-                   ("★ (date)", "proof under the service name: SourceForge rating and review count, GitHub stars, Smithery uses — linked, with the date fetched")],
+                   ("★ (date)", "proof under the service name: SourceForge rating and review count, GitHub stars, GitHub issues fixed and days to fix, Smithery uses — linked, with the date fetched")],
         "cols": ["Service", "What an agent can do", "Auth", "MCP", "Free tier", "Docs"],
         "h_directories": "Related directories and registries",
         "directories_intro": "Other machine-readable sources agents can use to discover tools:",
@@ -221,13 +221,34 @@ def is_trial(e):
 RATINGS = {}  # id -> list of signals from data/ratings.json (scripts/fetch_ratings.py)
 OPERATIONS = json.loads((DATA / "operations.json").read_text("utf-8"))  # id -> definition; vocabulary of the operations field
 SOURCE_NAMES = {"sourceforge": "SourceForge", "github": "GitHub", "smithery": "Smithery", "npm": "npm", "pypi": "PyPI",
-                "stackoverflow": "Stack Overflow", "appstore": "App Store"}
+                "stackoverflow": "Stack Overflow", "appstore": "App Store", "github_issues": "GitHub issues"}
 
 
 def sdk_downloads(e):
     """Monthly downloads of the official SDKs (npm + PyPI) and the packages counted."""
     rs = [r for r in RATINGS.get(e["id"], []) if r["source"] in ("npm", "pypi")]
     return sum(r["downloads_month"] for r in rs), rs
+
+
+def main_issues(e):
+    """The GitHub repo that says most about the vendor's issue handling: its own (not shared with other entries), most issues."""
+    rs = [r for r in RATINGS.get(e["id"], []) if r["source"] == "github_issues"]
+    own = [r for r in rs if not r.get("shared_with")] or rs
+    return max(own, key=lambda r: r["open"] + r["resolved"], default=None)
+
+
+def issues_text(r, lang):
+    """'98% fixed · 3 d' / '98% naprawionych · 3 dni': share of issues resolved and median days to fix."""
+    days = "" if r["median_days_to_fix"] is None else f' · {r["median_days_to_fix"]:g} {"d" if lang == "en" else "dni"}'
+    return f'{r["resolved_pct"]}% {"fixed" if lang == "en" else "naprawionych"}{days}'
+
+
+def issues_title(r, lang):
+    if lang == "en":
+        return (f'GitHub issues of {r["repo"]} ({r["role"]}): {r["open"]} open, {r["resolved"]} fixed, median '
+                f'{r["median_days_to_fix"]} days to fix, issue health {r["issue_health"]}/100')
+    return (f'Zgłoszenia GitHub w {r["repo"]} ({r["role"]}): {r["open"]} otwartych, {r["resolved"]} naprawionych, mediana '
+            f'{r["median_days_to_fix"]} dni do naprawy, issue health {r["issue_health"]}/100')
 
 
 def short_count(n):
@@ -251,6 +272,8 @@ def proof_items(e):
             label = f"{src} [{r['tag']}] {short_count(r['questions'])} questions"
         elif r["source"] == "appstore":
             label = f"{src} {r['rating']}★/{short_count(r['ratings'])} ratings ({r['app']})"
+        elif r["source"] == "github_issues" and r is main_issues(e):
+            label = f"{src} {r['repo']}: {issues_text(r, 'en')}, health {r['issue_health']}/100"
         else:
             continue
         out.append((label, r["url"], r["fetched_at"]))
@@ -268,7 +291,7 @@ def review_word(n, lang):
     return "opinia" if n == 1 else "opinie" if n % 10 in (2, 3, 4) and n % 100 not in (12, 13, 14) else "opinii"
 
 
-PROOF_ORDER = {"sourceforge": 0, "appstore": 1, "npm": 2, "pypi": 3, "stackoverflow": 4, "github": 5, "smithery": 6}  # the review rating first
+PROOF_ORDER = {"sourceforge": 0, "appstore": 1, "npm": 2, "pypi": 3, "stackoverflow": 4, "github": 5, "github_issues": 6, "smithery": 7}  # the review rating first
 
 
 def proof_signals(e):
@@ -303,6 +326,10 @@ def proof_md(e, lang):
         elif r["source"] == "appstore":
             img = shield("iOS app", f"{r['rating']}★ {short_count(r['ratings'])}", "0D96F6", "appstore")
             out.append(f'[![App Store {r["rating"]} from {r["ratings"]} ratings, {md_cell(r["app"])}]({img})]({r["url"]})')
+        elif r["source"] == "github_issues" and r is main_issues(e):
+            color = "2EA44F" if r["issue_health"] >= 70 else "DBAB09" if r["issue_health"] >= 45 else "CB2431"
+            img = shield("issues", issues_text(r, lang), color, "github")
+            out.append(f'[![{md_cell(issues_title(r, lang))}]({img})]({r["url"]})')
     return rating + (("<br>" + " ".join(out)) if out else "")
 
 
@@ -329,6 +356,10 @@ def proof_html(e, lang="en"):
         elif r["source"] == "appstore":
             app = "iOS app" if lang == "en" else "aplikacja iOS"
             out.append(f'<a class="chip" href="{u}" title="{html.escape(r["app"])} · {stamp(r["fetched_at"])}">★ {r["rating"]} <span class="n">({short_count(r["ratings"])}) {app}</span></a>')
+        elif r["source"] == "github_issues" and r is main_issues(e):
+            word = "issues" if lang == "en" else "zgłoszenia"
+            out.append(f'<a class="chip" href="{u}" title="{html.escape(issues_title(r, lang))} · {stamp(r["fetched_at"])}">'
+                       f'{issues_text(r, lang)} <span class="n">{word} · GitHub</span></a>')
     return f'<div class="proof">{"".join(out)}</div>' if out else ""
 
 
@@ -583,7 +614,7 @@ def llms(cats, items, dirs):
          "Each entry: docs URL, auth method + header hint, MCP server (official/community), free tier, SDKs, OpenAPI and llms.txt links.",
          "", "Use the JSON files; fields: id, name, category, homepage, docs, auth, auth_hint, mcp{type,url}, free_tier, sdk, openapi, llms_txt, desc_en, notes, verified, "
          "plus derived booleans has_free_tier, has_trial, no_auth, stale, link_check{checked_at, docs, mcp} and "
-         "ratings[] (proof of use: SourceForge rating and review count, monthly downloads of the official npm/PyPI SDK, Stack Overflow question count, rating of the vendor's own iOS app, GitHub stars, Smithery uses; each with url and fetched_at) "
+         "ratings[] (proof of use: SourceForge rating and review count, monthly downloads of the official npm/PyPI SDK, Stack Overflow question count, rating of the vendor's own iOS app, GitHub stars, GitHub issues of the SDK/MCP/spec repos with open vs resolved counts, median days to fix and issue_health 0-100, Smithery uses; each with url and fetched_at) "
          "and reviews_url (up to 100 user reviews with pros/cons, reviewer names removed; also via the MCP tool get_reviews). "
          "Researched on vendor pages, each with source_url and checked_at: free_plan{kind, requires_card, quota, period, watermark}, "
          "auth_scheme (OpenAPI securityScheme: type, in, name, scheme, format), base_url, rate_limits, oauth_scopes, async_jobs, data_policy, "
@@ -629,7 +660,7 @@ def llms_full(cats, items):
          "(secrets as $ENV_VAR or <PLACEHOLDER>) and `result:` how to fetch an async result",
          "# tags: [FREE] lasting free tier or free usage, [TRIAL] one-off free trial credits, "
          "[NO-KEY] callable without any credential, [MCP] official MCP server",
-         "# proof: public ratings and usage (SourceForge rating/reviews, SDK downloads/month on npm and PyPI, Stack Overflow questions, vendor iOS app rating, GitHub stars, Smithery uses), date = when fetched",
+         "# proof: public ratings and usage (SourceForge rating/reviews, SDK downloads/month on npm and PyPI, Stack Overflow questions, vendor iOS app rating, GitHub stars, GitHub issues fixed and median days to fix, Smithery uses), date = when fetched",
          "# base url, free plan, rate limits, data policy, async jobs, oauth scopes: researched on vendor pages; sources in the JSON", ""]
     for c in cats:
         rows = [e for e in items if e["category"] == c["id"]]
@@ -963,10 +994,18 @@ def main():
     write("docs/catalog.json", dump)
     for c in cats:
         # Ratings without url, fetched_at and shared_with keep each category file under the size limit; all.json has them.
-        slim = lambda rs: [{k: v for k, v in r.items() if k not in ("url", "fetched_at", "shared_with")} for r in rs]  # noqa: E731
+        # Issue stats keep the headline numbers; all.json and get_api have the 90-day counts.
+        # Issue stats: only the main repo's headline numbers; all.json and get_api name the repos and have the 90-day counts.
+        drop = {"url", "fetched_at", "shared_with"}
+        keep_issues = {"source", "resolved_pct", "median_days_to_fix", "issue_health"}
+        slim = lambda e: [{k: v for k, v in r.items() if (k in keep_issues if r["source"] == "github_issues" else k not in drop)}  # noqa: E731
+                          for r in e["ratings"] if r["source"] != "github_issues" or r == main_issues(e)]
         # uptime.up_means is the same text everywhere: once in the header instead of in every entry.
-        trim = lambda u: {k: v for k, v in u.items() if k != "up_means"}  # noqa: E731
-        rows = [{k: (slim(v) if k == "ratings" else trim(v) if k == "uptime" else v) for k, v in e.items() if k != "category"}
+        # A probed URL equal to the entry's base_url or MCP url is not repeated.
+        same = lambda e, k, x: x.get("url") in (e.get("base_url"), (e.get("mcp") or {}).get("url"))  # noqa: E731
+        trim = lambda e, u: {k: ({kk: vv for kk, vv in v.items() if kk != "url"} if k in ("api", "mcp") and same(e, k, v) else v)  # noqa: E731
+                             for k, v in u.items() if k != "up_means"}
+        rows = [{k: (slim(e) if k == "ratings" else trim(e, v) if k == "uptime" else v) for k, v in e.items() if k != "category"}
                 for e in en if e["category"] == c["id"]]
         means = next((e["uptime"]["up_means"] for e in en if (e.get("uptime") or {}).get("up_means")), None)
         cat = {"id": c["id"], "name": c["en"], "description": c["desc_en"], **({"uptime_up_means": means} if means else {})}

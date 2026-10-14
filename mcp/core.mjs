@@ -314,6 +314,30 @@ function usageBrief(e) {
   if (app) parts.push(`iOS app ${app.rating}/5 from ${fmt(app.ratings)}`);
   return parts.length ? parts.join("; ") : "unavailable";
 }
+// GitHub issues of the MCP server, OpenAPI spec and official SDK repos: how the vendor resolves reported problems.
+const ISSUE_HEALTH_MEANS = "0-100: 40% share of issues resolved (open vs fixed now; closed as not planned does not count), " +
+  "40% fix speed (median days from report to fix over the last 12 months; 14 days = half), 20% closes vs new issues in the last 90 days";
+const issueRepos = (e) => (e.ratings || []).filter((r) => r.source === "github_issues");
+// The repo that says most about the vendor: its own (not a monorepo shared with other entries), with the most issues.
+function mainIssues(e) {
+  const rs = issueRepos(e);
+  const own = rs.filter((r) => !r.shared_with);
+  return (own.length ? own : rs).sort((a, b) => (b.open + b.resolved) - (a.open + a.resolved))[0] || null;
+}
+const issueHealth = (e) => mainIssues(e)?.issue_health ?? null;
+const issueLine = (r) => `${r.role} ${r.repo}: ${r.resolved_pct}% resolved (${fmt(r.open)} open, ${fmt(r.resolved)} fixed), ` +
+  `${r.median_days_to_fix != null ? `median ${r.median_days_to_fix} d to fix` : "no fixes in 12 months"}, health ${r.issue_health}` +
+  `${r.archived ? ", ARCHIVED" : ""}${r.shared_with ? ", repo shared with other entries" : ""}`;
+function githubIssues(e) {
+  const rs = issueRepos(e);
+  if (!rs.length) return { ...UNAVAILABLE };
+  const main = mainIssues(e);
+  return { issue_health: main.issue_health, based_on: main.repo, issue_health_means: ISSUE_HEALTH_MEANS,
+    repos: rs.map((r) => ({ repo: r.repo, role: r.role, open: r.open, resolved: r.resolved, not_planned: r.not_planned,
+      resolved_pct: r.resolved_pct, median_days_to_fix: r.median_days_to_fix, fix_sample: r.fix_sample,
+      opened_90d: r.opened_90d, closed_90d: r.closed_90d, issue_health: r.issue_health, archived: r.archived, url: r.url,
+      ...(r.shared_with ? { shared_with: r.shared_with } : {}) })), fetched_at: main.fetched_at };
+}
 function mcpRegistry(e) {
   const r = bySource(e, "smithery");
   return r ? { source: r.source, uses: r.uses, url: r.url, fetched_at: r.fetched_at } : { ...UNAVAILABLE };
@@ -335,6 +359,7 @@ function ratingsBrief(e) {
     reviews: pr.status || `${pr.rating}/5 from ${pr.count} (${pr.source})`,
     mcp_repo: repo.status || `${repo.archived ? "ARCHIVED, " : ""}last push ${repo.pushed_at}`,
     usage: usageBrief(e),
+    issues: mainIssues(e) ? issueLine(mainIssues(e)) : "unavailable",
   };
 }
 
@@ -428,7 +453,7 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.3.10", title: "AI Agents API Library",
+    { name: "ai-agents-api-library", version: "0.3.11", title: "AI Agents API Library",
       websiteUrl: "https://eater2.github.io/ai_agents_api_library/",
       icons: [{ src: "https://eater2.github.io/ai_agents_api_library/icon.png", mimeType: "image/png", sizes: ["512x512"] }] },
     {
@@ -475,6 +500,8 @@ export function createServer() {
         "sort=reviews; results with stored review texts carry reviews_summary (praised and complained-about aspects). " +
         "Usage: ratings.usage gives monthly downloads of the official SDKs, Stack Overflow questions and the vendor's iOS app rating; " +
         "filter with min_downloads, order with sort=usage. " +
+        "Maintenance: ratings.issues gives the vendor's GitHub issues (share resolved, median days to fix, issue_health 0-100); " +
+        "filter with min_issue_health, order with sort=issues. " +
         "Reviews rate the product, not whether the API fits the task. " +
         "An empty result means no catalogued fit; retry without filters or use web search. " +
         "Services work only once a human has provisioned credentials.",
@@ -496,17 +523,19 @@ export function createServer() {
           .describe("Only services with at least this many user reviews, e.g. 10. Services without reviews are excluded"),
         min_downloads: z.number().int().min(1).optional()
           .describe("Only services whose official SDKs (npm + PyPI) have at least this many downloads per month, e.g. 100000. Services without a known SDK are excluded"),
-        sort: z.enum(["fit", "rating", "reviews", "usage"]).optional()
-          .describe("fit (default): operation fit and task factors; rating: user rating weighted by review count, so 5/5 from one review does not lead; reviews: most reviewed first; usage: most monthly SDK downloads (npm + PyPI) first. Services without the signal go last; ties keep fit order"),
+        min_issue_health: z.number().int().min(1).max(100).optional()
+          .describe("Only services whose main GitHub repo (official SDK, MCP server or spec) scores at least this issue_health, e.g. 60. " + ISSUE_HEALTH_MEANS + ". Services without a repo with 10+ issues are excluded"),
+        sort: z.enum(["fit", "rating", "reviews", "usage", "issues"]).optional()
+          .describe("fit (default): operation fit and task factors; rating: user rating weighted by review count, so 5/5 from one review does not lead; reviews: most reviewed first; usage: most monthly SDK downloads (npm + PyPI) first; issues: highest issue_health (GitHub issues resolved and fixed fast) first. Services without the signal go last; ties keep fit order"),
         limit: z.number().int().min(1).max(50).optional().describe("Max results, default 10"),
       },
     },
-    async ({ query, category, mcp, no_auth, free_tier, include_trials, no_card, auth, volume, min_rating, min_reviews, min_downloads, sort = "fit", limit = 10 }) => {
+    async ({ query, category, mcp, no_auth, free_tier, include_trials, no_card, auth, volume, min_rating, min_reviews, min_downloads, min_issue_health, sort = "fit", limit = 10 }) => {
       const terms = words(query);
       const q = queryStems(terms);
       const order = queryOrder(query);
       const bulk = bulkIntent(query, volume);
-      const filters = { category, mcp, no_auth, free_tier, include_trials, no_card, auth, min_rating, min_reviews, min_downloads };
+      const filters = { category, mcp, no_auth, free_tier, include_trials, no_card, auth, min_rating, min_reviews, min_downloads, min_issue_health };
       const pr = (e) => bySource(e, "sourceforge");
       const passes = (e) => (!category || e.category === category)
         // Docs-only servers, docs pages and dead endpoints don't count; remote = a hosted endpoint that answered MCP.
@@ -518,7 +547,8 @@ export function createServer() {
         && (!auth || e.auth === auth)
         && (min_rating === undefined || (pr(e)?.rating ?? 0) >= min_rating)
         && (min_reviews === undefined || (pr(e)?.reviews ?? 0) >= min_reviews)
-        && (min_downloads === undefined || monthlyDownloads(e) >= min_downloads);
+        && (min_downloads === undefined || monthlyDownloads(e) >= min_downloads)
+        && (min_issue_health === undefined || (issueHealth(e) ?? 0) >= min_issue_health);
 
       // Score every entry, then decide by operation fit.
       const all = catalog.map((e) => ({ e, s: score(e, terms), fit: opFit(e, q, order), warn: bulk ? bulkWarning(e) : null }))
@@ -542,7 +572,7 @@ export function createServer() {
       const relevant = ranked.filter((h) => byOperation || h.s >= topAll * TOPIC_MIN_SHARE);
       // Opt-in opinion order; Array.sort is stable, so equal keys keep the fit order.
       const key = sort === "rating" ? (h) => weightedRating(h.e) : sort === "reviews" ? (h) => pr(h.e)?.reviews ?? null
-        : sort === "usage" ? (h) => monthlyDownloads(h.e) || null : null;
+        : sort === "usage" ? (h) => monthlyDownloads(h.e) || null : sort === "issues" ? (h) => issueHealth(h.e) : null;
       if (key) relevant.sort((a, b) => (key(b) ?? -1) - (key(a) ?? -1));
       const kept = relevant.slice(0, limit);
       const opinions = await loadReviewSummaries();
@@ -576,7 +606,8 @@ export function createServer() {
       }
       const out = { source, ...(sort !== "fit" ? { sort } : {}), results };
       const notes = [];
-      if (sort === "usage") notes.push("Sorted by monthly downloads of the official SDKs (popularity, not proof the API fits the task); check match and reason.");
+      if (sort === "issues") notes.push("Sorted by issue_health of the vendor's GitHub repos (maintenance, not proof the API fits the task); check match and reason.");
+      else if (sort === "usage") notes.push("Sorted by monthly downloads of the official SDKs (popularity, not proof the API fits the task); check match and reason.");
       else if (sort !== "fit") notes.push(`Sorted by user ${sort} (SourceForge reviews of the product, not proof the API fits the task); check match and reason.`);
       if (bulk && results.some((r) => r.volume_warning)) notes.push("Bulk use detected; results with volume_warning forbid or limit it.");
       if (!byOperation && terms.length) notes.push("No entry lists this operation; results match words only. Check each `what`.");
@@ -594,7 +625,8 @@ export function createServer() {
         "MCP endpoint or repository (check which: a repository must be installed, a docs-only server does not call the API), " +
         "free plan vs trial, rate limits, data policy, notes, last-checked dates, link check, and separate signals: " +
         "uptime (our availability probes of base URL and MCP endpoint), mcp_repo (archived, last push), mcp_registry (installs), product_reviews (rating, count, date range), " +
-        "sdk_downloads (official npm/PyPI SDKs per month), stackoverflow (question count) and app_store (the vendor's iOS app), each with its fetch date. " +
+        "sdk_downloads (official npm/PyPI SDKs per month), stackoverflow (question count), app_store (the vendor's iOS app) and " +
+        "github_issues (open vs resolved issues, median days to fix and issue_health 0-100 of the SDK, MCP and spec repos), each with its fetch date. " +
         "Call it also when the user names a service, or before you use one for a batch job, a message, a payment or " +
         "another third-party action: a vendor you already know is not a checked vendor (bulk bans, docs-only MCP, " +
         "trial limits change). Values carry the vendor page they were read from and a check date; use them for a " +
@@ -617,7 +649,7 @@ export function createServer() {
       }
       const { uptime, ...other } = rest;
       const out = { ...other, uptime: uptime || { ...UNAVAILABLE }, mcp_repo: mcpRepo(e), mcp_registry: mcpRegistry(e), product_reviews: reviews,
-        sdk_downloads: sdkDownloads(e), stackoverflow: stackOverflow(e), app_store: appStore(e) };
+        sdk_downloads: sdkDownloads(e), stackoverflow: stackOverflow(e), app_store: appStore(e), github_issues: githubIssues(e) };
       return { content: [{ type: "text", text: JSON.stringify(out, null, 1) }] };
     },
   );

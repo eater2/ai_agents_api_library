@@ -80,3 +80,19 @@ test("usage: sort=usage orders by monthly SDK downloads; get_api has the usage s
   assert.ok(api.stackoverflow.questions > 0, "stackoverflow");
   assert.ok("app_store" in api, "app_store signal present (may be unavailable)");
 });
+
+test("issues: sort=issues orders by issue_health; min_issue_health filters; get_api has github_issues", async () => {
+  const res = await call("search_apis", { query: "send sms", sort: "issues", limit: 20 });
+  // "sdk twilio/twilio-node: 95% resolved (...), median 4 d to fix, health 81" -> 81
+  const h = (r) => { const m = /health (\d+)/.exec(r.ratings.issues); return m ? Number(m[1]) : -1; };
+  const n = res.results.map(h);
+  assert.ok(n[0] > 0, "the first result has issue stats");
+  for (let i = 1; i < n.length; i++) assert.ok(n[i] < 0 || n[i - 1] >= n[i], `order broken at ${res.results[i].id}`);
+  const filtered = await call("search_apis", { query: "send sms", min_issue_health: 60, limit: 50 });
+  assert.ok(filtered.results.length && filtered.results.every((r) => h(r) >= 60), "min_issue_health keeps only healthy repos");
+  const api = await call("get_api", { id: "twilio" });
+  const gi = api.github_issues;
+  assert.ok(gi.issue_health >= 0 && gi.issue_health <= 100 && gi.repos.length, "github_issues");
+  const main = gi.repos.find((r) => r.repo === gi.based_on);
+  assert.ok(main && main.resolved_pct === Math.round(100 * main.resolved / (main.resolved + main.open)), "resolved_pct = fixed / (fixed + open)");
+});
