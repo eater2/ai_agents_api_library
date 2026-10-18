@@ -39713,6 +39713,55 @@
     }
   },
   {
+    "id": "dc-hub",
+    "name": "DC Hub",
+    "category": "maps-geo-weather",
+    "homepage": "https://dchub.cloud/",
+    "docs": "https://dchub.cloud/api-docs",
+    "auth": "api_key",
+    "auth_hint": "X-API-Key: <DCHUB_API_KEY> header (or Authorization: Bearer <key>) on both the REST API and the MCP server; anonymous calls return previews. A key is issued self-serve with POST https://dchub.cloud/api/v1/keys/claim.",
+    "mcp": {
+      "type": "official",
+      "url": "https://dchub.cloud/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://dchub.cloud/mcp",
+      "repo": "https://github.com/azmartone67/dchub-mcp-server",
+      "covers_full_api": null,
+      "source_url": "https://dchub.cloud/developers",
+      "checked_at": "2026-10-18",
+      "domain_verified": true,
+      "kind": "vendor-hosted",
+      "config": null
+    },
+    "free_tier": "free tier: keyless previews; a free self-serve key adds 2 full answers per tool per day, and 50 calls/day once an email is added",
+    "sdk": [],
+    "openapi": "https://dchub.cloud/openapi.json",
+    "llms_txt": "https://dchub.cloud/llms.txt",
+    "desc_en": "Lets an agent check where data centers can get grid power, using the Data Center Power Index (DCPI) daily score across 300+ markets, plus grid, interconnection-queue, fiber and site data.",
+    "notes": "Remote Streamable HTTP MCP server at https://dchub.cloud/mcp; works without a key for previews. Keyless REST endpoints include GET /api/v1/stats and /api/v1/markets/list.",
+    "verified": "2026-10-18",
+    "base_url": "https://dchub.cloud/api/v1",
+    "free_plan": {
+      "kind": "free_tier",
+      "quota": "Anonymous previews; free key: 2 full answers per tool per day; with an email: 50 calls/day",
+      "source_url": "https://dchub.cloud/developers",
+      "checked_at": "2026-10-18"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-Key",
+      "format": "X-API-Key: <DCHUB_API_KEY> (or Authorization: Bearer <key>)",
+      "source_url": "https://dchub.cloud/api-docs",
+      "checked_at": "2026-10-18"
+    },
+    "no_auth": false,
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": false,
+    "stale": false
+  },
+  {
     "id": "esri-arcgis-location-platform",
     "name": "Esri ArcGIS Location Platform",
     "category": "maps-geo-weather",
