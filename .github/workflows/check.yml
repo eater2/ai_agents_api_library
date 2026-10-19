@@ -70,7 +70,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git diff --cached --quiet || git commit -m "Weekly link check and ratings $(date -u +%F)"
-          git push
+          # The run takes ~30 min, so main often moves meanwhile: replay on top (this run's data wins), rebuild, retry.
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase -X theirs origin main
+            python scripts/build.py
+            git add -A
+            git diff --cached --quiet || git commit --amend --no-edit -q
+          done
+          exit 1
 
       - name: Fail on broken docs links
         if: steps.links.outcome == 'failure'

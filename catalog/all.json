@@ -1517,7 +1517,7 @@
     "auth_hint": "api_key query parameter (also usable as header depending on client library)",
     "mcp": {
       "type": "official",
-      "url": "https://mcp.serpapi.com",
+      "url": "https://mcp.serpapi.com/mcp",
       "maintainer": "vendor",
       "remote_url": "https://mcp.serpapi.com/mcp",
       "repo": "https://github.com/serpapi/serpapi-mcp",
@@ -1564,7 +1564,7 @@
     "llms_txt": "https://serpapi.com/llms.txt",
     "desc_en": "Lets an agent scrape structured JSON results from Google and 20+ other search engines via SerpApi's REST API.",
     "notes": "Cached searches are free and don't count toward the monthly search quota. Hosted MCP accepts Authorization: Bearer <key> or a /<API_KEY>/mcp path; source at github.com/serpapi/serpapi-mcp.",
-    "verified": "2026-09-24",
+    "verified": "2026-10-19",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": true,
@@ -12440,7 +12440,7 @@
     "name": "Hume AI API",
     "category": "audio-speech",
     "homepage": "https://www.hume.ai",
-    "docs": "https://dev.hume.ai/docs",
+    "docs": "https://dev.hume.ai/intro",
     "auth": "api_key",
     "auth_hint": "X-Hume-Api-Key: <key> (REST); api_key query param (EVI WebSocket)",
     "mcp": {
@@ -12480,7 +12480,7 @@
     "llms_txt": null,
     "desc_en": "Generate expressive text-to-speech and run real-time empathic voice conversations (EVI) via REST/WebSocket.",
     "notes": "The free plan allows 1 concurrent connection. Voice cloning is on paid plans. The API MCP is local `npx @humeai/mcp-server` (HUME_API_KEY); dev.hume.ai/_mcp/server only searches the docs.",
-    "verified": "2026-09-25",
+    "verified": "2026-10-19",
     "operations": [
       "text-to-speech",
       "voice-agent"
@@ -24765,7 +24765,7 @@
     "name": "Fly.io Machines API",
     "category": "cloud-hosting",
     "homepage": "https://fly.io/docs/machines/api/",
-    "docs": "https://fly.io/docs/machines/api/",
+    "docs": "https://docs.fly.io/machines/api",
     "auth": "api_key",
     "auth_hint": "Authorization: Bearer <FLY_API_TOKEN>",
     "mcp": {
@@ -24807,11 +24807,11 @@
     "sdk": [
       "go"
     ],
-    "openapi": "https://docs.fly.io/machines-api/openapi.json",
+    "openapi": "https://docs.fly.io/api/machines/openapi.json",
     "llms_txt": null,
     "desc_en": "An agent can create, start, stop, and destroy Fly.io Machines (lightweight VMs) programmatically via REST.",
     "notes": "The official MCP server for Machines is the local flyctl server ('fly mcp server'); the hosted Sprites MCP controls Sprites, not Machines.",
-    "verified": "2026-09-24",
+    "verified": "2026-10-19",
     "free_plan": {
       "kind": "trial",
       "requires_card": false,
