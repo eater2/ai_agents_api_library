@@ -11,8 +11,15 @@ const transport = new StdioClientTransport({
 const client = new Client({ name: "smoke-test", version: "1.0.0" });
 await client.connect(transport);
 
-const tools = (await client.listTools()).tools.map((t) => t.name).sort();
+const listed = (await client.listTools()).tools;
+const tools = listed.map((t) => t.name).sort();
 assert.deepEqual(tools, ["get_api", "get_reviews", "list_categories", "search_apis"]);
+// The claude.ai connector directory checks "Read only" against these annotations.
+for (const t of listed) {
+  assert.ok(t.annotations?.title, `${t.name}: annotations.title`);
+  assert.equal(t.annotations?.readOnlyHint, true, `${t.name}: readOnlyHint`);
+  assert.equal(t.annotations?.destructiveHint, false, `${t.name}: destructiveHint`);
+}
 
 const call = async (name, args = {}) => {
   const r = await client.callTool({ name, arguments: args });
