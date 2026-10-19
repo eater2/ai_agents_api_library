@@ -628,7 +628,7 @@ export function createServer() {
       annotations: { title: "Get API details", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
       description:
         "Full entry for one service: docs, auth scheme and how the credential is sent, base URL, operations, " +
-        "MCP endpoint or repository (check which: a repository must be installed, a docs-only server does not call the API), " +
+        "MCP endpoint or repository (a repository must be installed; a docs-only server does not call the API), " +
         "free plan vs trial, rate limits, data policy, notes, last-checked dates, link check, and separate signals: " +
         "uptime (our availability probes of base URL and MCP endpoint), mcp_repo (archived, last push), mcp_registry (installs), product_reviews (rating, count, date range), " +
         "sdk_downloads (official npm/PyPI SDKs per month), stackoverflow (question count), app_store (the vendor's iOS app) and " +
