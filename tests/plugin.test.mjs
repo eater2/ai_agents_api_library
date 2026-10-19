@@ -62,6 +62,11 @@ test("plugin icon for the directory listing: square PNG, 512-2048 px", async () 
   assert.ok(w >= 512 && w <= 2048, `${w}px`);
 });
 
+test("plugin privacy policy URL points at the generated page", async () => {
+  assert.equal(plugin.privacyPolicyUrl, plugin.homepage + "privacy.html");
+  assert.match(await read("docs/privacy.html"), /Privacy policy/);
+});
+
 test("plugin README stays small enough for the listing preview", async () => {
   assert.ok((await read("plugin/README.md")).length < 256 * 1024);
 });
