@@ -4,7 +4,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "ai-agents-api-library"
+        "ai-agents-api-library@0.3.11"
       ]
     }
   }

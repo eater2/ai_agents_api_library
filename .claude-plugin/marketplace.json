@@ -5,7 +5,7 @@
   "plugins": [
     {
       "name": "ai-agents-api-library",
-      "source": "./",
+      "source": "./plugin",
       "displayName": "AI Agents API Library",
       "description": "Find third-party APIs and MCP servers for any capability an agent lacks, with auth method, free tier, MCP endpoint and docs.",
       "version": "0.3.11",

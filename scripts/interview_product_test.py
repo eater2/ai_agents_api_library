@@ -56,7 +56,7 @@ def rpc(method, params, i=1):
 
 
 def material():
-    skill = (ROOT / "skills" / "ai-agents-api-library" / "SKILL.md").read_text("utf-8")
+    skill = (ROOT / "plugin" / "skills" / "ai-agents-api-library" / "SKILL.md").read_text("utf-8")
     tools = rpc("tools/list", {})["tools"]
     parts = [f"=== Claude skill (SKILL.md) ===\n{skill}",
              f"=== MCP server: {MCP_URL} (Streamable HTTP, no key) — tools/list ===\n{json.dumps(tools, indent=1, ensure_ascii=False)}"]

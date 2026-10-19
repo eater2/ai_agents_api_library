@@ -75,7 +75,7 @@ The skill tells Claude when to reach for the catalog and how to pick a service. 
   /plugin marketplace add eater2/ai_agents_api_library
   /plugin install ai-agents-api-library@eater2
   ```
-- **Skill only, Claude Code:** copy [`skills/ai-agents-api-library/`](skills/ai-agents-api-library/SKILL.md) to `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).
+- **Skill only, Claude Code:** copy [`plugin/skills/ai-agents-api-library/`](plugin/skills/ai-agents-api-library/SKILL.md) to `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).
 - **Skill only, claude.ai / Claude Desktop:** download [the skill zip](https://ai-agents-api-library.vercel.app/ai-agents-api-library-skill.zip) and upload it under Settings → Capabilities → Skills.
 
 ## Inclusion criteria
