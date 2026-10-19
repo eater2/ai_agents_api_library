@@ -471,6 +471,7 @@ export function createServer() {
     "list_categories",
     {
       title: "List API categories",
+      annotations: { title: "List API categories", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
       description: "List all categories in the catalog with the number of services in each.",
       inputSchema: {},
     },
@@ -485,6 +486,7 @@ export function createServer() {
     "search_apis",
     {
       title: "Search APIs and MCP servers",
+      annotations: { title: "Search APIs and MCP servers", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
       description:
         "Find a third-party API or MCP server for an operation you cannot do with your model, built-in tools or " +
         "currently connected tools, among 300+ catalog entries with a last-checked date. One quick check: if you cannot " +
@@ -620,6 +622,7 @@ export function createServer() {
     "get_api",
     {
       title: "Get API details",
+      annotations: { title: "Get API details", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
       description:
         "Full entry for one service: docs, auth scheme and how the credential is sent, base URL, operations, " +
         "MCP endpoint or repository (check which: a repository must be installed, a docs-only server does not call the API), " +
@@ -658,6 +661,7 @@ export function createServer() {
     "get_reviews",
     {
       title: "Get user reviews",
+      annotations: { title: "Get user reviews", readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
       description:
         "Public user reviews of one service (up to 100, from SourceForge): rating, title, pros, cons, overall, " +
         "reviewer role, company size, date and link to the original. Reviewer names are not included. " +
