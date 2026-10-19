@@ -16,5 +16,6 @@
     "ai-agents",
     "tools"
   ],
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "icon": "./.claude-plugin/icon.png"
 }

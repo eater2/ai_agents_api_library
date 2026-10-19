@@ -1,11 +1,8 @@
 {
   "mcpServers": {
     "ai-agents-api-library": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "ai-agents-api-library@0.3.11"
-      ]
+      "type": "http",
+      "url": "https://ai-agents-api-library.vercel.app/mcp"
     }
   }
 }

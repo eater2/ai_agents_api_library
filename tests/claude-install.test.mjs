@@ -1,7 +1,7 @@
 // End-to-end install in Claude Code, in a throwaway config dir (CLAUDE_CONFIG_DIR) so the
 // user's own setup is untouched: add this repo as a marketplace, install the plugin, check
 // that the skill is registered and the MCP server connects. Skipped without the claude CLI.
-// The MCP server is started as `npx -y ai-agents-api-library@<version>`, so the last check covers the published npm version.
+// The plugin connects to the remote MCP endpoint, so the last check covers the deployed server.
 import { test, after } from "node:test";
 import assert from "node:assert/strict";
 import { mkdtemp, rm } from "node:fs/promises";
@@ -18,9 +18,9 @@ const config = await mkdtemp(join(tmpdir(), "aal-claude-"));
 // The local marketplace copies the working tree (including untracked files) into the config dir.
 after(() => rm(config, { recursive: true, force: true }));
 
-const claude = (args, timeout = 60_000, cwd = ROOT) => {
+const claude = (args, timeout = 60_000) => {
   const r = spawnSync(`claude ${args}`, {
-    cwd, shell: true, encoding: "utf8", timeout, env: { ...process.env, CLAUDE_CONFIG_DIR: config },
+    cwd: ROOT, shell: true, encoding: "utf8", timeout, env: { ...process.env, CLAUDE_CONFIG_DIR: config },
   });
   return { ok: r.status === 0, out: `${r.stdout}${r.stderr}` };
 };
@@ -41,7 +41,6 @@ test("skill is registered", { skip }, () => {
 });
 
 test("MCP server connects", { skip: skip || (process.env.SKIP_NETWORK === "1" && "SKIP_NETWORK=1") }, () => {
-  // Not from the repo root: there npx resolves `ai-agents-api-library@<version>` to this package itself, which has no linked bin.
-  const r = claude("mcp list", 180_000, config);
-  assert.match(r.out, /plugin:ai-agents-api-library:ai-agents-api-library: npx -y ai-agents-api-library@[\d.]+ - ✔ Connected/, r.out);
+  const r = claude("mcp list", 180_000);
+  assert.match(r.out, /plugin:ai-agents-api-library:ai-agents-api-library: https:\/\/ai-agents-api-library\.vercel\.app\/mcp \(HTTP\) - ✔ Connected/, r.out);
 });
