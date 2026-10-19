@@ -1,6 +1,6 @@
-<p align="right"><a href="README.pl.md">Polski</a> · <a href="https://eater2.github.io/ai_agents_api_library/">HTML</a> · <a href="llms.txt">llms.txt</a> · <a href="catalog/all.json">catalog.json</a></p>
+<p align="right"><a href="README.pl.md">Polski</a> · <a href="https://ai-agents-api-library.vercel.app/">HTML</a> · <a href="llms.txt">llms.txt</a> · <a href="catalog/all.json">catalog.json</a></p>
 
-# AI Agents Accessible APIs
+# AI Agents API Library
 
 <a href="https://registry.modelcontextprotocol.io/v0/servers?search=io.github.eater2/ai-agents-api-library"><img alt="Official MCP Registry" src="https://img.shields.io/badge/MCP_Registry-io.github.eater2%2Fai--agents--api--library-0A66C2?logo=modelcontextprotocol&logoColor=white"></a> <a href="https://smithery.ai/servers/eater2/ai-agents-api-library"><img alt="Smithery" src="https://img.shields.io/badge/Smithery-eater2%2Fai--agents--api--library-FF5601?logo=data:image/svg%2bxml;base64,PHN2ZyB3aWR0aD0iMjExIiBoZWlnaHQ9IjIxMSIgdmlld0JveD0iMCAwIDIxMSAyMTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BCjxyZWN0IHdpZHRoPSIyMTEiIGhlaWdodD0iMjExIiByeD0iMzYiIGZpbGw9IiNFRkVBRDYiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDQuNCAzNi45KSBzY2FsZSgwLjY1KSI%2BCjxwYXRoIGQ9Ik00MS43MDExIDc3LjQ4SDBWMTAwLjI2NEMwIDExOC4xNzEgMTQuNTI3NSAxMzIuNjk4IDMyLjQzNDIgMTMyLjY5OEg1NS4yMTgzVjkwLjk5NzFDNTUuMjE4MyA4My41NDE4IDQ5LjE1NjUgNzcuNDggNDEuNzAxMSA3Ny40OFoiIGZpbGw9IiNGRjU2MDEiLz4KPHBhdGggZD0iTTY2LjA4NzkgOTAuOTk3MVYxMzIuNjk4SDEwNy43ODlDMTE1LjI0NCAxMzIuNjk4IDEyMS4zMDYgMTI2LjYzNiAxMjEuMzA2IDExOS4xODFWNzcuNDhINzkuNjA1MUM3Mi4xNDk3IDc3LjQ4IDY2LjA4NzkgODMuNTQxOCA2Ni4wODc5IDkwLjk5NzFaIiBmaWxsPSIjRkY1NjAxIi8%2BCjxwYXRoIGQ9Ik0xNTQuOTk1IDc3LjQ4SDEzMi4yMVYxMTkuMTgxQzEzMi4yMSAxMjYuNjM2IDEzOC4yNzIgMTMyLjY5OCAxNDUuNzI4IDEzMi42OThIMTg3LjQyOVYxMDYuMTUyQzE4Ny40MjkgODguMjQ0OSAxNzIuOTAxIDc3LjUxNDggMTU0Ljk5NSA3Ny41MTQ4Vjc3LjQ4WiIgZmlsbD0iI0ZGNTYwMSIvPgo8cGF0aCBkPSJNMCA0NS45NTE0VjY2LjYxMDNINDEuNzAxMUM0OS4xNTY1IDY2LjYxMDMgNTUuMjE4MyA2MC41NDg1IDU1LjIxODMgNTMuMDkzMlYwQzI1Ljg0OTggMC4yMDkwMjggMC4wMzQ4MzggMTQuNjY2OCAwIDQ1Ljk1MTRaIiBmaWxsPSIjRkY1NjAxIi8%2BCjxwYXRoIGQ9Ik02Ni4wODc5IDUzLjA5M0M2Ni4wODc5IDYwLjU0ODMgNzIuMTQ5NyA2Ni42MTAxIDc5LjYwNTEgNjYuNjEwMUgxMjEuMzA2VjExLjQ2MTVDMTAwLjkyNiA4LjM2MDkyIDkwLjMwMDMgMS43NDE2OSA2Ni4wODc5IDAuMjQzNjUyVjUzLjA1ODFWNTMuMDkzWiIgZmlsbD0iI0ZGNTYwMSIvPgo8cGF0aCBkPSJNMTQ0LjA5IDEzLjA2MzlDMTM5Ljc3IDEzLjA2MzkgMTM1LjgzNCAxMi45MjQ2IDEzMi4yMSAxMi42ODA3VjY2LjYxSDE1NC45OTVDMTcyLjkwMSA2Ni42MSAxODcuNDI5IDUyLjA4MjUgMTg3LjQyOSAzNC4xNzU4VjAuMTczODI4QzE3Ny4yOTEgOC4xMTY5IDE2Mi45MDMgMTMuMDYzOSAxNDQuMDkgMTMuMDYzOVoiIGZpbGw9IiNGRjU2MDEiLz4KPHBhdGggZD0iTTAgMTc2LjAwMlYyMTAuMDA0QzEwLjEzNzkgMjAyLjA2MSAyNC41MjYgMTk3LjExNCA0My4zMzg1IDE5Ny4xMTRDNDcuNjU4NCAxOTcuMTE0IDUxLjU5NTEgMTk3LjI1MyA1NS4yMTgzIDE5Ny41MzJWMTQzLjYwM0gzMi40MzQyQzE0LjUyNzUgMTQzLjYwMyAwIDE1OC4xMyAwIDE3Ni4wMzdMMCAxNzYuMDAyWiIgZmlsbD0iI0ZGNTYwMSIvPgo8cGF0aCBkPSJNMTA3Ljc4OSAxNDMuNjAzSDY2LjA4NzlWMTk4LjcxNkM4Ni40NjgxIDIwMS44MTcgOTcuMDkzOCAyMDguNDM2IDEyMS4zMDYgMjA5LjkzNFYxNTcuMTJDMTIxLjMwNiAxNDkuNjY0IDExNS4yNDQgMTQzLjYwMyAxMDcuNzg5IDE0My42MDNaIiBmaWxsPSIjRkY1NjAxIi8%2BCjxwYXRoIGQ9Ik0xMzIuMjEgMTU3LjA4NVYyMTAuMTc4QzE2MS41NDQgMjA5Ljk2OSAxODcuMzI0IDE5NS41MTEgMTg3LjQyOSAxNjQuMjk2VjE0My41NjhIMTQ1LjcyOEMxMzguMjcyIDE0My41NjggMTMyLjIxIDE0OS42MyAxMzIuMjEgMTU3LjA4NVoiIGZpbGw9IiNGRjU2MDEiLz4KPC9nPgo8L3N2Zz4K"></a> <a href="https://github.com/eater2/ai_agents_api_library#claude-skill-and-plugin"><img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude_Code-plugin-D97757?logo=claude&logoColor=white"></a> <a href="https://github.com/eater2/ai_agents_api_library#mcp-server"><img alt="Remote MCP endpoint" src="https://img.shields.io/badge/remote_MCP-free%2C_no_API_key-2EA44F?logo=vercel&logoColor=white"></a>
 
@@ -9,7 +9,7 @@
 > This article is about services an AI agent can operate programmatically, not AI products used by humans through a web UI.
 
 <table align="right" width="300">
-<tr><th colspan="2" align="center">AI Agents Accessible APIs</th></tr>
+<tr><th colspan="2" align="center">AI Agents API Library</th></tr>
 <tr><td><b>Type</b></td><td>API & MCP catalog</td></tr>
 <tr><td><b>Entries</b></td><td>336</td></tr>
 <tr><td><b>Categories</b></td><td>29</td></tr>
@@ -20,7 +20,7 @@
 <tr><td><b>License</b></td><td>CC BY 4.0 (data), MIT (code)</td></tr>
 </table>
 
-**AI Agents Accessible APIs** is an open, bilingual (English/Polish) catalog of **336 services** (each with a last-checked date) in **29 categories** that an autonomous AI agent — such as Claude, ChatGPT, Gemini or a custom LLM agent — can use **without a human in the loop**, after a one-time human step: registering an account and handing the agent an **API key**, an **OAuth token**, or a connection to an **MCP (Model Context Protocol) server**. Every entry records the documentation URL, the authentication method, the availability of an official or community MCP server, and the free tier. The list is not a directory of products with “AI” in their name; the criterion is agent operability, not branding.
+**AI Agents API Library** is an open, bilingual (English/Polish) catalog of **336 services** (each with a last-checked date) in **29 categories** that an autonomous AI agent — such as Claude, ChatGPT, Gemini or a custom LLM agent — can use **without a human in the loop**, after a one-time human step: registering an account and handing the agent an **API key**, an **OAuth token**, or a connection to an **MCP (Model Context Protocol) server**. Every entry records the documentation URL, the authentication method, the availability of an official or community MCP server, and the free tier. The list is not a directory of products with “AI” in their name; the criterion is agent operability, not branding.
 
 ## Contents
 
@@ -76,7 +76,7 @@ The skill tells Claude when to reach for the catalog and how to pick a service. 
   /plugin install ai-agents-api-library@eater2
   ```
 - **Skill only, Claude Code:** copy [`skills/ai-agents-api-library/`](skills/ai-agents-api-library/SKILL.md) to `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).
-- **Skill only, claude.ai / Claude Desktop:** download [the skill zip](https://eater2.github.io/ai_agents_api_library/ai-agents-api-library-skill.zip) and upload it under Settings → Capabilities → Skills.
+- **Skill only, claude.ai / Claude Desktop:** download [the skill zip](https://ai-agents-api-library.vercel.app/ai-agents-api-library-skill.zip) and upload it under Settings → Capabilities → Skills.
 
 ## Inclusion criteria
 

@@ -20,8 +20,12 @@ from urllib.parse import quote, urlparse
 
 REPO = "eater2/ai_agents_api_library"
 BRANCH = "main"
-TITLE = "AI Agents Accessible APIs"
-PAGES = f"https://{REPO.split('/')[0]}.github.io/{REPO.split('/')[1]}/"
+TITLE = "AI Agents API Library"
+# Canonical site: Google shows a site name and favicon per host, and eater2.github.io itself has no home page
+# (search results showed "GitHub Pages documentation" and a globe). GitHub Pages still serves the same files.
+PAGES = "https://ai-agents-api-library.vercel.app/"
+ICONS = (f'<link rel="icon" href="{PAGES}favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="512x512" href="{PAGES}icon.png">'
+         f'<link rel="apple-touch-icon" href="{PAGES}icon.png">')
 RAW = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/"
 GH = f"https://github.com/{REPO}"
 
@@ -754,8 +758,10 @@ def page(lang, cats, items, dirs):
     self_url = PAGES if lang == "en" else PAGES + "pl/"
     other_url = PAGES + "pl/" if lang == "en" else PAGES
     desc = t["tagline"]
+    website = {"@type": "WebSite", "name": TITLE, "alternateName": ["AI Agents API Catalog", "ai-agents-api-library"],
+               "url": PAGES, "description": desc}
     ld = {
-        "@context": "https://schema.org", "@type": "Dataset", "name": TITLE, "description": desc,
+        "@type": "Dataset", "name": TITLE, "description": desc,
         "url": self_url, "inLanguage": lang, "dateModified": VERIFIED, "license": "https://creativecommons.org/licenses/by/4.0/",
         "keywords": ["AI agents", "MCP", "Model Context Protocol", "API", "tool calling", "LLM tools", "API catalog"],
         "creator": {"@type": "Person", "name": "Marek Papis"},
@@ -765,16 +771,21 @@ def page(lang, cats, items, dirs):
         ],
         "variableMeasured": ["docs", "auth", "mcp", "free_tier"],
     }
+    ld = {"@context": "https://schema.org", "@graph": [website, ld]}
+    head_title = f"{TITLE}: {st['n']} APIs and MCP servers for AI agents" if lang == "en" else TITLE
     o = [f'<!doctype html><html lang="{lang}"><head><meta charset="utf-8">',
          '<meta name="viewport" content="width=device-width,initial-scale=1">',
-         f'<link rel="icon" type="image/png" href="{PAGES}favicon.png"><link rel="apple-touch-icon" href="{PAGES}icon.png">',
-         f"<title>{e_(TITLE)}</title>",
+         ICONS,
+         f"<title>{e_(head_title)}</title>",
          f'<meta name="description" content="{e_(desc)}">',
          f'<link rel="canonical" href="{self_url}">']
     if lang == "en":
         o += [f'<link rel="alternate" type="application/json" title="catalog.json" href="{base}catalog.json">',
               f'<link rel="alternate" type="text/plain" title="llms.txt" href="{base}llms.txt">',
-              f'<meta property="og:title" content="{e_(TITLE)}"><meta property="og:description" content="{e_(desc)}"><meta property="og:type" content="website">',
+              f'<meta property="og:site_name" content="{e_(TITLE)}"><meta property="og:title" content="{e_(head_title)}">'
+              f'<meta property="og:description" content="{e_(desc)}"><meta property="og:type" content="website">'
+              f'<meta property="og:url" content="{self_url}"><meta property="og:image" content="{PAGES}icon.png">'
+              '<meta name="twitter:card" content="summary">',
               f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>']
     else:
         # Polish page is for human readers only; agents and crawlers use the English home page.
@@ -866,10 +877,12 @@ def category_page(c, rows, cats):
           "itemListElement": [{"@type": "ListItem", "position": i, "name": e["name"], "url": e["docs"]} for i, e in enumerate(rows, 1)]}
     o = [f'<!doctype html><html lang="en"><head><meta charset="utf-8">',
          '<meta name="viewport" content="width=device-width,initial-scale=1">',
-         f'<link rel="icon" type="image/png" href="{PAGES}favicon.png"><link rel="apple-touch-icon" href="{PAGES}icon.png">',
+         ICONS,
          f"<title>{e_(title)}</title>", f'<meta name="description" content="{e_(desc)}">',
          f'<link rel="canonical" href="{url}">',
          f'<link rel="alternate" type="application/json" href="{RAW}catalog/{c["id"]}.json">',
+         f'<meta property="og:site_name" content="{e_(TITLE)}"><meta property="og:title" content="{e_(title)}">'
+         f'<meta property="og:url" content="{url}"><meta property="og:image" content="{PAGES}icon.png">',
          f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>',
          f"<style>{CSS}</style></head><body>",
          f'<header class="top"><div class="in"><a class="brand" href="../../">{e_(TITLE)}<small>{e_(c["en"])}</small></a>',
