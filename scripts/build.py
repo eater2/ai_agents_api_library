@@ -561,7 +561,7 @@ def readme(lang, cats, items, dirs):
                  "The plugin bundles the skill with the MCP server:\n")
         o.append(f"- **Claude Code plugin** (skill + MCP server):\n  ```\n  /plugin marketplace add {REPO}\n"
                  "  /plugin install ai-agents-api-library@eater2\n  ```")
-        o.append("- **Skill only, Claude Code:** copy [`skills/ai-agents-api-library/`](skills/ai-agents-api-library/SKILL.md) "
+        o.append("- **Skill only, Claude Code:** copy [`plugin/skills/ai-agents-api-library/`](plugin/skills/ai-agents-api-library/SKILL.md) "
                  "to `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).")
         o.append(f"- **Skill only, claude.ai / Claude Desktop:** download [the skill zip]({PAGES}ai-agents-api-library-skill.zip) "
                  "and upload it under Settings → Capabilities → Skills.\n")
@@ -1031,7 +1031,7 @@ def main():
         write(f"docs/c/{c['id']}/index.html", category_page(c, [e for e in items if e["category"] == c["id"]], cats))
     # Skill as a zip for uploading to claude.ai. Fixed timestamp and no compression keep it byte-identical
     # across builds and platforms (zlib versions compress differently, create_system is OS-specific).
-    skill_dir = ROOT / "skills" / "ai-agents-api-library"
+    skill_dir = ROOT / "plugin" / "skills" / "ai-agents-api-library"
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_STORED) as z:
         for f in sorted(skill_dir.rglob("*")):

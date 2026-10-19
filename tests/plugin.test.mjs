@@ -12,11 +12,11 @@ const read = (p) => readFile(new URL(p, ROOT), "utf8");
 const json = async (p) => JSON.parse(await read(p));
 
 const pkg = await json("package.json");
-const plugin = await json(".claude-plugin/plugin.json");
+const plugin = await json("plugin/.claude-plugin/plugin.json");
 const market = await json(".claude-plugin/marketplace.json");
 const registry = await json("server.json");
 const coreSrc = await read("mcp/core.mjs");
-const SKILL_DIR = "skills/ai-agents-api-library/";
+const SKILL_DIR = "plugin/skills/ai-agents-api-library/";
 const skill = await read(SKILL_DIR + "SKILL.md");
 
 function frontmatter(md) {
@@ -37,16 +37,16 @@ test("names line up across manifests", () => {
   assert.equal(pkg.mcpName, registry.name, "package.json mcpName must equal server.json name (MCP Registry ownership check)");
   const entry = market.plugins.find((p) => p.name === plugin.name);
   assert.ok(entry, "marketplace lists the plugin");
-  assert.equal(entry.source, "./");
+  assert.equal(entry.source, "./plugin", "plugin lives in plugin/, so the directory review scans only the plugin, not scripts/ or catalog/");
   assert.ok(pkg.bin[pkg.name], "npm bin named like the package, so `npx -y github:...` runs it");
 });
 
 test("plugin MCP server runs the npm package, which has a bin and an MCP Registry name", async () => {
   // Kept in .mcp.json, not inline in plugin.json: `claude plugin details` only counts servers from .mcp.json.
   assert.equal(plugin.mcpServers, undefined, "declare MCP servers in .mcp.json, not plugin.json");
-  const [srv] = Object.values((await json(".mcp.json")).mcpServers);
+  const [srv] = Object.values((await json("plugin/.mcp.json")).mcpServers);
   assert.equal(srv.command, "npx");
-  assert.deepEqual(srv.args, ["-y", pkg.name], "npx runs the published npm package");
+  assert.deepEqual(srv.args, ["-y", `${pkg.name}@${pkg.version}`], "npx runs the published npm package, pinned to the exact version (directory policy UNPINNED_NPX)");
   const server = await json("server.json");
   assert.equal(pkg.mcpName, server.name, "package.json mcpName lets the MCP Registry verify the npm package");
   assert.deepEqual(server.packages?.map((x) => [x.identifier, x.version]), [[pkg.name, pkg.version]]);
@@ -101,7 +101,7 @@ test("skill zip for claude.ai holds the current SKILL.md", async () => {
 test("files needed by `npx github:` and Vercel are committed", () => {
   const tracked = new Set(execFileSync("git", ["ls-files"], { cwd: fileURLToPath(ROOT), encoding: "utf8" }).split("\n"));
   for (const f of ["package.json", "package-lock.json", "mcp/server.mjs", "mcp/core.mjs", "catalog/all.json",
-    "api/mcp.mjs", "vercel.json", SKILL_DIR + "SKILL.md", ".claude-plugin/plugin.json", ".claude-plugin/marketplace.json", ".mcp.json"]) {
+    "api/mcp.mjs", "vercel.json", SKILL_DIR + "SKILL.md", "plugin/.claude-plugin/plugin.json", ".claude-plugin/marketplace.json", "plugin/.mcp.json"]) {
     assert.ok(tracked.has(f), `${f} is not tracked by git`);
   }
 });
@@ -125,7 +125,7 @@ test("Vercel bundles the files the HTTP endpoint reads", async () => {
 // The official validator, when Claude Code is installed (skipped in plain CI).
 const hasClaude = spawnSync("claude --version", { shell: true }).status === 0;
 test("claude plugin validate --strict", { skip: !hasClaude && "claude CLI not installed" }, () => {
-  for (const target of [".claude-plugin/plugin.json", ".claude-plugin/marketplace.json", "skills"]) {
+  for (const target of ["plugin/.claude-plugin/plugin.json", ".claude-plugin/marketplace.json", "plugin/skills"]) {
     const r = spawnSync(`claude plugin validate "${target}" --strict`, { cwd: fileURLToPath(ROOT), shell: true, encoding: "utf8" });
     assert.equal(r.status, 0, `${target}:\n${r.stdout}${r.stderr}`);
   }
@@ -163,7 +163,7 @@ test("usage data: examples are safe and match the entry", async () => {
 });
 
 test("wording: the catalog is not presented as 'verified'", async () => {
-  for (const f of [SKILL_DIR + "SKILL.md", "server.json", ".claude-plugin/plugin.json", ".claude-plugin/marketplace.json", "llms.txt"]) {
+  for (const f of [SKILL_DIR + "SKILL.md", "server.json", "plugin/.claude-plugin/plugin.json", ".claude-plugin/marketplace.json", "llms.txt"]) {
     assert.doesNotMatch(await read(f), /verified (catalog|services|APIs)|Verified catalog/i, f);
   }
 });

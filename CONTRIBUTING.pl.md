@@ -50,7 +50,7 @@ Obie wersje językowe powstają z tego samego wpisu: z `desc_en` powstają pliki
    python scripts/check_links.py
    ```
    Każdy adres z Twojego wpisu powinien mieć status `ok` lub `reachable`. `reachable` oznacza, że serwer odpowiedział, ale odmówił anonimowego zapytania. To normalne dla API i endpointów MCP.
-5. **Przetestuj serwer MCP, plugin i skill**, jeśli zmieniałeś `mcp/`, `api/`, `skills/`, `.claude-plugin/` albo wersję (Node 22+):
+5. **Przetestuj serwer MCP, plugin i skill**, jeśli zmieniałeś `mcp/`, `api/`, `plugin/`, `.claude-plugin/` albo wersję (Node 22+):
    ```bash
    npm ci && npm test
    ```

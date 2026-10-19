@@ -50,7 +50,7 @@ Both languages come from the same entry: `desc_en` feeds the English files, and 
    python scripts/check_links.py
    ```
    Every URL of your entry should be `ok` or `reachable`. `reachable` means the server answered but refused an anonymous request, which is normal for APIs and MCP endpoints.
-5. **Test the MCP server, plugin and skill**, if you changed `mcp/`, `api/`, `skills/`, `.claude-plugin/` or a version (Node 22+):
+5. **Test the MCP server, plugin and skill**, if you changed `mcp/`, `api/`, `plugin/`, `.claude-plugin/` or a version (Node 22+):
    ```bash
    npm ci && npm test
    ```
