@@ -1,4 +1,4 @@
-# AI Agents Accessible APIs
+# AI Agents API Library
 
 > Catalog of 336 third-party APIs and MCP servers that AI agents can call on a user's behalf after a one-time API key / OAuth / MCP setup. 29 categories. Last checked 2026-10-19; each entry has its own `verified` (last-checked) date and a `link_check`; confirm pricing and task fit in `docs`. Each entry: docs URL, auth method + header hint, MCP server (official/community), free tier, SDKs, OpenAPI and llms.txt links.
 
@@ -79,7 +79,7 @@ Counts per category: services / with free tier / no key needed / official MCP se
 ## Optional
 
 - [README](https://github.com/eater2/ai_agents_api_library#readme)
-- [HTML version](https://eater2.github.io/ai_agents_api_library/)
+- [HTML version](https://ai-agents-api-library.vercel.app/)
 - [Official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers): The official Model Context Protocol registry; agents can call its REST API (with OpenAPI spec) to search and list available MCP servers.
 - [public-apis/public-apis](https://raw.githubusercontent.com/public-apis/public-apis/master/README.md): A community-curated GitHub list of 1,400+ free public APIs by category, fetchable as raw Markdown for programmatic parsing.
 - [APIs.guru OpenAPI Directory](https://api.apis.guru/v2/list.json): An open, unauthenticated directory of 2,500+ public OpenAPI specs; agents fetch list.json to discover APIs and their OpenAPI definitions.

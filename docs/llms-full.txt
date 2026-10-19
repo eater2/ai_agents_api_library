@@ -1,4 +1,4 @@
-# AI Agents Accessible APIs — full list (336 services, last checked 2026-10-19)
+# AI Agents API Library — full list (336 services, last checked 2026-10-19)
 # format: [tags] name | what it does | auth (hint) | mcp | free tier | docs; then `example:` one curl request (secrets as $ENV_VAR or <PLACEHOLDER>) and `result:` how to fetch an async result
 # tags: [FREE] lasting free tier or free usage, [TRIAL] one-off free trial credits, [NO-KEY] callable without any credential, [MCP] official MCP server
 # proof: public ratings and usage (SourceForge rating/reviews, SDK downloads/month on npm and PyPI, Stack Overflow questions, vendor iOS app rating, GitHub stars, GitHub issues fixed and median days to fix, Smithery uses), date = when fetched
