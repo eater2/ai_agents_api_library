@@ -910,6 +910,39 @@ def category_page(c, rows, cats):
     return "\n".join(o)
 
 
+PRIVACY_CONTACT = "airenovationcalculator@gmail.com"
+PRIVACY_UPDATED = "2026-10-19"  # bump when the policy text changes
+
+
+def privacy_page():
+    """Privacy policy for the website, the hosted MCP endpoint and the Claude plugin (plugin.json privacyPolicyUrl)."""
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy policy · AI Agents API Library</title><link rel="icon" href="favicon.ico">
+<style>body{{font:16px/1.6 system-ui,sans-serif;max-width:720px;margin:2rem auto;padding:0 16px;color:#222;background:#fff}}
+@media (prefers-color-scheme:dark){{body{{color:#ddd;background:#111}}a{{color:#8ab4f8}}}}</style></head><body><main>
+<h1>Privacy policy</h1>
+<p>This policy covers the website <a href="{PAGES}">{PAGES}</a>, the hosted MCP server at <code>{PAGES}mcp</code>,
+the npm package <code>ai-agents-api-library</code> and the Claude Code plugin of the same name.</p>
+<h2>What we collect</h2>
+<ul>
+<li><b>No accounts, no cookies, no analytics or tracking scripts.</b></li>
+<li><b>MCP server:</b> for each request the server writes one log line with the MCP method, the tool name and the category filter,
+for usage statistics. Search queries, service ids and other arguments are not logged or stored.</li>
+<li><b>Hosting:</b> the site and the server run on Vercel, which keeps standard request logs (such as IP address, time, URL and user agent)
+for a limited time; see the <a href="https://vercel.com/legal/privacy-policy">Vercel privacy policy</a>.
+The static catalog files are also served by GitHub; see the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</li>
+<li><b>npm package and plugin skill:</b> run on your machine and read the bundled catalog; they send nothing to us.</li>
+</ul>
+<h2>Third-party services</h2>
+<p>The catalog lists other companies' APIs. If you or your agent call one of them, that call goes directly to that company under its own terms and privacy policy.
+This project never receives your API keys.</p>
+<h2>Contact</h2>
+<p><a href="mailto:{PRIVACY_CONTACT}">{PRIVACY_CONTACT}</a> or <a href="{GH}/issues">GitHub issues</a>.</p>
+<p><small>Last updated {PRIVACY_UPDATED}.</small></p>
+</main></body></html>
+"""
+
+
 # ---------------------------------------------------------------- main
 
 def write(path, text):
@@ -1042,6 +1075,7 @@ def main():
                 z.writestr(info, f.read_bytes(), zipfile.ZIP_STORED)
     (ROOT / "docs" / "ai-agents-api-library-skill.zip").write_bytes(buf.getvalue())
     write("docs/.nojekyll", "")
+    write("docs/privacy.html", privacy_page())
     write("docs/robots.txt", f"User-agent: *\nAllow: /\nSitemap: {PAGES}sitemap.xml\n")
     write("docs/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"<url><loc>{u}</loc><lastmod>{VERIFIED}</lastmod></url>\n" for u in
