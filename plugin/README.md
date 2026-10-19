@@ -9,6 +9,12 @@ The catalog holds 300+ services. Each entry gives the official docs, the auth me
 - **Skill `ai-agents-api-library`**: tells Claude when to consult the catalog and how to choose (no-key services first, then official MCP servers, then free tiers), and to ask you for credentials instead of inventing them.
 - **MCP server** (remote, `https://ai-agents-api-library.vercel.app/mcp`): tools `search_apis`, `get_api` and `list_categories`. No API key needed.
 
+## Network access and data
+
+- The MCP server above receives the tool arguments (search text, service id, filters). It logs only the method, the tool name and the category filter; search text is not stored.
+- When the MCP tools are not connected, the skill tells Claude to fetch the static catalog files instead, from `raw.githubusercontent.com/eater2/ai_agents_api_library` and `ai-agents-api-library.vercel.app`. These are plain GET requests with no user data.
+- No API keys are sent to this project. Privacy policy: https://ai-agents-api-library.vercel.app/privacy.html
+
 ## Install
 
 ```
