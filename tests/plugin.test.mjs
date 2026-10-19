@@ -41,17 +41,29 @@ test("names line up across manifests", () => {
   assert.ok(pkg.bin[pkg.name], "npm bin named like the package, so `npx -y github:...` runs it");
 });
 
-test("plugin MCP server runs the npm package, which has a bin and an MCP Registry name", async () => {
+test("plugin MCP server is the remote endpoint from the MCP Registry entry", async () => {
   // Kept in .mcp.json, not inline in plugin.json: `claude plugin details` only counts servers from .mcp.json.
+  // Remote, not npx: the claude.ai directory holds plugins that launch npx/uvx packages, and HTTP also works on claude.ai.
   assert.equal(plugin.mcpServers, undefined, "declare MCP servers in .mcp.json, not plugin.json");
   const [srv] = Object.values((await json("plugin/.mcp.json")).mcpServers);
-  assert.equal(srv.command, "npx");
-  assert.deepEqual(srv.args, ["-y", `${pkg.name}@${pkg.version}`], "npx runs the published npm package, pinned to the exact version (directory policy UNPINNED_NPX)");
-  const server = await json("server.json");
-  assert.equal(pkg.mcpName, server.name, "package.json mcpName lets the MCP Registry verify the npm package");
-  assert.deepEqual(server.packages?.map((x) => [x.identifier, x.version]), [[pkg.name, pkg.version]]);
+  assert.equal(srv.type, "http");
+  assert.equal(srv.url, registry.remotes[0].url);
+  assert.equal(pkg.mcpName, registry.name, "package.json mcpName lets the MCP Registry verify the npm package");
+  assert.deepEqual(registry.packages?.map((x) => [x.identifier, x.version]), [[pkg.name, pkg.version]]);
   const bin = await read(pkg.bin[pkg.name]);
   assert.match(bin, /^#!\/usr\/bin\/env node/, "bin has a node shebang");
+});
+
+test("plugin icon for the directory listing: square PNG, 512-2048 px", async () => {
+  assert.equal(plugin.icon, "./.claude-plugin/icon.png");
+  const png = await readFile(new URL("plugin/.claude-plugin/icon.png", ROOT));
+  const [w, h] = [png.readUInt32BE(16), png.readUInt32BE(20)];
+  assert.equal(w, h);
+  assert.ok(w >= 512 && w <= 2048, `${w}px`);
+});
+
+test("plugin README stays small enough for the listing preview", async () => {
+  assert.ok((await read("plugin/README.md")).length < 256 * 1024);
 });
 
 test("skill: folder, frontmatter and limits", async () => {
@@ -101,7 +113,7 @@ test("skill zip for claude.ai holds the current SKILL.md", async () => {
 test("files needed by `npx github:` and Vercel are committed", () => {
   const tracked = new Set(execFileSync("git", ["ls-files"], { cwd: fileURLToPath(ROOT), encoding: "utf8" }).split("\n"));
   for (const f of ["package.json", "package-lock.json", "mcp/server.mjs", "mcp/core.mjs", "catalog/all.json",
-    "api/mcp.mjs", "vercel.json", SKILL_DIR + "SKILL.md", "plugin/.claude-plugin/plugin.json", ".claude-plugin/marketplace.json", "plugin/.mcp.json"]) {
+    "api/mcp.mjs", "vercel.json", SKILL_DIR + "SKILL.md", "plugin/.claude-plugin/plugin.json", "plugin/.claude-plugin/icon.png", "plugin/README.md", ".claude-plugin/marketplace.json", "plugin/.mcp.json"]) {
     assert.ok(tracked.has(f), `${f} is not tracked by git`);
   }
 });
