@@ -3211,6 +3211,63 @@
     "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/browserbase-stagehand.json"
   },
   {
+    "id": "curlshot",
+    "name": "CurlShot",
+    "category": "web-scraping-browser",
+    "homepage": "https://curlshot.com",
+    "docs": "https://curlshot.com/docs",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <access key>",
+    "mcp": {
+      "type": "official",
+      "url": "https://curlshot.com/api/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://curlshot.com/api/mcp",
+      "tools": [
+        "take_screenshot",
+        "list_devices"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://curlshot.com/docs/guides/ai-agents",
+      "checked_at": "2026-10-15",
+      "domain_verified": true,
+      "kind": "vendor-hosted",
+      "config": null
+    },
+    "free_tier": "free plan: 100 screenshots/month, no card required; paid from $19/mo (3,000 screenshots)",
+    "sdk": [],
+    "openapi": "https://curlshot.com/openapi.json",
+    "llms_txt": "https://curlshot.com/llms.txt",
+    "desc_en": "Lets an agent capture a public web page in a real browser as a PNG, JPEG, WebP or PDF (full page, device presets, dark mode, ad and cookie-banner blocking), or record it scrolling as MP4, WebM or GIF, with one GET request.",
+    "notes": "list_devices on the MCP server needs no key; take_screenshot needs the access key. Failed renders and cache hits are not counted against the quota.",
+    "verified": "2026-10-15",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100 screenshots",
+      "period": "month",
+      "source_url": "https://curlshot.com/pricing",
+      "checked_at": "2026-10-15"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY>",
+      "source_url": "https://curlshot.com/docs",
+      "checked_at": "2026-10-15"
+    },
+    "base_url": "https://curlshot.com/api/v1",
+    "operations": [
+      "screenshot",
+      "document-generation"
+    ],
+    "no_auth": false,
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": true,
+    "stale": false
+  },
+  {
     "id": "diffbot",
     "name": "Diffbot",
     "category": "web-scraping-browser",
