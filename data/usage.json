@@ -8666,5 +8666,49 @@
    "source_url": "https://docs.textbelt.com/",
    "checked_at": "2026-09-25"
   }
+ },
+ "curlshot": {
+  "call": {
+   "operation": "screenshot a web page",
+   "method": "GET",
+   "url": "https://curlshot.com/api/v1/screenshot?url={url}",
+   "example": "curl -G https://curlshot.com/api/v1/screenshot --data-urlencode \"url=https://example.com\" -d format=png -d full_page=true -H \"Authorization: Bearer $CURLSHOT_ACCESS_KEY\" -o page.png",
+   "response_fields": [
+    "binary image or PDF body (JSON describing the stored file with response_type=json)",
+    "X-Quota-Remaining header",
+    "X-Reference-Id header"
+   ],
+   "async": null,
+   "source_url": "https://curlshot.com/openapi.json",
+   "checked_at": "2026-10-19"
+  },
+  "unit_price": {
+   "summary": "1 screenshot of quota per successful render (failures and cache hits free); Starter $19/mo for 3,000",
+   "source_url": "https://curlshot.com/pricing",
+   "checked_at": "2026-10-19"
+  }
+ },
+ "dc-hub": {
+  "call": {
+   "operation": "get the Data Center Power Index of a market",
+   "method": "GET",
+   "url": "https://dchub.cloud/api/v1/dcpi/scores/{market_slug}",
+   "example": "curl https://dchub.cloud/api/v1/dcpi/scores/northern-virginia -H \"X-API-Key: $DCHUB_API_KEY\"",
+   "response_fields": [
+    "verdict (BUILD/CAUTION/AVOID)",
+    "composite_score (paid plans)",
+    "excess_power_score (paid plans)",
+    "constraint_score (paid plans)",
+    "time_to_power_months (paid plans)"
+   ],
+   "async": null,
+   "source_url": "https://dchub.cloud/openapi.json",
+   "checked_at": "2026-10-19"
+  },
+  "unit_price": {
+   "summary": "Daily call caps, not per-call prices: Developer $49/mo for 500 MCP calls/day, Pro $99/mo for 2,000 calls/day plus site-analysis tools",
+   "source_url": "https://dchub.cloud/pricing",
+   "checked_at": "2026-10-19"
+  }
  }
 }
