@@ -2837,6 +2837,40 @@
     ]
   },
   {
+    "id": "semantichub",
+    "name": "SemanticHub",
+    "category": "knowledge-research",
+    "homepage": "https://semantichub.app",
+    "docs": "https://semantichub.app/docs",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Authorization: Bearer sh_<TOKEN> (personal API token; the remote MCP server also supports OAuth sign-in)",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.semantichub.app/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.semantichub.app/mcp",
+      "tools": [
+        "semantichub_whoami",
+        "semantichub_api_search",
+        "semantichub_api_details",
+        "semantichub_api_read",
+        "semantichub_api_write",
+        "semantichub_search_articles"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://semantichub.app/docs/integrations/api-tokens",
+      "checked_at": "2026-10-14"
+    },
+    "free_tier": "free forever, no card: 1 goal, 100 sources to watch, 5 workflow nodes, articles kept 7 days; paid plans from $29/month",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": "https://semantichub.app/llms.txt",
+    "desc_en": "Lets an agent set up monitoring of news sources, read clustered articles and generated texts, and manage goals and workflows in SemanticHub.",
+    "desc_pl": "Pozwala agentowi konfigurować monitoring źródeł, czytać sklastrowane artykuły i wygenerowane teksty oraz zarządzać celami i workflow w SemanticHub.",
+    "notes": "The full OpenAPI schema is not public; the supported integration surface is the MCP server (token scope read or read+write is enforced there). A new goal is created as a draft and collects nothing until it is resumed.",
+    "verified": "2026-10-14"
+  },
+  {
     "id": "wikidata",
     "name": "Wikidata",
     "category": "knowledge-research",
