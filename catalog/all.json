@@ -3217,7 +3217,7 @@
     "homepage": "https://curlshot.com",
     "docs": "https://curlshot.com/docs",
     "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <access key>",
+    "auth_hint": "Authorization: Bearer <CURLSHOT_ACCESS_KEY> (free account, no card)",
     "mcp": {
       "type": "official",
       "url": "https://curlshot.com/api/mcp",
@@ -3232,15 +3232,26 @@
       "checked_at": "2026-10-15",
       "domain_verified": true,
       "kind": "vendor-hosted",
-      "config": null
+      "config": {
+        "transport": "streamable-http",
+        "url": "https://curlshot.com/api/mcp",
+        "auth": "none",
+        "derived": true,
+        "handshake_at": "2026-10-19T08:34Z"
+      },
+      "handshake": {
+        "url": "https://curlshot.com/api/mcp",
+        "status": "ok",
+        "checked_at": "2026-10-19T08:34Z"
+      }
     },
     "free_tier": "free plan: 100 screenshots/month, no card required; paid from $19/mo (3,000 screenshots)",
     "sdk": [],
     "openapi": "https://curlshot.com/openapi.json",
     "llms_txt": "https://curlshot.com/llms.txt",
-    "desc_en": "Lets an agent capture a public web page in a real browser as a PNG, JPEG, WebP or PDF (full page, device presets, dark mode, ad and cookie-banner blocking), or record it scrolling as MP4, WebM or GIF, with one GET request.",
-    "notes": "list_devices on the MCP server needs no key; take_screenshot needs the access key. Failed renders and cache hits are not counted against the quota.",
-    "verified": "2026-10-15",
+    "desc_en": "Lets an agent capture a public web page in a real browser as PNG, JPEG, WebP or PDF (full page, device presets, dark mode, ad blocking) or record it scrolling as MP4, WebM or GIF.",
+    "notes": "list_devices on the MCP server needs no key.",
+    "verified": "2026-10-19",
     "free_plan": {
       "kind": "free_tier",
       "requires_card": false,
@@ -3261,11 +3272,42 @@
       "screenshot",
       "document-generation"
     ],
+    "rate_limits": {
+      "summary": "Free: 10 requests/min, 1 render at once; Starter ($19): 60/min, 5 at once",
+      "source_url": "https://curlshot.com/llms.txt",
+      "checked_at": "2026-10-19"
+    },
     "no_auth": false,
+    "call": {
+      "operation": "screenshot a web page",
+      "method": "GET",
+      "url": "https://curlshot.com/api/v1/screenshot?url={url}",
+      "example": "curl -G https://curlshot.com/api/v1/screenshot --data-urlencode \"url=https://example.com\" -d format=png -d full_page=true -H \"Authorization: Bearer $CURLSHOT_ACCESS_KEY\" -o page.png",
+      "response_fields": [
+        "binary image or PDF body (JSON describing the stored file with response_type=json)",
+        "X-Quota-Remaining header",
+        "X-Reference-Id header"
+      ],
+      "async": null,
+      "source_url": "https://curlshot.com/openapi.json",
+      "checked_at": "2026-10-19"
+    },
+    "unit_price": {
+      "summary": "1 screenshot of quota per successful render (failures and cache hits free); Starter $19/mo for 3,000",
+      "source_url": "https://curlshot.com/pricing",
+      "checked_at": "2026-10-19"
+    },
     "has_free_tier": true,
     "has_trial": false,
     "no_card": true,
-    "stale": false
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-10-19",
+      "docs": "ok",
+      "mcp": "reachable",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "diffbot",
@@ -5784,6 +5826,103 @@
     }
   },
   {
+    "id": "dc-hub",
+    "name": "DC Hub",
+    "category": "knowledge-research",
+    "homepage": "https://dchub.cloud/",
+    "docs": "https://dchub.cloud/api-docs",
+    "auth": "api_key",
+    "auth_hint": "X-API-Key: <DCHUB_API_KEY> header (or Authorization: Bearer <key>) on both the REST API and the MCP server; anonymous calls return previews. A key is issued self-serve with POST https://dchub.cloud/api/v1/keys/claim.",
+    "mcp": {
+      "type": "official",
+      "url": "https://dchub.cloud/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://dchub.cloud/mcp",
+      "repo": "https://github.com/azmartone67/dchub-mcp-server",
+      "covers_full_api": null,
+      "source_url": "https://dchub.cloud/developers",
+      "checked_at": "2026-10-18",
+      "domain_verified": true,
+      "kind": "vendor-hosted",
+      "config": {
+        "transport": "streamable-http",
+        "url": "https://dchub.cloud/mcp",
+        "auth": "none",
+        "derived": true,
+        "handshake_at": "2026-10-19T08:34Z"
+      },
+      "handshake": {
+        "url": "https://dchub.cloud/mcp",
+        "status": "ok",
+        "checked_at": "2026-10-19T08:34Z"
+      }
+    },
+    "free_tier": "free tier: keyless previews; a free self-serve key adds 2 full answers per tool per day, and 50 calls/day once an email is added",
+    "sdk": [],
+    "openapi": "https://dchub.cloud/openapi.json",
+    "llms_txt": "https://dchub.cloud/llms.txt",
+    "desc_en": "Lets an agent check where data centers can get grid power, using the Data Center Power Index (DCPI) daily score across 300+ markets, plus grid, interconnection-queue, fiber and site data.",
+    "notes": "Remote Streamable HTTP MCP server at https://dchub.cloud/mcp; works without a key for previews. Keyless REST endpoints include GET /api/v1/stats and /api/v1/markets/list. On the free tier the DCPI endpoint returns only the BUILD/CAUTION/AVOID verdict; the numeric scores (composite, excess power, constraint, months to power) need a paid plan.",
+    "verified": "2026-10-19",
+    "base_url": "https://dchub.cloud/api/v1",
+    "free_plan": {
+      "kind": "free_tier",
+      "quota": "Anonymous previews; free key: 2 full answers per tool per day; with an email: 50 calls/day",
+      "source_url": "https://dchub.cloud/developers",
+      "checked_at": "2026-10-19",
+      "requires_card": false
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-API-Key",
+      "format": "X-API-Key: <DCHUB_API_KEY> (or Authorization: Bearer <key>)",
+      "source_url": "https://dchub.cloud/api-docs",
+      "checked_at": "2026-10-18"
+    },
+    "operations": [
+      "energy-grid-data"
+    ],
+    "rate_limits": {
+      "summary": "Free key: previews plus 2 full answers per tool per day; with an email: 50 calls/day (up to 10 full answers per tool per day); Starter 200/day, Developer ($49) 500/day, Pro ($99) 2,000/day",
+      "source_url": "https://dchub.cloud/developers",
+      "checked_at": "2026-10-19"
+    },
+    "no_auth": false,
+    "call": {
+      "operation": "get the Data Center Power Index of a market",
+      "method": "GET",
+      "url": "https://dchub.cloud/api/v1/dcpi/scores/{market_slug}",
+      "example": "curl https://dchub.cloud/api/v1/dcpi/scores/northern-virginia -H \"X-API-Key: $DCHUB_API_KEY\"",
+      "response_fields": [
+        "verdict (BUILD/CAUTION/AVOID)",
+        "composite_score (paid plans)",
+        "excess_power_score (paid plans)",
+        "constraint_score (paid plans)",
+        "time_to_power_months (paid plans)"
+      ],
+      "async": null,
+      "source_url": "https://dchub.cloud/openapi.json",
+      "checked_at": "2026-10-19"
+    },
+    "unit_price": {
+      "summary": "Daily call caps, not per-call prices: Developer $49/mo for 500 MCP calls/day, Pro $99/mo for 2,000 calls/day plus site-analysis tools",
+      "source_url": "https://dchub.cloud/pricing",
+      "checked_at": "2026-10-19"
+    },
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-10-19",
+      "docs": "ok",
+      "mcp": "ok",
+      "openapi": "ok",
+      "llms_txt": "ok"
+    }
+  },
+  {
     "id": "gdelt-api",
     "name": "GDELT API",
     "category": "knowledge-research",
@@ -7032,7 +7171,7 @@
     "homepage": "https://semantichub.app",
     "docs": "https://semantichub.app/docs",
     "auth": "api_key+oauth2",
-    "auth_hint": "Authorization: Bearer sh_<TOKEN> (personal API token; the remote MCP server also supports OAuth sign-in)",
+    "auth_hint": "Personal API token (starts with sh_) from Account profile > API tokens at semantichub.app, sent as Authorization: Bearer sh_<TOKEN>; the remote MCP server also supports OAuth sign-in from the MCP client, and the token scope (read or read+write) is enforced there.",
     "mcp": {
       "type": "official",
       "url": "https://mcp.semantichub.app/mcp",
@@ -7051,7 +7190,18 @@
       "checked_at": "2026-10-14",
       "domain_verified": true,
       "kind": "vendor-hosted",
-      "config": null
+      "config": {
+        "transport": "streamable-http",
+        "url": "https://mcp.semantichub.app/mcp",
+        "auth": "oauth",
+        "derived": true,
+        "handshake_at": "2026-10-19T08:34Z"
+      },
+      "handshake": {
+        "url": "https://mcp.semantichub.app/mcp",
+        "status": "auth_oauth",
+        "checked_at": "2026-10-19T08:34Z"
+      }
     },
     "free_tier": "free forever, no card: 1 goal, 100 sources to watch, 5 workflow nodes, articles kept 7 days; paid plans from $29/month",
     "sdk": [],
@@ -7059,12 +7209,35 @@
     "llms_txt": "https://semantichub.app/llms.txt",
     "desc_en": "Lets an agent set up monitoring of news sources, read clustered articles and generated texts, and manage goals and workflows in SemanticHub.",
     "notes": "The full OpenAPI schema is not public; the supported integration surface is the MCP server (token scope read or read+write is enforced there). A new goal is created as a draft and collects nothing until it is resumed.",
-    "verified": "2026-10-14",
+    "verified": "2026-10-19",
+    "operations": [
+      "news-articles"
+    ],
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "1 goal, 100 sources to watch, 5 workflow nodes, articles kept up to 7 days",
+      "source_url": "https://semantichub.app/pricing",
+      "checked_at": "2026-10-19"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer sh_<SEMANTICHUB_API_TOKEN>",
+      "source_url": "https://semantichub.app/docs/integrations/api-tokens",
+      "checked_at": "2026-10-19"
+    },
     "no_auth": false,
     "has_free_tier": true,
     "has_trial": false,
-    "no_card": false,
-    "stale": false
+    "no_card": true,
+    "stale": false,
+    "link_check": {
+      "checked_at": "2026-10-19",
+      "docs": "ok",
+      "mcp": "reachable",
+      "llms_txt": "ok"
+    }
   },
   {
     "id": "wikidata",
@@ -39809,55 +39982,6 @@
         }
       }
     }
-  },
-  {
-    "id": "dc-hub",
-    "name": "DC Hub",
-    "category": "maps-geo-weather",
-    "homepage": "https://dchub.cloud/",
-    "docs": "https://dchub.cloud/api-docs",
-    "auth": "api_key",
-    "auth_hint": "X-API-Key: <DCHUB_API_KEY> header (or Authorization: Bearer <key>) on both the REST API and the MCP server; anonymous calls return previews. A key is issued self-serve with POST https://dchub.cloud/api/v1/keys/claim.",
-    "mcp": {
-      "type": "official",
-      "url": "https://dchub.cloud/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://dchub.cloud/mcp",
-      "repo": "https://github.com/azmartone67/dchub-mcp-server",
-      "covers_full_api": null,
-      "source_url": "https://dchub.cloud/developers",
-      "checked_at": "2026-10-18",
-      "domain_verified": true,
-      "kind": "vendor-hosted",
-      "config": null
-    },
-    "free_tier": "free tier: keyless previews; a free self-serve key adds 2 full answers per tool per day, and 50 calls/day once an email is added",
-    "sdk": [],
-    "openapi": "https://dchub.cloud/openapi.json",
-    "llms_txt": "https://dchub.cloud/llms.txt",
-    "desc_en": "Lets an agent check where data centers can get grid power, using the Data Center Power Index (DCPI) daily score across 300+ markets, plus grid, interconnection-queue, fiber and site data.",
-    "notes": "Remote Streamable HTTP MCP server at https://dchub.cloud/mcp; works without a key for previews. Keyless REST endpoints include GET /api/v1/stats and /api/v1/markets/list.",
-    "verified": "2026-10-18",
-    "base_url": "https://dchub.cloud/api/v1",
-    "free_plan": {
-      "kind": "free_tier",
-      "quota": "Anonymous previews; free key: 2 full answers per tool per day; with an email: 50 calls/day",
-      "source_url": "https://dchub.cloud/developers",
-      "checked_at": "2026-10-18"
-    },
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "X-API-Key",
-      "format": "X-API-Key: <DCHUB_API_KEY> (or Authorization: Bearer <key>)",
-      "source_url": "https://dchub.cloud/api-docs",
-      "checked_at": "2026-10-18"
-    },
-    "no_auth": false,
-    "has_free_tier": true,
-    "has_trial": false,
-    "no_card": false,
-    "stale": false
   },
   {
     "id": "esri-arcgis-location-platform",

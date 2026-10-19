@@ -1793,5 +1793,25 @@
   "docs": "ok",
   "openapi": "ok",
   "llms_txt": "ok"
+ },
+ "semantichub": {
+  "checked_at": "2026-10-19",
+  "docs": "ok",
+  "mcp": "reachable",
+  "llms_txt": "ok"
+ },
+ "curlshot": {
+  "checked_at": "2026-10-19",
+  "docs": "ok",
+  "mcp": "reachable",
+  "openapi": "ok",
+  "llms_txt": "ok"
+ },
+ "dc-hub": {
+  "checked_at": "2026-10-19",
+  "docs": "ok",
+  "mcp": "ok",
+  "openapi": "ok",
+  "llms_txt": "ok"
  }
 }

@@ -245,6 +245,12 @@
   "status": "auth_oauth",
   "url": "https://api.creatomate.com/mcp"
  },
+ "curlshot": {
+  "checked_at": "2026-10-19T08:34Z",
+  "detail": 200,
+  "status": "ok",
+  "url": "https://curlshot.com/api/mcp"
+ },
  "d-id-api": {
   "checked_at": "2026-10-18T09:03Z",
   "detail": 200,
@@ -262,6 +268,12 @@
   "detail": "404 other",
   "status": "not_mcp",
   "url": "https://www.daytona.io/docs/en/mcp/"
+ },
+ "dc-hub": {
+  "checked_at": "2026-10-19T08:34Z",
+  "detail": 200,
+  "status": "ok",
+  "url": "https://dchub.cloud/mcp"
  },
  "deepgram-voice-agent-api": {
   "checked_at": "2026-10-18T09:03Z",
@@ -826,6 +838,12 @@
   "detail": 401,
   "status": "auth_oauth",
   "url": "https://www.searchapi.io/mcp"
+ },
+ "semantichub": {
+  "checked_at": "2026-10-19T08:34Z",
+  "detail": 401,
+  "status": "auth_oauth",
+  "url": "https://mcp.semantichub.app/mcp"
  },
  "sentry-api": {
   "checked_at": "2026-10-18T09:03Z",
