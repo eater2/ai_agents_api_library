@@ -2156,6 +2156,34 @@
     "reviews_url": "https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/reviews/you-com-api.json"
   },
   {
+    "id": "agent-qa",
+    "name": "agent-qa",
+    "category": "web-scraping-browser",
+    "homepage": "https://vostride.com",
+    "docs": "https://vostride.com/docs/agent-qa/mcp",
+    "auth": "none",
+    "auth_hint": "Local stdio MCP transport has no authentication; test execution uses separately configured model access.",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/vostride/agent-qa",
+      "domain_verified": null,
+      "kind": "official",
+      "config": null
+    },
+    "free_tier": "Free local package; configured model access is required and model-provider charges may apply.",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Run plain-language tests for web, Android and iOS through MCP, with persistent memory and validated self-improvement.",
+    "notes": "Node.js 24+; local stdio server: npx agent-qa mcp. Model and device/browser setup are required for test execution. The documentation MCP at vostride.com/mcp is not the test-execution server.",
+    "verified": "2026-10-31",
+    "no_auth": true,
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": true,
+    "stale": false
+  },
+  {
     "id": "anchor-browser",
     "name": "Anchor Browser",
     "category": "web-scraping-browser",
