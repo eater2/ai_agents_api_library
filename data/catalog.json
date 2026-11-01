@@ -20200,5 +20200,26 @@
       "how": "Batch API: create batch, add requests, poll batch status until num_pending is 0",
       "source_url": "https://docs.x.ai/developers/advanced-api-usage/batch-api"
     }
+  },
+  {
+    "id": "agent-exec",
+    "name": "agent-exec",
+    "category": "code-execution-sandbox",
+    "homepage": "https://agent-exec.448c.org?via=239",
+    "docs": "https://agent-exec.448c.org/openapi.json?via=239",
+    "auth": "none",
+    "auth_hint": "No API key or account: each call is a standard HTTP x402 402-Payment-Required flow, paid per request in USDC on Base or Solana",
+    "mcp": {
+      "type": "official",
+      "url": "https://agent-exec.448c.org/mcp?via=239"
+    },
+    "free_tier": "free: one real sandboxed /execute/free run per wallet per day, plus the directory, discovery files and offline x402 verification are free; further sandboxed code execution, storage and other utilities are pay-per-call via x402",
+    "sdk": [],
+    "openapi": "https://agent-exec.448c.org/openapi.json?via=239",
+    "llms_txt": "https://agent-exec.448c.org/llms.txt?via=239",
+    "desc_en": "Lets an agent run sandboxed Python or Node code, store objects, watch URLs, get signed attestations, and rent disposable email/DNS, paying per call in USDC over x402 with no account or API key.",
+    "desc_pl": "Umożliwia agentowi uruchamianie kodu Python/Node w sandboxie, przechowywanie danych, monitorowanie URL-i, uzyskiwanie podpisanych atestacji oraz wynajem jednorazowego e-maila/DNS, płacąc za każde wywołanie w USDC przez x402, bez konta i klucza API.",
+    "notes": "",
+    "verified": "2026-11-01"
   }
 ]
