@@ -168,9 +168,9 @@
         "url": "https://api.search.brave.com/res/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 436,
+        "median_ms": 413,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 422
         }
@@ -218,7 +218,7 @@
       "handshake": {
         "url": "https://mcp.exa.ai/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: $10 free credits/month (~1,400 searches), no payment method required",
@@ -342,9 +342,9 @@
         "url": "https://api.exa.ai",
         "probes": 30,
         "up": 30,
-        "median_ms": 355,
+        "median_ms": 350,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -353,9 +353,9 @@
         "url": "https://mcp.exa.ai/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 351,
+        "median_ms": 343,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -413,7 +413,7 @@
       "handshake": {
         "url": "https://mcp.jina.ai/v1",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "No key needed for Reader only: 20 RPM (Search is blocked without a key); free API key gives Reader 500 RPM / Search 100 RPM plus 10M free tokens one-time on signup",
@@ -496,7 +496,7 @@
         "up": 30,
         "median_ms": 355,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -507,7 +507,7 @@
         "up": 30,
         "median_ms": 312,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -551,7 +551,7 @@
       "handshake": {
         "url": "https://mcp.kagi.com/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "no free tier: pay-per-use, $12 per 1,000 search requests, invoiced monthly or at $100 usage, whichever first",
@@ -658,7 +658,7 @@
         "up": 30,
         "median_ms": 1129,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -669,7 +669,7 @@
         "up": 30,
         "median_ms": 419,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -715,7 +715,7 @@
       "handshake": {
         "url": "https://mcp.linkup.so/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "$20 free credits/month for new accounts signing up with a professional email",
@@ -813,9 +813,9 @@
         "url": "https://api.linkup.so/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 680,
+        "median_ms": 664,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -826,7 +826,7 @@
         "up": 30,
         "median_ms": 702,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -936,7 +936,7 @@
         "up": 30,
         "median_ms": 621,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -980,7 +980,7 @@
       "handshake": {
         "url": "https://search.parallel.ai/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free: 5,000 requests/month across APIs, plus up to $80 signup credit and $5/month free credits",
@@ -1081,7 +1081,7 @@
         "up": 30,
         "median_ms": 340,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -1092,7 +1092,7 @@
         "up": 30,
         "median_ms": 363,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -1137,7 +1137,7 @@
       "handshake": {
         "url": "https://api.perplexity.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only: no confirmed free tier; pay-as-you-go, Search API billed at $5 per 1,000 requests ($1 per 1,000 for the fast search variant)",
@@ -1241,7 +1241,7 @@
         "up": 30,
         "median_ms": 349,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -1252,7 +1252,7 @@
         "up": 30,
         "median_ms": 330,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -1292,7 +1292,7 @@
       "handshake": {
         "url": "https://www.searchapi.io/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: 100 free requests one-time on signup, no credit card required; then Developer plan $40/mo for 10,000 searches",
@@ -1374,7 +1374,7 @@
         "up": 30,
         "median_ms": 475,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -1385,7 +1385,7 @@
         "up": 30,
         "median_ms": 410,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -1545,7 +1545,7 @@
       "handshake": {
         "url": "https://mcp.serpapi.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free plan: 250 searches/month, 50 requests/hour throughput",
@@ -1696,9 +1696,9 @@
         "url": "https://serpapi.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 279,
+        "median_ms": 269,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -1709,7 +1709,7 @@
         "up": 30,
         "median_ms": 395,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -1848,7 +1848,7 @@
       "handshake": {
         "url": "https://mcp.tavily.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: 1,000 API credits/month, no credit card required",
@@ -1985,7 +1985,7 @@
         "up": 30,
         "median_ms": 366,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -1996,7 +1996,7 @@
         "up": 30,
         "median_ms": 357,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -2044,7 +2044,7 @@
       "handshake": {
         "url": "https://api.you.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: 100 queries/day with no API key or sign-up through the MCP free profile (search and discover only); new API-key accounts also get $100 in one-time credit",
@@ -2136,7 +2136,7 @@
         "up": 30,
         "median_ms": 361,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -2145,9 +2145,9 @@
         "url": "https://api.you.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 328,
+        "median_ms": 327,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -2188,7 +2188,7 @@
       "handshake": {
         "url": "https://api.anchorbrowser.io/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "$5 free credits/mo, no card required",
@@ -2282,9 +2282,9 @@
         "url": "https://api.anchorbrowser.io",
         "probes": 30,
         "up": 30,
-        "median_ms": 468,
+        "median_ms": 483,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -2295,7 +2295,7 @@
         "up": 30,
         "median_ms": 457,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -2345,7 +2345,7 @@
       "handshake": {
         "url": "https://mcp.apify.com",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free plan: $5/mo platform usage credit, no card required",
@@ -2496,7 +2496,7 @@
         "up": 30,
         "median_ms": 210,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -2507,7 +2507,7 @@
         "up": 30,
         "median_ms": 206,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -2705,9 +2705,9 @@
         "url": "https://api.brightdata.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 233,
+        "median_ms": 235,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -2804,9 +2804,9 @@
         "url": "https://api.browse.ai/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 321,
+        "median_ms": 325,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -2845,12 +2845,12 @@
         "url": "https://api.browser-use.com/v3/mcp",
         "auth": "none",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://api.browser-use.com/v3/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "$15 one-time signup credit for new accounts (Google/GitHub/Microsoft); paid usage afterward",
@@ -2956,7 +2956,7 @@
         "up": 30,
         "median_ms": 305,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -2967,7 +2967,7 @@
         "up": 30,
         "median_ms": 317,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -3014,7 +3014,7 @@
       "handshake": {
         "url": "https://mcp.browserbase.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 1 browser hour/month, 3 concurrent browsers, 15 min/session, no card required",
@@ -3188,9 +3188,9 @@
         "url": "https://api.browserbase.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 306,
+        "median_ms": 305,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -3201,7 +3201,7 @@
         "up": 30,
         "median_ms": 373,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -3236,12 +3236,12 @@
         "url": "https://curlshot.com/api/mcp",
         "auth": "none",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://curlshot.com/api/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free plan: 100 screenshots/month, no card required; paid from $19/mo (3,000 screenshots)",
@@ -3312,22 +3312,22 @@
       "up_means": "host reachable: HTTP < 500, even 401/404; not a test of any endpoint",
       "api": {
         "url": "https://curlshot.com/api/v1",
-        "probes": 14,
-        "up": 14,
+        "probes": 15,
+        "up": 15,
         "median_ms": 616,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
       },
       "mcp_remote": {
         "url": "https://curlshot.com/api/mcp",
-        "probes": 14,
-        "up": 14,
+        "probes": 15,
+        "up": 15,
         "median_ms": 588,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -3429,7 +3429,7 @@
         "up": 30,
         "median_ms": 306,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -3482,7 +3482,7 @@
       "handshake": {
         "url": "https://mcp.firecrawl.dev/v2/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: 1,000 credits/mo, no card required",
@@ -3616,7 +3616,7 @@
         "up": 30,
         "median_ms": 231,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -3627,7 +3627,7 @@
         "up": 30,
         "median_ms": 233,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -3774,7 +3774,7 @@
         "up": 30,
         "median_ms": 226,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -3817,12 +3817,12 @@
         "url": "https://mcp.oxylabs.io/mcp",
         "auth": "none",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.oxylabs.io/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: Web Scraper API free trial with up to 2,000 results one-time, no card required",
@@ -3912,7 +3912,7 @@
         "up": 30,
         "median_ms": 574,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -3921,9 +3921,9 @@
         "url": "https://mcp.oxylabs.io/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 618,
+        "median_ms": 623,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -4095,12 +4095,12 @@
         "url": "https://mcp.scrapegraphai.com/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.scrapegraphai.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: 500 API credits one-time on the Free plan (10 requests/min), no card required",
@@ -4218,9 +4218,9 @@
         "url": "https://v2-api.scrapegraphai.com/api",
         "probes": 30,
         "up": 30,
-        "median_ms": 375,
+        "median_ms": 374,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -4231,7 +4231,7 @@
         "up": 30,
         "median_ms": 474,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -4260,12 +4260,12 @@
         "url": "https://mcp.scraperapi.com/mcp",
         "auth": "header",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.scraperapi.com/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: free plan with 1,000 API credits per month (max 5 concurrent connections); new accounts start with a 7-day trial of 5,000 one-time credits, no card required",
@@ -4339,7 +4339,7 @@
         "up": 30,
         "median_ms": 276,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -4350,7 +4350,7 @@
         "up": 30,
         "median_ms": 408,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -4402,7 +4402,7 @@
       "handshake": {
         "url": "https://mcp.scrapfly.io/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "1,000 free credits/mo, no card required, no time limit",
@@ -4516,9 +4516,9 @@
         "url": "https://api.scrapfly.io",
         "probes": 30,
         "up": 30,
-        "median_ms": 424,
+        "median_ms": 410,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -4529,7 +4529,7 @@
         "up": 30,
         "median_ms": 424,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -4575,12 +4575,12 @@
         "url": "https://mcp.scrapingbee.com/mcp",
         "auth": "none",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.scrapingbee.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: 1,000 free API credits one-time on signup, no card required; then Hobby plan $19/mo for 75,000 credits",
@@ -4670,7 +4670,7 @@
         "up": 30,
         "median_ms": 646,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -4681,7 +4681,7 @@
         "up": 30,
         "median_ms": 649,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -4745,7 +4745,7 @@
       "handshake": {
         "url": "https://mcp.spider.cloud/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: keyless /scrape endpoint, rate-limited (quota not published); other endpoints return 402 without a key",
@@ -4853,7 +4853,7 @@
         "up": 25,
         "median_ms": 229,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 402
         }
@@ -4864,7 +4864,7 @@
         "up": 30,
         "median_ms": 352,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -5032,9 +5032,9 @@
         "url": "https://api.steel.dev",
         "probes": 30,
         "up": 30,
-        "median_ms": 288,
+        "median_ms": 286,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -5158,9 +5158,9 @@
         "url": "https://api.zyte.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 207,
+        "median_ms": 211,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -5311,9 +5311,9 @@
         "url": "http://export.arxiv.org/api/query",
         "probes": 30,
         "up": 28,
-        "median_ms": 282,
+        "median_ms": 280,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -5363,7 +5363,7 @@
       "handshake": {
         "url": "https://congressgov.caseyjhand.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: government API, key issued instantly by email; 5,000 requests/hour.",
@@ -5460,9 +5460,9 @@
         "url": "https://api.congress.gov/v3",
         "probes": 30,
         "up": 30,
-        "median_ms": 372,
+        "median_ms": 360,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -5471,9 +5471,9 @@
         "url": "https://congressgov.caseyjhand.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 338,
+        "median_ms": 335,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -5517,7 +5517,7 @@
       "handshake": {
         "url": "https://mcp.context7.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: 1,000 API calls per month with a free API key (low limits without key); Pro $10/seat/month",
@@ -5621,9 +5621,9 @@
         "url": "https://context7.com/api/",
         "probes": 30,
         "up": 30,
-        "median_ms": 386,
+        "median_ms": 382,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -5634,7 +5634,7 @@
         "up": 30,
         "median_ms": 268,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -5663,12 +5663,12 @@
         "url": "https://mcp.courtrules.app/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.courtrules.app/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: Developer plan at $0/month with full API access, rate limited to 10 requests/minute",
@@ -5717,11 +5717,11 @@
       "up_means": "host reachable: HTTP < 500, even 401/404; not a test of any endpoint",
       "mcp_remote": {
         "url": "https://mcp.courtrules.app/mcp",
-        "probes": 27,
-        "up": 27,
+        "probes": 28,
+        "up": 28,
         "median_ms": 315,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -5843,9 +5843,9 @@
         "up": 30,
         "median_ms": 522,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
-          "detail": 200
+          "detail": 429
         }
       }
     }
@@ -5874,12 +5874,12 @@
         "url": "https://dchub.cloud/mcp",
         "auth": "none",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://dchub.cloud/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: keyless previews; a free self-serve key adds 2 full answers per tool per day, and 50 calls/day once an email is added",
@@ -5951,22 +5951,22 @@
       "up_means": "host reachable: HTTP < 500, even 401/404; not a test of any endpoint",
       "api": {
         "url": "https://dchub.cloud/api/v1",
-        "probes": 14,
-        "up": 14,
-        "median_ms": 371,
+        "probes": 15,
+        "up": 15,
+        "median_ms": 357,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
       },
       "mcp_remote": {
         "url": "https://dchub.cloud/mcp",
-        "probes": 14,
-        "up": 14,
-        "median_ms": 332,
+        "probes": 15,
+        "up": 15,
+        "median_ms": 331,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -6015,7 +6015,7 @@
       "handshake": {
         "url": "https://gdelt.caseyjhand.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free, no key",
@@ -6108,9 +6108,9 @@
         "url": "https://api.gdeltproject.org/api/v2/doc/doc",
         "probes": 30,
         "up": 30,
-        "median_ms": 10972,
+        "median_ms": 10915,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 429
         }
@@ -6119,9 +6119,9 @@
         "url": "https://gdelt.caseyjhand.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 334,
+        "median_ms": 333,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -6261,9 +6261,9 @@
         "url": "https://gitingest.com/api",
         "probes": 30,
         "up": 27,
-        "median_ms": 441,
+        "median_ms": 450,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -6399,9 +6399,9 @@
         "url": "https://hacker-news.firebaseio.com/v0/",
         "probes": 30,
         "up": 30,
-        "median_ms": 668,
+        "median_ms": 667,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -6524,7 +6524,7 @@
         "up": 30,
         "median_ms": 441,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -6657,7 +6657,7 @@
         "up": 30,
         "median_ms": 225,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -6793,7 +6793,7 @@
         "up": 30,
         "median_ms": 235,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -6927,9 +6927,9 @@
         "url": "https://api.openalex.org",
         "probes": 30,
         "up": 30,
-        "median_ms": 282,
+        "median_ms": 278,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -7074,7 +7074,7 @@
         "up": 30,
         "median_ms": 209,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -7206,9 +7206,9 @@
         "url": "https://api.semanticscholar.org/graph/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 397,
+        "median_ms": 394,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -7246,12 +7246,12 @@
         "url": "https://mcp.semantichub.app/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.semantichub.app/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free forever, no card: 1 goal, 100 sources to watch, 5 workflow nodes, articles kept 7 days; paid plans from $29/month",
@@ -7294,11 +7294,11 @@
       "up_means": "host reachable: HTTP < 500, even 401/404; not a test of any endpoint",
       "mcp_remote": {
         "url": "https://mcp.semantichub.app/mcp",
-        "probes": 14,
-        "up": 14,
-        "median_ms": 845,
+        "probes": 15,
+        "up": 15,
+        "median_ms": 777,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -7345,7 +7345,7 @@
       "handshake": {
         "url": "https://wd-mcp.wmcloud.org/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free, no key",
@@ -7416,10 +7416,10 @@
       "api": {
         "url": "https://query.wikidata.org/sparql",
         "probes": 30,
-        "up": 12,
+        "up": 11,
         "median_ms": 12414,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": false,
           "detail": "timeout"
         }
@@ -7430,7 +7430,7 @@
         "up": 22,
         "median_ms": 382,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -7579,7 +7579,7 @@
         "up": 30,
         "median_ms": 526,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -7620,7 +7620,7 @@
       "handshake": {
         "url": "https://agenttools.wolfram.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: non-commercial developer AppID with up to 2,000 calls/month; paid for commercial use",
@@ -7692,9 +7692,9 @@
         "url": "https://www.wolframalpha.com/api/v1/llm-api",
         "probes": 30,
         "up": 30,
-        "median_ms": 371,
+        "median_ms": 373,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -7703,9 +7703,9 @@
         "url": "https://agenttools.wolfram.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 495,
+        "median_ms": 492,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -7843,7 +7843,7 @@
         "up": 30,
         "median_ms": 193,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -7889,7 +7889,7 @@
       "handshake": {
         "url": "https://mcp.bfl.ai",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "paid only, no free tier (FLUX Schnell weights are open for self-hosting)",
@@ -7974,7 +7974,7 @@
         "up": 30,
         "median_ms": 297,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -7985,7 +7985,7 @@
         "up": 30,
         "median_ms": 303,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -8026,12 +8026,12 @@
         "url": "https://mcp.magnific.com",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.magnific.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
@@ -8097,9 +8097,9 @@
         "url": "https://api.magnific.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 545,
+        "median_ms": 600,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -8108,9 +8108,9 @@
         "url": "https://mcp.magnific.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 290,
+        "median_ms": 288,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -8285,9 +8285,9 @@
         "url": "https://generativelanguage.googleapis.com/v1beta",
         "probes": 30,
         "up": 30,
-        "median_ms": 119,
+        "median_ms": 132,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -8335,7 +8335,7 @@
       "handshake": {
         "url": "https://mcp.ideogram.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only: no free API credits (web app has 10 slow credits/week); API is pay-per-image from prepaid credit (min one-time purchase $1, min auto top-up target $10)",
@@ -8410,7 +8410,7 @@
         "up": 30,
         "median_ms": 226,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -8421,7 +8421,7 @@
         "up": 30,
         "median_ms": 232,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -8463,7 +8463,7 @@
       "handshake": {
         "url": "https://mcp.leonardo.ai/v1/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only: Pay-As-You-Go API credit (USD balance) via manual or auto top-ups; API access is separate from free/web app plans",
@@ -8565,9 +8565,9 @@
         "url": "https://cloud.leonardo.ai/api/rest/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 317,
+        "median_ms": 319,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -8578,7 +8578,7 @@
         "up": 30,
         "median_ms": 248,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -8787,7 +8787,7 @@
         "up": 30,
         "median_ms": 130,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -8837,7 +8837,7 @@
       "handshake": {
         "url": "https://mcp.recraft.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "paid only; pay-per-image (from $0.007/image on V4.1 Flash), no confirmed free credits",
@@ -8914,7 +8914,7 @@
         "up": 30,
         "median_ms": 227,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -8925,7 +8925,7 @@
         "up": 30,
         "median_ms": 208,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -9020,7 +9020,7 @@
         "up": 30,
         "median_ms": 339,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -9191,9 +9191,9 @@
         "url": "https://api.stability.ai",
         "probes": 30,
         "up": 30,
-        "median_ms": 455,
+        "median_ms": 452,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -9274,7 +9274,7 @@
         "up": 30,
         "median_ms": 222,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -9313,12 +9313,12 @@
         "url": "https://api.creatomate.com/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://api.creatomate.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: full-featured trial with 50 credits one-time on signup, no credit card required; then Essential plan with 2,000 credits/mo",
@@ -9408,9 +9408,9 @@
         "url": "https://api.creatomate.com/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 289,
+        "median_ms": 269,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -9419,9 +9419,9 @@
         "url": "https://api.creatomate.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 253,
+        "median_ms": 236,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -9465,7 +9465,7 @@
       "handshake": {
         "url": "https://docs.d-id.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: 14 days with 3 minutes of video credits, then paid plans only (API price per minute not published in machine-readable form)",
@@ -9532,7 +9532,7 @@
         "up": 30,
         "median_ms": 277,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -9541,9 +9541,9 @@
         "url": "https://docs.d-id.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 384,
+        "median_ms": 383,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -9746,7 +9746,7 @@
         "up": 30,
         "median_ms": 93,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -9802,7 +9802,7 @@
       "handshake": {
         "url": "https://mcp.heygen.com/mcp/v1/",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "no free API credits since Feb 2026; pay-as-you-go from $5, $0.50-$0.99/credit. Free plan (3 videos/mo) exists but is for the web app, not standalone API.",
@@ -9884,7 +9884,7 @@
         "up": 30,
         "median_ms": 251,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -9893,9 +9893,9 @@
         "url": "https://mcp.heygen.com/mcp/v1/",
         "probes": 30,
         "up": 30,
-        "median_ms": 162,
+        "median_ms": 156,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -9974,9 +9974,9 @@
         "url": "https://api.klap.app/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 294,
+        "median_ms": 298,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -10117,7 +10117,7 @@
         "up": 30,
         "median_ms": 509,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -10260,7 +10260,7 @@
         "up": 30,
         "median_ms": 336,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -10407,9 +10407,9 @@
         "url": "https://api.minimax.io",
         "probes": 30,
         "up": 30,
-        "median_ms": 346,
+        "median_ms": 349,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -10522,7 +10522,7 @@
         "up": 30,
         "median_ms": 221,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -10559,7 +10559,7 @@
       "handshake": {
         "url": "https://mcp.runwayml.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "no free tier; $10 minimum credit top-up, $0.01/credit",
@@ -10688,9 +10688,9 @@
         "url": "https://api.dev.runwayml.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 214,
+        "median_ms": 217,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -10701,7 +10701,7 @@
         "up": 30,
         "median_ms": 173,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -10752,7 +10752,7 @@
       "handshake": {
         "url": "https://mcp.shotstack.io/",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: 10 free credits one-time (valid 30 days), then pay-as-you-go or subscription; stage sandbox (https://api.shotstack.io/edit/stage) for development, v1 production without watermarks",
@@ -10822,9 +10822,9 @@
         "url": "https://api.shotstack.io/edit/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 751,
+        "median_ms": 757,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -10833,9 +10833,9 @@
         "url": "https://mcp.shotstack.io/",
         "probes": 30,
         "up": 30,
-        "median_ms": 725,
+        "median_ms": 733,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -10865,12 +10865,12 @@
         "url": "https://mcp.synthesia.io/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.synthesia.io/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only; API access requires the Creator plan or above",
@@ -10951,7 +10951,7 @@
         "up": 30,
         "median_ms": 492,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -10962,7 +10962,7 @@
         "up": 30,
         "median_ms": 601,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -11012,7 +11012,7 @@
       "handshake": {
         "url": "https://mcp.tavus.io/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: Free plan with 25 min of conversational video and 5 min of video generation per month, full API access, 25 stock replicas; Starter $59/mo",
@@ -11092,9 +11092,9 @@
         "url": "https://tavusapi.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 341,
+        "median_ms": 328,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -11103,9 +11103,9 @@
         "url": "https://mcp.tavus.io/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 351,
+        "median_ms": 363,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -11436,9 +11436,9 @@
         "url": "https://api.assemblyai.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 331,
+        "median_ms": 330,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -11672,7 +11672,7 @@
       "handshake": {
         "url": "https://mcp.cartesia.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 20,000 credits/mo; no commercial-use license and no voice cloning",
@@ -11803,7 +11803,7 @@
         "up": 30,
         "median_ms": 321,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -11812,9 +11812,9 @@
         "url": "https://mcp.cartesia.ai/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 309,
+        "median_ms": 304,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -12014,7 +12014,7 @@
         "up": 30,
         "median_ms": 289,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -12043,7 +12043,7 @@
       "handshake": {
         "url": "https://api.elevenlabs.io/v1/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       },
       "issue": "repo archived 2026-08-20; replaced by hosted OAuth server https://api.elevenlabs.io/v1/mcp"
     },
@@ -12198,7 +12198,7 @@
         "up": 30,
         "median_ms": 190,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -12209,7 +12209,7 @@
         "up": 30,
         "median_ms": 175,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -12426,9 +12426,9 @@
         "url": "https://texttospeech.googleapis.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 131,
+        "median_ms": 112,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -12593,7 +12593,7 @@
         "up": 30,
         "median_ms": 259,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -12712,7 +12712,7 @@
         "up": 30,
         "median_ms": 254,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -12907,7 +12907,7 @@
         "up": 30,
         "median_ms": 132,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -13155,7 +13155,7 @@
         "up": 30,
         "median_ms": 400,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -13342,7 +13342,7 @@
         "up": 30,
         "median_ms": 472,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -13433,7 +13433,7 @@
         "up": 0,
         "median_ms": null,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": false,
           "detail": "dns"
         }
@@ -13471,7 +13471,7 @@
       "handshake": {
         "url": "https://api.elevenlabs.io/v1/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 10,000 credits per month shared with TTS (music included, no commercial use of music on Free; Starter $6/mo or higher needed)",
@@ -13622,7 +13622,7 @@
         "up": 30,
         "median_ms": 162,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -13633,7 +13633,7 @@
         "up": 30,
         "median_ms": 168,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -13730,7 +13730,7 @@
         "up": 30,
         "median_ms": 778,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -13816,7 +13816,7 @@
         "up": 30,
         "median_ms": 564,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -14001,9 +14001,9 @@
         "url": "https://api.stability.ai",
         "probes": 30,
         "up": 30,
-        "median_ms": 298,
+        "median_ms": 295,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -14084,9 +14084,9 @@
         "url": "https://api.hyper3d.com/api/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 646,
+        "median_ms": 642,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -14239,7 +14239,7 @@
         "up": 30,
         "median_ms": 267,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -14358,9 +14358,9 @@
         "url": "https://api.sketchfab.com/v3",
         "probes": 30,
         "up": 30,
-        "median_ms": 725,
+        "median_ms": 719,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -14444,9 +14444,9 @@
         "url": "https://api.stability.ai",
         "probes": 30,
         "up": 30,
-        "median_ms": 319,
+        "median_ms": 301,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -14537,9 +14537,9 @@
         "url": "https://hunyuan.intl.tencentcloudapi.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 441,
+        "median_ms": 439,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -14678,9 +14678,9 @@
         "url": "https://openapi.tripo3d.ai/v3",
         "probes": 30,
         "up": 30,
-        "median_ms": 314,
+        "median_ms": 332,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -14816,7 +14816,7 @@
         "up": 30,
         "median_ms": 172,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -14943,9 +14943,9 @@
         "url": "https://api.bentley.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 288,
+        "median_ms": 290,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -14975,12 +14975,12 @@
         "url": "https://fs-mcp.labs.onshape.app/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://fs-mcp.labs.onshape.app/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier (public documents only); private documents need a paid plan",
@@ -15064,7 +15064,7 @@
         "up": 30,
         "median_ms": 587,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -15073,9 +15073,9 @@
         "url": "https://fs-mcp.labs.onshape.app/mcp",
         "probes": 30,
         "up": 29,
-        "median_ms": 423,
+        "median_ms": 421,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -15112,12 +15112,12 @@
         "url": "https://app.procore.com/rest/v1.0/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://app.procore.com/rest/v1.0/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free developer sandbox; production requires customer's paid Procore plan",
@@ -15199,7 +15199,7 @@
         "up": 30,
         "median_ms": 192,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -15210,7 +15210,7 @@
         "up": 30,
         "median_ms": 166,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -15467,9 +15467,9 @@
         "url": "https://app.speckle.systems/graphql",
         "probes": 30,
         "up": 30,
-        "median_ms": 255,
+        "median_ms": 254,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -15565,7 +15565,7 @@
         "up": 30,
         "median_ms": 302,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -15728,9 +15728,9 @@
         "url": "https://api.zoo.dev",
         "probes": 30,
         "up": 30,
-        "median_ms": 219,
+        "median_ms": 218,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -15760,12 +15760,12 @@
         "url": "https://app.eraser.io/api/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://app.eraser.io/api/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "paid only - API tokens require an active paid team plan",
@@ -15824,9 +15824,9 @@
         "url": "https://app.eraser.io/api",
         "probes": 30,
         "up": 30,
-        "median_ms": 204,
+        "median_ms": 188,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -15837,7 +15837,7 @@
         "up": 30,
         "median_ms": 180,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -15867,12 +15867,12 @@
         "url": "https://mcp.icepanel.io/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.icepanel.io/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: 10,000 read requests/mo, 1,000 write requests/mo, 5 import/export requests/mo",
@@ -15953,7 +15953,7 @@
         "up": 30,
         "median_ms": 232,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -15964,7 +15964,7 @@
         "up": 30,
         "median_ms": 237,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -16042,9 +16042,9 @@
         "url": "https://kroki.io",
         "probes": 30,
         "up": 30,
-        "median_ms": 691,
+        "median_ms": 688,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -16074,12 +16074,12 @@
         "url": "https://mcp.lucid.app/mcp",
         "auth": "header",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.lucid.app/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "check pricing",
@@ -16162,7 +16162,7 @@
         "up": 30,
         "median_ms": 284,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -16173,7 +16173,7 @@
         "up": 30,
         "median_ms": 274,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -16224,7 +16224,7 @@
       "handshake": {
         "url": "https://mcp.mermaid.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "unauthenticated MCP validate/render tools are free; saving to a Mermaid Chart account needs a token, check pricing for limits",
@@ -16283,9 +16283,9 @@
         "url": "https://mcp.mermaid.ai/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 349,
+        "median_ms": 336,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -16344,7 +16344,7 @@
       "handshake": {
         "url": "https://mcp.miro.com/",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: up to 3 editable team boards; MCP on all plans, capped per day at 100 tool calls on Free (Starter 500, Business 2,000, Enterprise 10,000)",
@@ -16467,9 +16467,9 @@
         "url": "https://api.miro.com/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 286,
+        "median_ms": 271,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -16478,9 +16478,9 @@
         "url": "https://mcp.miro.com/",
         "probes": 30,
         "up": 30,
-        "median_ms": 292,
+        "median_ms": 289,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -16579,9 +16579,9 @@
         "url": "https://api.napkin.ai/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 319,
+        "median_ms": 276,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -16678,9 +16678,9 @@
         "url": "https://www.plantuml.com/plantuml",
         "probes": 30,
         "up": 30,
-        "median_ms": 585,
+        "median_ms": 565,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -16725,12 +16725,12 @@
         "url": "https://mcp.canva.com/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.canva.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "check pricing (free to build/test; public apps require Canva review before production use)",
@@ -16818,9 +16818,9 @@
         "url": "https://api.canva.com/rest/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 154,
+        "median_ms": 151,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -16829,9 +16829,9 @@
         "url": "https://mcp.canva.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 107,
+        "median_ms": 102,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -16884,7 +16884,7 @@
       "handshake": {
         "url": "https://mcp.figma.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free: personal access tokens work on free plan, rate-limited per seat/plan tier; MCP free during beta",
@@ -17024,9 +17024,9 @@
         "url": "https://api.figma.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 169,
+        "median_ms": 163,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -17037,7 +17037,7 @@
         "up": 30,
         "median_ms": 155,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -17141,7 +17141,7 @@
       "handshake": {
         "url": "https://design.penpot.app/mcp/stream",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: free cloud account (design.penpot.app) plus free, open-source self-hosting",
@@ -17220,7 +17220,7 @@
         "up": 30,
         "median_ms": 423,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -17231,7 +17231,7 @@
         "up": 30,
         "median_ms": 392,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -17269,11 +17269,17 @@
       "checked_at": "2026-09-24",
       "domain_verified": true,
       "kind": "vendor-hosted",
-      "config": null,
+      "config": {
+        "transport": "streamable-http",
+        "url": "https://v0.app/api/mcp",
+        "auth": "oauth",
+        "derived": true,
+        "handshake_at": "2026-11-02T12:51Z"
+      },
       "handshake": {
         "url": "https://v0.app/api/mcp",
-        "status": "down",
-        "checked_at": "2026-11-01T11:29Z"
+        "status": "auth_oauth",
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: v0 Free plan includes $5 of credits per month (7 messages/day); Platform API use on Free not confirmed, credits also included on Premium/Team plans",
@@ -17376,9 +17382,9 @@
         "url": "https://api.v0.dev/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 354,
+        "median_ms": 386,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -17387,9 +17393,9 @@
         "url": "https://v0.app/api/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 294,
+        "median_ms": 285,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -17426,7 +17432,7 @@
       "handshake": {
         "url": "https://mcp.webflow.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "check pricing (API access itself is free with a token; some CMS/publish actions require the site to be on a paid Webflow plan)",
@@ -17569,7 +17575,7 @@
         "up": 30,
         "median_ms": 192,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -17580,7 +17586,7 @@
         "up": 30,
         "median_ms": 117,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -17692,9 +17698,9 @@
         "url": "https://pdf-services.adobe.io",
         "probes": 30,
         "up": 30,
-        "median_ms": 200,
+        "median_ms": 202,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -17744,7 +17750,7 @@
       "handshake": {
         "url": "https://aws-mcp.us-east-1.api.aws/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: new AWS customers get 3 months free, per month 1,000 pages DetectDocumentText, 100 pages AnalyzeDocument forms/tables/layout/queries, 100 AnalyzeExpense/AnalyzeID, 2,000 pages AnalyzeLending; card required",
@@ -17868,7 +17874,7 @@
         "up": 30,
         "median_ms": 257,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -17879,7 +17885,7 @@
         "up": 30,
         "median_ms": 392,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -18071,7 +18077,7 @@
       "handshake": {
         "url": "https://mcp.cloudconvert.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: 10 conversion credits/day including all API features, no credit card required; paid credit packages beyond that; free Sandbox API for unlimited test jobs without consuming credits",
@@ -18225,7 +18231,7 @@
         "up": 30,
         "median_ms": 257,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -18236,7 +18242,7 @@
         "up": 30,
         "median_ms": 519,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -18274,8 +18280,8 @@
       },
       "handshake": {
         "url": "https://mcp.docusign.com/mcp",
-        "status": "blocked",
-        "checked_at": "2026-11-01T11:29Z"
+        "status": "auth_oauth",
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free developer/demo sandbox account (account-d.docusign.com) with unlimited test envelopes; production use requires a paid DocuSign plan",
@@ -18431,11 +18437,11 @@
         "url": "https://mcp.docusign.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 266,
+        "median_ms": 274,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
-          "detail": 403
+          "detail": 401
         }
       }
     },
@@ -18490,7 +18496,7 @@
       "handshake": {
         "url": "https://mcp.gamma.app/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only for API keys (Pro, Ultra, Teams or Business plan); the Gamma MCP server/connectors work on all plans including Free, with generations consuming credits",
@@ -18579,7 +18585,7 @@
         "up": 30,
         "median_ms": 169,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -18590,7 +18596,7 @@
         "up": 30,
         "median_ms": 199,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -18760,7 +18766,7 @@
         "up": 30,
         "median_ms": 183,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -18801,7 +18807,7 @@
       "handshake": {
         "url": "https://slidesmcp.googleapis.com/mcp/v1",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free, no key (standard Google API usage quotas apply; requires GCP project + OAuth consent)",
@@ -18896,9 +18902,9 @@
         "url": "https://slides.googleapis.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 148,
+        "median_ms": 147,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -18909,7 +18915,7 @@
         "up": 30,
         "median_ms": 126,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -18948,7 +18954,7 @@
       "handshake": {
         "url": "https://mcp.llamaindex.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: Free plan with 10K credits/month; beyond that credit-based at $1.25/1,000 credits (1-45+ credits/page depending on tier); 48h parse cache is free to re-query",
@@ -19071,9 +19077,9 @@
         "url": "https://mcp.llamaindex.ai/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 332,
+        "median_ms": 330,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -19275,7 +19281,7 @@
         "up": 30,
         "median_ms": 212,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -19444,7 +19450,7 @@
         "up": 30,
         "median_ms": 310,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -19491,7 +19497,7 @@
       "handshake": {
         "url": "https://mcp.reducto.ai/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: $150 in free credits (15,000 credits) one-time for new Standard accounts; then standard rates; Startup Program gives extra credits to qualifying teams",
@@ -19596,7 +19602,7 @@
         "up": 30,
         "median_ms": 348,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -19607,7 +19613,7 @@
         "up": 30,
         "median_ms": 395,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -19647,7 +19653,7 @@
       "handshake": {
         "url": "https://mcp.slidespeak.co/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: free API trial, no credit card required; then API plans from $49/month (1,000 credits)",
@@ -19744,7 +19750,7 @@
         "up": 30,
         "median_ms": 477,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -19755,7 +19761,7 @@
         "up": 30,
         "median_ms": 485,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -19794,7 +19800,7 @@
       "handshake": {
         "url": "https://mcp.transform.unstructured.io",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: 10,000 free pages one-time on signup, no credit card; then pay-as-you-go at $0.015/page",
@@ -19925,9 +19931,9 @@
         "url": "https://transform.unstructured.io/api/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 408,
+        "median_ms": 404,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -19936,9 +19942,9 @@
         "url": "https://mcp.transform.unstructured.io",
         "probes": 30,
         "up": 30,
-        "median_ms": 358,
+        "median_ms": 356,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -20259,9 +20265,9 @@
         "url": "https://api.cognitive.microsofttranslator.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 221,
+        "median_ms": 233,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -20481,7 +20487,7 @@
         "up": 30,
         "median_ms": 530,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -20641,7 +20647,7 @@
         "up": 30,
         "median_ms": 144,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -20752,9 +20758,9 @@
         "url": "https://api.languagetool.org/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 636,
+        "median_ms": 638,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -20810,12 +20816,12 @@
         "url": "https://mcp-v2.laratranslate.com/v1",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp-v2.laratranslate.com/v1",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: 10,000 API characters/month (shared by translation and language detection), no credit card required",
@@ -20909,9 +20915,9 @@
         "url": "https://api.laratranslate.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 273,
+        "median_ms": 277,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -20920,9 +20926,9 @@
         "url": "https://mcp-v2.laratranslate.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 228,
+        "median_ms": 232,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -20969,7 +20975,7 @@
       "handshake": {
         "url": "https://containers.mcp.cloudflare.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "requires Workers Paid plan ($5/mo) for Containers; no free tier for container-backed sandboxes",
@@ -21055,7 +21061,7 @@
         "up": 30,
         "median_ms": 141,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -21066,7 +21072,7 @@
         "up": 30,
         "median_ms": 101,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -21182,7 +21188,7 @@
         "up": 30,
         "median_ms": 295,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -21221,7 +21227,7 @@
       "handshake": {
         "url": "https://www.daytona.io/docs/en/mcp/",
         "status": "not_mcp",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: $200 free compute credit one-time on signup, no credit card required; first 5 GiB storage free; startup program up to $50k credits",
@@ -21330,9 +21336,9 @@
         "url": "https://app.daytona.io/api",
         "probes": 30,
         "up": 30,
-        "median_ms": 168,
+        "median_ms": 167,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -21477,9 +21483,9 @@
         "url": "https://api.e2b.app",
         "probes": 30,
         "up": 30,
-        "median_ms": 254,
+        "median_ms": 219,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -21560,7 +21566,7 @@
         "up": 30,
         "median_ms": 379,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -21787,7 +21793,7 @@
         "up": 30,
         "median_ms": 361,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -21837,7 +21843,7 @@
       "handshake": {
         "url": "https://mcp.riza.io/code-interpreter",
         "status": "down",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: Hobby plan free forever, 100,000 requests/month, 30 s execution limit; then usage-based pricing",
@@ -21927,7 +21933,7 @@
         "up": 0,
         "median_ms": null,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": false,
           "detail": "tls"
         }
@@ -21938,7 +21944,7 @@
         "up": 0,
         "median_ms": null,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": false,
           "detail": "tls"
         }
@@ -22073,7 +22079,7 @@
         "up": 30,
         "median_ms": 242,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -22110,7 +22116,7 @@
       "handshake": {
         "url": "https://mcp.vercel.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "usage included on Hobby plan, otherwise usage-based on Pro/Enterprise",
@@ -22220,7 +22226,7 @@
         "up": 30,
         "median_ms": 700,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -22229,9 +22235,9 @@
         "url": "https://mcp.vercel.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 178,
+        "median_ms": 173,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -22294,7 +22300,7 @@
       "handshake": {
         "url": "https://mcp.circleci.com/v1/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free plan: 30,000 credits/month (~6,000 build minutes on a small Docker resource class), credits expire monthly",
@@ -22373,7 +22379,7 @@
         "up": 30,
         "median_ms": 156,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -22382,9 +22388,9 @@
         "url": "https://mcp.circleci.com/v1/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 228,
+        "median_ms": 226,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -22439,7 +22445,7 @@
       "handshake": {
         "url": "https://mcp.datadoghq.com/v1/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free Infrastructure Monitoring plan: 1-day metric retention, up to 5 hosts; other products (APM, Logs, Security) are paid",
@@ -22579,7 +22585,7 @@
         "up": 30,
         "median_ms": 165,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -22588,9 +22594,9 @@
         "url": "https://mcp.datadoghq.com/v1/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 231,
+        "median_ms": 232,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -22728,7 +22734,7 @@
         "up": 30,
         "median_ms": 193,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -22780,7 +22786,7 @@
       "handshake": {
         "url": "https://api.githubcopilot.com/mcp/",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free with any GitHub account; 5,000 req/hr authenticated, 60/hr unauthenticated",
@@ -22936,7 +22942,7 @@
         "up": 30,
         "median_ms": 199,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -22947,7 +22953,7 @@
         "up": 30,
         "median_ms": 194,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -23003,7 +23009,7 @@
       "handshake": {
         "url": "https://gitlab.com/api/v4/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: full REST API access on GitLab.com Free plan; some features gated to Premium/Ultimate",
@@ -23087,9 +23093,9 @@
         "url": "https://gitlab.com/api/v4",
         "probes": 30,
         "up": 30,
-        "median_ms": 203,
+        "median_ms": 202,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -23100,7 +23106,7 @@
         "up": 30,
         "median_ms": 210,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -23155,7 +23161,7 @@
       "handshake": {
         "url": "https://mcp.globalping.dev/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "No key; 250 tests/hour anonymously (up to 50 probes per measurement), 500 tests/hour with a free account token (up to 500 probes); extra tests use credits.",
@@ -23241,9 +23247,9 @@
         "url": "https://api.globalping.io/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 405,
+        "median_ms": 398,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -23254,7 +23260,7 @@
         "up": 30,
         "median_ms": 355,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -23374,9 +23380,9 @@
         "up": 21,
         "median_ms": 236,
         "last": {
-          "at": "2026-11-01T11:28Z",
-          "up": false,
-          "detail": "timeout"
+          "at": "2026-11-02T12:49Z",
+          "up": true,
+          "detail": 400
         }
       }
     }
@@ -23428,7 +23434,7 @@
       "handshake": {
         "url": "https://mcp.pagerduty.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free plan for up to 5 users: 100 monthly SMS/phone notifications, 1 on-call schedule, 1 escalation policy, API access",
@@ -23566,7 +23572,7 @@
         "up": 29,
         "median_ms": 478,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -23577,7 +23583,7 @@
         "up": 30,
         "median_ms": 385,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -23618,7 +23624,7 @@
       "handshake": {
         "url": "https://mcp.postman.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free plan: 10,000 Postman API calls/month; rate limits ~300 req/min general, stricter for specific endpoints",
@@ -23697,7 +23703,7 @@
         "up": 30,
         "median_ms": 634,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -23708,7 +23714,7 @@
         "up": 30,
         "median_ms": 251,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -23745,7 +23751,7 @@
       "handshake": {
         "url": "https://app.reflag.com/api/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free Starter plan: 1,000 monthly tracked users, unlimited seats, 3 environments; no overage (upgrade required)",
@@ -23818,9 +23824,9 @@
         "url": "https://app.reflag.com/api",
         "probes": 30,
         "up": 30,
-        "median_ms": 334,
+        "median_ms": 328,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -23831,7 +23837,7 @@
         "up": 30,
         "median_ms": 348,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -23873,7 +23879,7 @@
       "handshake": {
         "url": "https://mcp.sentry.dev/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free Developer plan: 1 user, 5,000 errors/mo, 5GB logs, 50 replays; includes MCP access",
@@ -24001,7 +24007,7 @@
         "up": 0,
         "median_ms": null,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": false,
           "detail": "timeout"
         }
@@ -24010,9 +24016,9 @@
         "url": "https://mcp.sentry.dev/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 191,
+        "median_ms": 188,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -24071,7 +24077,7 @@
       "handshake": {
         "url": "https://mcp.supabase.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free plan available; rate limit 120 req/min per user/project (lower for heavier endpoints)",
@@ -24140,9 +24146,9 @@
         "url": "https://api.supabase.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 136,
+        "median_ms": 135,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -24151,9 +24157,9 @@
         "url": "https://mcp.supabase.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 129,
+        "median_ms": 128,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -24201,7 +24207,7 @@
       "handshake": {
         "url": "https://aws-mcp.us-east-1.api.aws/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 30+ services always free within monthly limits; new accounts also get up to $200 one-time credits ($100 on signup + up to $100 earned) usable over 6 months",
@@ -24313,9 +24319,9 @@
         "url": "https://aws-mcp.us-east-1.api.aws/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 347,
+        "median_ms": 351,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -24496,7 +24502,7 @@
         "up": 30,
         "median_ms": 111,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -24541,7 +24547,7 @@
       "handshake": {
         "url": "https://mcp.cloudflare.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free with any Cloudflare account; API access itself is free, manages both free and paid Cloudflare products",
@@ -24678,9 +24684,9 @@
         "url": "https://api.cloudflare.com/client/v4",
         "probes": 30,
         "up": 30,
-        "median_ms": 145,
+        "median_ms": 135,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -24691,7 +24697,7 @@
         "up": 30,
         "median_ms": 91,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -24885,7 +24891,7 @@
         "up": 30,
         "median_ms": 201,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -24926,7 +24932,7 @@
       "handshake": {
         "url": "https://compute.googleapis.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free trial credit for new customers plus an Always Free tier with perpetual no-cost limits on select products",
@@ -24992,9 +24998,9 @@
         "url": "https://compute.googleapis.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 263,
+        "median_ms": 270,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -25036,7 +25042,7 @@
       "handshake": {
         "url": "https://mcp.mux.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "first 100,000 delivered minutes/month free, then usage-based",
@@ -25164,7 +25170,7 @@
         "up": 30,
         "median_ms": 253,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -25173,9 +25179,9 @@
         "url": "https://mcp.mux.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 266,
+        "median_ms": 261,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -25213,7 +25219,7 @@
       "handshake": {
         "url": "https://netlify-mcp.netlify.app/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: $0 forever plan with 300 credits per month (hard limit, no rollover); API usage subject to account plan limits",
@@ -25305,7 +25311,7 @@
         "up": 30,
         "median_ms": 281,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -25316,7 +25322,7 @@
         "up": 30,
         "median_ms": 775,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -25384,7 +25390,7 @@
       "handshake": {
         "url": "https://mcp.render.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free static sites; free web services that spin down after inactivity",
@@ -25454,7 +25460,7 @@
         "up": 30,
         "median_ms": 187,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -25465,7 +25471,7 @@
         "up": 30,
         "median_ms": 189,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -25506,7 +25512,7 @@
       "handshake": {
         "url": "https://mcp-on-edge.edgeone.app/mcp-server",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free plan (stated as permanent): 40 projects, 500 builds/month, 3M Edge Function and 1M Cloud Function invocations/month, 5 GB storage, 1 GB KV, 1 GB Blob.",
@@ -25550,9 +25556,9 @@
         "url": "https://mcp-on-edge.edgeone.app/mcp-server",
         "probes": 30,
         "up": 30,
-        "median_ms": 783,
+        "median_ms": 767,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -25611,7 +25617,7 @@
       "handshake": {
         "url": "https://mcp.vercel.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free on Hobby plan; some resources/endpoints require Pro/paid plan",
@@ -25719,7 +25725,7 @@
         "up": 30,
         "median_ms": 411,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -25730,7 +25736,7 @@
         "up": 30,
         "median_ms": 187,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -25781,7 +25787,7 @@
       "handshake": {
         "url": "https://mcp.clickhouse.cloud/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "no permanent free tier; 30-day trial with $300 credits",
@@ -25946,9 +25952,9 @@
         "url": "https://api.clickhouse.cloud/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 265,
+        "median_ms": 240,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -25959,7 +25965,7 @@
         "up": 30,
         "median_ms": 276,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -26185,7 +26191,7 @@
       "handshake": {
         "url": "https://bigquery.googleapis.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 1 TiB of querying and 10 GiB of storage per month",
@@ -26345,9 +26351,9 @@
         "url": "https://bigquery.googleapis.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 103,
+        "median_ms": 107,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -26358,7 +26364,7 @@
         "up": 30,
         "median_ms": 108,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -26555,7 +26561,7 @@
         "up": 30,
         "median_ms": 191,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -26632,7 +26638,7 @@
       "handshake": {
         "url": "https://mcp.neon.tech/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 100 projects; 0.5 GB storage, 100 CU-hours and 5 GB egress per project per month, no card required",
@@ -26739,7 +26745,7 @@
         "up": 30,
         "median_ms": 145,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -26748,9 +26754,9 @@
         "url": "https://mcp.neon.tech/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 201,
+        "median_ms": 195,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -26787,7 +26793,7 @@
       "handshake": {
         "url": "https://mcp.pscale.dev/mcp/planetscale",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only: no free or Hobby plan; cheapest is Postgres PS-5 single node at $5/month",
@@ -26898,7 +26904,7 @@
         "up": 30,
         "median_ms": 291,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -26909,7 +26915,7 @@
         "up": 30,
         "median_ms": 542,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -27135,7 +27141,7 @@
       "handshake": {
         "url": "https://mcp.supabase.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: 2 projects, 500MB DB, 5GB bandwidth",
@@ -27269,7 +27275,7 @@
         "up": 30,
         "median_ms": 104,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -27278,9 +27284,9 @@
         "url": "https://mcp.supabase.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 103,
+        "median_ms": 102,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -27471,7 +27477,7 @@
       "handshake": {
         "url": "https://mcp.tinybird.co?token=TINYBIRD_TOKEN",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free plan: 10 GB storage, 1,000 API requests/day, 0.25 vCPU shared; no credit card",
@@ -27545,7 +27551,7 @@
         "up": 30,
         "median_ms": 3169,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 302
         }
@@ -27556,7 +27562,7 @@
         "up": 30,
         "median_ms": 167,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -27595,7 +27601,7 @@
       "handshake": {
         "url": "https://mcp.turso.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 100 databases, 5 GB storage, 500M rows read and 10M rows written per month, no card required",
@@ -27688,9 +27694,9 @@
         "url": "https://api.turso.tech/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 277,
+        "median_ms": 282,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -27699,9 +27705,9 @@
         "url": "https://mcp.turso.ai/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 333,
+        "median_ms": 332,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -27741,7 +27747,7 @@
       "handshake": {
         "url": "https://mcp.upstash.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: Redis 256MB/500K cmds per month; Vector 10K queries+updates per day (max 200M vectors x dimensions, 1,536 dims)",
@@ -27904,7 +27910,7 @@
       "handshake": {
         "url": "https://docs.agentset.ai/production/mcp-server",
         "status": "not_mcp",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free plan (forever): 1,000 pages ingested and 10,000 retrievals per month, 60 requests/min per namespace",
@@ -27994,9 +28000,9 @@
         "url": "https://api.agentset.ai",
         "probes": 30,
         "up": 30,
-        "median_ms": 1135,
+        "median_ms": 1069,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -28179,9 +28185,9 @@
         "url": "https://api.trychroma.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 287,
+        "median_ms": 294,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -28228,7 +28234,7 @@
       "handshake": {
         "url": "https://api.letta.com/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: $0/month plan with up to 3 stateful agents and limited Letta Auto usage (bring your own API keys); API plan $20/month + usage",
@@ -28316,7 +28322,7 @@
         "up": 30,
         "median_ms": 197,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -28327,7 +28333,7 @@
         "up": 30,
         "median_ms": 185,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -28377,7 +28383,7 @@
       "handshake": {
         "url": "https://mcp.mem0.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free (Hobby) tier: 10K add requests, 1K retrievals/mo, 1 project",
@@ -28472,7 +28478,7 @@
         "up": 30,
         "median_ms": 338,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -28483,7 +28489,7 @@
         "up": 30,
         "median_ms": 198,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 307
         }
@@ -28693,9 +28699,9 @@
         "url": "https://api.pinecone.io",
         "probes": 30,
         "up": 30,
-        "median_ms": 186,
+        "median_ms": 183,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -29081,7 +29087,7 @@
       "handshake": {
         "url": "https://api.getzep.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 10,000 credits per month, no rollover; variable rate limits",
@@ -29207,7 +29213,7 @@
         "up": 30,
         "median_ms": 205,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -29216,9 +29222,9 @@
         "url": "https://api.getzep.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 182,
+        "median_ms": 178,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -29409,7 +29415,7 @@
         "up": 30,
         "median_ms": 337,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -29449,7 +29455,7 @@
       "handshake": {
         "url": "https://mcp.agentmail.to/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: 3 inboxes, 3,000 emails/month (max 100/day), 3GB storage, no card required",
@@ -29533,9 +29539,9 @@
         "url": "https://api.agentmail.to/v0",
         "probes": 30,
         "up": 30,
-        "median_ms": 138,
+        "median_ms": 135,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -29546,7 +29552,7 @@
         "up": 30,
         "median_ms": 217,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -29732,7 +29738,7 @@
         "up": 30,
         "median_ms": 76,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -29902,9 +29908,9 @@
         "url": "https://api.mailgun.net",
         "probes": 30,
         "up": 30,
-        "median_ms": 267,
+        "median_ms": 244,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -30050,9 +30056,9 @@
         "url": "https://ntfy.sh",
         "probes": 30,
         "up": 30,
-        "median_ms": 302,
+        "median_ms": 306,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -30258,7 +30264,7 @@
         "up": 30,
         "median_ms": 408,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -30299,7 +30305,7 @@
       "handshake": {
         "url": "https://mcp.resend.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: 3,000 emails/mo, 100/day",
@@ -30431,9 +30437,9 @@
         "url": "https://api.resend.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 170,
+        "median_ms": 180,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -30442,9 +30448,9 @@
         "url": "https://mcp.resend.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 205,
+        "median_ms": 199,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -30624,7 +30630,7 @@
         "up": 30,
         "median_ms": 185,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -30663,7 +30669,7 @@
       "handshake": {
         "url": "https://mcp.slack.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free, no key needed beyond creating a Slack app/workspace",
@@ -30816,7 +30822,7 @@
         "up": 30,
         "median_ms": 532,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -30825,9 +30831,9 @@
         "url": "https://mcp.slack.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 187,
+        "median_ms": 178,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -31035,7 +31041,7 @@
       "handshake": {
         "url": "https://mcp.zoom.us/mcp/zoom/streamable",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "usable on free Zoom account within Basic plan limits; some endpoints require paid plan",
@@ -31123,9 +31129,9 @@
         "url": "https://api.zoom.us/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 184,
+        "median_ms": 180,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -31134,9 +31140,9 @@
         "url": "https://mcp.zoom.us/mcp/zoom/streamable",
         "probes": 30,
         "up": 30,
-        "median_ms": 159,
+        "median_ms": 158,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -31177,12 +31183,12 @@
         "url": "https://aws-mcp.us-east-1.api.aws/mcp",
         "auth": "none",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://aws-mcp.us-east-1.api.aws/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only; US SMS $0.00774/message + $0.00421 carrier fee (10DLC or toll-free)",
@@ -31309,7 +31315,7 @@
         "up": 30,
         "median_ms": 309,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -31356,12 +31362,12 @@
         "url": "https://mcp.bird.com",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.bird.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only; prepaid wallet, US long code or toll-free $0.0035/SMS + carrier fees",
@@ -31518,9 +31524,9 @@
         "url": "https://us1.platform.bird.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 285,
+        "median_ms": 280,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -31529,9 +31535,9 @@
         "url": "https://mcp.bird.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 293,
+        "median_ms": 281,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -31750,7 +31756,7 @@
         "up": 30,
         "median_ms": 2129,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -32103,12 +32109,12 @@
         "url": "https://api.telnyx.com/v2/mcp",
         "auth": "none",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://api.telnyx.com/v2/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: $5 test credit, 1 verified number, 100 messages/day; then paid (US 10DLC $0.004/SMS part + carrier fees)",
@@ -32269,7 +32275,7 @@
         "up": 30,
         "median_ms": 157,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -32278,9 +32284,9 @@
         "url": "https://api.telnyx.com/v2/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 276,
+        "median_ms": 283,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -32359,7 +32365,7 @@
         "up": 30,
         "median_ms": 193,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -32976,7 +32982,7 @@
       "handshake": {
         "url": "https://api.bland.ai/v1/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free credits + inbound number on signup (Start plan), no credit card required",
@@ -33052,9 +33058,9 @@
         "url": "https://api.bland.ai/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 210,
+        "median_ms": 203,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -33065,7 +33071,7 @@
         "up": 30,
         "median_ms": 229,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -33093,7 +33099,7 @@
       "handshake": {
         "url": "https://developers.deepgram.com/developer-tools/cli/mcp-server",
         "status": "not_mcp",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "$200 free credit on signup",
@@ -33259,7 +33265,7 @@
       "handshake": {
         "url": "https://api.elevenlabs.io/v1/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free plan: 10k credits/month shared across ElevenLabs products; no commercial license (from Starter, $6/month)",
@@ -33416,9 +33422,9 @@
         "url": "https://api.elevenlabs.io/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 138,
+        "median_ms": 143,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -33427,9 +33433,9 @@
         "url": "https://api.elevenlabs.io/v1/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 156,
+        "median_ms": 159,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -33808,7 +33814,7 @@
       "handshake": {
         "url": "https://mcp.retellai.com",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "$10 free credit on signup, then pay-as-you-go ($0.07-$0.31/min for voice)",
@@ -33941,7 +33947,7 @@
         "up": 30,
         "median_ms": 237,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -33950,9 +33956,9 @@
         "url": "https://mcp.retellai.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 352,
+        "median_ms": 364,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -34002,12 +34008,12 @@
         "url": "https://mcp.synthflow.ai/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.synthflow.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only: Enterprise contracts from $30,000/year; no free plan or self-serve trial listed",
@@ -34083,7 +34089,7 @@
         "up": 30,
         "median_ms": 355,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -34094,7 +34100,7 @@
         "up": 30,
         "median_ms": 262,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -34345,7 +34351,7 @@
         "up": 30,
         "median_ms": 120,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -34401,7 +34407,7 @@
       "handshake": {
         "url": "https://mcp.vapi.ai/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "$5 free credit on signup, then pay-as-you-go (~$0.05/min platform fee + provider costs)",
@@ -34527,7 +34533,7 @@
         "up": 30,
         "median_ms": 168,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -34536,9 +34542,9 @@
         "url": "https://mcp.vapi.ai/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 187,
+        "median_ms": 183,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -34576,7 +34582,7 @@
       "handshake": {
         "url": "https://mcp.airtable.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 1,000 API calls per workspace per month on the Free plan, 5 req/sec per base",
@@ -34700,7 +34706,7 @@
         "up": 30,
         "median_ms": 235,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -34711,7 +34717,7 @@
         "up": 30,
         "median_ms": 163,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -34757,12 +34763,12 @@
         "url": "https://mcp.asana.com/v2/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.asana.com/v2/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: API included on Personal (free) plan, rate limited",
@@ -34916,9 +34922,9 @@
         "url": "https://app.asana.com/api/1.0",
         "probes": 30,
         "up": 30,
-        "median_ms": 155,
+        "median_ms": 154,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -34929,7 +34935,7 @@
         "up": 30,
         "median_ms": 257,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -34980,7 +34986,7 @@
       "handshake": {
         "url": "https://mcp.atlassian.com/v2/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: available on Free Jira/Confluence plans; rate limits vary by plan",
@@ -35058,9 +35064,9 @@
         "url": "https://mcp.atlassian.com/v2/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 150,
+        "median_ms": 139,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -35103,12 +35109,12 @@
         "url": "https://mcp.box.com",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.box.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: developer plan with 10 GB storage, full API access and 1,000 AI units per month, no payment required",
@@ -35276,9 +35282,9 @@
         "url": "https://api.box.com/2.0",
         "probes": 30,
         "up": 30,
-        "median_ms": 140,
+        "median_ms": 136,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -35289,7 +35295,7 @@
         "up": 30,
         "median_ms": 137,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -35333,12 +35339,12 @@
         "url": "https://mcp.cal.com/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.cal.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: API keys on any account incl. the free-forever Individuals plan, 120 req/min per key (higher on request); Teams/Orgs endpoints need paid plans",
@@ -35419,7 +35425,7 @@
         "up": 30,
         "median_ms": 223,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -35428,9 +35434,9 @@
         "url": "https://mcp.cal.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 230,
+        "median_ms": 227,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -35467,12 +35473,12 @@
         "url": "https://mcp.calendly.com",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.calendly.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: API reads and most writes work on every plan incl. Free (except 3 Enterprise-only endpoints); booking through the Scheduling API (POST /invitees) and webhooks need a paid plan",
@@ -35547,7 +35553,7 @@
         "up": 30,
         "median_ms": 147,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -35558,7 +35564,7 @@
         "up": 30,
         "median_ms": 145,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -35596,7 +35602,7 @@
       "handshake": {
         "url": "https://mcp.clickup.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: API access included on Free Forever plan",
@@ -35683,9 +35689,9 @@
         "url": "https://api.clickup.com/api/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 178,
+        "median_ms": 168,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -35694,9 +35700,9 @@
         "url": "https://mcp.clickup.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 288,
+        "median_ms": 259,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -35733,7 +35739,7 @@
       "handshake": {
         "url": "https://docs.superhuman.com/apis/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free, included for all users on both free and paid workspaces",
@@ -35809,9 +35815,9 @@
         "url": "https://coda.io/apis/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 223,
+        "median_ms": 209,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -35820,9 +35826,9 @@
         "url": "https://docs.superhuman.com/apis/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 213,
+        "median_ms": 208,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -35866,12 +35872,12 @@
         "url": "https://mcp.dropbox.com/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.dropbox.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: API access included on Basic (free) plan, rate limited",
@@ -36008,9 +36014,9 @@
         "url": "https://api.dropboxapi.com/2",
         "probes": 30,
         "up": 30,
-        "median_ms": 201,
+        "median_ms": 195,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -36021,7 +36027,7 @@
         "up": 30,
         "median_ms": 194,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -36060,12 +36066,12 @@
         "url": "https://gmailmcp.googleapis.com/mcp/v1",
         "auth": "none",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://gmailmcp.googleapis.com/mcp/v1",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: no charge within per-API daily quotas; Google plans to bill quota overages to the Cloud billing account later in 2026",
@@ -36155,9 +36161,9 @@
         "url": "https://gmailmcp.googleapis.com/mcp/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 158,
+        "median_ms": 144,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -36194,7 +36200,7 @@
       "handshake": {
         "url": "https://mcp.linear.app/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: API access included on Free plan (rate limited)",
@@ -36305,7 +36311,7 @@
         "up": 30,
         "median_ms": 242,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -36316,7 +36322,7 @@
         "up": 30,
         "median_ms": 108,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -36352,12 +36358,12 @@
         "url": "https://mcp.svc.cloud.microsoft/enterprise",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.svc.cloud.microsoft/enterprise",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: standard Graph APIs cost nothing beyond the user's Microsoft 365/Entra license (metered APIs are billed); the free M365 E5 developer sandbox is only for qualifying members (Visual Studio Pro/Enterprise subscribers, ISV Success/partners, Premier/Unified support)",
@@ -36497,7 +36503,7 @@
         "up": 30,
         "median_ms": 100,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -36506,9 +36512,9 @@
         "url": "https://mcp.svc.cloud.microsoft/enterprise",
         "probes": 30,
         "up": 30,
-        "median_ms": 232,
+        "median_ms": 235,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -36560,7 +36566,7 @@
       "handshake": {
         "url": "https://mcp.monday.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: GraphQL API included on Free plan (rate limited)",
@@ -36671,7 +36677,7 @@
         "up": 30,
         "median_ms": 176,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -36682,7 +36688,7 @@
         "up": 30,
         "median_ms": 223,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -36721,7 +36727,7 @@
       "handshake": {
         "url": "https://app.nocodb.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free plan: 1,000 records, 1 GB storage, 1,000 API calls/month, 3 editors, 100 automation runs; no credit card",
@@ -36811,7 +36817,7 @@
         "up": 30,
         "median_ms": 365,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -36822,7 +36828,7 @@
         "up": 30,
         "median_ms": 331,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -36876,7 +36882,7 @@
       "handshake": {
         "url": "https://mcp.notion.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free, API access included on all plans (rate limit ~3 req/sec)",
@@ -36997,9 +37003,9 @@
         "url": "https://api.notion.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 275,
+        "median_ms": 272,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -37008,9 +37014,9 @@
         "url": "https://mcp.notion.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 138,
+        "median_ms": 151,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -37048,7 +37054,7 @@
       "handshake": {
         "url": "https://ai.todoist.net/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: API usable with any Todoist account; 1,000 partial / 100 full sync requests per 15 min per user; some features follow the user's Todoist plan",
@@ -37186,7 +37192,7 @@
         "up": 30,
         "median_ms": 236,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -37195,9 +37201,9 @@
         "url": "https://ai.todoist.net/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 318,
+        "median_ms": 325,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -37228,12 +37234,12 @@
         "url": "https://mcp.trello.com/v1",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.trello.com/v1",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: free API key + user token; rate limits 300 req/10 s per API key and 100 req/10 s per token",
@@ -37328,7 +37334,7 @@
         "up": 30,
         "median_ms": 352,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -37337,9 +37343,9 @@
         "url": "https://mcp.trello.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 231,
+        "median_ms": 233,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -37407,7 +37413,7 @@
       "handshake": {
         "url": "https://mcp.attio.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: up to 3 seats, 50,000 records, API access included; no card required; 14-day trial of Pro plan",
@@ -37501,7 +37507,7 @@
         "up": 30,
         "median_ms": 303,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -37512,7 +37518,7 @@
         "up": 30,
         "median_ms": 300,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -37572,7 +37578,7 @@
       "handshake": {
         "url": "https://mcp.hubspot.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free CRM account with limited-scope API access; many endpoints require a paid Hub tier (see APIs-by-tier docs)",
@@ -37718,9 +37724,9 @@
         "url": "https://api.hubapi.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 492,
+        "median_ms": 473,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -37731,7 +37737,7 @@
         "up": 30,
         "median_ms": 211,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -37786,7 +37792,7 @@
       "handshake": {
         "url": "https://mcp.intercom.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free development workspace for building/testing; production use requires a paid Intercom plan",
@@ -37926,7 +37932,7 @@
         "up": 30,
         "median_ms": 542,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -37935,9 +37941,9 @@
         "url": "https://mcp.intercom.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 195,
+        "median_ms": 181,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -37997,7 +38003,7 @@
       "handshake": {
         "url": "https://mcp.klaviyo.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free plan up to 250 contacts / 500 email sends per month",
@@ -38145,9 +38151,9 @@
         "url": "https://a.klaviyo.com/api",
         "probes": 30,
         "up": 30,
-        "median_ms": 156,
+        "median_ms": 152,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -38156,9 +38162,9 @@
         "url": "https://mcp.klaviyo.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 164,
+        "median_ms": 161,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -38363,7 +38369,7 @@
       "handshake": {
         "url": "https://mcp.pipedrive.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "no free tier; 14/30-day trial and free developer sandbox account for testing",
@@ -38495,7 +38501,7 @@
         "up": 30,
         "median_ms": 212,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -38504,9 +38510,9 @@
         "url": "https://mcp.pipedrive.ai/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 328,
+        "median_ms": 313,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -38556,7 +38562,7 @@
       "handshake": {
         "url": "https://api.salesforce.com/platform/mcp/v1/platform/sobject-all",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free Developer Edition org available via signup at developer.salesforce.com/signup",
@@ -38649,7 +38655,7 @@
         "up": 30,
         "median_ms": 235,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -38834,7 +38840,7 @@
       "handshake": {
         "url": "https://api.ayrshare.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: one-time 28-day free trial of the Launch plan ($299/mo), no card required; Premium from $149/mo",
@@ -38923,9 +38929,9 @@
         "url": "https://api.ayrshare.com/api",
         "probes": 30,
         "up": 30,
-        "median_ms": 265,
+        "median_ms": 266,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -38934,9 +38940,9 @@
         "url": "https://api.ayrshare.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 243,
+        "median_ms": 244,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -39071,7 +39077,7 @@
         "up": 30,
         "median_ms": 314,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -39167,7 +39173,7 @@
         "up": 30,
         "median_ms": 209,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -39300,12 +39306,12 @@
         "url": "https://mcp.facebook.com/ads",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.facebook.com/ads",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: no fee; platform rate limit 200 calls/hour x app users; most non-trivial permissions need Meta App Review and business verification",
@@ -39394,9 +39400,9 @@
         "url": "https://mcp.facebook.com/ads",
         "probes": 30,
         "up": 30,
-        "median_ms": 202,
+        "median_ms": 211,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -39518,7 +39524,7 @@
         "up": 30,
         "median_ms": 266,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -39629,7 +39635,7 @@
         "up": 30,
         "median_ms": 143,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -39743,7 +39749,7 @@
         "up": 30,
         "median_ms": 324,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -39775,12 +39781,12 @@
         "url": "https://api.x.com/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://api.x.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only: pay-per-usage with prepaid credits (e.g. $0.005 per Post read, $0.001 per owned read), no subscriptions and no free tier",
@@ -39873,9 +39879,9 @@
         "url": "https://api.x.com/2",
         "probes": 30,
         "up": 30,
-        "median_ms": 205,
+        "median_ms": 192,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -39884,9 +39890,9 @@
         "url": "https://api.x.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 190,
+        "median_ms": 169,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -40004,7 +40010,7 @@
         "up": 30,
         "median_ms": 264,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -40028,7 +40034,7 @@
       "handshake": {
         "url": "https://developers.arcgis.com/ai-tools/mcp-arcgis-location-services/",
         "status": "blocked",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier with monthly free credits, then usage-based pricing",
@@ -40118,9 +40124,9 @@
         "url": "https://geocode-api.arcgis.com/arcgis/rest/services",
         "probes": 30,
         "up": 30,
-        "median_ms": 242,
+        "median_ms": 241,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -40275,9 +40281,9 @@
         "url": "https://api.geoapify.com",
         "probes": 30,
         "up": 0,
-        "median_ms": 421,
+        "median_ms": 360,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": false,
           "detail": 503
         }
@@ -40323,7 +40329,7 @@
       "handshake": {
         "url": "https://mapstools.googleapis.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: free calls per SKU per month (10K Essentials, 5K Pro, 1K Enterprise), replacing the former $200 monthly credit",
@@ -40476,9 +40482,9 @@
         "url": "https://mapstools.googleapis.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 218,
+        "median_ms": 211,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -40559,7 +40565,7 @@
         "up": 29,
         "median_ms": 975,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -40738,7 +40744,7 @@
       "handshake": {
         "url": "https://mcp.ip2location.io/",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free plan: 50,000 IP geolocation queries/month, 500 domain WHOIS and 50 hosted-domain queries/month (attribution required); keyless: 1,000 queries/day.",
@@ -40838,7 +40844,7 @@
         "up": 29,
         "median_ms": 267,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -40849,7 +40855,7 @@
         "up": 30,
         "median_ms": 218,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -40990,9 +40996,9 @@
         "url": "https://iplocate.io/api",
         "probes": 30,
         "up": 30,
-        "median_ms": 304,
+        "median_ms": 322,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -41094,9 +41100,9 @@
         "url": "https://us1.locationiq.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 308,
+        "median_ms": 306,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -41147,7 +41153,7 @@
       "handshake": {
         "url": "https://mcp.mapbox.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: monthly free quotas per API (e.g. 50,000 map loads/month)",
@@ -41307,7 +41313,7 @@
         "up": 30,
         "median_ms": 134,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -41318,7 +41324,7 @@
         "up": 30,
         "median_ms": 239,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -41419,9 +41425,9 @@
         "url": "https://api.weather.gov",
         "probes": 30,
         "up": 30,
-        "median_ms": 231,
+        "median_ms": 230,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -41583,9 +41589,9 @@
         "url": "https://api.open-meteo.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 645,
+        "median_ms": 639,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -41743,7 +41749,7 @@
         "up": 30,
         "median_ms": 564,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 400
         }
@@ -41897,9 +41903,9 @@
         "url": "https://api.heigit.org/openrouteservice",
         "probes": 30,
         "up": 30,
-        "median_ms": 714,
+        "median_ms": 753,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -41945,7 +41951,7 @@
       "handshake": {
         "url": "https://openstreetmap.caseyjhand.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "No key needed; public server max 1 request/second, bulk geocoding discouraged (small one-off jobs only, cached), no systematic or autocomplete queries",
@@ -42024,9 +42030,9 @@
         "url": "https://nominatim.openstreetmap.org",
         "probes": 30,
         "up": 30,
-        "median_ms": 370,
+        "median_ms": 374,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -42035,9 +42041,9 @@
         "url": "https://openstreetmap.caseyjhand.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 330,
+        "median_ms": 327,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -42084,7 +42090,7 @@
       "handshake": {
         "url": "https://mcp.openweathermap.org/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 60 calls/min, 1,000,000 calls/month on current weather/forecast",
@@ -42166,9 +42172,9 @@
         "url": "https://api.openweathermap.org",
         "probes": 30,
         "up": 30,
-        "median_ms": 750,
+        "median_ms": 744,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -42179,7 +42185,7 @@
         "up": 30,
         "median_ms": 484,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -42223,7 +42229,7 @@
       "handshake": {
         "url": "https://openstreetmap.caseyjhand.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free, no key; public instances are fair-use/rate-limited",
@@ -42299,7 +42305,7 @@
         "up": 30,
         "median_ms": 676,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 406
         }
@@ -42308,9 +42314,9 @@
         "url": "https://openstreetmap.caseyjhand.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 284,
+        "median_ms": 283,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -42419,9 +42425,9 @@
         "url": "https://photon.komoot.io",
         "probes": 30,
         "up": 30,
-        "median_ms": 639,
+        "median_ms": 663,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -42476,7 +42482,7 @@
       "handshake": {
         "url": "https://api.tomorrow.io/v4/tomorrow-weather/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: 500 requests/day, 3 req/sec, 1 monitored location/alert",
@@ -42553,7 +42559,7 @@
         "up": 30,
         "median_ms": 197,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -42564,7 +42570,7 @@
         "up": 30,
         "median_ms": 199,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -42773,7 +42779,7 @@
         "up": 30,
         "median_ms": 248,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -42966,9 +42972,9 @@
         "url": "https://paper-api.alpaca.markets",
         "probes": 30,
         "up": 30,
-        "median_ms": 197,
+        "median_ms": 201,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -43016,7 +43022,7 @@
       "handshake": {
         "url": "https://mcp.alphavantage.co/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: 25 requests/day",
@@ -43094,9 +43100,9 @@
         "url": "https://www.alphavantage.co/query",
         "probes": 30,
         "up": 30,
-        "median_ms": 138,
+        "median_ms": 134,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -43105,9 +43111,9 @@
         "url": "https://mcp.alphavantage.co/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 217,
+        "median_ms": 213,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -43285,9 +43291,9 @@
         "url": "https://api.cdp.coinbase.com/platform",
         "probes": 30,
         "up": 30,
-        "median_ms": 140,
+        "median_ms": 130,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -43325,7 +43331,7 @@
       "handshake": {
         "url": "https://mcp.api.coingecko.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: Demo API plan 10,000 calls/month, 100 calls/min, attribution required; keyless free MCP with shared rate limits",
@@ -43442,9 +43448,9 @@
         "url": "https://api.coingecko.com/api/v3",
         "probes": 30,
         "up": 30,
-        "median_ms": 138,
+        "median_ms": 137,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -43455,7 +43461,7 @@
         "up": 30,
         "median_ms": 606,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -43495,7 +43501,7 @@
       "handshake": {
         "url": "https://mcp.coinmarketcap.com/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free Basic plan: 15,000 credits/month, 50 requests/min, 1 API key, commercial use allowed; plus a keyless public API with lower rate limits",
@@ -43590,7 +43596,7 @@
         "up": 30,
         "median_ms": 216,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -43601,7 +43607,7 @@
         "up": 30,
         "median_ms": 213,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -43658,7 +43664,7 @@
       "handshake": {
         "url": "https://mcp.dexpaprika.com/streamable-http",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "No key; 30,000 credits per rolling 30 days per IP at 15 requests/min. Free registered key: 100,000 credits/30 days at 30 requests/min, no card",
@@ -43754,7 +43760,7 @@
         "up": 30,
         "median_ms": 120,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 402
         }
@@ -43765,7 +43771,7 @@
         "up": 30,
         "median_ms": 707,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -43872,7 +43878,7 @@
         "up": 30,
         "median_ms": 249,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -43924,7 +43930,7 @@
       "handshake": {
         "url": "https://mcp.mercadopago.com/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free to integrate: no API or monthly fees, only per-transaction commissions; free test credentials and test users for sandbox payments",
@@ -44056,7 +44062,7 @@
         "up": 30,
         "median_ms": 218,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -44067,7 +44073,7 @@
         "up": 30,
         "median_ms": 267,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -44152,9 +44158,9 @@
         "up": 30,
         "median_ms": 433,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
-          "detail": 405
+          "detail": 404
         }
       }
     }
@@ -44224,7 +44230,7 @@
       "handshake": {
         "url": "https://mcp.paypal.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free to integrate; pay per-transaction fees only; sandbox for testing",
@@ -44330,20 +44336,20 @@
         "url": "https://api-m.paypal.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 93,
+        "median_ms": 89,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
-          "detail": 406
+          "detail": 403
         }
       },
       "mcp_remote": {
         "url": "https://mcp.paypal.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 99,
+        "median_ms": 98,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -44391,7 +44397,7 @@
       "handshake": {
         "url": "https://api.dashboard.plaid.com/mcp/",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: Sandbox always free; new US/Canada teams (since 2026-04-15) get a free Trial plan with up to 10 Production Items one-time; then pay-as-you-go",
@@ -44551,7 +44557,7 @@
         "up": 30,
         "median_ms": 232,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -44562,7 +44568,7 @@
         "up": 30,
         "median_ms": 196,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -44753,7 +44759,7 @@
         "up": 30,
         "median_ms": 208,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -44796,7 +44802,7 @@
       "handshake": {
         "url": "https://mcp.squareup.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free to integrate; pay per-transaction processing fees; free Sandbox for testing",
@@ -44968,9 +44974,9 @@
         "url": "https://connect.squareup.com/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 171,
+        "median_ms": 169,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -44979,9 +44985,9 @@
         "url": "https://mcp.squareup.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 114,
+        "median_ms": 104,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -45032,7 +45038,7 @@
       "handshake": {
         "url": "https://mcp.stripe.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free to integrate; pay per-transaction fees only, no monthly fee",
@@ -45177,9 +45183,9 @@
         "url": "https://api.stripe.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 138,
+        "median_ms": 131,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -45188,9 +45194,9 @@
         "url": "https://mcp.stripe.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 188,
+        "median_ms": 181,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -45330,7 +45336,7 @@
         "up": 30,
         "median_ms": 622,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -45361,12 +45367,12 @@
         "url": "https://sellingpartner-ai.amazon.com/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://sellingpartner-ai.amazon.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free API access; requires an existing Amazon Seller/Vendor Central account",
@@ -45475,9 +45481,9 @@
         "url": "https://sellingpartnerapi-na.amazon.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 213,
+        "median_ms": 208,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -45486,9 +45492,9 @@
         "url": "https://sellingpartner-ai.amazon.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 371,
+        "median_ms": 335,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -45534,7 +45540,7 @@
       "handshake": {
         "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
         "status": "not_mcp",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Trial: free 15-day trial store to test the API (partners can create sandbox stores); ongoing use needs a paid BigCommerce plan",
@@ -45762,12 +45768,12 @@
         "url": "https://mcp.api.etsycloud.com/mcp",
         "auth": "none",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://mcp.api.etsycloud.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free: developer keystring at no cost; per-app QPS/QPD rate limits shown in the Developer Portal",
@@ -45866,9 +45872,9 @@
         "url": "https://openapi.etsy.com/v3",
         "probes": 30,
         "up": 30,
-        "median_ms": 316,
+        "median_ms": 309,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -45877,9 +45883,9 @@
         "url": "https://mcp.api.etsycloud.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 247,
+        "median_ms": 258,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -45961,9 +45967,9 @@
         "url": "https://api.mercadolibre.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 144,
+        "median_ms": 143,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -46068,7 +46074,7 @@
         "up": 30,
         "median_ms": 210,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -46402,7 +46408,7 @@
       "handshake": {
         "url": "https://www.activepieces.com/docs/mcp/overview",
         "status": "not_mcp",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free: open-source, self-hostable at no cost; cloud free plan gives 100 credits/day, no card required",
@@ -46469,9 +46475,9 @@
         "url": "https://cloud.activepieces.com/api/v1",
         "probes": 30,
         "up": 29,
-        "median_ms": 325,
+        "median_ms": 302,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -46595,7 +46601,7 @@
         "up": 30,
         "median_ms": 571,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -46640,7 +46646,7 @@
       "handshake": {
         "url": "https://connect.composio.dev/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: 100,000 tool calls + 50,000 trigger events/mo, no credit card required",
@@ -46750,7 +46756,7 @@
         "up": 30,
         "median_ms": 201,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -46759,9 +46765,9 @@
         "url": "https://connect.composio.dev/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 195,
+        "median_ms": 190,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -46811,7 +46817,7 @@
       "handshake": {
         "url": "https://mcp.gumloop.com/gumloop/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "14-day free trial of Pro (20,000 credits), requires credit card, no permanent free tier",
@@ -46897,7 +46903,7 @@
         "up": 30,
         "median_ms": 180,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -46906,9 +46912,9 @@
         "url": "https://mcp.gumloop.com/gumloop/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 169,
+        "median_ms": 162,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -46937,12 +46943,12 @@
         "url": "https://ifttt.com/mcp",
         "auth": "oauth",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://ifttt.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "no free-plan access; Webhooks/API require Pro plan ($2.99+/mo)",
@@ -47015,7 +47021,7 @@
         "up": 30,
         "median_ms": 277,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -47026,7 +47032,7 @@
         "up": 30,
         "median_ms": 154,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -47083,7 +47089,7 @@
       "handshake": {
         "url": "https://mcp.keboola.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free plan: 1 project, 120 compute minutes in the first month then 60 minutes/month, extra-small Snowflake backend; no credit card",
@@ -47151,7 +47157,7 @@
         "up": 30,
         "median_ms": 272,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -47188,7 +47194,7 @@
       "handshake": {
         "url": "https://mcp.make.com",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 1,000 credits/month, 2 active scenarios; Make API access requires Core plan or higher",
@@ -47274,7 +47280,7 @@
         "up": 30,
         "median_ms": 430,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -47378,7 +47384,7 @@
         "up": 30,
         "median_ms": 241,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -47521,7 +47527,7 @@
       "handshake": {
         "url": "https://nango.dev/docs/implementation-guides/use-cases/tool-calling/implement-mcp-server",
         "status": "not_mcp",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: 10 connections, 10 compute hours, 10GB data transfer/mo",
@@ -47604,9 +47610,9 @@
         "url": "https://api.nango.dev",
         "probes": 30,
         "up": 30,
-        "median_ms": 333,
+        "median_ms": 332,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -47722,7 +47728,7 @@
         "up": 30,
         "median_ms": 247,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -47764,7 +47770,7 @@
       "handshake": {
         "url": "https://remote.mcp.pipedream.net/v3",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: free workspaces get a daily credit limit and limited connected accounts; Connect is free in development mode, production use needs a paid plan",
@@ -47856,7 +47862,7 @@
         "up": 30,
         "median_ms": 277,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -47865,9 +47871,9 @@
         "url": "https://remote.mcp.pipedream.net/v3",
         "probes": 30,
         "up": 30,
-        "median_ms": 258,
+        "median_ms": 260,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -47903,7 +47909,7 @@
       "handshake": {
         "url": "https://mcp.stackone.com/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: 1,000 action-call credits/seat/mo (Starter), no credit card required",
@@ -48004,9 +48010,9 @@
         "url": "https://api.stackone.com",
         "probes": 30,
         "up": 30,
-        "median_ms": 236,
+        "median_ms": 227,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 403
         }
@@ -48015,9 +48021,9 @@
         "url": "https://mcp.stackone.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 514,
+        "median_ms": 505,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -48054,7 +48060,7 @@
       "handshake": {
         "url": "https://superglue.ai/docs/mcp/using-the-mcp/",
         "status": "not_mcp",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: Pro plan free to start, 3,000 executions/mo and 5M tokens/mo included, self-serve signup",
@@ -48143,7 +48149,7 @@
         "up": 30,
         "median_ms": 231,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -48192,7 +48198,7 @@
       "handshake": {
         "url": "https://mcp.zapier.com/api/v1/connect",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: 100 tasks/month; each successful MCP tool call uses 2 tasks (~50 calls/month); more on paid plans",
@@ -48254,9 +48260,9 @@
         "url": "https://mcp.zapier.com/api/v1/connect",
         "probes": 30,
         "up": 30,
-        "median_ms": 237,
+        "median_ms": 228,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -48265,9 +48271,9 @@
         "url": "https://mcp.zapier.com/api/v1/connect",
         "probes": 30,
         "up": 30,
-        "median_ms": 209,
+        "median_ms": 207,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -48427,7 +48433,7 @@
         "up": 30,
         "median_ms": 121,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -48577,9 +48583,9 @@
         "url": "https://api.cohere.com/v2",
         "probes": 30,
         "up": 30,
-        "median_ms": 216,
+        "median_ms": 211,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -48624,7 +48630,7 @@
       "handshake": {
         "url": "https://www.comet.com/opik/api/v1/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free cloud plan: 25k spans/month, 60-day data retention, up to 10 team members",
@@ -48735,7 +48741,7 @@
         "up": 30,
         "median_ms": 263,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -48746,7 +48752,7 @@
         "up": 30,
         "median_ms": 232,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -48830,7 +48836,7 @@
         "up": 30,
         "median_ms": 473,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -48883,7 +48889,7 @@
       "handshake": {
         "url": "https://mcp.fal.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Paid only; prepaid credits, priced per model (e.g. FLUX.1 schnell $0.003/megapixel)",
@@ -49020,7 +49026,7 @@
         "up": 30,
         "median_ms": 266,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -49029,9 +49035,9 @@
         "url": "https://mcp.fal.ai/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 170,
+        "median_ms": 169,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -49145,9 +49151,9 @@
         "url": "https://api.fireworks.ai/inference/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 132,
+        "median_ms": 113,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -49334,7 +49340,7 @@
         "up": 30,
         "median_ms": 87,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -49455,7 +49461,7 @@
         "up": 30,
         "median_ms": 181,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -49500,7 +49506,7 @@
       "handshake": {
         "url": "https://huggingface.co/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "Free tier: $0.10/month in Inference Providers credits (PRO $2.00/month)",
@@ -49623,7 +49629,7 @@
         "up": 30,
         "median_ms": 146,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -49634,7 +49640,7 @@
         "up": 30,
         "median_ms": 140,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -49673,7 +49679,7 @@
       "handshake": {
         "url": "https://api.mistral.ai/mcp",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free tier: Studio free mode, rate-limited",
@@ -49826,9 +49832,9 @@
         "url": "https://api.mistral.ai/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 217,
+        "median_ms": 215,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -49837,9 +49843,9 @@
         "url": "https://api.mistral.ai/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 233,
+        "median_ms": 230,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -49877,12 +49883,12 @@
         "url": "https://developers.openai.com/mcp",
         "auth": "none",
         "derived": true,
-        "handshake_at": "2026-11-01T11:29Z"
+        "handshake_at": "2026-11-02T12:51Z"
       },
       "handshake": {
         "url": "https://developers.openai.com/mcp",
         "status": "ok",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "paid only",
@@ -50052,9 +50058,9 @@
         "url": "https://api.openai.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 131,
+        "median_ms": 127,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -50063,9 +50069,9 @@
         "url": "https://developers.openai.com/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 222,
+        "median_ms": 217,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -50122,7 +50128,7 @@
       "handshake": {
         "url": "https://mcp.openrouter.ai/mcp",
         "status": "auth_oauth",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "free models: 50 req/day (1,000/day after $10 purchase)",
@@ -50254,9 +50260,9 @@
         "url": "https://openrouter.ai/api/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 172,
+        "median_ms": 169,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -50265,9 +50271,9 @@
         "url": "https://mcp.openrouter.ai/mcp",
         "probes": 30,
         "up": 30,
-        "median_ms": 144,
+        "median_ms": 139,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -50391,7 +50397,7 @@
         "up": 30,
         "median_ms": 475,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 200
         }
@@ -50428,7 +50434,7 @@
       "handshake": {
         "url": "https://mcp.replicate.com/sse",
         "status": "auth_required",
-        "checked_at": "2026-11-01T11:29Z"
+        "checked_at": "2026-11-02T12:51Z"
       }
     },
     "free_tier": "paid only",
@@ -50565,7 +50571,7 @@
         "up": 30,
         "median_ms": 155,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -50576,7 +50582,7 @@
         "up": 30,
         "median_ms": 152,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 401
         }
@@ -50694,9 +50700,9 @@
         "url": "https://api.together.ai/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 221,
+        "median_ms": 206,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -50825,9 +50831,9 @@
         "url": "https://ai-gateway.vercel.sh/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 170,
+        "median_ms": 169,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -50962,9 +50968,9 @@
         "url": "https://api.voyageai.com/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 182,
+        "median_ms": 181,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
@@ -51095,9 +51101,9 @@
         "url": "https://api.x.ai/v1",
         "probes": 30,
         "up": 30,
-        "median_ms": 139,
+        "median_ms": 130,
         "last": {
-          "at": "2026-11-01T11:28Z",
+          "at": "2026-11-02T12:49Z",
           "up": true,
           "detail": 404
         }
