@@ -865,57 +865,6 @@
     ]
   },
   {
-    "id": "anchor-browser",
-    "name": "Anchor Browser",
-    "category": "web-scraping-browser",
-    "homepage": "https://anchorbrowser.io",
-    "docs": "https://docs.anchorbrowser.io",
-    "auth": "api_key",
-    "auth_hint": "anchor-api-key header",
-    "mcp": {
-      "type": "official",
-      "url": "https://api.anchorbrowser.io/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://api.anchorbrowser.io/mcp",
-      "source_url": "https://docs.anchorbrowser.io/advanced/mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "$5 free credits/mo, no card required",
-    "sdk": [],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Provision authenticated cloud browser sessions and turn any website into callable MCP tools for agents.",
-    "desc_pl": "Udostępniaj uwierzytelnione sesje przeglądarki w chmurze i zamieniaj dowolną stronę w narzędzia MCP dla agentów.",
-    "notes": "Authenticated (logged-in) browser sessions require a paid tier; free tier covers unauthenticated browsing only.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "$5 free credits",
-      "period": "month",
-      "source_url": "https://docs.anchorbrowser.io/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "anchor-api-key",
-      "format": "anchor-api-key: <API_KEY>",
-      "source_url": "https://docs.anchorbrowser.io/api-reference",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.anchorbrowser.io",
-    "rate_limits": {
-      "summary": "Free plan: session creation capped at 5/min, up to 5 concurrent browsers",
-      "source_url": "https://docs.anchorbrowser.io/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "browser-automation",
-      "web-scraping"
-    ]
-  },
-  {
     "id": "apify",
     "name": "Apify",
     "category": "web-scraping-browser",
@@ -1095,197 +1044,6 @@
     ]
   },
   {
-    "id": "browser-use-cloud-api",
-    "name": "Browser Use Cloud API",
-    "category": "web-scraping-browser",
-    "homepage": "https://browser-use.com",
-    "docs": "https://docs.browser-use.com",
-    "auth": "api_key",
-    "auth_hint": "X-Browser-Use-API-Key header (key prefix bu_)",
-    "mcp": {
-      "type": "official",
-      "url": "https://api.browser-use.com/v3/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://api.browser-use.com/v3/mcp",
-      "tools": [
-        "run_session",
-        "get_session",
-        "send_task",
-        "stop_session",
-        "get_session_messages",
-        "list_sessions",
-        "list_browser_profiles"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://docs.browser-use.com/cloud/guides/mcp-server.md",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "$15 one-time signup credit for new accounts (Google/GitHub/Microsoft); paid usage afterward",
-    "sdk": [
-      "python",
-      "typescript"
-    ],
-    "openapi": null,
-    "llms_txt": "https://docs.browser-use.com/llms.txt",
-    "desc_en": "Launch cloud browser sessions and run AI browser-automation agent tasks via REST API or Python/TypeScript SDK.",
-    "desc_pl": "Uruchamiaj sesje przeglądarki w chmurze oraz zadania agentów AI do automatyzacji przeglądarki przez REST API lub SDK w Pythonie/TypeScript.",
-    "notes": "Pay-as-you-go: model cost + 20% and browsers at $0.02/hour, no per-run fees; no ongoing free tier beyond the signup credit.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "trial",
-      "requires_card": false,
-      "quota": "$15 signup credits (Google/GitHub/Microsoft signups)",
-      "period": "one_time",
-      "source_url": "https://browser-use.com/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "X-Browser-Use-API-Key",
-      "format": "X-Browser-Use-API-Key: bu_<API_KEY>",
-      "source_url": "https://docs.browser-use.com",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.browser-use.com/api/v4",
-    "rate_limits": {
-      "summary": "Per-project default max(25, 2x concurrency) req/s, capped at 100 RPS; edge WAF 1000 RPS per IP",
-      "source_url": "https://docs.browser-use.com",
-      "checked_at": "2026-09-24"
-    },
-    "async_jobs": {
-      "value": true,
-      "how": "tasks run asynchronously; poll the run/session status until complete",
-      "source_url": "https://docs.browser-use.com"
-    },
-    "operations": [
-      "browser-automation"
-    ]
-  },
-  {
-    "id": "browserbase-stagehand",
-    "name": "Browserbase (+ Stagehand)",
-    "category": "web-scraping-browser",
-    "homepage": "https://www.browserbase.com",
-    "docs": "https://docs.browserbase.com",
-    "auth": "api_key",
-    "auth_hint": "X-BB-API-Key header, plus Project ID",
-    "mcp": {
-      "type": "official",
-      "url": "https://mcp.browserbase.com/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://mcp.browserbase.com/mcp",
-      "repo": "https://github.com/browserbase/mcp-server-browserbase",
-      "tools": [
-        "start",
-        "end",
-        "navigate",
-        "act",
-        "observe",
-        "extract"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://github.com/browserbase/mcp-server-browserbase",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Free tier: 1 browser hour/month, 3 concurrent browsers, 15 min/session, no card required",
-    "sdk": [
-      "python",
-      "typescript"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
-    "desc_pl": "Uruchamiaj i steruj przeglądarkami headless w chmurze programistycznie, korzystając ze Stagehand do sterowania stroną językiem naturalnym.",
-    "notes": "Billed by browser-hours; Stagehand SDK is open source but needs a browser backend such as Browserbase. Hosted MCP takes the key as ?browserbaseApiKey=; the mcp-server-browserbase repo is archived since 2026-07-20.",
-    "verified": "2026-09-25",
-    "free_plan": {
-      "kind": "free_tier",
-      "quota": "1 browser hour, 3 concurrent browsers, 15 min/session",
-      "period": "month",
-      "source_url": "https://www.browserbase.com/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "X-BB-API-Key",
-      "format": "X-BB-API-Key: <API_KEY>",
-      "source_url": "https://docs.browserbase.com/reference/api/overview",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.browserbase.com/v1",
-    "rate_limits": {
-      "summary": "Free plan: 3 concurrent browsers, 15 minutes per session",
-      "source_url": "https://www.browserbase.com/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "data_policy": {
-      "summary": "Free plan data retention limited to 7 days",
-      "source_url": "https://www.browserbase.com/pricing",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "browser-automation",
-      "web-scraping"
-    ]
-  },
-  {
-    "id": "curlshot",
-    "name": "CurlShot",
-    "category": "web-scraping-browser",
-    "homepage": "https://curlshot.com",
-    "docs": "https://curlshot.com/docs",
-    "auth": "api_key",
-    "auth_hint": "Authorization: Bearer <CURLSHOT_ACCESS_KEY> (free account, no card)",
-    "mcp": {
-      "type": "official",
-      "url": "https://curlshot.com/api/mcp",
-      "maintainer": "vendor",
-      "remote_url": "https://curlshot.com/api/mcp",
-      "tools": [
-        "take_screenshot",
-        "list_devices"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://curlshot.com/docs/guides/ai-agents",
-      "checked_at": "2026-10-15"
-    },
-    "free_tier": "free plan: 100 screenshots/month, no card required; paid from $19/mo (3,000 screenshots)",
-    "sdk": [],
-    "openapi": "https://curlshot.com/openapi.json",
-    "llms_txt": "https://curlshot.com/llms.txt",
-    "desc_en": "Lets an agent capture a public web page in a real browser as PNG, JPEG, WebP or PDF (full page, device presets, dark mode, ad blocking) or record it scrolling as MP4, WebM or GIF.",
-    "desc_pl": "Pozwala agentowi zrobić zrzut publicznej strony w prawdziwej przeglądarce jako PNG, JPEG, WebP lub PDF (cała strona, profile urządzeń, tryb ciemny, blokowanie reklam) albo nagrać jej przewijanie jako MP4, WebM lub GIF.",
-    "notes": "list_devices on the MCP server needs no key.",
-    "verified": "2026-10-19",
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "100 screenshots",
-      "period": "month",
-      "source_url": "https://curlshot.com/pricing",
-      "checked_at": "2026-10-15"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "scheme": "bearer",
-      "format": "Authorization: Bearer <API_KEY>",
-      "source_url": "https://curlshot.com/docs",
-      "checked_at": "2026-10-15"
-    },
-    "base_url": "https://curlshot.com/api/v1",
-    "operations": [
-      "screenshot",
-      "document-generation"
-    ],
-    "rate_limits": {
-      "summary": "Free: 10 requests/min, 1 render at once; Starter ($19): 60/min, 5 at once",
-      "source_url": "https://curlshot.com/llms.txt",
-      "checked_at": "2026-10-19"
-    }
-  },
-  {
     "id": "diffbot",
     "name": "Diffbot",
     "category": "web-scraping-browser",
@@ -1409,69 +1167,6 @@
     ]
   },
   {
-    "id": "hyperbrowser",
-    "name": "Hyperbrowser",
-    "category": "web-scraping-browser",
-    "homepage": "https://www.hyperbrowser.ai",
-    "docs": "https://www.hyperbrowser.ai/docs",
-    "auth": "api_key",
-    "auth_hint": "x-api-key header",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/hyperbrowserai/mcp",
-      "maintainer": "vendor",
-      "repo": "https://github.com/hyperbrowserai/mcp",
-      "tools": [
-        "scrape_webpage",
-        "crawl_webpages",
-        "extract_structured_data",
-        "search_with_bing",
-        "browser_use_agent",
-        "openai_computer_use_agent",
-        "claude_computer_use_agent",
-        "create_profile",
-        "delete_profile",
-        "list_profiles"
-      ],
-      "covers_full_api": false,
-      "source_url": "https://github.com/hyperbrowserai/mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "Free: Free plan with 5,000 credits (1 credit = $0.001), 1 concurrent browser, 7-day data retention; no credit card required",
-    "sdk": [
-      "python",
-      "node"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Spin up cloud browsers and call scrape, crawl, and structured-extract endpoints via REST API or MCP server.",
-    "desc_pl": "Uruchamiaj przeglądarki w chmurze i wywołuj endpointy scrape, crawl oraz ekstrakcji danych przez REST API lub serwer MCP.",
-    "notes": "SDKs are compatible with Playwright, Puppeteer, and Selenium.",
-    "verified": "2026-09-25",
-    "auth_scheme": {
-      "type": "apiKey",
-      "in": "header",
-      "name": "x-api-key",
-      "format": "x-api-key: <API_KEY>",
-      "source_url": "https://hyperbrowser.ai/docs/api-reference/create-new-session",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.hyperbrowser.ai",
-    "operations": [
-      "browser-automation",
-      "web-scraping",
-      "web-crawling",
-      "structured-extraction"
-    ],
-    "free_plan": {
-      "kind": "free_tier",
-      "requires_card": false,
-      "quota": "5,000 credits, 1 concurrent browser, 7-day data retention",
-      "source_url": "https://www.hyperbrowser.ai/pricing",
-      "checked_at": "2026-09-25"
-    }
-  },
-  {
     "id": "oxylabs",
     "name": "Oxylabs",
     "category": "web-scraping-browser",
@@ -1532,68 +1227,6 @@
       "serp-scraping",
       "structured-extraction",
       "browser-automation"
-    ]
-  },
-  {
-    "id": "playwright-mcp-microsoft",
-    "name": "Playwright MCP (Microsoft)",
-    "category": "web-scraping-browser",
-    "homepage": "https://github.com/microsoft/playwright-mcp",
-    "docs": "https://github.com/microsoft/playwright-mcp#readme",
-    "auth": "none",
-    "auth_hint": "no auth; runs as a local process via npx",
-    "mcp": {
-      "type": "official",
-      "url": "https://github.com/microsoft/playwright-mcp",
-      "maintainer": "vendor",
-      "repo": "https://github.com/microsoft/playwright-mcp",
-      "tools": [
-        "browser_navigate",
-        "browser_navigate_back",
-        "browser_click",
-        "browser_type",
-        "browser_press_key",
-        "browser_hover",
-        "browser_drag",
-        "browser_snapshot",
-        "browser_take_screenshot",
-        "browser_fill_form",
-        "browser_select_option",
-        "browser_file_upload",
-        "browser_handle_dialog",
-        "browser_tabs",
-        "browser_close",
-        "browser_evaluate",
-        "browser_console_messages",
-        "browser_network_requests"
-      ],
-      "covers_full_api": true,
-      "source_url": "https://github.com/microsoft/playwright-mcp",
-      "checked_at": "2026-09-24"
-    },
-    "free_tier": "free, open source, no key",
-    "sdk": [],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Official Microsoft MCP server giving agents structured browser control (click, type, navigate) via Playwright's accessibility tree.",
-    "desc_pl": "Oficjalny serwer MCP od Microsoftu dający agentom ustrukturyzowaną kontrolę nad przeglądarką (klikanie, pisanie, nawigacja) przez drzewo dostępności Playwright.",
-    "notes": "Runs locally/self-hosted via `npx @playwright/mcp`; no cloud hosting, account, or API key required, but needs a local or self-managed browser runtime. Apache-2.0 licensed.",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "no_key",
-      "requires_card": false,
-      "source_url": "https://github.com/microsoft/playwright-mcp",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "none",
-      "format": "none (local stdio server: npx @playwright/mcp@latest)",
-      "source_url": "https://github.com/microsoft/playwright-mcp",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "browser-automation",
-      "screenshot"
     ]
   },
   {
@@ -1953,9 +1586,424 @@
     ]
   },
   {
+    "id": "zyte-api",
+    "name": "Zyte API",
+    "category": "web-scraping-browser",
+    "homepage": "https://www.zyte.com",
+    "docs": "https://docs.zyte.com/zyte-api/usage/http.html",
+    "auth": "api_key",
+    "auth_hint": "HTTP Basic Auth: API key as username, blank password",
+    "mcp": {
+      "type": "none",
+      "url": null
+    },
+    "free_tier": "Trial: $5 free credit one-time on signup, valid 30 days, no subscription needed; then pay-as-you-go or a monthly commitment",
+    "sdk": [
+      "python"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Fetch and auto-extract web pages (HTML, browser rendering, product/article data) via one HTTP API with ban avoidance.",
+    "desc_pl": "Pobieraj i automatycznie wyodrębniaj dane ze stron (HTML, renderowanie przeglądarki, dane produktów/artykułów) przez jedno API HTTP z omijaniem blokad.",
+    "notes": "Part of Zyte's broader suite (Scrapy Cloud, Zyte IDE).",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "trial",
+      "quota": "$5 free credit",
+      "period": "one_time",
+      "source_url": "https://www.zyte.com/pricing/",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "scheme": "basic",
+      "format": "Authorization: Basic base64(<API_KEY>:)",
+      "source_url": "https://docs.zyte.com/zyte-api/usage/http.html",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.zyte.com/v1",
+    "rate_limits": {
+      "summary": "Per-API-key rate limit (429 /limits/over-user-limit); retry with exponential backoff",
+      "source_url": "https://docs.zyte.com/zyte-api/usage/errors.html",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "web-scraping",
+      "structured-extraction",
+      "browser-automation"
+    ]
+  },
+  {
+    "id": "anchor-browser",
+    "name": "Anchor Browser",
+    "category": "browser-automation",
+    "homepage": "https://anchorbrowser.io",
+    "docs": "https://docs.anchorbrowser.io",
+    "auth": "api_key",
+    "auth_hint": "anchor-api-key header",
+    "mcp": {
+      "type": "official",
+      "url": "https://api.anchorbrowser.io/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://api.anchorbrowser.io/mcp",
+      "source_url": "https://docs.anchorbrowser.io/advanced/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "$5 free credits/mo, no card required",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Provision authenticated cloud browser sessions and turn any website into callable MCP tools for agents.",
+    "desc_pl": "Udostępniaj uwierzytelnione sesje przeglądarki w chmurze i zamieniaj dowolną stronę w narzędzia MCP dla agentów.",
+    "notes": "Authenticated (logged-in) browser sessions require a paid tier; free tier covers unauthenticated browsing only.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "$5 free credits",
+      "period": "month",
+      "source_url": "https://docs.anchorbrowser.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "anchor-api-key",
+      "format": "anchor-api-key: <API_KEY>",
+      "source_url": "https://docs.anchorbrowser.io/api-reference",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.anchorbrowser.io",
+    "rate_limits": {
+      "summary": "Free plan: session creation capped at 5/min, up to 5 concurrent browsers",
+      "source_url": "https://docs.anchorbrowser.io/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "browser-automation",
+      "web-scraping"
+    ]
+  },
+  {
+    "id": "browser-use-cloud-api",
+    "name": "Browser Use Cloud API",
+    "category": "browser-automation",
+    "homepage": "https://browser-use.com",
+    "docs": "https://docs.browser-use.com",
+    "auth": "api_key",
+    "auth_hint": "X-Browser-Use-API-Key header (key prefix bu_)",
+    "mcp": {
+      "type": "official",
+      "url": "https://api.browser-use.com/v3/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://api.browser-use.com/v3/mcp",
+      "tools": [
+        "run_session",
+        "get_session",
+        "send_task",
+        "stop_session",
+        "get_session_messages",
+        "list_sessions",
+        "list_browser_profiles"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://docs.browser-use.com/cloud/guides/mcp-server.md",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "$15 one-time signup credit for new accounts (Google/GitHub/Microsoft); paid usage afterward",
+    "sdk": [
+      "python",
+      "typescript"
+    ],
+    "openapi": null,
+    "llms_txt": "https://docs.browser-use.com/llms.txt",
+    "desc_en": "Launch cloud browser sessions and run AI browser-automation agent tasks via REST API or Python/TypeScript SDK.",
+    "desc_pl": "Uruchamiaj sesje przeglądarki w chmurze oraz zadania agentów AI do automatyzacji przeglądarki przez REST API lub SDK w Pythonie/TypeScript.",
+    "notes": "Pay-as-you-go: model cost + 20% and browsers at $0.02/hour, no per-run fees; no ongoing free tier beyond the signup credit.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "$15 signup credits (Google/GitHub/Microsoft signups)",
+      "period": "one_time",
+      "source_url": "https://browser-use.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-Browser-Use-API-Key",
+      "format": "X-Browser-Use-API-Key: bu_<API_KEY>",
+      "source_url": "https://docs.browser-use.com",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.browser-use.com/api/v4",
+    "rate_limits": {
+      "summary": "Per-project default max(25, 2x concurrency) req/s, capped at 100 RPS; edge WAF 1000 RPS per IP",
+      "source_url": "https://docs.browser-use.com",
+      "checked_at": "2026-09-24"
+    },
+    "async_jobs": {
+      "value": true,
+      "how": "tasks run asynchronously; poll the run/session status until complete",
+      "source_url": "https://docs.browser-use.com"
+    },
+    "operations": [
+      "browser-automation"
+    ]
+  },
+  {
+    "id": "browserbase-stagehand",
+    "name": "Browserbase (+ Stagehand)",
+    "category": "browser-automation",
+    "homepage": "https://www.browserbase.com",
+    "docs": "https://docs.browserbase.com",
+    "auth": "api_key",
+    "auth_hint": "X-BB-API-Key header, plus Project ID",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.browserbase.com/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://mcp.browserbase.com/mcp",
+      "repo": "https://github.com/browserbase/mcp-server-browserbase",
+      "tools": [
+        "start",
+        "end",
+        "navigate",
+        "act",
+        "observe",
+        "extract"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/browserbase/mcp-server-browserbase",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Free tier: 1 browser hour/month, 3 concurrent browsers, 15 min/session, no card required",
+    "sdk": [
+      "python",
+      "typescript"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Run and control cloud headless browsers programmatically, with Stagehand adding natural-language page actions.",
+    "desc_pl": "Uruchamiaj i steruj przeglądarkami headless w chmurze programistycznie, korzystając ze Stagehand do sterowania stroną językiem naturalnym.",
+    "notes": "Billed by browser-hours; Stagehand SDK is open source but needs a browser backend such as Browserbase. Hosted MCP takes the key as ?browserbaseApiKey=; the mcp-server-browserbase repo is archived since 2026-07-20.",
+    "verified": "2026-09-25",
+    "free_plan": {
+      "kind": "free_tier",
+      "quota": "1 browser hour, 3 concurrent browsers, 15 min/session",
+      "period": "month",
+      "source_url": "https://www.browserbase.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "X-BB-API-Key",
+      "format": "X-BB-API-Key: <API_KEY>",
+      "source_url": "https://docs.browserbase.com/reference/api/overview",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.browserbase.com/v1",
+    "rate_limits": {
+      "summary": "Free plan: 3 concurrent browsers, 15 minutes per session",
+      "source_url": "https://www.browserbase.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "data_policy": {
+      "summary": "Free plan data retention limited to 7 days",
+      "source_url": "https://www.browserbase.com/pricing",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "browser-automation",
+      "web-scraping"
+    ]
+  },
+  {
+    "id": "curlshot",
+    "name": "CurlShot",
+    "category": "browser-automation",
+    "homepage": "https://curlshot.com",
+    "docs": "https://curlshot.com/docs",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <CURLSHOT_ACCESS_KEY> (free account, no card)",
+    "mcp": {
+      "type": "official",
+      "url": "https://curlshot.com/api/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://curlshot.com/api/mcp",
+      "tools": [
+        "take_screenshot",
+        "list_devices"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://curlshot.com/docs/guides/ai-agents",
+      "checked_at": "2026-10-15"
+    },
+    "free_tier": "free plan: 100 screenshots/month, no card required; paid from $19/mo (3,000 screenshots)",
+    "sdk": [],
+    "openapi": "https://curlshot.com/openapi.json",
+    "llms_txt": "https://curlshot.com/llms.txt",
+    "desc_en": "Lets an agent capture a public web page in a real browser as PNG, JPEG, WebP or PDF (full page, device presets, dark mode, ad blocking) or record it scrolling as MP4, WebM or GIF.",
+    "desc_pl": "Pozwala agentowi zrobić zrzut publicznej strony w prawdziwej przeglądarce jako PNG, JPEG, WebP lub PDF (cała strona, profile urządzeń, tryb ciemny, blokowanie reklam) albo nagrać jej przewijanie jako MP4, WebM lub GIF.",
+    "notes": "list_devices on the MCP server needs no key.",
+    "verified": "2026-10-19",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100 screenshots",
+      "period": "month",
+      "source_url": "https://curlshot.com/pricing",
+      "checked_at": "2026-10-15"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <API_KEY>",
+      "source_url": "https://curlshot.com/docs",
+      "checked_at": "2026-10-15"
+    },
+    "base_url": "https://curlshot.com/api/v1",
+    "operations": [
+      "screenshot",
+      "document-generation"
+    ],
+    "rate_limits": {
+      "summary": "Free: 10 requests/min, 1 render at once; Starter ($19): 60/min, 5 at once",
+      "source_url": "https://curlshot.com/llms.txt",
+      "checked_at": "2026-10-19"
+    }
+  },
+  {
+    "id": "hyperbrowser",
+    "name": "Hyperbrowser",
+    "category": "browser-automation",
+    "homepage": "https://www.hyperbrowser.ai",
+    "docs": "https://www.hyperbrowser.ai/docs",
+    "auth": "api_key",
+    "auth_hint": "x-api-key header",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/hyperbrowserai/mcp",
+      "maintainer": "vendor",
+      "repo": "https://github.com/hyperbrowserai/mcp",
+      "tools": [
+        "scrape_webpage",
+        "crawl_webpages",
+        "extract_structured_data",
+        "search_with_bing",
+        "browser_use_agent",
+        "openai_computer_use_agent",
+        "claude_computer_use_agent",
+        "create_profile",
+        "delete_profile",
+        "list_profiles"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/hyperbrowserai/mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "Free: Free plan with 5,000 credits (1 credit = $0.001), 1 concurrent browser, 7-day data retention; no credit card required",
+    "sdk": [
+      "python",
+      "node"
+    ],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Spin up cloud browsers and call scrape, crawl, and structured-extract endpoints via REST API or MCP server.",
+    "desc_pl": "Uruchamiaj przeglądarki w chmurze i wywołuj endpointy scrape, crawl oraz ekstrakcji danych przez REST API lub serwer MCP.",
+    "notes": "SDKs are compatible with Playwright, Puppeteer, and Selenium.",
+    "verified": "2026-09-25",
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "format": "x-api-key: <API_KEY>",
+      "source_url": "https://hyperbrowser.ai/docs/api-reference/create-new-session",
+      "checked_at": "2026-09-24"
+    },
+    "base_url": "https://api.hyperbrowser.ai",
+    "operations": [
+      "browser-automation",
+      "web-scraping",
+      "web-crawling",
+      "structured-extraction"
+    ],
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "5,000 credits, 1 concurrent browser, 7-day data retention",
+      "source_url": "https://www.hyperbrowser.ai/pricing",
+      "checked_at": "2026-09-25"
+    }
+  },
+  {
+    "id": "playwright-mcp-microsoft",
+    "name": "Playwright MCP (Microsoft)",
+    "category": "browser-automation",
+    "homepage": "https://github.com/microsoft/playwright-mcp",
+    "docs": "https://github.com/microsoft/playwright-mcp#readme",
+    "auth": "none",
+    "auth_hint": "no auth; runs as a local process via npx",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "maintainer": "vendor",
+      "repo": "https://github.com/microsoft/playwright-mcp",
+      "tools": [
+        "browser_navigate",
+        "browser_navigate_back",
+        "browser_click",
+        "browser_type",
+        "browser_press_key",
+        "browser_hover",
+        "browser_drag",
+        "browser_snapshot",
+        "browser_take_screenshot",
+        "browser_fill_form",
+        "browser_select_option",
+        "browser_file_upload",
+        "browser_handle_dialog",
+        "browser_tabs",
+        "browser_close",
+        "browser_evaluate",
+        "browser_console_messages",
+        "browser_network_requests"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://github.com/microsoft/playwright-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "free_tier": "free, open source, no key",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Official Microsoft MCP server giving agents structured browser control (click, type, navigate) via Playwright's accessibility tree.",
+    "desc_pl": "Oficjalny serwer MCP od Microsoftu dający agentom ustrukturyzowaną kontrolę nad przeglądarką (klikanie, pisanie, nawigacja) przez drzewo dostępności Playwright.",
+    "notes": "Runs locally/self-hosted via `npx @playwright/mcp`; no cloud hosting, account, or API key required, but needs a local or self-managed browser runtime. Apache-2.0 licensed.",
+    "verified": "2026-09-24",
+    "free_plan": {
+      "kind": "no_key",
+      "requires_card": false,
+      "source_url": "https://github.com/microsoft/playwright-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "auth_scheme": {
+      "type": "none",
+      "format": "none (local stdio server: npx @playwright/mcp@latest)",
+      "source_url": "https://github.com/microsoft/playwright-mcp",
+      "checked_at": "2026-09-24"
+    },
+    "operations": [
+      "browser-automation",
+      "screenshot"
+    ]
+  },
+  {
     "id": "steel",
     "name": "Steel",
-    "category": "web-scraping-browser",
+    "category": "browser-automation",
     "homepage": "https://steel.dev",
     "docs": "https://docs.steel.dev",
     "auth": "api_key",
@@ -2029,54 +2077,6 @@
       "browser-automation",
       "web-scraping",
       "screenshot"
-    ]
-  },
-  {
-    "id": "zyte-api",
-    "name": "Zyte API",
-    "category": "web-scraping-browser",
-    "homepage": "https://www.zyte.com",
-    "docs": "https://docs.zyte.com/zyte-api/usage/http.html",
-    "auth": "api_key",
-    "auth_hint": "HTTP Basic Auth: API key as username, blank password",
-    "mcp": {
-      "type": "none",
-      "url": null
-    },
-    "free_tier": "Trial: $5 free credit one-time on signup, valid 30 days, no subscription needed; then pay-as-you-go or a monthly commitment",
-    "sdk": [
-      "python"
-    ],
-    "openapi": null,
-    "llms_txt": null,
-    "desc_en": "Fetch and auto-extract web pages (HTML, browser rendering, product/article data) via one HTTP API with ban avoidance.",
-    "desc_pl": "Pobieraj i automatycznie wyodrębniaj dane ze stron (HTML, renderowanie przeglądarki, dane produktów/artykułów) przez jedno API HTTP z omijaniem blokad.",
-    "notes": "Part of Zyte's broader suite (Scrapy Cloud, Zyte IDE).",
-    "verified": "2026-09-24",
-    "free_plan": {
-      "kind": "trial",
-      "quota": "$5 free credit",
-      "period": "one_time",
-      "source_url": "https://www.zyte.com/pricing/",
-      "checked_at": "2026-09-24"
-    },
-    "auth_scheme": {
-      "type": "http",
-      "scheme": "basic",
-      "format": "Authorization: Basic base64(<API_KEY>:)",
-      "source_url": "https://docs.zyte.com/zyte-api/usage/http.html",
-      "checked_at": "2026-09-24"
-    },
-    "base_url": "https://api.zyte.com/v1",
-    "rate_limits": {
-      "summary": "Per-API-key rate limit (429 /limits/over-user-limit); retry with exponential backoff",
-      "source_url": "https://docs.zyte.com/zyte-api/usage/errors.html",
-      "checked_at": "2026-09-24"
-    },
-    "operations": [
-      "web-scraping",
-      "structured-extraction",
-      "browser-automation"
     ]
   },
   {

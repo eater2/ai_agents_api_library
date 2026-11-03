@@ -14,7 +14,7 @@ const CASES = [
   ["3d model from image", "3d-generation", 3],
   ["web search", "web-search", 3],
   ["scrape a website to markdown", "web-scraping-browser", 2],
-  ["headless browser automation", "web-scraping-browser", 3],
+  ["headless browser automation", "browser-automation", 3],
   ["run python code in a sandbox", "code-execution-sandbox", 3],
   ["send sms", "sms-messaging", 2],
   ["send email", "communication-email-chat", 3],
