@@ -7985,13 +7985,13 @@
         "checked_at": "2026-11-03T12:19Z"
       }
     },
-    "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
+    "free_tier": "no free tier: pre-purchased credits spent per request (credit-based plans); the pay-per-usage plan ended June 30, 2026",
     "sdk": [],
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Generate and edit images, and generate video, music and sound effects via REST API, plus access the Freepik stock asset library.",
     "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com. The official remote MCP uses OAuth sign-in, no API key.",
-    "verified": "2026-09-24",
+    "verified": "2026-11-03",
     "auth_scheme": {
       "type": "apiKey",
       "in": "header",
@@ -8018,6 +8018,12 @@
       "text-to-video",
       "text-to-speech"
     ],
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "source_url": "https://www.magnific.com/api/pricing",
+      "checked_at": "2026-11-03"
+    },
     "no_auth": false,
     "call": {
       "operation": "text-to-video (LTX Video 2.0 Pro, prompt only, no input image)",
@@ -8032,7 +8038,7 @@
       "source_url": "https://docs.magnific.com/api-reference/text-to-video/ltx-2-pro",
       "checked_at": "2026-09-25"
     },
-    "has_free_tier": true,
+    "has_free_tier": false,
     "has_trial": false,
     "no_card": false,
     "stale": false,

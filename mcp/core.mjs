@@ -204,9 +204,23 @@ function textDoes(op, text) {
   return toks.every((x) => q.has(x)) && forward(op, queryOrder(text));
 }
 const toolName = (t) => (typeof t === "string" ? t : t?.name || "");
+// Tool names drop the input side and put the noun first ("video_generate" for text-to-video), and SMS
+// senders say "text message". Used for tool names only, so query matching is unchanged.
+const GEN_VERBS = new Set(["generate", "create", "make", "render", "synthesize"].map(stem));
+const TOOL_ALIASES = { sms: [["send", "text", "message"], ["send", "sms"]] };
+const AUX_TOOL = /verif|otp|2fa|lookup|status|search|list|schema/i; // checks and lookups, not the operation
+function toolDoes(op, name) {
+  if (textDoes(op, name)) return true;
+  const t = new Set(words(name.replace(/([a-z])([A-Z])/g, "$1 $2")).map(stem));
+  if ((TOOL_ALIASES[op] || []).some((ph) => ph.map(stem).every((x) => t.has(x)))) return true;
+  if (!op.startsWith("text-to-")) return false;
+  const out = opTokens(op.slice("text-to-".length));
+  return out.length > 0 && out.every((x) => t.has(x)) && [...t].some((x) => GEN_VERBS.has(x));
+}
 function mcpTool(e, op) {
   if (!e.mcp || e.mcp.type === "none" || e.mcp.config?.docs_only) return null;
-  return (e.mcp.tools || []).map(toolName).find((t) => textDoes(op, t)) || null;
+  const hits = (e.mcp.tools || []).map(toolName).filter((t) => toolDoes(op, t));
+  return hits.find((t) => !AUX_TOOL.test(t)) || hits[0] || null;
 }
 function evidence(e, op) {
   if (e.call?.operation && textDoes(op, e.call.operation)) return `example call: ${e.call.operation}`;

@@ -60,6 +60,20 @@ Wywołania i MCP (3b)
 - [x] Twilio: `mcp.config` wskazuje serwer tylko z dokumentacją, a `mcp.url` działający twilio-labs/mcp — uzgodnić: config = stdio `npx -y @twilio-alpha/mcp`, serwer dokumentacji w `mcp.config.note`
 - [x] Pola SMS: rejestracja nadawcy (10DLC), ograniczenia trialu (np. Twilio tylko zweryfikowane numery), kraje; cena SMS do PL tam, gdzie publikowana: pole `sms` dla 7 dostawców (Twilio, Vonage, Plivo, Telnyx, Sinch, AWS, Bird); cena do PL u 6 (bez Sinch)
 
+## P0e — test produktu z 7 agentami (2026-11-03)
+
+Źródło: `research/agent-interviews/2026-11-03-product-test/report.md` (koszt 2,54 USD). Wniosek: 7/7 użyje `search_apis` jako shortlisty, ale żaden nie działa na samym wyniku. Jedyna wspólna blokada to zaufanie do pól, które sobie przeczą.
+
+- [x] `mcp_fit` przeczył liście `tools`: `video_generate` nie pasował do text-to-video, a Sinch wskazywał `start-sms-verification` zamiast `send-text-message`. Nazwy narzędzi dopasowywane bez strony wejścia, z aliasem SMS, narzędzia pomocnicze (verify/lookup/status) na końcu
+- [x] Freepik/Magnific: „~5 EUR darmowych kredytów” już nie istnieje (pre-paid credits, pay-per-usage zakończony 30.06.2026), więc `free_plan.kind = none`
+- [ ] Ranking zgodny z zadaniem: wynik `listed` bez dowodu operacji (Hugging Face Inference Providers przy wideo) nie wyżej niż nic; Textbelt nie na 1. miejscu dla SMS do klienta; wolumen z zapytania („200 adresów”) włącza karę bulk (Photon); Google Maps `exact` bez narzędzia geokodowania w MCP
+- [ ] Brakujące wpisy: Nominatim (z ostrzeżeniem bulk), fal.ai, SMSAPI.pl, Infobip, AWS SNS; Freepik także w `video-generation` (wiele kategorii na wpis)
+- [ ] Karta wyniku: `no_card` i `unit_price` widoczne w `search_apis`, `ratings` tylko w `get_api`, parametr `fields`
+- [ ] GUGiK: układ współrzędnych w odpowiedzi (EPSG:2180 czy WGS84) i jawne „unknown” zamiast „no published quota”
+- [ ] SMS: na karcie wyniku informacja, że trial wysyła tylko na zweryfikowane numery; ceny dla kraju z zapytania, nie domyślnie PL
+- [ ] Rozważyć: krótkie „kiedy używać” w opisach narzędzi dla klientów bez skilla (OpenAI). Uwaga: katalog Claude wymaga opisów bez instrukcji dla modelu, więc to zostaje w server instructions
+- Nie robić teraz: testów wywołań na żywo dla każdego wpisu (`last_live_call`, wymaga kont i kluczy), pełnego `call` dla wszystkich wpisów (duża praca redakcyjna; zaczynać od top kategorii)
+
 ## P0c — oceny i opinie: wywiady z 7 agentami (2026-09-24)
 
 Źródło: `research/agent-interviews/2026-09-24-ratings/report.md`. Wniosek: średnia gwiazdek i liczba opinii to dla 6/7 agentów szum, zaufania do katalogu nie zwiększają (0/7 wyraźnie). Liczą się: niezależny uptime (7/7), aktywność repo MCP (`archived`, `pushed_at`; 5/7) i opinie o konkretnych awariach API (tylko przy remisie).

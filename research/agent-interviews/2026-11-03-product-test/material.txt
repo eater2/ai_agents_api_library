@@ -1,0 +1,1171 @@
+=== Claude skill (SKILL.md) ===
+---
+name: ai-agents-api-library
+description: Find a third-party API or MCP server for an operation you cannot do with your model, built-in tools or currently connected tools (generate video, images, music or 3D, geocoding, weather, send email or SMS, OCR, speech, payments, CAD/BIM and more). Returns catalog entries with auth method, free plan vs trial, MCP endpoint, docs link, an example request and unit price. Use when a task needs such an operation, when the user asks which API or MCP server to use, when the user names a service you are about to use for a batch, a message or a payment, or when a call failed for a service-side reason you can't fix and another service would unblock the task.
+---
+
+# AI Agents API Library
+
+A catalog of 300+ APIs and MCP servers that an agent can call once a human has provisioned credentials (API key, OAuth or MCP connection). Each entry gives the docs URL, the auth method and header, the MCP server, the free plan and a last-checked date. Popular services also carry a minimal example request (`call`) and the price of one operation (`unit_price`).
+
+"Last checked" (`verified`, `link_check`) means links and listed facts were checked on that date. It does not prove that a service does your exact task. Results are ranked by operation fit, evidence, lasting free plan, card and auth effort and bulk limits, not by your budget or region.
+
+## When to use
+
+- The task needs an operation unavailable through your model, built-in tools or currently connected tools: "make a 5-second video", "geocode 200 addresses", "send this as an SMS". One quick check: if you cannot name the tool that does it, search.
+- The user asks which service, API or MCP server to use for something.
+- The user names a service ("geocode with Nominatim", "send it through Twilio"), or you are about to use one for a batch, a message, a payment or another third-party action: call `get_api` first. A vendor you already know is not a checked vendor; the entry shows bulk bans, docs-only MCP servers and trial limits.
+- A call failed for a service-side reason you can't fix (auth rejected after checking permissions, quota, billing required, unsupported format or region) and a different service would unblock the task. Not after a malformed request of your own: fix that first.
+
+Skip it when a built-in or connected tool already does the job within this task's volume, cost and data limits, or when you can do it yourself: translating text, drawing a Mermaid or SVG diagram, writing code, summarizing. If that tool is exhausted or lacks a required option, search anyway.
+
+## How to look things up
+
+**If the `ai-agents-api-library` MCP tools are available**, use them:
+
+1. `search_apis` with `query` naming the operation (the verb, e.g. "text to video", "street address geocoding", "send sms") and optional filters: `category`, `mcp` (`official`, `remote` for a hosted endpoint with nothing to install, or `any`; docs-only servers never count), `no_auth`, `free_tier` (lasting free use; add `include_trials` to accept one-off credits), `no_card` (free plan without a payment card), `auth`, `volume` (`bulk` for batch jobs), and user opinions: `min_rating` / `min_reviews` filter by SourceForge product reviews, `sort` (`rating` weighted by review count, or `reviews`) orders by them; `min_downloads` / `sort: usage` use monthly downloads of the official npm and PyPI SDKs (`ratings.usage` also gives Stack Overflow questions and the vendor's iOS app rating); `min_issue_health` / `sort: issues` use how the vendor handles GitHub issues in its SDK, MCP or spec repo (`ratings.issues`: share resolved, median days to fix, `issue_health` 0-100), useful when you will depend on the SDK; the default `fit` order ignores reviews, usage and issues.
+   Each result has `match`: `exact` = the entry lists the operation and its example call or an MCP tool performs it; `listed` = the entry lists it without that evidence; `adjacent` = a related operation. `exact` is still a search label: check that the endpoint or tool accepts the user's actual inputs (text vs image, country, format). `mcp_fit` says whether the MCP server has a tool for the operation. `reviews_summary` (when review texts are stored) lists praised and complained-about aspects; reviews rate the product, not whether the API fits the task.
+2. `get_api` with the chosen `id` for full details: auth header, `call` example, `unit_price`, `rate_limits`, `mcp.config`, notes.
+3. Optional: `get_reviews` with the `id` when real-world quality matters (filter with `max_rating: 2` for complaints).
+4. `list_categories` to see which categories exist before searching by `category`.
+
+If no result does the requested operation, say so. Retry once with `category`, then fall back to web search. Do not settle for an adjacent service (video hosting is not video generation; messaging apps are not SMS).
+
+**Otherwise, fetch the static files** (plain HTTPS, no key needed):
+
+1. `https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/llms.txt` lists categories with counts and the services that need no key.
+2. `https://raw.githubusercontent.com/eater2/ai_agents_api_library/main/catalog/<category>.json` holds all entries of one category. It is small, so fetch it rather than `catalog/all.json`.
+
+Category ids: `web-search`, `web-scraping-browser`, `browser-automation`, `knowledge-research`, `image-generation`, `video-generation`, `audio-speech`, `music-generation`, `3d-generation`, `architecture-cad-bim`, `diagrams-software-architecture`, `design-ui`, `presentations-documents`, `translation-language`, `code-execution-sandbox`, `developer-devops`, `cloud-hosting`, `databases`, `databases-vector-memory`, `communication-email-chat`, `sms-messaging`, `voice-agents-telephony`, `productivity-workspace`, `crm-support-marketing`, `social-media`, `maps-geo-weather`, `finance-payments`, `ecommerce`, `automation-integration`, `model-inference`.
+
+## Choosing a service
+
+1. **Fit first.** Keep only entries whose `desc_en` (or `call.operation`) is the exact operation asked for, and whose `rate_limits`, `notes` and terms allow the volume. A no-key service that forbids bulk use is out for a batch job.
+2. **Then compare access and cost** among the entries that fit:
+   - `no_auth: true`: no credential required; check permitted use and volume before calling.
+   - An MCP server the user can connect: check `mcp.kind`, `mcp.config` and `mcp_fit`. A hosted endpoint (`transport` `streamable-http` or `sse`) needs no installation, but may still require connection, authentication and a tool for the operation; a `stdio` server or a GitHub repo must be installed; `docs_only: true` means the server only searches documentation and cannot perform the operation.
+   - Free use: `free_plan.kind` `free_tier` is a lasting free quota; `trial` is one-off credit that runs out, often with restrictions (e.g. only verified phone numbers). On a zero budget, expect many "free" offers to be trials. Check `free_plan.requires_card` and compare `unit_price` with the expected volume.
+3. Skip entries with `stale: true` or `link_check.docs` equal to `broken` unless nothing else fits, and tell the user why.
+
+## Presenting options and credentials
+
+- Offer two or three candidates with one line each: what it does, free plan or unit price, and how it connects (no key, remote MCP, install, REST). Let the user pick unless the choice is obvious.
+- For the chosen service, tell the user what to create (API key or OAuth app) and link `docs`. Suggest adding the key through their platform's secret or connector settings (MCP configuration, environment variable) rather than pasting it into the chat.
+- Before calling or recommending for a batch, a zero budget or an action that reaches third parties (SMS, email, payments), check quotas, terms, real cost and authorization.
+- Never invent credentials, endpoints or prices. Fields with a `source_url` and check date are good enough for a first cheap, read-only call; confirm pricing only beyond the free quota, and terms for batch or commercial use.
+- Start from `call.example` only if its operation and required inputs match the task, replacing the placeholders. If a call fails, re-read `docs`: the API may have changed since the last-checked date.
+
+
+=== MCP server: https://ai-agents-api-library.vercel.app/mcp (Streamable HTTP, no key) — tools/list ===
+[
+ {
+  "name": "list_categories",
+  "title": "List API categories",
+  "description": "List all categories in the catalog with the number of services in each.",
+  "inputSchema": {
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "type": "object",
+   "properties": {}
+  },
+  "annotations": {
+   "title": "List API categories",
+   "readOnlyHint": true,
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false
+  },
+  "execution": {
+   "taskSupport": "forbidden"
+  }
+ },
+ {
+  "name": "search_apis",
+  "title": "Search APIs and MCP servers",
+  "description": "Search 300+ catalog entries of third-party APIs and MCP servers (each with a last-checked date) by operation or keywords, with optional category and quality filters. `match`: exact = the entry lists the operation and its example call or an MCP tool performs it; listed = the entry lists it without that evidence; adjacent = a related operation; topic = word match only. Exact is still a search label, not proof that the endpoint or tool accepts the user's actual inputs. `mcp_fit` says whether the MCP server has a tool for the operation. Ranking weighs operation fit, evidence, lasting free plan, card and auth effort, and bulk limits, not budget or region: read free_plan.kind (free_tier lasts, trial is one-off) and notes. User opinions (SourceForge product reviews): filter with min_rating / min_reviews, order with sort=rating or sort=reviews; results with stored review texts carry reviews_summary (praised and complained-about aspects). Usage: ratings.usage gives monthly downloads of the official SDKs, Stack Overflow questions and the vendor's iOS app rating; filter with min_downloads, order with sort=usage. Maintenance: ratings.issues gives the vendor's GitHub issues (share resolved, median days to fix, issue_health 0-100); filter with min_issue_health, order with sort=issues. Reviews rate the product, not whether the API fits the task. An empty result means no catalogued fit for the query and filters.",
+  "inputSchema": {
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "type": "object",
+   "properties": {
+    "query": {
+     "description": "The operation you need, e.g. 'text to video', 'geocode street addresses', 'send sms'",
+     "type": "string"
+    },
+    "category": {
+     "description": "Category id from list_categories, e.g. 'video-generation'",
+     "type": "string"
+    },
+    "mcp": {
+     "description": "official: MCP server by the vendor; remote: hosted endpoint that answered an MCP handshake (no install); any: any MCP server. Docs-only servers never count",
+     "type": "string",
+     "enum": [
+      "official",
+      "remote",
+      "any"
+     ]
+    },
+    "no_auth": {
+     "description": "Only services usable without any key",
+     "type": "boolean"
+    },
+    "free_tier": {
+     "description": "Only services with lasting free usage (not one-off trial credits)",
+     "type": "boolean"
+    },
+    "include_trials": {
+     "description": "With free_tier: also accept one-off trial or signup credits",
+     "type": "boolean"
+    },
+    "no_card": {
+     "description": "Only services whose free plan needs no payment card (or no account at all)",
+     "type": "boolean"
+    },
+    "auth": {
+     "type": "string",
+     "enum": [
+      "api_key",
+      "oauth2",
+      "api_key+oauth2",
+      "none",
+      "cloud_iam"
+     ]
+    },
+    "volume": {
+     "description": "bulk: many calls (batch jobs, 100+ items); services whose terms forbid bulk use are ranked last. Inferred from the query if omitted",
+     "type": "string",
+     "enum": [
+      "single",
+      "bulk"
+     ]
+    },
+    "min_rating": {
+     "description": "Only services whose user reviews (SourceForge) average at least this, e.g. 4. Services without reviews are excluded",
+     "type": "number",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "min_reviews": {
+     "description": "Only services with at least this many user reviews, e.g. 10. Services without reviews are excluded",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 9007199254740991
+    },
+    "min_downloads": {
+     "description": "Only services whose official SDKs (npm + PyPI) have at least this many downloads per month, e.g. 100000. Services without a known SDK are excluded",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 9007199254740991
+    },
+    "min_issue_health": {
+     "description": "Only services whose main GitHub repo (official SDK, MCP server or spec) scores at least this issue_health, e.g. 60. 0-100: 40% share of issues resolved (open vs fixed now; closed as not planned does not count), 40% fix speed (median days from report to fix over the last 12 months; 14 days = half), 20% closes vs new issues in the last 90 days. Services without a repo with 10+ issues are excluded",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 100
+    },
+    "sort": {
+     "description": "fit (default): operation fit and task factors; rating: user rating weighted by review count, so 5/5 from one review does not lead; reviews: most reviewed first; usage: most monthly SDK downloads (npm + PyPI) first; issues: highest issue_health (GitHub issues resolved and fixed fast) first. Services without the signal go last; ties keep fit order",
+     "type": "string",
+     "enum": [
+      "fit",
+      "rating",
+      "reviews",
+      "usage",
+      "issues"
+     ]
+    },
+    "limit": {
+     "description": "Max results, default 10",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 50
+    }
+   }
+  },
+  "annotations": {
+   "title": "Search APIs and MCP servers",
+   "readOnlyHint": true,
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false
+  },
+  "execution": {
+   "taskSupport": "forbidden"
+  }
+ },
+ {
+  "name": "get_api",
+  "title": "Get API details",
+  "description": "Full entry for one service: docs, auth scheme and how the credential is sent, base URL, operations, MCP endpoint or repository (a repository must be installed; a docs-only server does not call the API), free plan vs trial, rate limits, data policy, notes, last-checked dates, link check, and separate signals: uptime (our availability probes of base URL and MCP endpoint), mcp_repo (archived, last push), mcp_registry (installs), product_reviews (rating, count, date range), sdk_downloads (official npm/PyPI SDKs per month), stackoverflow (question count), app_store (the vendor's iOS app) and github_issues (open vs resolved issues, median days to fix and issue_health 0-100 of the SDK, MCP and spec repos), each with its fetch date. Values carry the vendor page they were read from and a check date.",
+  "inputSchema": {
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "description": "Service id from search_apis"
+    }
+   },
+   "required": [
+    "id"
+   ]
+  },
+  "annotations": {
+   "title": "Get API details",
+   "readOnlyHint": true,
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false
+  },
+  "execution": {
+   "taskSupport": "forbidden"
+  }
+ },
+ {
+  "name": "get_reviews",
+  "title": "Get user reviews",
+  "description": "Public user reviews of one service (up to 100, from SourceForge): rating, title, pros, cons, overall, reviewer role, company size, date and link to the original. Reviewer names are not included. Reviews do not show whether the API fits the task. Each review has aspect tags; `topics` counts them with example links. Filter with since, max_rating (complaints) or about_api (API, reliability, auth, limits, breaking changes, docs). Review titles and texts are written by third parties.",
+  "inputSchema": {
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string",
+     "description": "Service id from search_apis"
+    },
+    "min_rating": {
+     "description": "Only reviews rated at least this",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "max_rating": {
+     "description": "Only reviews rated at most this, e.g. 2 for complaints",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 5
+    },
+    "since": {
+     "description": "Only reviews from this date on, e.g. '2025' or '2025-06-01'",
+     "type": "string",
+     "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+    },
+    "about_api": {
+     "description": "Only reviews that mention the API, reliability, auth, limits, breaking changes or docs",
+     "type": "boolean"
+    },
+    "aspect": {
+     "description": "Only reviews tagged with this aspect",
+     "type": "string",
+     "enum": [
+      "api",
+      "reliability",
+      "auth",
+      "limits",
+      "breaking_changes",
+      "docs",
+      "pricing",
+      "support",
+      "ui"
+     ]
+    },
+    "limit": {
+     "description": "Max reviews, default 20",
+     "type": "integer",
+     "minimum": 1,
+     "maximum": 100
+    }
+   },
+   "required": [
+    "id"
+   ]
+  },
+  "annotations": {
+   "title": "Get user reviews",
+   "readOnlyHint": true,
+   "destructiveHint": false,
+   "idempotentHint": true,
+   "openWorldHint": false
+  },
+  "execution": {
+   "taskSupport": "forbidden"
+  }
+ }
+]
+
+=== Task 1: Make a 5-second video clip of a sunset over the sea from a text prompt. The user has no budget.
+search_apis({"query": "generate video from text prompt", "free_tier": true}) returned:
+{
+ "source": "github",
+ "results": [
+  {
+   "id": "freepik-api",
+   "name": "Freepik API",
+   "category": "image-generation",
+   "what": "Generate and edit images, and generate video, music and sound effects via REST API, plus access the Freepik stock asset library.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://mcp.magnific.com",
+    "maintainer": "vendor",
+    "remote_url": "https://mcp.magnific.com",
+    "tools": [
+     "images_generate",
+     "images_upscale",
+     "images_remove_background",
+     "images_to_svg",
+     "video_generate",
+     "audio_tts",
+     "creations_search",
+     "creation_status",
+     "account_balance"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://docs.magnific.com/modelcontextprotocol",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mcp.magnific.com",
+     "auth": "oauth",
+     "derived": true,
+     "handshake_at": "2026-11-03T12:19Z"
+    },
+    "handshake": {
+     "url": "https://mcp.magnific.com",
+     "status": "auth_oauth",
+     "checked_at": "2026-11-03T12:19Z"
+    }
+   },
+   "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://docs.magnific.com",
+   "base_url": "https://api.magnific.com/v1",
+   "ratings": {
+    "uptime": "api 30/30 up in 30 d, median 600 ms, last up 2026-11-03T12:18Z",
+    "reviews": "unavailable",
+    "mcp_repo": "unavailable",
+    "usage": "unavailable",
+    "issues": "unavailable"
+   },
+   "match": "exact",
+   "reason": "does text-to-video (example call: text-to-video (LTX Video 2.0 Pro, prompt only, no input image))",
+   "mcp_fit": "no MCP tool named for this operation; check its tool list or use the REST API; hosted, answers MCP; needs an OAuth login"
+  },
+  {
+   "id": "hugging-face-inference-providers",
+   "name": "Hugging Face Inference Providers",
+   "category": "model-inference",
+   "what": "Call hundreds of open-weight chat, vision, image, video and audio models across many providers with one HF token.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://huggingface.co/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://huggingface.co/mcp",
+    "tools": [
+     "hf_whoami",
+     "hub_repo_search",
+     "hub_repo_details",
+     "hf_fs"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://huggingface.co/mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://huggingface.co/mcp",
+     "headers": {
+      "Authorization": "Bearer $HF_TOKEN"
+     },
+     "oauth": true,
+     "docs_only": false,
+     "source_url": "https://github.com/huggingface/hf-mcp-server",
+     "checked_at": "2026-09-24"
+    },
+    "handshake": {
+     "url": "https://huggingface.co/mcp",
+     "status": "ok",
+     "checked_at": "2026-11-03T12:19Z"
+    }
+   },
+   "free_tier": "Free tier: $0.10/month in Inference Providers credits (PRO $2.00/month)",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://huggingface.co/docs/inference-providers/index",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "$0.10 in credits for free users (PRO $2.00)",
+    "period": "month",
+    "source_url": "https://huggingface.co/docs/inference-providers/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://router.huggingface.co/v1",
+   "ratings": {
+    "uptime": "api 30/30 up in 30 d, median 146 ms, last up 2026-11-03T12:18Z",
+    "reviews": "unavailable",
+    "mcp_repo": "unavailable",
+    "usage": "SDK 234.1M downloads/month (npm @huggingface/inference, pypi huggingface_hub)",
+    "issues": "sdk huggingface/huggingface_hub: 92% resolved (118 open, 1360 fixed), median 1.6 d to fix, health 93"
+   },
+   "match": "listed",
+   "reason": "lists text-to-video, but the example call is \"chat completion on an open model\" and no MCP tool shows it; check the endpoint in docs",
+   "mcp_fit": "no MCP tool named for this operation; check its tool list or use the REST API"
+  }
+ ]
+}
+
+=== Task 2: Geocode 200 street addresses in Poland and return latitude/longitude.
+search_apis({"query": "geocode addresses", "free_tier": true}) returned:
+{
+ "source": "github",
+ "results": [
+  {
+   "id": "gugik-geocoding",
+   "name": "GUGiK Universal Geocoding Service (UUG)",
+   "category": "maps-geo-weather",
+   "what": "Geocode a Polish street address to coordinates with official TERYT/SIMC/ULIC codes and postcode, or reverse-geocode a point to the nearest address, via Poland's national geodesy office.",
+   "auth": "none",
+   "no_auth": true,
+   "mcp": {
+    "type": "none",
+    "url": null,
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
+   },
+   "free_tier": "Free, no key: public government geocoding service for Polish addresses, streets, towns, road markers and level crossings",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://services.gugik.gov.pl/uug/opis.html",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "quota": "no published quota",
+    "source_url": "https://services.gugik.gov.pl/uug/opis.html",
+    "checked_at": "2026-09-25"
+   },
+   "base_url": "https://services.gugik.gov.pl/uug/",
+   "ratings": {
+    "uptime": "api 29/30 up in 30 d, median 975 ms, last up 2026-11-03T12:18Z",
+    "reviews": "unavailable",
+    "mcp_repo": "no MCP server",
+    "usage": "unavailable",
+    "issues": "unavailable"
+   },
+   "match": "exact",
+   "reason": "does street-geocoding (example call: geocode a Polish street address)"
+  },
+  {
+   "id": "photon-komoot",
+   "name": "Photon (komoot)",
+   "category": "maps-geo-weather",
+   "what": "Geocode addresses and place names worldwide from OpenStreetMap data with typo-tolerant search-as-you-type, or reverse-geocode coordinates to the nearest address.",
+   "auth": "none",
+   "no_auth": true,
+   "mcp": {
+    "type": "none",
+    "url": null,
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
+   },
+   "free_tier": "Free, no key: public demo instance under fair use; heavy usage is throttled or banned",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://github.com/komoot/photon",
+   "free_plan": {
+    "kind": "no_key",
+    "requires_card": false,
+    "quota": "no fixed quota; fair use, extensive usage throttled",
+    "source_url": "https://github.com/komoot/photon",
+    "checked_at": "2026-09-25"
+   },
+   "base_url": "https://photon.komoot.io",
+   "ratings": {
+    "uptime": "api 30/30 up in 30 d, median 663 ms, last up 2026-11-03T12:18Z",
+    "reviews": "unavailable",
+    "mcp_repo": "last push 2026-11-02",
+    "usage": "unavailable",
+    "issues": "repo komoot/photon: 92% resolved (42 open, 467 fixed), median 12.4 d to fix, health 78"
+   },
+   "match": "exact",
+   "reason": "does street-geocoding (example call: geocode an address)"
+  },
+  {
+   "id": "google-maps-platform",
+   "name": "Google Maps Platform",
+   "category": "maps-geo-weather",
+   "what": "Geocode addresses, get directions/routes, places data, and static/dynamic maps via REST APIs or Google's remote MCP server.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://mapstools.googleapis.com/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://mapstools.googleapis.com/mcp",
+    "tools": [
+     "search_places",
+     "lookup_weather",
+     "compute_routes",
+     "resolve_names",
+     "resolve_maps_urls"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://developers.google.com/maps/ai/grounding-lite",
+    "checked_at": "2026-09-24",
+    "domain_verified": false,
+    "kind": "official",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://mapstools.googleapis.com/mcp",
+     "headers": {
+      "X-Goog-Api-Key": "$GOOGLE_MAPS_API_KEY"
+     },
+     "oauth": false,
+     "docs_only": false,
+     "source_url": "https://developers.google.com/maps/ai/grounding-lite",
+     "checked_at": "2026-09-24"
+    },
+    "handshake": {
+     "url": "https://mapstools.googleapis.com/mcp",
+     "status": "ok",
+     "checked_at": "2026-11-03T12:19Z"
+    }
+   },
+   "free_tier": "Free tier: free calls per SKU per month (10K Essentials, 5K Pro, 1K Enterprise), replacing the former $200 monthly credit",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://developers.google.com/maps/documentation",
+   "free_plan": {
+    "kind": "free_tier",
+    "quota": "Free calls per SKU monthly: 10K Essentials, 5K Pro, 1K Enterprise",
+    "period": "month",
+    "source_url": "https://mapsplatform.google.com/pricing/",
+    "checked_at": "2026-09-24"
+   },
+   "ratings": {
+    "uptime": "unavailable",
+    "reviews": "unavailable",
+    "mcp_repo": "unavailable",
+    "usage": "SDK 7.1M downloads/month (npm @googlemaps/google-maps-services-js, pypi googlemaps); Stack Overflow 25.0k questions [google-maps-api-3]; iOS app 4.67/5 from 7.4M",
+    "issues": "sdk googlemaps/google-maps-services-js: 89% resolved (41 open, 344 fixed), no fixes in 12 months, health 36"
+   },
+   "match": "exact",
+   "reason": "does street-geocoding (example call: forward geocode a street address (Geocoding API))",
+   "mcp_fit": "no MCP tool named for this operation; check its tool list or use the REST API",
+   "reviews_summary": {
+    "sampled": 6,
+    "date_range": [
+     "2020-04-18",
+     "2022-02-22"
+    ],
+    "low_rated": 0,
+    "praised": [
+     "ui (3/5)",
+     "pricing (1/1)",
+     "support (1/1)"
+    ],
+    "complaints": [
+     "ui (1/5)",
+     "reliability (1/1)"
+    ],
+    "texts": "get_reviews"
+   }
+  },
+  {
+   "id": "locationiq",
+   "name": "LocationIQ",
+   "category": "maps-geo-weather",
+   "what": "Geocode and reverse-geocode addresses, find nearby places, look up time zones, calculate routes and render map tiles via REST API.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "none",
+    "url": null,
+    "maintainer": "none",
+    "remote_url": null,
+    "repo": null,
+    "tools": null,
+    "covers_full_api": null,
+    "source_url": null,
+    "checked_at": "2026-09-24",
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
+   },
+   "free_tier": "Free: 5,000 requests/day, 2 requests/s, 60 requests/min, no card; commercial use requires a link back to LocationIQ",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://docs.locationiq.com/reference/search",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "5,000 requests/day, 2 requests/s, 60 requests/min",
+    "period": "day",
+    "source_url": "https://locationiq.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://us1.locationiq.com/v1",
+   "ratings": {
+    "uptime": "api 30/30 up in 30 d, median 308 ms, last up 2026-11-03T12:18Z",
+    "reviews": "unavailable",
+    "mcp_repo": "no MCP server",
+    "usage": "unavailable",
+    "issues": "unavailable"
+   },
+   "match": "exact",
+   "reason": "does street-geocoding (example call: geocode an address)"
+  },
+  {
+   "id": "opencage",
+   "name": "OpenCage Geocoding API",
+   "category": "maps-geo-weather",
+   "what": "Convert addresses and place names to coordinates, and coordinates to addresses, worldwide via REST API.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/OpenCageData/opencage-geocoding-mcp",
+    "maintainer": "vendor",
+    "remote_url": null,
+    "repo": "https://github.com/OpenCageData/opencage-geocoding-mcp",
+    "tools": [
+     "geocode-forward",
+     "geocode-reverse",
+     "get-opencage-info"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://github.com/OpenCageData/opencage-geocoding-mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": null,
+    "kind": "official",
+    "config": null
+   },
+   "free_tier": "Free: 2,500 requests/day, 1 request/s, no card (for testing; production needs a paid plan from €45/month)",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://opencagedata.com/api",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "2,500 requests/day, 1 request/s (testing use)",
+    "period": "day",
+    "source_url": "https://opencagedata.com/pricing",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://api.opencagedata.com/geocode/v1",
+   "ratings": {
+    "uptime": "api 30/30 up in 30 d, median 564 ms, last up 2026-11-03T12:18Z",
+    "reviews": "unavailable",
+    "mcp_repo": "last push 2026-11-01",
+    "usage": "SDK 562.3k downloads/month (pypi opencage)",
+    "issues": "sdk OpenCageData/python-opencage-geocoder: 94% resolved (1 open, 16 fixed), median 0 d to fix, health 98"
+   },
+   "match": "exact",
+   "reason": "does street-geocoding (example call: forward geocode a street address)",
+   "mcp_fit": "tool geocode-forward"
+  }
+ ]
+}
+
+=== Task 3: Send an SMS reminder to a customer's phone number.
+search_apis({"query": "send SMS"}) returned:
+{
+ "source": "github",
+ "results": [
+  {
+   "id": "textbelt",
+   "name": "Textbelt",
+   "category": "sms-messaging",
+   "what": "Send an SMS to a phone number (US or international) with one HTTP POST, and check delivery status and remaining credits.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "none",
+    "url": null,
+    "domain_verified": null,
+    "kind": "none",
+    "config": null
+   },
+   "free_tier": "Free: shared key 'textbelt' sends 1 SMS per day; paid credits are a one-time purchase",
+   "has_free_tier": true,
+   "has_trial": false,
+   "docs": "https://docs.textbelt.com/",
+   "free_plan": {
+    "kind": "free_tier",
+    "requires_card": false,
+    "quota": "1 SMS with the shared 'textbelt' key",
+    "period": "day",
+    "source_url": "https://textbelt.com/",
+    "checked_at": "2026-09-25"
+   },
+   "base_url": "https://textbelt.com",
+   "ratings": {
+    "uptime": "api 30/30 up in 30 d, median 194 ms, last up 2026-11-03T12:18Z",
+    "reviews": "unavailable",
+    "mcp_repo": "no MCP server",
+    "usage": "unavailable",
+    "issues": "unavailable"
+   },
+   "match": "exact",
+   "reason": "does sms (example call: send an SMS)"
+  },
+  {
+   "id": "sinch",
+   "name": "Sinch",
+   "category": "sms-messaging",
+   "what": "Send and receive SMS (and WhatsApp, RCS and other channels) via the Conversation REST API.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/sinch/sinch-mcp-server",
+    "maintainer": "vendor",
+    "remote_url": null,
+    "repo": "https://github.com/sinch/sinch-mcp-server",
+    "tools": [
+     "send-text-message",
+     "send-media-message",
+     "send-template-message",
+     "send-choice-message",
+     "send-location-message",
+     "list-conversation-apps",
+     "send-email",
+     "number-lookup",
+     "start-sms-verification",
+     "tts-callout",
+     "search-for-available-numbers"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/sinch/sinch-mcp-server",
+    "checked_at": "2026-09-24",
+    "domain_verified": null,
+    "kind": "official",
+    "config": null
+   },
+   "free_tier": "Trial: free trial credit and a free test number on signup, no card; then paid (US 10DLC $0.0078/SMS + carrier fees)",
+   "has_free_tier": false,
+   "has_trial": true,
+   "docs": "https://developers.sinch.com/docs/conversation/api-reference",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "Trial credit and one free test number on signup",
+    "period": "one_time",
+    "source_url": "https://sinch.com/build-dashboard-overview/",
+    "checked_at": "2026-09-24"
+   },
+   "base_url": "https://{region}.conversation.api.sinch.com (region: us, eu, br)",
+   "ratings": {
+    "uptime": "unavailable",
+    "reviews": "1/5 from 2 (sourceforge)",
+    "mcp_repo": "last push 2026-11-01",
+    "usage": "SDK 112.1k downloads/month (npm @sinch/sdk-core, pypi sinch); Stack Overflow 560 questions [sinch]",
+    "issues": "unavailable"
+   },
+   "sms": {
+    "price_pl": null,
+    "price_pl_source": null,
+    "sender_registration": "US 10DLC needs a registered brand and a 10DLC campaign; toll-free numbers need TFN verification. Sender ID registration is recommended/required per country (details in dashboard Country Information)",
+    "sender_registration_source": "https://developers.sinch.com/docs/10dlc-registration/api-reference/10dlc-registration",
+    "trial_limits": "Trial credit on signup, no card; one free test number (buy numbers after testing); sandbox sends are simulated and only to phone numbers you have already verified",
+    "trial_limits_source": "https://sinch.com/build-dashboard-overview/",
+    "countries": "190+ countries",
+    "countries_source": "https://sinch.com/messaging/sms-api/send-sms/",
+    "checked_at": "2026-09-25"
+   },
+   "match": "exact",
+   "reason": "does sms (example call: send an SMS via the Conversation API)",
+   "mcp_fit": "tool start-sms-verification"
+  },
+  {
+   "id": "twilio",
+   "name": "Twilio",
+   "category": "sms-messaging",
+   "what": "Send/receive SMS, WhatsApp messages, and voice calls programmatically via REST API.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/twilio-labs/mcp",
+    "maintainer": "vendor",
+    "repo": "https://github.com/twilio-labs/mcp",
+    "covers_full_api": true,
+    "source_url": "https://github.com/twilio-labs/mcp",
+    "checked_at": "2026-09-24",
+    "domain_verified": null,
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@twilio-alpha/mcp",
+      "$TWILIO_ACCOUNT_SID/$TWILIO_API_KEY:$TWILIO_API_SECRET"
+     ],
+     "env": [],
+     "oauth": false,
+     "docs_only": false,
+     "note": "Alpha server from Twilio Labs that calls the Twilio API (e.g. send SMS); credentials are passed as the last argument. Twilio also hosts https://mcp.twilio.com/docs, which only searches documentation and cannot send messages.",
+     "source_url": "https://github.com/twilio-labs/mcp",
+     "checked_at": "2026-09-25"
+    }
+   },
+   "free_tier": "Trial: 100 SMS, 100 WhatsApp, 3,000 emails, 75 voice minutes; no card; one-time, expires after 30 days; SMS only to verified numbers within the signup country, using predefined templates",
+   "has_free_tier": false,
+   "has_trial": true,
+   "docs": "https://www.twilio.com/docs/usage/api",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "quota": "100 SMS, 100 WhatsApp messages, 3,000 emails, 75 voice minutes; 30 days; verified numbers in the signup country only, predefined templates",
+    "period": "one_time",
+    "source_url": "https://www.twilio.com/docs/usage/trials",
+    "checked_at": "2026-09-25"
+   },
+   "ratings": {
+    "uptime": "unavailable",
+    "reviews": "4.8/5 from 13 (sourceforge)",
+    "mcp_repo": "last push 2026-02-14",
+    "usage": "SDK 46.2M downloads/month (npm twilio, pypi twilio; SDK shared with other catalog entries); Stack Overflow 10.5k questions [twilio]",
+    "issues": "sdk twilio/twilio-node: 95% resolved (29 open, 515 fixed), median 38.9 d to fix, health 60, repo shared with other entries"
+   },
+   "sms": {
+    "price_pl": "$0.0457 per outbound SMS segment to Poland (mobile numbers); inbound $0.0075/segment; $0.001 fee per failed message",
+    "price_pl_source": "https://www.twilio.com/en-us/sms/pricing/pl",
+    "sender_registration": "US: 10DLC needs A2P brand + campaign registration; toll-free numbers cannot send to US/CA until verified. Poland: alphanumeric sender ID supported, no pre-registration; numeric IDs overwritten",
+    "sender_registration_source": "https://www.twilio.com/en-us/guidelines/pl/sms",
+    "trial_limits": "Trial: only to up to 5 verified numbers, only within sign-up country, pre-defined templates only (no custom bodies), trial number as sender, 100 free SMS, expires after 30 days",
+    "trial_limits_source": "https://www.twilio.com/docs/usage/trials",
+    "countries": "180+ countries",
+    "countries_source": "https://www.twilio.com/en-us/messaging/channels/sms",
+    "checked_at": "2026-09-25"
+   },
+   "match": "exact",
+   "reason": "does sms (example call: send an SMS)",
+   "reviews_summary": {
+    "sampled": 13,
+    "date_range": [
+     "2020-05-05",
+     "2025-10-09"
+    ],
+    "low_rated": 0,
+    "praised": [
+     "api (9/9)",
+     "pricing (4/6)",
+     "ui (3/3)"
+    ],
+    "complaints": [
+     "api (1/9)",
+     "ui (1/3)",
+     "reliability (1/1)"
+    ],
+    "texts": "get_reviews"
+   }
+  },
+  {
+   "id": "telnyx",
+   "name": "Telnyx",
+   "category": "sms-messaging",
+   "what": "Send and receive SMS, MMS, RCS and WhatsApp messages and manage phone numbers via REST API.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://api.telnyx.com/v2/mcp",
+    "maintainer": "vendor",
+    "remote_url": "https://api.telnyx.com/v2/mcp",
+    "repo": "https://github.com/team-telnyx/ai",
+    "tools": [
+     "list_api_endpoints",
+     "get_api_endpoint_schema",
+     "invoke_api_endpoint"
+    ],
+    "covers_full_api": true,
+    "source_url": "https://telnyx.com/.well-known/mcp/server-card.json",
+    "checked_at": "2026-09-24",
+    "domain_verified": true,
+    "kind": "vendor-hosted",
+    "config": {
+     "transport": "streamable-http",
+     "url": "https://api.telnyx.com/v2/mcp",
+     "auth": "none",
+     "derived": true,
+     "handshake_at": "2026-11-03T12:19Z"
+    },
+    "handshake": {
+     "url": "https://api.telnyx.com/v2/mcp",
+     "status": "ok",
+     "checked_at": "2026-11-03T12:19Z"
+    }
+   },
+   "free_tier": "Trial: $5 test credit, 1 verified number, 100 messages/day; then paid (US 10DLC $0.004/SMS part + carrier fees)",
+   "has_free_tier": false,
+   "has_trial": true,
+   "docs": "https://developers.telnyx.com/api-reference/messages/send-a-message",
+   "free_plan": {
+    "kind": "trial",
+    "quota": "$5 test credit, 1 verified number, 100 messages/day",
+    "period": "one_time",
+    "source_url": "https://developers.telnyx.com/docs/account-setup/levels-and-capabilities/trial",
+    "checked_at": "2026-09-25"
+   },
+   "base_url": "https://api.telnyx.com/v2",
+   "ratings": {
+    "uptime": "api 30/30 up in 30 d, median 157 ms, last up 2026-11-03T12:18Z",
+    "reviews": "5/5 from 8 (sourceforge)",
+    "mcp_repo": "unavailable",
+    "usage": "SDK 2.4M downloads/month (npm telnyx, pypi telnyx)",
+    "issues": "sdk team-telnyx/telnyx-node: 100% resolved (0 open, 56 fixed), median 155.7 d to fix, health 63"
+   },
+   "sms": {
+    "price_pl": "$0.037 per outbound SMS part to Poland (same rate for all listed Polish operators)",
+    "price_pl_source": "https://telnyx.com/pricing.md",
+    "sender_registration": "US: 10DLC needs brand + campaign (TCR) registration; toll-free needs verification; alphanumeric not supported in US/CA. Poland: alphanumeric sender ID supported and preserved, no registration",
+    "sender_registration_source": "https://support.telnyx.com/en/articles/6545167-poland-sms-guidelines",
+    "trial_limits": "Trial: $5 testing credit; SMS only to 1 verified number, long code only, max 100 messages/day, 1 messaging profile",
+    "trial_limits_source": "https://developers.telnyx.com/docs/account-setup/levels-and-capabilities/trial",
+    "countries": "full list: https://telnyx.com/pricing.md (Messaging Outbound rate deck, 227 country codes)",
+    "countries_source": "https://telnyx.com/pricing.md",
+    "checked_at": "2026-09-25"
+   },
+   "match": "exact",
+   "reason": "does sms (example call: send an SMS)",
+   "mcp_fit": "no MCP tool named for this operation; check its tool list or use the REST API"
+  },
+  {
+   "id": "vonage-api",
+   "name": "Vonage API",
+   "category": "sms-messaging",
+   "what": "Send SMS, make voice calls, and build video apps via a unified communications REST API.",
+   "auth": "api_key",
+   "no_auth": false,
+   "mcp": {
+    "type": "official",
+    "url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+    "maintainer": "vendor",
+    "repo": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+    "tools": [
+     "balance",
+     "list-applications",
+     "create-application",
+     "search-available-numbers",
+     "SMS",
+     "whatsapp-send-text",
+     "rcs-send-text",
+     "outbound-voice-message"
+    ],
+    "covers_full_api": false,
+    "source_url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+    "checked_at": "2026-09-24",
+    "domain_verified": null,
+    "kind": "official",
+    "config": {
+     "transport": "stdio",
+     "command": "npx",
+     "args": [
+      "-y",
+      "@vonage/vonage-mcp-server-api-bindings"
+     ],
+     "env": [
+      "VONAGE_APPLICATION_ID",
+      "VONAGE_PRIVATE_KEY64",
+      "VONAGE_API_KEY",
+      "VONAGE_API_SECRET",
+      "VONAGE_VIRTUAL_NUMBER",
+      "VONAGE_WHATSAPP_NUMBER",
+      "RCS_SENDER_ID"
+     ],
+     "docs_only": false,
+     "source_url": "https://github.com/Vonage-Community/vonage-mcp-server-api-bindings",
+     "checked_at": "2026-09-24"
+    }
+   },
+   "free_tier": "Trial: free credit on signup, no credit card required; then pay-as-you-go per request",
+   "has_free_tier": false,
+   "has_trial": true,
+   "docs": "https://developer.vonage.com/en/documentation",
+   "free_plan": {
+    "kind": "trial",
+    "requires_card": false,
+    "period": "one_time",
+    "source_url": "https://www.vonage.com/communications-apis/pricing/",
+    "checked_at": "2026-09-25"
+   },
+   "ratings": {
+    "uptime": "unavailable",
+    "reviews": "unavailable",
+    "mcp_repo": "last push 2026-10-22",
+    "usage": "SDK 846.0k downloads/month (npm @vonage/server-sdk, pypi vonage); Stack Overflow 322 questions [vonage]",
+    "issues": "sdk Vonage/vonage-node-sdk: 98% resolved (7 open, 382 fixed), median 2 d to fix, health 74"
+   },
+   "sms": {
+    "price_pl": "$0.04843 per outbound SMS to Poland (per message); inbound $0.01091",
+    "price_pl_source": "https://www.vonage.com/communications-apis/sms/pricing/",
+    "sender_registration": "US: alphanumeric not allowed; use registered 10DLC, toll-free or short code (10DLC mandatory once account leaves trial). Poland: alphanumeric generally supported, no registration stated; generic IDs (INFO, SMS) prohibited",
+    "sender_registration_source": "https://api.support.vonage.com/hc/en-us/articles/204017553-Poland-SMS-Features-and-Restrictions",
+    "trial_limits": "Trial: EUR 2 free credit; SMS only to your registered number + 4 verified test numbers; '[FREE SMS DEMO, TEST MESSAGE]' appended; trial credit cannot buy virtual numbers",
+    "trial_limits_source": "https://api.support.vonage.com/hc/en-us/articles/212554438-What-are-the-limitations-of-a-trial-account",
+    "countries": "full list: https://api.support.vonage.com/hc/en-us/sections/200622473-Country-Specific-Features-and-Restrictions",
+    "countries_source": "https://developer.vonage.com/en/messaging/sms/guides/country-specific-features",
+    "checked_at": "2026-09-25"
+   },
+   "match": "exact",
+   "reason": "does sms (example call: send an SMS)",
+   "mcp_fit": "tool SMS"
+  }
+ ]
+}
+
+=== get_api({"id": "freepik-api"}) returned:
+{
+ "id": "freepik-api",
+ "name": "Freepik API",
+ "category": "image-generation",
+ "homepage": "https://www.freepik.com/api",
+ "docs": "https://docs.magnific.com",
+ "auth": "api_key",
+ "auth_hint": "x-magnific-api-key header (legacy x-freepik-api-key); base URL https://api.magnific.com/v1",
+ "mcp": {
+  "type": "official",
+  "url": "https://mcp.magnific.com",
+  "maintainer": "vendor",
+  "remote_url": "https://mcp.magnific.com",
+  "tools": [
+   "images_generate",
+   "images_upscale",
+   "images_remove_background",
+   "images_to_svg",
+   "video_generate",
+   "audio_tts",
+   "creations_search",
+   "creation_status",
+   "account_balance"
+  ],
+  "covers_full_api": false,
+  "source_url": "https://docs.magnific.com/modelcontextprotocol",
+  "checked_at": "2026-09-24",
+  "domain_verified": true,
+  "kind": "vendor-hosted",
+  "config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.magnific.com",
+   "auth": "oauth",
+   "derived": true,
+   "handshake_at": "2026-11-03T12:19Z"
+  },
+  "handshake": {
+   "url": "https://mcp.magnific.com",
+   "status": "auth_oauth",
+   "checked_at": "2026-11-03T12:19Z"
+  }
+ },
+ "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
+ "sdk": [],
+ "openapi": null,
+ "llms_txt": null,
+ "desc_en": "Generate and edit images, and generate video, music and sound effects via REST API, plus access the Freepik stock asset library.",
+ "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com. The official remote MCP uses OAuth sign-in, no API key.",
+ "verified": "2026-09-24",
+ "auth_scheme": {
+  "type": "apiKey",
+  "in": "header",
+  "name": "x-magnific-api-key",
+  "format": "x-magnific-api-key: <API_KEY>",
+  "source_url": "https://docs.magnific.com/authentication",
+  "checked_at": "2026-09-24"
+ },
+ "base_url": "https://api.magnific.com/v1",
+ "rate_limits": {
+  "summary": "Per IP: 50 hits/s over 5 s, and 10 hits/s averaged over 2 min; no daily cap for most endpoints",
+  "source_url": "https://docs.magnific.com/ratelimits",
+  "checked_at": "2026-09-24"
+ },
+ "async_jobs": {
+  "value": true,
+  "how": "POST returns task id; poll GET /v1/ai/<model>/{task-id} or pass webhook_url",
+  "source_url": "https://docs.magnific.com/llms.txt"
+ },
+ "operations": [
+  "text-to-image",
+  "image-upscaling",
+  "background-removal",
+  "text-to-video",
+  "text-to-speech"
+ ],
+ "no_auth": false,
+ "call": {
+  "operation": "text-to-video (LTX Video 2.0 Pro, prompt only, no input image)",
+  "method": "POST",
+  "url": "https://api.magnific.com/v1/ai/text-to-video/ltx-2-pro",
+  "example": "curl -X POST https://api.magnific.com/v1/ai/text-to-video/ltx-2-pro -H \"x-magnific-api-key: $MAGNIFIC_API_KEY\" -H \"Content-Type: application/json\" -d '{\"prompt\":\"A majestic eagle soaring through mountain valleys at sunset, camera slowly panning to follow the flight\",\"duration\":6,\"resolution\":\"1080p\"}'",
+  "response_fields": [
+   "data.task_id",
+   "data.status"
+  ],
+  "async": "poll GET https://api.magnific.com/v1/ai/text-to-video/ltx-2-pro/{task-id} until data.status is COMPLETED, then data.generated[0] (or pass webhook_url)",
+  "source_url": "https://docs.magnific.com/api-reference/text-to-video/ltx-2-pro",
+  "checked_at": "2026-09-25"
+ },
+ "has_free_tier": true,
+ "has_trial": false,
+ "no_card": false,
+ "stale": false,
+ "link_check": {
+  "checked_at": "2026-11-02",
+  "docs": "ok",
+  "mcp": "reachable"
+ },
+ "uptime": {
+  "window_days": 30,
+  "up_means": "host reachable: HTTP < 500, even 401/404; not a test of any endpoint",
+  "api": {
+   "url": "https://api.magnific.com/v1",
+   "probes": 30,
+   "up": 30,
+   "median_ms": 600,
+   "last": {
+    "at": "2026-11-03T12:18Z",
+    "up": true,
+    "detail": 404
+   }
+  },
+  "mcp_remote": {
+   "url": "https://mcp.magnific.com",
+   "probes": 30,
+   "up": 30,
+   "median_ms": 288,
+   "last": {
+    "at": "2026-11-03T12:18Z",
+    "up": true,
+    "detail": 401
+   }
+  }
+ },
+ "mcp_repo": {
+  "status": "unavailable"
+ },
+ "mcp_registry": {
+  "status": "unavailable"
+ },
+ "product_reviews": {
+  "status": "unavailable"
+ },
+ "sdk_downloads": {
+  "status": "unavailable"
+ },
+ "stackoverflow": {
+  "status": "unavailable"
+ },
+ "app_store": {
+  "status": "unavailable"
+ },
+ "github_issues": {
+  "status": "unavailable"
+ }
+}

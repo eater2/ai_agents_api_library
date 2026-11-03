@@ -3343,14 +3343,14 @@
       "source_url": "https://docs.magnific.com/modelcontextprotocol",
       "checked_at": "2026-09-24"
     },
-    "free_tier": "free tier: ~5 EUR of free API credits, then pay-as-you-go",
+    "free_tier": "no free tier: pre-purchased credits spent per request (credit-based plans); the pay-per-usage plan ended June 30, 2026",
     "sdk": [],
     "openapi": null,
     "llms_txt": null,
     "desc_en": "Generate and edit images, and generate video, music and sound effects via REST API, plus access the Freepik stock asset library.",
     "desc_pl": "Generuj i edytuj obrazy, twórz wideo, muzykę i efekty dźwiękowe przez REST API oraz korzystaj z biblioteki zasobów stockowych Freepik.",
     "notes": "Freepik rebranded to Magnific in April 2026; docs/domains and auth header are mid-migration from freepik.com to magnific.com. The official remote MCP uses OAuth sign-in, no API key.",
-    "verified": "2026-09-24",
+    "verified": "2026-11-03",
     "auth_scheme": {
       "type": "apiKey",
       "in": "header",
@@ -3376,7 +3376,13 @@
       "background-removal",
       "text-to-video",
       "text-to-speech"
-    ]
+    ],
+    "free_plan": {
+      "kind": "none",
+      "requires_card": null,
+      "source_url": "https://www.magnific.com/api/pricing",
+      "checked_at": "2026-11-03"
+    }
   },
   {
     "id": "google-gemini-imagen-image-api",
