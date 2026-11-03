@@ -1077,6 +1077,8 @@ def main():
     write("docs/.nojekyll", "")
     write("docs/privacy.html", privacy_page())
     write("docs/robots.txt", f"User-agent: *\nAllow: /\nSitemap: {PAGES}sitemap.xml\n")
+    # Google Search Console ownership proof for the Vercel host; must stay published after verification.
+    write("docs/google0d09eb26482fc109.html", "google-site-verification: google0d09eb26482fc109.html")
     write("docs/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"<url><loc>{u}</loc><lastmod>{VERIFIED}</lastmod></url>\n" for u in
                     [PAGES, PAGES + "catalog.json", PAGES + "llms.txt"] + [f"{PAGES}c/{c['id']}/" for c in cats])
