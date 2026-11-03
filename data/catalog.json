@@ -20221,5 +20221,26 @@
     "desc_pl": "Umożliwia agentowi uruchamianie kodu Python/Node w sandboxie, przechowywanie danych, monitorowanie URL-i, uzyskiwanie podpisanych atestacji oraz wynajem jednorazowego e-maila/DNS, płacąc za każde wywołanie w USDC przez x402, bez konta i klucza API.",
     "notes": "",
     "verified": "2026-11-01"
+  },
+  {
+    "id": "agent-qa",
+    "name": "agent-qa",
+    "category": "web-scraping-browser",
+    "homepage": "https://vostride.com",
+    "docs": "https://vostride.com/docs/agent-qa/mcp",
+    "auth": "none",
+    "auth_hint": "Local stdio MCP transport has no authentication; test execution uses separately configured model access.",
+    "mcp": {
+      "type": "official",
+      "url": "https://github.com/vostride/agent-qa"
+    },
+    "free_tier": "Free local package; configured model access is required and model-provider charges may apply.",
+    "sdk": [],
+    "openapi": null,
+    "llms_txt": null,
+    "desc_en": "Run plain-language tests for web, Android and iOS through MCP, with persistent memory and validated self-improvement.",
+    "desc_pl": "Uruchamianie testów aplikacji webowych, Android i iOS w języku naturalnym przez MCP, z trwałą pamięcią i weryfikowanym uczeniem się na wynikach.",
+    "notes": "Node.js 24+; local stdio server: npx agent-qa mcp. Model and device/browser setup are required for test execution. The documentation MCP at vostride.com/mcp is not the test-execution server.",
+    "verified": "2026-10-31"
   }
 ]
