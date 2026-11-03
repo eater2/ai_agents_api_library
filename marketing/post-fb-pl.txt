@@ -1,0 +1,5 @@
+﻿Zrobiłem liste 300+ endpointów z którymi mogą rozmawiać wasi agenci AI, dodałem dla każdego wpisu instrukcje jak mają się kontaktować i opinie ze znanych serwisów. Jakbyście potrzebowali dodać wasze własne API SaaS-a to róbcie PR.
+Jest MCP server i skill dla Claude :
+/plugin marketplace add eater2/ai_agents_api_library
+/plugin install ai-agents-api-library@eater2
+https://github.com/eater2/ai_agents_api_library

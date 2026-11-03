@@ -68,7 +68,7 @@ Wywołania i MCP (3b)
 - [x] `get_api`: osobno `product_reviews` (źródło, ocena, liczba, zakres dat, `fetched_at`) i `mcp_repo` (`archived`, `pushed_at`, gwiazdki), bez jednego zbiorczego wyniku (54)
 - [x] `get_reviews`: filtry (świeże, nisko ocenione, dotyczące API), tagi aspektów (błędy, auth, limity, breaking changes vs dashboard/billing), krótkie podsumowanie tematów z linkami; tekst opinii oznaczony jako niezaufany (54)
 - [x] Sondy katalogu: `scripts/probe_uptime.py` + `.github/workflows/uptime.yml` (codziennie), `data/uptime.json` (30 dni) → pole `uptime` (`probes`, `up`, `median_ms`, ostatni wynik); szablony URL (`<region>`, `{subdomain}`) pomijane (bf, 2026-09-24)
-- [ ] Później: wyniki agentów (telemetria) per operacja — tylko z mianownikiem, definicją sukcesu, minimalną próbą i pochodzeniem; najpierw sondy
+- [x] Decyzja 2026-11-03: telemetrii wyników agentów (`report_outcome`) nie wprowadzamy. Powody: narzędzie zapisujące dane zdejmuje z serwera status „read only”, który sprawdza katalog konektorów Claude; wymaga trwałej bazy (logi Vercel są krótkie) i zmiany polityki prywatności. Sygnał o działaniu usług dają sondy uptime i handshake MCP. Wrócić do tematu tylko, jeśli pojawi się osobny, opcjonalny serwer do zgłoszeń (zgoda, 90 dni retencji, publikacja od 20 zgłoszeń na operację).
 - Nie robić: jednego `health_score`, rankingowania po gwiazdkach, poszerzania scrapowania opinii ludzkich
 
 ## P0 — porządek repozytorium
