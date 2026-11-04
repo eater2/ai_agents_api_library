@@ -41964,7 +41964,7 @@
     "name": "OpenRouteService",
     "category": "maps-geo-weather",
     "homepage": "https://openrouteservice.org",
-    "docs": "https://openrouteservice.org/dev/#/api-docs",
+    "docs": "https://giscience.github.io/openrouteservice/api-reference/",
     "auth": "api_key",
     "auth_hint": "Authorization header with API key",
     "mcp": {
@@ -42000,7 +42000,7 @@
     "llms_txt": null,
     "desc_en": "Calculate routes, isochrones, distance matrices, and geocoding over OpenStreetMap data via a free REST API.",
     "notes": "Rate limits vary per endpoint (directions vs isochrones vs matrix); self-hosting also possible. api.openrouteservice.org is deprecated for api.heigit.org (10% quota since 2026-08-27, shut off 2026-09-28); keys at account.heigit.org.",
-    "verified": "2026-09-24",
+    "verified": "2026-11-04",
     "free_plan": {
       "kind": "free_tier",
       "period": "day",
