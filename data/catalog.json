@@ -12690,6 +12690,65 @@
     "data_policy": null
   },
   {
+    "id": "infobip",
+    "name": "Infobip",
+    "category": "sms-messaging",
+    "homepage": "https://www.infobip.com",
+    "docs": "https://www.infobip.com/docs/api/channels/sms",
+    "auth": "api_key",
+    "auth_hint": "API key from the portal (Account Settings > API Keys, scope sms:message:send): Authorization: App <key>; requests go to your account's own base URL ({subdomain}.api.infobip.com, shown in the portal)",
+    "mcp": {
+      "type": "official",
+      "url": "https://www.infobip.com/docs/mcp",
+      "maintainer": "vendor",
+      "repo": null,
+      "remote_url": "https://mcp.infobip.com/sms",
+      "tools": null,
+      "covers_full_api": false,
+      "source_url": "https://github.com/infobip/mcp",
+      "checked_at": "2026-11-04"
+    },
+    "free_tier": "Trial: 60 days, 15 free SMS, no card; SMS only to up to 5 verified numbers, from the shared test sender (ServiceSMS); then pay as you go",
+    "sdk": [
+      "java",
+      "python",
+      "csharp",
+      "php",
+      "go",
+      "node"
+    ],
+    "openapi": "https://api.infobip.com/platform/1/openapi/sms",
+    "llms_txt": "https://www.infobip.com/docs/llms.txt",
+    "desc_en": "Send SMS (and WhatsApp, Viber, RCS, email and voice messages) and fetch delivery reports via the Infobip REST API.",
+    "desc_pl": "Wysyłaj SMS-y (a także wiadomości WhatsApp, Viber, RCS, e-maile i połączenia głosowe) i pobieraj raporty doręczeń przez REST API Infobip.",
+    "notes": "Each account has its own base URL; api.infobip.com alone is not a valid host for API calls. Custom senders (alphanumeric or numbers) are requested in the portal or via the Numbers API; some operators need sender registration before traffic. Hosted MCP servers per product at https://mcp.infobip.com/{server} (sms, whatsapp, viber, rcs, email, voice, message, 2fa, observe, account-management, ...; Streamable HTTP, /sse for SSE), auth with Authorization: App <key> or OAuth 2.1; a keyless docs-search server is at https://mcp.infobip.com/search. The SMS server has 10 tools; their names are not published in the docs or README. Self-signup trial excludes some countries (e.g. China, Iran, Cuba, New Zealand).",
+    "verified": "2026-11-04",
+    "operations": [
+      "sms",
+      "chat-messaging",
+      "email-send",
+      "phone-calls"
+    ],
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "15 SMS, up to 5 verified recipient numbers, 60 days (self-signup)",
+      "period": "one_time",
+      "source_url": "https://www.infobip.com/docs/sms/get-started",
+      "checked_at": "2026-11-04"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: App <API_KEY>",
+      "source_url": "https://api.infobip.com/platform/1/openapi/sms",
+      "checked_at": "2026-11-04"
+    },
+    "base_url": "https://{subdomain}.api.infobip.com (account-specific, shown in the portal)"
+  },
+  {
     "id": "line-messaging-api",
     "name": "LINE Messaging API",
     "category": "sms-messaging",
@@ -12832,6 +12891,75 @@
     "oauth_scopes": null,
     "async_jobs": null,
     "data_policy": null
+  },
+  {
+    "id": "smsapi",
+    "name": "SMSAPI",
+    "category": "sms-messaging",
+    "homepage": "https://www.smsapi.pl",
+    "docs": "https://www.smsapi.pl/docs/",
+    "auth": "api_key",
+    "auth_hint": "OAuth 2.0 API token created in the client panel (Ustawienia API > Tokeny API, pick scopes such as sms): Authorization: Bearer <token>",
+    "mcp": {
+      "type": "official",
+      "url": "https://www.smsapi.pl/docs/mcp/",
+      "maintainer": "vendor",
+      "repo": null,
+      "remote_url": "https://mcp.smsapi.io/",
+      "tools": [
+        "send_sms",
+        "get_sms",
+        "send_mms",
+        "get_contacts",
+        "get_groups",
+        "delete_contact"
+      ],
+      "covers_full_api": null,
+      "source_url": "https://www.smsapi.pl/docs/mcp/",
+      "checked_at": "2026-11-04"
+    },
+    "free_tier": "Trial: 50 free SMS on registration; until the account is activated by SMSAPI staff it can only send to the phone number used at registration; then prepaid from 0.17 PLN net/SMS (minimum top-up 49 PLN)",
+    "sdk": [
+      "php",
+      "csharp",
+      "bash",
+      "python",
+      "node",
+      "java",
+      "go"
+    ],
+    "openapi": null,
+    "llms_txt": "https://www.smsapi.pl/llms.txt",
+    "desc_en": "Send SMS (and MMS and voice messages) to Polish and international numbers via the SMSAPI REST API, with delivery reports by callback.",
+    "desc_pl": "Wysyłaj SMS-y (a także MMS-y i wiadomości głosowe VMS) na numery polskie i zagraniczne przez REST API SMSAPI, z raportami doręczeń przez callback.",
+    "notes": "Polish provider (smsapi.com is the international brand). Default sender name is \"Test\"; your own sender names (max 11 characters, letters required, no phone numbers) are added in the panel and verified by SMSAPI staff before use (adding one is free). test=1 returns the response without sending. Hosted MCP server at https://mcp.smsapi.io/ (Streamable HTTP; per-group endpoints /sms, /mms, /vms, /contacts, /account, /subusers, /short-url, /hlr, /blacklist) with OAuth web login or a static Bearer token; the tool list above is partial (only the names shown in the docs).",
+    "verified": "2026-11-04",
+    "operations": [
+      "sms"
+    ],
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": null,
+      "quota": "50 SMS on registration; restricted accounts can send only to the number used at registration until activated",
+      "period": "one_time",
+      "source_url": "https://www.smsapi.pl/faq",
+      "checked_at": "2026-11-04"
+    },
+    "auth_scheme": {
+      "type": "http",
+      "in": null,
+      "name": null,
+      "scheme": "bearer",
+      "format": "Authorization: Bearer <OAUTH_TOKEN> (fallback, discouraged: access_token=<OAUTH_TOKEN> parameter)",
+      "source_url": "https://www.smsapi.pl/docs/",
+      "checked_at": "2026-11-04"
+    },
+    "base_url": "https://api.smsapi.pl (backup: https://api2.smsapi.pl; TLS 1.2 required)",
+    "rate_limits": {
+      "summary": "100 requests/s per IP; at most 10 send attempts to one number within 60 s",
+      "source_url": "https://www.smsapi.pl/docs/",
+      "checked_at": "2026-11-04"
+    }
   },
   {
     "id": "telegram-bot-api",

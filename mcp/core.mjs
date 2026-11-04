@@ -480,7 +480,7 @@ export async function load() {
 // One McpServer per connection (stdio) or per request (stateless HTTP).
 export function createServer() {
   const server = new McpServer(
-    { name: "ai-agents-api-library", version: "0.3.11", title: "AI Agents API Library",
+    { name: "ai-agents-api-library", version: "0.3.12", title: "AI Agents API Library",
       websiteUrl: "https://ai-agents-api-library.vercel.app/",
       icons: [{ src: "https://eater2.github.io/ai_agents_api_library/icon.png", mimeType: "image/png", sizes: ["512x512"] }] },
     {

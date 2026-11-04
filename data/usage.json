@@ -8710,5 +8710,95 @@
    "source_url": "https://dchub.cloud/pricing",
    "checked_at": "2026-10-19"
   }
+ },
+ "smsapi": {
+  "call": {
+   "operation": "send an SMS",
+   "method": "POST",
+   "url": "https://api.smsapi.pl/sms.do",
+   "example": "curl -X POST \"https://api.smsapi.pl/sms.do\" -H \"Authorization: Bearer $SMSAPI_TOKEN\" --data-urlencode \"to=48500000000\" --data-urlencode \"from=Test\" --data-urlencode \"message=Hi there\" --data-urlencode \"format=json\"",
+   "response_fields": [
+    "count",
+    "list[].id",
+    "list[].points",
+    "list[].number",
+    "list[].status",
+    "error",
+    "message",
+    "invalid_numbers"
+   ],
+   "async": "delivery status arrives as a GET callback (MsgId, status, status_name, to, donedate, idx) to the callback URL set in the panel (Adresy Callback) or notify_url; the endpoint must reply OK or SMSAPI retries",
+   "source_url": "https://www.smsapi.pl/docs/",
+   "checked_at": "2026-11-04"
+  },
+  "unit_price": {
+   "summary": "SMS in Poland (prepaid): 0.17 PLN net per SMS for top-ups of 49-499.99 PLN, lower at higher top-ups; postpaid from 0.14-0.16 PLN net; minimum top-up 49 PLN; fast=1 costs 1.5x",
+   "source_url": "https://www.smsapi.pl/cennik",
+   "checked_at": "2026-11-04"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.smsapi.io/",
+   "headers": {
+    "Authorization": "Bearer $SMSAPI_TOKEN"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "note": "OAuth web login is recommended (configure only the URL); a static token needs matching scopes (sms, mms, vms, contacts, profile, subuser, short_url, hlr, blacklist, sms_sender), else 403. Per-group endpoints such as https://mcp.smsapi.io/sms/ expose fewer tools. send_sms and send_mms are marked destructiveHint.",
+   "source_url": "https://www.smsapi.pl/docs/mcp/",
+   "checked_at": "2026-11-04"
+  },
+  "sms": {
+   "price_pl": "0.17 PLN net per SMS (prepaid, top-up 49-499.99 PLN); cheaper at larger top-ups; postpaid from 0.14-0.16 PLN net",
+   "price_pl_source": "https://www.smsapi.pl/cennik",
+   "sender_registration": "Default sender name is \"Test\". Own sender names (max 11 characters: a-z, A-Z, 0-9, dash, dot, space; not a phone number) are added in the panel (Pola Nadawcy) and verified by SMSAPI staff; only active names can be used in from. Adding one is free; approval time not published",
+   "sender_registration_source": "https://www.smsapi.pl/faq",
+   "trial_limits": "50 free SMS on registration; company details are verified by customer service; a restricted account can send only to the number used at registration (error 98) until staff activate it. Card requirement not published",
+   "trial_limits_source": "https://www.smsapi.pl/docs/",
+   "countries": "217 countries (PRO messages with own sender name can be sent abroad)",
+   "countries_source": "https://www.smsapi.com/en/sms-pricing",
+   "checked_at": "2026-11-04"
+  }
+ },
+ "infobip": {
+  "call": {
+   "operation": "send an SMS",
+   "method": "POST",
+   "url": "https://{subdomain}.api.infobip.com/sms/3/messages",
+   "example": "curl -X POST \"https://$INFOBIP_BASE_URL/sms/3/messages\" -H \"Authorization: App $INFOBIP_API_KEY\" -H \"Content-Type: application/json\" -d '{\"messages\":[{\"sender\":\"ServiceSMS\",\"destinations\":[{\"to\":\"48500000000\"}],\"content\":{\"text\":\"Hi there\"}}]}'",
+   "response_fields": [
+    "bulkId",
+    "messages[].messageId",
+    "messages[].status.groupName",
+    "messages[].status.name",
+    "messages[].destination"
+   ],
+   "async": "status starts as PENDING; set messages[].webhooks.delivery.url for delivery report webhooks, or poll GET /sms/3/reports (each report is returned once)",
+   "source_url": "https://api.infobip.com/platform/1/openapi/sms",
+   "checked_at": "2026-11-04"
+  },
+  "mcp_config": {
+   "transport": "streamable-http",
+   "url": "https://mcp.infobip.com/sms",
+   "headers": {
+    "Authorization": "App $INFOBIP_API_KEY"
+   },
+   "oauth": true,
+   "docs_only": false,
+   "note": "API key needs the sms:message:send scope; or omit the header and sign in with OAuth 2.1 (scope sms:manage). Append /sse for SSE clients. Other Infobip servers (whatsapp, viber, rcs, email, voice, 2fa, ...) are separate endpoints; https://mcp.infobip.com/search is a keyless docs-only server.",
+   "source_url": "https://www.infobip.com/docs/tutorials/send-sms-with-infobip-mcp-and-ai-client",
+   "checked_at": "2026-11-04"
+  },
+  "sms": {
+   "price_pl": null,
+   "price_pl_source": null,
+   "sender_registration": "Trial uses the shared test sender (ServiceSMS). Own alphanumeric senders or numbers are requested in the portal or via the Numbers API; some operators require sender ID registration before traffic (varies by operator). Poland-specific rules not published",
+   "sender_registration_source": "https://www.infobip.com/docs/sms/get-started/senders-and-numbers",
+   "trial_limits": "Self-signup trial: 60 days, 15 free SMS, only to up to 5 verified numbers, shared test sender; no card at signup; add funds to end the trial. Trial SMS not available to some countries (Belarus, China, Crimea, Cuba, Iran, Myanmar, New Zealand, North Korea, Northern Cyprus, South Sudan, Syria, Yemen, British Indian Ocean Territory)",
+   "trial_limits_source": "https://www.infobip.com/docs/sms/get-started",
+   "countries": "190+ countries",
+   "countries_source": "https://www.infobip.com/sms/api",
+   "checked_at": "2026-11-04"
+  }
  }
 }
