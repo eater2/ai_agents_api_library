@@ -1134,6 +1134,13 @@
   "openapi": "ok",
   "llms_txt": "ok"
  },
+ "infobip": {
+  "checked_at": "2026-11-04",
+  "docs": "ok",
+  "mcp": "ok",
+  "openapi": "ok",
+  "llms_txt": "ok"
+ },
  "line-messaging-api": {
   "checked_at": "2026-11-04",
   "docs": "ok",
@@ -1146,6 +1153,12 @@
   "docs": "ok",
   "mcp": "ok",
   "openapi": "ok",
+  "llms_txt": "ok"
+ },
+ "smsapi": {
+  "checked_at": "2026-11-04",
+  "docs": "ok",
+  "mcp": "ok",
   "llms_txt": "ok"
  },
  "telegram-bot-api": {
@@ -1477,8 +1490,7 @@
  },
  "openrouteservice": {
   "checked_at": "2026-11-04",
-  "docs": "broken",
-  "docs_detail": 404
+  "docs": "ok"
  },
  "openstreetmap-nominatim": {
   "checked_at": "2026-11-04",
