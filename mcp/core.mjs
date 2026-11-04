@@ -256,13 +256,17 @@ function mcpToolFit(e, op) {
 }
 
 // ---- task fit -------------------------------------------------------------------------------
+// A free quota of one operation (1 SMS, 1 request) or under a dollar of credits: enough to test, not to work.
+const TOKEN_QUOTA = /^\s*(1|one) (sms|text|message|request|call|image|video|generation|minute)s?\b|^\s*[$€]0\.\d+ (in )?credits?\b/i;
+const tokenQuota = (e) => TOKEN_QUOTA.test(e.free_plan?.quota || "");
 // After operation fit, prefer what an agent can use now: lasting free usage over one-off trials,
 // no card, plain API keys over cloud IAM (account, policy, request signing).
 function taskFactor(e) {
   let f = 1;
   if (e.auth === "cloud_iam") f *= 0.6;
   const kind = e.free_plan?.kind;
-  if (kind === "free_tier" || kind === "no_key") f *= 1.25;
+  if (kind === "free_tier" && tokenQuota(e)) f *= 0.9; // e.g. 1 SMS/day or $0.10 of credits: a demo, not a plan
+  else if (kind === "free_tier" || kind === "no_key") f *= 1.25;
   else if (kind === "trial") f *= 1.1;
   if (e.free_plan?.requires_card) f *= 0.7;
   return f;
@@ -377,21 +381,30 @@ function ratingsBrief(e) {
   };
 }
 
-const summary = (e) => ({
+const MCP_CARD = ["type", "kind", "url", "remote_url", "repo", "domain_verified", "covers_full_api", "tools", "handshake"];
+const mcpCard = (m) => m && Object.fromEntries(MCP_CARD.filter((k) => m[k] !== undefined).map((k) => [k, m[k]]));
+
+// Search card: the fields an agent decides on (free plan kind, card, unit price, caveats in notes).
+// Opinion blocks only when asked for (verbose, or an opinion filter or sort); get_api always has them.
+const summary = (e, verbose) => ({
   id: e.id,
   name: e.name,
   category: e.category,
   what: e.desc_en,
   auth: e.auth,
   no_auth: e.no_auth,
-  mcp: e.mcp,
+  mcp: verbose ? e.mcp : mcpCard(e.mcp), // client config, sources and handshake details in get_api
   free_tier: e.free_tier,
   has_free_tier: e.has_free_tier,
   has_trial: e.has_trial,
+  no_card: e.no_card,
   docs: e.docs,
   free_plan: e.free_plan, // structured: kind, requires_card, quota, period, source_url
+  ...(e.unit_price ? { unit_price: e.unit_price.summary } : {}),
+  ...(e.rate_limits?.summary ? { rate_limits: e.rate_limits.summary } : {}),
+  notes: e.notes, // coverage, coordinate systems, bulk and trial restrictions
   base_url: e.base_url,
-  ratings: ratingsBrief(e), // context only; not used in the default ranking
+  ...(verbose ? { ratings: ratingsBrief(e) } : {}), // context only; not used in the default ranking
   ...(e.sms ? { sms: e.sms } : {}), // price to Poland, sender registration, trial limits, countries
 });
 
@@ -515,7 +528,9 @@ export function createServer() {
         "entry lists it without that evidence; adjacent = a related operation; topic = word match only. Exact is still a " +
         "search label, not proof that the endpoint or tool accepts the user's actual inputs. `mcp_fit` says whether the MCP " +
         "server has a tool for the operation. Ranking weighs operation fit, evidence, lasting free plan, card and auth " +
-        "effort, and bulk limits, not budget or region: read free_plan.kind (free_tier lasts, trial is one-off) and notes. " +
+        "effort, and bulk limits, not budget or region: read free_plan.kind (free_tier lasts, trial is one-off), no_card, " +
+        "unit_price and notes (coverage, coordinate systems, bulk and trial restrictions). Ratings and the MCP client config " +
+        "come with verbose=true or from get_api. " +
         "User opinions (SourceForge product reviews): filter with min_rating / min_reviews, order with sort=rating or " +
         "sort=reviews; results with stored review texts carry reviews_summary (praised and complained-about aspects). " +
         "Usage: ratings.usage gives monthly downloads of the official SDKs, Stack Overflow questions and the vendor's iOS app rating; " +
@@ -547,9 +562,11 @@ export function createServer() {
         sort: z.enum(["fit", "rating", "reviews", "usage", "issues"]).optional()
           .describe("fit (default): operation fit and task factors; rating: user rating weighted by review count, so 5/5 from one review does not lead; reviews: most reviewed first; usage: most monthly SDK downloads (npm + PyPI) first; issues: highest issue_health (GitHub issues resolved and fixed fast) first. Services without the signal go last; ties keep fit order"),
         limit: z.number().int().min(1).max(50).optional().describe("Max results, default 10"),
+        verbose: z.boolean().optional()
+          .describe("Also return ratings (reviews, usage, issues, uptime) and the full MCP block with client config; on by default with an opinion filter or sort"),
       },
     },
-    async ({ query, category, mcp, no_auth, free_tier, include_trials, no_card, auth, volume, min_rating, min_reviews, min_downloads, min_issue_health, sort = "fit", limit = 10 }) => {
+    async ({ query, category, mcp, no_auth, free_tier, include_trials, no_card, auth, volume, min_rating, min_reviews, min_downloads, min_issue_health, sort = "fit", limit = 10, verbose }) => {
       const terms = words(query);
       const q = queryStems(terms);
       const order = queryOrder(query);
@@ -596,8 +613,9 @@ export function createServer() {
       const kept = relevant.slice(0, limit);
       const opinions = await loadReviewSummaries();
 
+      const opinionAsked = sort !== "fit" || [min_rating, min_reviews, min_downloads, min_issue_health].some((v) => v !== undefined);
       const results = kept.map((h) => ({
-        ...summary(h.e),
+        ...summary(h.e, verbose ?? opinionAsked),
         match: h.fit.frac === 1 ? (h.proof ? "exact" : "listed") : h.fit.frac > 0 ? "adjacent" : "topic",
         reason: h.fit.frac === 1 && h.proof ? `does ${h.fit.op} (${h.proof})`
           : h.fit.frac === 1 ? `lists ${h.fit.op}, but ${h.e.call?.operation ? `the example call is "${h.e.call.operation}"` : "there is no example call"} and no MCP tool shows it; check the endpoint in docs`
@@ -608,17 +626,18 @@ export function createServer() {
         ...(opinions[h.e.id] ? { reviews_summary: opinions[h.e.id] } : {}),
       }));
 
+      const active = () => Object.entries(filters).filter(([, v]) => v !== undefined).map(([k, v]) => `${k}=${v}`);
       if (!results.length) {
-        const active = Object.entries(filters).filter(([, v]) => v !== undefined).map(([k, v]) => `${k}=${v}`);
+        const active_ = active();
         const unfiltered = pool.slice().sort((a, b) => b.s - a.s);
         const gap = {
           source,
           results: [],
-          message: unfiltered.length && active.length
-            ? `No catalogued service does "${query}" with ${active.join(", ")}. ${unfiltered.length} match without those filters.`
+          message: unfiltered.length && active_.length
+            ? `No catalogued service does "${query}" with ${active_.join(", ")}. ${unfiltered.length} match without those filters.`
             : `No catalogued service fits "${query}".`,
-          hint: unfiltered.length && active.length
-            ? `Retry without ${active.join(", ")} to compare options such as ` + unfiltered.slice(0, 5).map((h) => h.e.name).join(", ") + ", or use web search."
+          hint: unfiltered.length && active_.length
+            ? `Retry without ${active_.join(", ")} to compare options such as ` + unfiltered.slice(0, 5).map((h) => h.e.name).join(", ") + ", or use web search."
             : "Try other words for the operation, call list_categories and search by category, or use web search.",
         };
         return { content: [{ type: "text", text: JSON.stringify(gap, null, 1) }] };
@@ -629,6 +648,8 @@ export function createServer() {
       else if (sort === "usage") notes.push("Sorted by monthly downloads of the official SDKs (popularity, not proof the API fits the task); check match and reason.");
       else if (sort !== "fit") notes.push(`Sorted by user ${sort} (SourceForge reviews of the product, not proof the API fits the task); check match and reason.`);
       if (bulk && results.some((r) => r.volume_warning)) notes.push("Bulk use detected; results with volume_warning forbid or limit it.");
+      if (byOperation && !results.some((r) => r.match === "exact"))
+        notes.push("No result shows evidence (example call or MCP tool) that it does this operation; check the endpoint in docs before relying on it" + (active().length ? `, or retry without ${active().join(", ")}` : "") + ".");
       if (!byOperation && terms.length) notes.push("No entry lists this operation; results match words only. Check each `what`.");
       if (notes.length) out.note = notes.join(" ");
       return { content: [{ type: "text", text: JSON.stringify(out, null, 1) }] };

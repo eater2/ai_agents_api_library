@@ -16127,17 +16127,17 @@
     "openapi": null,
     "llms_txt": null,
     "notes": "Covers Poland only. Requests: GetAddress, GetAddressReverse, GetCity, GetStreet, GetAddresses, GetRoadMarker, GetLevelCrossing, GetLocation, GetRoads. Without srid the coordinates are PUWG 1992 (EPSG:2180); pass srid=4326 for WGS84. No published rate limits or terms of use, so keep request volume moderate. Results are a numbered object ('1', '2', ...), not an array.",
-    "desc_en": "Geocode a Polish street address to coordinates with official TERYT/SIMC/ULIC codes and postcode, or reverse-geocode a point to the nearest address, via Poland's national geodesy office.",
-    "desc_pl": "Zamienia polski adres na współrzędne z oficjalnymi kodami TERYT/SIMC/ULIC i kodem pocztowym albo znajduje najbliższy adres dla punktu, korzystając z usługi Głównego Urzędu Geodezji i Kartografii.",
+    "desc_en": "Geocode a Polish street address to coordinates (PUWG 1992 / EPSG:2180 by default, WGS84 with srid=4326) with official TERYT/SIMC/ULIC codes and postcode, or reverse-geocode a point to the nearest address, via Poland's national geodesy office.",
+    "desc_pl": "Zamienia polski adres na współrzędne (domyślnie PUWG 1992 / EPSG:2180, WGS84 z srid=4326) z oficjalnymi kodami TERYT/SIMC/ULIC i kodem pocztowym albo znajduje najbliższy adres dla punktu, korzystając z usługi Głównego Urzędu Geodezji i Kartografii.",
     "operations": [
       "street-geocoding",
       "reverse-geocoding"
     ],
-    "verified": "2026-09-25",
+    "verified": "2026-11-04",
     "free_plan": {
       "kind": "no_key",
       "requires_card": false,
-      "quota": "no published quota",
+      "quota": "unknown: no published quota or terms of use",
       "source_url": "https://services.gugik.gov.pl/uug/opis.html",
       "checked_at": "2026-09-25"
     },

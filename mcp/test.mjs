@@ -61,8 +61,11 @@ assert.ok(apiReviews.reviews.every((r) => r.date >= "2024" && r.aspects.length))
 // Ratings: separate signals, explicit gaps, no aggregate score.
 const twilio = JSON.parse(await call("get_api", { id: "twilio" }));
 assert.ok(!("ratings" in twilio) && twilio.mcp_repo.pushed_at && twilio.product_reviews.count > 0);
-assert.ok(twilio.uptime && typeof video.results[0].ratings.uptime === "string");
-assert.ok(video.results.every((r) => typeof r.ratings.reviews === "string" && typeof r.ratings.mcp_repo === "string"));
+// Search card: decision fields always, opinion blocks only with verbose (or an opinion filter/sort).
+assert.ok(video.results.every((r) => !("ratings" in r) && "no_card" in r && "notes" in r && !("config" in r.mcp)));
+const videoV = JSON.parse(await call("search_apis", { query: "text to video", mcp: "official", limit: 5, verbose: true }));
+assert.ok(twilio.uptime && typeof videoV.results[0].ratings.uptime === "string");
+assert.ok(videoV.results.every((r) => typeof r.ratings.reviews === "string" && typeof r.ratings.mcp_repo === "string" && "config" in r.mcp));
 // Docs-only MCP servers don't count for the mcp filter.
 const sms = JSON.parse(await call("search_apis", { query: "send sms", mcp: "official" }));
 assert.ok(!sms.results.some((r) => r.mcp?.config?.docs_only), "docs-only MCP in mcp=official results");
