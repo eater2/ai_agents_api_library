@@ -15680,6 +15680,68 @@
     ]
   },
   {
+    "id": "lurkapi",
+    "name": "LurkAPI",
+    "category": "social-media",
+    "homepage": "https://lurkapi.com",
+    "docs": "https://lurkapi.com/docs",
+    "auth": "api_key",
+    "auth_hint": "x-api-key: <LURKAPI_API_KEY> header (or Authorization: Bearer <key>); the key comes from the dashboard after a Google or emailed-code sign-in. The MCP server signs in with OAuth instead.",
+    "mcp": {
+      "type": "official",
+      "url": "https://api.lurkapi.com/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://api.lurkapi.com/mcp",
+      "tools": [
+        "facebook_search_ads",
+        "google_company_ads",
+        "tiktok_profile_videos",
+        "youtube_transcript",
+        "reddit_search",
+        "web_scrape"
+      ],
+      "covers_full_api": true,
+      "source_url": "https://lurkapi.com/docs#claude",
+      "checked_at": "2026-11-05"
+    },
+    "free_tier": "free: 100 credits at signup, no card; once a day a balance under 25 is topped back up to 25; most calls cost 1 credit; packs from $9 for 10,000 credits, which never expire",
+    "sdk": [],
+    "openapi": "https://lurkapi.com/openapi.json",
+    "llms_txt": "https://lurkapi.com/llms.txt",
+    "desc_en": "Lets an agent read public social media data as JSON: profiles, posts, comments, video transcripts and search results from TikTok, Instagram, YouTube, Reddit, X, LinkedIn, Facebook, Threads, Bluesky and more (16 platforms), plus ads from Meta's, Google's, LinkedIn's and TikTok's ad libraries.",
+    "desc_pl": "Pozwala agentowi pobierać publiczne dane z mediów społecznościowych jako JSON: profile, posty, komentarze, transkrypcje wideo i wyniki wyszukiwania z TikToka, Instagrama, YouTube, Reddita, X, LinkedIna, Facebooka, Threads, Bluesky i innych (16 platform), a także reklamy z bibliotek reklam Meta, Google, LinkedIn i TikTok.",
+    "notes": "Public data only: no private profiles, no posting. A call that reached the platform is charged even when it answers 404 not_found; invalid parameters, 401/402/429 and 5xx errors are free. TikTok's ad library search covers ads shown in the EU, the UK, Switzerland and Turkey. The optional max_credits parameter caps what one call can cost.",
+    "verified": "2026-11-05",
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100 credits at signup, then a balance under 25 is topped back up to 25 each day (most calls cost 1 credit)",
+      "period": "day",
+      "source_url": "https://lurkapi.com/pricing",
+      "checked_at": "2026-11-05"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "format": "x-api-key: lk_live_<KEY>",
+      "source_url": "https://lurkapi.com/docs",
+      "checked_at": "2026-11-05"
+    },
+    "base_url": "https://api.lurkapi.com",
+    "operations": [
+      "social-data",
+      "web-scraping",
+      "places-search",
+      "news-search"
+    ],
+    "rate_limits": {
+      "summary": "50 requests per 10 seconds per account (100 for high-volume accounts on request); over it, 429 rate_limited with retry-after",
+      "source_url": "https://lurkapi.com/docs#rate-limits",
+      "checked_at": "2026-11-05"
+    }
+  },
+  {
     "id": "mastodon-api",
     "name": "Mastodon API",
     "category": "social-media",
