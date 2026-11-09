@@ -778,7 +778,10 @@ def page(lang, cats, items, dirs):
          ICONS,
          f"<title>{e_(head_title)}</title>",
          f'<meta name="description" content="{e_(desc)}">',
-         f'<link rel="canonical" href="{self_url}">']
+         f'<link rel="canonical" href="{self_url}">',
+         f'<link rel="alternate" hreflang="en" href="{PAGES}">',
+         f'<link rel="alternate" hreflang="pl" href="{PAGES}pl/">',
+         f'<link rel="alternate" hreflang="x-default" href="{PAGES}">']
     if lang == "en":
         o += [f'<link rel="alternate" type="application/json" title="catalog.json" href="{base}catalog.json">',
               f'<link rel="alternate" type="text/plain" title="llms.txt" href="{base}llms.txt">',
@@ -787,9 +790,6 @@ def page(lang, cats, items, dirs):
               f'<meta property="og:url" content="{self_url}"><meta property="og:image" content="{PAGES}icon.png">'
               '<meta name="twitter:card" content="summary">',
               f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>']
-    else:
-        # Polish page is for human readers only; agents and crawlers use the English home page.
-        o.append('<meta name="robots" content="noindex, follow">')
     o += [f"<style>{CSS}</style></head><body>",
          f'<header class="top"><div class="in"><a class="brand" href="{self_url}">{e_(TITLE)}<small>{e_(t["tagline"][:80])}…</small></a>',
          f'<nav class="tabs"><a href="{other_url}">{t["other_label"]}</a><a href="{base}catalog.json">JSON</a>'
@@ -1081,7 +1081,7 @@ def main():
     write("docs/google0d09eb26482fc109.html", "google-site-verification: google0d09eb26482fc109.html")
     write("docs/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"<url><loc>{u}</loc><lastmod>{VERIFIED}</lastmod></url>\n" for u in
-                    [PAGES, PAGES + "catalog.json", PAGES + "llms.txt"] + [f"{PAGES}c/{c['id']}/" for c in cats])
+                    [PAGES, PAGES + "pl/", PAGES + "catalog.json", PAGES + "llms.txt"] + [f"{PAGES}c/{c['id']}/" for c in cats])
           + "</urlset>\n")
     checksums()
     print(f"{len(items)} entries, {len(cats)} categories -> built")
