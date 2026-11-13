@@ -20885,11 +20885,15 @@
         "watch_register",
         "x402_verify",
         "pay_send",
-        "search_listings"
+        "search_listings",
+        "rpc_call",
+        "check_counterparty",
+        "flights_lookup",
+        "relay_usdc"
       ],
       "covers_full_api": true,
       "source_url": "https://agent-exec.448c.org/mcp",
-      "checked_at": "2026-11-03",
+      "checked_at": "2026-11-11",
       "domain_verified": true,
       "kind": "vendor-hosted",
       "config": {
