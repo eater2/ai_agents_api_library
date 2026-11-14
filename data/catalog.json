@@ -2383,18 +2383,18 @@
       "source_url": "https://dchub.cloud/developers",
       "checked_at": "2026-10-18"
     },
-    "free_tier": "free tier: keyless previews; a free self-serve key adds 2 full answers per tool per day, and 50 calls/day once an email is added",
+    "free_tier": "DCHUB_API_KEY is optional.",
     "sdk": [],
     "openapi": "https://dchub.cloud/openapi.json",
     "llms_txt": "https://dchub.cloud/llms.txt",
-    "desc_en": "Lets an agent check where data centers can get grid power, using the Data Center Power Index (DCPI) daily score across 300+ markets, plus grid, interconnection-queue, fiber and site data.",
+    "desc_en": "Orchestration layer for data center and energy intelligence. Start with execute_plan: one question about grid power, electricity prices or interconnection queues returns one dated, cited answer. It also publishes the Data Center Power Index (DCPI) across 300+ markets, plus grid, interconnection-queue, fiber and site data.",
     "desc_pl": "Pozwala agentowi sprawdzić, gdzie centra danych mogą uzyskać zasilanie z sieci, korzystając z dziennego wskaźnika Data Center Power Index (DCPI) dla ponad 300 rynków, a także z danych o sieci, kolejkach przyłączeniowych, światłowodach i lokalizacjach.",
-    "notes": "Remote Streamable HTTP MCP server at https://dchub.cloud/mcp; works without a key for previews. Keyless REST endpoints include GET /api/v1/stats and /api/v1/markets/list. On the free tier the DCPI endpoint returns only the BUILD/CAUTION/AVOID verdict; the numeric scores (composite, excess power, constraint, months to power) need a paid plan.",
+    "notes": "Remote Streamable HTTP MCP server at https://dchub.cloud/mcp. DCHUB_API_KEY is optional.",
     "verified": "2026-10-19",
     "base_url": "https://dchub.cloud/api/v1",
     "free_plan": {
-      "kind": "free_tier",
-      "quota": "Anonymous previews; free key: 2 full answers per tool per day; with an email: 50 calls/day",
+      "kind": "optional_key",
+      "quota": "DCHUB_API_KEY is optional.",
       "source_url": "https://dchub.cloud/developers",
       "checked_at": "2026-10-19",
       "requires_card": false
@@ -2411,7 +2411,7 @@
       "energy-grid-data"
     ],
     "rate_limits": {
-      "summary": "Free key: previews plus 2 full answers per tool per day; with an email: 50 calls/day (up to 10 full answers per tool per day); Starter 200/day, Developer ($49) 500/day, Pro ($99) 2,000/day",
+      "summary": "DCHUB_API_KEY is optional. Limits depend on whether a key is present.",
       "source_url": "https://dchub.cloud/developers",
       "checked_at": "2026-10-19"
     }
