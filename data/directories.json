@@ -56,6 +56,13 @@
     "desc_pl": "Katalog ponad 21800 serwerów MCP aktualizowany codziennie; jego API REST typu Sub-Registry (wymaga klucza API) pozwala agentom listować i wyszukiwać serwery."
   },
   {
+    "name": "Roopedia",
+    "url": "https://roopedia.com/mcp",
+    "machine_readable_url": "https://roopedia.com/api/tools",
+    "desc_en": "A bilingual (EN/FR) directory of 786+ AI tools and MCP servers with pricing tier breakdowns and security notes; agents can query its unauthenticated REST API (/api/tools and /api/stats) by keyword, category, or free tier.",
+    "desc_pl": "Dwujęzyczny (EN/FR) katalog ponad 786 narzędzi AI i serwerów MCP z zestawieniem cen oraz notatkami bezpieczeństwa; agenci mogą odpytywać jego niewymagające uwierzytelniania API REST (/api/tools i /api/stats) według słów kluczowych, kategorii lub darmowego planu."
+  },
+  {
     "name": "llms.txt convention / directory",
     "url": "https://llmstxt.org",
     "machine_readable_url": "https://directory.llmstxt.cloud",
