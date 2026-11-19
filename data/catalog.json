@@ -20403,5 +20403,60 @@
       "how": "Batch API: create batch, add requests, poll batch status until num_pending is 0",
       "source_url": "https://docs.x.ai/developers/advanced-api-usage/batch-api"
     }
+  },
+  {
+    "id": "agentseo",
+    "name": "AgentSEO",
+    "category": "web-search",
+    "homepage": "https://www.agentseo.dev",
+    "docs": "https://www.agentseo.dev/docs/api-reference",
+    "auth": "api_key",
+    "auth_hint": "x-api-key: <AGENTSEO_API_KEY>",
+    "mcp": {
+      "type": "official",
+      "url": "https://www.agentseo.dev/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://www.agentseo.dev/mcp",
+      "source_url": "https://www.agentseo.dev/integrations",
+      "checked_at": "2026-11-09"
+    },
+    "free_tier": "Trial: 100 live credits one-time, no credit card required; paid plans from $9/month.",
+    "sdk": [
+      "typescript",
+      "python"
+    ],
+    "openapi": "https://www.agentseo.dev/openapi.yaml",
+    "llms_txt": "https://www.agentseo.dev/llms.txt",
+    "desc_en": "AgentSEO gives AI agents and developers a REST API and hosted MCP server for SEO and answer-engine optimization (AEO): Google SERP analysis, keyword research, rank tracking, content-gap audits, local visibility and AI search visibility monitoring.",
+    "desc_pl": "AgentSEO udostępnia agentom AI i programistom REST API oraz hostowany serwer MCP do SEO i optymalizacji pod silniki odpowiedzi (AEO): analizy Google SERP, badania słów kluczowych, śledzenia pozycji, audytów luk w treści oraz monitorowania widoczności lokalnej i w wyszukiwarkach AI.",
+    "notes": "Analysis endpoints may return asynchronous job IDs that must be polled. API usage consumes live credits; the 100-credit trial is one-time.",
+    "verified": "2026-11-09",
+    "free_plan": {
+      "kind": "trial",
+      "requires_card": false,
+      "quota": "100 live credits one-time",
+      "period": "one_time",
+      "source_url": "https://www.agentseo.dev/pricing",
+      "checked_at": "2026-11-09"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "x-api-key",
+      "format": "x-api-key: <AGENTSEO_API_KEY>",
+      "source_url": "https://www.agentseo.dev/docs/authentication",
+      "checked_at": "2026-11-09"
+    },
+    "base_url": "https://www.agentseo.dev/api/v1",
+    "async_jobs": {
+      "value": true,
+      "how": "Most analysis POST requests return a jobId; poll GET /jobs/{id} for the result.",
+      "source_url": "https://www.agentseo.dev/docs/quickstart"
+    },
+    "operations": [
+      "web-search",
+      "serp-scraping",
+      "analytics-query"
+    ]
   }
 ]
