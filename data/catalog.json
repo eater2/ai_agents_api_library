@@ -8895,6 +8895,63 @@
     ]
   },
   {
+    "id": "onlinecompiler",
+    "name": "OnlineCompiler.io",
+    "category": "code-execution-sandbox",
+    "homepage": "https://onlinecompiler.io",
+    "docs": "https://onlinecompiler.io/docs",
+    "auth": "api_key",
+    "auth_hint": "Authorization: <API_KEY> header (a Bearer prefix also works); the MCP server also accepts OAuth sign-in",
+    "mcp": {
+      "type": "official",
+      "url": "https://api.onlinecompiler.io/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://api.onlinecompiler.io/mcp",
+      "repo": "https://github.com/onlinecompiler-io/onlinecompiler-mcp",
+      "tools": [
+        "list_compilers",
+        "run_code",
+        "run_tests",
+        "judge_problem"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://onlinecompiler.io/mcp-code-execution",
+      "checked_at": "2026-11-21"
+    },
+    "free_tier": "free: Free plan with 100,000 runs/month, no card required",
+    "sdk": [
+      "python",
+      "typescript"
+    ],
+    "openapi": "https://api.onlinecompiler.io/openapi.json",
+    "llms_txt": "https://onlinecompiler.io/llms.txt",
+    "desc_en": "Lets an agent run code in 46 languages via REST or MCP, each run in a fresh gVisor sandbox with no network, and judge a program against test cases with a verdict per test and a score.",
+    "desc_pl": "Pozwala agentowi uruchamiać kod w 46 językach przez REST lub MCP, każde uruchomienie w nowym sandboksie gVisor bez dostępu do sieci, i sprawdzać program na przypadkach testowych z werdyktem dla każdego testu i wynikiem punktowym.",
+    "notes": "Each run is a fresh sandbox with no network and no package installs at run time, capped at 30 seconds; nothing persists between runs. Also accepts Judge0 CE and Piston v2 request formats at /api/judge0 and /api/v2/piston.",
+    "verified": "2026-11-21",
+    "base_url": "https://api.onlinecompiler.io",
+    "operations": [
+      "code-execution"
+    ],
+    "free_plan": {
+      "kind": "free_tier",
+      "requires_card": false,
+      "quota": "100,000 runs/month",
+      "period": "month",
+      "source_url": "https://onlinecompiler.io/pricing",
+      "checked_at": "2026-11-21"
+    },
+    "auth_scheme": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "scheme": null,
+      "format": "Authorization: <API_KEY>",
+      "source_url": "https://onlinecompiler.io/docs",
+      "checked_at": "2026-11-21"
+    }
+  },
+  {
     "id": "piston",
     "name": "Piston",
     "category": "code-execution-sandbox",
