@@ -23400,6 +23400,61 @@
     }
   },
   {
+    "id": "omnipulse",
+    "name": "OmniPulse Launch Audit & Agent API",
+    "category": "developer-devops",
+    "homepage": "https://omnipulse-x402.appwrite.network",
+    "docs": "https://omnipulse-x402.appwrite.network/openapi.json",
+    "auth": "none",
+    "auth_hint": "No API key required for MCP audit tools and /v1/samples/*; paid /v1/* routes accept x402 USDC or Tempo MPP per request",
+    "mcp": {
+      "type": "official",
+      "url": "https://omnipulse-x402.appwrite.network/mcp",
+      "maintainer": "vendor",
+      "remote_url": "https://omnipulse-x402.appwrite.network/mcp",
+      "repo": "https://github.com/zColdWater/mcp-launch-audit",
+      "tools": [
+        "audit_domain_email_auth",
+        "audit_web_security_headers",
+        "audit_ai_search_readiness",
+        "check_brand_domains",
+        "full_launch_readiness_audit"
+      ],
+      "covers_full_api": false,
+      "source_url": "https://github.com/zColdWater/mcp-launch-audit",
+      "checked_at": "2026-11-23",
+      "domain_verified": true,
+      "kind": "vendor-hosted",
+      "config": null
+    },
+    "free_tier": "5 remote MCP launch-audit tools and /v1/samples/* endpoints free with no account or key",
+    "sdk": [
+      "typescript"
+    ],
+    "openapi": "https://omnipulse-x402.appwrite.network/openapi.json",
+    "llms_txt": "https://omnipulse-x402.appwrite.network/llms.txt",
+    "desc_en": "Run passive web security, SPF/DKIM/DMARC DNS, llms.txt readiness, and 78-TLD RDAP domain audits via free MCP tools or pay-per-call REST endpoints.",
+    "notes": "Zero-auth Streamable HTTP MCP server at /mcp (official MCP Registry io.github.zColdWater/mcp-launch-audit); 24 deep intelligence /v1/* endpoints support pay-per-request ($0.01-$0.05) via x402 v2 on Base/SKALE or Tempo MPP with no signup.",
+    "verified": "2026-11-23",
+    "base_url": "https://omnipulse-x402.appwrite.network/v1",
+    "free_plan": {
+      "kind": "free_tier",
+      "quota": "Unlimited free calls on /mcp (5 launch-audit tools) and /v1/samples/*",
+      "period": "forever",
+      "source_url": "https://omnipulse-x402.appwrite.network/llms.txt",
+      "checked_at": "2026-11-23"
+    },
+    "operations": [
+      "web-scraping",
+      "web-search"
+    ],
+    "no_auth": true,
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": true,
+    "stale": false
+  },
+  {
     "id": "pagerduty-api",
     "name": "PagerDuty API",
     "category": "developer-devops",
