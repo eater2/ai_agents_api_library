@@ -8800,5 +8800,20 @@
    "countries_source": "https://www.infobip.com/sms/api",
    "checked_at": "2026-11-04"
   }
+ },
+ "cloudbrowser": {
+  "call": {
+   "operation": "list browsers in the authenticated workspace",
+   "method": "GET",
+   "url": "https://cloudbrowser.tv/api/v1/browsers",
+   "example": "curl https://cloudbrowser.tv/api/v1/browsers -H \"Authorization: Bearer $CLOUDBROWSER_API_KEY\"",
+   "response_fields": [
+    "items",
+    "nextCursor"
+   ],
+   "async": null,
+   "source_url": "https://cloudbrowser.tv/openapi.json",
+   "checked_at": "2026-11-24"
+  }
  }
 }

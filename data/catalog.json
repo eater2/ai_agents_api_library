@@ -1821,6 +1821,38 @@
     ]
   },
   {
+    "id": "cloudbrowser",
+    "name": "Cloudbrowser",
+    "category": "browser-automation",
+    "homepage": "https://cloudbrowser.tv/",
+    "docs": "https://cloudbrowser.tv/docs/api",
+    "auth": "api_key",
+    "auth_hint": "Authorization: Bearer <workspace_api_key> (workspace key from the Cloudbrowser Console)",
+    "mcp": {
+      "type": "none",
+      "url": null
+    },
+    "free_tier": "free tier: 1 browser-hour per UTC calendar month and 1 running browser after email verification",
+    "sdk": [],
+    "openapi": "https://cloudbrowser.tv/openapi.json",
+    "llms_txt": "https://cloudbrowser.tv/llms.txt",
+    "desc_en": "Provision, pause, resume, or fork persistent Chrome browsers through the REST API and connect an agent to Chrome over CDP.",
+    "desc_pl": "Tworzenie, wstrzymywanie, wznawianie i kopiowanie przeglądarek Chrome z trwałymi profilami przez REST API oraz podłączanie agenta do Chrome przez CDP.",
+    "notes": "Public self-serve signup requires email verification. The REST API manages the browser lifecycle and issues a separate CDP link for page interaction. Fork requires a paused source. Resume restarts Chrome with the saved profile.",
+    "verified": "2026-11-24",
+    "free_plan": {
+      "kind": "free_tier",
+      "quota": "1 browser-hour per UTC calendar month, one running browser",
+      "period": "month",
+      "source_url": "https://cloudbrowser.tv/docs/billing",
+      "checked_at": "2026-11-24"
+    },
+    "base_url": "https://cloudbrowser.tv/api/v1",
+    "operations": [
+      "browser-automation"
+    ]
+  },
+  {
     "id": "curlshot",
     "name": "CurlShot",
     "category": "browser-automation",
