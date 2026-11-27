@@ -22086,6 +22086,36 @@
     }
   },
   {
+    "id": "sandscale",
+    "name": "Sandscale",
+    "category": "code-execution-sandbox",
+    "homepage": "https://sandscale.dev",
+    "docs": "https://sandscale.dev/docs/api",
+    "auth": "api_key+oauth2",
+    "auth_hint": "Authorization: Bearer <SANDSCALE_API_KEY> (personal key starting with nia_) on the HTTP API; OAuth 2.1 sign-in on the remote MCP server",
+    "mcp": {
+      "type": "official",
+      "url": "https://mcp.sandscale.dev/mcp",
+      "domain_verified": true,
+      "kind": "vendor-hosted",
+      "config": null
+    },
+    "free_tier": "free plan: 100 awake vCPU-hours a month, 3 boxes at once, 5 GB storage and one workspace",
+    "sdk": [
+      "typescript"
+    ],
+    "openapi": null,
+    "llms_txt": "https://sandscale.dev/llms.txt",
+    "desc_en": "Lets an agent start Firecracker microVM sandboxes, run commands, move files in and out, pause, snapshot and stop them, and use persistent workspaces and build hosts, under per-tool policies with an audit log.",
+    "notes": "Personal API keys must have an expiry at most 90 days ahead; an API key cannot create or rotate keys. Runs in the United States region for now.",
+    "verified": "2026-11-28",
+    "no_auth": false,
+    "has_free_tier": true,
+    "has_trial": false,
+    "no_card": false,
+    "stale": false
+  },
+  {
     "id": "vercel-sandbox",
     "name": "Vercel Sandbox",
     "category": "code-execution-sandbox",
